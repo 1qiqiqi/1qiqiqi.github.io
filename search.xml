@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/06/22/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p>thanks for your listenning</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>数据库操作SQL</title>
     <url>/2022/06/30/%E6%95%B0%E6%8D%AE%E5%BA%93SQL/</url>
     <content><![CDATA[<p>这次编写的内容是数据库SQL的操作实列 以后要是不会直接从这个武器库拿就是</p>
@@ -57,6 +38,112 @@
       </tags>
   </entry>
   <entry>
+    <title>Redis命令大全</title>
+    <url>/2022/07/04/Redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Redis常用命令"><a href="#Redis常用命令" class="headerlink" title="Redis常用命令"></a>Redis常用命令</h1><p>本文记录常用的Redis命令 方便以后复习使用</p>
+<h3 id="在服务器上使用Redis-命令"><a href="#在服务器上使用Redis-命令" class="headerlink" title="在服务器上使用Redis 命令"></a>在服务器上使用Redis 命令</h3><h4 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$redis<span class="operator">-</span>cli</span><br><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span></span><br><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> PING</span><br><span class="line"> </span><br><span class="line">PONG</span><br></pre></td></tr></table></figure>
+
+<h4 id="远程使用"><a href="#远程使用" class="headerlink" title="远程使用"></a>远程使用</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$redis-cli -h 127.0.0.1 -p 6379 -a &quot;mypass&quot;</span><br><span class="line">redis 127.0.0.1:6379&gt;</span><br><span class="line">redis 127.0.0.1:6379&gt; PING</span><br><span class="line"> </span><br><span class="line">PONG</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串常用命令"><a href="#字符串常用命令" class="headerlink" title="字符串常用命令"></a>字符串常用命令</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SET key value #设置一个key-value 键值对</span><br><span class="line">GET key #获取key对应的value</span><br><span class="line">SETEX key seconds value #设置key的有效时间指向value</span><br><span class="line">SETNX KEY VALUE #在key不存在时 才会设置VALUE</span><br></pre></td></tr></table></figure>
+
+<h4 id="String在Redis中所需要的常识"><a href="#String在Redis中所需要的常识" class="headerlink" title="String在Redis中所需要的常识"></a>String在Redis中所需要的常识</h4><ol>
+<li>string是redis最基本的类型，你可以理解成与Memcached一模一样的类型，一个key对应一个value。</li>
+<li>string类型是二进制安全的。意思是redis的string可以包含任何数据。比如jpg图片或者序列化的对象 。</li>
+<li>string类型是Redis最基本的数据类型，一个键最大能存储512MB。</li>
+</ol>
+<h4 id="实列"><a href="#实列" class="headerlink" title="实列"></a>实列</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">SET</span> name &quot;redis.net.cn&quot;</span><br><span class="line">OK</span><br><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">GET</span> name</span><br><span class="line">&quot;redis.net.cn&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Redis-keys命令"><a href="#Redis-keys命令" class="headerlink" title="Redis keys命令"></a>Redis keys命令</h3><ol>
+<li><a href="https://www.redis.net.cn/order/3528.html">DEL key</a> 该命令用于在 key 存在是删除 key</li>
+<li><a href="https://www.redis.net.cn/order/3530.html">EXISTS key</a> 检查给定 key 是否存在</li>
+<li><a href="https://www.redis.net.cn/order/3531.html">EXPIRE key</a> seconds 为给定 key 设置过期时间。</li>
+<li><a href="https://www.redis.net.cn/order/3536.html">MOVE key db</a> 将当前数据库的 key 移动到给定的数据库 db 当中。</li>
+</ol>
+<h3 id="Redis-集合"><a href="#Redis-集合" class="headerlink" title="Redis 集合"></a>Redis 集合</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt; SADD w3ckey redis</span><br><span class="line">(integer) 1</span><br><span class="line">redis 127.0.0.1:6379&gt; SADD w3ckey mongodb</span><br><span class="line">(integer) 1</span><br><span class="line">redis 127.0.0.1:6379&gt; SADD w3ckey mysql</span><br><span class="line">(integer) 1</span><br><span class="line">redis 127.0.0.1:6379&gt; SADD w3ckey mysql</span><br><span class="line">(integer) 0</span><br><span class="line">redis 127.0.0.1:6379&gt; SMEMBERS w3ckey</span><br><span class="line"> </span><br><span class="line">1) &quot;mysql&quot;</span><br><span class="line">2) &quot;mongodb&quot;</span><br><span class="line">3) &quot;redis&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在以上实例中我们通过 <strong>SADD</strong> 命令向名为 w3ckey 的集合插入的三个元素。</p>
+<h3 id="Redis-哈希"><a href="#Redis-哈希" class="headerlink" title="Redis 哈希"></a>Redis 哈希</h3><h4 id="实列-1"><a href="#实列-1" class="headerlink" title="实列"></a>实列</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt; HMSET w3ckey name &quot;redis tutorial&quot; description &quot;redis basic commands for caching&quot; likes 20 visitors 23000</span><br><span class="line">OK</span><br><span class="line">redis 127.0.0.1:6379&gt; HGETALL w3ckey</span><br><span class="line"> </span><br><span class="line">1) &quot;name&quot;</span><br><span class="line">2) &quot;redis tutorial&quot;</span><br><span class="line">3) &quot;description&quot;</span><br><span class="line">4) &quot;redis basic commands for caching&quot;</span><br><span class="line">5) &quot;likes&quot;</span><br><span class="line">6) &quot;20&quot;</span><br><span class="line">7) &quot;visitors&quot;</span><br><span class="line">8) &quot;23000&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在以上实例中，我们设置了 redis 的一些描述信息(name, description, likes, visitors) 到哈希表的 w3ckey 中</p>
+<h4 id="哈希命令"><a href="#哈希命令" class="headerlink" title="哈希命令"></a>哈希命令</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.HDEL key field2 [field2] 删除一个或多个哈希表字段</span><br><span class="line">2.HEXISTS key field 查看哈希表 key 中，指定的字段是否存在。</span><br><span class="line">3.HGET key field 获取存储在哈希表中指定字段的值</span><br><span class="line">4.HGETALL key 获取在哈希表中指定 key 的所有字段和值</span><br><span class="line">7.HKEYS key 获取所有哈希表中的字段</span><br><span class="line">8.HLEN key 获取哈希表中字段的数量</span><br></pre></td></tr></table></figure>
+
+<h3 id="Redis-列表"><a href="#Redis-列表" class="headerlink" title="Redis 列表"></a>Redis 列表</h3><h4 id="实列-2"><a href="#实列-2" class="headerlink" title="实列"></a>实列</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt; LPUSH w3ckey redis</span><br><span class="line">(integer) 1</span><br><span class="line">redis 127.0.0.1:6379&gt; LPUSH w3ckey mongodb</span><br><span class="line">(integer) 2</span><br><span class="line">redis 127.0.0.1:6379&gt; LPUSH w3ckey mysql</span><br><span class="line">(integer) 3</span><br><span class="line">redis 127.0.0.1:6379&gt; LRANGE w3ckey 0 10</span><br><span class="line"> </span><br><span class="line">1) &quot;mysql&quot;</span><br><span class="line">2) &quot;mongodb&quot;</span><br><span class="line">3) &quot;redis&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在以上实例中我们使用了 <strong>LPUSH</strong> 将三个值插入了名为 w3ckey 的列表当中。</p>
+<p>列表命令：</p>
+<ol>
+<li><a href="https://www.redis.net.cn/order/3582.html">LLEN key</a> 获取列表长度</li>
+<li><a href="https://www.redis.net.cn/order/3583.html">LPOP key</a> 移出并获取列表的第一个元素</li>
+<li><a href="https://www.redis.net.cn/order/3586.html">LRANGE key start stop</a> 获取列表指定范围内的元素</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/06/22/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<p>thanks for your listenning</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p>没有吃饭</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>学习口语</title>
+    <url>/2022/07/05/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD01/</url>
+    <content><![CDATA[<h1 id="第一天英语口语"><a href="#第一天英语口语" class="headerlink" title="第一天英语口语"></a>第一天英语口语</h1><p>这些内容是非常好的英语口语资产 能帮助大伙快速起飞</p>
+<h3 id="梅花香自苦寒来"><a href="#梅花香自苦寒来" class="headerlink" title="梅花香自苦寒来"></a>梅花香自苦寒来</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">in order to feel alive,</span><br><span class="line">i have to do things that make me feel uncomfortable,</span><br><span class="line">because...</span><br><span class="line">as human beings,</span><br><span class="line">we become who we are through challenges.</span><br></pre></td></tr></table></figure>
+
+<p>feel alive 有滋有味的活着</p>
+<p>do things that make me feel uncomfortable 折磨自己</p>
+<p>we become who we are through challenges 高手从磨难中来</p>
+<h3 id="培养顿感"><a href="#培养顿感" class="headerlink" title="培养顿感"></a>培养顿感</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">by taking risks,</span><br><span class="line">you will learn to overcome your fears,</span><br><span class="line">for example...</span><br><span class="line">you will likely find that you care less about what people think and about what could go wrong</span><br></pre></td></tr></table></figure>
+
+<p>overcome your fears 克服恐惧</p>
+<p>care less about what people think and about what could go wrong 大心脏</p>
+<h3 id="敢拼敢闯"><a href="#敢拼敢闯" class="headerlink" title="敢拼敢闯"></a>敢拼敢闯</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">all successful people have taken risks,failed and picked themselves up,</span><br><span class="line">because they believe that</span><br><span class="line">those who never venture far </span><br><span class="line">will never know might have been if they had tired to do things beyond what they had already mastered.</span><br></pre></td></tr></table></figure>
+
+<p>taken risks,failed and picked themselves up 屡战屡败</p>
+<p>never venture far 不敢越雷池半步</p>
+<p>to do things beyond what they had already mastered 勇敢尝试</p>
+<h3 id="言传身教"><a href="#言传身教" class="headerlink" title="言传身教"></a>言传身教</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">we want our children to take risks and try things outside their</span><br><span class="line">comfort zones,</span><br><span class="line">but to help them we need to set a good example,</span><br><span class="line">because...</span><br><span class="line">we can&#x27;t expect our kids to go out and conquer the world</span><br><span class="line">if we are hiding in our room.</span><br></pre></td></tr></table></figure>
+
+<p>take risks and try things outside their comfort zones 勇敢试错</p>
+<p>set a good example 树立榜样</p>
+<p>go out and conquer the world 打天下</p>
+<p>hiding in the room 龟缩不前</p>
+<p><u>这些都是打基础后面会越来越爽,越来越轻松，爽到飞起</u></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构</title>
     <url>/2022/06/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[]]></content>
@@ -67,11 +154,5 @@
         <tag>Hexo</tag>
         <tag>数据结构</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p>没有吃饭</p>
-]]></content>
   </entry>
 </search>
