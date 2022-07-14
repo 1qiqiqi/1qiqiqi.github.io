@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Docker容器命令</title>
-    <url>/2022/07/07/Docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="Docker容器命令"><a href="#Docker容器命令" class="headerlink" title="Docker容器命令"></a>Docker容器命令</h1><h3 id="Docker将镜像转为容器"><a href="#Docker将镜像转为容器" class="headerlink" title="Docker将镜像转为容器"></a>Docker将镜像转为容器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name containerName -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="查看docker容器状态"><a href="#查看docker容器状态" class="headerlink" title="查看docker容器状态"></a>查看docker容器状态</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker logs 容器名称</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker镜像命令</title>
     <url>/2022/07/07/Docker%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Docker常用镜像命令"><a href="#Docker常用镜像命令" class="headerlink" title="Docker常用镜像命令"></a>Docker常用镜像命令</h1><p>这些是最基本的Docker镜像命令，也是最有用的</p>
@@ -108,18 +89,81 @@
 ]]></content>
   </entry>
   <entry>
-    <title>数组在哈希表中的应用</title>
-    <url>/2022/07/13/%E5%93%88%E5%B8%8C%E8%A1%A8&amp;&amp;%E6%95%B0%E7%BB%84%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>Docker容器命令</title>
+    <url>/2022/07/07/Docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Docker容器命令"><a href="#Docker容器命令" class="headerlink" title="Docker容器命令"></a>Docker容器命令</h1><h3 id="Docker将镜像转为容器"><a href="#Docker将镜像转为容器" class="headerlink" title="Docker将镜像转为容器"></a>Docker将镜像转为容器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name containerName -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="查看docker容器状态"><a href="#查看docker容器状态" class="headerlink" title="查看docker容器状态"></a>查看docker容器状态</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker logs 容器名称</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组_代码随想列题</title>
+    <url>/2022/07/14/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<h1 id="数组-代码随想列题"><a href="#数组-代码随想列题" class="headerlink" title="数组_代码随想列题"></a>数组_代码随想列题</h1><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>[题目链接](<a href="https://leetcode.cn/problems/binary-search/">Loading Question… - 力扣（LeetCode）</a>)</p>
+<p>给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
+<p>示例 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 9     </span><br><span class="line">输出: 4       </span><br><span class="line">解释: 9 出现在 nums 中并且下标为 4     </span><br></pre></td></tr></table></figure>
+
+<p>示例 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 2     </span><br><span class="line">输出: -1        </span><br><span class="line">解释: 2 不存在 nums 中因此返回 -1  </span><br></pre></td></tr></table></figure>
+
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了易于大家理解，我还录制了视频，可以看这里：<a href="https://www.bilibili.com/video/BV1fA4y1o715">手把手带你撕出正确的二分法(opens new window)</a></p>
+<p><strong>这道题目的前提是数组为有序数组</strong>，同时题目还强调<strong>数组中无重复元素</strong>，因为一旦有重复元素，使用二分查找法返回的元素下标可能不是唯一的，这些都是使用二分法的前提条件，当大家看到题目描述满足如上条件的时候，可要想一想是不是可以用二分法了。</p>
+<p>二分查找涉及的很多的边界条件，逻辑比较简单，但就是写不好。例如到底是 <code>while(left &lt; right)</code> 还是 <code>while(left &lt;= right)</code>，到底是<code>right = middle</code>呢，还是要<code>right = middle - 1</code>呢？</p>
+<p>大家写二分法经常写乱，主要是因为<strong>对区间的定义没有想清楚，区间的定义就是不变量</strong>。要在二分查找的过程中，保持不变量，就是在while寻找中每一次边界的处理都要坚持根据区间的定义来操作，这就是<strong>循环不变量</strong>规则。</p>
+<p>写二分法，区间的定义一般为两种，左闭右闭即[left, right]，或者左闭右开即[left, right)。</p>
+<p>下面我用这两种区间的定义分别讲解两种不同的二分写法。</p>
+<h3 id="二分法第一种写法"><a href="#二分法第一种写法" class="headerlink" title="二分法第一种写法"></a>二分法第一种写法</h3><p>第一种写法，我们定义 target 是在一个在左闭右闭的区间里，<strong>也就是[left, right] （这个很重要非常重要）</strong>。</p>
+<p>区间的定义这就决定了二分法的代码应该如何写，<strong>因为定义target在[left, right]区间，所以有如下两点：</strong></p>
+<ul>
+<li>while (left &lt;&#x3D; right) 要使用 &lt;&#x3D; ，因为left &#x3D;&#x3D; right是有意义的，所以使用 &lt;&#x3D;</li>
+<li>if (nums[middle] &gt; target) right 要赋值为 middle - 1，因为当前这个nums[middle]一定不是target，那么接下来要查找的左区间结束下标位置就是 middle - 1</li>
+</ul>
+<p>例如在数组：1,2,3,4,7,9,10中查找元素2，如图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210311153055723.jpg" alt="704.二分查找"></p>
+<p>代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 版本一</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int search(vector&lt;int&gt;&amp; nums, int target) &#123;</span><br><span class="line">        int left = 0;</span><br><span class="line">        int right = nums.size() - 1; // 定义target在左闭右闭的区间里，[left, right]</span><br><span class="line">        while (left &lt;= right) &#123; // 当left==right，区间[left, right]依然有效，所以用 &lt;=</span><br><span class="line">            int middle = left + ((right - left) / 2);// 防止溢出 等同于(left + right)/2</span><br><span class="line">            if (nums[middle] &gt; target) &#123;</span><br><span class="line">                right = middle - 1; // target 在左区间，所以[left, middle - 1]</span><br><span class="line">            &#125; else if (nums[middle] &lt; target) &#123;</span><br><span class="line">                left = middle + 1; // target 在右区间，所以[middle + 1, right]</span><br><span class="line">            &#125; else &#123; // nums[middle] == target</span><br><span class="line">                return middle; // 数组中找到目标值，直接返回下标</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 未找到目标值</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="二分法第二种写法"><a href="#二分法第二种写法" class="headerlink" title="二分法第二种写法"></a>二分法第二种写法</h3><p>如果说定义 target 是在一个在左闭右开的区间里，也就是[left, right) ，那么二分法的边界处理方式则截然不同。</p>
+<p>有如下两点：</p>
+<ul>
+<li>while (left &lt; right)，这里使用 &lt; ,因为left &#x3D;&#x3D; right在区间[left, right)是没有意义的</li>
+<li>if (nums[middle] &gt; target) right 更新为 middle，因为当前nums[middle]不等于target，去左区间继续寻找，而寻找区间是左闭右开区间，所以right更新为middle，即：下一个查询区间不会去比较nums[middle]</li>
+</ul>
+<p>在数组：1,2,3,4,7,9,10中查找元素2，如图所示：（<strong>注意和方法一的区别</strong>）</p>
+<p><img src="https://img-blog.csdnimg.cn/20210311153123632.jpg" alt="704.二分查找1"></p>
+<p>代码如下：（详细注释）</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 版本二</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">search</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right = nums.<span class="built_in">size</span>(); <span class="comment">// 定义target在左闭右开的区间里，即：[left, right)</span></span><br><span class="line">        <span class="keyword">while</span> (left &lt; right) &#123; <span class="comment">// 因为left == right的时候，在[left, right)是无效的空间，所以使用 &lt;</span></span><br><span class="line">            <span class="type">int</span> middle = left + ((right - left) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span> (nums[middle] &gt; target) &#123;</span><br><span class="line">                right = middle; <span class="comment">// target 在左区间，在[left, middle)中</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[middle] &lt; target) &#123;</span><br><span class="line">                left = middle + <span class="number">1</span>; <span class="comment">// target 在右区间，在[middle + 1, right)中</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123; <span class="comment">// nums[middle] == target</span></span><br><span class="line">                <span class="keyword">return</span> middle; <span class="comment">// 数组中找到目标值，直接返回下标</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 未找到目标值</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>二分法是非常重要的基础算法，为什么很多同学对于二分法都是<strong>一看就会，一写就废</strong>？</p>
+<p>其实主要就是对区间的定义没有理解清楚，在循环中没有始终坚持根据查找区间的定义来做边界处理。</p>
+<p>区间的定义就是不变量，那么在循环中坚持根据查找区间的定义来做边界处理，就是循环不变量规则。</p>
+<p>本篇根据两种常见的区间定义，给出了两种二分法的写法，每一个边界为什么这么处理，都根据区间的定义做了详细介绍。</p>
+<p>相信看完本篇应该对二分法有更深刻的理解了。</p>
+<h3 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h3><p>左边第一个目标值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left &lt; right) &#123;</span><br><span class="line">        mid = (left+right)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] &gt;= target) right = mid;</span><br><span class="line">        <span class="keyword">else</span> left = mid+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> left || right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>右边第一个目标值：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">	int left = 0;</span><br><span class="line">	int right = nums.length - 1;</span><br><span class="line">	while(left &lt; right) &#123;</span><br><span class="line">		mid = 1+(left+right)/2;</span><br><span class="line">		if(nums[mid]&lt;=target) left = mid;</span><br><span class="line">		else right = mid-1;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
         <category>算法简史</category>
+        <category>数组</category>
       </categories>
       <tags>
         <tag>数组</tag>
-        <tag>哈希表</tag>
       </tags>
   </entry>
   <entry>
@@ -127,6 +171,23 @@
     <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<p>没有吃饭</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>数组在哈希表中的应用</title>
+    <url>/2022/07/13/%E5%93%88%E5%B8%8C%E8%A1%A8&amp;&amp;%E6%95%B0%E7%BB%84%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
+<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>哈希表</tag>
+      </tags>
   </entry>
   <entry>
     <title>数据库操作SQL</title>
@@ -211,6 +272,29 @@
       </tags>
   </entry>
   <entry>
+    <title>英语口语04</title>
+    <url>/2022/07/13/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD04/</url>
+    <content><![CDATA[<h1 id="英语口语04"><a href="#英语口语04" class="headerlink" title="英语口语04"></a>英语口语04</h1><h3 id="心中有蓝图"><a href="#心中有蓝图" class="headerlink" title="心中有蓝图"></a>心中有蓝图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">you should have a version for the future,</span><br><span class="line">something you want to do or accomplish,</span><br><span class="line">because...</span><br><span class="line">when you map out your goals,</span><br><span class="line">you will focus on things that can help you achieve what you want in life.</span><br></pre></td></tr></table></figure>
+
+<h3 id="打开适应度"><a href="#打开适应度" class="headerlink" title="打开适应度"></a>打开适应度</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if you just do what you are pretty good at already,</span><br><span class="line">you will not triggle adaptability.</span><br><span class="line">because...</span><br><span class="line">mastery is not just about putting in 10000 hours,</span><br><span class="line">just doing something over and over again does&#x27;t make you </span><br><span class="line">better at something,</span><br><span class="line">it&#x27;s about 100 hours of deliberate practice.</span><br></pre></td></tr></table></figure>
+
+<h3 id="苦练成才"><a href="#苦练成才" class="headerlink" title="苦练成才"></a>苦练成才</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">to reach your peak performance level,</span><br><span class="line">you need to challenge yourself,</span><br><span class="line">because...</span><br><span class="line">you can&#x27;t expect to evolve and reach new heights if </span><br><span class="line">you only stick to your normal habits and lifestyle.</span><br></pre></td></tr></table></figure>
+
+<p><strong>世界上最甜蜜的事，就是极致内化之后的自动脑补。</strong></p>
+<p><strong>不必消耗脑流量，直接下意识输出。</strong></p>
+<p><strong>就像弹钢琴一样。</strong></p>
+<p><strong>练至精熟之境，你不必在意手指，</strong></p>
+<p><strong>手指自动会落在适合的琴键上，并一瞬间打开最精确的力度和准度。</strong></p>
+<p><strong>这种境界，你不去体会，必遗憾终身。</strong></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英语口语02</title>
     <url>/2022/07/06/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD02/</url>
     <content><![CDATA[<h1 id="英语口语02"><a href="#英语口语02" class="headerlink" title="英语口语02"></a>英语口语02</h1><h3 id="精算能力"><a href="#精算能力" class="headerlink" title="精算能力"></a>精算能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math can be helpful for balancing your budget,</span><br><span class="line">because...</span><br><span class="line">you will have a good understanding of how to make sure that </span><br><span class="line">your costs are less than the money you have</span><br></pre></td></tr></table></figure>
@@ -245,29 +329,6 @@
 <p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
 <p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
 <p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语口语04</title>
-    <url>/2022/07/13/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD04/</url>
-    <content><![CDATA[<h1 id="英语口语04"><a href="#英语口语04" class="headerlink" title="英语口语04"></a>英语口语04</h1><h3 id="心中有蓝图"><a href="#心中有蓝图" class="headerlink" title="心中有蓝图"></a>心中有蓝图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">you should have a version for the future,</span><br><span class="line">something you want to do or accomplish,</span><br><span class="line">because...</span><br><span class="line">when you map out your goals,</span><br><span class="line">you will focus on things that can help you achieve what you want in life.</span><br></pre></td></tr></table></figure>
-
-<h3 id="打开适应度"><a href="#打开适应度" class="headerlink" title="打开适应度"></a>打开适应度</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if you just do what you are pretty good at already,</span><br><span class="line">you will not triggle adaptability.</span><br><span class="line">because...</span><br><span class="line">mastery is not just about putting in 10000 hours,</span><br><span class="line">just doing something over and over again does&#x27;t make you </span><br><span class="line">better at something,</span><br><span class="line">it&#x27;s about 100 hours of deliberate practice.</span><br></pre></td></tr></table></figure>
-
-<h3 id="苦练成才"><a href="#苦练成才" class="headerlink" title="苦练成才"></a>苦练成才</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">to reach your peak performance level,</span><br><span class="line">you need to challenge yourself,</span><br><span class="line">because...</span><br><span class="line">you can&#x27;t expect to evolve and reach new heights if </span><br><span class="line">you only stick to your normal habits and lifestyle.</span><br></pre></td></tr></table></figure>
-
-<p><strong>世界上最甜蜜的事，就是极致内化之后的自动脑补。</strong></p>
-<p><strong>不必消耗脑流量，直接下意识输出。</strong></p>
-<p><strong>就像弹钢琴一样。</strong></p>
-<p><strong>练至精熟之境，你不必在意手指，</strong></p>
-<p><strong>手指自动会落在适合的琴键上，并一瞬间打开最精确的力度和准度。</strong></p>
-<p><strong>这种境界，你不去体会，必遗憾终身。</strong></p>
 ]]></content>
       <categories>
         <category>口语</category>
