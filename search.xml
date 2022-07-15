@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Docker容器命令</title>
+    <url>/2022/07/07/Docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Docker容器命令"><a href="#Docker容器命令" class="headerlink" title="Docker容器命令"></a>Docker容器命令</h1><h3 id="Docker将镜像转为容器"><a href="#Docker将镜像转为容器" class="headerlink" title="Docker将镜像转为容器"></a>Docker将镜像转为容器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name containerName -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="查看docker容器状态"><a href="#查看docker容器状态" class="headerlink" title="查看docker容器状态"></a>查看docker容器状态</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker logs 容器名称</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker镜像命令</title>
     <url>/2022/07/07/Docker%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Docker常用镜像命令"><a href="#Docker常用镜像命令" class="headerlink" title="Docker常用镜像命令"></a>Docker常用镜像命令</h1><p>这些是最基本的Docker镜像命令，也是最有用的</p>
@@ -13,92 +32,6 @@
 <h3 id="docker-load-i-镜像名-tar"><a href="#docker-load-i-镜像名-tar" class="headerlink" title="docker load -i 镜像名.tar"></a>docker load -i 镜像名.tar</h3><p>将压缩包解压为一个镜像</p>
 <h3 id="docker-rmi-镜像名或者镜像ID"><a href="#docker-rmi-镜像名或者镜像ID" class="headerlink" title="docker rmi 镜像名或者镜像ID"></a>docker rmi 镜像名或者镜像ID</h3><p>删除镜像</p>
 <h3 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h3><p>查看镜像</p>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Redis命令大全</title>
-    <url>/2022/07/04/Redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="Redis常用命令"><a href="#Redis常用命令" class="headerlink" title="Redis常用命令"></a>Redis常用命令</h1><p>本文记录常用的Redis命令 方便以后复习使用</p>
-<h3 id="在服务器上使用Redis-命令"><a href="#在服务器上使用Redis-命令" class="headerlink" title="在服务器上使用Redis 命令"></a>在服务器上使用Redis 命令</h3><h4 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$redis<span class="operator">-</span>cli</span><br><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span></span><br><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> PING</span><br><span class="line"> </span><br><span class="line">PONG</span><br></pre></td></tr></table></figure>
-
-<h4 id="远程使用"><a href="#远程使用" class="headerlink" title="远程使用"></a>远程使用</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$redis-cli -h 127.0.0.1 -p 6379 -a &quot;mypass&quot;</span><br><span class="line">redis 127.0.0.1:6379&gt;</span><br><span class="line">redis 127.0.0.1:6379&gt; PING</span><br><span class="line"> </span><br><span class="line">PONG</span><br></pre></td></tr></table></figure>
-
-<h3 id="字符串常用命令"><a href="#字符串常用命令" class="headerlink" title="字符串常用命令"></a>字符串常用命令</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SET key value #设置一个key-value 键值对</span><br><span class="line">GET key #获取key对应的value</span><br><span class="line">SETEX key seconds value #设置key的有效时间指向value</span><br><span class="line">SETNX KEY VALUE #在key不存在时 才会设置VALUE</span><br></pre></td></tr></table></figure>
-
-<h4 id="String在Redis中所需要的常识"><a href="#String在Redis中所需要的常识" class="headerlink" title="String在Redis中所需要的常识"></a>String在Redis中所需要的常识</h4><ol>
-<li>string是redis最基本的类型，你可以理解成与Memcached一模一样的类型，一个key对应一个value。</li>
-<li>string类型是二进制安全的。意思是redis的string可以包含任何数据。比如jpg图片或者序列化的对象 。</li>
-<li>string类型是Redis最基本的数据类型，一个键最大能存储512MB。</li>
-</ol>
-<h4 id="实列"><a href="#实列" class="headerlink" title="实列"></a>实列</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">SET</span> name &quot;redis.net.cn&quot;</span><br><span class="line">OK</span><br><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">GET</span> name</span><br><span class="line">&quot;redis.net.cn&quot;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Redis-keys命令"><a href="#Redis-keys命令" class="headerlink" title="Redis keys命令"></a>Redis keys命令</h3><ol>
-<li><a href="https://www.redis.net.cn/order/3528.html">DEL key</a> 该命令用于在 key 存在是删除 key</li>
-<li><a href="https://www.redis.net.cn/order/3530.html">EXISTS key</a> 检查给定 key 是否存在</li>
-<li><a href="https://www.redis.net.cn/order/3531.html">EXPIRE key</a> seconds 为给定 key 设置过期时间。</li>
-<li><a href="https://www.redis.net.cn/order/3536.html">MOVE key db</a> 将当前数据库的 key 移动到给定的数据库 db 当中。</li>
-</ol>
-<h3 id="Redis-集合"><a href="#Redis-集合" class="headerlink" title="Redis 集合"></a>Redis 集合</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt; SADD w3ckey redis</span><br><span class="line">(integer) 1</span><br><span class="line">redis 127.0.0.1:6379&gt; SADD w3ckey mongodb</span><br><span class="line">(integer) 1</span><br><span class="line">redis 127.0.0.1:6379&gt; SADD w3ckey mysql</span><br><span class="line">(integer) 1</span><br><span class="line">redis 127.0.0.1:6379&gt; SADD w3ckey mysql</span><br><span class="line">(integer) 0</span><br><span class="line">redis 127.0.0.1:6379&gt; SMEMBERS w3ckey</span><br><span class="line"> </span><br><span class="line">1) &quot;mysql&quot;</span><br><span class="line">2) &quot;mongodb&quot;</span><br><span class="line">3) &quot;redis&quot;</span><br></pre></td></tr></table></figure>
-
-<p>在以上实例中我们通过 <strong>SADD</strong> 命令向名为 w3ckey 的集合插入的三个元素。</p>
-<h3 id="Redis-哈希"><a href="#Redis-哈希" class="headerlink" title="Redis 哈希"></a>Redis 哈希</h3><h4 id="实列-1"><a href="#实列-1" class="headerlink" title="实列"></a>实列</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt; HMSET w3ckey name &quot;redis tutorial&quot; description &quot;redis basic commands for caching&quot; likes 20 visitors 23000</span><br><span class="line">OK</span><br><span class="line">redis 127.0.0.1:6379&gt; HGETALL w3ckey</span><br><span class="line"> </span><br><span class="line">1) &quot;name&quot;</span><br><span class="line">2) &quot;redis tutorial&quot;</span><br><span class="line">3) &quot;description&quot;</span><br><span class="line">4) &quot;redis basic commands for caching&quot;</span><br><span class="line">5) &quot;likes&quot;</span><br><span class="line">6) &quot;20&quot;</span><br><span class="line">7) &quot;visitors&quot;</span><br><span class="line">8) &quot;23000&quot;</span><br></pre></td></tr></table></figure>
-
-<p>在以上实例中，我们设置了 redis 的一些描述信息(name, description, likes, visitors) 到哈希表的 w3ckey 中</p>
-<h4 id="哈希命令"><a href="#哈希命令" class="headerlink" title="哈希命令"></a>哈希命令</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.HDEL key field2 [field2] 删除一个或多个哈希表字段</span><br><span class="line">2.HEXISTS key field 查看哈希表 key 中，指定的字段是否存在。</span><br><span class="line">3.HGET key field 获取存储在哈希表中指定字段的值</span><br><span class="line">4.HGETALL key 获取在哈希表中指定 key 的所有字段和值</span><br><span class="line">7.HKEYS key 获取所有哈希表中的字段</span><br><span class="line">8.HLEN key 获取哈希表中字段的数量</span><br></pre></td></tr></table></figure>
-
-<h3 id="Redis-列表"><a href="#Redis-列表" class="headerlink" title="Redis 列表"></a>Redis 列表</h3><h4 id="实列-2"><a href="#实列-2" class="headerlink" title="实列"></a>实列</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt; LPUSH w3ckey redis</span><br><span class="line">(integer) 1</span><br><span class="line">redis 127.0.0.1:6379&gt; LPUSH w3ckey mongodb</span><br><span class="line">(integer) 2</span><br><span class="line">redis 127.0.0.1:6379&gt; LPUSH w3ckey mysql</span><br><span class="line">(integer) 3</span><br><span class="line">redis 127.0.0.1:6379&gt; LRANGE w3ckey 0 10</span><br><span class="line"> </span><br><span class="line">1) &quot;mysql&quot;</span><br><span class="line">2) &quot;mongodb&quot;</span><br><span class="line">3) &quot;redis&quot;</span><br></pre></td></tr></table></figure>
-
-<p>在以上实例中我们使用了 <strong>LPUSH</strong> 将三个值插入了名为 w3ckey 的列表当中。</p>
-<p>列表命令：</p>
-<ol>
-<li><a href="https://www.redis.net.cn/order/3582.html">LLEN key</a> 获取列表长度</li>
-<li><a href="https://www.redis.net.cn/order/3583.html">LPOP key</a> 移出并获取列表的第一个元素</li>
-<li><a href="https://www.redis.net.cn/order/3586.html">LRANGE key start stop</a> 获取列表指定范围内的元素</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Redis</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/06/22/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p>thanks for your listenning</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Docker容器命令</title>
-    <url>/2022/07/07/Docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="Docker容器命令"><a href="#Docker容器命令" class="headerlink" title="Docker容器命令"></a>Docker容器命令</h1><h3 id="Docker将镜像转为容器"><a href="#Docker将镜像转为容器" class="headerlink" title="Docker将镜像转为容器"></a>Docker将镜像转为容器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name containerName -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="查看docker容器状态"><a href="#查看docker容器状态" class="headerlink" title="查看docker容器状态"></a>查看docker容器状态</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker logs 容器名称</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>Docker</category>
@@ -167,10 +100,71 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p>没有吃饭</p>
+    <title>Hello World</title>
+    <url>/2022/06/22/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<p>thanks for your listenning</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Redis命令大全</title>
+    <url>/2022/07/04/Redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Redis常用命令"><a href="#Redis常用命令" class="headerlink" title="Redis常用命令"></a>Redis常用命令</h1><p>本文记录常用的Redis命令 方便以后复习使用</p>
+<h3 id="在服务器上使用Redis-命令"><a href="#在服务器上使用Redis-命令" class="headerlink" title="在服务器上使用Redis 命令"></a>在服务器上使用Redis 命令</h3><h4 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$redis<span class="operator">-</span>cli</span><br><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span></span><br><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> PING</span><br><span class="line"> </span><br><span class="line">PONG</span><br></pre></td></tr></table></figure>
+
+<h4 id="远程使用"><a href="#远程使用" class="headerlink" title="远程使用"></a>远程使用</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$redis-cli -h 127.0.0.1 -p 6379 -a &quot;mypass&quot;</span><br><span class="line">redis 127.0.0.1:6379&gt;</span><br><span class="line">redis 127.0.0.1:6379&gt; PING</span><br><span class="line"> </span><br><span class="line">PONG</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串常用命令"><a href="#字符串常用命令" class="headerlink" title="字符串常用命令"></a>字符串常用命令</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SET key value #设置一个key-value 键值对</span><br><span class="line">GET key #获取key对应的value</span><br><span class="line">SETEX key seconds value #设置key的有效时间指向value</span><br><span class="line">SETNX KEY VALUE #在key不存在时 才会设置VALUE</span><br></pre></td></tr></table></figure>
+
+<h4 id="String在Redis中所需要的常识"><a href="#String在Redis中所需要的常识" class="headerlink" title="String在Redis中所需要的常识"></a>String在Redis中所需要的常识</h4><ol>
+<li>string是redis最基本的类型，你可以理解成与Memcached一模一样的类型，一个key对应一个value。</li>
+<li>string类型是二进制安全的。意思是redis的string可以包含任何数据。比如jpg图片或者序列化的对象 。</li>
+<li>string类型是Redis最基本的数据类型，一个键最大能存储512MB。</li>
+</ol>
+<h4 id="实列"><a href="#实列" class="headerlink" title="实列"></a>实列</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">SET</span> name &quot;redis.net.cn&quot;</span><br><span class="line">OK</span><br><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span><span class="operator">&gt;</span> <span class="keyword">GET</span> name</span><br><span class="line">&quot;redis.net.cn&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Redis-keys命令"><a href="#Redis-keys命令" class="headerlink" title="Redis keys命令"></a>Redis keys命令</h3><ol>
+<li><a href="https://www.redis.net.cn/order/3528.html">DEL key</a> 该命令用于在 key 存在是删除 key</li>
+<li><a href="https://www.redis.net.cn/order/3530.html">EXISTS key</a> 检查给定 key 是否存在</li>
+<li><a href="https://www.redis.net.cn/order/3531.html">EXPIRE key</a> seconds 为给定 key 设置过期时间。</li>
+<li><a href="https://www.redis.net.cn/order/3536.html">MOVE key db</a> 将当前数据库的 key 移动到给定的数据库 db 当中。</li>
+</ol>
+<h3 id="Redis-集合"><a href="#Redis-集合" class="headerlink" title="Redis 集合"></a>Redis 集合</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt; SADD w3ckey redis</span><br><span class="line">(integer) 1</span><br><span class="line">redis 127.0.0.1:6379&gt; SADD w3ckey mongodb</span><br><span class="line">(integer) 1</span><br><span class="line">redis 127.0.0.1:6379&gt; SADD w3ckey mysql</span><br><span class="line">(integer) 1</span><br><span class="line">redis 127.0.0.1:6379&gt; SADD w3ckey mysql</span><br><span class="line">(integer) 0</span><br><span class="line">redis 127.0.0.1:6379&gt; SMEMBERS w3ckey</span><br><span class="line"> </span><br><span class="line">1) &quot;mysql&quot;</span><br><span class="line">2) &quot;mongodb&quot;</span><br><span class="line">3) &quot;redis&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在以上实例中我们通过 <strong>SADD</strong> 命令向名为 w3ckey 的集合插入的三个元素。</p>
+<h3 id="Redis-哈希"><a href="#Redis-哈希" class="headerlink" title="Redis 哈希"></a>Redis 哈希</h3><h4 id="实列-1"><a href="#实列-1" class="headerlink" title="实列"></a>实列</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt; HMSET w3ckey name &quot;redis tutorial&quot; description &quot;redis basic commands for caching&quot; likes 20 visitors 23000</span><br><span class="line">OK</span><br><span class="line">redis 127.0.0.1:6379&gt; HGETALL w3ckey</span><br><span class="line"> </span><br><span class="line">1) &quot;name&quot;</span><br><span class="line">2) &quot;redis tutorial&quot;</span><br><span class="line">3) &quot;description&quot;</span><br><span class="line">4) &quot;redis basic commands for caching&quot;</span><br><span class="line">5) &quot;likes&quot;</span><br><span class="line">6) &quot;20&quot;</span><br><span class="line">7) &quot;visitors&quot;</span><br><span class="line">8) &quot;23000&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在以上实例中，我们设置了 redis 的一些描述信息(name, description, likes, visitors) 到哈希表的 w3ckey 中</p>
+<h4 id="哈希命令"><a href="#哈希命令" class="headerlink" title="哈希命令"></a>哈希命令</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.HDEL key field2 [field2] 删除一个或多个哈希表字段</span><br><span class="line">2.HEXISTS key field 查看哈希表 key 中，指定的字段是否存在。</span><br><span class="line">3.HGET key field 获取存储在哈希表中指定字段的值</span><br><span class="line">4.HGETALL key 获取在哈希表中指定 key 的所有字段和值</span><br><span class="line">7.HKEYS key 获取所有哈希表中的字段</span><br><span class="line">8.HLEN key 获取哈希表中字段的数量</span><br></pre></td></tr></table></figure>
+
+<h3 id="Redis-列表"><a href="#Redis-列表" class="headerlink" title="Redis 列表"></a>Redis 列表</h3><h4 id="实列-2"><a href="#实列-2" class="headerlink" title="实列"></a>实列</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt; LPUSH w3ckey redis</span><br><span class="line">(integer) 1</span><br><span class="line">redis 127.0.0.1:6379&gt; LPUSH w3ckey mongodb</span><br><span class="line">(integer) 2</span><br><span class="line">redis 127.0.0.1:6379&gt; LPUSH w3ckey mysql</span><br><span class="line">(integer) 3</span><br><span class="line">redis 127.0.0.1:6379&gt; LRANGE w3ckey 0 10</span><br><span class="line"> </span><br><span class="line">1) &quot;mysql&quot;</span><br><span class="line">2) &quot;mongodb&quot;</span><br><span class="line">3) &quot;redis&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在以上实例中我们使用了 <strong>LPUSH</strong> 将三个值插入了名为 w3ckey 的列表当中。</p>
+<p>列表命令：</p>
+<ol>
+<li><a href="https://www.redis.net.cn/order/3582.html">LLEN key</a> 获取列表长度</li>
+<li><a href="https://www.redis.net.cn/order/3583.html">LPOP key</a> 移出并获取列表的第一个元素</li>
+<li><a href="https://www.redis.net.cn/order/3586.html">LRANGE key start stop</a> 获取列表指定范围内的元素</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
   </entry>
   <entry>
     <title>数组在哈希表中的应用</title>
@@ -188,6 +182,12 @@
         <tag>数组</tag>
         <tag>哈希表</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p>没有吃饭</p>
+]]></content>
   </entry>
   <entry>
     <title>数据库操作SQL</title>
@@ -227,18 +227,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构</title>
-    <url>/2022/06/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>算法简史</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>学习口语</title>
     <url>/2022/07/05/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD01/</url>
     <content><![CDATA[<h1 id="第一天英语口语"><a href="#第一天英语口语" class="headerlink" title="第一天英语口语"></a>第一天英语口语</h1><p>这些内容是非常好的英语口语资产 能帮助大伙快速起飞</p>
@@ -272,20 +260,29 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语04</title>
-    <url>/2022/07/13/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD04/</url>
-    <content><![CDATA[<h1 id="英语口语04"><a href="#英语口语04" class="headerlink" title="英语口语04"></a>英语口语04</h1><h3 id="心中有蓝图"><a href="#心中有蓝图" class="headerlink" title="心中有蓝图"></a>心中有蓝图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">you should have a version for the future,</span><br><span class="line">something you want to do or accomplish,</span><br><span class="line">because...</span><br><span class="line">when you map out your goals,</span><br><span class="line">you will focus on things that can help you achieve what you want in life.</span><br></pre></td></tr></table></figure>
+    <title>数据结构</title>
+    <url>/2022/06/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>算法简史</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语口语03</title>
+    <url>/2022/07/12/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD03/</url>
+    <content><![CDATA[<h1 id="英语口语03"><a href="#英语口语03" class="headerlink" title="英语口语03"></a>英语口语03</h1><h3 id="精力充沛"><a href="#精力充沛" class="headerlink" title="精力充沛"></a>精力充沛</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i will try to get into the routine of getting up early in the morning and go to bed</span><br><span class="line">early at night,</span><br><span class="line">so that...</span><br><span class="line">i will have a better sleeping pattern which enables me to be more energetic throughtout the day</span><br></pre></td></tr></table></figure>
 
-<h3 id="打开适应度"><a href="#打开适应度" class="headerlink" title="打开适应度"></a>打开适应度</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if you just do what you are pretty good at already,</span><br><span class="line">you will not triggle adaptability.</span><br><span class="line">because...</span><br><span class="line">mastery is not just about putting in 10000 hours,</span><br><span class="line">just doing something over and over again does&#x27;t make you </span><br><span class="line">better at something,</span><br><span class="line">it&#x27;s about 100 hours of deliberate practice.</span><br></pre></td></tr></table></figure>
+<h3 id="三省吾身"><a href="#三省吾身" class="headerlink" title="三省吾身"></a>三省吾身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i think it&#x27;s important to refresh my mind about the current situation,</span><br><span class="line">by vasualizing long,middle,short term goals everyday </span><br><span class="line">because...</span><br><span class="line">sometimes it&#x27;s easy to lose the big picture when we are immersing yourself in detailed executions.</span><br><span class="line">But it&#x27;s also easy to miss out the detailed executions when we are grasping the big picture</span><br></pre></td></tr></table></figure>
 
-<h3 id="苦练成才"><a href="#苦练成才" class="headerlink" title="苦练成才"></a>苦练成才</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">to reach your peak performance level,</span><br><span class="line">you need to challenge yourself,</span><br><span class="line">because...</span><br><span class="line">you can&#x27;t expect to evolve and reach new heights if </span><br><span class="line">you only stick to your normal habits and lifestyle.</span><br></pre></td></tr></table></figure>
+<h3 id="熬夜伤身"><a href="#熬夜伤身" class="headerlink" title="熬夜伤身"></a>熬夜伤身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">being a night owl could hurt our health</span><br><span class="line">because...</span><br><span class="line">staying up late will disrupts your sleep-wake cycle...</span><br><span class="line">which can affect your mental functioning and energy levels the next day.</span><br></pre></td></tr></table></figure>
 
-<p><strong>世界上最甜蜜的事，就是极致内化之后的自动脑补。</strong></p>
-<p><strong>不必消耗脑流量，直接下意识输出。</strong></p>
-<p><strong>就像弹钢琴一样。</strong></p>
-<p><strong>练至精熟之境，你不必在意手指，</strong></p>
-<p><strong>手指自动会落在适合的琴键上，并一瞬间打开最精确的力度和准度。</strong></p>
-<p><strong>这种境界，你不去体会，必遗憾终身。</strong></p>
+<p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
+<p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
+<p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
 ]]></content>
       <categories>
         <category>口语</category>
@@ -318,17 +315,20 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语03</title>
-    <url>/2022/07/12/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD03/</url>
-    <content><![CDATA[<h1 id="英语口语03"><a href="#英语口语03" class="headerlink" title="英语口语03"></a>英语口语03</h1><h3 id="精力充沛"><a href="#精力充沛" class="headerlink" title="精力充沛"></a>精力充沛</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i will try to get into the routine of getting up early in the morning and go to bed</span><br><span class="line">early at night,</span><br><span class="line">so that...</span><br><span class="line">i will have a better sleeping pattern which enables me to be more energetic throughtout the day</span><br></pre></td></tr></table></figure>
+    <title>英语口语04</title>
+    <url>/2022/07/13/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD04/</url>
+    <content><![CDATA[<h1 id="英语口语04"><a href="#英语口语04" class="headerlink" title="英语口语04"></a>英语口语04</h1><h3 id="心中有蓝图"><a href="#心中有蓝图" class="headerlink" title="心中有蓝图"></a>心中有蓝图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">you should have a version for the future,</span><br><span class="line">something you want to do or accomplish,</span><br><span class="line">because...</span><br><span class="line">when you map out your goals,</span><br><span class="line">you will focus on things that can help you achieve what you want in life.</span><br></pre></td></tr></table></figure>
 
-<h3 id="三省吾身"><a href="#三省吾身" class="headerlink" title="三省吾身"></a>三省吾身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i think it&#x27;s important to refresh my mind about the current situation,</span><br><span class="line">by vasualizing long,middle,short term goals everyday </span><br><span class="line">because...</span><br><span class="line">sometimes it&#x27;s easy to lose the big picture when we are immersing yourself in detailed executions.</span><br><span class="line">But it&#x27;s also easy to miss out the detailed executions when we are grasping the big picture</span><br></pre></td></tr></table></figure>
+<h3 id="打开适应度"><a href="#打开适应度" class="headerlink" title="打开适应度"></a>打开适应度</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if you just do what you are pretty good at already,</span><br><span class="line">you will not triggle adaptability.</span><br><span class="line">because...</span><br><span class="line">mastery is not just about putting in 10000 hours,</span><br><span class="line">just doing something over and over again does&#x27;t make you </span><br><span class="line">better at something,</span><br><span class="line">it&#x27;s about 100 hours of deliberate practice.</span><br></pre></td></tr></table></figure>
 
-<h3 id="熬夜伤身"><a href="#熬夜伤身" class="headerlink" title="熬夜伤身"></a>熬夜伤身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">being a night owl could hurt our health</span><br><span class="line">because...</span><br><span class="line">staying up late will disrupts your sleep-wake cycle...</span><br><span class="line">which can affect your mental functioning and energy levels the next day.</span><br></pre></td></tr></table></figure>
+<h3 id="苦练成才"><a href="#苦练成才" class="headerlink" title="苦练成才"></a>苦练成才</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">to reach your peak performance level,</span><br><span class="line">you need to challenge yourself,</span><br><span class="line">because...</span><br><span class="line">you can&#x27;t expect to evolve and reach new heights if </span><br><span class="line">you only stick to your normal habits and lifestyle.</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
-<p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
-<p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
+<p><strong>世界上最甜蜜的事，就是极致内化之后的自动脑补。</strong></p>
+<p><strong>不必消耗脑流量，直接下意识输出。</strong></p>
+<p><strong>就像弹钢琴一样。</strong></p>
+<p><strong>练至精熟之境，你不必在意手指，</strong></p>
+<p><strong>手指自动会落在适合的琴键上，并一瞬间打开最精确的力度和准度。</strong></p>
+<p><strong>这种境界，你不去体会，必遗憾终身。</strong></p>
 ]]></content>
       <categories>
         <category>口语</category>
@@ -353,6 +353,33 @@
 <p><em><strong>*我们现阶段要达到的境界，就是在中文表达中，或日常所见所闻，慢慢感受到从“中文俗语”到“英文语流”的无缝连接。*</strong></em></p>
 <p><em><strong>*这样一来，中英文的互换，就变得极其轻松。*</strong></em></p>
 <p><em><strong>*流利度也慢慢得到体现。*</strong></em></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语口语06</title>
+    <url>/2022/07/15/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD06/</url>
+    <content><![CDATA[<h1 id="英语口语06"><a href="#英语口语06" class="headerlink" title="英语口语06"></a>英语口语06</h1><h3 id="朝九晚五"><a href="#朝九晚五" class="headerlink" title="朝九晚五"></a>朝九晚五</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">the dark side of 9-5 job is that</span><br><span class="line">you&#x27;re exchanging your time for money,</span><br><span class="line">like...</span><br><span class="line">you spent an hour at your job,you get paied for that hour,</span><br><span class="line">for example,</span><br><span class="line">you could work your ass off,like...80 hours a week and make a certain</span><br><span class="line">amount of money...</span><br><span class="line">the problem is...</span><br><span class="line">next week you want to make that same amount,</span><br><span class="line">you still have to spend 80 hours a week.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：概念落地+例证说明，潇洒利落，层次分明。*</strong></em></p>
+<p><em><strong>*如果你不赞同这个观点，你也可以拿他当一个返利，比如，啊，有些人说朝九晚五不行，他们的逻辑是….但我认为…*</strong></em></p>
+<p><em><strong>*口语中，拿自己不赞同的观点开刷，是非常聪明的打法。*</strong></em></p>
+<h3 id="大负翁"><a href="#大负翁" class="headerlink" title="大负翁"></a>大负翁</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Many bussiness owners end up in debt,</span><br><span class="line">because...</span><br><span class="line">they are struggling to keep the personal finances afloat</span><br><span class="line">while running a business which is not yet making money.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：短小精悍，犀利非常。*</strong></em></p>
+<p><em><strong>*特别是后面逻辑链中的长句，宛若美酒，越品越香。*</strong></em></p>
+<p><em><strong>*while代表伴随动作，同时发生。*</strong></em></p>
+<p><em><strong>*which引导从句，修饰business.*</strong></em></p>
+<h3 id="利滚利"><a href="#利滚利" class="headerlink" title="利滚利"></a>利滚利</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Debt feels free when you are swipping your card,</span><br><span class="line">but it is a illusion,</span><br><span class="line">because...</span><br><span class="line">the higher the interest rate, the more you&#x27;ll end up paying for the debt,</span><br><span class="line">Also,the longer it takes you to pay off the debt,the more interest you&#x27;ll pay.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：这个框架非常好，攻击力强悍霸道。*</strong></em></p>
+<p><em><strong>*后面自带两个比较级，组成长句，更是威力非凡。*</strong></em></p>
+<p><em><strong>*请注意此语流中的用词，细细体会。*</strong></em></p>
 ]]></content>
       <categories>
         <category>口语</category>
