@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Docker容器命令</title>
-    <url>/2022/07/07/Docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="Docker容器命令"><a href="#Docker容器命令" class="headerlink" title="Docker容器命令"></a>Docker容器命令</h1><h3 id="Docker将镜像转为容器"><a href="#Docker将镜像转为容器" class="headerlink" title="Docker将镜像转为容器"></a>Docker将镜像转为容器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name containerName -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="查看docker容器状态"><a href="#查看docker容器状态" class="headerlink" title="查看docker容器状态"></a>查看docker容器状态</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker logs 容器名称</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker镜像命令</title>
     <url>/2022/07/07/Docker%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Docker常用镜像命令"><a href="#Docker常用镜像命令" class="headerlink" title="Docker常用镜像命令"></a>Docker常用镜像命令</h1><p>这些是最基本的Docker镜像命令，也是最有用的</p>
@@ -39,6 +20,44 @@
       <tags>
         <tag>Docker命令</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Docker容器命令</title>
+    <url>/2022/07/07/Docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Docker容器命令"><a href="#Docker容器命令" class="headerlink" title="Docker容器命令"></a>Docker容器命令</h1><h3 id="Docker将镜像转为容器"><a href="#Docker将镜像转为容器" class="headerlink" title="Docker将镜像转为容器"></a>Docker将镜像转为容器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name containerName -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="查看docker容器状态"><a href="#查看docker容器状态" class="headerlink" title="查看docker容器状态"></a>查看docker容器状态</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker logs 容器名称</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/06/22/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<p>thanks for your listenning</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>Redis命令大全</title>
@@ -148,23 +167,40 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/06/22/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p>thanks for your listenning</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>数组_代码随想列题03</title>
+    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8403/</url>
+    <content><![CDATA[<h1 id="代码随想录-数组03"><a href="#代码随想录-数组03" class="headerlink" title="代码随想录_数组03"></a>代码随想录_数组03</h1><h1 id="977-有序数组的平方"><a href="#977-有序数组的平方" class="headerlink" title="977.有序数组的平方"></a>977.有序数组的平方</h1><p><a href="https://leetcode.cn/problems/squares-of-a-sorted-array/">力扣题目链接(opens new window)</a></p>
+<p>给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。</p>
+<p>示例 1： 输入：nums &#x3D; [-4,-1,0,3,10] 输出：[0,1,9,16,100] 解释：平方后，数组变为 [16,1,0,9,100]，排序后，数组变为 [0,1,9,16,100]</p>
+<p>示例 2： 输入：nums &#x3D; [-7,-3,2,3,11] 输出：[4,9,9,49,121]</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了易于大家理解，我还特意录制了视频，<a href="https://www.bilibili.com/video/BV1QB4y1D7ep">本题视频讲解(opens new window)</a></p>
+<h3 id="暴力排序"><a href="#暴力排序" class="headerlink" title="暴力排序"></a>暴力排序</h3><p>最直观的想法，莫过于：每个数平方之后，排个序，美滋滋，代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; A) &#123;</span><br><span class="line">        for (int i = 0; i &lt; A.size(); i++) &#123;</span><br><span class="line">            A[i] *= A[i];</span><br><span class="line">        &#125;</span><br><span class="line">        sort(A.begin(), A.end()); // 快速排序</span><br><span class="line">        return A;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>这个时间复杂度是 O(n + nlogn)， 可以说是O(nlogn)的时间复杂度，但为了和下面双指针法算法时间复杂度有鲜明对比，我记为 O(n + nlog n)。</p>
+<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>数组其实是有序的， 只不过负数平方之后可能成为最大数了。</p>
+<p>那么数组平方的最大值就在数组的两端，不是最左边就是最右边，不可能是中间。</p>
+<p>此时可以考虑双指针法了，i指向起始位置，j指向终止位置。</p>
+<p>定义一个新数组result，和A数组一样的大小，让k指向result数组终止位置。</p>
+<p>如果<code>A[i] * A[i] &lt; A[j] * A[j]</code> 那么<code>result[k--] = A[j] * A[j];</code> 。</p>
+<p>如果<code>A[i] * A[i] &gt;= A[j] * A[j]</code> 那么<code>result[k--] = A[i] * A[i];</code> 。</p>
+<p>如动画所示：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.gif" alt="img"></p>
+<p>不难写出如下代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span>[] sortedSquares(<span class="type">int</span>[] nums) &#123;</span><br><span class="line">		<span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length-<span class="number">1</span>;</span><br><span class="line">		<span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span>[] new_nums =<span class="keyword">new</span> <span class="title class_">int</span>[nums.length];</span><br><span class="line">        <span class="type">int</span> <span class="variable">new_index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(left &lt;= right) &#123;</span><br><span class="line">			<span class="keyword">if</span>(nums[left]*nums[left] &lt; nums[right]*nums[right]) &#123;</span><br><span class="line">                new_nums[new_index++] = nums[left]*nums[left];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                new_nums[new_index++] = nums[right]*nums[right];</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">       <span class="keyword">return</span> new_nums;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>此时的时间复杂度为O(n)，相对于暴力排序的解法O(n + nlog n)还是提升不少的。</p>
+<p><strong>这里还是说一下，大家不必太在意leetcode上执行用时，打败多少多少用户，这个就是一个玩具，非常不准确。</strong></p>
+<p>做题的时候自己能分析出来时间复杂度就可以了，至于leetcode上执行用时，大概看一下就行，只要达到最优的时间复杂度就可以了，</p>
+<p>一样的代码多提交几次可能就击败百分之百了…..</p>
 ]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+      </tags>
   </entry>
   <entry>
     <title>数组_代码随想列题02</title>
@@ -205,42 +241,6 @@
 <p><strong>双指针法（快慢指针法）在数组和链表的操作中是非常常见的，很多考察数组、链表、字符串等操作的面试题，都使用双指针法。</strong></p>
 <p>后续都会一一介绍到，本题代码如下：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> in <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span> [] nums,<span class="type">int</span> val)</span> &#123;</span><br><span class="line">	<span class="comment">//快指针</span></span><br><span class="line">	<span class="type">int</span> <span class="variable">fastIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> <span class="variable">slowIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(fastIndex&lt;nums.length) &#123;</span><br><span class="line">		<span class="keyword">if</span>(nums[fastIndex] != val) &#123;</span><br><span class="line">            nums[slowIndex++] = nums[fastIndex]</span><br><span class="line">        &#125;</span><br><span class="line">		fastIndex++;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> slowIndex;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数组_代码随想列题03</title>
-    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8403/</url>
-    <content><![CDATA[<h1 id="代码随想录-数组03"><a href="#代码随想录-数组03" class="headerlink" title="代码随想录_数组03"></a>代码随想录_数组03</h1><h1 id="977-有序数组的平方"><a href="#977-有序数组的平方" class="headerlink" title="977.有序数组的平方"></a>977.有序数组的平方</h1><p><a href="https://leetcode.cn/problems/squares-of-a-sorted-array/">力扣题目链接(opens new window)</a></p>
-<p>给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。</p>
-<p>示例 1： 输入：nums &#x3D; [-4,-1,0,3,10] 输出：[0,1,9,16,100] 解释：平方后，数组变为 [16,1,0,9,100]，排序后，数组变为 [0,1,9,16,100]</p>
-<p>示例 2： 输入：nums &#x3D; [-7,-3,2,3,11] 输出：[4,9,9,49,121]</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了易于大家理解，我还特意录制了视频，<a href="https://www.bilibili.com/video/BV1QB4y1D7ep">本题视频讲解(opens new window)</a></p>
-<h3 id="暴力排序"><a href="#暴力排序" class="headerlink" title="暴力排序"></a>暴力排序</h3><p>最直观的想法，莫过于：每个数平方之后，排个序，美滋滋，代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; A) &#123;</span><br><span class="line">        for (int i = 0; i &lt; A.size(); i++) &#123;</span><br><span class="line">            A[i] *= A[i];</span><br><span class="line">        &#125;</span><br><span class="line">        sort(A.begin(), A.end()); // 快速排序</span><br><span class="line">        return A;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>这个时间复杂度是 O(n + nlogn)， 可以说是O(nlogn)的时间复杂度，但为了和下面双指针法算法时间复杂度有鲜明对比，我记为 O(n + nlog n)。</p>
-<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>数组其实是有序的， 只不过负数平方之后可能成为最大数了。</p>
-<p>那么数组平方的最大值就在数组的两端，不是最左边就是最右边，不可能是中间。</p>
-<p>此时可以考虑双指针法了，i指向起始位置，j指向终止位置。</p>
-<p>定义一个新数组result，和A数组一样的大小，让k指向result数组终止位置。</p>
-<p>如果<code>A[i] * A[i] &lt; A[j] * A[j]</code> 那么<code>result[k--] = A[j] * A[j];</code> 。</p>
-<p>如果<code>A[i] * A[i] &gt;= A[j] * A[j]</code> 那么<code>result[k--] = A[i] * A[i];</code> 。</p>
-<p>如动画所示：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.gif" alt="img"></p>
-<p>不难写出如下代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span>[] sortedSquares(<span class="type">int</span>[] nums) &#123;</span><br><span class="line">		<span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length-<span class="number">1</span>;</span><br><span class="line">		<span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span>[] new_nums =<span class="keyword">new</span> <span class="title class_">int</span>[nums.length];</span><br><span class="line">        <span class="type">int</span> <span class="variable">new_index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(left &lt;= right) &#123;</span><br><span class="line">			<span class="keyword">if</span>(nums[left]*nums[left] &lt; nums[right]*nums[right]) &#123;</span><br><span class="line">                new_nums[new_index++] = nums[left]*nums[left];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                new_nums[new_index++] = nums[right]*nums[right];</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">       <span class="keyword">return</span> new_nums;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>此时的时间复杂度为O(n)，相对于暴力排序的解法O(n + nlog n)还是提升不少的。</p>
-<p><strong>这里还是说一下，大家不必太在意leetcode上执行用时，打败多少多少用户，这个就是一个玩具，非常不准确。</strong></p>
-<p>做题的时候自己能分析出来时间复杂度就可以了，至于leetcode上执行用时，大概看一下就行，只要达到最优的时间复杂度就可以了，</p>
-<p>一样的代码多提交几次可能就击败百分之百了…..</p>
-]]></content>
       <categories>
         <category>算法简史</category>
         <category>数组</category>
@@ -300,6 +300,225 @@
       </categories>
       <tags>
         <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计链表_链表02</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A802/</url>
+    <content><![CDATA[<h1 id="设计链表-链表02"><a href="#设计链表-链表02" class="headerlink" title="设计链表_链表02"></a>设计链表_链表02</h1><p><a href="https://leetcode.cn/problems/design-linked-list/">力扣题目链接(opens new window)</a></p>
+<p>题意：</p>
+<p>在链表类中实现这些功能：</p>
+<ul>
+<li>get(index)：获取链表中第 index 个节点的值。如果索引无效，则返回-1。</li>
+<li>addAtHead(val)：在链表的第一个元素之前添加一个值为 val 的节点。插入后，新节点将成为链表的第一个节点。</li>
+<li>addAtTail(val)：将值为 val 的节点追加到链表的最后一个元素。</li>
+<li>addAtIndex(index,val)：在链表中的第 index 个节点之前添加值为 val 的节点。如果 index 等于链表的长度，则该节点将附加到链表的末尾。如果 index 大于链表长度，则不会插入节点。如果index小于0，则在头部插入节点。</li>
+<li>deleteAtIndex(index)：如果索引 index 有效，则删除链表中的第 index 个节点。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200814200558953.png" alt="707示例"></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了方便大家理解，我特意录制了视频：<a href="https://www.bilibili.com/video/BV1FU4y1X7WD">帮你把链表操作学个通透！LeetCode：707.设计链表 (opens new window)</a>，结合视频在看本题解，事半功倍。</p>
+<p>如果对链表的基础知识还不太懂，可以看这篇文章：<a href="https://programmercarl.com/%E9%93%BE%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html">关于链表，你该了解这些！(opens new window)</a></p>
+<p>如果对链表的虚拟头结点不清楚，可以看这篇文章：<a href="https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html">链表：听说用虚拟头节点会方便很多？(opens new window)</a></p>
+<p>删除链表节点： <img src="https://img-blog.csdnimg.cn/20200806195114541.png" alt="链表-删除节点"></p>
+<p>添加链表节点： <img src="https://img-blog.csdnimg.cn/20200806195134331.png" alt="链表-添加节点"></p>
+<p>这道题目设计链表的五个接口：</p>
+<ul>
+<li>获取链表第index个节点的数值</li>
+<li>在链表的最前面插入一个节点</li>
+<li>在链表的最后面插入一个节点</li>
+<li>在链表第index个节点前面插入一个节点</li>
+<li>删除链表的第index个节点</li>
+</ul>
+<p>可以说这五个接口，已经覆盖了链表的常见操作，是练习链表操作非常好的一道题目</p>
+<p><strong>链表操作的两种方式：</strong></p>
+<ol>
+<li>直接使用原来的链表来进行操作。</li>
+<li>设置一个虚拟头结点在进行操作。</li>
+</ol>
+<p>下面采用的设置一个虚拟头结点（这样更方便一些，大家看代码就会感受出来）。</p>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//单链表</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ListNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">    ListNode()&#123;&#125;</span><br><span class="line">    ListNode(<span class="type">int</span> val) &#123;</span><br><span class="line">        <span class="built_in">this</span>.val=val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyLinkedList</span> &#123;</span><br><span class="line">    <span class="comment">//size存储链表元素的个数</span></span><br><span class="line">    <span class="type">int</span> size;</span><br><span class="line">    <span class="comment">//虚拟头结点</span></span><br><span class="line">    ListNode head;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//初始化链表</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyLinkedList</span><span class="params">()</span> &#123;</span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">        head = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取第index个节点的数值</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="comment">//如果index非法，返回-1</span></span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">currentNode</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="comment">//包含一个虚拟头节点，所以查找第 index+1 个节点</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;= index; i++) &#123;</span><br><span class="line">            currentNode = currentNode.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> currentNode.val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//在链表最前面插入一个节点</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtHead</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        addAtIndex(<span class="number">0</span>, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//在链表的最后插入一个节点</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtTail</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        addAtIndex(size, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 在第 index 个节点之前插入一个新节点，例如index为0，那么新插入的节点为链表的新头节点。</span></span><br><span class="line">    <span class="comment">// 如果 index 等于链表的长度，则说明是新插入的节点为链表的尾结点</span></span><br><span class="line">    <span class="comment">// 如果 index 大于链表的长度，则返回空</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtIndex</span><span class="params">(<span class="type">int</span> index, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &gt; size) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            index = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="comment">//找到要插入节点的前驱</span></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">pred</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; index; i++) &#123;</span><br><span class="line">            pred = pred.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">toAdd</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(val);</span><br><span class="line">        toAdd.next = pred.next;</span><br><span class="line">        pred.next = toAdd;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//删除第index个节点</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteAtIndex</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        size--;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">pred</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; index; i++) &#123;</span><br><span class="line">            pred = pred.next;</span><br><span class="line">        &#125;</span><br><span class="line">        pred.next = pred.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>链表</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>删除_链表01</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A801/</url>
+    <content><![CDATA[<h1 id="删除-链表01"><a href="#删除-链表01" class="headerlink" title="删除_链表01"></a>删除_链表01</h1><h3 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203.移除链表元素"></a>203.移除链表元素</h3><p><a href="https://leetcode.cn/problems/remove-linked-list-elements/">力扣题目链接(opens new window)</a></p>
+<p>题意：删除链表中等于给定值 val 的所有节点。</p>
+<p>示例 1：<br>输入：head &#x3D; [1,2,6,3,4,5,6], val &#x3D; 6<br>输出：[1,2,3,4,5]</p>
+<p>示例 2：<br>输入：head &#x3D; [], val &#x3D; 1<br>输出：[]</p>
+<p>示例 3：<br>输入：head &#x3D; [7,7,7,7], val &#x3D; 7<br>输出：[]</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了方便大家理解，我特意录制了视频：<a href="https://www.bilibili.com/video/BV18B4y1s7R9">手把手带你学会操作链表，移除链表元素 (opens new window)</a>，结合视频在看本题解，事半功倍。</p>
+<p>这里以链表 1 4 2 4 来举例，移除元素4。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095351161.png" alt="203_链表删除元素1"></p>
+<p>如果使用C，C++编程语言的话，不要忘了还要从内存中删除这两个移除的节点， 清理节点内存之后如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095418280.png" alt="203_链表删除元素2"></p>
+<p><strong>当然如果使用java ，python的话就不用手动管理内存了。</strong></p>
+<p>还要说明一下，就算使用C++来做leetcode，如果移除一个节点之后，没有手动在内存中删除这个节点，leetcode依然也是可以通过的，只不过，内存使用的空间大一些而已，但建议依然要养成手动清理内存的习惯。</p>
+<p>这种情况下的移除操作，就是让节点next指针直接指向下下一个节点就可以了，</p>
+<p>那么因为单链表的特殊性，只能指向下一个节点，刚刚删除的是链表的中第二个，和第四个节点，那么如果删除的是头结点又该怎么办呢？</p>
+<p>这里就涉及如下链表操作的两种方式：</p>
+<ul>
+<li><strong>直接使用原来的链表来进行删除操作。</strong></li>
+<li><strong>设置一个虚拟头结点在进行删除操作。</strong></li>
+</ul>
+<p>来看第一种操作：直接使用原来的链表来进行移除。</p>
+<p><img src="https://img-blog.csdnimg.cn/2021031609544922.png" alt="203_链表删除元素3"></p>
+<p>移除头结点和移除其他节点的操作是不一样的，因为链表的其他节点都是通过前一个节点来移除当前节点，而头结点没有前一个节点。</p>
+<p>所以头结点如何移除呢，其实只要将头结点向后移动一位就可以，这样就从链表中移除了一个头结点。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095512470.png" alt="203_链表删除元素4"></p>
+<p>依然别忘将原头结点从内存中删掉。 <img src="https://img-blog.csdnimg.cn/20210316095543775.png" alt="203_链表删除元素5"></p>
+<p>这样移除了一个头结点，是不是发现，在单链表中移除头结点 和 移除其他节点的操作方式是不一样，其实在写代码的时候也会发现，需要单独写一段逻辑来处理移除头结点的情况。</p>
+<p>那么可不可以 以一种统一的逻辑来移除 链表的节点呢。</p>
+<p>其实<strong>可以设置一个虚拟头结点</strong>，这样原链表的所有节点就都可以按照统一的方式进行移除了。</p>
+<p>来看看如何设置一个虚拟头。依然还是在这个链表中，移除元素1。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095619221.png" alt="203_链表删除元素6"></p>
+<p>这里来给链表添加一个虚拟头结点为新的头结点，此时要移除这个旧头结点元素1。</p>
+<p>这样是不是就可以使用和移除链表其他节点的方式统一了呢？</p>
+<p>来看一下，如何移除元素1 呢，还是熟悉的方式，然后从内存中删除元素1。</p>
+<p>最后呢在题目中，return 头结点的时候，别忘了 <code>return dummyNode-&gt;next;</code>， 这才是新的头结点</p>
+<p>java:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 添加虚节点方式</span></span><br><span class="line"><span class="comment"> * 时间复杂度 O(n)</span></span><br><span class="line"><span class="comment"> * 空间复杂度 O(1)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> val</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">removeElements</span><span class="params">(ListNode head, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>, head);</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> dummy;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>链表</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻转链表_链表03</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A803/</url>
+    <content><![CDATA[<h1 id="翻转链表-链表03"><a href="#翻转链表-链表03" class="headerlink" title="翻转链表_链表03"></a>翻转链表_链表03</h1><h3 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206.反转链表"></a>206.反转链表</h3><p><a href="https://leetcode.cn/problems/reverse-linked-list/">力扣题目链接(opens new window)</a></p>
+<p>题意：反转一个单链表。</p>
+<p>示例: 输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL 输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果再定义一个新的链表，实现链表元素的反转，其实这是对内存空间的浪费。</p>
+<p>其实只需要改变链表的next指针的指向，直接将链表反转 ，而不用重新定义一个新的链表，如图所示:</p>
+<p><img src="https://img-blog.csdnimg.cn/20210218090901207.png" alt="206_反转链表"></p>
+<p>之前链表的头节点是元素1， 反转之后头结点就是元素5 ，这里并没有添加或者删除节点，仅仅是改变next指针的方向。</p>
+<p>那么接下来看一看是如何反转的呢？</p>
+<p>我们拿有示例中的链表来举例，如动画所示：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnrf1oboupg30gy0c44qp.gif" alt="img"></p>
+<p>首先定义一个cur指针，指向头结点，再定义一个pre指针，初始化为null。</p>
+<p>然后就要开始反转了，首先要把 cur-&gt;next 节点用tmp指针保存一下，也就是保存一下这个节点。</p>
+<p>为什么要保存一下这个节点呢，因为接下来要改变 cur-&gt;next 的指向了，将cur-&gt;next 指向pre ，此时已经反转了第一个节点了。</p>
+<p>接下来，就是循环走如下代码逻辑了，继续移动pre和cur指针。</p>
+<p>最后，cur 指针已经指向了null，循环结束，链表也反转完毕了。 此时我们return pre指针就可以了，pre指针就指向了新的头结点。</p>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 双指针</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">prev</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">            temp = cur.next;<span class="comment">// 保存下一个节点</span></span><br><span class="line">            cur.next = prev;</span><br><span class="line">            prev = cur;</span><br><span class="line">            cur = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> prev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>链表</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两两交换链表中的节点_链表04</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A804/</url>
+    <content><![CDATA[<h1 id="两两交换链表中的节点-链表04"><a href="#两两交换链表中的节点-链表04" class="headerlink" title="两两交换链表中的节点_链表04"></a>两两交换链表中的节点_链表04</h1><h3 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24. 两两交换链表中的节点"></a>24. 两两交换链表中的节点</h3><p><a href="https://leetcode.cn/problems/swap-nodes-in-pairs/">力扣题目链接(opens new window)</a></p>
+<p>给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。</p>
+<p>你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9-%E9%A2%98%E6%84%8F.jpg" alt="24.两两交换链表中的节点-题意"></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这道题目正常模拟就可以了。</p>
+<p>建议使用虚拟头结点，这样会方便很多，要不然每次针对头结点（没有前一个指针指向头结点），还要单独处理。</p>
+<p>对虚拟头结点的操作，还不熟悉的话，可以看这篇<a href="https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html">链表：听说用虚拟头节点会方便很多？ (opens new window)</a>。</p>
+<p>接下来就是交换相邻两个元素了，<strong>此时一定要画图，不画图，操作多个指针很容易乱，而且要操作的先后顺序</strong></p>
+<p>初始时，cur指向虚拟头结点，然后进行如下三步：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B91.png" alt="24.两两交换链表中的节点1"></p>
+<p>操作之后，链表如下：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B92.png" alt="24.两两交换链表中的节点2"></p>
+<p>看这个可能就更直观一些了：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B93.png" alt="24.两两交换链表中的节点3"></p>
+<p>java代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> ListNode <span class="title function_">swapPairs</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">		<span class="type">ListNode</span> <span class="variable">dummpy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">		dummpy.next = head;</span><br><span class="line">		pre.next = head;</span><br><span class="line">		<span class="keyword">while</span>(pre.next!=<span class="literal">null</span> &amp;&amp; pre.next.next!=<span class="literal">null</span>) &#123;</span><br><span class="line">			<span class="type">ListNode</span> <span class="variable">tmp</span> <span class="operator">=</span> head.next.next;</span><br><span class="line">			pre.next = head.next;</span><br><span class="line">			pre.next.next = head;</span><br><span class="line">			head.next = tmp;</span><br><span class="line">			pre = head;</span><br><span class="line">			head = tmp;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> dummpy.next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>链表</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代码随想录_链表理论</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A8%E7%90%86%E8%AE%BA/</url>
+    <content><![CDATA[<h1 id="代码随想录-链表理论"><a href="#代码随想录-链表理论" class="headerlink" title="代码随想录_链表理论"></a>代码随想录_链表理论</h1><h3 id="关于链表，你该了解这些！"><a href="#关于链表，你该了解这些！" class="headerlink" title="关于链表，你该了解这些！"></a>关于链表，你该了解这些！</h3><p>什么是链表，链表是一种通过指针串联在一起的线性结构，每一个节点由两部分组成，一个是数据域一个是指针域（存放指向下一个节点的指针），最后一个节点的指针域指向null（空指针的意思）。</p>
+<p>链接的入口节点称为链表的头结点也就是head。</p>
+<p>如图所示： <img src="https://img-blog.csdnimg.cn/20200806194529815.png" alt="链表1"></p>
+<h1 id="链表的类型"><a href="#链表的类型" class="headerlink" title="链表的类型"></a>链表的类型</h1><p>接下来说一下链表的几种类型:</p>
+<h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><p>刚刚说的就是单链表。</p>
+<h3 id="双链表"><a href="#双链表" class="headerlink" title="双链表"></a>双链表</h3><p>单链表中的指针域只能指向节点的下一个节点。</p>
+<p>双链表：每一个节点有两个指针域，一个指向下一个节点，一个指向上一个节点。</p>
+<p>双链表 既可以向前查询也可以向后查询。</p>
+<p>如图所示： <img src="https://img-blog.csdnimg.cn/20200806194559317.png" alt="链表2"></p>
+<h3 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h3><p>循环链表，顾名思义，就是链表首尾相连。</p>
+<p>循环链表可以用来解决约瑟夫环问题。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200806194629603.png" alt="链表4"></p>
+<h2 id="链表的存储方式"><a href="#链表的存储方式" class="headerlink" title="链表的存储方式"></a>链表的存储方式</h2><p>了解完链表的类型，再来说一说链表在内存中的存储方式。</p>
+<p>数组是在内存中是连续分布的，但是链表在内存中可不是连续分布的。</p>
+<p>链表是通过指针域的指针链接在内存中各个节点。</p>
+<p>所以链表中的节点在内存中不是连续分布的 ，而是散乱分布在内存中的某地址上，分配机制取决于操作系统的内存管理。</p>
+<p>如图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200806194613920.png" alt="链表3"></p>
+<p>这个链表起始节点为2， 终止节点为7， 各个节点分布在内存的不同地址空间上，通过指针串联在一起。</p>
+<h3 id="链表的定义"><a href="#链表的定义" class="headerlink" title="链表的定义"></a>链表的定义</h3><p>接下来说一说链表的定义。</p>
+<p>链表节点的定义，很多同学在面试的时候都写不好。</p>
+<p>这是因为平时在刷leetcode的时候，链表的节点都默认定义好了，直接用就行了，所以同学们都没有注意到链表的节点是如何定义的。</p>
+<p>而在面试的时候，一旦要自己手写链表，就写的错漏百出。</p>
+<p>这里我给出C&#x2F;C++的定义链表节点方式，如下所示：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 单链表</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">ListNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;  <span class="comment">// 节点上存储的元素</span></span><br><span class="line">    ListNode *next;  <span class="comment">// 指向下一个节点的指针</span></span><br><span class="line">    <span class="built_in">ListNode</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">next</span>(<span class="literal">NULL</span>) &#123;&#125;  <span class="comment">// 节点的构造函数</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>有同学说了，我不定义构造函数行不行，答案是可以的，C++默认生成一个构造函数。</p>
+<p>但是这个构造函数不会初始化任何成员变量，下面我来举两个例子：</p>
+<p>通过自己定义构造函数初始化节点：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">ListNode* head = <span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+<p>使用默认构造函数初始化节点：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">ListNode* head = <span class="keyword">new</span> <span class="built_in">ListNode</span>();</span><br><span class="line">head-&gt;val = <span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+
+<p>所以如果不定义构造函数使用默认构造函数的话，在初始化的时候就不能直接给变量赋值！</p>
+<h3 id="链表的操作"><a href="#链表的操作" class="headerlink" title="链表的操作"></a>链表的操作</h3><h3 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h3><p>删除D节点，如图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200806195114541.png" alt="链表-删除节点"></p>
+<p>只要将C节点的next指针 指向E节点就可以了。</p>
+<p>那有同学说了，D节点不是依然存留在内存里么？只不过是没有在这个链表里而已。</p>
+<p>是这样的，所以在C++里最好是再手动释放这个D节点，释放这块内存。</p>
+<p>其他语言例如Java、Python，就有自己的内存回收机制，就不用自己手动释放了。</p>
+<h3 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h3><p>如图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200806195134331.png" alt="链表-添加节点"></p>
+<p>可以看出链表的增添和删除都是O(1)操作，也不会影响到其他节点。</p>
+<p>但是要注意，要是删除第五个节点，需要从头节点查找到第四个节点通过next指针进行删除操作，查找的时间复杂度是O(n)。</p>
+<h3 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h3><p>再把链表的特性和数组的特性进行一个对比，如图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200806195200276.png" alt="链表-链表与数据性能对比"></p>
+<p>数组在定义的时候，长度就是固定的，如果想改动数组的长度，就需要重新定义一个新的数组。</p>
+<p>链表的长度可以是不固定的，并且可以动态增删， 适合数据量不固定，频繁增删，较少查询的场景。</p>
+<p>相信大家已经对链表足够的了解，后面我会讲解关于链表的高频面试题目，我们下期见！</p>
+<p>Java：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ListNode</span> &#123;</span><br><span class="line">    <span class="comment">// 结点的值</span></span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 下一个结点</span></span><br><span class="line">    ListNode next;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 节点的构造函数(无参)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">ListNode</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 节点的构造函数(有一个参数)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">ListNode</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.val = val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 节点的构造函数(有两个参数)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">ListNode</span><span class="params">(<span class="type">int</span> val, ListNode next)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.val = val;</span><br><span class="line">        <span class="built_in">this</span>.next = next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>链表</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
       </tags>
   </entry>
   <entry>
@@ -375,29 +594,6 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语02</title>
-    <url>/2022/07/06/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD02/</url>
-    <content><![CDATA[<h1 id="英语口语02"><a href="#英语口语02" class="headerlink" title="英语口语02"></a>英语口语02</h1><h3 id="精算能力"><a href="#精算能力" class="headerlink" title="精算能力"></a>精算能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math can be helpful for balancing your budget,</span><br><span class="line">because...</span><br><span class="line">you will have a good understanding of how to make sure that </span><br><span class="line">your costs are less than the money you have</span><br></pre></td></tr></table></figure>
-
-<p>balancing your budget 平衡收支</p>
-<p>your costs are less than the money you have 收入大于支出</p>
-<h3 id="入不敷出"><a href="#入不敷出" class="headerlink" title="入不敷出"></a>入不敷出</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">People who are terrible at math are likely to go into debt</span><br><span class="line">because...</span><br><span class="line">they don&#x27;t know how much money they have versus how much money they spent.</span><br></pre></td></tr></table></figure>
-
-<p>go into debt 负债</p>
-<h3 id="满足好奇心"><a href="#满足好奇心" class="headerlink" title="满足好奇心"></a>满足好奇心</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Science feeds the natural curiosity,</span><br><span class="line"></span><br><span class="line">for example...</span><br><span class="line"></span><br><span class="line">The curiosity of uncovering why the sun sets in the west,</span><br><span class="line"></span><br><span class="line">why the sky is blue,how fish breathes in water</span><br><span class="line"></span><br><span class="line">and other everyday scenarios</span><br></pre></td></tr></table></figure>
-
-<p>natural curiosity 好奇心</p>
-<p>sun sets in the west 日落西山</p>
-<p>everyday scenarios 日常场景</p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>学习口语</title>
     <url>/2022/07/05/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD01/</url>
     <content><![CDATA[<h1 id="第一天英语口语"><a href="#第一天英语口语" class="headerlink" title="第一天英语口语"></a>第一天英语口语</h1><p>这些内容是非常好的英语口语资产 能帮助大伙快速起飞</p>
@@ -431,6 +627,26 @@
       </tags>
   </entry>
   <entry>
+    <title>英语口语03</title>
+    <url>/2022/07/12/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD03/</url>
+    <content><![CDATA[<h1 id="英语口语03"><a href="#英语口语03" class="headerlink" title="英语口语03"></a>英语口语03</h1><h3 id="精力充沛"><a href="#精力充沛" class="headerlink" title="精力充沛"></a>精力充沛</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i will try to get into the routine of getting up early in the morning and go to bed</span><br><span class="line">early at night,</span><br><span class="line">so that...</span><br><span class="line">i will have a better sleeping pattern which enables me to be more energetic throughtout the day</span><br></pre></td></tr></table></figure>
+
+<h3 id="三省吾身"><a href="#三省吾身" class="headerlink" title="三省吾身"></a>三省吾身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i think it&#x27;s important to refresh my mind about the current situation,</span><br><span class="line">by vasualizing long,middle,short term goals everyday </span><br><span class="line">because...</span><br><span class="line">sometimes it&#x27;s easy to lose the big picture when we are immersing yourself in detailed executions.</span><br><span class="line">But it&#x27;s also easy to miss out the detailed executions when we are grasping the big picture</span><br></pre></td></tr></table></figure>
+
+<h3 id="熬夜伤身"><a href="#熬夜伤身" class="headerlink" title="熬夜伤身"></a>熬夜伤身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">being a night owl could hurt our health</span><br><span class="line">because...</span><br><span class="line">staying up late will disrupts your sleep-wake cycle...</span><br><span class="line">which can affect your mental functioning and energy levels the next day.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
+<p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
+<p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英语口语04</title>
     <url>/2022/07/13/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD04/</url>
     <content><![CDATA[<h1 id="英语口语04"><a href="#英语口语04" class="headerlink" title="英语口语04"></a>英语口语04</h1><h3 id="心中有蓝图"><a href="#心中有蓝图" class="headerlink" title="心中有蓝图"></a>心中有蓝图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">you should have a version for the future,</span><br><span class="line">something you want to do or accomplish,</span><br><span class="line">because...</span><br><span class="line">when you map out your goals,</span><br><span class="line">you will focus on things that can help you achieve what you want in life.</span><br></pre></td></tr></table></figure>
@@ -454,17 +670,44 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语03</title>
-    <url>/2022/07/12/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD03/</url>
-    <content><![CDATA[<h1 id="英语口语03"><a href="#英语口语03" class="headerlink" title="英语口语03"></a>英语口语03</h1><h3 id="精力充沛"><a href="#精力充沛" class="headerlink" title="精力充沛"></a>精力充沛</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i will try to get into the routine of getting up early in the morning and go to bed</span><br><span class="line">early at night,</span><br><span class="line">so that...</span><br><span class="line">i will have a better sleeping pattern which enables me to be more energetic throughtout the day</span><br></pre></td></tr></table></figure>
+    <title>英语口语02</title>
+    <url>/2022/07/06/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD02/</url>
+    <content><![CDATA[<h1 id="英语口语02"><a href="#英语口语02" class="headerlink" title="英语口语02"></a>英语口语02</h1><h3 id="精算能力"><a href="#精算能力" class="headerlink" title="精算能力"></a>精算能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math can be helpful for balancing your budget,</span><br><span class="line">because...</span><br><span class="line">you will have a good understanding of how to make sure that </span><br><span class="line">your costs are less than the money you have</span><br></pre></td></tr></table></figure>
 
-<h3 id="三省吾身"><a href="#三省吾身" class="headerlink" title="三省吾身"></a>三省吾身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i think it&#x27;s important to refresh my mind about the current situation,</span><br><span class="line">by vasualizing long,middle,short term goals everyday </span><br><span class="line">because...</span><br><span class="line">sometimes it&#x27;s easy to lose the big picture when we are immersing yourself in detailed executions.</span><br><span class="line">But it&#x27;s also easy to miss out the detailed executions when we are grasping the big picture</span><br></pre></td></tr></table></figure>
+<p>balancing your budget 平衡收支</p>
+<p>your costs are less than the money you have 收入大于支出</p>
+<h3 id="入不敷出"><a href="#入不敷出" class="headerlink" title="入不敷出"></a>入不敷出</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">People who are terrible at math are likely to go into debt</span><br><span class="line">because...</span><br><span class="line">they don&#x27;t know how much money they have versus how much money they spent.</span><br></pre></td></tr></table></figure>
 
-<h3 id="熬夜伤身"><a href="#熬夜伤身" class="headerlink" title="熬夜伤身"></a>熬夜伤身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">being a night owl could hurt our health</span><br><span class="line">because...</span><br><span class="line">staying up late will disrupts your sleep-wake cycle...</span><br><span class="line">which can affect your mental functioning and energy levels the next day.</span><br></pre></td></tr></table></figure>
+<p>go into debt 负债</p>
+<h3 id="满足好奇心"><a href="#满足好奇心" class="headerlink" title="满足好奇心"></a>满足好奇心</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Science feeds the natural curiosity,</span><br><span class="line"></span><br><span class="line">for example...</span><br><span class="line"></span><br><span class="line">The curiosity of uncovering why the sun sets in the west,</span><br><span class="line"></span><br><span class="line">why the sky is blue,how fish breathes in water</span><br><span class="line"></span><br><span class="line">and other everyday scenarios</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
-<p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
-<p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
+<p>natural curiosity 好奇心</p>
+<p>sun sets in the west 日落西山</p>
+<p>everyday scenarios 日常场景</p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语口语05</title>
+    <url>/2022/07/14/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD05/</url>
+    <content><![CDATA[<h1 id="英语口语05"><a href="#英语口语05" class="headerlink" title="英语口语05"></a>英语口语05</h1><h3 id="行动是良药"><a href="#行动是良药" class="headerlink" title="行动是良药"></a>行动是良药</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">negative emotions are a call to action,</span><br><span class="line">i mean...</span><br><span class="line">if you feel crappy,</span><br><span class="line">it&#x27;s because that your brain is telling you that </span><br><span class="line">there&#x27;s a problem that&#x27;s unaddressed,</span><br><span class="line">and you&#x27;re supposed to do something.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：第一句话种复数接a call to action，是没问题的，母语者语流*</strong></em></p>
+<h3 id="种瓜得瓜"><a href="#种瓜得瓜" class="headerlink" title="种瓜得瓜"></a>种瓜得瓜</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">happiness requires struggles,</span><br><span class="line">because...</span><br><span class="line">Joy doesn&#x27;t sprout out of the ground,</span><br><span class="line">if you want something,you have to work for it,</span><br><span class="line">what you reap what you sow</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：母语者语流种蕴含着天然的合理节奏，比中英翻译要合理得多。*</strong></em></p>
+<p><em><strong>*大白话就是说的时候节奏很自然，语流清晰而地道。*</strong></em></p>
+<h3 id="机会成本"><a href="#机会成本" class="headerlink" title="机会成本"></a>机会成本</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Everything comes with a inherent sacrifice(有利有弊)</span><br><span class="line">what we gain is also what we lose,</span><br><span class="line">like...</span><br><span class="line">the person you marry is the person you fight with,</span><br><span class="line">the house you buy is the house you repair,</span><br><span class="line">the dream job you take is the job you stress over</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：例证时的排比，宛若长江三叠浪，节奏中力度十足，掷地有声。*</strong></em></p>
+<p><em><strong>*我们现阶段要达到的境界，就是在中文表达中，或日常所见所闻，慢慢感受到从“中文俗语”到“英文语流”的无缝连接。*</strong></em></p>
+<p><em><strong>*这样一来，中英文的互换，就变得极其轻松。*</strong></em></p>
+<p><em><strong>*流利度也慢慢得到体现。*</strong></em></p>
 ]]></content>
       <categories>
         <category>口语</category>
@@ -492,30 +735,6 @@
 <p><em><strong>*注：这个框架非常好，攻击力强悍霸道。*</strong></em></p>
 <p><em><strong>*后面自带两个比较级，组成长句，更是威力非凡。*</strong></em></p>
 <p><em><strong>*请注意此语流中的用词，细细体会。*</strong></em></p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语口语05</title>
-    <url>/2022/07/14/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD05/</url>
-    <content><![CDATA[<h1 id="英语口语05"><a href="#英语口语05" class="headerlink" title="英语口语05"></a>英语口语05</h1><h3 id="行动是良药"><a href="#行动是良药" class="headerlink" title="行动是良药"></a>行动是良药</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">negative emotions are a call to action,</span><br><span class="line">i mean...</span><br><span class="line">if you feel crappy,</span><br><span class="line">it&#x27;s because that your brain is telling you that </span><br><span class="line">there&#x27;s a problem that&#x27;s unaddressed,</span><br><span class="line">and you&#x27;re supposed to do something.</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*注：第一句话种复数接a call to action，是没问题的，母语者语流*</strong></em></p>
-<h3 id="种瓜得瓜"><a href="#种瓜得瓜" class="headerlink" title="种瓜得瓜"></a>种瓜得瓜</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">happiness requires struggles,</span><br><span class="line">because...</span><br><span class="line">Joy doesn&#x27;t sprout out of the ground,</span><br><span class="line">if you want something,you have to work for it,</span><br><span class="line">what you reap what you sow</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*注：母语者语流种蕴含着天然的合理节奏，比中英翻译要合理得多。*</strong></em></p>
-<p><em><strong>*大白话就是说的时候节奏很自然，语流清晰而地道。*</strong></em></p>
-<h3 id="机会成本"><a href="#机会成本" class="headerlink" title="机会成本"></a>机会成本</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Everything comes with a inherent sacrifice(有利有弊)</span><br><span class="line">what we gain is also what we lose,</span><br><span class="line">like...</span><br><span class="line">the person you marry is the person you fight with,</span><br><span class="line">the house you buy is the house you repair,</span><br><span class="line">the dream job you take is the job you stress over</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*注：例证时的排比，宛若长江三叠浪，节奏中力度十足，掷地有声。*</strong></em></p>
-<p><em><strong>*我们现阶段要达到的境界，就是在中文表达中，或日常所见所闻，慢慢感受到从“中文俗语”到“英文语流”的无缝连接。*</strong></em></p>
-<p><em><strong>*这样一来，中英文的互换，就变得极其轻松。*</strong></em></p>
-<p><em><strong>*流利度也慢慢得到体现。*</strong></em></p>
 ]]></content>
       <categories>
         <category>口语</category>
