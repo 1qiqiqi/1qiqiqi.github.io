@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Docker容器命令</title>
+    <url>/2022/07/07/Docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Docker容器命令"><a href="#Docker容器命令" class="headerlink" title="Docker容器命令"></a>Docker容器命令</h1><h3 id="Docker将镜像转为容器"><a href="#Docker将镜像转为容器" class="headerlink" title="Docker将镜像转为容器"></a>Docker将镜像转为容器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name containerName -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="查看docker容器状态"><a href="#查看docker容器状态" class="headerlink" title="查看docker容器状态"></a>查看docker容器状态</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker logs 容器名称</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker镜像命令</title>
     <url>/2022/07/07/Docker%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Docker常用镜像命令"><a href="#Docker常用镜像命令" class="headerlink" title="Docker常用镜像命令"></a>Docker常用镜像命令</h1><p>这些是最基本的Docker镜像命令，也是最有用的</p>
@@ -13,25 +32,6 @@
 <h3 id="docker-load-i-镜像名-tar"><a href="#docker-load-i-镜像名-tar" class="headerlink" title="docker load -i 镜像名.tar"></a>docker load -i 镜像名.tar</h3><p>将压缩包解压为一个镜像</p>
 <h3 id="docker-rmi-镜像名或者镜像ID"><a href="#docker-rmi-镜像名或者镜像ID" class="headerlink" title="docker rmi 镜像名或者镜像ID"></a>docker rmi 镜像名或者镜像ID</h3><p>删除镜像</p>
 <h3 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h3><p>查看镜像</p>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker容器命令</title>
-    <url>/2022/07/07/Docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="Docker容器命令"><a href="#Docker容器命令" class="headerlink" title="Docker容器命令"></a>Docker容器命令</h1><h3 id="Docker将镜像转为容器"><a href="#Docker将镜像转为容器" class="headerlink" title="Docker将镜像转为容器"></a>Docker将镜像转为容器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name containerName -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="查看docker容器状态"><a href="#查看docker容器状态" class="headerlink" title="查看docker容器状态"></a>查看docker容器状态</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker logs 容器名称</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>Docker</category>
@@ -167,6 +167,59 @@
       </tags>
   </entry>
   <entry>
+    <title>数组_代码随想列题04</title>
+    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8404/</url>
+    <content><![CDATA[<h1 id="代码随想录-数组04"><a href="#代码随想录-数组04" class="headerlink" title="代码随想录_数组04"></a>代码随想录_数组04</h1><h1 id="209-长度最小的子数组"><a href="#209-长度最小的子数组" class="headerlink" title="209.长度最小的子数组"></a>209.长度最小的子数组</h1><p><a href="https://leetcode.cn/problems/minimum-size-subarray-sum/">力扣题目链接(opens new window)</a></p>
+<p>给定一个含有 n 个正整数的数组和一个正整数 s ，找出该数组中满足其和 ≥ s 的长度最小的 连续 子数组，并返回其长度。如果不存在符合条件的子数组，返回 0。</p>
+<p>示例：</p>
+<p>输入：s &#x3D; 7, nums &#x3D; [2,3,1,2,4,3] 输出：2 解释：子数组 [4,3] 是该条件下的长度最小的子数组。</p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>为了易于大家理解，我特意录制了B站视频<a href="https://www.bilibili.com/video/BV1tZ4y1q7XE">拿下滑动窗口！ | LeetCode 209 长度最小的子数组(opens new window)</a></p>
+<h2 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h2><p>这道题目暴力解法当然是 两个for循环，然后不断的寻找符合条件的子序列，时间复杂度很明显是O(n^2)。</p>
+<p>代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int minSubArrayLen(int s, vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        int result = INT32_MAX; // 最终的结果</span><br><span class="line">        int sum = 0; // 子序列的数值之和</span><br><span class="line">        int subLength = 0; // 子序列的长度</span><br><span class="line">        for (int i = 0; i &lt; nums.size(); i++) &#123; // 设置子序列起点为i</span><br><span class="line">            sum = 0;</span><br><span class="line">            for (int j = i; j &lt; nums.size(); j++) &#123; // 设置子序列终止位置为j</span><br><span class="line">                sum += nums[j];</span><br><span class="line">                if (sum &gt;= s) &#123; // 一旦发现子序列和超过了s，更新result</span><br><span class="line">                    subLength = j - i + 1; // 取子序列的长度</span><br><span class="line">                    result = result &lt; subLength ? result : subLength;</span><br><span class="line">                    break; // 因为我们是找符合条件最短的子序列，所以一旦符合条件就break</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 如果result没有被赋值的话，就返回0，说明没有符合条件的子序列</span><br><span class="line">        return result == INT32_MAX ? 0 : result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h2><p>接下来就开始介绍数组操作中另一个重要的方法：<strong>滑动窗口</strong>。</p>
+<p>所谓滑动窗口，<strong>就是不断的调节子序列的起始位置和终止位置，从而得出我们要想的结果</strong>。</p>
+<p>在暴力解法中，是一个for循环滑动窗口的起始位置，一个for循环为滑动窗口的终止位置，用两个for循环 完成了一个不断搜索区间的过程。</p>
+<p>那么滑动窗口如何用一个for循环来完成这个操作呢。</p>
+<p>首先要思考 如果用一个for循环，那么应该表示 滑动窗口的起始位置，还是终止位置。</p>
+<p>如果只用一个for循环来表示 滑动窗口的起始位置，那么如何遍历剩下的终止位置？</p>
+<p>此时难免再次陷入 暴力解法的怪圈。</p>
+<p>所以 只用一个for循环，那么这个循环的索引，一定是表示 滑动窗口的终止位置。</p>
+<p>那么问题来了， 滑动窗口的起始位置如何移动呢？</p>
+<p>这里还是以题目中的示例来举例，s&#x3D;7， 数组是 2，3，1，2，4，3，来看一下查找的过程：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.gif" alt="209.长度最小的子数组"></p>
+<p>最后找到 4，3 是最短距离。</p>
+<p>其实从动画中可以发现滑动窗口也可以理解为双指针法的一种！只不过这种解法更像是一个窗口的移动，所以叫做滑动窗口更适合一些。</p>
+<p>在本题中实现滑动窗口，主要确定如下三点：</p>
+<ul>
+<li>窗口内是什么？</li>
+<li>如何移动窗口的起始位置？</li>
+<li>如何移动窗口的结束位置？</li>
+</ul>
+<p>窗口就是 满足其和 ≥ s 的长度最小的 连续 子数组。</p>
+<p>窗口的起始位置如何移动：如果当前窗口的值大于s了，窗口就要向前移动了（也就是该缩小了）。</p>
+<p>窗口的结束位置如何移动：窗口的结束位置就是遍历数组的指针，也就是for循环里的索引。</p>
+<p>解题的关键在于 窗口的起始位置如何移动，如图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210312160441942.png" alt="leetcode_209"></p>
+<p>可以发现<strong>滑动窗口的精妙之处在于根据当前子序列和大小的情况，不断调节子序列的起始位置。从而将O(n^2)暴力解法降为O(n)。</strong></p>
+<p>java代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 滑动窗口</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minSubArrayLen</span><span class="params">(<span class="type">int</span> s, <span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">    	<span class="type">int</span> <span class="variable">fastIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    	<span class="type">int</span> <span class="variable">slowIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">min_length</span> <span class="operator">=</span> Interge.MAX_VALUE;</span><br><span class="line">    	<span class="keyword">while</span>(fastIndex&lt;nums.length) &#123;</span><br><span class="line">            sum += nums[fastIndex];</span><br><span class="line">            <span class="keyword">while</span>(sum &gt;= s)&#123;</span><br><span class="line">                sum -= nums[slowIndex++];</span><br><span class="line">               </span><br><span class="line">            &#125;</span><br><span class="line">            min_length = min_length &lt; fastIndex - slowIndex+<span class="number">1</span> ? min_length:fastIndex - slowIndex+<span class="number">1</span>;</span><br><span class="line">    		fastIndex++;</span><br><span class="line">    	&#125;</span><br><span class="line">        <span class="type">return</span> <span class="variable">min_length</span> <span class="operator">=</span>= MAX_VALUE?<span class="number">0</span>:min_length;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="相关题目推荐"><a href="#相关题目推荐" class="headerlink" title="相关题目推荐"></a>相关题目推荐</h2><ul>
+<li><a href="https://leetcode.cn/problems/fruit-into-baskets/">904.水果成篮(opens new window)</a></li>
+<li><a href="https://leetcode.cn/problems/minimum-window-substring/">76.最小覆盖子串(opens new window)</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数组_代码随想列题03</title>
     <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8403/</url>
     <content><![CDATA[<h1 id="代码随想录-数组03"><a href="#代码随想录-数组03" class="headerlink" title="代码随想录_数组03"></a>代码随想录_数组03</h1><h1 id="977-有序数组的平方"><a href="#977-有序数组的平方" class="headerlink" title="977.有序数组的平方"></a>977.有序数组的平方</h1><p><a href="https://leetcode.cn/problems/squares-of-a-sorted-array/">力扣题目链接(opens new window)</a></p>
@@ -250,59 +303,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数组_代码随想列题04</title>
-    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8404/</url>
-    <content><![CDATA[<h1 id="代码随想录-数组04"><a href="#代码随想录-数组04" class="headerlink" title="代码随想录_数组04"></a>代码随想录_数组04</h1><h1 id="209-长度最小的子数组"><a href="#209-长度最小的子数组" class="headerlink" title="209.长度最小的子数组"></a>209.长度最小的子数组</h1><p><a href="https://leetcode.cn/problems/minimum-size-subarray-sum/">力扣题目链接(opens new window)</a></p>
-<p>给定一个含有 n 个正整数的数组和一个正整数 s ，找出该数组中满足其和 ≥ s 的长度最小的 连续 子数组，并返回其长度。如果不存在符合条件的子数组，返回 0。</p>
-<p>示例：</p>
-<p>输入：s &#x3D; 7, nums &#x3D; [2,3,1,2,4,3] 输出：2 解释：子数组 [4,3] 是该条件下的长度最小的子数组。</p>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>为了易于大家理解，我特意录制了B站视频<a href="https://www.bilibili.com/video/BV1tZ4y1q7XE">拿下滑动窗口！ | LeetCode 209 长度最小的子数组(opens new window)</a></p>
-<h2 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h2><p>这道题目暴力解法当然是 两个for循环，然后不断的寻找符合条件的子序列，时间复杂度很明显是O(n^2)。</p>
-<p>代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int minSubArrayLen(int s, vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        int result = INT32_MAX; // 最终的结果</span><br><span class="line">        int sum = 0; // 子序列的数值之和</span><br><span class="line">        int subLength = 0; // 子序列的长度</span><br><span class="line">        for (int i = 0; i &lt; nums.size(); i++) &#123; // 设置子序列起点为i</span><br><span class="line">            sum = 0;</span><br><span class="line">            for (int j = i; j &lt; nums.size(); j++) &#123; // 设置子序列终止位置为j</span><br><span class="line">                sum += nums[j];</span><br><span class="line">                if (sum &gt;= s) &#123; // 一旦发现子序列和超过了s，更新result</span><br><span class="line">                    subLength = j - i + 1; // 取子序列的长度</span><br><span class="line">                    result = result &lt; subLength ? result : subLength;</span><br><span class="line">                    break; // 因为我们是找符合条件最短的子序列，所以一旦符合条件就break</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 如果result没有被赋值的话，就返回0，说明没有符合条件的子序列</span><br><span class="line">        return result == INT32_MAX ? 0 : result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h2><p>接下来就开始介绍数组操作中另一个重要的方法：<strong>滑动窗口</strong>。</p>
-<p>所谓滑动窗口，<strong>就是不断的调节子序列的起始位置和终止位置，从而得出我们要想的结果</strong>。</p>
-<p>在暴力解法中，是一个for循环滑动窗口的起始位置，一个for循环为滑动窗口的终止位置，用两个for循环 完成了一个不断搜索区间的过程。</p>
-<p>那么滑动窗口如何用一个for循环来完成这个操作呢。</p>
-<p>首先要思考 如果用一个for循环，那么应该表示 滑动窗口的起始位置，还是终止位置。</p>
-<p>如果只用一个for循环来表示 滑动窗口的起始位置，那么如何遍历剩下的终止位置？</p>
-<p>此时难免再次陷入 暴力解法的怪圈。</p>
-<p>所以 只用一个for循环，那么这个循环的索引，一定是表示 滑动窗口的终止位置。</p>
-<p>那么问题来了， 滑动窗口的起始位置如何移动呢？</p>
-<p>这里还是以题目中的示例来举例，s&#x3D;7， 数组是 2，3，1，2，4，3，来看一下查找的过程：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.gif" alt="209.长度最小的子数组"></p>
-<p>最后找到 4，3 是最短距离。</p>
-<p>其实从动画中可以发现滑动窗口也可以理解为双指针法的一种！只不过这种解法更像是一个窗口的移动，所以叫做滑动窗口更适合一些。</p>
-<p>在本题中实现滑动窗口，主要确定如下三点：</p>
-<ul>
-<li>窗口内是什么？</li>
-<li>如何移动窗口的起始位置？</li>
-<li>如何移动窗口的结束位置？</li>
-</ul>
-<p>窗口就是 满足其和 ≥ s 的长度最小的 连续 子数组。</p>
-<p>窗口的起始位置如何移动：如果当前窗口的值大于s了，窗口就要向前移动了（也就是该缩小了）。</p>
-<p>窗口的结束位置如何移动：窗口的结束位置就是遍历数组的指针，也就是for循环里的索引。</p>
-<p>解题的关键在于 窗口的起始位置如何移动，如图所示：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210312160441942.png" alt="leetcode_209"></p>
-<p>可以发现<strong>滑动窗口的精妙之处在于根据当前子序列和大小的情况，不断调节子序列的起始位置。从而将O(n^2)暴力解法降为O(n)。</strong></p>
-<p>java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 滑动窗口</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minSubArrayLen</span><span class="params">(<span class="type">int</span> s, <span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">    	<span class="type">int</span> <span class="variable">fastIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    	<span class="type">int</span> <span class="variable">slowIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">min_length</span> <span class="operator">=</span> Interge.MAX_VALUE;</span><br><span class="line">    	<span class="keyword">while</span>(fastIndex&lt;nums.length) &#123;</span><br><span class="line">            sum += nums[fastIndex];</span><br><span class="line">            <span class="keyword">while</span>(sum &gt;= s)&#123;</span><br><span class="line">                sum -= nums[slowIndex++];</span><br><span class="line">               </span><br><span class="line">            &#125;</span><br><span class="line">            min_length = min_length &lt; fastIndex - slowIndex+<span class="number">1</span> ? min_length:fastIndex - slowIndex+<span class="number">1</span>;</span><br><span class="line">    		fastIndex++;</span><br><span class="line">    	&#125;</span><br><span class="line">        <span class="type">return</span> <span class="variable">min_length</span> <span class="operator">=</span>= MAX_VALUE?<span class="number">0</span>:min_length;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="相关题目推荐"><a href="#相关题目推荐" class="headerlink" title="相关题目推荐"></a>相关题目推荐</h2><ul>
-<li><a href="https://leetcode.cn/problems/fruit-into-baskets/">904.水果成篮(opens new window)</a></li>
-<li><a href="https://leetcode.cn/problems/minimum-window-substring/">76.最小覆盖子串(opens new window)</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>设计链表_链表02</title>
     <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A802/</url>
     <content><![CDATA[<h1 id="设计链表-链表02"><a href="#设计链表-链表02" class="headerlink" title="设计链表_链表02"></a>设计链表_链表02</h1><p><a href="https://leetcode.cn/problems/design-linked-list/">力扣题目链接(opens new window)</a></p>
@@ -338,6 +338,36 @@
 <p>下面采用的设置一个虚拟头结点（这样更方便一些，大家看代码就会感受出来）。</p>
 <p>代码如下：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//单链表</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ListNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">    ListNode()&#123;&#125;</span><br><span class="line">    ListNode(<span class="type">int</span> val) &#123;</span><br><span class="line">        <span class="built_in">this</span>.val=val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyLinkedList</span> &#123;</span><br><span class="line">    <span class="comment">//size存储链表元素的个数</span></span><br><span class="line">    <span class="type">int</span> size;</span><br><span class="line">    <span class="comment">//虚拟头结点</span></span><br><span class="line">    ListNode head;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//初始化链表</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyLinkedList</span><span class="params">()</span> &#123;</span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">        head = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取第index个节点的数值</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="comment">//如果index非法，返回-1</span></span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">currentNode</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="comment">//包含一个虚拟头节点，所以查找第 index+1 个节点</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;= index; i++) &#123;</span><br><span class="line">            currentNode = currentNode.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> currentNode.val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//在链表最前面插入一个节点</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtHead</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        addAtIndex(<span class="number">0</span>, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//在链表的最后插入一个节点</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtTail</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        addAtIndex(size, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 在第 index 个节点之前插入一个新节点，例如index为0，那么新插入的节点为链表的新头节点。</span></span><br><span class="line">    <span class="comment">// 如果 index 等于链表的长度，则说明是新插入的节点为链表的尾结点</span></span><br><span class="line">    <span class="comment">// 如果 index 大于链表的长度，则返回空</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtIndex</span><span class="params">(<span class="type">int</span> index, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &gt; size) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            index = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="comment">//找到要插入节点的前驱</span></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">pred</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; index; i++) &#123;</span><br><span class="line">            pred = pred.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">toAdd</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(val);</span><br><span class="line">        toAdd.next = pred.next;</span><br><span class="line">        pred.next = toAdd;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//删除第index个节点</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteAtIndex</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        size--;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">pred</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; index; i++) &#123;</span><br><span class="line">            pred = pred.next;</span><br><span class="line">        &#125;</span><br><span class="line">        pred.next = pred.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>链表</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>翻转链表_链表03</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A803/</url>
+    <content><![CDATA[<h1 id="翻转链表-链表03"><a href="#翻转链表-链表03" class="headerlink" title="翻转链表_链表03"></a>翻转链表_链表03</h1><h3 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206.反转链表"></a>206.反转链表</h3><p><a href="https://leetcode.cn/problems/reverse-linked-list/">力扣题目链接(opens new window)</a></p>
+<p>题意：反转一个单链表。</p>
+<p>示例: 输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL 输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果再定义一个新的链表，实现链表元素的反转，其实这是对内存空间的浪费。</p>
+<p>其实只需要改变链表的next指针的指向，直接将链表反转 ，而不用重新定义一个新的链表，如图所示:</p>
+<p><img src="https://img-blog.csdnimg.cn/20210218090901207.png" alt="206_反转链表"></p>
+<p>之前链表的头节点是元素1， 反转之后头结点就是元素5 ，这里并没有添加或者删除节点，仅仅是改变next指针的方向。</p>
+<p>那么接下来看一看是如何反转的呢？</p>
+<p>我们拿有示例中的链表来举例，如动画所示：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnrf1oboupg30gy0c44qp.gif" alt="img"></p>
+<p>首先定义一个cur指针，指向头结点，再定义一个pre指针，初始化为null。</p>
+<p>然后就要开始反转了，首先要把 cur-&gt;next 节点用tmp指针保存一下，也就是保存一下这个节点。</p>
+<p>为什么要保存一下这个节点呢，因为接下来要改变 cur-&gt;next 的指向了，将cur-&gt;next 指向pre ，此时已经反转了第一个节点了。</p>
+<p>接下来，就是循环走如下代码逻辑了，继续移动pre和cur指针。</p>
+<p>最后，cur 指针已经指向了null，循环结束，链表也反转完毕了。 此时我们return pre指针就可以了，pre指针就指向了新的头结点。</p>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 双指针</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">prev</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">            temp = cur.next;<span class="comment">// 保存下一个节点</span></span><br><span class="line">            cur.next = prev;</span><br><span class="line">            prev = cur;</span><br><span class="line">            cur = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> prev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -387,36 +417,6 @@
 <p>最后呢在题目中，return 头结点的时候，别忘了 <code>return dummyNode-&gt;next;</code>， 这才是新的头结点</p>
 <p>java:</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 添加虚节点方式</span></span><br><span class="line"><span class="comment"> * 时间复杂度 O(n)</span></span><br><span class="line"><span class="comment"> * 空间复杂度 O(1)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> val</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">removeElements</span><span class="params">(ListNode head, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>, head);</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> dummy;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>链表</category>
-      </categories>
-      <tags>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>翻转链表_链表03</title>
-    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A803/</url>
-    <content><![CDATA[<h1 id="翻转链表-链表03"><a href="#翻转链表-链表03" class="headerlink" title="翻转链表_链表03"></a>翻转链表_链表03</h1><h3 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206.反转链表"></a>206.反转链表</h3><p><a href="https://leetcode.cn/problems/reverse-linked-list/">力扣题目链接(opens new window)</a></p>
-<p>题意：反转一个单链表。</p>
-<p>示例: 输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL 输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果再定义一个新的链表，实现链表元素的反转，其实这是对内存空间的浪费。</p>
-<p>其实只需要改变链表的next指针的指向，直接将链表反转 ，而不用重新定义一个新的链表，如图所示:</p>
-<p><img src="https://img-blog.csdnimg.cn/20210218090901207.png" alt="206_反转链表"></p>
-<p>之前链表的头节点是元素1， 反转之后头结点就是元素5 ，这里并没有添加或者删除节点，仅仅是改变next指针的方向。</p>
-<p>那么接下来看一看是如何反转的呢？</p>
-<p>我们拿有示例中的链表来举例，如动画所示：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnrf1oboupg30gy0c44qp.gif" alt="img"></p>
-<p>首先定义一个cur指针，指向头结点，再定义一个pre指针，初始化为null。</p>
-<p>然后就要开始反转了，首先要把 cur-&gt;next 节点用tmp指针保存一下，也就是保存一下这个节点。</p>
-<p>为什么要保存一下这个节点呢，因为接下来要改变 cur-&gt;next 的指向了，将cur-&gt;next 指向pre ，此时已经反转了第一个节点了。</p>
-<p>接下来，就是循环走如下代码逻辑了，继续移动pre和cur指针。</p>
-<p>最后，cur 指针已经指向了null，循环结束，链表也反转完毕了。 此时我们return pre指针就可以了，pre指针就指向了新的头结点。</p>
-<p>代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 双指针</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">prev</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">            temp = cur.next;<span class="comment">// 保存下一个节点</span></span><br><span class="line">            cur.next = prev;</span><br><span class="line">            prev = cur;</span><br><span class="line">            cur = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> prev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -627,49 +627,6 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语03</title>
-    <url>/2022/07/12/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD03/</url>
-    <content><![CDATA[<h1 id="英语口语03"><a href="#英语口语03" class="headerlink" title="英语口语03"></a>英语口语03</h1><h3 id="精力充沛"><a href="#精力充沛" class="headerlink" title="精力充沛"></a>精力充沛</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i will try to get into the routine of getting up early in the morning and go to bed</span><br><span class="line">early at night,</span><br><span class="line">so that...</span><br><span class="line">i will have a better sleeping pattern which enables me to be more energetic throughtout the day</span><br></pre></td></tr></table></figure>
-
-<h3 id="三省吾身"><a href="#三省吾身" class="headerlink" title="三省吾身"></a>三省吾身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i think it&#x27;s important to refresh my mind about the current situation,</span><br><span class="line">by vasualizing long,middle,short term goals everyday </span><br><span class="line">because...</span><br><span class="line">sometimes it&#x27;s easy to lose the big picture when we are immersing yourself in detailed executions.</span><br><span class="line">But it&#x27;s also easy to miss out the detailed executions when we are grasping the big picture</span><br></pre></td></tr></table></figure>
-
-<h3 id="熬夜伤身"><a href="#熬夜伤身" class="headerlink" title="熬夜伤身"></a>熬夜伤身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">being a night owl could hurt our health</span><br><span class="line">because...</span><br><span class="line">staying up late will disrupts your sleep-wake cycle...</span><br><span class="line">which can affect your mental functioning and energy levels the next day.</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
-<p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
-<p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语口语04</title>
-    <url>/2022/07/13/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD04/</url>
-    <content><![CDATA[<h1 id="英语口语04"><a href="#英语口语04" class="headerlink" title="英语口语04"></a>英语口语04</h1><h3 id="心中有蓝图"><a href="#心中有蓝图" class="headerlink" title="心中有蓝图"></a>心中有蓝图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">you should have a version for the future,</span><br><span class="line">something you want to do or accomplish,</span><br><span class="line">because...</span><br><span class="line">when you map out your goals,</span><br><span class="line">you will focus on things that can help you achieve what you want in life.</span><br></pre></td></tr></table></figure>
-
-<h3 id="打开适应度"><a href="#打开适应度" class="headerlink" title="打开适应度"></a>打开适应度</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if you just do what you are pretty good at already,</span><br><span class="line">you will not triggle adaptability.</span><br><span class="line">because...</span><br><span class="line">mastery is not just about putting in 10000 hours,</span><br><span class="line">just doing something over and over again does&#x27;t make you </span><br><span class="line">better at something,</span><br><span class="line">it&#x27;s about 100 hours of deliberate practice.</span><br></pre></td></tr></table></figure>
-
-<h3 id="苦练成才"><a href="#苦练成才" class="headerlink" title="苦练成才"></a>苦练成才</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">to reach your peak performance level,</span><br><span class="line">you need to challenge yourself,</span><br><span class="line">because...</span><br><span class="line">you can&#x27;t expect to evolve and reach new heights if </span><br><span class="line">you only stick to your normal habits and lifestyle.</span><br></pre></td></tr></table></figure>
-
-<p><strong>世界上最甜蜜的事，就是极致内化之后的自动脑补。</strong></p>
-<p><strong>不必消耗脑流量，直接下意识输出。</strong></p>
-<p><strong>就像弹钢琴一样。</strong></p>
-<p><strong>练至精熟之境，你不必在意手指，</strong></p>
-<p><strong>手指自动会落在适合的琴键上，并一瞬间打开最精确的力度和准度。</strong></p>
-<p><strong>这种境界，你不去体会，必遗憾终身。</strong></p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>英语口语02</title>
     <url>/2022/07/06/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD02/</url>
     <content><![CDATA[<h1 id="英语口语02"><a href="#英语口语02" class="headerlink" title="英语口语02"></a>英语口语02</h1><h3 id="精算能力"><a href="#精算能力" class="headerlink" title="精算能力"></a>精算能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math can be helpful for balancing your budget,</span><br><span class="line">because...</span><br><span class="line">you will have a good understanding of how to make sure that </span><br><span class="line">your costs are less than the money you have</span><br></pre></td></tr></table></figure>
@@ -693,21 +650,17 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语05</title>
-    <url>/2022/07/14/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD05/</url>
-    <content><![CDATA[<h1 id="英语口语05"><a href="#英语口语05" class="headerlink" title="英语口语05"></a>英语口语05</h1><h3 id="行动是良药"><a href="#行动是良药" class="headerlink" title="行动是良药"></a>行动是良药</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">negative emotions are a call to action,</span><br><span class="line">i mean...</span><br><span class="line">if you feel crappy,</span><br><span class="line">it&#x27;s because that your brain is telling you that </span><br><span class="line">there&#x27;s a problem that&#x27;s unaddressed,</span><br><span class="line">and you&#x27;re supposed to do something.</span><br></pre></td></tr></table></figure>
+    <title>英语口语03</title>
+    <url>/2022/07/12/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD03/</url>
+    <content><![CDATA[<h1 id="英语口语03"><a href="#英语口语03" class="headerlink" title="英语口语03"></a>英语口语03</h1><h3 id="精力充沛"><a href="#精力充沛" class="headerlink" title="精力充沛"></a>精力充沛</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i will try to get into the routine of getting up early in the morning and go to bed</span><br><span class="line">early at night,</span><br><span class="line">so that...</span><br><span class="line">i will have a better sleeping pattern which enables me to be more energetic throughtout the day</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*注：第一句话种复数接a call to action，是没问题的，母语者语流*</strong></em></p>
-<h3 id="种瓜得瓜"><a href="#种瓜得瓜" class="headerlink" title="种瓜得瓜"></a>种瓜得瓜</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">happiness requires struggles,</span><br><span class="line">because...</span><br><span class="line">Joy doesn&#x27;t sprout out of the ground,</span><br><span class="line">if you want something,you have to work for it,</span><br><span class="line">what you reap what you sow</span><br></pre></td></tr></table></figure>
+<h3 id="三省吾身"><a href="#三省吾身" class="headerlink" title="三省吾身"></a>三省吾身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i think it&#x27;s important to refresh my mind about the current situation,</span><br><span class="line">by vasualizing long,middle,short term goals everyday </span><br><span class="line">because...</span><br><span class="line">sometimes it&#x27;s easy to lose the big picture when we are immersing yourself in detailed executions.</span><br><span class="line">But it&#x27;s also easy to miss out the detailed executions when we are grasping the big picture</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*注：母语者语流种蕴含着天然的合理节奏，比中英翻译要合理得多。*</strong></em></p>
-<p><em><strong>*大白话就是说的时候节奏很自然，语流清晰而地道。*</strong></em></p>
-<h3 id="机会成本"><a href="#机会成本" class="headerlink" title="机会成本"></a>机会成本</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Everything comes with a inherent sacrifice(有利有弊)</span><br><span class="line">what we gain is also what we lose,</span><br><span class="line">like...</span><br><span class="line">the person you marry is the person you fight with,</span><br><span class="line">the house you buy is the house you repair,</span><br><span class="line">the dream job you take is the job you stress over</span><br></pre></td></tr></table></figure>
+<h3 id="熬夜伤身"><a href="#熬夜伤身" class="headerlink" title="熬夜伤身"></a>熬夜伤身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">being a night owl could hurt our health</span><br><span class="line">because...</span><br><span class="line">staying up late will disrupts your sleep-wake cycle...</span><br><span class="line">which can affect your mental functioning and energy levels the next day.</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*注：例证时的排比，宛若长江三叠浪，节奏中力度十足，掷地有声。*</strong></em></p>
-<p><em><strong>*我们现阶段要达到的境界，就是在中文表达中，或日常所见所闻，慢慢感受到从“中文俗语”到“英文语流”的无缝连接。*</strong></em></p>
-<p><em><strong>*这样一来，中英文的互换，就变得极其轻松。*</strong></em></p>
-<p><em><strong>*流利度也慢慢得到体现。*</strong></em></p>
+<p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
+<p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
+<p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
 ]]></content>
       <categories>
         <category>口语</category>
@@ -744,6 +697,53 @@
       </tags>
   </entry>
   <entry>
+    <title>英语口语04</title>
+    <url>/2022/07/13/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD04/</url>
+    <content><![CDATA[<h1 id="英语口语04"><a href="#英语口语04" class="headerlink" title="英语口语04"></a>英语口语04</h1><h3 id="心中有蓝图"><a href="#心中有蓝图" class="headerlink" title="心中有蓝图"></a>心中有蓝图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">you should have a version for the future,</span><br><span class="line">something you want to do or accomplish,</span><br><span class="line">because...</span><br><span class="line">when you map out your goals,</span><br><span class="line">you will focus on things that can help you achieve what you want in life.</span><br></pre></td></tr></table></figure>
+
+<h3 id="打开适应度"><a href="#打开适应度" class="headerlink" title="打开适应度"></a>打开适应度</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if you just do what you are pretty good at already,</span><br><span class="line">you will not triggle adaptability.</span><br><span class="line">because...</span><br><span class="line">mastery is not just about putting in 10000 hours,</span><br><span class="line">just doing something over and over again does&#x27;t make you </span><br><span class="line">better at something,</span><br><span class="line">it&#x27;s about 100 hours of deliberate practice.</span><br></pre></td></tr></table></figure>
+
+<h3 id="苦练成才"><a href="#苦练成才" class="headerlink" title="苦练成才"></a>苦练成才</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">to reach your peak performance level,</span><br><span class="line">you need to challenge yourself,</span><br><span class="line">because...</span><br><span class="line">you can&#x27;t expect to evolve and reach new heights if </span><br><span class="line">you only stick to your normal habits and lifestyle.</span><br></pre></td></tr></table></figure>
+
+<p><strong>世界上最甜蜜的事，就是极致内化之后的自动脑补。</strong></p>
+<p><strong>不必消耗脑流量，直接下意识输出。</strong></p>
+<p><strong>就像弹钢琴一样。</strong></p>
+<p><strong>练至精熟之境，你不必在意手指，</strong></p>
+<p><strong>手指自动会落在适合的琴键上，并一瞬间打开最精确的力度和准度。</strong></p>
+<p><strong>这种境界，你不去体会，必遗憾终身。</strong></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语口语05</title>
+    <url>/2022/07/14/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD05/</url>
+    <content><![CDATA[<h1 id="英语口语05"><a href="#英语口语05" class="headerlink" title="英语口语05"></a>英语口语05</h1><h3 id="行动是良药"><a href="#行动是良药" class="headerlink" title="行动是良药"></a>行动是良药</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">negative emotions are a call to action,</span><br><span class="line">i mean...</span><br><span class="line">if you feel crappy,</span><br><span class="line">it&#x27;s because that your brain is telling you that </span><br><span class="line">there&#x27;s a problem that&#x27;s unaddressed,</span><br><span class="line">and you&#x27;re supposed to do something.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：第一句话种复数接a call to action，是没问题的，母语者语流*</strong></em></p>
+<h3 id="种瓜得瓜"><a href="#种瓜得瓜" class="headerlink" title="种瓜得瓜"></a>种瓜得瓜</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">happiness requires struggles,</span><br><span class="line">because...</span><br><span class="line">Joy doesn&#x27;t sprout out of the ground,</span><br><span class="line">if you want something,you have to work for it,</span><br><span class="line">what you reap what you sow</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：母语者语流种蕴含着天然的合理节奏，比中英翻译要合理得多。*</strong></em></p>
+<p><em><strong>*大白话就是说的时候节奏很自然，语流清晰而地道。*</strong></em></p>
+<h3 id="机会成本"><a href="#机会成本" class="headerlink" title="机会成本"></a>机会成本</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Everything comes with a inherent sacrifice(有利有弊)</span><br><span class="line">what we gain is also what we lose,</span><br><span class="line">like...</span><br><span class="line">the person you marry is the person you fight with,</span><br><span class="line">the house you buy is the house you repair,</span><br><span class="line">the dream job you take is the job you stress over</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：例证时的排比，宛若长江三叠浪，节奏中力度十足，掷地有声。*</strong></em></p>
+<p><em><strong>*我们现阶段要达到的境界，就是在中文表达中，或日常所见所闻，慢慢感受到从“中文俗语”到“英文语流”的无缝连接。*</strong></em></p>
+<p><em><strong>*这样一来，中英文的互换，就变得极其轻松。*</strong></em></p>
+<p><em><strong>*流利度也慢慢得到体现。*</strong></em></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英语口语07</title>
     <url>/2022/07/16/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD07/</url>
     <content><![CDATA[<h1 id="英语口语07"><a href="#英语口语07" class="headerlink" title="英语口语07"></a>英语口语07</h1><h3 id="固定收入"><a href="#固定收入" class="headerlink" title="固定收入"></a>固定收入</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Most full-time employees have a fixed salaries,</span><br><span class="line">so...</span><br><span class="line">they can properly budget their money based on their expenses,</span><br><span class="line">because...</span><br><span class="line">they have a clear idea about how much to expect in their bank </span><br><span class="line">account every month.</span><br></pre></td></tr></table></figure>
@@ -769,6 +769,44 @@
 <p><em><strong>*最后rather than+名词或从句，也是出战率非常高的句式。*</strong></em></p>
 <h3 id="懈怠"><a href="#懈怠" class="headerlink" title="懈怠"></a>懈怠</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if we don&#x27;t like we work,</span><br><span class="line">it&#x27;s easy for us to be drawn to the things that we want to do</span><br><span class="line">like...</span><br><span class="line">scrolling TikTok,or reading music blogs,</span><br><span class="line">rather than the things we have to do,</span><br><span class="line">this tension possibly causes fatigue.</span><br></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语口语08</title>
+    <url>/2022/07/18/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD08/</url>
+    <content><![CDATA[<h1 id="英语口语08"><a href="#英语口语08" class="headerlink" title="英语口语08"></a>英语口语08</h1><h3 id="处世态度不同"><a href="#处世态度不同" class="headerlink" title="处世态度不同"></a>处世态度不同</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">There has always been a diffrence in attitude betwen the younger and</span><br><span class="line">older generations.</span><br><span class="line">because...</span><br><span class="line">Everyone wants to live and behave in his own way,no one wants to</span><br><span class="line">compromise with his or her values and views,</span><br><span class="line">and over time,</span><br><span class="line">the attitude has agumented the gernerations gap.</span><br><span class="line">and it is wider day-by-day</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：这种直接洞察人性的答案，其实是具备很大威力的。*</strong></em></p>
+<p><em><strong>*因为如果你的答题经验足够丰富，你就可以知道一个本质：*</strong></em></p>
+<p><em><strong>*几乎所有分析类问题的回答，其实都可以用人性来解决其中一个或几个维度。*</strong></em></p>
+<p><em><strong>*注意over time后面的句式，核心词可以替换成很多东西，*</strong></em></p>
+<p><em><strong>*非常有用。*</strong></em></p>
+<h3 id="价值观不同"><a href="#价值观不同" class="headerlink" title="价值观不同"></a>价值观不同</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">all generations have their own set of values and views,</span><br><span class="line">because...</span><br><span class="line">Every generation have a certain time under certain circumstances</span><br><span class="line">and conditions.</span><br><span class="line">in the mean time...</span><br><span class="line">Every generation wants to uphold the principles they believe in</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：*</strong></em><em><strong>*人生在世，不可能让所有人都喜欢你。*</strong></em></p>
+<p><em><strong>*因为每个人的生活处境，对世界的认知，以及思维习惯都不一样*</strong></em></p>
+<p><em><strong>*通过一代人的角度来分析事物，配以人性的辅助，*</strong></em></p>
+<p><em><strong>*寥寥数语，却具备深度洞察力，以及理性的包容，*</strong></em></p>
+<p><em><strong>*令人闻之激赏。*</strong></em></p>
+<p><em><strong>*高能动词“have”“live”“want”三星连携，一气呵成。*</strong></em></p>
+<h3 id="知识体系"><a href="#知识体系" class="headerlink" title="知识体系"></a>知识体系</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">school is very important because it is where you establish the building blocks</span><br><span class="line">of your knowledge.</span><br><span class="line">for example...</span><br><span class="line">you will begin to learn basic subjects that you will be able to </span><br><span class="line">apply in real life.</span><br><span class="line">and you will learn important social skills as you interact with other </span><br><span class="line">students.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*establish the building blocks*</strong></em> <em><strong>*of your knowledge*</strong></em> <em><strong>*建立体系*</strong></em></p>
+<p><em><strong>*basic subjects that you will be able to apply in real life*</strong></em> <em><strong>*实用的知识*</strong></em></p>
+<p><em><strong>*social skills as you interact with other students*</strong></em> <em><strong>*人际交往的技巧*</strong></em></p>
+<p><em><strong>*注：*</strong></em></p>
+<p><em><strong>*知识体系的建立，必须从小接受良好的教育。*</strong></em></p>
+<p><em><strong>*而一个认知力很厉害的人，往往就是通过教育，建立了自己的认知体系。*</strong></em></p>
+<p><em><strong>*此语流一个观点+例证，鲜明清晰，让人听得不累。*</strong></em></p>
+<p><em><strong>*有时候也没必要一定要太复杂，一个好玩的例子，其实已经是功力的展现。*</strong></em></p>
+<p><em><strong>*词伙“*</strong></em><em><strong>*establish the building blocks*</strong></em> <em><strong>*of your knowledge*</strong></em><em><strong>*”具象化非常漂亮，而其后两个长句，*</strong></em></p>
+<p><em><strong>*一个that从句，一个as从句，低调而华丽。*</strong></em></p>
 ]]></content>
       <categories>
         <category>口语</category>
