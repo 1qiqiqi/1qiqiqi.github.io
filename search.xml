@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Docker容器命令</title>
-    <url>/2022/07/07/Docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="Docker容器命令"><a href="#Docker容器命令" class="headerlink" title="Docker容器命令"></a>Docker容器命令</h1><h3 id="Docker将镜像转为容器"><a href="#Docker将镜像转为容器" class="headerlink" title="Docker将镜像转为容器"></a>Docker将镜像转为容器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name containerName -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="查看docker容器状态"><a href="#查看docker容器状态" class="headerlink" title="查看docker容器状态"></a>查看docker容器状态</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker logs 容器名称</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker镜像命令</title>
     <url>/2022/07/07/Docker%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Docker常用镜像命令"><a href="#Docker常用镜像命令" class="headerlink" title="Docker常用镜像命令"></a>Docker常用镜像命令</h1><p>这些是最基本的Docker镜像命令，也是最有用的</p>
@@ -39,25 +20,6 @@
       <tags>
         <tag>Docker命令</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/06/22/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p>thanks for your listenning</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>Redis命令大全</title>
@@ -105,6 +67,25 @@
       </categories>
       <tags>
         <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker容器命令</title>
+    <url>/2022/07/07/Docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Docker容器命令"><a href="#Docker容器命令" class="headerlink" title="Docker容器命令"></a>Docker容器命令</h1><h3 id="Docker将镜像转为容器"><a href="#Docker将镜像转为容器" class="headerlink" title="Docker将镜像转为容器"></a>Docker将镜像转为容器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name containerName -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="查看docker容器状态"><a href="#查看docker容器状态" class="headerlink" title="查看docker容器状态"></a>查看docker容器状态</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker logs 容器名称</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker命令</tag>
       </tags>
   </entry>
   <entry>
@@ -157,6 +138,108 @@
 <p>右边第一个目标值：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">	int left = 0;</span><br><span class="line">	int right = nums.length - 1;</span><br><span class="line">	while(left &lt; right) &#123;</span><br><span class="line">		mid = 1+(left+right)/2;</span><br><span class="line">		if(nums[mid]&lt;=target) left = mid;</span><br><span class="line">		else right = mid-1;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组_代码随想列题02</title>
+    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8402/</url>
+    <content><![CDATA[<h1 id="代码随想录-数组02"><a href="#代码随想录-数组02" class="headerlink" title="代码随想录_数组02"></a>代码随想录_数组02</h1><h3 id="27-移除元素"><a href="#27-移除元素" class="headerlink" title="27. 移除元素"></a>27. 移除元素</h3><p>[题目链接](<a href="https://leetcode.cn/problems/remove-element/">力扣 (leetcode.cn)</a>)</p>
+<p>给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。</p>
+<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
+<p>说明:</p>
+<p>为什么返回数值是整数，但输出的答案是数组呢?</p>
+<p>请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
+<p>你可以想象内部操作如下:</p>
+<p>&#x2F;&#x2F; nums 是以“引用”方式传递的。也就是说，不对实参作任何拷贝<br>int len &#x3D; removeElement(nums, val);</p>
+<p>&#x2F;&#x2F; 在函数里修改输入数组对于调用者是可见的。<br>&#x2F;&#x2F; 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。<br>for (int i &#x3D; 0; i &lt; len; i++) {<br>    print(nums[i]);<br>}</p>
+<p>示例 1：</p>
+<p>输入：nums &#x3D; [3,2,2,3], val &#x3D; 3<br>输出：2, nums &#x3D; [2,2]<br>解释：函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。你不需要考虑数组中超出新长度后面的元素。例如，函数返回的新长度为 2 ，而 nums &#x3D; [2,2,3,3] 或 nums &#x3D; [2,2,0,0]，也会被视作正确答案。<br>示例 2：</p>
+<p>输入：nums &#x3D; [0,1,2,2,3,0,4,2], val &#x3D; 2<br>输出：5, nums &#x3D; [0,1,4,0,3]<br>解释：函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><a href="https://www.bilibili.com/video/BV12A4y1Z7LP">本题B站视频讲解(opens new window)</a></p>
+<p>有的同学可能说了，多余的元素，删掉不就得了。</p>
+<p><strong>要知道数组的元素在内存地址中是连续的，不能单独删除数组中的某个元素，只能覆盖。</strong></p>
+<h3 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h3><p>这个题目暴力的解法就是两层for循环，一个for循环遍历数组元素 ，第二个for循环更新数组。</p>
+<p>删除过程如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrc7x9tjg30du09m1ky.gif" alt="27.移除元素-暴力解法"></p>
+<p>很明显暴力解法的时间复杂度是O(n^2)，这道题目暴力解法在leetcode上是可以过的。</p>
+<p>代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 时间复杂度：O(n^2)</span><br><span class="line">// 空间复杂度：O(1)</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int removeElement(vector&lt;int&gt;&amp; nums, int val) &#123;</span><br><span class="line">        int size = nums.size();</span><br><span class="line">        for (int i = 0; i &lt; size; i++) &#123;</span><br><span class="line">            if (nums[i] == val) &#123; // 发现需要移除的元素，就将数组集体向前移动一位</span><br><span class="line">                for (int j = i + 1; j &lt; size; j++) &#123;</span><br><span class="line">                    nums[j - 1] = nums[j];</span><br><span class="line">                &#125;</span><br><span class="line">                i--; // 因为下标i以后的数值都向前移动了一位，所以i也向前移动一位</span><br><span class="line">                size--; // 此时数组的大小-1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return size;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>双指针法（快慢指针法）： <strong>通过一个快指针和慢指针在一个for循环下完成两个for循环的工作。</strong></p>
+<p>定义快慢指针</p>
+<ul>
+<li>快指针：寻找新数组的元素 ，新数组就是不含有目标元素的数组</li>
+<li>慢指针：指向更新 新数组下标的位置</li>
+</ul>
+<p>很多同学这道题目做的很懵，就是不理解 快慢指针究竟都是什么含义，所以一定要明确含义，后面的思路就更容易理解了。</p>
+<p>删除过程如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrds6r59g30du09mnpd.gif" alt="27.移除元素-双指针法"></p>
+<p>很多同学不了解</p>
+<p><strong>双指针法（快慢指针法）在数组和链表的操作中是非常常见的，很多考察数组、链表、字符串等操作的面试题，都使用双指针法。</strong></p>
+<p>后续都会一一介绍到，本题代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> in <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span> [] nums,<span class="type">int</span> val)</span> &#123;</span><br><span class="line">	<span class="comment">//快指针</span></span><br><span class="line">	<span class="type">int</span> <span class="variable">fastIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> <span class="variable">slowIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(fastIndex&lt;nums.length) &#123;</span><br><span class="line">		<span class="keyword">if</span>(nums[fastIndex] != val) &#123;</span><br><span class="line">            nums[slowIndex++] = nums[fastIndex]</span><br><span class="line">        &#125;</span><br><span class="line">		fastIndex++;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> slowIndex;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/06/22/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<p>thanks for your listenning</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>数组_代码随想列题03</title>
+    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8403/</url>
+    <content><![CDATA[<h1 id="代码随想录-数组03"><a href="#代码随想录-数组03" class="headerlink" title="代码随想录_数组03"></a>代码随想录_数组03</h1><h1 id="977-有序数组的平方"><a href="#977-有序数组的平方" class="headerlink" title="977.有序数组的平方"></a>977.有序数组的平方</h1><p><a href="https://leetcode.cn/problems/squares-of-a-sorted-array/">力扣题目链接(opens new window)</a></p>
+<p>给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。</p>
+<p>示例 1： 输入：nums &#x3D; [-4,-1,0,3,10] 输出：[0,1,9,16,100] 解释：平方后，数组变为 [16,1,0,9,100]，排序后，数组变为 [0,1,9,16,100]</p>
+<p>示例 2： 输入：nums &#x3D; [-7,-3,2,3,11] 输出：[4,9,9,49,121]</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了易于大家理解，我还特意录制了视频，<a href="https://www.bilibili.com/video/BV1QB4y1D7ep">本题视频讲解(opens new window)</a></p>
+<h3 id="暴力排序"><a href="#暴力排序" class="headerlink" title="暴力排序"></a>暴力排序</h3><p>最直观的想法，莫过于：每个数平方之后，排个序，美滋滋，代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; A) &#123;</span><br><span class="line">        for (int i = 0; i &lt; A.size(); i++) &#123;</span><br><span class="line">            A[i] *= A[i];</span><br><span class="line">        &#125;</span><br><span class="line">        sort(A.begin(), A.end()); // 快速排序</span><br><span class="line">        return A;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这个时间复杂度是 O(n + nlogn)， 可以说是O(nlogn)的时间复杂度，但为了和下面双指针法算法时间复杂度有鲜明对比，我记为 O(n + nlog n)。</p>
+<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>数组其实是有序的， 只不过负数平方之后可能成为最大数了。</p>
+<p>那么数组平方的最大值就在数组的两端，不是最左边就是最右边，不可能是中间。</p>
+<p>此时可以考虑双指针法了，i指向起始位置，j指向终止位置。</p>
+<p>定义一个新数组result，和A数组一样的大小，让k指向result数组终止位置。</p>
+<p>如果<code>A[i] * A[i] &lt; A[j] * A[j]</code> 那么<code>result[k--] = A[j] * A[j];</code> 。</p>
+<p>如果<code>A[i] * A[i] &gt;= A[j] * A[j]</code> 那么<code>result[k--] = A[i] * A[i];</code> 。</p>
+<p>如动画所示：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.gif" alt="img"></p>
+<p>不难写出如下代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span>[] sortedSquares(<span class="type">int</span>[] nums) &#123;</span><br><span class="line">		<span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length-<span class="number">1</span>;</span><br><span class="line">		<span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span>[] new_nums =<span class="keyword">new</span> <span class="title class_">int</span>[nums.length];</span><br><span class="line">        <span class="type">int</span> <span class="variable">new_index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(left &lt;= right) &#123;</span><br><span class="line">			<span class="keyword">if</span>(nums[left]*nums[left] &lt; nums[right]*nums[right]) &#123;</span><br><span class="line">                new_nums[new_index++] = nums[left]*nums[left];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                new_nums[new_index++] = nums[right]*nums[right];</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">       <span class="keyword">return</span> new_nums;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时的时间复杂度为O(n)，相对于暴力排序的解法O(n + nlog n)还是提升不少的。</p>
+<p><strong>这里还是说一下，大家不必太在意leetcode上执行用时，打败多少多少用户，这个就是一个玩具，非常不准确。</strong></p>
+<p>做题的时候自己能分析出来时间复杂度就可以了，至于leetcode上执行用时，大概看一下就行，只要达到最优的时间复杂度就可以了，</p>
+<p>一样的代码多提交几次可能就击败百分之百了…..</p>
 ]]></content>
       <categories>
         <category>算法简史</category>
@@ -220,86 +303,52 @@
       </tags>
   </entry>
   <entry>
-    <title>数组_代码随想列题03</title>
-    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8403/</url>
-    <content><![CDATA[<h1 id="代码随想录-数组03"><a href="#代码随想录-数组03" class="headerlink" title="代码随想录_数组03"></a>代码随想录_数组03</h1><h1 id="977-有序数组的平方"><a href="#977-有序数组的平方" class="headerlink" title="977.有序数组的平方"></a>977.有序数组的平方</h1><p><a href="https://leetcode.cn/problems/squares-of-a-sorted-array/">力扣题目链接(opens new window)</a></p>
-<p>给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。</p>
-<p>示例 1： 输入：nums &#x3D; [-4,-1,0,3,10] 输出：[0,1,9,16,100] 解释：平方后，数组变为 [16,1,0,9,100]，排序后，数组变为 [0,1,9,16,100]</p>
-<p>示例 2： 输入：nums &#x3D; [-7,-3,2,3,11] 输出：[4,9,9,49,121]</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了易于大家理解，我还特意录制了视频，<a href="https://www.bilibili.com/video/BV1QB4y1D7ep">本题视频讲解(opens new window)</a></p>
-<h3 id="暴力排序"><a href="#暴力排序" class="headerlink" title="暴力排序"></a>暴力排序</h3><p>最直观的想法，莫过于：每个数平方之后，排个序，美滋滋，代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; A) &#123;</span><br><span class="line">        for (int i = 0; i &lt; A.size(); i++) &#123;</span><br><span class="line">            A[i] *= A[i];</span><br><span class="line">        &#125;</span><br><span class="line">        sort(A.begin(), A.end()); // 快速排序</span><br><span class="line">        return A;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+    <title>删除_链表01</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A801/</url>
+    <content><![CDATA[<h1 id="删除-链表01"><a href="#删除-链表01" class="headerlink" title="删除_链表01"></a>删除_链表01</h1><h3 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203.移除链表元素"></a>203.移除链表元素</h3><p><a href="https://leetcode.cn/problems/remove-linked-list-elements/">力扣题目链接(opens new window)</a></p>
+<p>题意：删除链表中等于给定值 val 的所有节点。</p>
+<p>示例 1：<br>输入：head &#x3D; [1,2,6,3,4,5,6], val &#x3D; 6<br>输出：[1,2,3,4,5]</p>
+<p>示例 2：<br>输入：head &#x3D; [], val &#x3D; 1<br>输出：[]</p>
+<p>示例 3：<br>输入：head &#x3D; [7,7,7,7], val &#x3D; 7<br>输出：[]</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了方便大家理解，我特意录制了视频：<a href="https://www.bilibili.com/video/BV18B4y1s7R9">手把手带你学会操作链表，移除链表元素 (opens new window)</a>，结合视频在看本题解，事半功倍。</p>
+<p>这里以链表 1 4 2 4 来举例，移除元素4。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095351161.png" alt="203_链表删除元素1"></p>
+<p>如果使用C，C++编程语言的话，不要忘了还要从内存中删除这两个移除的节点， 清理节点内存之后如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095418280.png" alt="203_链表删除元素2"></p>
+<p><strong>当然如果使用java ，python的话就不用手动管理内存了。</strong></p>
+<p>还要说明一下，就算使用C++来做leetcode，如果移除一个节点之后，没有手动在内存中删除这个节点，leetcode依然也是可以通过的，只不过，内存使用的空间大一些而已，但建议依然要养成手动清理内存的习惯。</p>
+<p>这种情况下的移除操作，就是让节点next指针直接指向下下一个节点就可以了，</p>
+<p>那么因为单链表的特殊性，只能指向下一个节点，刚刚删除的是链表的中第二个，和第四个节点，那么如果删除的是头结点又该怎么办呢？</p>
+<p>这里就涉及如下链表操作的两种方式：</p>
+<ul>
+<li><strong>直接使用原来的链表来进行删除操作。</strong></li>
+<li><strong>设置一个虚拟头结点在进行删除操作。</strong></li>
+</ul>
+<p>来看第一种操作：直接使用原来的链表来进行移除。</p>
+<p><img src="https://img-blog.csdnimg.cn/2021031609544922.png" alt="203_链表删除元素3"></p>
+<p>移除头结点和移除其他节点的操作是不一样的，因为链表的其他节点都是通过前一个节点来移除当前节点，而头结点没有前一个节点。</p>
+<p>所以头结点如何移除呢，其实只要将头结点向后移动一位就可以，这样就从链表中移除了一个头结点。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095512470.png" alt="203_链表删除元素4"></p>
+<p>依然别忘将原头结点从内存中删掉。 <img src="https://img-blog.csdnimg.cn/20210316095543775.png" alt="203_链表删除元素5"></p>
+<p>这样移除了一个头结点，是不是发现，在单链表中移除头结点 和 移除其他节点的操作方式是不一样，其实在写代码的时候也会发现，需要单独写一段逻辑来处理移除头结点的情况。</p>
+<p>那么可不可以 以一种统一的逻辑来移除 链表的节点呢。</p>
+<p>其实<strong>可以设置一个虚拟头结点</strong>，这样原链表的所有节点就都可以按照统一的方式进行移除了。</p>
+<p>来看看如何设置一个虚拟头。依然还是在这个链表中，移除元素1。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095619221.png" alt="203_链表删除元素6"></p>
+<p>这里来给链表添加一个虚拟头结点为新的头结点，此时要移除这个旧头结点元素1。</p>
+<p>这样是不是就可以使用和移除链表其他节点的方式统一了呢？</p>
+<p>来看一下，如何移除元素1 呢，还是熟悉的方式，然后从内存中删除元素1。</p>
+<p>最后呢在题目中，return 头结点的时候，别忘了 <code>return dummyNode-&gt;next;</code>， 这才是新的头结点</p>
+<p>java:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 添加虚节点方式</span></span><br><span class="line"><span class="comment"> * 时间复杂度 O(n)</span></span><br><span class="line"><span class="comment"> * 空间复杂度 O(1)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> val</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">removeElements</span><span class="params">(ListNode head, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>, head);</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> dummy;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>这个时间复杂度是 O(n + nlogn)， 可以说是O(nlogn)的时间复杂度，但为了和下面双指针法算法时间复杂度有鲜明对比，我记为 O(n + nlog n)。</p>
-<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>数组其实是有序的， 只不过负数平方之后可能成为最大数了。</p>
-<p>那么数组平方的最大值就在数组的两端，不是最左边就是最右边，不可能是中间。</p>
-<p>此时可以考虑双指针法了，i指向起始位置，j指向终止位置。</p>
-<p>定义一个新数组result，和A数组一样的大小，让k指向result数组终止位置。</p>
-<p>如果<code>A[i] * A[i] &lt; A[j] * A[j]</code> 那么<code>result[k--] = A[j] * A[j];</code> 。</p>
-<p>如果<code>A[i] * A[i] &gt;= A[j] * A[j]</code> 那么<code>result[k--] = A[i] * A[i];</code> 。</p>
-<p>如动画所示：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.gif" alt="img"></p>
-<p>不难写出如下代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span>[] sortedSquares(<span class="type">int</span>[] nums) &#123;</span><br><span class="line">		<span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length-<span class="number">1</span>;</span><br><span class="line">		<span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span>[] new_nums =<span class="keyword">new</span> <span class="title class_">int</span>[nums.length];</span><br><span class="line">        <span class="type">int</span> <span class="variable">new_index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(left &lt;= right) &#123;</span><br><span class="line">			<span class="keyword">if</span>(nums[left]*nums[left] &lt; nums[right]*nums[right]) &#123;</span><br><span class="line">                new_nums[new_index++] = nums[left]*nums[left];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                new_nums[new_index++] = nums[right]*nums[right];</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">       <span class="keyword">return</span> new_nums;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>此时的时间复杂度为O(n)，相对于暴力排序的解法O(n + nlog n)还是提升不少的。</p>
-<p><strong>这里还是说一下，大家不必太在意leetcode上执行用时，打败多少多少用户，这个就是一个玩具，非常不准确。</strong></p>
-<p>做题的时候自己能分析出来时间复杂度就可以了，至于leetcode上执行用时，大概看一下就行，只要达到最优的时间复杂度就可以了，</p>
-<p>一样的代码多提交几次可能就击败百分之百了…..</p>
 ]]></content>
       <categories>
         <category>算法简史</category>
-        <category>数组</category>
+        <category>链表</category>
       </categories>
       <tags>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数组_代码随想列题02</title>
-    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8402/</url>
-    <content><![CDATA[<h1 id="代码随想录-数组02"><a href="#代码随想录-数组02" class="headerlink" title="代码随想录_数组02"></a>代码随想录_数组02</h1><h3 id="27-移除元素"><a href="#27-移除元素" class="headerlink" title="27. 移除元素"></a>27. 移除元素</h3><p>[题目链接](<a href="https://leetcode.cn/problems/remove-element/">力扣 (leetcode.cn)</a>)</p>
-<p>给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。</p>
-<p>不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。</p>
-<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
-<p>说明:</p>
-<p>为什么返回数值是整数，但输出的答案是数组呢?</p>
-<p>请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
-<p>你可以想象内部操作如下:</p>
-<p>&#x2F;&#x2F; nums 是以“引用”方式传递的。也就是说，不对实参作任何拷贝<br>int len &#x3D; removeElement(nums, val);</p>
-<p>&#x2F;&#x2F; 在函数里修改输入数组对于调用者是可见的。<br>&#x2F;&#x2F; 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。<br>for (int i &#x3D; 0; i &lt; len; i++) {<br>    print(nums[i]);<br>}</p>
-<p>示例 1：</p>
-<p>输入：nums &#x3D; [3,2,2,3], val &#x3D; 3<br>输出：2, nums &#x3D; [2,2]<br>解释：函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。你不需要考虑数组中超出新长度后面的元素。例如，函数返回的新长度为 2 ，而 nums &#x3D; [2,2,3,3] 或 nums &#x3D; [2,2,0,0]，也会被视作正确答案。<br>示例 2：</p>
-<p>输入：nums &#x3D; [0,1,2,2,3,0,4,2], val &#x3D; 2<br>输出：5, nums &#x3D; [0,1,4,0,3]<br>解释：函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><a href="https://www.bilibili.com/video/BV12A4y1Z7LP">本题B站视频讲解(opens new window)</a></p>
-<p>有的同学可能说了，多余的元素，删掉不就得了。</p>
-<p><strong>要知道数组的元素在内存地址中是连续的，不能单独删除数组中的某个元素，只能覆盖。</strong></p>
-<h3 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h3><p>这个题目暴力的解法就是两层for循环，一个for循环遍历数组元素 ，第二个for循环更新数组。</p>
-<p>删除过程如下：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrc7x9tjg30du09m1ky.gif" alt="27.移除元素-暴力解法"></p>
-<p>很明显暴力解法的时间复杂度是O(n^2)，这道题目暴力解法在leetcode上是可以过的。</p>
-<p>代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 时间复杂度：O(n^2)</span><br><span class="line">// 空间复杂度：O(1)</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int removeElement(vector&lt;int&gt;&amp; nums, int val) &#123;</span><br><span class="line">        int size = nums.size();</span><br><span class="line">        for (int i = 0; i &lt; size; i++) &#123;</span><br><span class="line">            if (nums[i] == val) &#123; // 发现需要移除的元素，就将数组集体向前移动一位</span><br><span class="line">                for (int j = i + 1; j &lt; size; j++) &#123;</span><br><span class="line">                    nums[j - 1] = nums[j];</span><br><span class="line">                &#125;</span><br><span class="line">                i--; // 因为下标i以后的数值都向前移动了一位，所以i也向前移动一位</span><br><span class="line">                size--; // 此时数组的大小-1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return size;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>双指针法（快慢指针法）： <strong>通过一个快指针和慢指针在一个for循环下完成两个for循环的工作。</strong></p>
-<p>定义快慢指针</p>
-<ul>
-<li>快指针：寻找新数组的元素 ，新数组就是不含有目标元素的数组</li>
-<li>慢指针：指向更新 新数组下标的位置</li>
-</ul>
-<p>很多同学这道题目做的很懵，就是不理解 快慢指针究竟都是什么含义，所以一定要明确含义，后面的思路就更容易理解了。</p>
-<p>删除过程如下：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrds6r59g30du09mnpd.gif" alt="27.移除元素-双指针法"></p>
-<p>很多同学不了解</p>
-<p><strong>双指针法（快慢指针法）在数组和链表的操作中是非常常见的，很多考察数组、链表、字符串等操作的面试题，都使用双指针法。</strong></p>
-<p>后续都会一一介绍到，本题代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> in <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span> [] nums,<span class="type">int</span> val)</span> &#123;</span><br><span class="line">	<span class="comment">//快指针</span></span><br><span class="line">	<span class="type">int</span> <span class="variable">fastIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> <span class="variable">slowIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(fastIndex&lt;nums.length) &#123;</span><br><span class="line">		<span class="keyword">if</span>(nums[fastIndex] != val) &#123;</span><br><span class="line">            nums[slowIndex++] = nums[fastIndex]</span><br><span class="line">        &#125;</span><br><span class="line">		fastIndex++;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> slowIndex;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
+        <tag>链表</tag>
       </tags>
   </entry>
   <entry>
@@ -379,55 +428,6 @@
       </tags>
   </entry>
   <entry>
-    <title>删除_链表01</title>
-    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A801/</url>
-    <content><![CDATA[<h1 id="删除-链表01"><a href="#删除-链表01" class="headerlink" title="删除_链表01"></a>删除_链表01</h1><h3 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203.移除链表元素"></a>203.移除链表元素</h3><p><a href="https://leetcode.cn/problems/remove-linked-list-elements/">力扣题目链接(opens new window)</a></p>
-<p>题意：删除链表中等于给定值 val 的所有节点。</p>
-<p>示例 1：<br>输入：head &#x3D; [1,2,6,3,4,5,6], val &#x3D; 6<br>输出：[1,2,3,4,5]</p>
-<p>示例 2：<br>输入：head &#x3D; [], val &#x3D; 1<br>输出：[]</p>
-<p>示例 3：<br>输入：head &#x3D; [7,7,7,7], val &#x3D; 7<br>输出：[]</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了方便大家理解，我特意录制了视频：<a href="https://www.bilibili.com/video/BV18B4y1s7R9">手把手带你学会操作链表，移除链表元素 (opens new window)</a>，结合视频在看本题解，事半功倍。</p>
-<p>这里以链表 1 4 2 4 来举例，移除元素4。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095351161.png" alt="203_链表删除元素1"></p>
-<p>如果使用C，C++编程语言的话，不要忘了还要从内存中删除这两个移除的节点， 清理节点内存之后如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095418280.png" alt="203_链表删除元素2"></p>
-<p><strong>当然如果使用java ，python的话就不用手动管理内存了。</strong></p>
-<p>还要说明一下，就算使用C++来做leetcode，如果移除一个节点之后，没有手动在内存中删除这个节点，leetcode依然也是可以通过的，只不过，内存使用的空间大一些而已，但建议依然要养成手动清理内存的习惯。</p>
-<p>这种情况下的移除操作，就是让节点next指针直接指向下下一个节点就可以了，</p>
-<p>那么因为单链表的特殊性，只能指向下一个节点，刚刚删除的是链表的中第二个，和第四个节点，那么如果删除的是头结点又该怎么办呢？</p>
-<p>这里就涉及如下链表操作的两种方式：</p>
-<ul>
-<li><strong>直接使用原来的链表来进行删除操作。</strong></li>
-<li><strong>设置一个虚拟头结点在进行删除操作。</strong></li>
-</ul>
-<p>来看第一种操作：直接使用原来的链表来进行移除。</p>
-<p><img src="https://img-blog.csdnimg.cn/2021031609544922.png" alt="203_链表删除元素3"></p>
-<p>移除头结点和移除其他节点的操作是不一样的，因为链表的其他节点都是通过前一个节点来移除当前节点，而头结点没有前一个节点。</p>
-<p>所以头结点如何移除呢，其实只要将头结点向后移动一位就可以，这样就从链表中移除了一个头结点。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095512470.png" alt="203_链表删除元素4"></p>
-<p>依然别忘将原头结点从内存中删掉。 <img src="https://img-blog.csdnimg.cn/20210316095543775.png" alt="203_链表删除元素5"></p>
-<p>这样移除了一个头结点，是不是发现，在单链表中移除头结点 和 移除其他节点的操作方式是不一样，其实在写代码的时候也会发现，需要单独写一段逻辑来处理移除头结点的情况。</p>
-<p>那么可不可以 以一种统一的逻辑来移除 链表的节点呢。</p>
-<p>其实<strong>可以设置一个虚拟头结点</strong>，这样原链表的所有节点就都可以按照统一的方式进行移除了。</p>
-<p>来看看如何设置一个虚拟头。依然还是在这个链表中，移除元素1。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095619221.png" alt="203_链表删除元素6"></p>
-<p>这里来给链表添加一个虚拟头结点为新的头结点，此时要移除这个旧头结点元素1。</p>
-<p>这样是不是就可以使用和移除链表其他节点的方式统一了呢？</p>
-<p>来看一下，如何移除元素1 呢，还是熟悉的方式，然后从内存中删除元素1。</p>
-<p>最后呢在题目中，return 头结点的时候，别忘了 <code>return dummyNode-&gt;next;</code>， 这才是新的头结点</p>
-<p>java:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 添加虚节点方式</span></span><br><span class="line"><span class="comment"> * 时间复杂度 O(n)</span></span><br><span class="line"><span class="comment"> * 空间复杂度 O(1)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> val</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">removeElements</span><span class="params">(ListNode head, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>, head);</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> dummy;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>链表</category>
-      </categories>
-      <tags>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>两两交换链表中的节点_链表04</title>
     <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A804/</url>
     <content><![CDATA[<h1 id="两两交换链表中的节点-链表04"><a href="#两两交换链表中的节点-链表04" class="headerlink" title="两两交换链表中的节点_链表04"></a>两两交换链表中的节点_链表04</h1><h3 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24. 两两交换链表中的节点"></a>24. 两两交换链表中的节点</h3><p><a href="https://leetcode.cn/problems/swap-nodes-in-pairs/">力扣题目链接(opens new window)</a></p>
@@ -454,6 +454,23 @@
       </categories>
       <tags>
         <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组在哈希表中的应用</title>
+    <url>/2022/07/13/%E5%93%88%E5%B8%8C%E8%A1%A8&amp;&amp;%E6%95%B0%E7%BB%84%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
+<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>哈希表</tag>
       </tags>
   </entry>
   <entry>
@@ -522,27 +539,52 @@
       </tags>
   </entry>
   <entry>
-    <title>数组在哈希表中的应用</title>
-    <url>/2022/07/13/%E5%93%88%E5%B8%8C%E8%A1%A8&amp;&amp;%E6%95%B0%E7%BB%84%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
-<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-        <tag>哈希表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title></title>
     <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<p>没有吃饭</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>天猫闲谈</title>
+    <url>/2022/07/19/%E5%A4%A9%E7%8C%AB%E9%97%B2%E8%B0%88/</url>
+    <content><![CDATA[<h1 id="天猫闲谈"><a href="#天猫闲谈" class="headerlink" title="天猫闲谈"></a>天猫闲谈</h1><h2 id="遇到的问题和解决方案"><a href="#遇到的问题和解决方案" class="headerlink" title="遇到的问题和解决方案"></a>遇到的问题和解决方案</h2><h3 id="SSL报错01"><a href="#SSL报错01" class="headerlink" title="SSL报错01"></a>SSL报错01</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  File &quot;C:\ProgramData\Anaconda3\lib\site-packages\requests\adapters.py&quot;, line 512, in send</span><br><span class="line">    raise SSLError(e, request=request)</span><br><span class="line">requests.exceptions.SSLError: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:833)</span><br></pre></td></tr></table></figure>
+
+<p>使用了anaconda，貌似win10 anaconda python中SSL是无法正常使用的</p>
+<h3 id="SSL报错02"><a href="#SSL报错02" class="headerlink" title="SSL报错02"></a>SSL报错02</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    raise SSLError(e, request=request)</span><br><span class="line">requests.exceptions.SSLError: HTTPSConnectionPool(host=&#x27;detail.tmall.com&#x27;, port=443): Max retries exceeded with url: /item.htm?spm=a220m.1000858.1000725.6.279262bdaFcN4o&amp;id=644251278102&amp;skuId=4811506167531&amp;areaId=430500&amp;user_id=3695246029&amp;cat_id=2&amp;is_b=1&amp;rn=fbac5ad264b425e565a06fe73f8dddc5 (Caused by SSLError(SSLEOFError(8, &#x27;EOF occurred in violation of protocol (_ssl.c:1129)&#x27;)))</span><br></pre></td></tr></table></figure>
+
+<p>把代理和vpn都关掉就刑了</p>
+<h3 id="遇到-u0026开头的数据"><a href="#遇到-u0026开头的数据" class="headerlink" title="遇到\u0026开头的数据"></a>遇到\u0026开头的数据</h3><p>在线网站解码uincode</p>
+<p>[网站链接](<a href="https://www.bt.cn/tools/unicode.html">Unicode编码解码 (bt.cn)</a>)</p>
+<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20220719210902845.png" alt="image-20220719210902845"></p>
+<p>代码解码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">str1 = &#x27;\u003d676464506778\u0026ns\u003d1\u0026abbucket\u003d20&#x27;</span><br><span class="line">str1 = str1.encode(&#x27;utf8&#x27;).decode(&#x27;unicode_escape&#x27;)</span><br><span class="line">print(str1)</span><br></pre></td></tr></table></figure>
+
+<h3 id="JSON形式数据无法格式化"><a href="#JSON形式数据无法格式化" class="headerlink" title="JSON形式数据无法格式化"></a>JSON形式数据无法格式化</h3><p>[网站推荐](<a href="https://www.sojson.com/">JSON在线 | JSON解析格式化—SO JSON在线工具</a>)</p>
+<h2 id="主页数据获取"><a href="#主页数据获取" class="headerlink" title="主页数据获取"></a>主页数据获取</h2><p>代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import random</span><br><span class="line">import requests</span><br><span class="line">import re</span><br><span class="line">from lxml import etree</span><br><span class="line">headers = &#123;&#125;</span><br><span class="line">user_agent_list = [</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24&quot;</span><br><span class="line">    ]</span><br><span class="line"># 思路 先通过re正则表达式截取字符串 再转成json 提取后的detail_url 需要unicode解码 随后请求二级页面 保存到数据库</span><br><span class="line">headers[&#x27;User-Agent&#x27;] = random.choice(user_agent_list)</span><br><span class="line">headers[&#x27;cookie&#x27;] = &#x27;lid=tb9609426962; enc=BH1kwxit6G8cG+yyNm8RGSjGG7Ul6TPPC9cupRd7pcLOTHzbtGjUWvt+y1/lnpq20MnX/L2ib6fxGQgPVPErnDcEfbiBCMvSLjTaVe7Ke+Q=; xlly_s=1; t=1dc717b7817ec57908076132934639cf; tracknick=tb9609426962; lgc=tb9609426962; _tb_token_=e75e6f118fe1f; cookie2=1733e90542b3f845c3ae6495f5805686; dnk=tb9609426962; uc1=cookie21=U+GCWk/7pun3Y5w91g==&amp;existShop=false&amp;cookie14=UoexOtxinA35mw==&amp;cookie15=W5iHLLyFOGW7aA==&amp;cookie16=Vq8l+KCLySLZMFWHxqs8fwqnEw==&amp;pas=0; uc3=id2=UUphw2zWTYMnUcGdIA==&amp;lg2=U+GCWk/75gdr5Q==&amp;nk2=F5RMHyzSuEkCcKo1&amp;vt3=F8dCv4MTXkH24gx6sAo=; uc4=id4=0@U2grGNOhoAYQJI7x06Q9pDUuuKKF/Kxv&amp;nk4=0@FY4HWrWzC/MqtVcYArH9YSEDnCASDHo=; _l_g_=Ug==; unb=2209950509527; cookie1=BYBYyEkdr9rg6r9BkSz4NbO8O9IxtK9O+uxD9+ms0+g=; login=true; cookie17=UUphw2zWTYMnUcGdIA==; _nk_=tb9609426962; sgcookie=E100hATU0w94N3lFcvzLxXKWpFR/t6l5etXuPZwTQZw4C5dK7IMPctrGWC/zr3BN9BMQ8hG+G5eX+4MwnfuJ9a//JxrxaolzbVqljAcBsKt/s8c=; cancelledSubSites=empty; sg=27d; csg=06c4cb83; cna=dxpdG1ujxikCAW416kuUQRzQ; _med=dw:1280&amp;dh:720&amp;pw:1920&amp;ph:1080&amp;ist:0; _m_h5_tk=b13d35cfa8eba44fe9e718d2ab0a8db6_1658233336473; _m_h5_tk_enc=ca8261f26c330ffca5b111d34d3154c2; x5sec=7b22746d616c6c7365617263683b32223a223865636565636234376335353662326338396537313536376232646232393135434e336532705947454c6a42394d4341694b7a754a426f504d6a49774f546b314d4455774f5455794e7a73784d4f5057684b62352f2f2f2f2f77453d227d; res=scroll:990*7119-client:497*561-offset:497*7119-screen:1280*720; pnm_cku822=098#E1hvIvvUvbZvjQCkvvvvvjiWRLLUsjl8n2s9zjrCPmPwsjtPRFLWsjinPFcwQj0evpvhvvmv9u9Cvv9vvUCCx++HVO9CvvwUvUVvwZjWKvhv8vvvvvCvpvvvvvvC9hCvmvZvvUUvphvUpQvv99CvpvkkvvmmvhCvm8UUvpCWCviPvvawafmxfX9Ojomxfa3lD1DlpqmxfwoOd5lPlnoOD40Owm0QD7zheTtYvtxr1WoKHkx/1WBlYCe4axRxfwLvd3ODN+LvaNpM+9vCvvOvCvvvphvRvpvhMMGvv29Cvvpvvvvv; tfstk=cSOGBdwdZdWs2wLyuC1siTHnulDRZ1iNbIR9TV1ISNQJVCOFiweUUjus-MoSb-1..; l=eBSVJC2cL0chGFjsBOfwourza77OSIRAguPzaNbMiOCPOc5H5XMfW6vz5eYMC3GVh6vDR3Wrj_IwBeYBqIY75O9StBALurkmn; isg=BOPj1cl9hRwO7kkrfnvS78pIcieN2HcaWtHIxxVAP8K5VAN2nagHasGGTiTadM8S&#x27;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># headers = &#123;</span><br><span class="line">#         &#x27;accept&#x27;: &#x27;text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#x27;,</span><br><span class="line">#         &#x27;accept-language&#x27;: &#x27;zh-CN,zh;q=0.9&#x27;,</span><br><span class="line">#         &#x27;cache-control&#x27;: &#x27;no-cache&#x27;,</span><br><span class="line"># &#125;</span><br><span class="line">for n in range(1,30):</span><br><span class="line">    url = &#x27;https://list.tmall.com/search_product.htm?spm=a220m.1000858.0.0.752962bd7xoYBT&amp;s=60&amp;q=%C5%AE%CA%BF%B0%FC&amp;sort=s&amp;style=g&amp;from=mallfp..pc_1_searchbutton&amp;type=pc#J_Filter&#x27;</span><br><span class="line">    resp = requests.get(url=url, headers=headers).text</span><br><span class="line">    # js_format = re.findall(&#x27;&quot;itemlist&quot;:(.*?),&quot;bottomsearch&quot;:&#x27;,resp)</span><br><span class="line">    # print(js_format)</span><br><span class="line">    html = etree.HTML(resp)</span><br><span class="line">    div_list = html.xpath(&#x27;//div[@class=&quot;page&quot;]/div/div[@id=&quot;content&quot;]/div/div[@id=&quot;J_ItemList&quot;]/div&#x27;)</span><br><span class="line">    print(len(div_list))</span><br><span class="line">    for i,v in enumerate(div_list):</span><br><span class="line">        price = v.xpath(&#x27;./div/p[@class=&quot;productPrice&quot;]/em/text()&#x27;)</span><br><span class="line">        sell_num = v.xpath(&#x27;./div/p[@class=&quot;productStatus&quot;]/span/em/text()&#x27;)</span><br><span class="line">        shop_name = v.xpath(&#x27;./div/div[@class=&quot;productShop&quot;]/a/text()&#x27;)</span><br><span class="line">        count_num = v.xpath(&#x27;./div/p[@class=&quot;productStatus&quot;]/span/a/text()&#x27;)</span><br><span class="line">        print(price,sell_num,shop_name,count_num)</span><br><span class="line">    # print(resp)</span><br><span class="line">    print(&quot;end!!!&quot;)</span><br><span class="line">    break</span><br></pre></td></tr></table></figure>
+
+<p>运行截图：</p>
+<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20220719213614328.png" alt="image-20220719213614328"></p>
+<h2 id="二级页面"><a href="#二级页面" class="headerlink" title="二级页面"></a>二级页面</h2><p>代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from lxml import etree</span><br><span class="line">import random</span><br><span class="line">import requests</span><br><span class="line">import re</span><br><span class="line">headers = &#123;&#125;</span><br><span class="line">user_agent_list = [</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24&quot;</span><br><span class="line">    ]</span><br><span class="line"># 思路 先通过re正则表达式截取字符串 再转成json 提取后的detail_url 需要unicode解码 随后请求二级页面 保存到数据库</span><br><span class="line">headers[&#x27;User-Agent&#x27;] = random.choice(user_agent_list)</span><br><span class="line">headers[&#x27;cookie&#x27;] = &#x27;lid=tb9609426962; enc=BH1kwxit6G8cG+yyNm8RGSjGG7Ul6TPPC9cupRd7pcLOTHzbtGjUWvt+y1/lnpq20MnX/L2ib6fxGQgPVPErnDcEfbiBCMvSLjTaVe7Ke+Q=; xlly_s=1; t=1dc717b7817ec57908076132934639cf; tracknick=tb9609426962; lgc=tb9609426962; _tb_token_=e75e6f118fe1f; cookie2=1733e90542b3f845c3ae6495f5805686; dnk=tb9609426962; uc1=cookie21=U+GCWk/7pun3Y5w91g==&amp;existShop=false&amp;cookie14=UoexOtxinA35mw==&amp;cookie15=W5iHLLyFOGW7aA==&amp;cookie16=Vq8l+KCLySLZMFWHxqs8fwqnEw==&amp;pas=0; uc3=id2=UUphw2zWTYMnUcGdIA==&amp;lg2=U+GCWk/75gdr5Q==&amp;nk2=F5RMHyzSuEkCcKo1&amp;vt3=F8dCv4MTXkH24gx6sAo=; uc4=id4=0@U2grGNOhoAYQJI7x06Q9pDUuuKKF/Kxv&amp;nk4=0@FY4HWrWzC/MqtVcYArH9YSEDnCASDHo=; _l_g_=Ug==; unb=2209950509527; cookie1=BYBYyEkdr9rg6r9BkSz4NbO8O9IxtK9O+uxD9+ms0+g=; login=true; cookie17=UUphw2zWTYMnUcGdIA==; _nk_=tb9609426962; sgcookie=E100hATU0w94N3lFcvzLxXKWpFR/t6l5etXuPZwTQZw4C5dK7IMPctrGWC/zr3BN9BMQ8hG+G5eX+4MwnfuJ9a//JxrxaolzbVqljAcBsKt/s8c=; cancelledSubSites=empty; sg=27d; csg=06c4cb83; cna=dxpdG1ujxikCAW416kuUQRzQ; pnm_cku822=098#E1hvUpvUvbZvUpCkvvvvvjiWRLLUQjn8RLSvgjthPmPp6jnmPFLpljlhRF59QjtjR8OCvvpvvhHhRvhvCvvvphvvvpvVvUCvpvvvKvhv8vvvphvvvvvvvvCmpQvvv4vvvhxHvvvC4vvvBZZvvvHZvvCHBpvvvxoUvpvjvpC2p+Lve49Cvv9vvhj2ZnnXsQ9CvhQmp+fVjakK5uyTWDKt5BwsRfwrfuVHR4VzWkZnD70Oj8TZfvDr1EAK5dUf8KBlDf8rejOd+87JViIwaHFXSfpAhC3qVUcn+3mO5jIU29hvCPMMvvv=; _m_h5_tk=b13d35cfa8eba44fe9e718d2ab0a8db6_1658233336473; _m_h5_tk_enc=ca8261f26c330ffca5b111d34d3154c2; isg=BCEhGC7I5yaGiEvRiK1wxZRWMO07zpXAVP9KXYPxaSi06kC8yR5TkOhrTB7sIi34; l=eBSVJC2cL0chG4RGBO5Zlurza77t6BOb8sPzaNbMiInca1rfTHWe_NCHUyYk7dtjgt5FrexPUcfRbdh6JSaLRFkDBeYCKXIpBbvy8e1..; tfstk=cwAfB72iPoqXNDn54tgrQGNAvU5GCBD5yxsyl02dXzRLKfg5f51meWSCAc9gV17OP&#x27;</span><br><span class="line"></span><br><span class="line">url = &#x27;https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.6.279262bdaFcN4o&amp;id=644251278102&amp;skuId=4811506167531&amp;areaId=430500&amp;user_id=3695246029&amp;cat_id=2&amp;is_b=1&amp;rn=fbac5ad264b425e565a06fe73f8dddc5&#x27;</span><br><span class="line">resp = requests.get(url=url, headers=headers).text</span><br><span class="line"># print(resp)</span><br><span class="line">try:</span><br><span class="line">    place = re.findall(r&#x27;&lt;li title=.*?&gt;质地:&amp;nbsp;(.*?)&lt;/li&gt;&#x27;,resp)</span><br><span class="line">    place = &#x27;&#x27;.join(place)</span><br><span class="line">except Exception as e:</span><br><span class="line">    place = &#x27;&#x27;</span><br><span class="line">    print(e)</span><br><span class="line">try:</span><br><span class="line">    popular = re.findall(r&#x27;&lt;li title=.*?&gt;流行元素:&amp;nbsp;(.*?)&lt;/li&gt;&#x27;,resp)</span><br><span class="line">    popular = &#x27;&#x27;.join(popular)</span><br><span class="line">except Exception as e:</span><br><span class="line">    popular = &#x27;&#x27;</span><br><span class="line">    print(e)</span><br><span class="line"># try:</span><br><span class="line">#     color = re.findall(r&#x27;&lt;li title=.*?&gt;颜色分类:&amp;nbsp;(.*?)&lt;/li&gt;&#x27;,resp)</span><br><span class="line">#     color = &#x27;&#x27;.join(color)</span><br><span class="line"># except Exception as e:</span><br><span class="line">#     color = &#x27;&#x27;</span><br><span class="line">#     print(e)</span><br><span class="line">try:</span><br><span class="line">    up_time = re.findall(r&#x27;&lt;li title=.*?&gt;上市时间:&amp;nbsp;(.*?)&lt;/li&gt;&#x27;,resp)</span><br><span class="line">    up_time  = &#x27;&#x27;.join(up_time )</span><br><span class="line">except Exception as e:</span><br><span class="line">    up_time  = &#x27;&#x27;</span><br><span class="line">    print(e)</span><br><span class="line">try:</span><br><span class="line">    style = re.findall(r&quot;&lt;li title=.*?&gt;款式:&amp;nbsp;(.*?)&lt;/li&gt;&quot;,resp)</span><br><span class="line">    style = &#x27;&#x27;.join(style)</span><br><span class="line">except Exception as e:</span><br><span class="line">    style = &#x27;&#x27;</span><br><span class="line">    print(e)</span><br><span class="line">try:</span><br><span class="line">    size = re.findall(r&quot;&lt;li title=.*?&gt;大小:&amp;nbsp;(.*?)&lt;/li&gt;&quot;,resp)</span><br><span class="line">    size = &#x27;&#x27;.join(size)</span><br><span class="line">except Exception as e:</span><br><span class="line">    size = &#x27;&#x27;</span><br><span class="line">    print(e)</span><br><span class="line">try:</span><br><span class="line">    popular_name = re.findall(r&quot;&lt;li title=.*?&gt;流行款式名称:&amp;nbsp;(.*?)&lt;/li&gt;&quot;,resp)</span><br><span class="line">    popular_name = &#x27;&#x27;.join(popular_name)</span><br><span class="line">except Exception as e:</span><br><span class="line">    popular_name = &#x27;&#x27;</span><br><span class="line">    print(e)</span><br><span class="line">try:</span><br><span class="line">    sell_way = re.findall(r&quot;&lt;li title=.*?&gt;销售渠道类型:&amp;nbsp;(.*?)&lt;/li&gt;&quot;,resp)</span><br><span class="line">    sell_way = &#x27;&#x27;.join(sell_way)</span><br><span class="line">except Exception as e:</span><br><span class="line">    sell_way = &#x27;&#x27;</span><br><span class="line">    print(e)</span><br><span class="line">try:</span><br><span class="line">    brand = re.findall(r&#x27;title=&quot;&amp;nbsp;.*?&gt;品牌:&amp;nbsp;(.*?)&lt;/li&gt;&#x27;,resp)</span><br><span class="line">    brand = &#x27;&#x27;.join(brand)</span><br><span class="line">except Exception as e:</span><br><span class="line">    brand = &#x27;&#x27;</span><br><span class="line">    print(e)</span><br><span class="line">print(place,popular,style,up_time,size,popular_name,sell_way,brand)</span><br></pre></td></tr></table></figure>
+
+<p>运行截图：</p>
+<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20220719213736527.png" alt="image-20220719213736527"></p>
+<h2 id="网页开发者工具源码展示："><a href="#网页开发者工具源码展示：" class="headerlink" title="网页开发者工具源码展示："></a>网页开发者工具源码展示：</h2><p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20220719213948250.png" alt="image-20220719213948250"></p>
+<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20220719214014226.png" alt="image-20220719214014226"></p>
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p>代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import random</span><br><span class="line">import requests</span><br><span class="line">import re,time</span><br><span class="line">from lxml import etree</span><br><span class="line">import mysql.connector</span><br><span class="line">#连接数据库</span><br><span class="line">mydb = mysql.connector.connect(</span><br><span class="line">    host = &#x27;localhost&#x27;,</span><br><span class="line">    user = &#x27;root&#x27;,</span><br><span class="line">    password = &#x27;dlq668713&#x27;,</span><br><span class="line">    database = &#x27;love&#x27;,</span><br><span class="line">    auth_plugin=&#x27;mysql_native_password&#x27;,</span><br><span class="line">)</span><br><span class="line">mycursor = mydb.cursor()</span><br><span class="line">sql = &#x27;INSERT INTO tm_bag (price,sell_num,shop_name,count_num,place, popular, style, up_time, size, popular_name, sell_way, brand) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)&#x27;</span><br><span class="line">user_agent_list = [</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24&quot;,</span><br><span class="line">        &quot;Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 &quot;,</span><br><span class="line">        &quot;(KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24&quot;</span><br><span class="line">    ]</span><br><span class="line">def get_detail(url):</span><br><span class="line">    headers = &#123;&#125;</span><br><span class="line">    headers[&#x27;User-Agent&#x27;] = random.choice(user_agent_list)</span><br><span class="line">    headers[&#x27;cookie&#x27;] = &#x27;lid=tb9609426962; enc=BH1kwxit6G8cG+yyNm8RGSjGG7Ul6TPPC9cupRd7pcLOTHzbtGjUWvt+y1/lnpq20MnX/L2ib6fxGQgPVPErnDcEfbiBCMvSLjTaVe7Ke+Q=; xlly_s=1; t=1dc717b7817ec57908076132934639cf; tracknick=tb9609426962; lgc=tb9609426962; _tb_token_=e75e6f118fe1f; cookie2=1733e90542b3f845c3ae6495f5805686; dnk=tb9609426962; uc1=cookie21=U+GCWk/7pun3Y5w91g==&amp;existShop=false&amp;cookie14=UoexOtxinA35mw==&amp;cookie15=W5iHLLyFOGW7aA==&amp;cookie16=Vq8l+KCLySLZMFWHxqs8fwqnEw==&amp;pas=0; uc3=id2=UUphw2zWTYMnUcGdIA==&amp;lg2=U+GCWk/75gdr5Q==&amp;nk2=F5RMHyzSuEkCcKo1&amp;vt3=F8dCv4MTXkH24gx6sAo=; uc4=id4=0@U2grGNOhoAYQJI7x06Q9pDUuuKKF/Kxv&amp;nk4=0@FY4HWrWzC/MqtVcYArH9YSEDnCASDHo=; _l_g_=Ug==; unb=2209950509527; cookie1=BYBYyEkdr9rg6r9BkSz4NbO8O9IxtK9O+uxD9+ms0+g=; login=true; cookie17=UUphw2zWTYMnUcGdIA==; _nk_=tb9609426962; sgcookie=E100hATU0w94N3lFcvzLxXKWpFR/t6l5etXuPZwTQZw4C5dK7IMPctrGWC/zr3BN9BMQ8hG+G5eX+4MwnfuJ9a//JxrxaolzbVqljAcBsKt/s8c=; cancelledSubSites=empty; sg=27d; csg=06c4cb83; cna=dxpdG1ujxikCAW416kuUQRzQ; pnm_cku822=098#E1hvUpvUvbZvUpCkvvvvvjiWRLLUQjn8RLSvgjthPmPp6jnmPFLpljlhRF59QjtjR8OCvvpvvhHhRvhvCvvvphvvvpvVvUCvpvvvKvhv8vvvphvvvvvvvvCmpQvvv4vvvhxHvvvC4vvvBZZvvvHZvvCHBpvvvxoUvpvjvpC2p+Lve49Cvv9vvhj2ZnnXsQ9CvhQmp+fVjakK5uyTWDKt5BwsRfwrfuVHR4VzWkZnD70Oj8TZfvDr1EAK5dUf8KBlDf8rejOd+87JViIwaHFXSfpAhC3qVUcn+3mO5jIU29hvCPMMvvv=; _m_h5_tk=b13d35cfa8eba44fe9e718d2ab0a8db6_1658233336473; _m_h5_tk_enc=ca8261f26c330ffca5b111d34d3154c2; isg=BCEhGC7I5yaGiEvRiK1wxZRWMO07zpXAVP9KXYPxaSi06kC8yR5TkOhrTB7sIi34; l=eBSVJC2cL0chG4RGBO5Zlurza77t6BOb8sPzaNbMiInca1rfTHWe_NCHUyYk7dtjgt5FrexPUcfRbdh6JSaLRFkDBeYCKXIpBbvy8e1..; tfstk=cwAfB72iPoqXNDn54tgrQGNAvU5GCBD5yxsyl02dXzRLKfg5f51meWSCAc9gV17OP&#x27;</span><br><span class="line">    resp = requests.get(url=url, headers=headers).text</span><br><span class="line">    # print(resp)</span><br><span class="line">    try:</span><br><span class="line">        place = re.findall(r&#x27;&lt;li title=.*?&gt;质地:&amp;nbsp;(.*?)&lt;/li&gt;&#x27;, resp)</span><br><span class="line">        place = &#x27;&#x27;.join(place)</span><br><span class="line">    except Exception as e:</span><br><span class="line">        place = &#x27;&#x27;</span><br><span class="line">        print(e)</span><br><span class="line">    try:</span><br><span class="line">        popular = re.findall(r&#x27;&lt;li title=.*?&gt;流行元素:&amp;nbsp;(.*?)&lt;/li&gt;&#x27;, resp)</span><br><span class="line">        popular = &#x27;&#x27;.join(popular)</span><br><span class="line">    except Exception as e:</span><br><span class="line">        popular = &#x27;&#x27;</span><br><span class="line">        print(e)</span><br><span class="line">    try:</span><br><span class="line">        up_time = re.findall(r&#x27;&lt;li title=.*?&gt;上市时间:&amp;nbsp;(.*?)&lt;/li&gt;&#x27;, resp)</span><br><span class="line">        up_time = &#x27;&#x27;.join(up_time)</span><br><span class="line">    except Exception as e:</span><br><span class="line">        up_time = &#x27;&#x27;</span><br><span class="line">        print(e)</span><br><span class="line">    try:</span><br><span class="line">        style = re.findall(r&quot;&lt;li title=.*?&gt;款式:&amp;nbsp;(.*?)&lt;/li&gt;&quot;, resp)</span><br><span class="line">        style = &#x27;&#x27;.join(style)</span><br><span class="line">    except Exception as e:</span><br><span class="line">        style = &#x27;&#x27;</span><br><span class="line">        print(e)</span><br><span class="line">    try:</span><br><span class="line">        size = re.findall(r&quot;&lt;li title=.*?&gt;大小:&amp;nbsp;(.*?)&lt;/li&gt;&quot;, resp)</span><br><span class="line">        size = &#x27;&#x27;.join(size)</span><br><span class="line">    except Exception as e:</span><br><span class="line">        size = &#x27;&#x27;</span><br><span class="line">        print(e)</span><br><span class="line">    try:</span><br><span class="line">        popular_name = re.findall(r&quot;&lt;li title=.*?&gt;流行款式名称:&amp;nbsp;(.*?)&lt;/li&gt;&quot;, resp)</span><br><span class="line">        popular_name = &#x27;&#x27;.join(popular_name)</span><br><span class="line">    except Exception as e:</span><br><span class="line">        popular_name = &#x27;&#x27;</span><br><span class="line">        print(e)</span><br><span class="line">    try:</span><br><span class="line">        sell_way = re.findall(r&quot;&lt;li title=.*?&gt;适用对象:&amp;nbsp;(.*?)&lt;/li&gt;&quot;, resp)</span><br><span class="line">        sell_way = &#x27;&#x27;.join(sell_way)</span><br><span class="line">    except Exception as e:</span><br><span class="line">        sell_way = &#x27;&#x27;</span><br><span class="line">        print(e)</span><br><span class="line">    try:</span><br><span class="line">        brand = re.findall(r&#x27;title=&quot;&amp;nbsp;.*?&gt;品牌:&amp;nbsp;(.*?)&lt;/li&gt;&#x27;, resp)</span><br><span class="line">        brand = &#x27;&#x27;.join(brand)</span><br><span class="line">    except Exception as e:</span><br><span class="line">        brand = &#x27;&#x27;</span><br><span class="line">        print(e)</span><br><span class="line">    return place, popular, style, up_time, size, popular_name, sell_way, brand</span><br><span class="line">def main(n):</span><br><span class="line">    headers = &#123;&#125;</span><br><span class="line">    headers[&#x27;User-Agent&#x27;] = random.choice(user_agent_list)</span><br><span class="line">    headers[&#x27;cookie&#x27;] = r&#x27;lid=tb9609426962; enc=BH1kwxit6G8cG+yyNm8RGSjGG7Ul6TPPC9cupRd7pcLOTHzbtGjUWvt+y1/lnpq20MnX/L2ib6fxGQgPVPErnDcEfbiBCMvSLjTaVe7Ke+Q=; xlly_s=1; t=1dc717b7817ec57908076132934639cf; tracknick=tb9609426962; lgc=tb9609426962; _tb_token_=e75e6f118fe1f; cookie2=1733e90542b3f845c3ae6495f5805686; dnk=tb9609426962; uc1=cookie21=U+GCWk/7pun3Y5w91g==&amp;existShop=false&amp;cookie14=UoexOtxinA35mw==&amp;cookie15=W5iHLLyFOGW7aA==&amp;cookie16=Vq8l+KCLySLZMFWHxqs8fwqnEw==&amp;pas=0; uc3=id2=UUphw2zWTYMnUcGdIA==&amp;lg2=U+GCWk/75gdr5Q==&amp;nk2=F5RMHyzSuEkCcKo1&amp;vt3=F8dCv4MTXkH24gx6sAo=; uc4=id4=0@U2grGNOhoAYQJI7x06Q9pDUuuKKF/Kxv&amp;nk4=0@FY4HWrWzC/MqtVcYArH9YSEDnCASDHo=; _l_g_=Ug==; unb=2209950509527; cookie1=BYBYyEkdr9rg6r9BkSz4NbO8O9IxtK9O+uxD9+ms0+g=; login=true; cookie17=UUphw2zWTYMnUcGdIA==; _nk_=tb9609426962; sgcookie=E100hATU0w94N3lFcvzLxXKWpFR/t6l5etXuPZwTQZw4C5dK7IMPctrGWC/zr3BN9BMQ8hG+G5eX+4MwnfuJ9a//JxrxaolzbVqljAcBsKt/s8c=; cancelledSubSites=empty; sg=27d; csg=06c4cb83; cna=dxpdG1ujxikCAW416kuUQRzQ; _med=dw:1280&amp;dh:720&amp;pw:1920&amp;ph:1080&amp;ist:0; _m_h5_tk=b13d35cfa8eba44fe9e718d2ab0a8db6_1658233336473; _m_h5_tk_enc=ca8261f26c330ffca5b111d34d3154c2; res=scroll:990*7119-client:497*561-offset:497*7119-screen:1280*720; pnm_cku822=098#E1hv9QvUvbZvUpCkvvvvvjiWRLLUsjEmRLzZgjYHPmPvgjYWRLLh1jtERsMZlj3EPF9Cvvpvvvvv29hvCPMMvvmUvpvjmvmC9jHCs89Cvv9vvUCCxKeNCf9Cvm9vvvvvphvvvvvvvOCvpv9HvvmmvhCvmhWvvUUvphvUI9vv99CvpvkkmvhvLv2qGvvjn/An3w0AhjHCTWex6fItb9TxfwCl5dUf8z7+kEys+FUp+8c6zEAfwxzXS47BhC3qVUcnDOmOejIUDajxALwpEcqwaNoxdB9vvpvVvvpvvhCvi9hvCvvv9UU=; tfstk=c-iVBV0e_nKqn2gEzuZwCN-KgSaAZD4g8gyToBG54iQc8S4ci2CTEBR_UJBPsrf..; l=eBSVJC2cL0chGz92BO5Zlurza77tBIOb8sPzaNbMiInca69RtF670NCHUYlWSdtjgtfEYetPUcfRbdCq13Upgei9W5lBe82taY96-; isg=BLKy6xf0BBvYPzgk1_DzyOOzA_iUQ7bdA_rZiHyKpmVQD1MJZNN77Mxt_6uzfy51; x5sec=7b22746d616c6c7365617263683b32223a2235646430336337316634366132656461373162303239653737383936393134634349574232355947454b2b42753943457635627636774561447a49794d446b354e5441314d446b314d6a63374d54446a316f536d2b662f2f2f2f3842227d&#x27;</span><br><span class="line">    url = &#x27;https://list.tmall.com/search_product.htm?spm=a220m.1000858.0.0.752962bd7xoYBT&amp;s=&#123;&#125;&amp;q=%C5%AE%CA%BF%B0%FC&amp;sort=s&amp;style=g&amp;from=mallfp..pc_1_searchbutton&amp;type=pc#J_Filter&#x27;.format(n*30)</span><br><span class="line">    # print(url)</span><br><span class="line">    time.sleep(0.5)</span><br><span class="line">    resp = requests.get(url=url, headers=headers).text</span><br><span class="line">    html = etree.HTML(resp)</span><br><span class="line">    div_list = html.xpath(&#x27;//div[@class=&quot;page&quot;]/div/div[@id=&quot;content&quot;]/div/div[@id=&quot;J_ItemList&quot;]/div&#x27;)</span><br><span class="line">    print(len(div_list))</span><br><span class="line">    for i,v in enumerate(div_list):</span><br><span class="line">        print(&quot;进来了！！！&quot;)</span><br><span class="line">        data = []</span><br><span class="line">        try:</span><br><span class="line">            price = v.xpath(&#x27;./div/p[@class=&quot;productPrice&quot;]/em/text()&#x27;)</span><br><span class="line">            price = &#x27;&#x27;.join(price)</span><br><span class="line">        except Exception as e:</span><br><span class="line">            price = &#x27;&#x27;</span><br><span class="line">            print(&quot;no price&quot;)</span><br><span class="line">        try:</span><br><span class="line">            sell_num = v.xpath(&#x27;./div/p[@class=&quot;productStatus&quot;]/span/em/text()&#x27;)</span><br><span class="line">            sell_num = &#x27;&#x27;.join(sell_num).replace(&#x27;+&#x27;,&#x27;&#x27;).replace(&#x27;笔&#x27;,&#x27;&#x27;)</span><br><span class="line">        except Exception as e:</span><br><span class="line">            sell_num = &#x27;&#x27;</span><br><span class="line">            print(&quot;no sell_num&quot;)</span><br><span class="line">        try:</span><br><span class="line">            shop_name = v.xpath(&#x27;./div/div[@class=&quot;productShop&quot;]/a/text()&#x27;)</span><br><span class="line">            shop_name = &#x27;&#x27;.join(shop_name).replace(r&#x27;\n&#x27;,&#x27;&#x27;)</span><br><span class="line">        except Exception as e:</span><br><span class="line">            shop_name = &#x27;&#x27;</span><br><span class="line">            print(&quot;no shop_name&quot;)</span><br><span class="line">        try:</span><br><span class="line">            count_num = v.xpath(&#x27;./div/p[@class=&quot;productStatus&quot;]/span/a/text()&#x27;)</span><br><span class="line">            count_num = &#x27;&#x27;.join(count_num)</span><br><span class="line">        except Exception as e:</span><br><span class="line">            count_num = &#x27;&#x27;</span><br><span class="line">            print(&quot;no count_num&quot;)</span><br><span class="line">        try:</span><br><span class="line">            href = v.xpath(&#x27;./div/div[@class=&quot;productImg-wrap&quot;]/a/@href&#x27;)</span><br><span class="line">            href = &#x27;&#x27;.join(href)</span><br><span class="line">            href = r&#x27;https:&#x27;+href</span><br><span class="line">        except Exception as e:</span><br><span class="line">            href = &#x27;&#x27;</span><br><span class="line">            print(&quot;no href&quot;)</span><br><span class="line">        print(href)</span><br><span class="line">        # print(price,sell_num,shop_name,count_num,href)</span><br><span class="line">        try:</span><br><span class="line">            place, popular, style, up_time, size, popular_name, sell_way, brand = get_detail(href)</span><br><span class="line">            if brand == &#x27;&#x27;:</span><br><span class="line">                place, popular, style, up_time, size, popular_name, sell_way, brand = get_detail(href)</span><br><span class="line">            if sell_way == &#x27;&#x27;:</span><br><span class="line">                place, popular, style, up_time, size, popular_name, sell_way, brand = get_detail(href)</span><br><span class="line">            if popular_name == &#x27;&#x27;:</span><br><span class="line">                place, popular, style, up_time, size, popular_name, sell_way, brand = get_detail(href)</span><br><span class="line">        except Exception as e:</span><br><span class="line">            print(&quot;详情页&quot;)</span><br><span class="line">            print(e)</span><br><span class="line">        print(place, popular, style, up_time, size, popular_name, sell_way, brand)</span><br><span class="line">        try:</span><br><span class="line">            data.append(price)</span><br><span class="line">            data.append(sell_num)</span><br><span class="line">            data.append(shop_name)</span><br><span class="line">            data.append(count_num)</span><br><span class="line">            data.append(place)</span><br><span class="line">            data.append(popular)</span><br><span class="line">            data.append(style)</span><br><span class="line">            data.append(up_time)</span><br><span class="line">            data.append(size)</span><br><span class="line">            data.append(popular_name)</span><br><span class="line">            data.append(sell_way)</span><br><span class="line">            data.append(brand)</span><br><span class="line">            data = tuple(data)</span><br><span class="line">            mycursor.execute(sql, data)</span><br><span class="line">            mydb.commit()</span><br><span class="line">        except Exception as e:</span><br><span class="line">            print(&quot;添加错误&quot;)</span><br><span class="line">            print(e)</span><br><span class="line">        time.sleep(0.5)</span><br><span class="line">    # print(resp)</span><br><span class="line">    print(&quot;end!!!&quot;)</span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    t1 = time.time()</span><br><span class="line">    for n in range(1,2):</span><br><span class="line">        try:</span><br><span class="line">            print(&quot;正在爬第:&quot;+str(n)+&quot;页&quot;)</span><br><span class="line">            main(n)</span><br><span class="line">        except Exception as e:</span><br><span class="line">            print(&quot;first blood!&quot;)</span><br><span class="line">        if(n%14==0):</span><br><span class="line">            time.sleep(60)</span><br><span class="line">    t2 = time.time()</span><br><span class="line">    print(&quot;所耗时间：&quot;)</span><br><span class="line">    print(t2-t1)</span><br></pre></td></tr></table></figure>
+
+<h2 id="很尴尬"><a href="#很尴尬" class="headerlink" title="很尴尬"></a>很尴尬</h2><p>详情页的总是有验证码反爬，以后再想想办法吧</p>
+<p>目前是这个鬼样子：</p>
+<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20220719230132308.png" alt="image-20220719230132308"></p>
+]]></content>
+      <categories>
+        <category>数据采集</category>
+      </categories>
+      <tags>
+        <tag>数据采集</tag>
+      </tags>
   </entry>
   <entry>
     <title>数据库操作SQL</title>
@@ -627,6 +669,26 @@
       </tags>
   </entry>
   <entry>
+    <title>英语口语03</title>
+    <url>/2022/07/12/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD03/</url>
+    <content><![CDATA[<h1 id="英语口语03"><a href="#英语口语03" class="headerlink" title="英语口语03"></a>英语口语03</h1><h3 id="精力充沛"><a href="#精力充沛" class="headerlink" title="精力充沛"></a>精力充沛</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i will try to get into the routine of getting up early in the morning and go to bed</span><br><span class="line">early at night,</span><br><span class="line">so that...</span><br><span class="line">i will have a better sleeping pattern which enables me to be more energetic throughtout the day</span><br></pre></td></tr></table></figure>
+
+<h3 id="三省吾身"><a href="#三省吾身" class="headerlink" title="三省吾身"></a>三省吾身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i think it&#x27;s important to refresh my mind about the current situation,</span><br><span class="line">by vasualizing long,middle,short term goals everyday </span><br><span class="line">because...</span><br><span class="line">sometimes it&#x27;s easy to lose the big picture when we are immersing yourself in detailed executions.</span><br><span class="line">But it&#x27;s also easy to miss out the detailed executions when we are grasping the big picture</span><br></pre></td></tr></table></figure>
+
+<h3 id="熬夜伤身"><a href="#熬夜伤身" class="headerlink" title="熬夜伤身"></a>熬夜伤身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">being a night owl could hurt our health</span><br><span class="line">because...</span><br><span class="line">staying up late will disrupts your sleep-wake cycle...</span><br><span class="line">which can affect your mental functioning and energy levels the next day.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
+<p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
+<p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英语口语02</title>
     <url>/2022/07/06/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD02/</url>
     <content><![CDATA[<h1 id="英语口语02"><a href="#英语口语02" class="headerlink" title="英语口语02"></a>英语口语02</h1><h3 id="精算能力"><a href="#精算能力" class="headerlink" title="精算能力"></a>精算能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math can be helpful for balancing your budget,</span><br><span class="line">because...</span><br><span class="line">you will have a good understanding of how to make sure that </span><br><span class="line">your costs are less than the money you have</span><br></pre></td></tr></table></figure>
@@ -650,44 +712,21 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语03</title>
-    <url>/2022/07/12/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD03/</url>
-    <content><![CDATA[<h1 id="英语口语03"><a href="#英语口语03" class="headerlink" title="英语口语03"></a>英语口语03</h1><h3 id="精力充沛"><a href="#精力充沛" class="headerlink" title="精力充沛"></a>精力充沛</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i will try to get into the routine of getting up early in the morning and go to bed</span><br><span class="line">early at night,</span><br><span class="line">so that...</span><br><span class="line">i will have a better sleeping pattern which enables me to be more energetic throughtout the day</span><br></pre></td></tr></table></figure>
+    <title>英语口语05</title>
+    <url>/2022/07/14/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD05/</url>
+    <content><![CDATA[<h1 id="英语口语05"><a href="#英语口语05" class="headerlink" title="英语口语05"></a>英语口语05</h1><h3 id="行动是良药"><a href="#行动是良药" class="headerlink" title="行动是良药"></a>行动是良药</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">negative emotions are a call to action,</span><br><span class="line">i mean...</span><br><span class="line">if you feel crappy,</span><br><span class="line">it&#x27;s because that your brain is telling you that </span><br><span class="line">there&#x27;s a problem that&#x27;s unaddressed,</span><br><span class="line">and you&#x27;re supposed to do something.</span><br></pre></td></tr></table></figure>
 
-<h3 id="三省吾身"><a href="#三省吾身" class="headerlink" title="三省吾身"></a>三省吾身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i think it&#x27;s important to refresh my mind about the current situation,</span><br><span class="line">by vasualizing long,middle,short term goals everyday </span><br><span class="line">because...</span><br><span class="line">sometimes it&#x27;s easy to lose the big picture when we are immersing yourself in detailed executions.</span><br><span class="line">But it&#x27;s also easy to miss out the detailed executions when we are grasping the big picture</span><br></pre></td></tr></table></figure>
+<p><em><strong>*注：第一句话种复数接a call to action，是没问题的，母语者语流*</strong></em></p>
+<h3 id="种瓜得瓜"><a href="#种瓜得瓜" class="headerlink" title="种瓜得瓜"></a>种瓜得瓜</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">happiness requires struggles,</span><br><span class="line">because...</span><br><span class="line">Joy doesn&#x27;t sprout out of the ground,</span><br><span class="line">if you want something,you have to work for it,</span><br><span class="line">what you reap what you sow</span><br></pre></td></tr></table></figure>
 
-<h3 id="熬夜伤身"><a href="#熬夜伤身" class="headerlink" title="熬夜伤身"></a>熬夜伤身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">being a night owl could hurt our health</span><br><span class="line">because...</span><br><span class="line">staying up late will disrupts your sleep-wake cycle...</span><br><span class="line">which can affect your mental functioning and energy levels the next day.</span><br></pre></td></tr></table></figure>
+<p><em><strong>*注：母语者语流种蕴含着天然的合理节奏，比中英翻译要合理得多。*</strong></em></p>
+<p><em><strong>*大白话就是说的时候节奏很自然，语流清晰而地道。*</strong></em></p>
+<h3 id="机会成本"><a href="#机会成本" class="headerlink" title="机会成本"></a>机会成本</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Everything comes with a inherent sacrifice(有利有弊)</span><br><span class="line">what we gain is also what we lose,</span><br><span class="line">like...</span><br><span class="line">the person you marry is the person you fight with,</span><br><span class="line">the house you buy is the house you repair,</span><br><span class="line">the dream job you take is the job you stress over</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
-<p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
-<p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语口语06</title>
-    <url>/2022/07/15/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD06/</url>
-    <content><![CDATA[<h1 id="英语口语06"><a href="#英语口语06" class="headerlink" title="英语口语06"></a>英语口语06</h1><h3 id="朝九晚五"><a href="#朝九晚五" class="headerlink" title="朝九晚五"></a>朝九晚五</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">the dark side of 9-5 job is that</span><br><span class="line">you&#x27;re exchanging your time for money,</span><br><span class="line">like...</span><br><span class="line">you spent an hour at your job,you get paied for that hour,</span><br><span class="line">for example,</span><br><span class="line">you could work your ass off,like...80 hours a week and make a certain</span><br><span class="line">amount of money...</span><br><span class="line">the problem is...</span><br><span class="line">next week you want to make that same amount,</span><br><span class="line">you still have to spend 80 hours a week.</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*注：概念落地+例证说明，潇洒利落，层次分明。*</strong></em></p>
-<p><em><strong>*如果你不赞同这个观点，你也可以拿他当一个返利，比如，啊，有些人说朝九晚五不行，他们的逻辑是….但我认为…*</strong></em></p>
-<p><em><strong>*口语中，拿自己不赞同的观点开刷，是非常聪明的打法。*</strong></em></p>
-<h3 id="大负翁"><a href="#大负翁" class="headerlink" title="大负翁"></a>大负翁</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Many bussiness owners end up in debt,</span><br><span class="line">because...</span><br><span class="line">they are struggling to keep the personal finances afloat</span><br><span class="line">while running a business which is not yet making money.</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*注：短小精悍，犀利非常。*</strong></em></p>
-<p><em><strong>*特别是后面逻辑链中的长句，宛若美酒，越品越香。*</strong></em></p>
-<p><em><strong>*while代表伴随动作，同时发生。*</strong></em></p>
-<p><em><strong>*which引导从句，修饰business.*</strong></em></p>
-<h3 id="利滚利"><a href="#利滚利" class="headerlink" title="利滚利"></a>利滚利</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Debt feels free when you are swipping your card,</span><br><span class="line">but it is a illusion,</span><br><span class="line">because...</span><br><span class="line">the higher the interest rate, the more you&#x27;ll end up paying for the debt,</span><br><span class="line">Also,the longer it takes you to pay off the debt,the more interest you&#x27;ll pay.</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*注：这个框架非常好，攻击力强悍霸道。*</strong></em></p>
-<p><em><strong>*后面自带两个比较级，组成长句，更是威力非凡。*</strong></em></p>
-<p><em><strong>*请注意此语流中的用词，细细体会。*</strong></em></p>
+<p><em><strong>*注：例证时的排比，宛若长江三叠浪，节奏中力度十足，掷地有声。*</strong></em></p>
+<p><em><strong>*我们现阶段要达到的境界，就是在中文表达中，或日常所见所闻，慢慢感受到从“中文俗语”到“英文语流”的无缝连接。*</strong></em></p>
+<p><em><strong>*这样一来，中英文的互换，就变得极其轻松。*</strong></em></p>
+<p><em><strong>*流利度也慢慢得到体现。*</strong></em></p>
 ]]></content>
       <categories>
         <category>口语</category>
@@ -720,21 +759,24 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语05</title>
-    <url>/2022/07/14/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD05/</url>
-    <content><![CDATA[<h1 id="英语口语05"><a href="#英语口语05" class="headerlink" title="英语口语05"></a>英语口语05</h1><h3 id="行动是良药"><a href="#行动是良药" class="headerlink" title="行动是良药"></a>行动是良药</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">negative emotions are a call to action,</span><br><span class="line">i mean...</span><br><span class="line">if you feel crappy,</span><br><span class="line">it&#x27;s because that your brain is telling you that </span><br><span class="line">there&#x27;s a problem that&#x27;s unaddressed,</span><br><span class="line">and you&#x27;re supposed to do something.</span><br></pre></td></tr></table></figure>
+    <title>英语口语06</title>
+    <url>/2022/07/15/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD06/</url>
+    <content><![CDATA[<h1 id="英语口语06"><a href="#英语口语06" class="headerlink" title="英语口语06"></a>英语口语06</h1><h3 id="朝九晚五"><a href="#朝九晚五" class="headerlink" title="朝九晚五"></a>朝九晚五</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">the dark side of 9-5 job is that</span><br><span class="line">you&#x27;re exchanging your time for money,</span><br><span class="line">like...</span><br><span class="line">you spent an hour at your job,you get paied for that hour,</span><br><span class="line">for example,</span><br><span class="line">you could work your ass off,like...80 hours a week and make a certain</span><br><span class="line">amount of money...</span><br><span class="line">the problem is...</span><br><span class="line">next week you want to make that same amount,</span><br><span class="line">you still have to spend 80 hours a week.</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*注：第一句话种复数接a call to action，是没问题的，母语者语流*</strong></em></p>
-<h3 id="种瓜得瓜"><a href="#种瓜得瓜" class="headerlink" title="种瓜得瓜"></a>种瓜得瓜</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">happiness requires struggles,</span><br><span class="line">because...</span><br><span class="line">Joy doesn&#x27;t sprout out of the ground,</span><br><span class="line">if you want something,you have to work for it,</span><br><span class="line">what you reap what you sow</span><br></pre></td></tr></table></figure>
+<p><em><strong>*注：概念落地+例证说明，潇洒利落，层次分明。*</strong></em></p>
+<p><em><strong>*如果你不赞同这个观点，你也可以拿他当一个返利，比如，啊，有些人说朝九晚五不行，他们的逻辑是….但我认为…*</strong></em></p>
+<p><em><strong>*口语中，拿自己不赞同的观点开刷，是非常聪明的打法。*</strong></em></p>
+<h3 id="大负翁"><a href="#大负翁" class="headerlink" title="大负翁"></a>大负翁</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Many bussiness owners end up in debt,</span><br><span class="line">because...</span><br><span class="line">they are struggling to keep the personal finances afloat</span><br><span class="line">while running a business which is not yet making money.</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*注：母语者语流种蕴含着天然的合理节奏，比中英翻译要合理得多。*</strong></em></p>
-<p><em><strong>*大白话就是说的时候节奏很自然，语流清晰而地道。*</strong></em></p>
-<h3 id="机会成本"><a href="#机会成本" class="headerlink" title="机会成本"></a>机会成本</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Everything comes with a inherent sacrifice(有利有弊)</span><br><span class="line">what we gain is also what we lose,</span><br><span class="line">like...</span><br><span class="line">the person you marry is the person you fight with,</span><br><span class="line">the house you buy is the house you repair,</span><br><span class="line">the dream job you take is the job you stress over</span><br></pre></td></tr></table></figure>
+<p><em><strong>*注：短小精悍，犀利非常。*</strong></em></p>
+<p><em><strong>*特别是后面逻辑链中的长句，宛若美酒，越品越香。*</strong></em></p>
+<p><em><strong>*while代表伴随动作，同时发生。*</strong></em></p>
+<p><em><strong>*which引导从句，修饰business.*</strong></em></p>
+<h3 id="利滚利"><a href="#利滚利" class="headerlink" title="利滚利"></a>利滚利</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Debt feels free when you are swipping your card,</span><br><span class="line">but it is a illusion,</span><br><span class="line">because...</span><br><span class="line">the higher the interest rate, the more you&#x27;ll end up paying for the debt,</span><br><span class="line">Also,the longer it takes you to pay off the debt,the more interest you&#x27;ll pay.</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*注：例证时的排比，宛若长江三叠浪，节奏中力度十足，掷地有声。*</strong></em></p>
-<p><em><strong>*我们现阶段要达到的境界，就是在中文表达中，或日常所见所闻，慢慢感受到从“中文俗语”到“英文语流”的无缝连接。*</strong></em></p>
-<p><em><strong>*这样一来，中英文的互换，就变得极其轻松。*</strong></em></p>
-<p><em><strong>*流利度也慢慢得到体现。*</strong></em></p>
+<p><em><strong>*注：这个框架非常好，攻击力强悍霸道。*</strong></em></p>
+<p><em><strong>*后面自带两个比较级，组成长句，更是威力非凡。*</strong></em></p>
+<p><em><strong>*请注意此语流中的用词，细细体会。*</strong></em></p>
 ]]></content>
       <categories>
         <category>口语</category>
