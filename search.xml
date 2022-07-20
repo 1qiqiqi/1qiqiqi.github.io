@@ -20,6 +20,27 @@
       </tags>
   </entry>
   <entry>
+    <title>Docker镜像命令</title>
+    <url>/2022/07/07/Docker%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Docker常用镜像命令"><a href="#Docker常用镜像命令" class="headerlink" title="Docker常用镜像命令"></a>Docker常用镜像命令</h1><p>这些是最基本的Docker镜像命令，也是最有用的</p>
+<h3 id="镜像名组成"><a href="#镜像名组成" class="headerlink" title="镜像名组成"></a>镜像名组成</h3><p>name:tags tags指版本号 列如：mysql:5.3</p>
+<h3 id="systemctl-start-docker"><a href="#systemctl-start-docker" class="headerlink" title="systemctl start docker"></a>systemctl start docker</h3><p>开启docker 的作用</p>
+<h3 id="systemctl-status-docker"><a href="#systemctl-status-docker" class="headerlink" title="systemctl status docker"></a>systemctl status docker</h3><p>查看docker的状态 是运行还是dead</p>
+<h3 id="systemctl-stop-docker"><a href="#systemctl-stop-docker" class="headerlink" title="systemctl stop docker"></a>systemctl stop docker</h3><p>关闭docker</p>
+<h3 id="docker-pull-镜像名"><a href="#docker-pull-镜像名" class="headerlink" title="docker pull 镜像名"></a>docker pull 镜像名</h3><p>(从Dockerhub官网上面找列如nginx,如果不指定版本 那么就是最新的版本 latest)</p>
+<h3 id="docker-save-o-镜像名-tar"><a href="#docker-save-o-镜像名-tar" class="headerlink" title="docker save -o 镜像名.tar"></a>docker save -o 镜像名.tar</h3><p>将镜像打包成一个压缩包</p>
+<h3 id="docker-load-i-镜像名-tar"><a href="#docker-load-i-镜像名-tar" class="headerlink" title="docker load -i 镜像名.tar"></a>docker load -i 镜像名.tar</h3><p>将压缩包解压为一个镜像</p>
+<h3 id="docker-rmi-镜像名或者镜像ID"><a href="#docker-rmi-镜像名或者镜像ID" class="headerlink" title="docker rmi 镜像名或者镜像ID"></a>docker rmi 镜像名或者镜像ID</h3><p>删除镜像</p>
+<h3 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h3><p>查看镜像</p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2022/06/22/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -39,24 +60,98 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Docker镜像命令</title>
-    <url>/2022/07/07/Docker%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="Docker常用镜像命令"><a href="#Docker常用镜像命令" class="headerlink" title="Docker常用镜像命令"></a>Docker常用镜像命令</h1><p>这些是最基本的Docker镜像命令，也是最有用的</p>
-<h3 id="镜像名组成"><a href="#镜像名组成" class="headerlink" title="镜像名组成"></a>镜像名组成</h3><p>name:tags tags指版本号 列如：mysql:5.3</p>
-<h3 id="systemctl-start-docker"><a href="#systemctl-start-docker" class="headerlink" title="systemctl start docker"></a>systemctl start docker</h3><p>开启docker 的作用</p>
-<h3 id="systemctl-status-docker"><a href="#systemctl-status-docker" class="headerlink" title="systemctl status docker"></a>systemctl status docker</h3><p>查看docker的状态 是运行还是dead</p>
-<h3 id="systemctl-stop-docker"><a href="#systemctl-stop-docker" class="headerlink" title="systemctl stop docker"></a>systemctl stop docker</h3><p>关闭docker</p>
-<h3 id="docker-pull-镜像名"><a href="#docker-pull-镜像名" class="headerlink" title="docker pull 镜像名"></a>docker pull 镜像名</h3><p>(从Dockerhub官网上面找列如nginx,如果不指定版本 那么就是最新的版本 latest)</p>
-<h3 id="docker-save-o-镜像名-tar"><a href="#docker-save-o-镜像名-tar" class="headerlink" title="docker save -o 镜像名.tar"></a>docker save -o 镜像名.tar</h3><p>将镜像打包成一个压缩包</p>
-<h3 id="docker-load-i-镜像名-tar"><a href="#docker-load-i-镜像名-tar" class="headerlink" title="docker load -i 镜像名.tar"></a>docker load -i 镜像名.tar</h3><p>将压缩包解压为一个镜像</p>
-<h3 id="docker-rmi-镜像名或者镜像ID"><a href="#docker-rmi-镜像名或者镜像ID" class="headerlink" title="docker rmi 镜像名或者镜像ID"></a>docker rmi 镜像名或者镜像ID</h3><p>删除镜像</p>
-<h3 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h3><p>查看镜像</p>
+    <title>数组_代码随想列题</title>
+    <url>/2022/07/14/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8401/</url>
+    <content><![CDATA[<h1 id="数组-代码随想列题"><a href="#数组-代码随想列题" class="headerlink" title="数组_代码随想列题"></a>数组_代码随想列题</h1><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>[题目链接](<a href="https://leetcode.cn/problems/binary-search/">Loading Question… - 力扣（LeetCode）</a>)</p>
+<p>给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
+<p>示例 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 9     </span><br><span class="line">输出: 4       </span><br><span class="line">解释: 9 出现在 nums 中并且下标为 4     </span><br></pre></td></tr></table></figure>
+
+<p>示例 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 2     </span><br><span class="line">输出: -1        </span><br><span class="line">解释: 2 不存在 nums 中因此返回 -1  </span><br></pre></td></tr></table></figure>
+
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了易于大家理解，我还录制了视频，可以看这里：<a href="https://www.bilibili.com/video/BV1fA4y1o715">手把手带你撕出正确的二分法(opens new window)</a></p>
+<p><strong>这道题目的前提是数组为有序数组</strong>，同时题目还强调<strong>数组中无重复元素</strong>，因为一旦有重复元素，使用二分查找法返回的元素下标可能不是唯一的，这些都是使用二分法的前提条件，当大家看到题目描述满足如上条件的时候，可要想一想是不是可以用二分法了。</p>
+<p>二分查找涉及的很多的边界条件，逻辑比较简单，但就是写不好。例如到底是 <code>while(left &lt; right)</code> 还是 <code>while(left &lt;= right)</code>，到底是<code>right = middle</code>呢，还是要<code>right = middle - 1</code>呢？</p>
+<p>大家写二分法经常写乱，主要是因为<strong>对区间的定义没有想清楚，区间的定义就是不变量</strong>。要在二分查找的过程中，保持不变量，就是在while寻找中每一次边界的处理都要坚持根据区间的定义来操作，这就是<strong>循环不变量</strong>规则。</p>
+<p>写二分法，区间的定义一般为两种，左闭右闭即[left, right]，或者左闭右开即[left, right)。</p>
+<p>下面我用这两种区间的定义分别讲解两种不同的二分写法。</p>
+<h3 id="二分法第一种写法"><a href="#二分法第一种写法" class="headerlink" title="二分法第一种写法"></a>二分法第一种写法</h3><p>第一种写法，我们定义 target 是在一个在左闭右闭的区间里，<strong>也就是[left, right] （这个很重要非常重要）</strong>。</p>
+<p>区间的定义这就决定了二分法的代码应该如何写，<strong>因为定义target在[left, right]区间，所以有如下两点：</strong></p>
+<ul>
+<li>while (left &lt;&#x3D; right) 要使用 &lt;&#x3D; ，因为left &#x3D;&#x3D; right是有意义的，所以使用 &lt;&#x3D;</li>
+<li>if (nums[middle] &gt; target) right 要赋值为 middle - 1，因为当前这个nums[middle]一定不是target，那么接下来要查找的左区间结束下标位置就是 middle - 1</li>
+</ul>
+<p>例如在数组：1,2,3,4,7,9,10中查找元素2，如图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210311153055723.jpg" alt="704.二分查找"></p>
+<p>代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 版本一</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int search(vector&lt;int&gt;&amp; nums, int target) &#123;</span><br><span class="line">        int left = 0;</span><br><span class="line">        int right = nums.size() - 1; // 定义target在左闭右闭的区间里，[left, right]</span><br><span class="line">        while (left &lt;= right) &#123; // 当left==right，区间[left, right]依然有效，所以用 &lt;=</span><br><span class="line">            int middle = left + ((right - left) / 2);// 防止溢出 等同于(left + right)/2</span><br><span class="line">            if (nums[middle] &gt; target) &#123;</span><br><span class="line">                right = middle - 1; // target 在左区间，所以[left, middle - 1]</span><br><span class="line">            &#125; else if (nums[middle] &lt; target) &#123;</span><br><span class="line">                left = middle + 1; // target 在右区间，所以[middle + 1, right]</span><br><span class="line">            &#125; else &#123; // nums[middle] == target</span><br><span class="line">                return middle; // 数组中找到目标值，直接返回下标</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 未找到目标值</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="二分法第二种写法"><a href="#二分法第二种写法" class="headerlink" title="二分法第二种写法"></a>二分法第二种写法</h3><p>如果说定义 target 是在一个在左闭右开的区间里，也就是[left, right) ，那么二分法的边界处理方式则截然不同。</p>
+<p>有如下两点：</p>
+<ul>
+<li>while (left &lt; right)，这里使用 &lt; ,因为left &#x3D;&#x3D; right在区间[left, right)是没有意义的</li>
+<li>if (nums[middle] &gt; target) right 更新为 middle，因为当前nums[middle]不等于target，去左区间继续寻找，而寻找区间是左闭右开区间，所以right更新为middle，即：下一个查询区间不会去比较nums[middle]</li>
+</ul>
+<p>在数组：1,2,3,4,7,9,10中查找元素2，如图所示：（<strong>注意和方法一的区别</strong>）</p>
+<p><img src="https://img-blog.csdnimg.cn/20210311153123632.jpg" alt="704.二分查找1"></p>
+<p>代码如下：（详细注释）</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 版本二</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">search</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right = nums.<span class="built_in">size</span>(); <span class="comment">// 定义target在左闭右开的区间里，即：[left, right)</span></span><br><span class="line">        <span class="keyword">while</span> (left &lt; right) &#123; <span class="comment">// 因为left == right的时候，在[left, right)是无效的空间，所以使用 &lt;</span></span><br><span class="line">            <span class="type">int</span> middle = left + ((right - left) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span> (nums[middle] &gt; target) &#123;</span><br><span class="line">                right = middle; <span class="comment">// target 在左区间，在[left, middle)中</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[middle] &lt; target) &#123;</span><br><span class="line">                left = middle + <span class="number">1</span>; <span class="comment">// target 在右区间，在[middle + 1, right)中</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123; <span class="comment">// nums[middle] == target</span></span><br><span class="line">                <span class="keyword">return</span> middle; <span class="comment">// 数组中找到目标值，直接返回下标</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 未找到目标值</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>二分法是非常重要的基础算法，为什么很多同学对于二分法都是<strong>一看就会，一写就废</strong>？</p>
+<p>其实主要就是对区间的定义没有理解清楚，在循环中没有始终坚持根据查找区间的定义来做边界处理。</p>
+<p>区间的定义就是不变量，那么在循环中坚持根据查找区间的定义来做边界处理，就是循环不变量规则。</p>
+<p>本篇根据两种常见的区间定义，给出了两种二分法的写法，每一个边界为什么这么处理，都根据区间的定义做了详细介绍。</p>
+<p>相信看完本篇应该对二分法有更深刻的理解了。</p>
+<h3 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h3><p>左边第一个目标值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left &lt; right) &#123;</span><br><span class="line">        mid = (left+right)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] &gt;= target) right = mid;</span><br><span class="line">        <span class="keyword">else</span> left = mid+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> left || right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>右边第一个目标值：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">	int left = 0;</span><br><span class="line">	int right = nums.length - 1;</span><br><span class="line">	while(left &lt; right) &#123;</span><br><span class="line">		mid = 1+(left+right)/2;</span><br><span class="line">		if(nums[mid]&lt;=target) left = mid;</span><br><span class="line">		else right = mid-1;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>Docker</category>
+        <category>算法简史</category>
+        <category>数组</category>
       </categories>
       <tags>
-        <tag>Docker命令</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组_代码随想列题03</title>
+    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8403/</url>
+    <content><![CDATA[<h1 id="代码随想录-数组03"><a href="#代码随想录-数组03" class="headerlink" title="代码随想录_数组03"></a>代码随想录_数组03</h1><h1 id="977-有序数组的平方"><a href="#977-有序数组的平方" class="headerlink" title="977.有序数组的平方"></a>977.有序数组的平方</h1><p><a href="https://leetcode.cn/problems/squares-of-a-sorted-array/">力扣题目链接(opens new window)</a></p>
+<p>给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。</p>
+<p>示例 1： 输入：nums &#x3D; [-4,-1,0,3,10] 输出：[0,1,9,16,100] 解释：平方后，数组变为 [16,1,0,9,100]，排序后，数组变为 [0,1,9,16,100]</p>
+<p>示例 2： 输入：nums &#x3D; [-7,-3,2,3,11] 输出：[4,9,9,49,121]</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了易于大家理解，我还特意录制了视频，<a href="https://www.bilibili.com/video/BV1QB4y1D7ep">本题视频讲解(opens new window)</a></p>
+<h3 id="暴力排序"><a href="#暴力排序" class="headerlink" title="暴力排序"></a>暴力排序</h3><p>最直观的想法，莫过于：每个数平方之后，排个序，美滋滋，代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; A) &#123;</span><br><span class="line">        for (int i = 0; i &lt; A.size(); i++) &#123;</span><br><span class="line">            A[i] *= A[i];</span><br><span class="line">        &#125;</span><br><span class="line">        sort(A.begin(), A.end()); // 快速排序</span><br><span class="line">        return A;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这个时间复杂度是 O(n + nlogn)， 可以说是O(nlogn)的时间复杂度，但为了和下面双指针法算法时间复杂度有鲜明对比，我记为 O(n + nlog n)。</p>
+<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>数组其实是有序的， 只不过负数平方之后可能成为最大数了。</p>
+<p>那么数组平方的最大值就在数组的两端，不是最左边就是最右边，不可能是中间。</p>
+<p>此时可以考虑双指针法了，i指向起始位置，j指向终止位置。</p>
+<p>定义一个新数组result，和A数组一样的大小，让k指向result数组终止位置。</p>
+<p>如果<code>A[i] * A[i] &lt; A[j] * A[j]</code> 那么<code>result[k--] = A[j] * A[j];</code> 。</p>
+<p>如果<code>A[i] * A[i] &gt;= A[j] * A[j]</code> 那么<code>result[k--] = A[i] * A[i];</code> 。</p>
+<p>如动画所示：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.gif" alt="img"></p>
+<p>不难写出如下代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span>[] sortedSquares(<span class="type">int</span>[] nums) &#123;</span><br><span class="line">		<span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length-<span class="number">1</span>;</span><br><span class="line">		<span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span>[] new_nums =<span class="keyword">new</span> <span class="title class_">int</span>[nums.length];</span><br><span class="line">        <span class="type">int</span> <span class="variable">new_index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(left &lt;= right) &#123;</span><br><span class="line">			<span class="keyword">if</span>(nums[left]*nums[left] &lt; nums[right]*nums[right]) &#123;</span><br><span class="line">                new_nums[new_index++] = nums[left]*nums[left];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                new_nums[new_index++] = nums[right]*nums[right];</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">       <span class="keyword">return</span> new_nums;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时的时间复杂度为O(n)，相对于暴力排序的解法O(n + nlog n)还是提升不少的。</p>
+<p><strong>这里还是说一下，大家不必太在意leetcode上执行用时，打败多少多少用户，这个就是一个玩具，非常不准确。</strong></p>
+<p>做题的时候自己能分析出来时间复杂度就可以了，至于leetcode上执行用时，大概看一下就行，只要达到最优的时间复杂度就可以了，</p>
+<p>一样的代码多提交几次可能就击败百分之百了…..</p>
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -155,98 +250,52 @@
       </tags>
   </entry>
   <entry>
-    <title>数组_代码随想列题</title>
-    <url>/2022/07/14/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8401/</url>
-    <content><![CDATA[<h1 id="数组-代码随想列题"><a href="#数组-代码随想列题" class="headerlink" title="数组_代码随想列题"></a>数组_代码随想列题</h1><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>[题目链接](<a href="https://leetcode.cn/problems/binary-search/">Loading Question… - 力扣（LeetCode）</a>)</p>
-<p>给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
-<p>示例 1:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 9     </span><br><span class="line">输出: 4       </span><br><span class="line">解释: 9 出现在 nums 中并且下标为 4     </span><br></pre></td></tr></table></figure>
-
-<p>示例 2:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 2     </span><br><span class="line">输出: -1        </span><br><span class="line">解释: 2 不存在 nums 中因此返回 -1  </span><br></pre></td></tr></table></figure>
-
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了易于大家理解，我还录制了视频，可以看这里：<a href="https://www.bilibili.com/video/BV1fA4y1o715">手把手带你撕出正确的二分法(opens new window)</a></p>
-<p><strong>这道题目的前提是数组为有序数组</strong>，同时题目还强调<strong>数组中无重复元素</strong>，因为一旦有重复元素，使用二分查找法返回的元素下标可能不是唯一的，这些都是使用二分法的前提条件，当大家看到题目描述满足如上条件的时候，可要想一想是不是可以用二分法了。</p>
-<p>二分查找涉及的很多的边界条件，逻辑比较简单，但就是写不好。例如到底是 <code>while(left &lt; right)</code> 还是 <code>while(left &lt;= right)</code>，到底是<code>right = middle</code>呢，还是要<code>right = middle - 1</code>呢？</p>
-<p>大家写二分法经常写乱，主要是因为<strong>对区间的定义没有想清楚，区间的定义就是不变量</strong>。要在二分查找的过程中，保持不变量，就是在while寻找中每一次边界的处理都要坚持根据区间的定义来操作，这就是<strong>循环不变量</strong>规则。</p>
-<p>写二分法，区间的定义一般为两种，左闭右闭即[left, right]，或者左闭右开即[left, right)。</p>
-<p>下面我用这两种区间的定义分别讲解两种不同的二分写法。</p>
-<h3 id="二分法第一种写法"><a href="#二分法第一种写法" class="headerlink" title="二分法第一种写法"></a>二分法第一种写法</h3><p>第一种写法，我们定义 target 是在一个在左闭右闭的区间里，<strong>也就是[left, right] （这个很重要非常重要）</strong>。</p>
-<p>区间的定义这就决定了二分法的代码应该如何写，<strong>因为定义target在[left, right]区间，所以有如下两点：</strong></p>
+    <title>删除_链表01</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A801/</url>
+    <content><![CDATA[<h1 id="删除-链表01"><a href="#删除-链表01" class="headerlink" title="删除_链表01"></a>删除_链表01</h1><h3 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203.移除链表元素"></a>203.移除链表元素</h3><p><a href="https://leetcode.cn/problems/remove-linked-list-elements/">力扣题目链接(opens new window)</a></p>
+<p>题意：删除链表中等于给定值 val 的所有节点。</p>
+<p>示例 1：<br>输入：head &#x3D; [1,2,6,3,4,5,6], val &#x3D; 6<br>输出：[1,2,3,4,5]</p>
+<p>示例 2：<br>输入：head &#x3D; [], val &#x3D; 1<br>输出：[]</p>
+<p>示例 3：<br>输入：head &#x3D; [7,7,7,7], val &#x3D; 7<br>输出：[]</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了方便大家理解，我特意录制了视频：<a href="https://www.bilibili.com/video/BV18B4y1s7R9">手把手带你学会操作链表，移除链表元素 (opens new window)</a>，结合视频在看本题解，事半功倍。</p>
+<p>这里以链表 1 4 2 4 来举例，移除元素4。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095351161.png" alt="203_链表删除元素1"></p>
+<p>如果使用C，C++编程语言的话，不要忘了还要从内存中删除这两个移除的节点， 清理节点内存之后如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095418280.png" alt="203_链表删除元素2"></p>
+<p><strong>当然如果使用java ，python的话就不用手动管理内存了。</strong></p>
+<p>还要说明一下，就算使用C++来做leetcode，如果移除一个节点之后，没有手动在内存中删除这个节点，leetcode依然也是可以通过的，只不过，内存使用的空间大一些而已，但建议依然要养成手动清理内存的习惯。</p>
+<p>这种情况下的移除操作，就是让节点next指针直接指向下下一个节点就可以了，</p>
+<p>那么因为单链表的特殊性，只能指向下一个节点，刚刚删除的是链表的中第二个，和第四个节点，那么如果删除的是头结点又该怎么办呢？</p>
+<p>这里就涉及如下链表操作的两种方式：</p>
 <ul>
-<li>while (left &lt;&#x3D; right) 要使用 &lt;&#x3D; ，因为left &#x3D;&#x3D; right是有意义的，所以使用 &lt;&#x3D;</li>
-<li>if (nums[middle] &gt; target) right 要赋值为 middle - 1，因为当前这个nums[middle]一定不是target，那么接下来要查找的左区间结束下标位置就是 middle - 1</li>
+<li><strong>直接使用原来的链表来进行删除操作。</strong></li>
+<li><strong>设置一个虚拟头结点在进行删除操作。</strong></li>
 </ul>
-<p>例如在数组：1,2,3,4,7,9,10中查找元素2，如图所示：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210311153055723.jpg" alt="704.二分查找"></p>
-<p>代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 版本一</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int search(vector&lt;int&gt;&amp; nums, int target) &#123;</span><br><span class="line">        int left = 0;</span><br><span class="line">        int right = nums.size() - 1; // 定义target在左闭右闭的区间里，[left, right]</span><br><span class="line">        while (left &lt;= right) &#123; // 当left==right，区间[left, right]依然有效，所以用 &lt;=</span><br><span class="line">            int middle = left + ((right - left) / 2);// 防止溢出 等同于(left + right)/2</span><br><span class="line">            if (nums[middle] &gt; target) &#123;</span><br><span class="line">                right = middle - 1; // target 在左区间，所以[left, middle - 1]</span><br><span class="line">            &#125; else if (nums[middle] &lt; target) &#123;</span><br><span class="line">                left = middle + 1; // target 在右区间，所以[middle + 1, right]</span><br><span class="line">            &#125; else &#123; // nums[middle] == target</span><br><span class="line">                return middle; // 数组中找到目标值，直接返回下标</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 未找到目标值</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="二分法第二种写法"><a href="#二分法第二种写法" class="headerlink" title="二分法第二种写法"></a>二分法第二种写法</h3><p>如果说定义 target 是在一个在左闭右开的区间里，也就是[left, right) ，那么二分法的边界处理方式则截然不同。</p>
-<p>有如下两点：</p>
-<ul>
-<li>while (left &lt; right)，这里使用 &lt; ,因为left &#x3D;&#x3D; right在区间[left, right)是没有意义的</li>
-<li>if (nums[middle] &gt; target) right 更新为 middle，因为当前nums[middle]不等于target，去左区间继续寻找，而寻找区间是左闭右开区间，所以right更新为middle，即：下一个查询区间不会去比较nums[middle]</li>
-</ul>
-<p>在数组：1,2,3,4,7,9,10中查找元素2，如图所示：（<strong>注意和方法一的区别</strong>）</p>
-<p><img src="https://img-blog.csdnimg.cn/20210311153123632.jpg" alt="704.二分查找1"></p>
-<p>代码如下：（详细注释）</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 版本二</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">search</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right = nums.<span class="built_in">size</span>(); <span class="comment">// 定义target在左闭右开的区间里，即：[left, right)</span></span><br><span class="line">        <span class="keyword">while</span> (left &lt; right) &#123; <span class="comment">// 因为left == right的时候，在[left, right)是无效的空间，所以使用 &lt;</span></span><br><span class="line">            <span class="type">int</span> middle = left + ((right - left) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span> (nums[middle] &gt; target) &#123;</span><br><span class="line">                right = middle; <span class="comment">// target 在左区间，在[left, middle)中</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[middle] &lt; target) &#123;</span><br><span class="line">                left = middle + <span class="number">1</span>; <span class="comment">// target 在右区间，在[middle + 1, right)中</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123; <span class="comment">// nums[middle] == target</span></span><br><span class="line">                <span class="keyword">return</span> middle; <span class="comment">// 数组中找到目标值，直接返回下标</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 未找到目标值</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>二分法是非常重要的基础算法，为什么很多同学对于二分法都是<strong>一看就会，一写就废</strong>？</p>
-<p>其实主要就是对区间的定义没有理解清楚，在循环中没有始终坚持根据查找区间的定义来做边界处理。</p>
-<p>区间的定义就是不变量，那么在循环中坚持根据查找区间的定义来做边界处理，就是循环不变量规则。</p>
-<p>本篇根据两种常见的区间定义，给出了两种二分法的写法，每一个边界为什么这么处理，都根据区间的定义做了详细介绍。</p>
-<p>相信看完本篇应该对二分法有更深刻的理解了。</p>
-<h3 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h3><p>左边第一个目标值</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left &lt; right) &#123;</span><br><span class="line">        mid = (left+right)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] &gt;= target) right = mid;</span><br><span class="line">        <span class="keyword">else</span> left = mid+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> left || right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>右边第一个目标值：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">	int left = 0;</span><br><span class="line">	int right = nums.length - 1;</span><br><span class="line">	while(left &lt; right) &#123;</span><br><span class="line">		mid = 1+(left+right)/2;</span><br><span class="line">		if(nums[mid]&lt;=target) left = mid;</span><br><span class="line">		else right = mid-1;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>来看第一种操作：直接使用原来的链表来进行移除。</p>
+<p><img src="https://img-blog.csdnimg.cn/2021031609544922.png" alt="203_链表删除元素3"></p>
+<p>移除头结点和移除其他节点的操作是不一样的，因为链表的其他节点都是通过前一个节点来移除当前节点，而头结点没有前一个节点。</p>
+<p>所以头结点如何移除呢，其实只要将头结点向后移动一位就可以，这样就从链表中移除了一个头结点。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095512470.png" alt="203_链表删除元素4"></p>
+<p>依然别忘将原头结点从内存中删掉。 <img src="https://img-blog.csdnimg.cn/20210316095543775.png" alt="203_链表删除元素5"></p>
+<p>这样移除了一个头结点，是不是发现，在单链表中移除头结点 和 移除其他节点的操作方式是不一样，其实在写代码的时候也会发现，需要单独写一段逻辑来处理移除头结点的情况。</p>
+<p>那么可不可以 以一种统一的逻辑来移除 链表的节点呢。</p>
+<p>其实<strong>可以设置一个虚拟头结点</strong>，这样原链表的所有节点就都可以按照统一的方式进行移除了。</p>
+<p>来看看如何设置一个虚拟头。依然还是在这个链表中，移除元素1。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095619221.png" alt="203_链表删除元素6"></p>
+<p>这里来给链表添加一个虚拟头结点为新的头结点，此时要移除这个旧头结点元素1。</p>
+<p>这样是不是就可以使用和移除链表其他节点的方式统一了呢？</p>
+<p>来看一下，如何移除元素1 呢，还是熟悉的方式，然后从内存中删除元素1。</p>
+<p>最后呢在题目中，return 头结点的时候，别忘了 <code>return dummyNode-&gt;next;</code>， 这才是新的头结点</p>
+<p>java:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 添加虚节点方式</span></span><br><span class="line"><span class="comment"> * 时间复杂度 O(n)</span></span><br><span class="line"><span class="comment"> * 空间复杂度 O(1)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> val</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">removeElements</span><span class="params">(ListNode head, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>, head);</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> dummy;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
         <category>算法简史</category>
-        <category>数组</category>
+        <category>链表</category>
       </categories>
       <tags>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数组_代码随想列题03</title>
-    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8403/</url>
-    <content><![CDATA[<h1 id="代码随想录-数组03"><a href="#代码随想录-数组03" class="headerlink" title="代码随想录_数组03"></a>代码随想录_数组03</h1><h1 id="977-有序数组的平方"><a href="#977-有序数组的平方" class="headerlink" title="977.有序数组的平方"></a>977.有序数组的平方</h1><p><a href="https://leetcode.cn/problems/squares-of-a-sorted-array/">力扣题目链接(opens new window)</a></p>
-<p>给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。</p>
-<p>示例 1： 输入：nums &#x3D; [-4,-1,0,3,10] 输出：[0,1,9,16,100] 解释：平方后，数组变为 [16,1,0,9,100]，排序后，数组变为 [0,1,9,16,100]</p>
-<p>示例 2： 输入：nums &#x3D; [-7,-3,2,3,11] 输出：[4,9,9,49,121]</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了易于大家理解，我还特意录制了视频，<a href="https://www.bilibili.com/video/BV1QB4y1D7ep">本题视频讲解(opens new window)</a></p>
-<h3 id="暴力排序"><a href="#暴力排序" class="headerlink" title="暴力排序"></a>暴力排序</h3><p>最直观的想法，莫过于：每个数平方之后，排个序，美滋滋，代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; A) &#123;</span><br><span class="line">        for (int i = 0; i &lt; A.size(); i++) &#123;</span><br><span class="line">            A[i] *= A[i];</span><br><span class="line">        &#125;</span><br><span class="line">        sort(A.begin(), A.end()); // 快速排序</span><br><span class="line">        return A;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>这个时间复杂度是 O(n + nlogn)， 可以说是O(nlogn)的时间复杂度，但为了和下面双指针法算法时间复杂度有鲜明对比，我记为 O(n + nlog n)。</p>
-<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>数组其实是有序的， 只不过负数平方之后可能成为最大数了。</p>
-<p>那么数组平方的最大值就在数组的两端，不是最左边就是最右边，不可能是中间。</p>
-<p>此时可以考虑双指针法了，i指向起始位置，j指向终止位置。</p>
-<p>定义一个新数组result，和A数组一样的大小，让k指向result数组终止位置。</p>
-<p>如果<code>A[i] * A[i] &lt; A[j] * A[j]</code> 那么<code>result[k--] = A[j] * A[j];</code> 。</p>
-<p>如果<code>A[i] * A[i] &gt;= A[j] * A[j]</code> 那么<code>result[k--] = A[i] * A[i];</code> 。</p>
-<p>如动画所示：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.gif" alt="img"></p>
-<p>不难写出如下代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span>[] sortedSquares(<span class="type">int</span>[] nums) &#123;</span><br><span class="line">		<span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length-<span class="number">1</span>;</span><br><span class="line">		<span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span>[] new_nums =<span class="keyword">new</span> <span class="title class_">int</span>[nums.length];</span><br><span class="line">        <span class="type">int</span> <span class="variable">new_index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(left &lt;= right) &#123;</span><br><span class="line">			<span class="keyword">if</span>(nums[left]*nums[left] &lt; nums[right]*nums[right]) &#123;</span><br><span class="line">                new_nums[new_index++] = nums[left]*nums[left];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                new_nums[new_index++] = nums[right]*nums[right];</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">       <span class="keyword">return</span> new_nums;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>此时的时间复杂度为O(n)，相对于暴力排序的解法O(n + nlog n)还是提升不少的。</p>
-<p><strong>这里还是说一下，大家不必太在意leetcode上执行用时，打败多少多少用户，这个就是一个玩具，非常不准确。</strong></p>
-<p>做题的时候自己能分析出来时间复杂度就可以了，至于leetcode上执行用时，大概看一下就行，只要达到最优的时间复杂度就可以了，</p>
-<p>一样的代码多提交几次可能就击败百分之百了…..</p>
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
+        <tag>链表</tag>
       </tags>
   </entry>
   <entry>
@@ -303,44 +352,25 @@
       </tags>
   </entry>
   <entry>
-    <title>删除_链表01</title>
-    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A801/</url>
-    <content><![CDATA[<h1 id="删除-链表01"><a href="#删除-链表01" class="headerlink" title="删除_链表01"></a>删除_链表01</h1><h3 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203.移除链表元素"></a>203.移除链表元素</h3><p><a href="https://leetcode.cn/problems/remove-linked-list-elements/">力扣题目链接(opens new window)</a></p>
-<p>题意：删除链表中等于给定值 val 的所有节点。</p>
-<p>示例 1：<br>输入：head &#x3D; [1,2,6,3,4,5,6], val &#x3D; 6<br>输出：[1,2,3,4,5]</p>
-<p>示例 2：<br>输入：head &#x3D; [], val &#x3D; 1<br>输出：[]</p>
-<p>示例 3：<br>输入：head &#x3D; [7,7,7,7], val &#x3D; 7<br>输出：[]</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了方便大家理解，我特意录制了视频：<a href="https://www.bilibili.com/video/BV18B4y1s7R9">手把手带你学会操作链表，移除链表元素 (opens new window)</a>，结合视频在看本题解，事半功倍。</p>
-<p>这里以链表 1 4 2 4 来举例，移除元素4。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095351161.png" alt="203_链表删除元素1"></p>
-<p>如果使用C，C++编程语言的话，不要忘了还要从内存中删除这两个移除的节点， 清理节点内存之后如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095418280.png" alt="203_链表删除元素2"></p>
-<p><strong>当然如果使用java ，python的话就不用手动管理内存了。</strong></p>
-<p>还要说明一下，就算使用C++来做leetcode，如果移除一个节点之后，没有手动在内存中删除这个节点，leetcode依然也是可以通过的，只不过，内存使用的空间大一些而已，但建议依然要养成手动清理内存的习惯。</p>
-<p>这种情况下的移除操作，就是让节点next指针直接指向下下一个节点就可以了，</p>
-<p>那么因为单链表的特殊性，只能指向下一个节点，刚刚删除的是链表的中第二个，和第四个节点，那么如果删除的是头结点又该怎么办呢？</p>
-<p>这里就涉及如下链表操作的两种方式：</p>
-<ul>
-<li><strong>直接使用原来的链表来进行删除操作。</strong></li>
-<li><strong>设置一个虚拟头结点在进行删除操作。</strong></li>
-</ul>
-<p>来看第一种操作：直接使用原来的链表来进行移除。</p>
-<p><img src="https://img-blog.csdnimg.cn/2021031609544922.png" alt="203_链表删除元素3"></p>
-<p>移除头结点和移除其他节点的操作是不一样的，因为链表的其他节点都是通过前一个节点来移除当前节点，而头结点没有前一个节点。</p>
-<p>所以头结点如何移除呢，其实只要将头结点向后移动一位就可以，这样就从链表中移除了一个头结点。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095512470.png" alt="203_链表删除元素4"></p>
-<p>依然别忘将原头结点从内存中删掉。 <img src="https://img-blog.csdnimg.cn/20210316095543775.png" alt="203_链表删除元素5"></p>
-<p>这样移除了一个头结点，是不是发现，在单链表中移除头结点 和 移除其他节点的操作方式是不一样，其实在写代码的时候也会发现，需要单独写一段逻辑来处理移除头结点的情况。</p>
-<p>那么可不可以 以一种统一的逻辑来移除 链表的节点呢。</p>
-<p>其实<strong>可以设置一个虚拟头结点</strong>，这样原链表的所有节点就都可以按照统一的方式进行移除了。</p>
-<p>来看看如何设置一个虚拟头。依然还是在这个链表中，移除元素1。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095619221.png" alt="203_链表删除元素6"></p>
-<p>这里来给链表添加一个虚拟头结点为新的头结点，此时要移除这个旧头结点元素1。</p>
-<p>这样是不是就可以使用和移除链表其他节点的方式统一了呢？</p>
-<p>来看一下，如何移除元素1 呢，还是熟悉的方式，然后从内存中删除元素1。</p>
-<p>最后呢在题目中，return 头结点的时候，别忘了 <code>return dummyNode-&gt;next;</code>， 这才是新的头结点</p>
-<p>java:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 添加虚节点方式</span></span><br><span class="line"><span class="comment"> * 时间复杂度 O(n)</span></span><br><span class="line"><span class="comment"> * 空间复杂度 O(1)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> val</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">removeElements</span><span class="params">(ListNode head, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>, head);</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> dummy;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>翻转链表_链表03</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A803/</url>
+    <content><![CDATA[<h1 id="翻转链表-链表03"><a href="#翻转链表-链表03" class="headerlink" title="翻转链表_链表03"></a>翻转链表_链表03</h1><h3 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206.反转链表"></a>206.反转链表</h3><p><a href="https://leetcode.cn/problems/reverse-linked-list/">力扣题目链接(opens new window)</a></p>
+<p>题意：反转一个单链表。</p>
+<p>示例: 输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL 输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果再定义一个新的链表，实现链表元素的反转，其实这是对内存空间的浪费。</p>
+<p>其实只需要改变链表的next指针的指向，直接将链表反转 ，而不用重新定义一个新的链表，如图所示:</p>
+<p><img src="https://img-blog.csdnimg.cn/20210218090901207.png" alt="206_反转链表"></p>
+<p>之前链表的头节点是元素1， 反转之后头结点就是元素5 ，这里并没有添加或者删除节点，仅仅是改变next指针的方向。</p>
+<p>那么接下来看一看是如何反转的呢？</p>
+<p>我们拿有示例中的链表来举例，如动画所示：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnrf1oboupg30gy0c44qp.gif" alt="img"></p>
+<p>首先定义一个cur指针，指向头结点，再定义一个pre指针，初始化为null。</p>
+<p>然后就要开始反转了，首先要把 cur-&gt;next 节点用tmp指针保存一下，也就是保存一下这个节点。</p>
+<p>为什么要保存一下这个节点呢，因为接下来要改变 cur-&gt;next 的指向了，将cur-&gt;next 指向pre ，此时已经反转了第一个节点了。</p>
+<p>接下来，就是循环走如下代码逻辑了，继续移动pre和cur指针。</p>
+<p>最后，cur 指针已经指向了null，循环结束，链表也反转完毕了。 此时我们return pre指针就可以了，pre指针就指向了新的头结点。</p>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 双指针</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">prev</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">            temp = cur.next;<span class="comment">// 保存下一个节点</span></span><br><span class="line">            cur.next = prev;</span><br><span class="line">            prev = cur;</span><br><span class="line">            cur = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> prev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -427,33 +457,20 @@
       </tags>
   </entry>
   <entry>
-    <title>翻转链表_链表03</title>
-    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A803/</url>
-    <content><![CDATA[<h1 id="翻转链表-链表03"><a href="#翻转链表-链表03" class="headerlink" title="翻转链表_链表03"></a>翻转链表_链表03</h1><h3 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206.反转链表"></a>206.反转链表</h3><p><a href="https://leetcode.cn/problems/reverse-linked-list/">力扣题目链接(opens new window)</a></p>
-<p>题意：反转一个单链表。</p>
-<p>示例: 输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL 输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果再定义一个新的链表，实现链表元素的反转，其实这是对内存空间的浪费。</p>
-<p>其实只需要改变链表的next指针的指向，直接将链表反转 ，而不用重新定义一个新的链表，如图所示:</p>
-<p><img src="https://img-blog.csdnimg.cn/20210218090901207.png" alt="206_反转链表"></p>
-<p>之前链表的头节点是元素1， 反转之后头结点就是元素5 ，这里并没有添加或者删除节点，仅仅是改变next指针的方向。</p>
-<p>那么接下来看一看是如何反转的呢？</p>
-<p>我们拿有示例中的链表来举例，如动画所示：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnrf1oboupg30gy0c44qp.gif" alt="img"></p>
-<p>首先定义一个cur指针，指向头结点，再定义一个pre指针，初始化为null。</p>
-<p>然后就要开始反转了，首先要把 cur-&gt;next 节点用tmp指针保存一下，也就是保存一下这个节点。</p>
-<p>为什么要保存一下这个节点呢，因为接下来要改变 cur-&gt;next 的指向了，将cur-&gt;next 指向pre ，此时已经反转了第一个节点了。</p>
-<p>接下来，就是循环走如下代码逻辑了，继续移动pre和cur指针。</p>
-<p>最后，cur 指针已经指向了null，循环结束，链表也反转完毕了。 此时我们return pre指针就可以了，pre指针就指向了新的头结点。</p>
-<p>代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 双指针</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">prev</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">            temp = cur.next;<span class="comment">// 保存下一个节点</span></span><br><span class="line">            cur.next = prev;</span><br><span class="line">            prev = cur;</span><br><span class="line">            cur = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> prev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>数组在哈希表中的应用</title>
+    <url>/2022/07/13/%E5%93%88%E5%B8%8C%E8%A1%A8&amp;&amp;%E6%95%B0%E7%BB%84%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
+<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
         <category>算法简史</category>
-        <category>链表</category>
+        <category>数组</category>
       </categories>
       <tags>
-        <tag>链表</tag>
+        <tag>数组</tag>
+        <tag>哈希表</tag>
       </tags>
   </entry>
   <entry>
@@ -522,60 +539,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数组在哈希表中的应用</title>
-    <url>/2022/07/13/%E5%93%88%E5%B8%8C%E8%A1%A8&amp;&amp;%E6%95%B0%E7%BB%84%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
-<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-        <tag>哈希表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库操作SQL</title>
-    <url>/2022/06/30/%E6%95%B0%E6%8D%AE%E5%BA%93SQL/</url>
-    <content><![CDATA[<p>这次编写的内容是数据库SQL的操作实列 以后要是不会直接从这个武器库拿就是</p>
-<hr>
-<h1 id="实列"><a href="#实列" class="headerlink" title="实列"></a>实列</h1><h3 id="01-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"><a href="#01-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。" class="headerlink" title="01.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"></a>01.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。</h3><p>试列出计算机系所开课程（CS标志）的最高成绩、最低成绩和平均成绩。如果某门课程的成绩不全（即“成绩”中有NULL出现），则该课程不予统计，结果按“课程号”升序排列。正确的SQL语句是</p>
-<p><img src="https://img-blog.csdnimg.cn/8c9d734958ed4a8daa3070201f309889.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG92ZSA2,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 课程号，<span class="built_in">MAX</span>(成绩)，<span class="built_in">MIN</span>(成绩)，<span class="built_in">AVG</span>(成绩) <span class="keyword">FROM</span> 选课</span><br><span class="line"><span class="keyword">WHERE</span> 课程号 <span class="keyword">Like</span> ‘CS<span class="operator">%</span>’ <span class="keyword">GROUP</span> <span class="keyword">BY</span> 课程号 <span class="keyword">HAVING</span> 课程号 <span class="keyword">NOT</span> <span class="keyword">IN</span></span><br><span class="line">(<span class="keyword">SELECT</span> 课程号 <span class="keyword">FROM</span> 选课 <span class="keyword">WHERE</span> 成绩 <span class="keyword">IS</span> <span class="keyword">NULL</span>)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> 课程号</span><br></pre></td></tr></table></figure>
-
-<h3 id="02-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"><a href="#02-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。" class="headerlink" title="02.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"></a>02.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。</h3><p>列出最少选修了三门课程的学生姓名。正确的SQL语句是</p>
-<p>图片如上所示</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 姓名　<span class="keyword">FROM</span> 学生　<span class="keyword">WHERE</span> 学号 <span class="keyword">IN</span>　</span><br><span class="line">(<span class="keyword">SELECT</span> 学号　<span class="keyword">FROM</span> 选课　<span class="keyword">GROUP</span> <span class="keyword">BY</span> 学号　<span class="keyword">HAVING</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="operator">&gt;=</span> <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="03-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"><a href="#03-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。" class="headerlink" title="03.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"></a>03.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。</h3><p>查询缺成绩的学生名及课程号。正确的SQL语句是</p>
-<p><img src="https://img-blog.csdnimg.cn/26c14ddd06ce40bb91c54c036c04ce18.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG92ZSA2,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 姓名，课程号 <span class="keyword">FROM</span> 学生，选课 <span class="keyword">WHERE</span> 学生.学号<span class="operator">=</span>选课.学号 <span class="keyword">AND</span> 成绩 <span class="keyword">IS</span> <span class="keyword">NULL</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="04-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"><a href="#04-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。" class="headerlink" title="04.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"></a>04.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。</h3><p>查询1996年出生的学生姓名及其秋季所修课程的课程号及成绩。正确的SQL语句是</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 姓名，课程号，成绩 <span class="keyword">FROM</span> 学生，选课，课程 <span class="keyword">WHERE</span> 学生.学号<span class="operator">=</span>选课.学号 <span class="keyword">AND</span> 选课.课程号<span class="operator">=</span>课程.课程号 <span class="keyword">AND</span> <span class="keyword">Year</span>(出生日期)<span class="operator">=</span><span class="number">1996</span> <span class="keyword">AND</span> 开课学期<span class="operator">=</span>’秋’</span><br></pre></td></tr></table></figure>
-
-<h3 id="05-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"><a href="#05-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。" class="headerlink" title="05.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"></a>05.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。</h3><p><img src="https://img-blog.csdnimg.cn/9c2aed7fa5b74fc9b69def057c6812d9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG92ZSA2,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"></p>
-<p>求既学过“1001”号课，又学过“2002”号课的所有学生的学号。正确的SQL语句是</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> 学号　<span class="keyword">FROM</span> 选课　<span class="keyword">WHERE</span> 课号＝‘<span class="number">1001</span>’ <span class="keyword">AND</span></span><br><span class="line">学号 <span class="keyword">IN</span>　(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> 学号　<span class="keyword">FROM</span> 选课　<span class="keyword">WHERE</span> 课号＝‘<span class="number">2002</span>’ )</span><br></pre></td></tr></table></figure>
-
-<p>我的想法是：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 学号 <span class="keyword">FROM</span> 选课 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 学号 <span class="keyword">HAVING</span> 课号 <span class="operator">=</span><span class="operator">=</span> ‘<span class="number">1001</span>’ <span class="keyword">AND</span> 课号 <span class="operator">=</span><span class="operator">=</span> ‘<span class="number">2002</span>’</span><br></pre></td></tr></table></figure>
-
-<h3 id="06-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"><a href="#06-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。" class="headerlink" title="06.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"></a>06.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。</h3><p>列出各门课的平均成绩、最高成绩、最低成绩和选课人数。正确的SQL语句是</p>
-<p>图片如上所示</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 课号，<span class="built_in">AVG</span>(成绩)，<span class="built_in">MAX</span>(成绩)，<span class="built_in">MIN</span>(成绩)，<span class="built_in">COUNT</span>(学号)　</span><br><span class="line"><span class="keyword">FROM</span> 选课　<span class="keyword">GROUP</span> <span class="keyword">BY</span> 课号</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>天猫闲谈</title>
     <url>/2022/07/19/%E5%A4%A9%E7%8C%AB%E9%97%B2%E8%B0%88/</url>
     <content><![CDATA[<h1 id="天猫闲谈"><a href="#天猫闲谈" class="headerlink" title="天猫闲谈"></a>天猫闲谈</h1><h2 id="遇到的问题和解决方案"><a href="#遇到的问题和解决方案" class="headerlink" title="遇到的问题和解决方案"></a>遇到的问题和解决方案</h2><h3 id="SSL报错01"><a href="#SSL报错01" class="headerlink" title="SSL报错01"></a>SSL报错01</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  File &quot;C:\ProgramData\Anaconda3\lib\site-packages\requests\adapters.py&quot;, line 512, in send</span><br><span class="line">    raise SSLError(e, request=request)</span><br><span class="line">requests.exceptions.SSLError: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:833)</span><br></pre></td></tr></table></figure>
@@ -615,6 +578,72 @@
       </categories>
       <tags>
         <tag>数据采集</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p>没有吃饭</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>数据库操作SQL</title>
+    <url>/2022/06/30/%E6%95%B0%E6%8D%AE%E5%BA%93SQL/</url>
+    <content><![CDATA[<p>这次编写的内容是数据库SQL的操作实列 以后要是不会直接从这个武器库拿就是</p>
+<hr>
+<h1 id="实列"><a href="#实列" class="headerlink" title="实列"></a>实列</h1><h3 id="01-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"><a href="#01-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。" class="headerlink" title="01.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"></a>01.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。</h3><p>试列出计算机系所开课程（CS标志）的最高成绩、最低成绩和平均成绩。如果某门课程的成绩不全（即“成绩”中有NULL出现），则该课程不予统计，结果按“课程号”升序排列。正确的SQL语句是</p>
+<p><img src="https://img-blog.csdnimg.cn/8c9d734958ed4a8daa3070201f309889.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG92ZSA2,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 课程号，<span class="built_in">MAX</span>(成绩)，<span class="built_in">MIN</span>(成绩)，<span class="built_in">AVG</span>(成绩) <span class="keyword">FROM</span> 选课</span><br><span class="line"><span class="keyword">WHERE</span> 课程号 <span class="keyword">Like</span> ‘CS<span class="operator">%</span>’ <span class="keyword">GROUP</span> <span class="keyword">BY</span> 课程号 <span class="keyword">HAVING</span> 课程号 <span class="keyword">NOT</span> <span class="keyword">IN</span></span><br><span class="line">(<span class="keyword">SELECT</span> 课程号 <span class="keyword">FROM</span> 选课 <span class="keyword">WHERE</span> 成绩 <span class="keyword">IS</span> <span class="keyword">NULL</span>)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> 课程号</span><br></pre></td></tr></table></figure>
+
+<h3 id="02-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"><a href="#02-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。" class="headerlink" title="02.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"></a>02.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。</h3><p>列出最少选修了三门课程的学生姓名。正确的SQL语句是</p>
+<p>图片如上所示</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 姓名　<span class="keyword">FROM</span> 学生　<span class="keyword">WHERE</span> 学号 <span class="keyword">IN</span>　</span><br><span class="line">(<span class="keyword">SELECT</span> 学号　<span class="keyword">FROM</span> 选课　<span class="keyword">GROUP</span> <span class="keyword">BY</span> 学号　<span class="keyword">HAVING</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="operator">&gt;=</span> <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="03-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"><a href="#03-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。" class="headerlink" title="03.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"></a>03.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。</h3><p>查询缺成绩的学生名及课程号。正确的SQL语句是</p>
+<p><img src="https://img-blog.csdnimg.cn/26c14ddd06ce40bb91c54c036c04ce18.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG92ZSA2,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 姓名，课程号 <span class="keyword">FROM</span> 学生，选课 <span class="keyword">WHERE</span> 学生.学号<span class="operator">=</span>选课.学号 <span class="keyword">AND</span> 成绩 <span class="keyword">IS</span> <span class="keyword">NULL</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="04-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"><a href="#04-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。" class="headerlink" title="04.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"></a>04.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。</h3><p>查询1996年出生的学生姓名及其秋季所修课程的课程号及成绩。正确的SQL语句是</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 姓名，课程号，成绩 <span class="keyword">FROM</span> 学生，选课，课程 <span class="keyword">WHERE</span> 学生.学号<span class="operator">=</span>选课.学号 <span class="keyword">AND</span> 选课.课程号<span class="operator">=</span>课程.课程号 <span class="keyword">AND</span> <span class="keyword">Year</span>(出生日期)<span class="operator">=</span><span class="number">1996</span> <span class="keyword">AND</span> 开课学期<span class="operator">=</span>’秋’</span><br></pre></td></tr></table></figure>
+
+<h3 id="05-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"><a href="#05-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。" class="headerlink" title="05.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"></a>05.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。</h3><p><img src="https://img-blog.csdnimg.cn/9c2aed7fa5b74fc9b69def057c6812d9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG92ZSA2,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"></p>
+<p>求既学过“1001”号课，又学过“2002”号课的所有学生的学号。正确的SQL语句是</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> 学号　<span class="keyword">FROM</span> 选课　<span class="keyword">WHERE</span> 课号＝‘<span class="number">1001</span>’ <span class="keyword">AND</span></span><br><span class="line">学号 <span class="keyword">IN</span>　(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> 学号　<span class="keyword">FROM</span> 选课　<span class="keyword">WHERE</span> 课号＝‘<span class="number">2002</span>’ )</span><br></pre></td></tr></table></figure>
+
+<p>我的想法是：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 学号 <span class="keyword">FROM</span> 选课 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 学号 <span class="keyword">HAVING</span> 课号 <span class="operator">=</span><span class="operator">=</span> ‘<span class="number">1001</span>’ <span class="keyword">AND</span> 课号 <span class="operator">=</span><span class="operator">=</span> ‘<span class="number">2002</span>’</span><br></pre></td></tr></table></figure>
+
+<h3 id="06-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"><a href="#06-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。" class="headerlink" title="06.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"></a>06.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。</h3><p>列出各门课的平均成绩、最高成绩、最低成绩和选课人数。正确的SQL语句是</p>
+<p>图片如上所示</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 课号，<span class="built_in">AVG</span>(成绩)，<span class="built_in">MAX</span>(成绩)，<span class="built_in">MIN</span>(成绩)，<span class="built_in">COUNT</span>(学号)　</span><br><span class="line"><span class="keyword">FROM</span> 选课　<span class="keyword">GROUP</span> <span class="keyword">BY</span> 课号</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语口语02</title>
+    <url>/2022/07/06/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD02/</url>
+    <content><![CDATA[<h1 id="英语口语02"><a href="#英语口语02" class="headerlink" title="英语口语02"></a>英语口语02</h1><h3 id="精算能力"><a href="#精算能力" class="headerlink" title="精算能力"></a>精算能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math can be helpful for balancing your budget,</span><br><span class="line">because...</span><br><span class="line">you will have a good understanding of how to make sure that </span><br><span class="line">your costs are less than the money you have</span><br></pre></td></tr></table></figure>
+
+<p>balancing your budget 平衡收支</p>
+<p>your costs are less than the money you have 收入大于支出</p>
+<h3 id="入不敷出"><a href="#入不敷出" class="headerlink" title="入不敷出"></a>入不敷出</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">People who are terrible at math are likely to go into debt</span><br><span class="line">because...</span><br><span class="line">they don&#x27;t know how much money they have versus how much money they spent.</span><br></pre></td></tr></table></figure>
+
+<p>go into debt 负债</p>
+<h3 id="满足好奇心"><a href="#满足好奇心" class="headerlink" title="满足好奇心"></a>满足好奇心</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Science feeds the natural curiosity,</span><br><span class="line"></span><br><span class="line">for example...</span><br><span class="line"></span><br><span class="line">The curiosity of uncovering why the sun sets in the west,</span><br><span class="line"></span><br><span class="line">why the sky is blue,how fish breathes in water</span><br><span class="line"></span><br><span class="line">and other everyday scenarios</span><br></pre></td></tr></table></figure>
+
+<p>natural curiosity 好奇心</p>
+<p>sun sets in the west 日落西山</p>
+<p>everyday scenarios 日常场景</p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
       </tags>
   </entry>
   <entry>
@@ -663,12 +692,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p>没有吃饭</p>
-]]></content>
-  </entry>
-  <entry>
     <title>英语口语03</title>
     <url>/2022/07/12/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD03/</url>
     <content><![CDATA[<h1 id="英语口语03"><a href="#英语口语03" class="headerlink" title="英语口语03"></a>英语口语03</h1><h3 id="精力充沛"><a href="#精力充沛" class="headerlink" title="精力充沛"></a>精力充沛</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i will try to get into the routine of getting up early in the morning and go to bed</span><br><span class="line">early at night,</span><br><span class="line">so that...</span><br><span class="line">i will have a better sleeping pattern which enables me to be more energetic throughtout the day</span><br></pre></td></tr></table></figure>
@@ -680,29 +703,6 @@
 <p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
 <p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
 <p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语口语02</title>
-    <url>/2022/07/06/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD02/</url>
-    <content><![CDATA[<h1 id="英语口语02"><a href="#英语口语02" class="headerlink" title="英语口语02"></a>英语口语02</h1><h3 id="精算能力"><a href="#精算能力" class="headerlink" title="精算能力"></a>精算能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math can be helpful for balancing your budget,</span><br><span class="line">because...</span><br><span class="line">you will have a good understanding of how to make sure that </span><br><span class="line">your costs are less than the money you have</span><br></pre></td></tr></table></figure>
-
-<p>balancing your budget 平衡收支</p>
-<p>your costs are less than the money you have 收入大于支出</p>
-<h3 id="入不敷出"><a href="#入不敷出" class="headerlink" title="入不敷出"></a>入不敷出</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">People who are terrible at math are likely to go into debt</span><br><span class="line">because...</span><br><span class="line">they don&#x27;t know how much money they have versus how much money they spent.</span><br></pre></td></tr></table></figure>
-
-<p>go into debt 负债</p>
-<h3 id="满足好奇心"><a href="#满足好奇心" class="headerlink" title="满足好奇心"></a>满足好奇心</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Science feeds the natural curiosity,</span><br><span class="line"></span><br><span class="line">for example...</span><br><span class="line"></span><br><span class="line">The curiosity of uncovering why the sun sets in the west,</span><br><span class="line"></span><br><span class="line">why the sky is blue,how fish breathes in water</span><br><span class="line"></span><br><span class="line">and other everyday scenarios</span><br></pre></td></tr></table></figure>
-
-<p>natural curiosity 好奇心</p>
-<p>sun sets in the west 日落西山</p>
-<p>everyday scenarios 日常场景</p>
 ]]></content>
       <categories>
         <category>口语</category>
@@ -759,6 +759,67 @@
       </tags>
   </entry>
   <entry>
+    <title>英语口语07</title>
+    <url>/2022/07/16/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD07/</url>
+    <content><![CDATA[<h1 id="英语口语07"><a href="#英语口语07" class="headerlink" title="英语口语07"></a>英语口语07</h1><h3 id="固定收入"><a href="#固定收入" class="headerlink" title="固定收入"></a>固定收入</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Most full-time employees have a fixed salaries,</span><br><span class="line">so...</span><br><span class="line">they can properly budget their money based on their expenses,</span><br><span class="line">because...</span><br><span class="line">they have a clear idea about how much to expect in their bank </span><br><span class="line">account every month.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*fixed salaries*</strong></em> <em><strong>*固定收入*</strong></em></p>
+<p><em><strong>*budget*</strong></em> <em><strong>*their*</strong></em> <em><strong>*money based on*</strong></em> <em><strong>*their*</strong></em> <em><strong>*expenses*</strong></em> <em><strong>*收支平衡*</strong></em></p>
+<p><em><strong>*how much to expect in*</strong></em> <em><strong>*their*</strong></em> <em><strong>*bank account*</strong></em> <em><strong>*收入预期*</strong></em></p>
+<p><em><strong>*注：*</strong></em></p>
+<p><em><strong>*观点+逻辑链，是最有效率的打击方法之一。*</strong></em></p>
+<p><em><strong>*逻辑中的推导（so…）, 因果（because）, 必须在平时内化语流中，刻意留意，才能在实战中屡屡打出暴击效果。*</strong></em></p>
+<h3 id="固定日程"><a href="#固定日程" class="headerlink" title="固定日程"></a>固定日程</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Full-time employees work a fixed schedule,</span><br><span class="line">for a lot of people,it is crucial to have a specific and consistent work time each day,</span><br><span class="line">because...</span><br><span class="line">it allows them to plan around their schedules,</span><br><span class="line">rather than waiting for a rotating schedule from a part-time job.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*fixed schedule*</strong></em> <em><strong>*固定日程*</strong></em></p>
+<p><em><strong>*a specific and consistent work time each day*</strong></em> <em><strong>*具体且不变的时间安排*</strong></em> </p>
+<p><em><strong>*plan around*</strong></em> <em><strong>*their*</strong></em> <em><strong>*work schedule*</strong></em><em><strong>*s 围绕工作安排来计划各种事务*</strong></em></p>
+<p><em><strong>*a rotating schedule*</strong></em> <em><strong>*多变的日程计划*</strong></em></p>
+<p><em><strong>*注：*</strong></em></p>
+<p><em><strong>*切入点，把人物带进来。*</strong></em></p>
+<p><em><strong>*张三，李四，大部分人，小部分人，*</strong></em></p>
+<p><em><strong>*只要把人物带进来，并站在他们的角度上，就有话可说。*</strong></em></p>
+<p><em><strong>*同学们参考罗翔老师的说话技巧。*</strong></em></p>
+<p><em><strong>*It*</strong></em><em><strong>*’*</strong></em><em><strong>*s crucial…+because it allows…, 是实战价值非常强悍的框架。*</strong></em></p>
+<p><em><strong>*最后rather than+名词或从句，也是出战率非常高的句式。*</strong></em></p>
+<h3 id="懈怠"><a href="#懈怠" class="headerlink" title="懈怠"></a>懈怠</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if we don&#x27;t like we work,</span><br><span class="line">it&#x27;s easy for us to be drawn to the things that we want to do</span><br><span class="line">like...</span><br><span class="line">scrolling TikTok,or reading music blogs,</span><br><span class="line">rather than the things we have to do,</span><br><span class="line">this tension possibly causes fatigue.</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语口语06</title>
+    <url>/2022/07/15/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD06/</url>
+    <content><![CDATA[<h1 id="英语口语06"><a href="#英语口语06" class="headerlink" title="英语口语06"></a>英语口语06</h1><h3 id="朝九晚五"><a href="#朝九晚五" class="headerlink" title="朝九晚五"></a>朝九晚五</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">the dark side of 9-5 job is that</span><br><span class="line">you&#x27;re exchanging your time for money,</span><br><span class="line">like...</span><br><span class="line">you spent an hour at your job,you get paied for that hour,</span><br><span class="line">for example,</span><br><span class="line">you could work your ass off,like...80 hours a week and make a certain</span><br><span class="line">amount of money...</span><br><span class="line">the problem is...</span><br><span class="line">next week you want to make that same amount,</span><br><span class="line">you still have to spend 80 hours a week.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：概念落地+例证说明，潇洒利落，层次分明。*</strong></em></p>
+<p><em><strong>*如果你不赞同这个观点，你也可以拿他当一个返利，比如，啊，有些人说朝九晚五不行，他们的逻辑是….但我认为…*</strong></em></p>
+<p><em><strong>*口语中，拿自己不赞同的观点开刷，是非常聪明的打法。*</strong></em></p>
+<h3 id="大负翁"><a href="#大负翁" class="headerlink" title="大负翁"></a>大负翁</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Many bussiness owners end up in debt,</span><br><span class="line">because...</span><br><span class="line">they are struggling to keep the personal finances afloat</span><br><span class="line">while running a business which is not yet making money.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：短小精悍，犀利非常。*</strong></em></p>
+<p><em><strong>*特别是后面逻辑链中的长句，宛若美酒，越品越香。*</strong></em></p>
+<p><em><strong>*while代表伴随动作，同时发生。*</strong></em></p>
+<p><em><strong>*which引导从句，修饰business.*</strong></em></p>
+<h3 id="利滚利"><a href="#利滚利" class="headerlink" title="利滚利"></a>利滚利</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Debt feels free when you are swipping your card,</span><br><span class="line">but it is a illusion,</span><br><span class="line">because...</span><br><span class="line">the higher the interest rate, the more you&#x27;ll end up paying for the debt,</span><br><span class="line">Also,the longer it takes you to pay off the debt,the more interest you&#x27;ll pay.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：这个框架非常好，攻击力强悍霸道。*</strong></em></p>
+<p><em><strong>*后面自带两个比较级，组成长句，更是威力非凡。*</strong></em></p>
+<p><em><strong>*请注意此语流中的用词，细细体会。*</strong></em></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英语口语08</title>
     <url>/2022/07/18/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD08/</url>
     <content><![CDATA[<h1 id="英语口语08"><a href="#英语口语08" class="headerlink" title="英语口语08"></a>英语口语08</h1><h3 id="处世态度不同"><a href="#处世态度不同" class="headerlink" title="处世态度不同"></a>处世态度不同</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">There has always been a diffrence in attitude betwen the younger and</span><br><span class="line">older generations.</span><br><span class="line">because...</span><br><span class="line">Everyone wants to live and behave in his own way,no one wants to</span><br><span class="line">compromise with his or her values and views,</span><br><span class="line">and over time,</span><br><span class="line">the attitude has agumented the gernerations gap.</span><br><span class="line">and it is wider day-by-day</span><br></pre></td></tr></table></figure>
@@ -797,57 +858,45 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语06</title>
-    <url>/2022/07/15/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD06/</url>
-    <content><![CDATA[<h1 id="英语口语06"><a href="#英语口语06" class="headerlink" title="英语口语06"></a>英语口语06</h1><h3 id="朝九晚五"><a href="#朝九晚五" class="headerlink" title="朝九晚五"></a>朝九晚五</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">the dark side of 9-5 job is that</span><br><span class="line">you&#x27;re exchanging your time for money,</span><br><span class="line">like...</span><br><span class="line">you spent an hour at your job,you get paied for that hour,</span><br><span class="line">for example,</span><br><span class="line">you could work your ass off,like...80 hours a week and make a certain</span><br><span class="line">amount of money...</span><br><span class="line">the problem is...</span><br><span class="line">next week you want to make that same amount,</span><br><span class="line">you still have to spend 80 hours a week.</span><br></pre></td></tr></table></figure>
+    <title>英语口语09</title>
+    <url>/2022/07/20/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD09/</url>
+    <content><![CDATA[<h1 id="英语口语09"><a href="#英语口语09" class="headerlink" title="英语口语09"></a>英语口语09</h1><h3 id="钱财安身"><a href="#钱财安身" class="headerlink" title="钱财安身"></a>钱财安身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Money can buy the security and safety for yourself and your loved ones,</span><br><span class="line">because...</span><br><span class="line">Human beings needs money to pay for all the things that make your life</span><br><span class="line">possible.</span><br><span class="line">such as...</span><br><span class="line">shelter,food,healthcare,and a good education</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*注：概念落地+例证说明，潇洒利落，层次分明。*</strong></em></p>
-<p><em><strong>*如果你不赞同这个观点，你也可以拿他当一个返利，比如，啊，有些人说朝九晚五不行，他们的逻辑是….但我认为…*</strong></em></p>
-<p><em><strong>*口语中，拿自己不赞同的观点开刷，是非常聪明的打法。*</strong></em></p>
-<h3 id="大负翁"><a href="#大负翁" class="headerlink" title="大负翁"></a>大负翁</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Many bussiness owners end up in debt,</span><br><span class="line">because...</span><br><span class="line">they are struggling to keep the personal finances afloat</span><br><span class="line">while running a business which is not yet making money.</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*注：短小精悍，犀利非常。*</strong></em></p>
-<p><em><strong>*特别是后面逻辑链中的长句，宛若美酒，越品越香。*</strong></em></p>
-<p><em><strong>*while代表伴随动作，同时发生。*</strong></em></p>
-<p><em><strong>*which引导从句，修饰business.*</strong></em></p>
-<h3 id="利滚利"><a href="#利滚利" class="headerlink" title="利滚利"></a>利滚利</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Debt feels free when you are swipping your card,</span><br><span class="line">but it is a illusion,</span><br><span class="line">because...</span><br><span class="line">the higher the interest rate, the more you&#x27;ll end up paying for the debt,</span><br><span class="line">Also,the longer it takes you to pay off the debt,the more interest you&#x27;ll pay.</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*注：这个框架非常好，攻击力强悍霸道。*</strong></em></p>
-<p><em><strong>*后面自带两个比较级，组成长句，更是威力非凡。*</strong></em></p>
-<p><em><strong>*请注意此语流中的用词，细细体会。*</strong></em></p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语口语07</title>
-    <url>/2022/07/16/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD07/</url>
-    <content><![CDATA[<h1 id="英语口语07"><a href="#英语口语07" class="headerlink" title="英语口语07"></a>英语口语07</h1><h3 id="固定收入"><a href="#固定收入" class="headerlink" title="固定收入"></a>固定收入</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Most full-time employees have a fixed salaries,</span><br><span class="line">so...</span><br><span class="line">they can properly budget their money based on their expenses,</span><br><span class="line">because...</span><br><span class="line">they have a clear idea about how much to expect in their bank </span><br><span class="line">account every month.</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*fixed salaries*</strong></em> <em><strong>*固定收入*</strong></em></p>
-<p><em><strong>*budget*</strong></em> <em><strong>*their*</strong></em> <em><strong>*money based on*</strong></em> <em><strong>*their*</strong></em> <em><strong>*expenses*</strong></em> <em><strong>*收支平衡*</strong></em></p>
-<p><em><strong>*how much to expect in*</strong></em> <em><strong>*their*</strong></em> <em><strong>*bank account*</strong></em> <em><strong>*收入预期*</strong></em></p>
+<p><em><strong>*security and safety*</strong></em> 安全感</p>
+<p><em><strong>*all the things that make your life possible*</strong></em> <em><strong>*刚需*</strong></em></p>
+<p><em><strong>*shelter, food, healthcare, and a good education*</strong></em> <em><strong>*基本需求*</strong></em></p>
 <p><em><strong>*注：*</strong></em></p>
-<p><em><strong>*观点+逻辑链，是最有效率的打击方法之一。*</strong></em></p>
-<p><em><strong>*逻辑中的推导（so…）, 因果（because）, 必须在平时内化语流中，刻意留意，才能在实战中屡屡打出暴击效果。*</strong></em></p>
-<h3 id="固定日程"><a href="#固定日程" class="headerlink" title="固定日程"></a>固定日程</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Full-time employees work a fixed schedule,</span><br><span class="line">for a lot of people,it is crucial to have a specific and consistent work time each day,</span><br><span class="line">because...</span><br><span class="line">it allows them to plan around their schedules,</span><br><span class="line">rather than waiting for a rotating schedule from a part-time job.</span><br></pre></td></tr></table></figure>
+<p><em><strong>*例证有两种打法，最简单的一种就是名词摆放，直接将名词列举出来。*</strong></em></p>
+<p><em><strong>*比如别人问你，你为什么喜欢你的工作，*</strong></em></p>
+<p><em><strong>*你可以直接把工作的福利摆出来，*</strong></em></p>
+<p><em><strong>*这是最简单直接的打法，在无话可说的时候，非常实用。*</strong></em></p>
+<p><em><strong>*在这个语流中，如果仔细观察，三个词伙，其实是不断的递进和具象化，将一个概念不断地落地。*</strong></em></p>
+<h3 id="贫穷的陷阱"><a href="#贫穷的陷阱" class="headerlink" title="贫穷的陷阱"></a>贫穷的陷阱</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">most people have a hard time differentiating &#x27;wants&#x27; and &#x27;needs&#x27;,</span><br><span class="line">i mean...</span><br><span class="line">they use a word &#x27;needs&#x27; for almost everything they purchase,</span><br><span class="line">causing them have to actually believe that they &#x27;have to&#x27; spend money.</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*fixed schedule*</strong></em> <em><strong>*固定日程*</strong></em></p>
-<p><em><strong>*a specific and consistent work time each day*</strong></em> <em><strong>*具体且不变的时间安排*</strong></em> </p>
-<p><em><strong>*plan around*</strong></em> <em><strong>*their*</strong></em> <em><strong>*work schedule*</strong></em><em><strong>*s 围绕工作安排来计划各种事务*</strong></em></p>
-<p><em><strong>*a rotating schedule*</strong></em> <em><strong>*多变的日程计划*</strong></em></p>
+<p><em><strong>*have a hard time differentiating “wants” and “needs”*</strong></em> </p>
+<p><em><strong>*分不清刚需和欲望*</strong></em></p>
+<p><em><strong>*use the word ‘need’ for almost everything they purchase*</strong></em></p>
+<p><em><strong>*购物癖*</strong></em></p>
 <p><em><strong>*注：*</strong></em></p>
-<p><em><strong>*切入点，把人物带进来。*</strong></em></p>
-<p><em><strong>*张三，李四，大部分人，小部分人，*</strong></em></p>
-<p><em><strong>*只要把人物带进来，并站在他们的角度上，就有话可说。*</strong></em></p>
-<p><em><strong>*同学们参考罗翔老师的说话技巧。*</strong></em></p>
-<p><em><strong>*It*</strong></em><em><strong>*’*</strong></em><em><strong>*s crucial…+because it allows…, 是实战价值非常强悍的框架。*</strong></em></p>
-<p><em><strong>*最后rather than+名词或从句，也是出战率非常高的句式。*</strong></em></p>
-<h3 id="懈怠"><a href="#懈怠" class="headerlink" title="懈怠"></a>懈怠</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if we don&#x27;t like we work,</span><br><span class="line">it&#x27;s easy for us to be drawn to the things that we want to do</span><br><span class="line">like...</span><br><span class="line">scrolling TikTok,or reading music blogs,</span><br><span class="line">rather than the things we have to do,</span><br><span class="line">this tension possibly causes fatigue.</span><br></pre></td></tr></table></figure>
+<p><em><strong>*三个非常重要的句式，核心词替换都非常方便*</strong></em></p>
+<p><em><strong>*Have hard time doing sth*</strong></em></p>
+<p><em><strong>*Use the word*</strong></em> <em><strong>*“*</strong></em><em><strong>*A*</strong></em> <em><strong>*”*</strong></em> <em><strong>*for sth*</strong></em></p>
+<p><em><strong>*Causing+从句，引导一个原因*</strong></em></p>
+<p><em><strong>*在背诵的时候，可以从这三个句式开始。*</strong></em></p>
+<p><em><strong>*值得注意的是，这个语流中，有文字游戏的意味，这种技法非常高明。*</strong></em></p>
+<h3 id="财务能力"><a href="#财务能力" class="headerlink" title="财务能力"></a>财务能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Poor financial education have a long-lasting impact on individuals and</span><br><span class="line">their families.</span><br><span class="line">the financial education can make a difference.</span><br><span class="line">because...</span><br><span class="line">it can equal you with the knowledge,skills,confidence to </span><br><span class="line">take charge of your life.</span><br><span class="line">and build a more secure future for yourself and your families.</span><br></pre></td></tr></table></figure>
+
+<h3 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">people lose money in stock market because they think the investing is</span><br><span class="line">the ticket to getting rich quickly.</span><br><span class="line">for example...</span><br><span class="line">they see wealthy day traders show off money and fancy cars...</span><br><span class="line">and they think it&#x27;s money.</span><br><span class="line">but the 99% of time they lose money following them,</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*The*</strong></em> <em><strong>*ticket to getting rich quickly*</strong></em> <em><strong>*一夜暴富*</strong></em></p>
+<p><em><strong>*wealthy day traders*</strong></em> <em><strong>*短线炒家*</strong></em></p>
+<p><em><strong>*easy money*</strong></em> <em><strong>*很容易赚的钱*</strong></em></p>
+<p><em><strong>*注：*</strong></em></p>
+<p><em><strong>*贪心，单单整个人性，已经可以解决很多问题。*</strong></em></p>
+<p><em><strong>*只要你了解人性，你就永远有话可说。*</strong></em></p>
+<p><em><strong>*在这个语流中，关于投资的三个很重要的词伙，凝结在了一起。*</strong></em></p>
+<p><em><strong>*当我们在记忆语流时，也就连锁记忆了词伙，一举两得。*</strong></em></p>
+<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">演绎以下一分钟三十秒的语流，训练节奏和气息</span><br><span class="line">在不改变词伙的情况下，自己可以改动一些句子和单词，不必拘泥</span><br><span class="line">重在开口练习，不要纠结，放开其他东西。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Describe the important decision you made recently.</span><br><span class="line"></span><br><span class="line">I used to be a shy person who would feel depressed all the time...</span><br><span class="line">I think the main reason is because </span><br><span class="line">I cared too much about what people think.</span><br><span class="line">so i made the decision couple of years ago</span><br><span class="line">decided that... </span><br><span class="line">i wanna be a guy who has more confidence in his judgments </span><br><span class="line">and feels more alive.</span><br><span class="line">and one of my friends told me that </span><br><span class="line">to achieve that goal, </span><br><span class="line">I need do things that are out of my comfort zone...</span><br><span class="line">So that I will learn to overcome my fears,</span><br><span class="line">for example...</span><br><span class="line">I will likely find that I care less about what people think</span><br><span class="line">and about what could go wrong.</span><br><span class="line">and...</span><br><span class="line">in order to feel to feel alive,</span><br><span class="line">I need to do things that make me feel uncomfortable,</span><br><span class="line">because...</span><br><span class="line">as human beings,</span><br><span class="line">we become who we are through challenges.</span><br><span class="line">for example...</span><br><span class="line">all successful people have taken risks, failed and picked themselves up,</span><br><span class="line">because they believe that those who never venture far </span><br><span class="line">will never know what might have been if they had tired to do things beyond what they had already mastered.</span><br><span class="line"></span><br><span class="line">逆推：</span><br><span class="line">Describe a piece of advice you received ...</span><br><span class="line">describe the important lesson you learned in high school...</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
