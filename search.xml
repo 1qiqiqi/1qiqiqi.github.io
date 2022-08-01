@@ -361,9 +361,25 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>Python文件基础</title>
     <url>/2022/08/01/python%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="Python文件基础"><a href="#Python文件基础" class="headerlink" title="Python文件基础"></a>Python文件基础</h1><h2 id="关于文件的几点注意事项"><a href="#关于文件的几点注意事项" class="headerlink" title="关于文件的几点注意事项"></a>关于文件的几点注意事项</h2><h3 id="1-文件对象属性"><a href="#1-文件对象属性" class="headerlink" title="1.文件对象属性"></a>1.文件对象属性</h3><p>打开一个文件后，得到一个文件对象fp，通过它可以获得与该文件相关的各种信息。以下是与文件对象相关的所有属性。<br>· fp.closed：如果文件已被关闭，则返回True；否则返回False。<br>· fp.mode：打开文件的模式。<br>· fp.name：得到已被打开的文件的文件名。</p>
+<h3 id="2-列表中出现字符串“-ufeff”及其解决方案"><a href="#2-列表中出现字符串“-ufeff”及其解决方案" class="headerlink" title="2.列表中出现字符串“\ufeff”及其解决方案"></a>2.列表中出现字符串“\ufeff”及其解决方案</h3><p>举例36：\ufeff问题及其解决办法。<br>上述程序打开一个示例文件，但从结果中发现，在读取的内容中出现了\ufeff，而真正的文件内容是从“你好”开始的。<br>解决办法如下：<br>从上述改进后的程序中可以看出，解决\ufeff问题的关键在于通过utf-8-sig编码格式对字符串进行转码：decode(‘utf-8-sig’)。<br>由此得到启发，如果在打开文件时直接采用utf-8-sig编码格式，那么能不能解决这个乱码问题？答案是令人惊喜的，请看：<br>真的解决了！这是为什么呢？<br>实际上，需要从以下两种编码格式的本质加以阐述。<br>（1）UTF-8编码。它以字节为编码单元，字节顺序在所有系统中都相同，不存在字节序的问题，因此它并不需要字节序标记（Byte Order Mark，BOM）。<br>（2）utf-8-sig编码。<strong>它是一种带BOM的UTF-8编码格式</strong>，存在字节序的问题，必须带BOM以标识字节序，而BOM即字符U+FEFF。<strong>从Unicode 3.2开始，U+FEFF只能出现在字节流的开头</strong>，只能用于标识字节序。由此可知，列表中的字符串“\ufeff”并不是乱码，而是由于编码格式不一致才出现的。</p>
+<h2 id="利用Pygal模块对JSON格式的数据进行可视化"><a href="#利用Pygal模块对JSON格式的数据进行可视化" class="headerlink" title="利用Pygal模块对JSON格式的数据进行可视化"></a>利用Pygal模块对JSON格式的数据进行可视化</h2><p>[参考文档](<a href="https://zhuanlan.zhihu.com/p/341450079">Pygal，可导出矢量图的Python可视化利器 - 知乎 (zhihu.com)</a>)</p>
+<h3 id="安装并导入Pygal"><a href="#安装并导入Pygal" class="headerlink" title="安装并导入Pygal"></a>安装并导入Pygal</h3><p>使用pip或者conda进行安装，在命令行输入：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install pygal</span><br></pre></td></tr></table></figure>
+
+<h3 id="雷达图"><a href="#雷达图" class="headerlink" title="雷达图"></a>雷达图</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">radar_chart = pygal.Radar()</span><br><span class="line">radar_chart.title = <span class="string">&#x27;V8 benchmark results&#x27;</span></span><br><span class="line">radar_chart.x_labels = [<span class="string">&#x27;Richards&#x27;</span>, <span class="string">&#x27;DeltaBlue&#x27;</span>, <span class="string">&#x27;Crypto&#x27;</span>, <span class="string">&#x27;RayTrace&#x27;</span>, <span class="string">&#x27;EarleyBoyer&#x27;</span>, <span class="string">&#x27;RegExp&#x27;</span>, <span class="string">&#x27;Splay&#x27;</span>, <span class="string">&#x27;NavierStokes&#x27;</span>]</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Chrome&#x27;</span>, [<span class="number">6395</span>, <span class="number">8212</span>, <span class="number">7520</span>, <span class="number">7218</span>, <span class="number">12464</span>, <span class="number">1660</span>, <span class="number">2123</span>, <span class="number">8607</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Firefox&#x27;</span>, [<span class="number">7473</span>, <span class="number">8099</span>, <span class="number">11700</span>, <span class="number">2651</span>, <span class="number">6361</span>, <span class="number">1044</span>, <span class="number">3797</span>, <span class="number">9450</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Opera&#x27;</span>, [<span class="number">3472</span>, <span class="number">2933</span>, <span class="number">4203</span>, <span class="number">5229</span>, <span class="number">5810</span>, <span class="number">1828</span>, <span class="number">9013</span>, <span class="number">4669</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;IE&#x27;</span>, [<span class="number">43</span>, <span class="number">41</span>, <span class="number">59</span>, <span class="number">79</span>, <span class="number">144</span>, <span class="number">136</span>, <span class="number">34</span>, <span class="number">102</span>])</span><br><span class="line">radar_chart.render()</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<p><img src="https://s2.loli.net/2022/08/01/zxv9W8fr71P3ew6.png" alt="image-20220801102051712"></p>
+]]></content>
+      <categories>
+        <category>python基础</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
+      </tags>
   </entry>
   <entry>
     <title>二叉树的递归遍历_二叉树04</title>
