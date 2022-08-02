@@ -123,6 +123,25 @@
       </tags>
   </entry>
   <entry>
+    <title>SMMS照片下载至压缩包</title>
+    <url>/2022/08/02/SMMS%E7%85%A7%E7%89%87%E4%B8%8B%E8%BD%BD%E8%87%B3%E5%8E%8B%E7%BC%A9%E5%8C%85/</url>
+    <content><![CDATA[<h1 id="SMMS照片下载至压缩包"><a href="#SMMS照片下载至压缩包" class="headerlink" title="SMMS照片下载至压缩包"></a>SMMS照片下载至压缩包</h1><p>进入下面的地址</p>
+<p><img src="https://s2.loli.net/2022/08/02/TgvbkMdXDUpWPqw.png" alt="image-20220802090045671"></p>
+<p>按F12，打开调式器，在控制台输入以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*</span><br><span class="line"> * @?: *********************************************************************</span><br><span class="line"> * @Author: Weidows</span><br><span class="line"> * @Date: 2021-07-07 20:30:59</span><br><span class="line"> * @LastEditors: Weidows</span><br><span class="line"> * @LastEditTime: 2021-07-09 00:05:15</span><br><span class="line"> * @FilePath: \awesome-image-collector\implements\SM.MS-collector.js</span><br><span class="line"> * @Description:</span><br><span class="line"> * @!: *********************************************************************</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">(async () =&gt; &#123;</span><br><span class="line">  // 引入库函数</span><br><span class="line">  const jsZip = document.createElement(&quot;script&quot;),</span><br><span class="line">    collector = document.createElement(&quot;script&quot;);</span><br><span class="line">  jsZip.src = &quot;https://cdn.bootcdn.net/ajax/libs/jszip/3.5.0/jszip.min.js&quot;;</span><br><span class="line">  collector.src =</span><br><span class="line">    &quot;https://cdn.jsdelivr.net/gh/Weidows-projects/awesome-image-collector@master/dist/collector.min.js&quot;;</span><br><span class="line">  document</span><br><span class="line">    .getElementsByTagName(&quot;head&quot;)[0]</span><br><span class="line">    .appendChild(jsZip)</span><br><span class="line">    .appendChild(collector);</span><br><span class="line"></span><br><span class="line">  await Promise.all([</span><br><span class="line">    new Promise(resolve =&gt; jsZip.onload = () =&gt; window.JSZip &amp;&amp; resolve()),</span><br><span class="line">    new Promise(resolve =&gt; collector.onload = () =&gt; window.start &amp;&amp; resolve()),</span><br><span class="line">  ]);</span><br><span class="line">  smmsCollector();</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">// ======================== 添加样式 ========================</span><br><span class="line">function smmsCollector() &#123;</span><br><span class="line">  // 下载图片按钮 (不主动下载,按按钮时才下载)</span><br><span class="line">  let downloadButton = document.createElement(&quot;button&quot;);</span><br><span class="line">  downloadButton.type = &quot;button&quot;;</span><br><span class="line">  downloadButton.innerText = &quot;下载本页面图片&quot;;</span><br><span class="line">  downloadButton.style.width = &quot;100%&quot;;</span><br><span class="line">  downloadButton.addEventListener(&quot;click&quot;, function () &#123;</span><br><span class="line">    // 调用入口函数</span><br><span class="line">    start(document.getElementsByClassName(&quot;fancybox&quot;));</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // 全选CheckBox按钮</span><br><span class="line">  let deleteButton = document.createElement(&quot;button&quot;);</span><br><span class="line">  deleteButton.type = &quot;button&quot;;</span><br><span class="line">  deleteButton.innerHTML = &quot;全选CheckBox按钮&quot;;</span><br><span class="line">  deleteButton.style.width = &quot;100%&quot;;</span><br><span class="line">  deleteButton.addEventListener(&quot;click&quot;, function () &#123;</span><br><span class="line">    let checkBoxes = document.getElementsByClassName(&quot;filedelete&quot;);</span><br><span class="line">    for (const checkbox of checkBoxes) &#123;</span><br><span class="line">      checkbox.checked = !checkbox.checked;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // 创建标签</span><br><span class="line">  let downloadLi = document.createElement(&quot;li&quot;);</span><br><span class="line">  let deleteLi = document.createElement(&quot;li&quot;);</span><br><span class="line">  downloadLi.id = &quot;downloader&quot;;</span><br><span class="line">  deleteLi.id = &quot;deleter&quot;;</span><br><span class="line">  downloadLi.appendChild(downloadButton);</span><br><span class="line">  deleteLi.appendChild(deleteButton);</span><br><span class="line"></span><br><span class="line">  // 追加标签</span><br><span class="line">  if (document.getElementById(&quot;downloader&quot;) == null) &#123;</span><br><span class="line">    document</span><br><span class="line">      .getElementsByClassName(&quot;sidebar-menu tree&quot;)[0]</span><br><span class="line">      .appendChild(downloadLi);</span><br><span class="line">    document</span><br><span class="line">      .getElementsByClassName(&quot;sidebar-menu tree&quot;)[0]</span><br><span class="line">      .appendChild(deleteLi);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>此时页面显示：</p>
+<p><img src="https://s2.loli.net/2022/08/02/eWQDy4ldmNXxzvb.png" alt="image-20220802090338705"></p>
+<p>就可以了</p>
+]]></content>
+      <categories>
+        <category>安装教程</category>
+      </categories>
+      <tags>
+        <tag>安装教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2022/06/22/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -242,27 +261,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python文件基础</title>
-    <url>/2022/08/01/python%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="Python文件基础"><a href="#Python文件基础" class="headerlink" title="Python文件基础"></a>Python文件基础</h1><h2 id="关于文件的几点注意事项"><a href="#关于文件的几点注意事项" class="headerlink" title="关于文件的几点注意事项"></a>关于文件的几点注意事项</h2><h3 id="1-文件对象属性"><a href="#1-文件对象属性" class="headerlink" title="1.文件对象属性"></a>1.文件对象属性</h3><p>打开一个文件后，得到一个文件对象fp，通过它可以获得与该文件相关的各种信息。以下是与文件对象相关的所有属性。<br>· fp.closed：如果文件已被关闭，则返回True；否则返回False。<br>· fp.mode：打开文件的模式。<br>· fp.name：得到已被打开的文件的文件名。</p>
-<h3 id="2-列表中出现字符串“-ufeff”及其解决方案"><a href="#2-列表中出现字符串“-ufeff”及其解决方案" class="headerlink" title="2.列表中出现字符串“\ufeff”及其解决方案"></a>2.列表中出现字符串“\ufeff”及其解决方案</h3><p>举例36：\ufeff问题及其解决办法。<br>上述程序打开一个示例文件，但从结果中发现，在读取的内容中出现了\ufeff，而真正的文件内容是从“你好”开始的。<br>解决办法如下：<br>从上述改进后的程序中可以看出，解决\ufeff问题的关键在于通过utf-8-sig编码格式对字符串进行转码：decode(‘utf-8-sig’)。<br>由此得到启发，如果在打开文件时直接采用utf-8-sig编码格式，那么能不能解决这个乱码问题？答案是令人惊喜的，请看：<br>真的解决了！这是为什么呢？<br>实际上，需要从以下两种编码格式的本质加以阐述。<br>（1）UTF-8编码。它以字节为编码单元，字节顺序在所有系统中都相同，不存在字节序的问题，因此它并不需要字节序标记（Byte Order Mark，BOM）。<br>（2）utf-8-sig编码。<strong>它是一种带BOM的UTF-8编码格式</strong>，存在字节序的问题，必须带BOM以标识字节序，而BOM即字符U+FEFF。<strong>从Unicode 3.2开始，U+FEFF只能出现在字节流的开头</strong>，只能用于标识字节序。由此可知，列表中的字符串“\ufeff”并不是乱码，而是由于编码格式不一致才出现的。</p>
-<h2 id="利用Pygal模块对JSON格式的数据进行可视化"><a href="#利用Pygal模块对JSON格式的数据进行可视化" class="headerlink" title="利用Pygal模块对JSON格式的数据进行可视化"></a>利用Pygal模块对JSON格式的数据进行可视化</h2><p>[参考文档](<a href="https://zhuanlan.zhihu.com/p/341450079">Pygal，可导出矢量图的Python可视化利器 - 知乎 (zhihu.com)</a>)</p>
-<h3 id="安装并导入Pygal"><a href="#安装并导入Pygal" class="headerlink" title="安装并导入Pygal"></a>安装并导入Pygal</h3><p>使用pip或者conda进行安装，在命令行输入：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install pygal</span><br></pre></td></tr></table></figure>
-
-<h3 id="雷达图"><a href="#雷达图" class="headerlink" title="雷达图"></a>雷达图</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">radar_chart = pygal.Radar()</span><br><span class="line">radar_chart.title = <span class="string">&#x27;V8 benchmark results&#x27;</span></span><br><span class="line">radar_chart.x_labels = [<span class="string">&#x27;Richards&#x27;</span>, <span class="string">&#x27;DeltaBlue&#x27;</span>, <span class="string">&#x27;Crypto&#x27;</span>, <span class="string">&#x27;RayTrace&#x27;</span>, <span class="string">&#x27;EarleyBoyer&#x27;</span>, <span class="string">&#x27;RegExp&#x27;</span>, <span class="string">&#x27;Splay&#x27;</span>, <span class="string">&#x27;NavierStokes&#x27;</span>]</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Chrome&#x27;</span>, [<span class="number">6395</span>, <span class="number">8212</span>, <span class="number">7520</span>, <span class="number">7218</span>, <span class="number">12464</span>, <span class="number">1660</span>, <span class="number">2123</span>, <span class="number">8607</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Firefox&#x27;</span>, [<span class="number">7473</span>, <span class="number">8099</span>, <span class="number">11700</span>, <span class="number">2651</span>, <span class="number">6361</span>, <span class="number">1044</span>, <span class="number">3797</span>, <span class="number">9450</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Opera&#x27;</span>, [<span class="number">3472</span>, <span class="number">2933</span>, <span class="number">4203</span>, <span class="number">5229</span>, <span class="number">5810</span>, <span class="number">1828</span>, <span class="number">9013</span>, <span class="number">4669</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;IE&#x27;</span>, [<span class="number">43</span>, <span class="number">41</span>, <span class="number">59</span>, <span class="number">79</span>, <span class="number">144</span>, <span class="number">136</span>, <span class="number">34</span>, <span class="number">102</span>])</span><br><span class="line">radar_chart.render()</span><br></pre></td></tr></table></figure>
-
-<p>效果如下：</p>
-<p><img src="https://s2.loli.net/2022/08/01/zxv9W8fr71P3ew6.png" alt="image-20220801102051712"></p>
-]]></content>
-      <categories>
-        <category>python基础</category>
-      </categories>
-      <tags>
-        <tag>python基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python面向对象基础</title>
     <url>/2022/08/01/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="python面向对象基础"><a href="#python面向对象基础" class="headerlink" title="python面向对象基础"></a>python面向对象基础</h1><h2 id="init-方法"><a href="#init-方法" class="headerlink" title="init_()方法"></a><em>init</em>_()方法</h2><p><em>init</em><em>()方法又被称为“构造函数”，它有以下4个特性。<br>（1）该方法很特殊。init前后均有双下画线“__”，它的<u>第一个参数必须是“self”</u>，其意义同其他方法一样，而其他参数用于设置实例的属性，数量不限。该方法不能使用return语句。<br>（2）__init</em>_()方法可在类中的任何位置被定义。<br>（3）在由类创建一个新的实例时，该方法被自动调用一次。即每创建一个实例，该方法都会被调用一次。<br>（4）常用该方法定义实例的属性，但定义实例的属性不局限于该方法。换言之，在其他方法中同样可以定义实例的属性。</p>
@@ -340,25 +338,6 @@
       </categories>
       <tags>
         <tag>二叉树</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SMMS照片下载至压缩包</title>
-    <url>/2022/08/02/SMMS%E7%85%A7%E7%89%87%E4%B8%8B%E8%BD%BD%E8%87%B3%E5%8E%8B%E7%BC%A9%E5%8C%85/</url>
-    <content><![CDATA[<h1 id="SMMS照片下载至压缩包"><a href="#SMMS照片下载至压缩包" class="headerlink" title="SMMS照片下载至压缩包"></a>SMMS照片下载至压缩包</h1><p>进入下面的地址</p>
-<p><img src="https://s2.loli.net/2022/08/02/TgvbkMdXDUpWPqw.png" alt="image-20220802090045671"></p>
-<p>按F12，打开调式器，在控制台输入以下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*</span><br><span class="line"> * @?: *********************************************************************</span><br><span class="line"> * @Author: Weidows</span><br><span class="line"> * @Date: 2021-07-07 20:30:59</span><br><span class="line"> * @LastEditors: Weidows</span><br><span class="line"> * @LastEditTime: 2021-07-09 00:05:15</span><br><span class="line"> * @FilePath: \awesome-image-collector\implements\SM.MS-collector.js</span><br><span class="line"> * @Description:</span><br><span class="line"> * @!: *********************************************************************</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">(async () =&gt; &#123;</span><br><span class="line">  // 引入库函数</span><br><span class="line">  const jsZip = document.createElement(&quot;script&quot;),</span><br><span class="line">    collector = document.createElement(&quot;script&quot;);</span><br><span class="line">  jsZip.src = &quot;https://cdn.bootcdn.net/ajax/libs/jszip/3.5.0/jszip.min.js&quot;;</span><br><span class="line">  collector.src =</span><br><span class="line">    &quot;https://cdn.jsdelivr.net/gh/Weidows-projects/awesome-image-collector@master/dist/collector.min.js&quot;;</span><br><span class="line">  document</span><br><span class="line">    .getElementsByTagName(&quot;head&quot;)[0]</span><br><span class="line">    .appendChild(jsZip)</span><br><span class="line">    .appendChild(collector);</span><br><span class="line"></span><br><span class="line">  await Promise.all([</span><br><span class="line">    new Promise(resolve =&gt; jsZip.onload = () =&gt; window.JSZip &amp;&amp; resolve()),</span><br><span class="line">    new Promise(resolve =&gt; collector.onload = () =&gt; window.start &amp;&amp; resolve()),</span><br><span class="line">  ]);</span><br><span class="line">  smmsCollector();</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">// ======================== 添加样式 ========================</span><br><span class="line">function smmsCollector() &#123;</span><br><span class="line">  // 下载图片按钮 (不主动下载,按按钮时才下载)</span><br><span class="line">  let downloadButton = document.createElement(&quot;button&quot;);</span><br><span class="line">  downloadButton.type = &quot;button&quot;;</span><br><span class="line">  downloadButton.innerText = &quot;下载本页面图片&quot;;</span><br><span class="line">  downloadButton.style.width = &quot;100%&quot;;</span><br><span class="line">  downloadButton.addEventListener(&quot;click&quot;, function () &#123;</span><br><span class="line">    // 调用入口函数</span><br><span class="line">    start(document.getElementsByClassName(&quot;fancybox&quot;));</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // 全选CheckBox按钮</span><br><span class="line">  let deleteButton = document.createElement(&quot;button&quot;);</span><br><span class="line">  deleteButton.type = &quot;button&quot;;</span><br><span class="line">  deleteButton.innerHTML = &quot;全选CheckBox按钮&quot;;</span><br><span class="line">  deleteButton.style.width = &quot;100%&quot;;</span><br><span class="line">  deleteButton.addEventListener(&quot;click&quot;, function () &#123;</span><br><span class="line">    let checkBoxes = document.getElementsByClassName(&quot;filedelete&quot;);</span><br><span class="line">    for (const checkbox of checkBoxes) &#123;</span><br><span class="line">      checkbox.checked = !checkbox.checked;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // 创建标签</span><br><span class="line">  let downloadLi = document.createElement(&quot;li&quot;);</span><br><span class="line">  let deleteLi = document.createElement(&quot;li&quot;);</span><br><span class="line">  downloadLi.id = &quot;downloader&quot;;</span><br><span class="line">  deleteLi.id = &quot;deleter&quot;;</span><br><span class="line">  downloadLi.appendChild(downloadButton);</span><br><span class="line">  deleteLi.appendChild(deleteButton);</span><br><span class="line"></span><br><span class="line">  // 追加标签</span><br><span class="line">  if (document.getElementById(&quot;downloader&quot;) == null) &#123;</span><br><span class="line">    document</span><br><span class="line">      .getElementsByClassName(&quot;sidebar-menu tree&quot;)[0]</span><br><span class="line">      .appendChild(downloadLi);</span><br><span class="line">    document</span><br><span class="line">      .getElementsByClassName(&quot;sidebar-menu tree&quot;)[0]</span><br><span class="line">      .appendChild(deleteLi);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>此时页面显示：</p>
-<p><img src="https://s2.loli.net/2022/08/02/eWQDy4ldmNXxzvb.png" alt="image-20220802090338705"></p>
-<p>就可以了</p>
-]]></content>
-      <categories>
-        <category>安装教程</category>
-      </categories>
-      <tags>
-        <tag>安装教程</tag>
       </tags>
   </entry>
   <entry>
@@ -557,40 +536,6 @@
       </tags>
   </entry>
   <entry>
-    <title>赎金信_哈希表</title>
-    <url>/2022/07/22/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A805/</url>
-    <content><![CDATA[<h1 id="赎金信-哈希表"><a href="#赎金信-哈希表" class="headerlink" title="赎金信_哈希表"></a>赎金信_哈希表</h1><p><a href="https://leetcode.cn/problems/ransom-note/">力扣题目链接(opens new window)</a></p>
-<p>给定一个赎金信 (ransom) 字符串和一个杂志(magazine)字符串，判断第一个字符串 ransom 能不能由第二个字符串 magazines 里面的字符构成。如果可以构成，返回 true ；否则返回 false。</p>
-<p>(题目说明：为了不暴露赎金信字迹，要从杂志上搜索各个需要的字母，组成单词来表达意思。杂志字符串中的每个字符只能在赎金信字符串中使用一次。)</p>
-<p><strong>注意：</strong></p>
-<p>你可以假设两个字符串均只含有小写字母。</p>
-<p>canConstruct(“a”, “b”) -&gt; false<br>canConstruct(“aa”, “ab”) -&gt; false<br>canConstruct(“aa”, “aab”) -&gt; true</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这道题目和<a href="https://programmercarl.com/0242.%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html">242.有效的字母异位词 (opens new window)</a>很像，<a href="https://programmercarl.com/0242.%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html">242.有效的字母异位词 (opens new window)</a>相当于求 字符串a 和 字符串b 是否可以相互组成 ，而这道题目是求 字符串a能否组成字符串b，而不用管字符串b 能不能组成字符串a。</p>
-<p>本题判断第一个字符串ransom能不能由第二个字符串magazines里面的字符构成，但是这里需要注意两点。</p>
-<ul>
-<li>第一点“为了不暴露赎金信字迹，要从杂志上搜索各个需要的字母，组成单词来表达意思” 这里<em>说明杂志里面的字母不可重复使用。</em></li>
-<li>第二点 “你可以假设两个字符串均只含有小写字母。” <em>说明只有小写字母</em>，这一点很重要</li>
-</ul>
-<h3 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h3><p>那么第一个思路其实就是暴力枚举了，两层for循环，不断去寻找，代码如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 时间复杂度: O(n^2)</span></span><br><span class="line"><span class="comment">// 空间复杂度：O(1)</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">canConstruct</span><span class="params">(string ransomNote, string magazine)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; magazine.<span class="built_in">length</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; ransomNote.<span class="built_in">length</span>(); j++) &#123;</span><br><span class="line">                <span class="comment">// 在ransomNote中找到和magazine相同的字符</span></span><br><span class="line">                <span class="keyword">if</span> (magazine[i] == ransomNote[j]) &#123;</span><br><span class="line">                    ransomNote.<span class="built_in">erase</span>(ransomNote.<span class="built_in">begin</span>() + j); <span class="comment">// ransomNote删除这个字符</span></span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 如果ransomNote为空，则说明magazine的字符可以组成ransomNote</span></span><br><span class="line">        <span class="keyword">if</span> (ransomNote.<span class="built_in">length</span>() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>这里时间复杂度是比较高的，而且里面还有一个字符串删除也就是erase的操作，也是费时的，当然这段代码也可以过这道题。</p>
-<h3 id="哈希解法"><a href="#哈希解法" class="headerlink" title="哈希解法"></a>哈希解法</h3><p>因为题目所只有小写字母，那可以采用空间换取时间的哈希策略， 用一个长度为26的数组还记录magazine里字母出现的次数。</p>
-<p>然后再用ransomNote去验证这个数组是否包含了ransomNote所需要的所有字母。</p>
-<p>依然是数组在哈希法中的应用。</p>
-<p>一些同学可能想，用数组干啥，都用map完事了，<strong>其实在本题的情况下，使用map的空间消耗要比数组大一些的，因为map要维护红黑树或者哈希表，而且还要做哈希函数，是费时的！数据量大的话就能体现出来差别了。 所以数组更加简单直接有效！</strong></p>
-<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canConstruct</span><span class="params">(String ransomNote, String magazine)</span> &#123;</span><br><span class="line">   			<span class="type">int</span>[] nums = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">26</span>];</span><br><span class="line">   			<span class="keyword">while</span>(<span class="type">char</span> c:magazine) &#123;</span><br><span class="line">   				nums[c - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">   			&#125;</span><br><span class="line">   			<span class="keyword">while</span>(<span class="type">char</span> c:ransomNote) &#123;</span><br><span class="line">   				nums[c - <span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">   			&#125;</span><br><span class="line">   			<span class="keyword">while</span>(<span class="type">int</span> i:nums) &#123;</span><br><span class="line">   				<span class="keyword">if</span>(i&lt;<span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">   			&#125;</span><br><span class="line">   			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>哈希表</category>
-      </categories>
-      <tags>
-        <tag>哈希表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>两数之和_哈希表</title>
     <url>/2022/07/22/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A803/</url>
     <content><![CDATA[<h1 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1. 两数之和"></a>1. 两数之和</h1><p><a href="https://leetcode.cn/problems/two-sum/">力扣题目链接(opens new window)</a></p>
@@ -677,6 +622,61 @@
 <p><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20220711202638.png" alt="过程一"></p>
 <p><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20220711202708.png" alt="过程二"></p>
 <h3 id="java代码："><a href="#java代码：" class="headerlink" title="java代码："></a>java代码：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span>[] twoSum(<span class="type">int</span>[] nums, <span class="type">int</span> target) &#123;</span><br><span class="line">    	<span class="type">int</span>[] res = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">2</span>];</span><br><span class="line">		Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">    	<span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++) &#123;</span><br><span class="line">			temp = target - nums[i];</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(temp)) &#123;</span><br><span class="line">                res[<span class="number">0</span>] = i;</span><br><span class="line">                resp[<span class="number">1</span>] = map.get(temp);</span><br><span class="line">            &#125;</span><br><span class="line">			map.put(nums[i],i);</span><br><span class="line">		&#125;</span><br><span class="line">    	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>哈希表</category>
+      </categories>
+      <tags>
+        <tag>哈希表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python文件基础</title>
+    <url>/2022/08/01/python%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="Python文件基础"><a href="#Python文件基础" class="headerlink" title="Python文件基础"></a>Python文件基础</h1><h2 id="关于文件的几点注意事项"><a href="#关于文件的几点注意事项" class="headerlink" title="关于文件的几点注意事项"></a>关于文件的几点注意事项</h2><h3 id="1-文件对象属性"><a href="#1-文件对象属性" class="headerlink" title="1.文件对象属性"></a>1.文件对象属性</h3><p>打开一个文件后，得到一个文件对象fp，通过它可以获得与该文件相关的各种信息。以下是与文件对象相关的所有属性。<br>· fp.closed：如果文件已被关闭，则返回True；否则返回False。<br>· fp.mode：打开文件的模式。<br>· fp.name：得到已被打开的文件的文件名。</p>
+<h3 id="2-列表中出现字符串“-ufeff”及其解决方案"><a href="#2-列表中出现字符串“-ufeff”及其解决方案" class="headerlink" title="2.列表中出现字符串“\ufeff”及其解决方案"></a>2.列表中出现字符串“\ufeff”及其解决方案</h3><p>举例36：\ufeff问题及其解决办法。<br>上述程序打开一个示例文件，但从结果中发现，在读取的内容中出现了\ufeff，而真正的文件内容是从“你好”开始的。<br>解决办法如下：<br>从上述改进后的程序中可以看出，解决\ufeff问题的关键在于通过utf-8-sig编码格式对字符串进行转码：decode(‘utf-8-sig’)。<br>由此得到启发，如果在打开文件时直接采用utf-8-sig编码格式，那么能不能解决这个乱码问题？答案是令人惊喜的，请看：<br>真的解决了！这是为什么呢？<br>实际上，需要从以下两种编码格式的本质加以阐述。<br>（1）UTF-8编码。它以字节为编码单元，字节顺序在所有系统中都相同，不存在字节序的问题，因此它并不需要字节序标记（Byte Order Mark，BOM）。<br>（2）utf-8-sig编码。<strong>它是一种带BOM的UTF-8编码格式</strong>，存在字节序的问题，必须带BOM以标识字节序，而BOM即字符U+FEFF。<strong>从Unicode 3.2开始，U+FEFF只能出现在字节流的开头</strong>，只能用于标识字节序。由此可知，列表中的字符串“\ufeff”并不是乱码，而是由于编码格式不一致才出现的。</p>
+<h2 id="利用Pygal模块对JSON格式的数据进行可视化"><a href="#利用Pygal模块对JSON格式的数据进行可视化" class="headerlink" title="利用Pygal模块对JSON格式的数据进行可视化"></a>利用Pygal模块对JSON格式的数据进行可视化</h2><p>[参考文档](<a href="https://zhuanlan.zhihu.com/p/341450079">Pygal，可导出矢量图的Python可视化利器 - 知乎 (zhihu.com)</a>)</p>
+<h3 id="安装并导入Pygal"><a href="#安装并导入Pygal" class="headerlink" title="安装并导入Pygal"></a>安装并导入Pygal</h3><p>使用pip或者conda进行安装，在命令行输入：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install pygal</span><br></pre></td></tr></table></figure>
+
+<h3 id="雷达图"><a href="#雷达图" class="headerlink" title="雷达图"></a>雷达图</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">radar_chart = pygal.Radar()</span><br><span class="line">radar_chart.title = <span class="string">&#x27;V8 benchmark results&#x27;</span></span><br><span class="line">radar_chart.x_labels = [<span class="string">&#x27;Richards&#x27;</span>, <span class="string">&#x27;DeltaBlue&#x27;</span>, <span class="string">&#x27;Crypto&#x27;</span>, <span class="string">&#x27;RayTrace&#x27;</span>, <span class="string">&#x27;EarleyBoyer&#x27;</span>, <span class="string">&#x27;RegExp&#x27;</span>, <span class="string">&#x27;Splay&#x27;</span>, <span class="string">&#x27;NavierStokes&#x27;</span>]</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Chrome&#x27;</span>, [<span class="number">6395</span>, <span class="number">8212</span>, <span class="number">7520</span>, <span class="number">7218</span>, <span class="number">12464</span>, <span class="number">1660</span>, <span class="number">2123</span>, <span class="number">8607</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Firefox&#x27;</span>, [<span class="number">7473</span>, <span class="number">8099</span>, <span class="number">11700</span>, <span class="number">2651</span>, <span class="number">6361</span>, <span class="number">1044</span>, <span class="number">3797</span>, <span class="number">9450</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Opera&#x27;</span>, [<span class="number">3472</span>, <span class="number">2933</span>, <span class="number">4203</span>, <span class="number">5229</span>, <span class="number">5810</span>, <span class="number">1828</span>, <span class="number">9013</span>, <span class="number">4669</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;IE&#x27;</span>, [<span class="number">43</span>, <span class="number">41</span>, <span class="number">59</span>, <span class="number">79</span>, <span class="number">144</span>, <span class="number">136</span>, <span class="number">34</span>, <span class="number">102</span>])</span><br><span class="line">radar_chart.render()</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<p><img src="https://s2.loli.net/2022/08/01/zxv9W8fr71P3ew6.png" alt="image-20220801102051712"></p>
+]]></content>
+      <categories>
+        <category>python基础</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>赎金信_哈希表</title>
+    <url>/2022/07/22/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A805/</url>
+    <content><![CDATA[<h1 id="赎金信-哈希表"><a href="#赎金信-哈希表" class="headerlink" title="赎金信_哈希表"></a>赎金信_哈希表</h1><p><a href="https://leetcode.cn/problems/ransom-note/">力扣题目链接(opens new window)</a></p>
+<p>给定一个赎金信 (ransom) 字符串和一个杂志(magazine)字符串，判断第一个字符串 ransom 能不能由第二个字符串 magazines 里面的字符构成。如果可以构成，返回 true ；否则返回 false。</p>
+<p>(题目说明：为了不暴露赎金信字迹，要从杂志上搜索各个需要的字母，组成单词来表达意思。杂志字符串中的每个字符只能在赎金信字符串中使用一次。)</p>
+<p><strong>注意：</strong></p>
+<p>你可以假设两个字符串均只含有小写字母。</p>
+<p>canConstruct(“a”, “b”) -&gt; false<br>canConstruct(“aa”, “ab”) -&gt; false<br>canConstruct(“aa”, “aab”) -&gt; true</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这道题目和<a href="https://programmercarl.com/0242.%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html">242.有效的字母异位词 (opens new window)</a>很像，<a href="https://programmercarl.com/0242.%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html">242.有效的字母异位词 (opens new window)</a>相当于求 字符串a 和 字符串b 是否可以相互组成 ，而这道题目是求 字符串a能否组成字符串b，而不用管字符串b 能不能组成字符串a。</p>
+<p>本题判断第一个字符串ransom能不能由第二个字符串magazines里面的字符构成，但是这里需要注意两点。</p>
+<ul>
+<li>第一点“为了不暴露赎金信字迹，要从杂志上搜索各个需要的字母，组成单词来表达意思” 这里<em>说明杂志里面的字母不可重复使用。</em></li>
+<li>第二点 “你可以假设两个字符串均只含有小写字母。” <em>说明只有小写字母</em>，这一点很重要</li>
+</ul>
+<h3 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h3><p>那么第一个思路其实就是暴力枚举了，两层for循环，不断去寻找，代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 时间复杂度: O(n^2)</span></span><br><span class="line"><span class="comment">// 空间复杂度：O(1)</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">canConstruct</span><span class="params">(string ransomNote, string magazine)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; magazine.<span class="built_in">length</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; ransomNote.<span class="built_in">length</span>(); j++) &#123;</span><br><span class="line">                <span class="comment">// 在ransomNote中找到和magazine相同的字符</span></span><br><span class="line">                <span class="keyword">if</span> (magazine[i] == ransomNote[j]) &#123;</span><br><span class="line">                    ransomNote.<span class="built_in">erase</span>(ransomNote.<span class="built_in">begin</span>() + j); <span class="comment">// ransomNote删除这个字符</span></span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 如果ransomNote为空，则说明magazine的字符可以组成ransomNote</span></span><br><span class="line">        <span class="keyword">if</span> (ransomNote.<span class="built_in">length</span>() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这里时间复杂度是比较高的，而且里面还有一个字符串删除也就是erase的操作，也是费时的，当然这段代码也可以过这道题。</p>
+<h3 id="哈希解法"><a href="#哈希解法" class="headerlink" title="哈希解法"></a>哈希解法</h3><p>因为题目所只有小写字母，那可以采用空间换取时间的哈希策略， 用一个长度为26的数组还记录magazine里字母出现的次数。</p>
+<p>然后再用ransomNote去验证这个数组是否包含了ransomNote所需要的所有字母。</p>
+<p>依然是数组在哈希法中的应用。</p>
+<p>一些同学可能想，用数组干啥，都用map完事了，<strong>其实在本题的情况下，使用map的空间消耗要比数组大一些的，因为map要维护红黑树或者哈希表，而且还要做哈希函数，是费时的！数据量大的话就能体现出来差别了。 所以数组更加简单直接有效！</strong></p>
+<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canConstruct</span><span class="params">(String ransomNote, String magazine)</span> &#123;</span><br><span class="line">   			<span class="type">int</span>[] nums = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">26</span>];</span><br><span class="line">   			<span class="keyword">while</span>(<span class="type">char</span> c:magazine) &#123;</span><br><span class="line">   				nums[c - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">   			&#125;</span><br><span class="line">   			<span class="keyword">while</span>(<span class="type">char</span> c:ransomNote) &#123;</span><br><span class="line">   				nums[c - <span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">   			&#125;</span><br><span class="line">   			<span class="keyword">while</span>(<span class="type">int</span> i:nums) &#123;</span><br><span class="line">   				<span class="keyword">if</span>(i&lt;<span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">   			&#125;</span><br><span class="line">   			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -785,22 +785,28 @@
       </tags>
   </entry>
   <entry>
-    <title>反转字符串II_字符串02</title>
-    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B202/</url>
-    <content><![CDATA[<h1 id="反转字符串II"><a href="#反转字符串II" class="headerlink" title="反转字符串II"></a>反转字符串II</h1><p><a href="https://leetcode.cn/problems/reverse-string-ii/">力扣题目链接(opens new window)</a></p>
-<p>给定一个字符串 s 和一个整数 k，你需要对从字符串开头算起的每隔 2k 个字符的前 k 个字符进行反转。</p>
-<p>如果剩余字符少于 k 个，则将剩余字符全部反转。</p>
-<p>如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样。</p>
-<p>示例:</p>
-<p>输入: s &#x3D; “abcdefg”, k &#x3D; 2<br>输出: “bacdfeg”</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这道题目其实也是模拟，实现题目中规定的反转规则就可以了。</p>
-<p>一些同学可能为了处理逻辑：每隔2k个字符的前k的字符，写了一堆逻辑代码或者再搞一个计数器，来统计2k，再统计前k个字符。</p>
-<p>其实在遍历字符串的过程中，只要让 i +&#x3D; (2 * k)，i 每次移动 2 * k 就可以了，然后判断是否需要有反转的区间。</p>
-<p>因为要找的也就是每2 * k 区间的起点，这样写，程序会高效很多。</p>
-<p><strong>所以当需要固定规律一段一段去处理字符串的时候，要想想在在for循环的表达式上做做文章。</strong></p>
-<p>性能如下： <img src="https://code-thinking.cdn.bcebos.com/pics/541_%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II.png" alt="img"></p>
-<p>那么这里具体反转的逻辑我们要不要使用库函数呢，其实用不用都可以，使用reverse来实现反转也没毛病，毕竟不是解题关键部分。</p>
-<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">reverseStr</span><span class="params">(String s, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="type">char</span>[] arr = s.toCharArray();</span><br><span class="line">        <span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">end</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;arr.length;i+=<span class="number">2</span>*k) &#123;</span><br><span class="line">            start = i;</span><br><span class="line">            end = Math.min(start+k-<span class="number">1</span>,arr.length-<span class="number">1</span>);<span class="comment">// 关键代码</span></span><br><span class="line">            reverse(arr,start,end);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(arr);</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">reverse</span><span class="params">(<span class="type">char</span>[] arr,<span class="type">int</span> start,<span class="type">int</span> end)</span> &#123;</span><br><span class="line">        <span class="type">char</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">        <span class="keyword">while</span>(start&lt;end) &#123;</span><br><span class="line">            temp = arr[start];</span><br><span class="line">            arr[start] = arr[end];</span><br><span class="line">            arr[end] = temp;</span><br><span class="line">            start++;</span><br><span class="line">            end--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>替换空格_字符串03</title>
+    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B203/</url>
+    <content><![CDATA[<h1 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h1><p><a href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">力扣题目链接(opens new window)</a></p>
+<p>请实现一个函数，把字符串 s 中的每个空格替换成”%20”。</p>
+<p>示例 1： 输入：s &#x3D; “We are happy.”<br>输出：”We%20are%20happy.”</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果想把这道题目做到极致，就不要只用额外的辅助空间了！</p>
+<p>首先扩充数组到每个空格替换成”%20”之后的大小。</p>
+<p>然后从后向前替换空格，也就是双指针法，过程如下：</p>
+<p>i指向新长度的末尾，j指向旧长度的末尾。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1go6qmevhgpg20du09m4qp.gif" alt="替换空格"></p>
+<p>有同学问了，为什么要从后向前填充，从前向后填充不行么？</p>
+<p>从前向后填充就是O(n^2)的算法了，因为每次添加元素都要将添加元素之后的所有元素向后移动。</p>
+<p><strong>其实很多数组填充类的问题，都可以先预先给数组扩容带填充后的大小，然后在从后向前进行操作。</strong></p>
+<p>这么做有两个好处：</p>
+<ol>
+<li>不用申请新数组。</li>
+<li>从后向前填充元素，避免了从前先后填充元素要来的 每次添加元素都要将添加元素之后的所有元素向后移动。</li>
+</ol>
+<p>时间复杂度，空间复杂度均超过100%的用户。</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E5%89%91%E6%8C%87Offer05.%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.png" alt="img"></p>
+<p>java代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">replaceSpace</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(s == <span class="literal">null</span> || s.length() == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 扩容</span></span><br><span class="line">    <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">    <span class="keyword">while</span>(<span class="type">char</span> c:s.toCharArray()) &#123;</span><br><span class="line">    	<span class="keyword">if</span>(c == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">    		sb.append(<span class="string">&#x27;   &#x27;</span>)</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    s += sb.toString();</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span>[] arr = s.toCharArray();</span><br><span class="line">    <span class="keyword">while</span>(left &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[left] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">            arr[right] = <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            arr[right] = arr[left];</span><br><span class="line">        &#125;</span><br><span class="line">        left--;</span><br><span class="line">        right--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(arr);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -860,39 +866,6 @@
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">// 反转字符串s中左闭又闭的区间[start, end]</span><br><span class="line">void reverse(string&amp; s, int start, int end) &#123;</span><br><span class="line">    for (int i = start, j = end; i &lt; j; i++, j--) &#123;</span><br><span class="line">        swap(s[i], s[j]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> String <span class="title function_">reverseWords</span><span class="params">(String s)</span> &#123;</span><br><span class="line">		<span class="comment">// 取出空余 </span></span><br><span class="line">		<span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> removeEmpty(s);</span><br><span class="line">		<span class="comment">// 先整体 再局部翻转</span></span><br><span class="line">		<span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="type">int</span> <span class="variable">end</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">		reverse(sb,start,end);</span><br><span class="line">        <span class="comment">// 局部翻转 单词</span></span><br><span class="line">        reverseWord(sb);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> StringBuilder <span class="title function_">reverse</span><span class="params">(StringBuilder sb,<span class="type">int</span> start,<span class="type">int</span> end)</span> &#123;</span><br><span class="line">		<span class="keyword">while</span>(start&lt;end) &#123;</span><br><span class="line">			<span class="type">char</span> <span class="variable">temp</span> <span class="operator">=</span> sb.charAt(end);</span><br><span class="line">			sb.setChar(start,temp);</span><br><span class="line">			sb.setChar(end,temp);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">removeEmpty</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">		start = <span class="number">0</span>;</span><br><span class="line">		end = s.length()-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(s.charAt(start)==<span class="string">&#x27; &#x27;</span>)start++;</span><br><span class="line">        <span class="keyword">while</span>(s.charAt(end)==<span class="string">&#x27; &#x27;</span>)end--;</span><br><span class="line">        <span class="keyword">while</span>(start &lt; end) &#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">tmp</span> <span class="operator">=</span> s.charAt(start);</span><br><span class="line">            <span class="keyword">if</span>(tmp != <span class="string">&#x27; &#x27;</span> || sb.charAt(sb.length()-<span class="number">1</span>) != <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">                sb.append(tmp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">reverseWord</span><span class="params">(StringBuilder sb)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">end</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> sb.length();</span><br><span class="line">        <span class="keyword">while</span>(start &lt; n) &#123;</span><br><span class="line">            <span class="keyword">while</span>(end &lt; n &amp;&amp; sb.charAt(end) != <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">                end++;</span><br><span class="line">            &#125;</span><br><span class="line">            reverseString(sb,start,end-<span class="number">1</span>);</span><br><span class="line">            start = end + <span class="number">1</span>;</span><br><span class="line">            end = start + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>字符串</category>
-      </categories>
-      <tags>
-        <tag>字符串</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>替换空格_字符串03</title>
-    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B203/</url>
-    <content><![CDATA[<h1 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h1><p><a href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">力扣题目链接(opens new window)</a></p>
-<p>请实现一个函数，把字符串 s 中的每个空格替换成”%20”。</p>
-<p>示例 1： 输入：s &#x3D; “We are happy.”<br>输出：”We%20are%20happy.”</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果想把这道题目做到极致，就不要只用额外的辅助空间了！</p>
-<p>首先扩充数组到每个空格替换成”%20”之后的大小。</p>
-<p>然后从后向前替换空格，也就是双指针法，过程如下：</p>
-<p>i指向新长度的末尾，j指向旧长度的末尾。</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1go6qmevhgpg20du09m4qp.gif" alt="替换空格"></p>
-<p>有同学问了，为什么要从后向前填充，从前向后填充不行么？</p>
-<p>从前向后填充就是O(n^2)的算法了，因为每次添加元素都要将添加元素之后的所有元素向后移动。</p>
-<p><strong>其实很多数组填充类的问题，都可以先预先给数组扩容带填充后的大小，然后在从后向前进行操作。</strong></p>
-<p>这么做有两个好处：</p>
-<ol>
-<li>不用申请新数组。</li>
-<li>从后向前填充元素，避免了从前先后填充元素要来的 每次添加元素都要将添加元素之后的所有元素向后移动。</li>
-</ol>
-<p>时间复杂度，空间复杂度均超过100%的用户。</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E5%89%91%E6%8C%87Offer05.%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.png" alt="img"></p>
-<p>java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">replaceSpace</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(s == <span class="literal">null</span> || s.length() == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 扩容</span></span><br><span class="line">    <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">    <span class="keyword">while</span>(<span class="type">char</span> c:s.toCharArray()) &#123;</span><br><span class="line">    	<span class="keyword">if</span>(c == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">    		sb.append(<span class="string">&#x27;   &#x27;</span>)</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    s += sb.toString();</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span>[] arr = s.toCharArray();</span><br><span class="line">    <span class="keyword">while</span>(left &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[left] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">            arr[right] = <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            arr[right] = arr[left];</span><br><span class="line">        &#125;</span><br><span class="line">        left--;</span><br><span class="line">        right--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(arr);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1237,6 +1210,80 @@
       </tags>
   </entry>
   <entry>
+    <title>反转字符串II_字符串02</title>
+    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B202/</url>
+    <content><![CDATA[<h1 id="反转字符串II"><a href="#反转字符串II" class="headerlink" title="反转字符串II"></a>反转字符串II</h1><p><a href="https://leetcode.cn/problems/reverse-string-ii/">力扣题目链接(opens new window)</a></p>
+<p>给定一个字符串 s 和一个整数 k，你需要对从字符串开头算起的每隔 2k 个字符的前 k 个字符进行反转。</p>
+<p>如果剩余字符少于 k 个，则将剩余字符全部反转。</p>
+<p>如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样。</p>
+<p>示例:</p>
+<p>输入: s &#x3D; “abcdefg”, k &#x3D; 2<br>输出: “bacdfeg”</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这道题目其实也是模拟，实现题目中规定的反转规则就可以了。</p>
+<p>一些同学可能为了处理逻辑：每隔2k个字符的前k的字符，写了一堆逻辑代码或者再搞一个计数器，来统计2k，再统计前k个字符。</p>
+<p>其实在遍历字符串的过程中，只要让 i +&#x3D; (2 * k)，i 每次移动 2 * k 就可以了，然后判断是否需要有反转的区间。</p>
+<p>因为要找的也就是每2 * k 区间的起点，这样写，程序会高效很多。</p>
+<p><strong>所以当需要固定规律一段一段去处理字符串的时候，要想想在在for循环的表达式上做做文章。</strong></p>
+<p>性能如下： <img src="https://code-thinking.cdn.bcebos.com/pics/541_%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II.png" alt="img"></p>
+<p>那么这里具体反转的逻辑我们要不要使用库函数呢，其实用不用都可以，使用reverse来实现反转也没毛病，毕竟不是解题关键部分。</p>
+<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">reverseStr</span><span class="params">(String s, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="type">char</span>[] arr = s.toCharArray();</span><br><span class="line">        <span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">end</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;arr.length;i+=<span class="number">2</span>*k) &#123;</span><br><span class="line">            start = i;</span><br><span class="line">            end = Math.min(start+k-<span class="number">1</span>,arr.length-<span class="number">1</span>);<span class="comment">// 关键代码</span></span><br><span class="line">            reverse(arr,start,end);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(arr);</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">reverse</span><span class="params">(<span class="type">char</span>[] arr,<span class="type">int</span> start,<span class="type">int</span> end)</span> &#123;</span><br><span class="line">        <span class="type">char</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">        <span class="keyword">while</span>(start&lt;end) &#123;</span><br><span class="line">            temp = arr[start];</span><br><span class="line">            arr[start] = arr[end];</span><br><span class="line">            arr[end] = temp;</span><br><span class="line">            start++;</span><br><span class="line">            end--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>字符串</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组_代码随想列题02</title>
+    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8402/</url>
+    <content><![CDATA[<h1 id="代码随想录-数组02"><a href="#代码随想录-数组02" class="headerlink" title="代码随想录_数组02"></a>代码随想录_数组02</h1><h3 id="27-移除元素"><a href="#27-移除元素" class="headerlink" title="27. 移除元素"></a>27. 移除元素</h3><p>[题目链接](<a href="https://leetcode.cn/problems/remove-element/">力扣 (leetcode.cn)</a>)</p>
+<p>给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。</p>
+<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
+<p>说明:</p>
+<p>为什么返回数值是整数，但输出的答案是数组呢?</p>
+<p>请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
+<p>你可以想象内部操作如下:</p>
+<p>&#x2F;&#x2F; nums 是以“引用”方式传递的。也就是说，不对实参作任何拷贝<br>int len &#x3D; removeElement(nums, val);</p>
+<p>&#x2F;&#x2F; 在函数里修改输入数组对于调用者是可见的。<br>&#x2F;&#x2F; 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。<br>for (int i &#x3D; 0; i &lt; len; i++) {<br>    print(nums[i]);<br>}</p>
+<p>示例 1：</p>
+<p>输入：nums &#x3D; [3,2,2,3], val &#x3D; 3<br>输出：2, nums &#x3D; [2,2]<br>解释：函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。你不需要考虑数组中超出新长度后面的元素。例如，函数返回的新长度为 2 ，而 nums &#x3D; [2,2,3,3] 或 nums &#x3D; [2,2,0,0]，也会被视作正确答案。<br>示例 2：</p>
+<p>输入：nums &#x3D; [0,1,2,2,3,0,4,2], val &#x3D; 2<br>输出：5, nums &#x3D; [0,1,4,0,3]<br>解释：函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><a href="https://www.bilibili.com/video/BV12A4y1Z7LP">本题B站视频讲解(opens new window)</a></p>
+<p>有的同学可能说了，多余的元素，删掉不就得了。</p>
+<p><strong>要知道数组的元素在内存地址中是连续的，不能单独删除数组中的某个元素，只能覆盖。</strong></p>
+<h3 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h3><p>这个题目暴力的解法就是两层for循环，一个for循环遍历数组元素 ，第二个for循环更新数组。</p>
+<p>删除过程如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrc7x9tjg30du09m1ky.gif" alt="27.移除元素-暴力解法"></p>
+<p>很明显暴力解法的时间复杂度是O(n^2)，这道题目暴力解法在leetcode上是可以过的。</p>
+<p>代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 时间复杂度：O(n^2)</span><br><span class="line">// 空间复杂度：O(1)</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int removeElement(vector&lt;int&gt;&amp; nums, int val) &#123;</span><br><span class="line">        int size = nums.size();</span><br><span class="line">        for (int i = 0; i &lt; size; i++) &#123;</span><br><span class="line">            if (nums[i] == val) &#123; // 发现需要移除的元素，就将数组集体向前移动一位</span><br><span class="line">                for (int j = i + 1; j &lt; size; j++) &#123;</span><br><span class="line">                    nums[j - 1] = nums[j];</span><br><span class="line">                &#125;</span><br><span class="line">                i--; // 因为下标i以后的数值都向前移动了一位，所以i也向前移动一位</span><br><span class="line">                size--; // 此时数组的大小-1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return size;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>双指针法（快慢指针法）： <strong>通过一个快指针和慢指针在一个for循环下完成两个for循环的工作。</strong></p>
+<p>定义快慢指针</p>
+<ul>
+<li>快指针：寻找新数组的元素 ，新数组就是不含有目标元素的数组</li>
+<li>慢指针：指向更新 新数组下标的位置</li>
+</ul>
+<p>很多同学这道题目做的很懵，就是不理解 快慢指针究竟都是什么含义，所以一定要明确含义，后面的思路就更容易理解了。</p>
+<p>删除过程如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrds6r59g30du09mnpd.gif" alt="27.移除元素-双指针法"></p>
+<p>很多同学不了解</p>
+<p><strong>双指针法（快慢指针法）在数组和链表的操作中是非常常见的，很多考察数组、链表、字符串等操作的面试题，都使用双指针法。</strong></p>
+<p>后续都会一一介绍到，本题代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> in <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span> [] nums,<span class="type">int</span> val)</span> &#123;</span><br><span class="line">	<span class="comment">//快指针</span></span><br><span class="line">	<span class="type">int</span> <span class="variable">fastIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> <span class="variable">slowIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(fastIndex&lt;nums.length) &#123;</span><br><span class="line">		<span class="keyword">if</span>(nums[fastIndex] != val) &#123;</span><br><span class="line">            nums[slowIndex++] = nums[fastIndex]</span><br><span class="line">        &#125;</span><br><span class="line">		fastIndex++;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> slowIndex;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数组_代码随想列题03</title>
     <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8403/</url>
     <content><![CDATA[<h1 id="代码随想录-数组03"><a href="#代码随想录-数组03" class="headerlink" title="代码随想录_数组03"></a>代码随想录_数组03</h1><h1 id="977-有序数组的平方"><a href="#977-有序数组的平方" class="headerlink" title="977.有序数组的平方"></a>977.有序数组的平方</h1><p><a href="https://leetcode.cn/problems/squares-of-a-sorted-array/">力扣题目链接(opens new window)</a></p>
@@ -1323,93 +1370,6 @@
       </categories>
       <tags>
         <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数组_代码随想列题02</title>
-    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8402/</url>
-    <content><![CDATA[<h1 id="代码随想录-数组02"><a href="#代码随想录-数组02" class="headerlink" title="代码随想录_数组02"></a>代码随想录_数组02</h1><h3 id="27-移除元素"><a href="#27-移除元素" class="headerlink" title="27. 移除元素"></a>27. 移除元素</h3><p>[题目链接](<a href="https://leetcode.cn/problems/remove-element/">力扣 (leetcode.cn)</a>)</p>
-<p>给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。</p>
-<p>不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。</p>
-<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
-<p>说明:</p>
-<p>为什么返回数值是整数，但输出的答案是数组呢?</p>
-<p>请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
-<p>你可以想象内部操作如下:</p>
-<p>&#x2F;&#x2F; nums 是以“引用”方式传递的。也就是说，不对实参作任何拷贝<br>int len &#x3D; removeElement(nums, val);</p>
-<p>&#x2F;&#x2F; 在函数里修改输入数组对于调用者是可见的。<br>&#x2F;&#x2F; 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。<br>for (int i &#x3D; 0; i &lt; len; i++) {<br>    print(nums[i]);<br>}</p>
-<p>示例 1：</p>
-<p>输入：nums &#x3D; [3,2,2,3], val &#x3D; 3<br>输出：2, nums &#x3D; [2,2]<br>解释：函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。你不需要考虑数组中超出新长度后面的元素。例如，函数返回的新长度为 2 ，而 nums &#x3D; [2,2,3,3] 或 nums &#x3D; [2,2,0,0]，也会被视作正确答案。<br>示例 2：</p>
-<p>输入：nums &#x3D; [0,1,2,2,3,0,4,2], val &#x3D; 2<br>输出：5, nums &#x3D; [0,1,4,0,3]<br>解释：函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><a href="https://www.bilibili.com/video/BV12A4y1Z7LP">本题B站视频讲解(opens new window)</a></p>
-<p>有的同学可能说了，多余的元素，删掉不就得了。</p>
-<p><strong>要知道数组的元素在内存地址中是连续的，不能单独删除数组中的某个元素，只能覆盖。</strong></p>
-<h3 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h3><p>这个题目暴力的解法就是两层for循环，一个for循环遍历数组元素 ，第二个for循环更新数组。</p>
-<p>删除过程如下：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrc7x9tjg30du09m1ky.gif" alt="27.移除元素-暴力解法"></p>
-<p>很明显暴力解法的时间复杂度是O(n^2)，这道题目暴力解法在leetcode上是可以过的。</p>
-<p>代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 时间复杂度：O(n^2)</span><br><span class="line">// 空间复杂度：O(1)</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int removeElement(vector&lt;int&gt;&amp; nums, int val) &#123;</span><br><span class="line">        int size = nums.size();</span><br><span class="line">        for (int i = 0; i &lt; size; i++) &#123;</span><br><span class="line">            if (nums[i] == val) &#123; // 发现需要移除的元素，就将数组集体向前移动一位</span><br><span class="line">                for (int j = i + 1; j &lt; size; j++) &#123;</span><br><span class="line">                    nums[j - 1] = nums[j];</span><br><span class="line">                &#125;</span><br><span class="line">                i--; // 因为下标i以后的数值都向前移动了一位，所以i也向前移动一位</span><br><span class="line">                size--; // 此时数组的大小-1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return size;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>双指针法（快慢指针法）： <strong>通过一个快指针和慢指针在一个for循环下完成两个for循环的工作。</strong></p>
-<p>定义快慢指针</p>
-<ul>
-<li>快指针：寻找新数组的元素 ，新数组就是不含有目标元素的数组</li>
-<li>慢指针：指向更新 新数组下标的位置</li>
-</ul>
-<p>很多同学这道题目做的很懵，就是不理解 快慢指针究竟都是什么含义，所以一定要明确含义，后面的思路就更容易理解了。</p>
-<p>删除过程如下：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrds6r59g30du09mnpd.gif" alt="27.移除元素-双指针法"></p>
-<p>很多同学不了解</p>
-<p><strong>双指针法（快慢指针法）在数组和链表的操作中是非常常见的，很多考察数组、链表、字符串等操作的面试题，都使用双指针法。</strong></p>
-<p>后续都会一一介绍到，本题代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> in <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span> [] nums,<span class="type">int</span> val)</span> &#123;</span><br><span class="line">	<span class="comment">//快指针</span></span><br><span class="line">	<span class="type">int</span> <span class="variable">fastIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> <span class="variable">slowIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(fastIndex&lt;nums.length) &#123;</span><br><span class="line">		<span class="keyword">if</span>(nums[fastIndex] != val) &#123;</span><br><span class="line">            nums[slowIndex++] = nums[fastIndex]</span><br><span class="line">        &#125;</span><br><span class="line">		fastIndex++;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> slowIndex;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用队列实现栈_栈01</title>
-    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9701/</url>
-    <content><![CDATA[<h1 id="用队列实现栈"><a href="#用队列实现栈" class="headerlink" title="用队列实现栈"></a>用队列实现栈</h1><p><a href="https://leetcode.cn/problems/implement-stack-using-queues/">力扣题目链接(opens new window)</a></p>
-<p>使用队列实现栈的下列操作：</p>
-<ul>
-<li>push(x) – 元素 x 入栈</li>
-<li>pop() – 移除栈顶元素</li>
-<li>top() – 获取栈顶元素</li>
-<li>empty() – 返回栈是否为空</li>
-</ul>
-<p>注意:</p>
-<ul>
-<li>你只能使用队列的基本操作– 也就是 push to back, peek&#x2F;pop from front, size, 和 is empty 这些操作是合法的。</li>
-<li>你所使用的语言也许不支持队列。 你可以使用 list 或者 deque（双端队列）来模拟一个队列 , 只要是标准的队列操作即可。</li>
-<li>你可以假设所有操作都是有效的（例如, 对一个空的栈不会调用 pop 或者 top 操作）。</li>
-</ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>（这里要强调是单向队列）</p>
-<p>有的同学可能疑惑这种题目有什么实际工程意义，<strong>其实很多算法题目主要是对知识点的考察和教学意义远大于其工程实践的意义，所以面试题也是这样！</strong></p>
-<p>刚刚做过<a href="https://programmercarl.com/0232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97.html">栈与队列：我用栈来实现队列怎么样？ (opens new window)</a>的同学可能依然想着用一个输入队列，一个输出队列，就可以模拟栈的功能，仔细想一下还真不行！</p>
-<p><strong>队列模拟栈，其实一个队列就够了</strong>，那么我们先说一说两个队列来实现栈的思路。</p>
-<p><strong>队列是先进先出的规则，把一个队列中的数据导入另一个队列中，数据的顺序并没有变，并没有变成先进后出的顺序。</strong></p>
-<p>所以用栈实现队列， 和用队列实现栈的思路还是不一样的，这取决于这两个数据结构的性质。</p>
-<p>但是依然还是要用两个队列来模拟栈，只不过没有输入和输出的关系，而是另一个队列完全用又来备份的！</p>
-<p>如下面动画所示，<strong>用两个队列que1和que2实现队列的功能，que2其实完全就是一个备份的作用</strong>，把que1最后面的元素以外的元素都备份到que2，然后弹出最后面的元素，再把其他元素从que2导回que1。</p>
-<p>模拟的队列执行语句如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">queue.<span class="built_in">push</span>(<span class="number">1</span>);        </span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">2</span>);        </span><br><span class="line">queue.<span class="built_in">pop</span>();   <span class="comment">// 注意弹出的操作       </span></span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">3</span>);        </span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">4</span>);       </span><br><span class="line">queue.<span class="built_in">pop</span>();  <span class="comment">// 注意弹出的操作    </span></span><br><span class="line">queue.<span class="built_in">pop</span>();    </span><br><span class="line">queue.<span class="built_in">pop</span>();    </span><br><span class="line">queue.<span class="built_in">empty</span>();    </span><br></pre></td></tr></table></figure>
-
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.gif" alt="225.用队列实现栈"></p>
-<h2 id="Java代码如下："><a href="#Java代码如下：" class="headerlink" title="Java代码如下："></a>Java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyStack</span> &#123;</span><br><span class="line"></span><br><span class="line">    Queue&lt;Integer&gt; queue1; <span class="comment">// 和栈中保持一样元素的队列</span></span><br><span class="line">    Queue&lt;Integer&gt; queue2; <span class="comment">// 辅助队列</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyStack</span><span class="params">()</span> &#123;</span><br><span class="line">        queue1 = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        queue2 = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">    	queue1.push(x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">pop</span><span class="params">()</span> &#123;</span><br><span class="line">       <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(!que1.isEmpty()) &#123;</span><br><span class="line">            temp = que1.poll();</span><br><span class="line">            <span class="keyword">if</span>(!que1.isEmpty()) &#123;</span><br><span class="line">                que2.offer(temp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!que2.isEmpty()) &#123;</span><br><span class="line">            que1.offer(que2.poll());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">top</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(!que1.isEmpty()) &#123;</span><br><span class="line">            temp = que1.peek();</span><br><span class="line">            <span class="keyword">if</span>(!que1.isEmpty()) &#123;</span><br><span class="line">                que2.offer(temp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!que2.isEmpty()) &#123;</span><br><span class="line">            que1.offer(que2.poll());</span><br><span class="line">        &#125;</span><br><span class="line">        que1.offer(temp);</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">empty</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> queue1.isEmpty() &amp;&amp; queue2.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>栈</category>
-      </categories>
-      <tags>
-        <tag>栈</tag>
       </tags>
   </entry>
   <entry>
@@ -1530,49 +1490,6 @@
       </tags>
   </entry>
   <entry>
-    <title>删除字符串中的所有相邻重复项_栈04</title>
-    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9704/</url>
-    <content><![CDATA[<h1 id="1047-删除字符串中的所有相邻重复项"><a href="#1047-删除字符串中的所有相邻重复项" class="headerlink" title="1047. 删除字符串中的所有相邻重复项"></a>1047. 删除字符串中的所有相邻重复项</h1><p><a href="https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string/">力扣题目链接(opens new window)</a></p>
-<p>给出由小写字母组成的字符串 S，重复项删除操作会选择两个相邻且相同的字母，并删除它们。</p>
-<p>在 S 上反复执行重复项删除操作，直到无法继续删除。</p>
-<p>在完成所有重复项删除操作后返回最终的字符串。答案保证唯一。</p>
-<p>示例：</p>
-<ul>
-<li>输入：”abbaca”</li>
-<li>输出：”ca”</li>
-<li>解释：例如，在 “abbaca” 中，我们可以删除 “bb” 由于两字母相邻且相同，这是此时唯一可以执行删除操作的重复项。之后我们得到字符串 “aaca”，其中又只有 “aa” 可以执行重复项删除操作，所以最后的字符串为 “ca”。</li>
-</ul>
-<p>提示：</p>
-<ul>
-<li>1 &lt;&#x3D; S.length &lt;&#x3D; 20000</li>
-<li>S 仅由小写英文字母组成。</li>
-</ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><p>这道题目就像是我们玩过的游戏对对碰，如果相同的元素放在挨在一起就要消除。</p>
-<p>可能我们在玩游戏的时候感觉理所当然应该消除，但程序又怎么知道该如果消除呢，特别是消除之后又有新的元素可能挨在一起。</p>
-<p>此时游戏的后端逻辑就可以用一个栈来实现（我没有实际考察对对碰或者爱消除游戏的代码实现，仅从原理上进行推断）。</p>
-<p>游戏开发可能使用栈结构，编程语言的一些功能实现也会使用栈结构，实现函数递归调用就需要栈，但不是每种编程语言都支持递归，例如：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210309093252776.png" alt="1047.删除字符串中的所有相邻重复项"></p>
-<p><strong>递归的实现就是：每一次递归调用都会把函数的局部变量、参数值和返回地址等压入调用栈中</strong>，然后递归返回的时候，从栈顶弹出上一次递归的各项参数，所以这就是递归为什么可以返回上一层位置的原因。</p>
-<p>相信大家应该遇到过一种错误就是栈溢出，系统输出的异常是<code>Segmentation fault</code>（当然不是所有的<code>Segmentation fault</code> 都是栈溢出导致的） ，如果你使用了递归，就要想一想是不是无限递归了，那么系统调用栈就会溢出。</p>
-<p>而且<strong>在企业项目开发中，尽量不要使用递归！</strong>在项目比较大的时候，由于参数多，全局变量等等，使用递归很容易判断不充分return的条件，非常容易无限递归（或者递归层级过深），<strong>造成栈溢出错误（这种问题还不好排查！）</strong></p>
-<p>好了，题外话over，我们进入正题。</p>
-<h2 id="正题"><a href="#正题" class="headerlink" title="正题"></a>正题</h2><p>本题要删除相邻相同元素，其实也是匹配问题，相同左元素相当于左括号，相同右元素就是相当于右括号，匹配上了就删除。</p>
-<p>那么再来看一下本题：可以把字符串顺序放到一个栈中，然后如果相同的话 栈就弹出，这样最后栈里剩下的元素都是相邻不相同的元素了。</p>
-<p>如动画所示：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.gif" alt="1047.删除字符串中的所有相邻重复项"></p>
-<p>从栈中弹出剩余元素，此时是字符串ac，因为从栈里弹出的元素是倒序的，所以在对字符串进行反转一下，就得到了最终的结果。</p>
-<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">removeDuplicates</span><span class="params">(String S)</span> &#123;</span><br><span class="line">        <span class="comment">//ArrayDeque会比LinkedList在除了删除元素这一点外会快一点</span></span><br><span class="line">        <span class="comment">//参考：https://stackoverflow.com/questions/6163166/why-is-arraydeque-better-than-linkedlist</span></span><br><span class="line">        ArrayDeque&lt;Character&gt; deque = <span class="keyword">new</span> <span class="title class_">ArrayDeque</span>&lt;&gt;();</span><br><span class="line">        <span class="type">char</span>[] arr = s.toCharArray();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">char</span> c:arr) &#123;</span><br><span class="line">            <span class="keyword">while</span>(!deque.isEmpty() &amp;&amp; c == deque.peek()) &#123;</span><br><span class="line">                deque.pop();</span><br><span class="line">            &#125;</span><br><span class="line">            deque.add(c);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">while</span>(!deque.isEmpty()) &#123;</span><br><span class="line">            str = deque.pop() + str;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>栈</category>
-      </categories>
-      <tags>
-        <tag>栈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>逆波兰表达式求值_栈05</title>
     <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9705/</url>
     <content><![CDATA[<h2 id="逆波兰表达式求值"><a href="#逆波兰表达式求值" class="headerlink" title="逆波兰表达式求值"></a>逆波兰表达式求值</h2><p><a href="https://leetcode.cn/problems/evaluate-reverse-polish-notation/">力扣题目链接(opens new window)</a></p>
@@ -1623,6 +1540,89 @@
 <p>那么将中缀表达式，转化为后缀表达式之后：[“4”, “13”, “5”, “&#x2F;“, “+”] ，就不一样了，计算机可以利用栈里顺序处理，不需要考虑优先级了。也不用回退了， <strong>所以后缀表达式对计算机来说是非常友好的。</strong></p>
 <p>可以说本题不仅仅是一道好题，也展现出计算机的思考方式。</p>
 <p>在1970年代和1980年代，惠普在其所有台式和手持式计算器中都使用了RPN（后缀表达式），直到2020年代仍在某些模型中使用了RPN。</p>
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>栈</category>
+      </categories>
+      <tags>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>删除字符串中的所有相邻重复项_栈04</title>
+    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9704/</url>
+    <content><![CDATA[<h1 id="1047-删除字符串中的所有相邻重复项"><a href="#1047-删除字符串中的所有相邻重复项" class="headerlink" title="1047. 删除字符串中的所有相邻重复项"></a>1047. 删除字符串中的所有相邻重复项</h1><p><a href="https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string/">力扣题目链接(opens new window)</a></p>
+<p>给出由小写字母组成的字符串 S，重复项删除操作会选择两个相邻且相同的字母，并删除它们。</p>
+<p>在 S 上反复执行重复项删除操作，直到无法继续删除。</p>
+<p>在完成所有重复项删除操作后返回最终的字符串。答案保证唯一。</p>
+<p>示例：</p>
+<ul>
+<li>输入：”abbaca”</li>
+<li>输出：”ca”</li>
+<li>解释：例如，在 “abbaca” 中，我们可以删除 “bb” 由于两字母相邻且相同，这是此时唯一可以执行删除操作的重复项。之后我们得到字符串 “aaca”，其中又只有 “aa” 可以执行重复项删除操作，所以最后的字符串为 “ca”。</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>1 &lt;&#x3D; S.length &lt;&#x3D; 20000</li>
+<li>S 仅由小写英文字母组成。</li>
+</ul>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><p>这道题目就像是我们玩过的游戏对对碰，如果相同的元素放在挨在一起就要消除。</p>
+<p>可能我们在玩游戏的时候感觉理所当然应该消除，但程序又怎么知道该如果消除呢，特别是消除之后又有新的元素可能挨在一起。</p>
+<p>此时游戏的后端逻辑就可以用一个栈来实现（我没有实际考察对对碰或者爱消除游戏的代码实现，仅从原理上进行推断）。</p>
+<p>游戏开发可能使用栈结构，编程语言的一些功能实现也会使用栈结构，实现函数递归调用就需要栈，但不是每种编程语言都支持递归，例如：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210309093252776.png" alt="1047.删除字符串中的所有相邻重复项"></p>
+<p><strong>递归的实现就是：每一次递归调用都会把函数的局部变量、参数值和返回地址等压入调用栈中</strong>，然后递归返回的时候，从栈顶弹出上一次递归的各项参数，所以这就是递归为什么可以返回上一层位置的原因。</p>
+<p>相信大家应该遇到过一种错误就是栈溢出，系统输出的异常是<code>Segmentation fault</code>（当然不是所有的<code>Segmentation fault</code> 都是栈溢出导致的） ，如果你使用了递归，就要想一想是不是无限递归了，那么系统调用栈就会溢出。</p>
+<p>而且<strong>在企业项目开发中，尽量不要使用递归！</strong>在项目比较大的时候，由于参数多，全局变量等等，使用递归很容易判断不充分return的条件，非常容易无限递归（或者递归层级过深），<strong>造成栈溢出错误（这种问题还不好排查！）</strong></p>
+<p>好了，题外话over，我们进入正题。</p>
+<h2 id="正题"><a href="#正题" class="headerlink" title="正题"></a>正题</h2><p>本题要删除相邻相同元素，其实也是匹配问题，相同左元素相当于左括号，相同右元素就是相当于右括号，匹配上了就删除。</p>
+<p>那么再来看一下本题：可以把字符串顺序放到一个栈中，然后如果相同的话 栈就弹出，这样最后栈里剩下的元素都是相邻不相同的元素了。</p>
+<p>如动画所示：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.gif" alt="1047.删除字符串中的所有相邻重复项"></p>
+<p>从栈中弹出剩余元素，此时是字符串ac，因为从栈里弹出的元素是倒序的，所以在对字符串进行反转一下，就得到了最终的结果。</p>
+<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">removeDuplicates</span><span class="params">(String S)</span> &#123;</span><br><span class="line">        <span class="comment">//ArrayDeque会比LinkedList在除了删除元素这一点外会快一点</span></span><br><span class="line">        <span class="comment">//参考：https://stackoverflow.com/questions/6163166/why-is-arraydeque-better-than-linkedlist</span></span><br><span class="line">        ArrayDeque&lt;Character&gt; deque = <span class="keyword">new</span> <span class="title class_">ArrayDeque</span>&lt;&gt;();</span><br><span class="line">        <span class="type">char</span>[] arr = s.toCharArray();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">char</span> c:arr) &#123;</span><br><span class="line">            <span class="keyword">while</span>(!deque.isEmpty() &amp;&amp; c == deque.peek()) &#123;</span><br><span class="line">                deque.pop();</span><br><span class="line">            &#125;</span><br><span class="line">            deque.add(c);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">while</span>(!deque.isEmpty()) &#123;</span><br><span class="line">            str = deque.pop() + str;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>栈</category>
+      </categories>
+      <tags>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用队列实现栈_栈01</title>
+    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9701/</url>
+    <content><![CDATA[<h1 id="用队列实现栈"><a href="#用队列实现栈" class="headerlink" title="用队列实现栈"></a>用队列实现栈</h1><p><a href="https://leetcode.cn/problems/implement-stack-using-queues/">力扣题目链接(opens new window)</a></p>
+<p>使用队列实现栈的下列操作：</p>
+<ul>
+<li>push(x) – 元素 x 入栈</li>
+<li>pop() – 移除栈顶元素</li>
+<li>top() – 获取栈顶元素</li>
+<li>empty() – 返回栈是否为空</li>
+</ul>
+<p>注意:</p>
+<ul>
+<li>你只能使用队列的基本操作– 也就是 push to back, peek&#x2F;pop from front, size, 和 is empty 这些操作是合法的。</li>
+<li>你所使用的语言也许不支持队列。 你可以使用 list 或者 deque（双端队列）来模拟一个队列 , 只要是标准的队列操作即可。</li>
+<li>你可以假设所有操作都是有效的（例如, 对一个空的栈不会调用 pop 或者 top 操作）。</li>
+</ul>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>（这里要强调是单向队列）</p>
+<p>有的同学可能疑惑这种题目有什么实际工程意义，<strong>其实很多算法题目主要是对知识点的考察和教学意义远大于其工程实践的意义，所以面试题也是这样！</strong></p>
+<p>刚刚做过<a href="https://programmercarl.com/0232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97.html">栈与队列：我用栈来实现队列怎么样？ (opens new window)</a>的同学可能依然想着用一个输入队列，一个输出队列，就可以模拟栈的功能，仔细想一下还真不行！</p>
+<p><strong>队列模拟栈，其实一个队列就够了</strong>，那么我们先说一说两个队列来实现栈的思路。</p>
+<p><strong>队列是先进先出的规则，把一个队列中的数据导入另一个队列中，数据的顺序并没有变，并没有变成先进后出的顺序。</strong></p>
+<p>所以用栈实现队列， 和用队列实现栈的思路还是不一样的，这取决于这两个数据结构的性质。</p>
+<p>但是依然还是要用两个队列来模拟栈，只不过没有输入和输出的关系，而是另一个队列完全用又来备份的！</p>
+<p>如下面动画所示，<strong>用两个队列que1和que2实现队列的功能，que2其实完全就是一个备份的作用</strong>，把que1最后面的元素以外的元素都备份到que2，然后弹出最后面的元素，再把其他元素从que2导回que1。</p>
+<p>模拟的队列执行语句如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">queue.<span class="built_in">push</span>(<span class="number">1</span>);        </span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">2</span>);        </span><br><span class="line">queue.<span class="built_in">pop</span>();   <span class="comment">// 注意弹出的操作       </span></span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">3</span>);        </span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">4</span>);       </span><br><span class="line">queue.<span class="built_in">pop</span>();  <span class="comment">// 注意弹出的操作    </span></span><br><span class="line">queue.<span class="built_in">pop</span>();    </span><br><span class="line">queue.<span class="built_in">pop</span>();    </span><br><span class="line">queue.<span class="built_in">empty</span>();    </span><br></pre></td></tr></table></figure>
+
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.gif" alt="225.用队列实现栈"></p>
+<h2 id="Java代码如下："><a href="#Java代码如下：" class="headerlink" title="Java代码如下："></a>Java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyStack</span> &#123;</span><br><span class="line"></span><br><span class="line">    Queue&lt;Integer&gt; queue1; <span class="comment">// 和栈中保持一样元素的队列</span></span><br><span class="line">    Queue&lt;Integer&gt; queue2; <span class="comment">// 辅助队列</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyStack</span><span class="params">()</span> &#123;</span><br><span class="line">        queue1 = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        queue2 = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">    	queue1.push(x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">pop</span><span class="params">()</span> &#123;</span><br><span class="line">       <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(!que1.isEmpty()) &#123;</span><br><span class="line">            temp = que1.poll();</span><br><span class="line">            <span class="keyword">if</span>(!que1.isEmpty()) &#123;</span><br><span class="line">                que2.offer(temp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!que2.isEmpty()) &#123;</span><br><span class="line">            que1.offer(que2.poll());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">top</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(!que1.isEmpty()) &#123;</span><br><span class="line">            temp = que1.peek();</span><br><span class="line">            <span class="keyword">if</span>(!que1.isEmpty()) &#123;</span><br><span class="line">                que2.offer(temp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!que2.isEmpty()) &#123;</span><br><span class="line">            que1.offer(que2.poll());</span><br><span class="line">        &#125;</span><br><span class="line">        que1.offer(temp);</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">empty</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> queue1.isEmpty() &amp;&amp; queue2.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>算法简史</category>
@@ -1705,52 +1705,6 @@
       </categories>
       <tags>
         <tag>栈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>设计链表_链表02</title>
-    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A802/</url>
-    <content><![CDATA[<h1 id="设计链表-链表02"><a href="#设计链表-链表02" class="headerlink" title="设计链表_链表02"></a>设计链表_链表02</h1><p><a href="https://leetcode.cn/problems/design-linked-list/">力扣题目链接(opens new window)</a></p>
-<p>题意：</p>
-<p>在链表类中实现这些功能：</p>
-<ul>
-<li>get(index)：获取链表中第 index 个节点的值。如果索引无效，则返回-1。</li>
-<li>addAtHead(val)：在链表的第一个元素之前添加一个值为 val 的节点。插入后，新节点将成为链表的第一个节点。</li>
-<li>addAtTail(val)：将值为 val 的节点追加到链表的最后一个元素。</li>
-<li>addAtIndex(index,val)：在链表中的第 index 个节点之前添加值为 val 的节点。如果 index 等于链表的长度，则该节点将附加到链表的末尾。如果 index 大于链表长度，则不会插入节点。如果index小于0，则在头部插入节点。</li>
-<li>deleteAtIndex(index)：如果索引 index 有效，则删除链表中的第 index 个节点。</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20200814200558953.png" alt="707示例"></p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了方便大家理解，我特意录制了视频：<a href="https://www.bilibili.com/video/BV1FU4y1X7WD">帮你把链表操作学个通透！LeetCode：707.设计链表 (opens new window)</a>，结合视频在看本题解，事半功倍。</p>
-<p>如果对链表的基础知识还不太懂，可以看这篇文章：<a href="https://programmercarl.com/%E9%93%BE%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html">关于链表，你该了解这些！(opens new window)</a></p>
-<p>如果对链表的虚拟头结点不清楚，可以看这篇文章：<a href="https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html">链表：听说用虚拟头节点会方便很多？(opens new window)</a></p>
-<p>删除链表节点： <img src="https://img-blog.csdnimg.cn/20200806195114541.png" alt="链表-删除节点"></p>
-<p>添加链表节点： <img src="https://img-blog.csdnimg.cn/20200806195134331.png" alt="链表-添加节点"></p>
-<p>这道题目设计链表的五个接口：</p>
-<ul>
-<li>获取链表第index个节点的数值</li>
-<li>在链表的最前面插入一个节点</li>
-<li>在链表的最后面插入一个节点</li>
-<li>在链表第index个节点前面插入一个节点</li>
-<li>删除链表的第index个节点</li>
-</ul>
-<p>可以说这五个接口，已经覆盖了链表的常见操作，是练习链表操作非常好的一道题目</p>
-<p><strong>链表操作的两种方式：</strong></p>
-<ol>
-<li>直接使用原来的链表来进行操作。</li>
-<li>设置一个虚拟头结点在进行操作。</li>
-</ol>
-<p>下面采用的设置一个虚拟头结点（这样更方便一些，大家看代码就会感受出来）。</p>
-<p>代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//单链表</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ListNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">    ListNode()&#123;&#125;</span><br><span class="line">    ListNode(<span class="type">int</span> val) &#123;</span><br><span class="line">        <span class="built_in">this</span>.val=val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyLinkedList</span> &#123;</span><br><span class="line">    <span class="comment">//size存储链表元素的个数</span></span><br><span class="line">    <span class="type">int</span> size;</span><br><span class="line">    <span class="comment">//虚拟头结点</span></span><br><span class="line">    ListNode head;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//初始化链表</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyLinkedList</span><span class="params">()</span> &#123;</span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">        head = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取第index个节点的数值</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="comment">//如果index非法，返回-1</span></span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">currentNode</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="comment">//包含一个虚拟头节点，所以查找第 index+1 个节点</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;= index; i++) &#123;</span><br><span class="line">            currentNode = currentNode.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> currentNode.val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//在链表最前面插入一个节点</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtHead</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        addAtIndex(<span class="number">0</span>, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//在链表的最后插入一个节点</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtTail</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        addAtIndex(size, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 在第 index 个节点之前插入一个新节点，例如index为0，那么新插入的节点为链表的新头节点。</span></span><br><span class="line">    <span class="comment">// 如果 index 等于链表的长度，则说明是新插入的节点为链表的尾结点</span></span><br><span class="line">    <span class="comment">// 如果 index 大于链表的长度，则返回空</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtIndex</span><span class="params">(<span class="type">int</span> index, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &gt; size) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            index = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="comment">//找到要插入节点的前驱</span></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">pred</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; index; i++) &#123;</span><br><span class="line">            pred = pred.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">toAdd</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(val);</span><br><span class="line">        toAdd.next = pred.next;</span><br><span class="line">        pred.next = toAdd;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//删除第index个节点</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteAtIndex</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        size--;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">pred</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; index; i++) &#123;</span><br><span class="line">            pred = pred.next;</span><br><span class="line">        &#125;</span><br><span class="line">        pred.next = pred.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>链表</category>
-      </categories>
-      <tags>
-        <tag>链表</tag>
       </tags>
   </entry>
   <entry>
@@ -1987,20 +1941,49 @@
       </tags>
   </entry>
   <entry>
-    <title>吉他01</title>
-    <url>/2022/07/21/%E5%90%89%E4%BB%9601/</url>
-    <content><![CDATA[<h1 id="吉他01"><a href="#吉他01" class="headerlink" title="吉他01"></a>吉他01</h1><h3 id="音名："><a href="#音名：" class="headerlink" title="音名："></a>音名：</h3><p>C D E F G A B</p>
-<h3 id="简谱名："><a href="#简谱名：" class="headerlink" title="简谱名："></a>简谱名：</h3><p>1 2 3 4 5 6 7</p>
-<h3 id="唱名："><a href="#唱名：" class="headerlink" title="唱名："></a>唱名：</h3><p>Do Re Mi Fa Sol La Si (Do)</p>
-<h3 id="合并来记"><a href="#合并来记" class="headerlink" title="合并来记"></a>合并来记</h3><p>C D E F G A B</p>
-<p>1 2 3 4 5 6 7</p>
-<p>Do Re Mi Fa Sol La Si (Do)</p>
+    <title>设计链表_链表02</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A802/</url>
+    <content><![CDATA[<h1 id="设计链表-链表02"><a href="#设计链表-链表02" class="headerlink" title="设计链表_链表02"></a>设计链表_链表02</h1><p><a href="https://leetcode.cn/problems/design-linked-list/">力扣题目链接(opens new window)</a></p>
+<p>题意：</p>
+<p>在链表类中实现这些功能：</p>
+<ul>
+<li>get(index)：获取链表中第 index 个节点的值。如果索引无效，则返回-1。</li>
+<li>addAtHead(val)：在链表的第一个元素之前添加一个值为 val 的节点。插入后，新节点将成为链表的第一个节点。</li>
+<li>addAtTail(val)：将值为 val 的节点追加到链表的最后一个元素。</li>
+<li>addAtIndex(index,val)：在链表中的第 index 个节点之前添加值为 val 的节点。如果 index 等于链表的长度，则该节点将附加到链表的末尾。如果 index 大于链表长度，则不会插入节点。如果index小于0，则在头部插入节点。</li>
+<li>deleteAtIndex(index)：如果索引 index 有效，则删除链表中的第 index 个节点。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200814200558953.png" alt="707示例"></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了方便大家理解，我特意录制了视频：<a href="https://www.bilibili.com/video/BV1FU4y1X7WD">帮你把链表操作学个通透！LeetCode：707.设计链表 (opens new window)</a>，结合视频在看本题解，事半功倍。</p>
+<p>如果对链表的基础知识还不太懂，可以看这篇文章：<a href="https://programmercarl.com/%E9%93%BE%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html">关于链表，你该了解这些！(opens new window)</a></p>
+<p>如果对链表的虚拟头结点不清楚，可以看这篇文章：<a href="https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html">链表：听说用虚拟头节点会方便很多？(opens new window)</a></p>
+<p>删除链表节点： <img src="https://img-blog.csdnimg.cn/20200806195114541.png" alt="链表-删除节点"></p>
+<p>添加链表节点： <img src="https://img-blog.csdnimg.cn/20200806195134331.png" alt="链表-添加节点"></p>
+<p>这道题目设计链表的五个接口：</p>
+<ul>
+<li>获取链表第index个节点的数值</li>
+<li>在链表的最前面插入一个节点</li>
+<li>在链表的最后面插入一个节点</li>
+<li>在链表第index个节点前面插入一个节点</li>
+<li>删除链表的第index个节点</li>
+</ul>
+<p>可以说这五个接口，已经覆盖了链表的常见操作，是练习链表操作非常好的一道题目</p>
+<p><strong>链表操作的两种方式：</strong></p>
+<ol>
+<li>直接使用原来的链表来进行操作。</li>
+<li>设置一个虚拟头结点在进行操作。</li>
+</ol>
+<p>下面采用的设置一个虚拟头结点（这样更方便一些，大家看代码就会感受出来）。</p>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//单链表</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ListNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">    ListNode()&#123;&#125;</span><br><span class="line">    ListNode(<span class="type">int</span> val) &#123;</span><br><span class="line">        <span class="built_in">this</span>.val=val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyLinkedList</span> &#123;</span><br><span class="line">    <span class="comment">//size存储链表元素的个数</span></span><br><span class="line">    <span class="type">int</span> size;</span><br><span class="line">    <span class="comment">//虚拟头结点</span></span><br><span class="line">    ListNode head;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//初始化链表</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyLinkedList</span><span class="params">()</span> &#123;</span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">        head = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取第index个节点的数值</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="comment">//如果index非法，返回-1</span></span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">currentNode</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="comment">//包含一个虚拟头节点，所以查找第 index+1 个节点</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;= index; i++) &#123;</span><br><span class="line">            currentNode = currentNode.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> currentNode.val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//在链表最前面插入一个节点</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtHead</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        addAtIndex(<span class="number">0</span>, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//在链表的最后插入一个节点</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtTail</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        addAtIndex(size, val);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 在第 index 个节点之前插入一个新节点，例如index为0，那么新插入的节点为链表的新头节点。</span></span><br><span class="line">    <span class="comment">// 如果 index 等于链表的长度，则说明是新插入的节点为链表的尾结点</span></span><br><span class="line">    <span class="comment">// 如果 index 大于链表的长度，则返回空</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtIndex</span><span class="params">(<span class="type">int</span> index, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &gt; size) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            index = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        size++;</span><br><span class="line">        <span class="comment">//找到要插入节点的前驱</span></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">pred</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; index; i++) &#123;</span><br><span class="line">            pred = pred.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">toAdd</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(val);</span><br><span class="line">        toAdd.next = pred.next;</span><br><span class="line">        pred.next = toAdd;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//删除第index个节点</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteAtIndex</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        size--;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">pred</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; index; i++) &#123;</span><br><span class="line">            pred = pred.next;</span><br><span class="line">        &#125;</span><br><span class="line">        pred.next = pred.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>吉他</category>
+        <category>算法简史</category>
+        <category>链表</category>
       </categories>
       <tags>
-        <tag>吉他</tag>
+        <tag>链表</tag>
       </tags>
   </entry>
   <entry>
@@ -2069,6 +2052,23 @@
       </tags>
   </entry>
   <entry>
+    <title>吉他01</title>
+    <url>/2022/07/21/%E5%90%89%E4%BB%9601/</url>
+    <content><![CDATA[<h1 id="吉他01"><a href="#吉他01" class="headerlink" title="吉他01"></a>吉他01</h1><h3 id="音名："><a href="#音名：" class="headerlink" title="音名："></a>音名：</h3><p>C D E F G A B</p>
+<h3 id="简谱名："><a href="#简谱名：" class="headerlink" title="简谱名："></a>简谱名：</h3><p>1 2 3 4 5 6 7</p>
+<h3 id="唱名："><a href="#唱名：" class="headerlink" title="唱名："></a>唱名：</h3><p>Do Re Mi Fa Sol La Si (Do)</p>
+<h3 id="合并来记"><a href="#合并来记" class="headerlink" title="合并来记"></a>合并来记</h3><p>C D E F G A B</p>
+<p>1 2 3 4 5 6 7</p>
+<p>Do Re Mi Fa Sol La Si (Do)</p>
+]]></content>
+      <categories>
+        <category>吉他</category>
+      </categories>
+      <tags>
+        <tag>吉他</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微信小程序电脑端抓包成功</title>
     <url>/2022/08/01/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E6%88%90%E5%8A%9F/</url>
     <content><![CDATA[<h1 id="微信小程序电脑端抓包成功"><a href="#微信小程序电脑端抓包成功" class="headerlink" title="微信小程序电脑端抓包成功"></a>微信小程序电脑端抓包成功</h1><h3 id="1-删除WMPFRuntime下的文件"><a href="#1-删除WMPFRuntime下的文件" class="headerlink" title="1.删除WMPFRuntime下的文件"></a>1.删除WMPFRuntime下的文件</h3><p>通过任务管理器找到该文件，右键打开文件位置，删除文件(记得先关掉vx才能删除)</p>
@@ -2090,6 +2090,94 @@
       </categories>
       <tags>
         <tag>数据采集</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序采集失败原因</title>
+    <url>/2022/07/31/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%87%87%E9%9B%86%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/</url>
+    <content><![CDATA[<h1 id="微信小程序采集失败原因"><a href="#微信小程序采集失败原因" class="headerlink" title="微信小程序采集失败原因"></a>微信小程序采集失败原因</h1><p>现在微信都更新到了7..0以上的版本，使用charles抓包工具已经无法再抓到接口的数据。原因如下：安卓系统 7.0 以下版本，不管微信任意版本，都会信任系统提供的证书<br>安卓系统 7.0 以上版本，微信 7.0 以下版本，微信会信任系统提供的证书<br>安卓系统 7.0 以上版本，微信 7.0 以上版本，微信只信任它自己配置的证书列表</p>
+]]></content>
+      <categories>
+        <category>数据采集</category>
+      </categories>
+      <tags>
+        <tag>数据采集</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库操作SQL</title>
+    <url>/2022/06/30/%E6%95%B0%E6%8D%AE%E5%BA%93SQL/</url>
+    <content><![CDATA[<p>这次编写的内容是数据库SQL的操作实列 以后要是不会直接从这个武器库拿就是</p>
+<hr>
+<h1 id="实列"><a href="#实列" class="headerlink" title="实列"></a>实列</h1><h3 id="01-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"><a href="#01-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。" class="headerlink" title="01.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"></a>01.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。</h3><p>试列出计算机系所开课程（CS标志）的最高成绩、最低成绩和平均成绩。如果某门课程的成绩不全（即“成绩”中有NULL出现），则该课程不予统计，结果按“课程号”升序排列。正确的SQL语句是</p>
+<p><img src="https://img-blog.csdnimg.cn/8c9d734958ed4a8daa3070201f309889.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG92ZSA2,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 课程号，<span class="built_in">MAX</span>(成绩)，<span class="built_in">MIN</span>(成绩)，<span class="built_in">AVG</span>(成绩) <span class="keyword">FROM</span> 选课</span><br><span class="line"><span class="keyword">WHERE</span> 课程号 <span class="keyword">Like</span> ‘CS<span class="operator">%</span>’ <span class="keyword">GROUP</span> <span class="keyword">BY</span> 课程号 <span class="keyword">HAVING</span> 课程号 <span class="keyword">NOT</span> <span class="keyword">IN</span></span><br><span class="line">(<span class="keyword">SELECT</span> 课程号 <span class="keyword">FROM</span> 选课 <span class="keyword">WHERE</span> 成绩 <span class="keyword">IS</span> <span class="keyword">NULL</span>)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> 课程号</span><br></pre></td></tr></table></figure>
+
+<h3 id="02-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"><a href="#02-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。" class="headerlink" title="02.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"></a>02.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。</h3><p>列出最少选修了三门课程的学生姓名。正确的SQL语句是</p>
+<p>图片如上所示</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 姓名　<span class="keyword">FROM</span> 学生　<span class="keyword">WHERE</span> 学号 <span class="keyword">IN</span>　</span><br><span class="line">(<span class="keyword">SELECT</span> 学号　<span class="keyword">FROM</span> 选课　<span class="keyword">GROUP</span> <span class="keyword">BY</span> 学号　<span class="keyword">HAVING</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="operator">&gt;=</span> <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="03-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"><a href="#03-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。" class="headerlink" title="03.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"></a>03.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。</h3><p>查询缺成绩的学生名及课程号。正确的SQL语句是</p>
+<p><img src="https://img-blog.csdnimg.cn/26c14ddd06ce40bb91c54c036c04ce18.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG92ZSA2,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 姓名，课程号 <span class="keyword">FROM</span> 学生，选课 <span class="keyword">WHERE</span> 学生.学号<span class="operator">=</span>选课.学号 <span class="keyword">AND</span> 成绩 <span class="keyword">IS</span> <span class="keyword">NULL</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="04-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"><a href="#04-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。" class="headerlink" title="04.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"></a>04.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。</h3><p>查询1996年出生的学生姓名及其秋季所修课程的课程号及成绩。正确的SQL语句是</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 姓名，课程号，成绩 <span class="keyword">FROM</span> 学生，选课，课程 <span class="keyword">WHERE</span> 学生.学号<span class="operator">=</span>选课.学号 <span class="keyword">AND</span> 选课.课程号<span class="operator">=</span>课程.课程号 <span class="keyword">AND</span> <span class="keyword">Year</span>(出生日期)<span class="operator">=</span><span class="number">1996</span> <span class="keyword">AND</span> 开课学期<span class="operator">=</span>’秋’</span><br></pre></td></tr></table></figure>
+
+<h3 id="05-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"><a href="#05-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。" class="headerlink" title="05.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"></a>05.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。</h3><p><img src="https://img-blog.csdnimg.cn/9c2aed7fa5b74fc9b69def057c6812d9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG92ZSA2,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"></p>
+<p>求既学过“1001”号课，又学过“2002”号课的所有学生的学号。正确的SQL语句是</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> 学号　<span class="keyword">FROM</span> 选课　<span class="keyword">WHERE</span> 课号＝‘<span class="number">1001</span>’ <span class="keyword">AND</span></span><br><span class="line">学号 <span class="keyword">IN</span>　(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> 学号　<span class="keyword">FROM</span> 选课　<span class="keyword">WHERE</span> 课号＝‘<span class="number">2002</span>’ )</span><br></pre></td></tr></table></figure>
+
+<p>我的想法是：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 学号 <span class="keyword">FROM</span> 选课 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 学号 <span class="keyword">HAVING</span> 课号 <span class="operator">=</span><span class="operator">=</span> ‘<span class="number">1001</span>’ <span class="keyword">AND</span> 课号 <span class="operator">=</span><span class="operator">=</span> ‘<span class="number">2002</span>’</span><br></pre></td></tr></table></figure>
+
+<h3 id="06-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"><a href="#06-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。" class="headerlink" title="06.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"></a>06.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。</h3><p>列出各门课的平均成绩、最高成绩、最低成绩和选课人数。正确的SQL语句是</p>
+<p>图片如上所示</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 课号，<span class="built_in">AVG</span>(成绩)，<span class="built_in">MAX</span>(成绩)，<span class="built_in">MIN</span>(成绩)，<span class="built_in">COUNT</span>(学号)　</span><br><span class="line"><span class="keyword">FROM</span> 选课　<span class="keyword">GROUP</span> <span class="keyword">BY</span> 课号</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p>没有吃饭</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>学习口语</title>
+    <url>/2022/07/05/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD01/</url>
+    <content><![CDATA[<h1 id="第一天英语口语"><a href="#第一天英语口语" class="headerlink" title="第一天英语口语"></a>第一天英语口语</h1><p>这些内容是非常好的英语口语资产 能帮助大伙快速起飞</p>
+<h3 id="梅花香自苦寒来"><a href="#梅花香自苦寒来" class="headerlink" title="梅花香自苦寒来"></a>梅花香自苦寒来</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">in order to feel alive,</span><br><span class="line">i have to do things that make me feel uncomfortable,</span><br><span class="line">because...</span><br><span class="line">as human beings,</span><br><span class="line">we become who we are through challenges.</span><br></pre></td></tr></table></figure>
+
+<p>feel alive 有滋有味的活着</p>
+<p>do things that make me feel uncomfortable 折磨自己</p>
+<p>we become who we are through challenges 高手从磨难中来</p>
+<h3 id="培养顿感"><a href="#培养顿感" class="headerlink" title="培养顿感"></a>培养顿感</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">by taking risks,</span><br><span class="line">you will learn to overcome your fears,</span><br><span class="line">for example...</span><br><span class="line">you will likely find that you care less about what people think and about what could go wrong</span><br></pre></td></tr></table></figure>
+
+<p>overcome your fears 克服恐惧</p>
+<p>care less about what people think and about what could go wrong 大心脏</p>
+<h3 id="敢拼敢闯"><a href="#敢拼敢闯" class="headerlink" title="敢拼敢闯"></a>敢拼敢闯</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">all successful people have taken risks,failed and picked themselves up,</span><br><span class="line">because they believe that</span><br><span class="line">those who never venture far </span><br><span class="line">will never know might have been if they had tired to do things beyond what they had already mastered.</span><br></pre></td></tr></table></figure>
+
+<p>taken risks,failed and picked themselves up 屡战屡败</p>
+<p>never venture far 不敢越雷池半步</p>
+<p>to do things beyond what they had already mastered 勇敢尝试</p>
+<h3 id="言传身教"><a href="#言传身教" class="headerlink" title="言传身教"></a>言传身教</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">we want our children to take risks and try things outside their</span><br><span class="line">comfort zones,</span><br><span class="line">but to help them we need to set a good example,</span><br><span class="line">because...</span><br><span class="line">we can&#x27;t expect our kids to go out and conquer the world</span><br><span class="line">if we are hiding in our room.</span><br></pre></td></tr></table></figure>
+
+<p>take risks and try things outside their comfort zones 勇敢试错</p>
+<p>set a good example 树立榜样</p>
+<p>go out and conquer the world 打天下</p>
+<p>hiding in the room 龟缩不前</p>
+<p><u>这些都是打基础后面会越来越爽,越来越轻松，爽到飞起</u></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
       </tags>
   </entry>
   <entry>
@@ -2135,61 +2223,6 @@
       </tags>
   </entry>
   <entry>
-    <title>微信小程序采集失败原因</title>
-    <url>/2022/07/31/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%87%87%E9%9B%86%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/</url>
-    <content><![CDATA[<h1 id="微信小程序采集失败原因"><a href="#微信小程序采集失败原因" class="headerlink" title="微信小程序采集失败原因"></a>微信小程序采集失败原因</h1><p>现在微信都更新到了7..0以上的版本，使用charles抓包工具已经无法再抓到接口的数据。原因如下：安卓系统 7.0 以下版本，不管微信任意版本，都会信任系统提供的证书<br>安卓系统 7.0 以上版本，微信 7.0 以下版本，微信会信任系统提供的证书<br>安卓系统 7.0 以上版本，微信 7.0 以上版本，微信只信任它自己配置的证书列表</p>
-]]></content>
-      <categories>
-        <category>数据采集</category>
-      </categories>
-      <tags>
-        <tag>数据采集</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p>没有吃饭</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>数据库操作SQL</title>
-    <url>/2022/06/30/%E6%95%B0%E6%8D%AE%E5%BA%93SQL/</url>
-    <content><![CDATA[<p>这次编写的内容是数据库SQL的操作实列 以后要是不会直接从这个武器库拿就是</p>
-<hr>
-<h1 id="实列"><a href="#实列" class="headerlink" title="实列"></a>实列</h1><h3 id="01-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"><a href="#01-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。" class="headerlink" title="01.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"></a>01.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。</h3><p>试列出计算机系所开课程（CS标志）的最高成绩、最低成绩和平均成绩。如果某门课程的成绩不全（即“成绩”中有NULL出现），则该课程不予统计，结果按“课程号”升序排列。正确的SQL语句是</p>
-<p><img src="https://img-blog.csdnimg.cn/8c9d734958ed4a8daa3070201f309889.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG92ZSA2,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 课程号，<span class="built_in">MAX</span>(成绩)，<span class="built_in">MIN</span>(成绩)，<span class="built_in">AVG</span>(成绩) <span class="keyword">FROM</span> 选课</span><br><span class="line"><span class="keyword">WHERE</span> 课程号 <span class="keyword">Like</span> ‘CS<span class="operator">%</span>’ <span class="keyword">GROUP</span> <span class="keyword">BY</span> 课程号 <span class="keyword">HAVING</span> 课程号 <span class="keyword">NOT</span> <span class="keyword">IN</span></span><br><span class="line">(<span class="keyword">SELECT</span> 课程号 <span class="keyword">FROM</span> 选课 <span class="keyword">WHERE</span> 成绩 <span class="keyword">IS</span> <span class="keyword">NULL</span>)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> 课程号</span><br></pre></td></tr></table></figure>
-
-<h3 id="02-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"><a href="#02-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。" class="headerlink" title="02.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"></a>02.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。</h3><p>列出最少选修了三门课程的学生姓名。正确的SQL语句是</p>
-<p>图片如上所示</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 姓名　<span class="keyword">FROM</span> 学生　<span class="keyword">WHERE</span> 学号 <span class="keyword">IN</span>　</span><br><span class="line">(<span class="keyword">SELECT</span> 学号　<span class="keyword">FROM</span> 选课　<span class="keyword">GROUP</span> <span class="keyword">BY</span> 学号　<span class="keyword">HAVING</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="operator">&gt;=</span> <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="03-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"><a href="#03-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。" class="headerlink" title="03.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"></a>03.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。</h3><p>查询缺成绩的学生名及课程号。正确的SQL语句是</p>
-<p><img src="https://img-blog.csdnimg.cn/26c14ddd06ce40bb91c54c036c04ce18.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG92ZSA2,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 姓名，课程号 <span class="keyword">FROM</span> 学生，选课 <span class="keyword">WHERE</span> 学生.学号<span class="operator">=</span>选课.学号 <span class="keyword">AND</span> 成绩 <span class="keyword">IS</span> <span class="keyword">NULL</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="04-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"><a href="#04-如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。" class="headerlink" title="04.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。"></a>04.如下几个表所示学生、课程和选课关系，用SQL语言实现下列操作。</h3><p>查询1996年出生的学生姓名及其秋季所修课程的课程号及成绩。正确的SQL语句是</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 姓名，课程号，成绩 <span class="keyword">FROM</span> 学生，选课，课程 <span class="keyword">WHERE</span> 学生.学号<span class="operator">=</span>选课.学号 <span class="keyword">AND</span> 选课.课程号<span class="operator">=</span>课程.课程号 <span class="keyword">AND</span> <span class="keyword">Year</span>(出生日期)<span class="operator">=</span><span class="number">1996</span> <span class="keyword">AND</span> 开课学期<span class="operator">=</span>’秋’</span><br></pre></td></tr></table></figure>
-
-<h3 id="05-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"><a href="#05-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。" class="headerlink" title="05.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"></a>05.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。</h3><p><img src="https://img-blog.csdnimg.cn/9c2aed7fa5b74fc9b69def057c6812d9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATG92ZSA2,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"></p>
-<p>求既学过“1001”号课，又学过“2002”号课的所有学生的学号。正确的SQL语句是</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> 学号　<span class="keyword">FROM</span> 选课　<span class="keyword">WHERE</span> 课号＝‘<span class="number">1001</span>’ <span class="keyword">AND</span></span><br><span class="line">学号 <span class="keyword">IN</span>　(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> 学号　<span class="keyword">FROM</span> 选课　<span class="keyword">WHERE</span> 课号＝‘<span class="number">2002</span>’ )</span><br></pre></td></tr></table></figure>
-
-<p>我的想法是：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 学号 <span class="keyword">FROM</span> 选课 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 学号 <span class="keyword">HAVING</span> 课号 <span class="operator">=</span><span class="operator">=</span> ‘<span class="number">1001</span>’ <span class="keyword">AND</span> 课号 <span class="operator">=</span><span class="operator">=</span> ‘<span class="number">2002</span>’</span><br></pre></td></tr></table></figure>
-
-<h3 id="06-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"><a href="#06-如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。" class="headerlink" title="06.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。"></a>06.如下几个表所示学生、课程、必修课和选课关系，用SQL语言实现下列操作。</h3><p>列出各门课的平均成绩、最高成绩、最低成绩和选课人数。正确的SQL语句是</p>
-<p>图片如上所示</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 课号，<span class="built_in">AVG</span>(成绩)，<span class="built_in">MAX</span>(成绩)，<span class="built_in">MIN</span>(成绩)，<span class="built_in">COUNT</span>(学号)　</span><br><span class="line"><span class="keyword">FROM</span> 选课　<span class="keyword">GROUP</span> <span class="keyword">BY</span> 课号</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据结构</title>
     <url>/2022/06/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[]]></content>
@@ -2199,62 +2232,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语口语02</title>
-    <url>/2022/07/06/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD02/</url>
-    <content><![CDATA[<h1 id="英语口语02"><a href="#英语口语02" class="headerlink" title="英语口语02"></a>英语口语02</h1><h3 id="精算能力"><a href="#精算能力" class="headerlink" title="精算能力"></a>精算能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math can be helpful for balancing your budget,</span><br><span class="line">because...</span><br><span class="line">you will have a good understanding of how to make sure that </span><br><span class="line">your costs are less than the money you have</span><br></pre></td></tr></table></figure>
-
-<p>balancing your budget 平衡收支</p>
-<p>your costs are less than the money you have 收入大于支出</p>
-<h3 id="入不敷出"><a href="#入不敷出" class="headerlink" title="入不敷出"></a>入不敷出</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">People who are terrible at math are likely to go into debt</span><br><span class="line">because...</span><br><span class="line">they don&#x27;t know how much money they have versus how much money they spent.</span><br></pre></td></tr></table></figure>
-
-<p>go into debt 负债</p>
-<h3 id="满足好奇心"><a href="#满足好奇心" class="headerlink" title="满足好奇心"></a>满足好奇心</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Science feeds the natural curiosity,</span><br><span class="line"></span><br><span class="line">for example...</span><br><span class="line"></span><br><span class="line">The curiosity of uncovering why the sun sets in the west,</span><br><span class="line"></span><br><span class="line">why the sky is blue,how fish breathes in water</span><br><span class="line"></span><br><span class="line">and other everyday scenarios</span><br></pre></td></tr></table></figure>
-
-<p>natural curiosity 好奇心</p>
-<p>sun sets in the west 日落西山</p>
-<p>everyday scenarios 日常场景</p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学习口语</title>
-    <url>/2022/07/05/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD01/</url>
-    <content><![CDATA[<h1 id="第一天英语口语"><a href="#第一天英语口语" class="headerlink" title="第一天英语口语"></a>第一天英语口语</h1><p>这些内容是非常好的英语口语资产 能帮助大伙快速起飞</p>
-<h3 id="梅花香自苦寒来"><a href="#梅花香自苦寒来" class="headerlink" title="梅花香自苦寒来"></a>梅花香自苦寒来</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">in order to feel alive,</span><br><span class="line">i have to do things that make me feel uncomfortable,</span><br><span class="line">because...</span><br><span class="line">as human beings,</span><br><span class="line">we become who we are through challenges.</span><br></pre></td></tr></table></figure>
-
-<p>feel alive 有滋有味的活着</p>
-<p>do things that make me feel uncomfortable 折磨自己</p>
-<p>we become who we are through challenges 高手从磨难中来</p>
-<h3 id="培养顿感"><a href="#培养顿感" class="headerlink" title="培养顿感"></a>培养顿感</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">by taking risks,</span><br><span class="line">you will learn to overcome your fears,</span><br><span class="line">for example...</span><br><span class="line">you will likely find that you care less about what people think and about what could go wrong</span><br></pre></td></tr></table></figure>
-
-<p>overcome your fears 克服恐惧</p>
-<p>care less about what people think and about what could go wrong 大心脏</p>
-<h3 id="敢拼敢闯"><a href="#敢拼敢闯" class="headerlink" title="敢拼敢闯"></a>敢拼敢闯</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">all successful people have taken risks,failed and picked themselves up,</span><br><span class="line">because they believe that</span><br><span class="line">those who never venture far </span><br><span class="line">will never know might have been if they had tired to do things beyond what they had already mastered.</span><br></pre></td></tr></table></figure>
-
-<p>taken risks,failed and picked themselves up 屡战屡败</p>
-<p>never venture far 不敢越雷池半步</p>
-<p>to do things beyond what they had already mastered 勇敢尝试</p>
-<h3 id="言传身教"><a href="#言传身教" class="headerlink" title="言传身教"></a>言传身教</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">we want our children to take risks and try things outside their</span><br><span class="line">comfort zones,</span><br><span class="line">but to help them we need to set a good example,</span><br><span class="line">because...</span><br><span class="line">we can&#x27;t expect our kids to go out and conquer the world</span><br><span class="line">if we are hiding in our room.</span><br></pre></td></tr></table></figure>
-
-<p>take risks and try things outside their comfort zones 勇敢试错</p>
-<p>set a good example 树立榜样</p>
-<p>go out and conquer the world 打天下</p>
-<p>hiding in the room 龟缩不前</p>
-<p><u>这些都是打基础后面会越来越爽,越来越轻松，爽到飞起</u></p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
       </tags>
   </entry>
   <entry>
@@ -2269,29 +2246,6 @@
 <p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
 <p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
 <p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语口语04</title>
-    <url>/2022/07/13/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD04/</url>
-    <content><![CDATA[<h1 id="英语口语04"><a href="#英语口语04" class="headerlink" title="英语口语04"></a>英语口语04</h1><h3 id="心中有蓝图"><a href="#心中有蓝图" class="headerlink" title="心中有蓝图"></a>心中有蓝图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">you should have a version for the future,</span><br><span class="line">something you want to do or accomplish,</span><br><span class="line">because...</span><br><span class="line">when you map out your goals,</span><br><span class="line">you will focus on things that can help you achieve what you want in life.</span><br></pre></td></tr></table></figure>
-
-<h3 id="打开适应度"><a href="#打开适应度" class="headerlink" title="打开适应度"></a>打开适应度</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if you just do what you are pretty good at already,</span><br><span class="line">you will not triggle adaptability.</span><br><span class="line">because...</span><br><span class="line">mastery is not just about putting in 10000 hours,</span><br><span class="line">just doing something over and over again does&#x27;t make you </span><br><span class="line">better at something,</span><br><span class="line">it&#x27;s about 100 hours of deliberate practice.</span><br></pre></td></tr></table></figure>
-
-<h3 id="苦练成才"><a href="#苦练成才" class="headerlink" title="苦练成才"></a>苦练成才</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">to reach your peak performance level,</span><br><span class="line">you need to challenge yourself,</span><br><span class="line">because...</span><br><span class="line">you can&#x27;t expect to evolve and reach new heights if </span><br><span class="line">you only stick to your normal habits and lifestyle.</span><br></pre></td></tr></table></figure>
-
-<p><strong>世界上最甜蜜的事，就是极致内化之后的自动脑补。</strong></p>
-<p><strong>不必消耗脑流量，直接下意识输出。</strong></p>
-<p><strong>就像弹钢琴一样。</strong></p>
-<p><strong>练至精熟之境，你不必在意手指，</strong></p>
-<p><strong>手指自动会落在适合的琴键上，并一瞬间打开最精确的力度和准度。</strong></p>
-<p><strong>这种境界，你不去体会，必遗憾终身。</strong></p>
 ]]></content>
       <categories>
         <category>口语</category>
@@ -2325,6 +2279,29 @@
       </tags>
   </entry>
   <entry>
+    <title>英语口语02</title>
+    <url>/2022/07/06/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD02/</url>
+    <content><![CDATA[<h1 id="英语口语02"><a href="#英语口语02" class="headerlink" title="英语口语02"></a>英语口语02</h1><h3 id="精算能力"><a href="#精算能力" class="headerlink" title="精算能力"></a>精算能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math can be helpful for balancing your budget,</span><br><span class="line">because...</span><br><span class="line">you will have a good understanding of how to make sure that </span><br><span class="line">your costs are less than the money you have</span><br></pre></td></tr></table></figure>
+
+<p>balancing your budget 平衡收支</p>
+<p>your costs are less than the money you have 收入大于支出</p>
+<h3 id="入不敷出"><a href="#入不敷出" class="headerlink" title="入不敷出"></a>入不敷出</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">People who are terrible at math are likely to go into debt</span><br><span class="line">because...</span><br><span class="line">they don&#x27;t know how much money they have versus how much money they spent.</span><br></pre></td></tr></table></figure>
+
+<p>go into debt 负债</p>
+<h3 id="满足好奇心"><a href="#满足好奇心" class="headerlink" title="满足好奇心"></a>满足好奇心</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Science feeds the natural curiosity,</span><br><span class="line"></span><br><span class="line">for example...</span><br><span class="line"></span><br><span class="line">The curiosity of uncovering why the sun sets in the west,</span><br><span class="line"></span><br><span class="line">why the sky is blue,how fish breathes in water</span><br><span class="line"></span><br><span class="line">and other everyday scenarios</span><br></pre></td></tr></table></figure>
+
+<p>natural curiosity 好奇心</p>
+<p>sun sets in the west 日落西山</p>
+<p>everyday scenarios 日常场景</p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英语口语06</title>
     <url>/2022/07/15/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD06/</url>
     <content><![CDATA[<h1 id="英语口语06"><a href="#英语口语06" class="headerlink" title="英语口语06"></a>英语口语06</h1><h3 id="朝九晚五"><a href="#朝九晚五" class="headerlink" title="朝九晚五"></a>朝九晚五</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">the dark side of 9-5 job is that</span><br><span class="line">you&#x27;re exchanging your time for money,</span><br><span class="line">like...</span><br><span class="line">you spent an hour at your job,you get paied for that hour,</span><br><span class="line">for example,</span><br><span class="line">you could work your ass off,like...80 hours a week and make a certain</span><br><span class="line">amount of money...</span><br><span class="line">the problem is...</span><br><span class="line">next week you want to make that same amount,</span><br><span class="line">you still have to spend 80 hours a week.</span><br></pre></td></tr></table></figure>
@@ -2343,6 +2320,29 @@
 <p><em><strong>*注：这个框架非常好，攻击力强悍霸道。*</strong></em></p>
 <p><em><strong>*后面自带两个比较级，组成长句，更是威力非凡。*</strong></em></p>
 <p><em><strong>*请注意此语流中的用词，细细体会。*</strong></em></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语口语04</title>
+    <url>/2022/07/13/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD04/</url>
+    <content><![CDATA[<h1 id="英语口语04"><a href="#英语口语04" class="headerlink" title="英语口语04"></a>英语口语04</h1><h3 id="心中有蓝图"><a href="#心中有蓝图" class="headerlink" title="心中有蓝图"></a>心中有蓝图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">you should have a version for the future,</span><br><span class="line">something you want to do or accomplish,</span><br><span class="line">because...</span><br><span class="line">when you map out your goals,</span><br><span class="line">you will focus on things that can help you achieve what you want in life.</span><br></pre></td></tr></table></figure>
+
+<h3 id="打开适应度"><a href="#打开适应度" class="headerlink" title="打开适应度"></a>打开适应度</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if you just do what you are pretty good at already,</span><br><span class="line">you will not triggle adaptability.</span><br><span class="line">because...</span><br><span class="line">mastery is not just about putting in 10000 hours,</span><br><span class="line">just doing something over and over again does&#x27;t make you </span><br><span class="line">better at something,</span><br><span class="line">it&#x27;s about 100 hours of deliberate practice.</span><br></pre></td></tr></table></figure>
+
+<h3 id="苦练成才"><a href="#苦练成才" class="headerlink" title="苦练成才"></a>苦练成才</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">to reach your peak performance level,</span><br><span class="line">you need to challenge yourself,</span><br><span class="line">because...</span><br><span class="line">you can&#x27;t expect to evolve and reach new heights if </span><br><span class="line">you only stick to your normal habits and lifestyle.</span><br></pre></td></tr></table></figure>
+
+<p><strong>世界上最甜蜜的事，就是极致内化之后的自动脑补。</strong></p>
+<p><strong>不必消耗脑流量，直接下意识输出。</strong></p>
+<p><strong>就像弹钢琴一样。</strong></p>
+<p><strong>练至精熟之境，你不必在意手指，</strong></p>
+<p><strong>手指自动会落在适合的琴键上，并一瞬间打开最精确的力度和准度。</strong></p>
+<p><strong>这种境界，你不去体会，必遗憾终身。</strong></p>
 ]]></content>
       <categories>
         <category>口语</category>
