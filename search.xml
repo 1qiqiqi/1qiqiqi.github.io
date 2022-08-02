@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Docker容器命令</title>
+    <url>/2022/07/07/Docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Docker容器命令"><a href="#Docker容器命令" class="headerlink" title="Docker容器命令"></a>Docker容器命令</h1><h3 id="Docker将镜像转为容器"><a href="#Docker将镜像转为容器" class="headerlink" title="Docker将镜像转为容器"></a>Docker将镜像转为容器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name containerName -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="查看docker容器状态"><a href="#查看docker容器状态" class="headerlink" title="查看docker容器状态"></a>查看docker容器状态</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker logs 容器名称</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker镜像命令</title>
     <url>/2022/07/07/Docker%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Docker常用镜像命令"><a href="#Docker常用镜像命令" class="headerlink" title="Docker常用镜像命令"></a>Docker常用镜像命令</h1><p>这些是最基本的Docker镜像命令，也是最有用的</p>
@@ -22,52 +41,14 @@
       </tags>
   </entry>
   <entry>
-    <title>Redis安装教程</title>
-    <url>/2022/07/21/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B(windows)/</url>
-    <content><![CDATA[<h1 id="Redis安装教程"><a href="#Redis安装教程" class="headerlink" title="Redis安装教程"></a>Redis安装教程</h1><p>[安装地址链接](<a href="https://github.com/microsoftarchive/redis/releases">Releases · microsoftarchive&#x2F;redis (github.com)</a>)</p>
-<p><img src="https://s2.loli.net/2022/07/21/b5dmoDWpJIgaKs7.png" alt="image-20220721233543796"></p>
-<p>安装好后放在：</p>
-<p><img src="https://s2.loli.net/2022/07/21/pqJP1uMBg5TaRDL.png" alt="image-20220721233710217"></p>
-<p>启动服务：点开redis-serve.exe 打开客户端点开redis-cli.exe</p>
-]]></content>
-      <categories>
-        <category>Redis</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
-        <tag>安装教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker容器命令</title>
-    <url>/2022/07/07/Docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="Docker容器命令"><a href="#Docker容器命令" class="headerlink" title="Docker容器命令"></a>Docker容器命令</h1><h3 id="Docker将镜像转为容器"><a href="#Docker将镜像转为容器" class="headerlink" title="Docker将镜像转为容器"></a>Docker将镜像转为容器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name containerName -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
+    <title>安卓7.0以上添加Fiddler证书到系统根证书</title>
+    <url>/2022/07/31/OpenSSL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="安卓7-0以上添加Fiddler证书到系统根证书（模拟器）"><a href="#安卓7-0以上添加Fiddler证书到系统根证书（模拟器）" class="headerlink" title="安卓7.0以上添加Fiddler证书到系统根证书（模拟器）"></a>安卓7.0以上添加Fiddler证书到系统根证书（模拟器）</h1><p><a href="https://null119.lanzoul.com/iewv205n22ad">安装链接</a></p>
+<h2 id="1、cer证书转pem"><a href="#1、cer证书转pem" class="headerlink" title="1、cer证书转pem"></a>1、cer证书转pem</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openssl x509 -inform der -in FiddlerRoot.cer的目录 -out 同层目录/Fiddler.pem</span><br></pre></td></tr></table></figure>
 
+<h2 id="2、获取pem证书hash"><a href="#2、获取pem证书hash" class="headerlink" title="2、获取pem证书hash"></a>2、获取pem证书hash</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openssl x509 -subject_hash_old -in Fiddler.pem</span><br></pre></td></tr></table></figure>
 
-
-<h3 id="查看docker容器状态"><a href="#查看docker容器状态" class="headerlink" title="查看docker容器状态"></a>查看docker容器状态</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker logs 容器名称</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SMMS照片下载至压缩包</title>
-    <url>/2022/08/02/SMMS%E7%85%A7%E7%89%87%E4%B8%8B%E8%BD%BD%E8%87%B3%E5%8E%8B%E7%BC%A9%E5%8C%85/</url>
-    <content><![CDATA[<h1 id="SMMS照片下载至压缩包"><a href="#SMMS照片下载至压缩包" class="headerlink" title="SMMS照片下载至压缩包"></a>SMMS照片下载至压缩包</h1><p>进入下面的地址</p>
-<p><img src="https://s2.loli.net/2022/08/02/TgvbkMdXDUpWPqw.png" alt="image-20220802090045671"></p>
-<p>按F12，打开调式器，在控制台输入以下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*</span><br><span class="line"> * @?: *********************************************************************</span><br><span class="line"> * @Author: Weidows</span><br><span class="line"> * @Date: 2021-07-07 20:30:59</span><br><span class="line"> * @LastEditors: Weidows</span><br><span class="line"> * @LastEditTime: 2021-07-09 00:05:15</span><br><span class="line"> * @FilePath: \awesome-image-collector\implements\SM.MS-collector.js</span><br><span class="line"> * @Description:</span><br><span class="line"> * @!: *********************************************************************</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">(async () =&gt; &#123;</span><br><span class="line">  // 引入库函数</span><br><span class="line">  const jsZip = document.createElement(&quot;script&quot;),</span><br><span class="line">    collector = document.createElement(&quot;script&quot;);</span><br><span class="line">  jsZip.src = &quot;https://cdn.bootcdn.net/ajax/libs/jszip/3.5.0/jszip.min.js&quot;;</span><br><span class="line">  collector.src =</span><br><span class="line">    &quot;https://cdn.jsdelivr.net/gh/Weidows-projects/awesome-image-collector@master/dist/collector.min.js&quot;;</span><br><span class="line">  document</span><br><span class="line">    .getElementsByTagName(&quot;head&quot;)[0]</span><br><span class="line">    .appendChild(jsZip)</span><br><span class="line">    .appendChild(collector);</span><br><span class="line"></span><br><span class="line">  await Promise.all([</span><br><span class="line">    new Promise(resolve =&gt; jsZip.onload = () =&gt; window.JSZip &amp;&amp; resolve()),</span><br><span class="line">    new Promise(resolve =&gt; collector.onload = () =&gt; window.start &amp;&amp; resolve()),</span><br><span class="line">  ]);</span><br><span class="line">  smmsCollector();</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">// ======================== 添加样式 ========================</span><br><span class="line">function smmsCollector() &#123;</span><br><span class="line">  // 下载图片按钮 (不主动下载,按按钮时才下载)</span><br><span class="line">  let downloadButton = document.createElement(&quot;button&quot;);</span><br><span class="line">  downloadButton.type = &quot;button&quot;;</span><br><span class="line">  downloadButton.innerText = &quot;下载本页面图片&quot;;</span><br><span class="line">  downloadButton.style.width = &quot;100%&quot;;</span><br><span class="line">  downloadButton.addEventListener(&quot;click&quot;, function () &#123;</span><br><span class="line">    // 调用入口函数</span><br><span class="line">    start(document.getElementsByClassName(&quot;fancybox&quot;));</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // 全选CheckBox按钮</span><br><span class="line">  let deleteButton = document.createElement(&quot;button&quot;);</span><br><span class="line">  deleteButton.type = &quot;button&quot;;</span><br><span class="line">  deleteButton.innerHTML = &quot;全选CheckBox按钮&quot;;</span><br><span class="line">  deleteButton.style.width = &quot;100%&quot;;</span><br><span class="line">  deleteButton.addEventListener(&quot;click&quot;, function () &#123;</span><br><span class="line">    let checkBoxes = document.getElementsByClassName(&quot;filedelete&quot;);</span><br><span class="line">    for (const checkbox of checkBoxes) &#123;</span><br><span class="line">      checkbox.checked = !checkbox.checked;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // 创建标签</span><br><span class="line">  let downloadLi = document.createElement(&quot;li&quot;);</span><br><span class="line">  let deleteLi = document.createElement(&quot;li&quot;);</span><br><span class="line">  downloadLi.id = &quot;downloader&quot;;</span><br><span class="line">  deleteLi.id = &quot;deleter&quot;;</span><br><span class="line">  downloadLi.appendChild(downloadButton);</span><br><span class="line">  deleteLi.appendChild(deleteButton);</span><br><span class="line"></span><br><span class="line">  // 追加标签</span><br><span class="line">  if (document.getElementById(&quot;downloader&quot;) == null) &#123;</span><br><span class="line">    document</span><br><span class="line">      .getElementsByClassName(&quot;sidebar-menu tree&quot;)[0]</span><br><span class="line">      .appendChild(downloadLi);</span><br><span class="line">    document</span><br><span class="line">      .getElementsByClassName(&quot;sidebar-menu tree&quot;)[0]</span><br><span class="line">      .appendChild(deleteLi);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>此时页面显示：</p>
-<p><img src="https://s2.loli.net/2022/08/02/eWQDy4ldmNXxzvb.png" alt="image-20220802090338705"></p>
-<p>就可以了</p>
+<h3 id="3、将pem证书改名为hash-0"><a href="#3、将pem证书改名为hash-0" class="headerlink" title="3、将pem证书改名为hash.0"></a>3、将pem证书改名为hash.0</h3><h3 id="4、将证书上传到手机或模拟器"><a href="#4、将证书上传到手机或模拟器" class="headerlink" title="4、将证书上传到手机或模拟器"></a>4、将证书上传到手机或模拟器</h3><p><img src="https://s2.loli.net/2022/07/31/qwbx3ZUteK4ASr8.png" alt="Snipaste_2022-07-31_15-15-25.png"></p>
 ]]></content>
       <categories>
         <category>安装教程</category>
@@ -75,25 +56,6 @@
       <tags>
         <tag>安装教程</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/06/22/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p>thanks for your listenning</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>Redis命令大全</title>
@@ -140,6 +102,23 @@
         <category>Redis</category>
       </categories>
       <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis安装教程</title>
+    <url>/2022/07/21/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B(windows)/</url>
+    <content><![CDATA[<h1 id="Redis安装教程"><a href="#Redis安装教程" class="headerlink" title="Redis安装教程"></a>Redis安装教程</h1><p>[安装地址链接](<a href="https://github.com/microsoftarchive/redis/releases">Releases · microsoftarchive&#x2F;redis (github.com)</a>)</p>
+<p><img src="https://s2.loli.net/2022/07/21/b5dmoDWpJIgaKs7.png" alt="image-20220721233543796"></p>
+<p>安装好后放在：</p>
+<p><img src="https://s2.loli.net/2022/07/21/pqJP1uMBg5TaRDL.png" alt="image-20220721233710217"></p>
+<p>启动服务：点开redis-serve.exe 打开客户端点开redis-cli.exe</p>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>安装教程</tag>
         <tag>Redis</tag>
       </tags>
   </entry>
@@ -207,6 +186,25 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2022/06/22/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<p>thanks for your listenning</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Python模块</title>
     <url>/2022/08/01/python%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97/</url>
     <content><![CDATA[<h1 id="Python模块"><a href="#Python模块" class="headerlink" title="Python模块"></a>Python模块</h1><h2 id="为什么需要模块？"><a href="#为什么需要模块？" class="headerlink" title="为什么需要模块？"></a>为什么需要模块？</h2><p>大多数应用项目往往具有功能要求多、性能要求高的特点，由此导致的结果是使得程序代码复杂而且庞大。当程序代码多达几百行、几千行甚至上万行时，为了加快开发进度、提高开发效率，需要团队协作、分工合作开发程序。如果缺少有效的组织方式，那么不仅使得协同开发难以做到，而且程序的调试将变得异常艰难，后期的维护和升级更加困难重重。这时候就需要模块化。</p>
@@ -244,14 +242,16 @@
       </tags>
   </entry>
   <entry>
-    <title>安卓7.0以上添加Fiddler证书到系统根证书</title>
-    <url>/2022/07/31/OpenSSL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="安卓7-0以上添加Fiddler证书到系统根证书（模拟器）"><a href="#安卓7-0以上添加Fiddler证书到系统根证书（模拟器）" class="headerlink" title="安卓7.0以上添加Fiddler证书到系统根证书（模拟器）"></a>安卓7.0以上添加Fiddler证书到系统根证书（模拟器）</h1><p><a href="https://null119.lanzoul.com/iewv205n22ad">安装链接</a></p>
-<h2 id="1、cer证书转pem"><a href="#1、cer证书转pem" class="headerlink" title="1、cer证书转pem"></a>1、cer证书转pem</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openssl x509 -inform der -in FiddlerRoot.cer的目录 -out 同层目录/Fiddler.pem</span><br></pre></td></tr></table></figure>
+    <title>SMMS照片下载至压缩包</title>
+    <url>/2022/08/02/SMMS%E7%85%A7%E7%89%87%E4%B8%8B%E8%BD%BD%E8%87%B3%E5%8E%8B%E7%BC%A9%E5%8C%85/</url>
+    <content><![CDATA[<h1 id="SMMS照片下载至压缩包"><a href="#SMMS照片下载至压缩包" class="headerlink" title="SMMS照片下载至压缩包"></a>SMMS照片下载至压缩包</h1><p>进入下面的地址</p>
+<p><img src="https://s2.loli.net/2022/08/02/TgvbkMdXDUpWPqw.png" alt="image-20220802090045671"></p>
+<p>按F12，打开调式器，在控制台输入以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*</span><br><span class="line"> * @?: *********************************************************************</span><br><span class="line"> * @Author: Weidows</span><br><span class="line"> * @Date: 2021-07-07 20:30:59</span><br><span class="line"> * @LastEditors: Weidows</span><br><span class="line"> * @LastEditTime: 2021-07-09 00:05:15</span><br><span class="line"> * @FilePath: \awesome-image-collector\implements\SM.MS-collector.js</span><br><span class="line"> * @Description:</span><br><span class="line"> * @!: *********************************************************************</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">(async () =&gt; &#123;</span><br><span class="line">  // 引入库函数</span><br><span class="line">  const jsZip = document.createElement(&quot;script&quot;),</span><br><span class="line">    collector = document.createElement(&quot;script&quot;);</span><br><span class="line">  jsZip.src = &quot;https://cdn.bootcdn.net/ajax/libs/jszip/3.5.0/jszip.min.js&quot;;</span><br><span class="line">  collector.src =</span><br><span class="line">    &quot;https://cdn.jsdelivr.net/gh/Weidows-projects/awesome-image-collector@master/dist/collector.min.js&quot;;</span><br><span class="line">  document</span><br><span class="line">    .getElementsByTagName(&quot;head&quot;)[0]</span><br><span class="line">    .appendChild(jsZip)</span><br><span class="line">    .appendChild(collector);</span><br><span class="line"></span><br><span class="line">  await Promise.all([</span><br><span class="line">    new Promise(resolve =&gt; jsZip.onload = () =&gt; window.JSZip &amp;&amp; resolve()),</span><br><span class="line">    new Promise(resolve =&gt; collector.onload = () =&gt; window.start &amp;&amp; resolve()),</span><br><span class="line">  ]);</span><br><span class="line">  smmsCollector();</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">// ======================== 添加样式 ========================</span><br><span class="line">function smmsCollector() &#123;</span><br><span class="line">  // 下载图片按钮 (不主动下载,按按钮时才下载)</span><br><span class="line">  let downloadButton = document.createElement(&quot;button&quot;);</span><br><span class="line">  downloadButton.type = &quot;button&quot;;</span><br><span class="line">  downloadButton.innerText = &quot;下载本页面图片&quot;;</span><br><span class="line">  downloadButton.style.width = &quot;100%&quot;;</span><br><span class="line">  downloadButton.addEventListener(&quot;click&quot;, function () &#123;</span><br><span class="line">    // 调用入口函数</span><br><span class="line">    start(document.getElementsByClassName(&quot;fancybox&quot;));</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // 全选CheckBox按钮</span><br><span class="line">  let deleteButton = document.createElement(&quot;button&quot;);</span><br><span class="line">  deleteButton.type = &quot;button&quot;;</span><br><span class="line">  deleteButton.innerHTML = &quot;全选CheckBox按钮&quot;;</span><br><span class="line">  deleteButton.style.width = &quot;100%&quot;;</span><br><span class="line">  deleteButton.addEventListener(&quot;click&quot;, function () &#123;</span><br><span class="line">    let checkBoxes = document.getElementsByClassName(&quot;filedelete&quot;);</span><br><span class="line">    for (const checkbox of checkBoxes) &#123;</span><br><span class="line">      checkbox.checked = !checkbox.checked;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // 创建标签</span><br><span class="line">  let downloadLi = document.createElement(&quot;li&quot;);</span><br><span class="line">  let deleteLi = document.createElement(&quot;li&quot;);</span><br><span class="line">  downloadLi.id = &quot;downloader&quot;;</span><br><span class="line">  deleteLi.id = &quot;deleter&quot;;</span><br><span class="line">  downloadLi.appendChild(downloadButton);</span><br><span class="line">  deleteLi.appendChild(deleteButton);</span><br><span class="line"></span><br><span class="line">  // 追加标签</span><br><span class="line">  if (document.getElementById(&quot;downloader&quot;) == null) &#123;</span><br><span class="line">    document</span><br><span class="line">      .getElementsByClassName(&quot;sidebar-menu tree&quot;)[0]</span><br><span class="line">      .appendChild(downloadLi);</span><br><span class="line">    document</span><br><span class="line">      .getElementsByClassName(&quot;sidebar-menu tree&quot;)[0]</span><br><span class="line">      .appendChild(deleteLi);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="2、获取pem证书hash"><a href="#2、获取pem证书hash" class="headerlink" title="2、获取pem证书hash"></a>2、获取pem证书hash</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openssl x509 -subject_hash_old -in Fiddler.pem</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、将pem证书改名为hash-0"><a href="#3、将pem证书改名为hash-0" class="headerlink" title="3、将pem证书改名为hash.0"></a>3、将pem证书改名为hash.0</h3><h3 id="4、将证书上传到手机或模拟器"><a href="#4、将证书上传到手机或模拟器" class="headerlink" title="4、将证书上传到手机或模拟器"></a>4、将证书上传到手机或模拟器</h3><p><img src="https://s2.loli.net/2022/07/31/qwbx3ZUteK4ASr8.png" alt="Snipaste_2022-07-31_15-15-25.png"></p>
+<p>此时页面显示：</p>
+<p><img src="https://s2.loli.net/2022/08/02/eWQDy4ldmNXxzvb.png" alt="image-20220802090338705"></p>
+<p>就可以了</p>
 ]]></content>
       <categories>
         <category>安装教程</category>
@@ -298,64 +298,6 @@
       </categories>
       <tags>
         <tag>python基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>二叉树的迭代遍历_二叉树02</title>
-    <url>/2022/07/30/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9102/</url>
-    <content><![CDATA[<h1 id="二叉树的迭代遍历"><a href="#二叉树的迭代遍历" class="headerlink" title="二叉树的迭代遍历"></a>二叉树的迭代遍历</h1><blockquote>
-<p>听说还可以用非递归的方式</p>
-</blockquote>
-<p>看完本篇大家可以使用迭代法，再重新解决如下三道leetcode上的题目：</p>
-<ul>
-<li><a href="https://leetcode.cn/problems/binary-tree-preorder-traversal/">144.二叉树的前序遍历(opens new window)</a></li>
-<li><a href="https://leetcode.cn/problems/binary-tree-inorder-traversal/">94.二叉树的中序遍历(opens new window)</a></li>
-<li><a href="https://leetcode.cn/problems/binary-tree-postorder-traversal/">145.二叉树的后序遍历(opens new window)</a></li>
-</ul>
-<p>为什么可以用迭代法（非递归的方式）来实现二叉树的前后中序遍历呢？</p>
-<p>我们在<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">栈与队列：匹配问题都是栈的强项 (opens new window)</a>中提到了，<strong>递归的实现就是：每一次递归调用都会把函数的局部变量、参数值和返回地址等压入调用栈中</strong>，然后递归返回的时候，从栈顶弹出上一次递归的各项参数，所以这就是递归为什么可以返回上一层位置的原因。</p>
-<p>此时大家应该知道我们用栈也可以是实现二叉树的前后中序遍历了。</p>
-<h2 id="前序遍历（迭代法）"><a href="#前序遍历（迭代法）" class="headerlink" title="#前序遍历（迭代法）"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86-%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>前序遍历（迭代法）</h2><p>我们先看一下前序遍历。</p>
-<p>前序遍历是中左右，每次先处理的是中间节点，那么先将根节点放入栈中，然后将右孩子加入栈，再加入左孩子。</p>
-<p>为什么要先加入 右孩子，再加入左孩子呢？ 因为这样出栈的时候才是中左右的顺序。</p>
-<p>动画如下：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbmss7603g30eq0d4b2a.gif" alt="二叉树前序遍历（迭代法）"></p>
-<p>此时会发现貌似使用迭代法写出前序遍历并不难，确实不难。</p>
-<p><strong>此时是不是想改一点前序遍历代码顺序就把中序遍历搞出来了？</strong></p>
-<p>其实还真不行！</p>
-<p>但接下来，<strong>再用迭代法写中序遍历的时候，会发现套路又不一样了，目前的前序遍历的逻辑无法直接应用到中序遍历上。</strong></p>
-<h2 id="中序遍历（迭代法）"><a href="#中序遍历（迭代法）" class="headerlink" title="#中序遍历（迭代法）"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86-%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>中序遍历（迭代法）</h2><p>为了解释清楚，我说明一下 刚刚在迭代的过程中，其实我们有两个操作：</p>
-<ol>
-<li><strong>处理：将元素放进result数组中</strong></li>
-<li><strong>访问：遍历节点</strong></li>
-</ol>
-<p>分析一下为什么刚刚写的前序遍历的代码，不能和中序遍历通用呢，因为前序遍历的顺序是中左右，先访问的元素是中间节点，要处理的元素也是中间节点，所以刚刚才能写出相对简洁的代码，<strong>因为要访问的元素和要处理的元素顺序是一致的，都是中间节点。</strong></p>
-<p>那么再看看中序遍历，中序遍历是左中右，先访问的是二叉树顶部的节点，然后一层一层向下访问，直到到达树左面的最底部，再开始处理节点（也就是在把节点的数值放进result数组中），这就造成了<strong>处理顺序和访问顺序是不一致的。</strong></p>
-<p>那么<strong>在使用迭代法写中序遍历，就需要借用指针的遍历来帮助访问节点，栈则用来处理节点上的元素。</strong></p>
-<p>动画如下：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbmuj244bg30eq0d4kjm.gif" alt="二叉树中序遍历（迭代法）"></p>
-<p><strong>中序遍历，可以写出如下代码：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">inorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; result;</span><br><span class="line">        stack&lt;TreeNode*&gt; st;</span><br><span class="line">        TreeNode* cur = root;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="literal">NULL</span> || !st.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cur != <span class="literal">NULL</span>) &#123; <span class="comment">// 指针来访问节点，访问到最底层</span></span><br><span class="line">                st.<span class="built_in">push</span>(cur); <span class="comment">// 将访问的节点放进栈</span></span><br><span class="line">                cur = cur-&gt;left;                <span class="comment">// 左</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur = st.<span class="built_in">top</span>(); <span class="comment">// 从栈里弹出的数据，就是要处理的数据（放进result数组里的数据）</span></span><br><span class="line">                st.<span class="built_in">pop</span>();</span><br><span class="line">                result.<span class="built_in">push_back</span>(cur-&gt;val);     <span class="comment">// 中</span></span><br><span class="line">                cur = cur-&gt;right;               <span class="comment">// 右</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="后序遍历（迭代法）"><a href="#后序遍历（迭代法）" class="headerlink" title="#后序遍历（迭代法）"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86-%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>后序遍历（迭代法）</h2><p>再来看后序遍历，先序遍历是中左右，后续遍历是左右中，那么我们只需要调整一下先序遍历的代码顺序，就变成中右左的遍历顺序，然后在反转result数组，输出的结果顺序就是左右中了，如下图：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200808200338924.png" alt="前序到后序"></p>
-<p><strong>所以后序遍历只需要前序遍历的代码稍作修改就可以了，代码如下：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        stack&lt;TreeNode*&gt; st;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; result;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> result;</span><br><span class="line">        st.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="keyword">while</span> (!st.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            TreeNode* node = st.<span class="built_in">top</span>();</span><br><span class="line">            st.<span class="built_in">pop</span>();</span><br><span class="line">            result.<span class="built_in">push_back</span>(node-&gt;val);</span><br><span class="line">            <span class="keyword">if</span> (node-&gt;left) st.<span class="built_in">push</span>(node-&gt;left); <span class="comment">// 相对于前序遍历，这更改一下入栈顺序 （空节点不入栈）</span></span><br><span class="line">            <span class="keyword">if</span> (node-&gt;right) st.<span class="built_in">push</span>(node-&gt;right); <span class="comment">// 空节点不入栈</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">reverse</span>(result.<span class="built_in">begin</span>(), result.<span class="built_in">end</span>()); <span class="comment">// 将结果反转之后就是左右中的顺序了</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h1 id="总结"><a href="#总结" class="headerlink" title="#总结"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E6%80%BB%E7%BB%93">#</a>总结</h1><p>此时我们用迭代法写出了二叉树的前后中序遍历，大家可以看出前序和中序是完全两种代码风格，并不像递归写法那样代码稍做调整，就可以实现前后中序。</p>
-<p><strong>这是因为前序遍历中访问节点（遍历节点）和处理节点（将元素放进result数组中）可以同步处理，但是中序就无法做到同步！</strong></p>
-<p>上面这句话，可能一些同学不太理解，建议自己亲手用迭代法，先写出来前序，再试试能不能写出中序，就能理解了。</p>
-<p><strong>那么问题又来了，难道 二叉树前后中序遍历的迭代法实现，就不能风格统一么（即前序遍历 改变代码顺序就可以实现中序 和 后序）？</strong></p>
-<p>当然可以，这种写法，还不是很好理解，我们将在下一篇文章里重点讲解，敬请期待！</p>
-<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// 前序遍历</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> res;</span><br><span class="line">        Deque&lt;TreeNode&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        que.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!que.isEmpty()) &#123;</span><br><span class="line">            <span class="type">TreeNode</span> <span class="variable">temp</span> <span class="operator">=</span> que.pop();</span><br><span class="line">            res.add(temp.val);</span><br><span class="line">            <span class="keyword">if</span>(temp.right != <span class="literal">null</span>) que.push(temp.right);</span><br><span class="line">            <span class="keyword">if</span>(temp.left != <span class="literal">null</span>) que.push(temp.left);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 中序遍历</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> res;</span><br><span class="line">        Deque&lt;Integer&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">cur</span> <span class="operator">=</span> root;</span><br><span class="line">        <span class="comment">// 先把最左边的节点全都压入栈当中 如果没有左孩子节点了的话 栈弹出一个元素 再看弹出元素的右孩子</span></span><br><span class="line">        <span class="keyword">while</span>(cur != <span class="literal">null</span> || !que.isEmpty()) &#123;</span><br><span class="line">                	<span class="keyword">if</span>(cur != <span class="literal">null</span>) &#123;</span><br><span class="line">                         que.push(cur);</span><br><span class="line">                         cur = cur.left;</span><br><span class="line">                    &#125;</span><br><span class="line">                	<span class="keyword">else</span> &#123;</span><br><span class="line">                        cur = que.pop();</span><br><span class="line">                        res.add(cur.val);</span><br><span class="line">                        cur = cur.right;</span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">// 后序遍历</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="comment">// 中左右 -&gt; 中右左 -&gt; Collections.reverse</span></span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        Deque&lt;Integer&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        que.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!que.isEmpty()) &#123;</span><br><span class="line">            <span class="type">TreeNode</span> <span class="variable">node</span> <span class="operator">=</span> que.pop();</span><br><span class="line">            res.add(node.val); </span><br><span class="line">            <span class="keyword">if</span>(node.left != <span class="literal">null</span>) que.push(node.left);</span><br><span class="line">            <span class="keyword">if</span>(node.right != <span class="literal">null</span>) que.push(node.right);</span><br><span class="line">        &#125;</span><br><span class="line">        Collections.reverse(res);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>二叉树</category>
-      </categories>
-      <tags>
-        <tag>二叉树</tag>
       </tags>
   </entry>
   <entry>
@@ -420,6 +362,128 @@
       </tags>
   </entry>
   <entry>
+    <title>二叉树的迭代遍历_二叉树02</title>
+    <url>/2022/07/30/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9102/</url>
+    <content><![CDATA[<h1 id="二叉树的迭代遍历"><a href="#二叉树的迭代遍历" class="headerlink" title="二叉树的迭代遍历"></a>二叉树的迭代遍历</h1><blockquote>
+<p>听说还可以用非递归的方式</p>
+</blockquote>
+<p>看完本篇大家可以使用迭代法，再重新解决如下三道leetcode上的题目：</p>
+<ul>
+<li><a href="https://leetcode.cn/problems/binary-tree-preorder-traversal/">144.二叉树的前序遍历(opens new window)</a></li>
+<li><a href="https://leetcode.cn/problems/binary-tree-inorder-traversal/">94.二叉树的中序遍历(opens new window)</a></li>
+<li><a href="https://leetcode.cn/problems/binary-tree-postorder-traversal/">145.二叉树的后序遍历(opens new window)</a></li>
+</ul>
+<p>为什么可以用迭代法（非递归的方式）来实现二叉树的前后中序遍历呢？</p>
+<p>我们在<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">栈与队列：匹配问题都是栈的强项 (opens new window)</a>中提到了，<strong>递归的实现就是：每一次递归调用都会把函数的局部变量、参数值和返回地址等压入调用栈中</strong>，然后递归返回的时候，从栈顶弹出上一次递归的各项参数，所以这就是递归为什么可以返回上一层位置的原因。</p>
+<p>此时大家应该知道我们用栈也可以是实现二叉树的前后中序遍历了。</p>
+<h2 id="前序遍历（迭代法）"><a href="#前序遍历（迭代法）" class="headerlink" title="#前序遍历（迭代法）"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86-%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>前序遍历（迭代法）</h2><p>我们先看一下前序遍历。</p>
+<p>前序遍历是中左右，每次先处理的是中间节点，那么先将根节点放入栈中，然后将右孩子加入栈，再加入左孩子。</p>
+<p>为什么要先加入 右孩子，再加入左孩子呢？ 因为这样出栈的时候才是中左右的顺序。</p>
+<p>动画如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbmss7603g30eq0d4b2a.gif" alt="二叉树前序遍历（迭代法）"></p>
+<p>此时会发现貌似使用迭代法写出前序遍历并不难，确实不难。</p>
+<p><strong>此时是不是想改一点前序遍历代码顺序就把中序遍历搞出来了？</strong></p>
+<p>其实还真不行！</p>
+<p>但接下来，<strong>再用迭代法写中序遍历的时候，会发现套路又不一样了，目前的前序遍历的逻辑无法直接应用到中序遍历上。</strong></p>
+<h2 id="中序遍历（迭代法）"><a href="#中序遍历（迭代法）" class="headerlink" title="#中序遍历（迭代法）"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86-%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>中序遍历（迭代法）</h2><p>为了解释清楚，我说明一下 刚刚在迭代的过程中，其实我们有两个操作：</p>
+<ol>
+<li><strong>处理：将元素放进result数组中</strong></li>
+<li><strong>访问：遍历节点</strong></li>
+</ol>
+<p>分析一下为什么刚刚写的前序遍历的代码，不能和中序遍历通用呢，因为前序遍历的顺序是中左右，先访问的元素是中间节点，要处理的元素也是中间节点，所以刚刚才能写出相对简洁的代码，<strong>因为要访问的元素和要处理的元素顺序是一致的，都是中间节点。</strong></p>
+<p>那么再看看中序遍历，中序遍历是左中右，先访问的是二叉树顶部的节点，然后一层一层向下访问，直到到达树左面的最底部，再开始处理节点（也就是在把节点的数值放进result数组中），这就造成了<strong>处理顺序和访问顺序是不一致的。</strong></p>
+<p>那么<strong>在使用迭代法写中序遍历，就需要借用指针的遍历来帮助访问节点，栈则用来处理节点上的元素。</strong></p>
+<p>动画如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbmuj244bg30eq0d4kjm.gif" alt="二叉树中序遍历（迭代法）"></p>
+<p><strong>中序遍历，可以写出如下代码：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">inorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; result;</span><br><span class="line">        stack&lt;TreeNode*&gt; st;</span><br><span class="line">        TreeNode* cur = root;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="literal">NULL</span> || !st.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cur != <span class="literal">NULL</span>) &#123; <span class="comment">// 指针来访问节点，访问到最底层</span></span><br><span class="line">                st.<span class="built_in">push</span>(cur); <span class="comment">// 将访问的节点放进栈</span></span><br><span class="line">                cur = cur-&gt;left;                <span class="comment">// 左</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur = st.<span class="built_in">top</span>(); <span class="comment">// 从栈里弹出的数据，就是要处理的数据（放进result数组里的数据）</span></span><br><span class="line">                st.<span class="built_in">pop</span>();</span><br><span class="line">                result.<span class="built_in">push_back</span>(cur-&gt;val);     <span class="comment">// 中</span></span><br><span class="line">                cur = cur-&gt;right;               <span class="comment">// 右</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="后序遍历（迭代法）"><a href="#后序遍历（迭代法）" class="headerlink" title="#后序遍历（迭代法）"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86-%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>后序遍历（迭代法）</h2><p>再来看后序遍历，先序遍历是中左右，后续遍历是左右中，那么我们只需要调整一下先序遍历的代码顺序，就变成中右左的遍历顺序，然后在反转result数组，输出的结果顺序就是左右中了，如下图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200808200338924.png" alt="前序到后序"></p>
+<p><strong>所以后序遍历只需要前序遍历的代码稍作修改就可以了，代码如下：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        stack&lt;TreeNode*&gt; st;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; result;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> result;</span><br><span class="line">        st.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="keyword">while</span> (!st.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            TreeNode* node = st.<span class="built_in">top</span>();</span><br><span class="line">            st.<span class="built_in">pop</span>();</span><br><span class="line">            result.<span class="built_in">push_back</span>(node-&gt;val);</span><br><span class="line">            <span class="keyword">if</span> (node-&gt;left) st.<span class="built_in">push</span>(node-&gt;left); <span class="comment">// 相对于前序遍历，这更改一下入栈顺序 （空节点不入栈）</span></span><br><span class="line">            <span class="keyword">if</span> (node-&gt;right) st.<span class="built_in">push</span>(node-&gt;right); <span class="comment">// 空节点不入栈</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">reverse</span>(result.<span class="built_in">begin</span>(), result.<span class="built_in">end</span>()); <span class="comment">// 将结果反转之后就是左右中的顺序了</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="#总结"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E6%80%BB%E7%BB%93">#</a>总结</h1><p>此时我们用迭代法写出了二叉树的前后中序遍历，大家可以看出前序和中序是完全两种代码风格，并不像递归写法那样代码稍做调整，就可以实现前后中序。</p>
+<p><strong>这是因为前序遍历中访问节点（遍历节点）和处理节点（将元素放进result数组中）可以同步处理，但是中序就无法做到同步！</strong></p>
+<p>上面这句话，可能一些同学不太理解，建议自己亲手用迭代法，先写出来前序，再试试能不能写出中序，就能理解了。</p>
+<p><strong>那么问题又来了，难道 二叉树前后中序遍历的迭代法实现，就不能风格统一么（即前序遍历 改变代码顺序就可以实现中序 和 后序）？</strong></p>
+<p>当然可以，这种写法，还不是很好理解，我们将在下一篇文章里重点讲解，敬请期待！</p>
+<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// 前序遍历</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> res;</span><br><span class="line">        Deque&lt;TreeNode&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        que.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!que.isEmpty()) &#123;</span><br><span class="line">            <span class="type">TreeNode</span> <span class="variable">temp</span> <span class="operator">=</span> que.pop();</span><br><span class="line">            res.add(temp.val);</span><br><span class="line">            <span class="keyword">if</span>(temp.right != <span class="literal">null</span>) que.push(temp.right);</span><br><span class="line">            <span class="keyword">if</span>(temp.left != <span class="literal">null</span>) que.push(temp.left);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 中序遍历</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> res;</span><br><span class="line">        Deque&lt;Integer&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">cur</span> <span class="operator">=</span> root;</span><br><span class="line">        <span class="comment">// 先把最左边的节点全都压入栈当中 如果没有左孩子节点了的话 栈弹出一个元素 再看弹出元素的右孩子</span></span><br><span class="line">        <span class="keyword">while</span>(cur != <span class="literal">null</span> || !que.isEmpty()) &#123;</span><br><span class="line">                	<span class="keyword">if</span>(cur != <span class="literal">null</span>) &#123;</span><br><span class="line">                         que.push(cur);</span><br><span class="line">                         cur = cur.left;</span><br><span class="line">                    &#125;</span><br><span class="line">                	<span class="keyword">else</span> &#123;</span><br><span class="line">                        cur = que.pop();</span><br><span class="line">                        res.add(cur.val);</span><br><span class="line">                        cur = cur.right;</span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">// 后序遍历</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="comment">// 中左右 -&gt; 中右左 -&gt; Collections.reverse</span></span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        Deque&lt;Integer&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        que.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!que.isEmpty()) &#123;</span><br><span class="line">            <span class="type">TreeNode</span> <span class="variable">node</span> <span class="operator">=</span> que.pop();</span><br><span class="line">            res.add(node.val); </span><br><span class="line">            <span class="keyword">if</span>(node.left != <span class="literal">null</span>) que.push(node.left);</span><br><span class="line">            <span class="keyword">if</span>(node.right != <span class="literal">null</span>) que.push(node.right);</span><br><span class="line">        &#125;</span><br><span class="line">        Collections.reverse(res);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>二叉树</category>
+      </categories>
+      <tags>
+        <tag>二叉树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二叉树的递归遍历_二叉树04</title>
+    <url>/2022/07/30/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9104/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>二叉树</category>
+      </categories>
+      <tags>
+        <tag>二叉树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组在哈希表中的应用</title>
+    <url>/2022/07/13/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
+    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
+<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>哈希表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两个数组的交集</title>
+    <url>/2022/07/22/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A801/</url>
+    <content><![CDATA[<h1 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349. 两个数组的交集"></a>349. 两个数组的交集</h1><p><a href="https://leetcode.cn/problems/intersection-of-two-arrays/">力扣题目链接(opens new window)</a></p>
+<p>题意：给定两个数组，编写一个函数来计算它们的交集。</p>
+<p><img src="https://s2.loli.net/2022/07/22/x4yNsaYlTSwroHL.png" alt="349. 两个数组的交集"></p>
+<p><strong>说明：</strong> 输出结果中的每个元素一定是唯一的。 我们可以不考虑输出结果的顺序。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>关于本题，我录制了讲解视频：<a href="https://www.bilibili.com/video/BV1ba411S7wu">学透哈希表，set使用有技巧！Leetcode：349. 两个数组的交集 (opens new window)</a>，看视频配合题解，事半功倍。</p>
+<p>这道题目，主要要学会使用一种哈希数据结构：unordered_set，这个数据结构可以解决很多类似的问题。</p>
+<p>注意题目特意说明：<strong>输出结果中的每个元素一定是唯一的，也就是说输出的结果的去重的， 同时可以不考虑输出结果的顺序</strong></p>
+<p>这道题用暴力的解法时间复杂度是O(n^2)，那来看看使用哈希法进一步优化。</p>
+<p>那么用数组来做哈希表也是不错的选择，例如<a href="https://programmercarl.com/0242.%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html">242. 有效的字母异位词(opens new window)</a></p>
+<p>但是要注意，<strong>使用数组来做哈希的题目，是因为题目都限制了数值的大小。</strong></p>
+<p>而这道题目没有限制数值的大小，就无法使用数组来做哈希表了。</p>
+<p><strong>而且如果哈希值比较少、特别分散、跨度非常大，使用数组就造成空间的极大浪费。</strong></p>
+<p>此时就要使用另一种结构体了，set ，关于set，C++ 给提供了如下三种可用的数据结构：</p>
+<ul>
+<li>std::set</li>
+<li>std::multiset</li>
+<li>std::unordered_set</li>
+</ul>
+<p>std::set和std::multiset底层实现都是红黑树，std::unordered_set的底层实现是哈希表， 使用unordered_set 读写效率是最高的，并不需要对数据进行排序，而且还不要让数据重复，所以选择unordered_set。</p>
+<p>思路如图所示：</p>
+<p><img src="https://s2.loli.net/2022/07/22/6RG3uhyqpUTOLN8.png" alt="set哈希法"></p>
+<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] intersection(<span class="type">int</span>[] nums1, <span class="type">int</span>[] nums2) &#123;</span><br><span class="line">    		<span class="comment">// 通过两个hashSet 分别来存储nums1中出现的元素，返回结果</span></span><br><span class="line">    		Set&lt;Integer&gt; hash1 = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">    		Set&lt;Integer&gt; hash2 = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">    		<span class="keyword">for</span>(<span class="type">int</span> i:nums1) &#123;</span><br><span class="line">                hash1.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        	<span class="keyword">for</span>(<span class="type">int</span> i:nums2) &#123;</span><br><span class="line">                <span class="keyword">if</span>(hash1.contains(i)) &#123;</span><br><span class="line">                    hash2.add(i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">           <span class="comment">//将结果几何转为数组</span></span><br><span class="line">        	<span class="keyword">return</span> hash2.stream().mapToInt(x -&gt; x).toArray();;</span><br><span class="line">            </span><br><span class="line">    &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>哈希表</category>
+      </categories>
+      <tags>
+        <tag>哈希表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>二叉树层序遍历登场_二叉树03</title>
     <url>/2022/07/30/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9103%20/</url>
     <content><![CDATA[<h1 id="二叉树层序遍历登场！"><a href="#二叉树层序遍历登场！" class="headerlink" title="二叉树层序遍历登场！"></a>二叉树层序遍历登场！</h1><p>学会二叉树的层序遍历，可以一口气打完以下十题：</p>
@@ -467,53 +531,6 @@
       </tags>
   </entry>
   <entry>
-    <title>二叉树的递归遍历_二叉树04</title>
-    <url>/2022/07/30/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9104/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>二叉树</category>
-      </categories>
-      <tags>
-        <tag>二叉树</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>两个数组的交集</title>
-    <url>/2022/07/22/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A801/</url>
-    <content><![CDATA[<h1 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349. 两个数组的交集"></a>349. 两个数组的交集</h1><p><a href="https://leetcode.cn/problems/intersection-of-two-arrays/">力扣题目链接(opens new window)</a></p>
-<p>题意：给定两个数组，编写一个函数来计算它们的交集。</p>
-<p><img src="https://s2.loli.net/2022/07/22/x4yNsaYlTSwroHL.png" alt="349. 两个数组的交集"></p>
-<p><strong>说明：</strong> 输出结果中的每个元素一定是唯一的。 我们可以不考虑输出结果的顺序。</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>关于本题，我录制了讲解视频：<a href="https://www.bilibili.com/video/BV1ba411S7wu">学透哈希表，set使用有技巧！Leetcode：349. 两个数组的交集 (opens new window)</a>，看视频配合题解，事半功倍。</p>
-<p>这道题目，主要要学会使用一种哈希数据结构：unordered_set，这个数据结构可以解决很多类似的问题。</p>
-<p>注意题目特意说明：<strong>输出结果中的每个元素一定是唯一的，也就是说输出的结果的去重的， 同时可以不考虑输出结果的顺序</strong></p>
-<p>这道题用暴力的解法时间复杂度是O(n^2)，那来看看使用哈希法进一步优化。</p>
-<p>那么用数组来做哈希表也是不错的选择，例如<a href="https://programmercarl.com/0242.%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html">242. 有效的字母异位词(opens new window)</a></p>
-<p>但是要注意，<strong>使用数组来做哈希的题目，是因为题目都限制了数值的大小。</strong></p>
-<p>而这道题目没有限制数值的大小，就无法使用数组来做哈希表了。</p>
-<p><strong>而且如果哈希值比较少、特别分散、跨度非常大，使用数组就造成空间的极大浪费。</strong></p>
-<p>此时就要使用另一种结构体了，set ，关于set，C++ 给提供了如下三种可用的数据结构：</p>
-<ul>
-<li>std::set</li>
-<li>std::multiset</li>
-<li>std::unordered_set</li>
-</ul>
-<p>std::set和std::multiset底层实现都是红黑树，std::unordered_set的底层实现是哈希表， 使用unordered_set 读写效率是最高的，并不需要对数据进行排序，而且还不要让数据重复，所以选择unordered_set。</p>
-<p>思路如图所示：</p>
-<p><img src="https://s2.loli.net/2022/07/22/6RG3uhyqpUTOLN8.png" alt="set哈希法"></p>
-<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] intersection(<span class="type">int</span>[] nums1, <span class="type">int</span>[] nums2) &#123;</span><br><span class="line">    		<span class="comment">// 通过两个hashSet 分别来存储nums1中出现的元素，返回结果</span></span><br><span class="line">    		Set&lt;Integer&gt; hash1 = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">    		Set&lt;Integer&gt; hash2 = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">    		<span class="keyword">for</span>(<span class="type">int</span> i:nums1) &#123;</span><br><span class="line">                hash1.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        	<span class="keyword">for</span>(<span class="type">int</span> i:nums2) &#123;</span><br><span class="line">                <span class="keyword">if</span>(hash1.contains(i)) &#123;</span><br><span class="line">                    hash2.add(i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">           <span class="comment">//将结果几何转为数组</span></span><br><span class="line">        	<span class="keyword">return</span> hash2.stream().mapToInt(x -&gt; x).toArray();;</span><br><span class="line">            </span><br><span class="line">    &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>哈希表</category>
-      </categories>
-      <tags>
-        <tag>哈希表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>快乐数_哈希表</title>
     <url>/2022/07/22/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A802/</url>
     <content><![CDATA[<h1 id="快乐数"><a href="#快乐数" class="headerlink" title="快乐数"></a>快乐数</h1><p><a href="https://leetcode.cn/problems/happy-number/">力扣题目链接(opens new window)</a></p>
@@ -537,23 +554,6 @@
       </categories>
       <tags>
         <tag>哈希表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数组在哈希表中的应用</title>
-    <url>/2022/07/13/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
-    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
-<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>哈希表</tag>
-        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -812,6 +812,39 @@
       </tags>
   </entry>
   <entry>
+    <title>替换空格_字符串03</title>
+    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B203/</url>
+    <content><![CDATA[<h1 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h1><p><a href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">力扣题目链接(opens new window)</a></p>
+<p>请实现一个函数，把字符串 s 中的每个空格替换成”%20”。</p>
+<p>示例 1： 输入：s &#x3D; “We are happy.”<br>输出：”We%20are%20happy.”</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果想把这道题目做到极致，就不要只用额外的辅助空间了！</p>
+<p>首先扩充数组到每个空格替换成”%20”之后的大小。</p>
+<p>然后从后向前替换空格，也就是双指针法，过程如下：</p>
+<p>i指向新长度的末尾，j指向旧长度的末尾。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1go6qmevhgpg20du09m4qp.gif" alt="替换空格"></p>
+<p>有同学问了，为什么要从后向前填充，从前向后填充不行么？</p>
+<p>从前向后填充就是O(n^2)的算法了，因为每次添加元素都要将添加元素之后的所有元素向后移动。</p>
+<p><strong>其实很多数组填充类的问题，都可以先预先给数组扩容带填充后的大小，然后在从后向前进行操作。</strong></p>
+<p>这么做有两个好处：</p>
+<ol>
+<li>不用申请新数组。</li>
+<li>从后向前填充元素，避免了从前先后填充元素要来的 每次添加元素都要将添加元素之后的所有元素向后移动。</li>
+</ol>
+<p>时间复杂度，空间复杂度均超过100%的用户。</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E5%89%91%E6%8C%87Offer05.%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.png" alt="img"></p>
+<p>java代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">replaceSpace</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(s == <span class="literal">null</span> || s.length() == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 扩容</span></span><br><span class="line">    <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">    <span class="keyword">while</span>(<span class="type">char</span> c:s.toCharArray()) &#123;</span><br><span class="line">    	<span class="keyword">if</span>(c == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">    		sb.append(<span class="string">&#x27;   &#x27;</span>)</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    s += sb.toString();</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span>[] arr = s.toCharArray();</span><br><span class="line">    <span class="keyword">while</span>(left &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[left] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">            arr[right] = <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            arr[right] = arr[left];</span><br><span class="line">        &#125;</span><br><span class="line">        left--;</span><br><span class="line">        right--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(arr);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>字符串</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>翻转字符串里的单词_字符串04</title>
     <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B204/</url>
     <content><![CDATA[<h1 id="翻转字符串里的单词"><a href="#翻转字符串里的单词" class="headerlink" title="翻转字符串里的单词"></a>翻转字符串里的单词</h1><p><a href="https://leetcode.cn/problems/reverse-words-in-a-string/">力扣题目链接(opens new window)</a></p>
@@ -871,39 +904,6 @@
       </tags>
   </entry>
   <entry>
-    <title>替换空格_字符串03</title>
-    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B203/</url>
-    <content><![CDATA[<h1 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h1><p><a href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">力扣题目链接(opens new window)</a></p>
-<p>请实现一个函数，把字符串 s 中的每个空格替换成”%20”。</p>
-<p>示例 1： 输入：s &#x3D; “We are happy.”<br>输出：”We%20are%20happy.”</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果想把这道题目做到极致，就不要只用额外的辅助空间了！</p>
-<p>首先扩充数组到每个空格替换成”%20”之后的大小。</p>
-<p>然后从后向前替换空格，也就是双指针法，过程如下：</p>
-<p>i指向新长度的末尾，j指向旧长度的末尾。</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1go6qmevhgpg20du09m4qp.gif" alt="替换空格"></p>
-<p>有同学问了，为什么要从后向前填充，从前向后填充不行么？</p>
-<p>从前向后填充就是O(n^2)的算法了，因为每次添加元素都要将添加元素之后的所有元素向后移动。</p>
-<p><strong>其实很多数组填充类的问题，都可以先预先给数组扩容带填充后的大小，然后在从后向前进行操作。</strong></p>
-<p>这么做有两个好处：</p>
-<ol>
-<li>不用申请新数组。</li>
-<li>从后向前填充元素，避免了从前先后填充元素要来的 每次添加元素都要将添加元素之后的所有元素向后移动。</li>
-</ol>
-<p>时间复杂度，空间复杂度均超过100%的用户。</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E5%89%91%E6%8C%87Offer05.%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.png" alt="img"></p>
-<p>java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">replaceSpace</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(s == <span class="literal">null</span> || s.length() == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 扩容</span></span><br><span class="line">    <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">    <span class="keyword">while</span>(<span class="type">char</span> c:s.toCharArray()) &#123;</span><br><span class="line">    	<span class="keyword">if</span>(c == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">    		sb.append(<span class="string">&#x27;   &#x27;</span>)</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    s += sb.toString();</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span>[] arr = s.toCharArray();</span><br><span class="line">    <span class="keyword">while</span>(left &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[left] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">            arr[right] = <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            arr[right] = arr[left];</span><br><span class="line">        &#125;</span><br><span class="line">        left--;</span><br><span class="line">        right--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(arr);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>字符串</category>
-      </categories>
-      <tags>
-        <tag>字符串</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>左旋转字符串_字符串05</title>
     <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B205/</url>
     <content><![CDATA[<h1 id="左旋转字符串"><a href="#左旋转字符串" class="headerlink" title="左旋转字符串"></a>左旋转字符串</h1><p><a href="https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/">力扣题目链接(opens new window)</a></p>
@@ -945,6 +945,102 @@
       </categories>
       <tags>
         <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重复的子字符串_字符串07</title>
+    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B207/</url>
+    <content><![CDATA[<h1 id="重复的子字符串"><a href="#重复的子字符串" class="headerlink" title="重复的子字符串"></a>重复的子字符串</h1><p><a href="https://leetcode.cn/problems/repeated-substring-pattern/">力扣题目链接(opens new window)</a></p>
+<p>给定一个非空的字符串，判断它是否可以由它的一个子串重复多次构成。给定的字符串只含有小写英文字母，并且长度不超过10000。</p>
+<p>示例 1:<br>输入: “abab”<br>输出: True<br>解释: 可由子字符串 “ab” 重复两次构成。</p>
+<p>示例 2:<br>输入: “aba”<br>输出: False</p>
+<p>示例 3:<br>输入: “abcabcabcabc”<br>输出: True<br>解释: 可由子字符串 “abc” 重复四次构成。 (或者子字符串 “abcabc” 重复两次构成。)</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这又是一道标准的KMP的题目。</p>
+<p>如果KMP还不够了解，可以看我的B站：</p>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1PD4y1o7nd/">帮你把KMP算法学个通透！（理论篇）(opens new window)</a></li>
+<li><a href="https://www.bilibili.com/video/BV1M5411j7Xx">帮你把KMP算法学个通透！（求next数组代码篇）(opens new window)</a></li>
+</ul>
+<p>我们在<a href="https://programmercarl.com/0028.%E5%AE%9E%E7%8E%B0strStr.html">字符串：KMP算法精讲 (opens new window)</a>里提到了，在一个串中查找是否出现过另一个串，这是KMP的看家本领。</p>
+<p>那么寻找重复子串怎么也涉及到KMP算法了呢？</p>
+<p>这里就要说一说next数组了，next 数组记录的就是最长相同前后缀( <a href="https://programmercarl.com/0028.%E5%AE%9E%E7%8E%B0strStr.html">字符串：KMP算法精讲 (opens new window)</a>这里介绍了什么是前缀，什么是后缀，什么又是最长相同前后缀)， 如果 next[len - 1] !&#x3D; -1，则说明字符串有最长相同的前后缀（就是字符串里的前缀子串和后缀子串相同的最长长度）。</p>
+<p>最长相等前后缀的长度为：next[len - 1] + 1。(这里的next数组是以统一减一的方式计算的，因此需要+1)</p>
+<p>数组长度为：len。</p>
+<p>如果len % (len - (next[len - 1] + 1)) &#x3D;&#x3D; 0 ，则说明 (数组长度-最长相等前后缀的长度) 正好可以被 数组的长度整除，说明有该字符串有重复的子字符串。</p>
+<p><strong>数组长度减去最长相同前后缀的长度相当于是第一个周期的长度，也就是一个周期的长度，如果这个周期可以被整除，就说明整个数组就是这个周期的循环。</strong></p>
+<p><strong>强烈建议大家把next数组打印出来，看看next数组里的规律，有助于理解KMP算法</strong></p>
+<p>如图：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/459.%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2_1.png" alt="459.重复的子字符串_1"></p>
+<p>next[len - 1] &#x3D; 7，next[len - 1] + 1 &#x3D; 8，8就是此时字符串asdfasdfasdf的最长相同前后缀的长度。</p>
+<p>(len - (next[len - 1] + 1)) 也就是： 12(字符串的长度) - 8(最长公共前后缀的长度) &#x3D; 4， 4正好可以被 12(字符串的长度) 整除，所以说明有重复的子字符串（asdf）。</p>
+<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">repeatedSubstringPattern</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    		<span class="type">int</span>[] next = <span class="keyword">new</span> <span class="title class_">int</span>[s.length()];</span><br><span class="line">    		<span class="comment">// next数组</span></span><br><span class="line">    		getNext(next,s);</span><br><span class="line">    		<span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> s.length() - (next[s.length()-<span class="number">1</span>] + <span class="number">1</span>);</span><br><span class="line">    		<span class="keyword">return</span> s.length()%a == <span class="number">0</span>?<span class="literal">true</span>:<span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">getNext</span><span class="params">(<span class="type">int</span>[] next,String s)</span> &#123;</span><br><span class="line">		<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        next[<span class="number">0</span>] = j;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;s.length();i++) &#123;</span><br><span class="line">            <span class="keyword">while</span>(j&gt;=<span class="number">0</span> &amp;&amp; s.charAt(j+<span class="number">1</span>) != s.charAt(i)) &#123;</span><br><span class="line">                j = next[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(j+<span class="number">1</span>) == s.charAt(i)) &#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            next[i] = j;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>字符串</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组_代码随想列题</title>
+    <url>/2022/07/14/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8401/</url>
+    <content><![CDATA[<h1 id="数组-代码随想列题"><a href="#数组-代码随想列题" class="headerlink" title="数组_代码随想列题"></a>数组_代码随想列题</h1><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>[题目链接](<a href="https://leetcode.cn/problems/binary-search/">Loading Question… - 力扣（LeetCode）</a>)</p>
+<p>给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
+<p>示例 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 9     </span><br><span class="line">输出: 4       </span><br><span class="line">解释: 9 出现在 nums 中并且下标为 4     </span><br></pre></td></tr></table></figure>
+
+<p>示例 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 2     </span><br><span class="line">输出: -1        </span><br><span class="line">解释: 2 不存在 nums 中因此返回 -1  </span><br></pre></td></tr></table></figure>
+
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了易于大家理解，我还录制了视频，可以看这里：<a href="https://www.bilibili.com/video/BV1fA4y1o715">手把手带你撕出正确的二分法(opens new window)</a></p>
+<p><strong>这道题目的前提是数组为有序数组</strong>，同时题目还强调<strong>数组中无重复元素</strong>，因为一旦有重复元素，使用二分查找法返回的元素下标可能不是唯一的，这些都是使用二分法的前提条件，当大家看到题目描述满足如上条件的时候，可要想一想是不是可以用二分法了。</p>
+<p>二分查找涉及的很多的边界条件，逻辑比较简单，但就是写不好。例如到底是 <code>while(left &lt; right)</code> 还是 <code>while(left &lt;= right)</code>，到底是<code>right = middle</code>呢，还是要<code>right = middle - 1</code>呢？</p>
+<p>大家写二分法经常写乱，主要是因为<strong>对区间的定义没有想清楚，区间的定义就是不变量</strong>。要在二分查找的过程中，保持不变量，就是在while寻找中每一次边界的处理都要坚持根据区间的定义来操作，这就是<strong>循环不变量</strong>规则。</p>
+<p>写二分法，区间的定义一般为两种，左闭右闭即[left, right]，或者左闭右开即[left, right)。</p>
+<p>下面我用这两种区间的定义分别讲解两种不同的二分写法。</p>
+<h3 id="二分法第一种写法"><a href="#二分法第一种写法" class="headerlink" title="二分法第一种写法"></a>二分法第一种写法</h3><p>第一种写法，我们定义 target 是在一个在左闭右闭的区间里，<strong>也就是[left, right] （这个很重要非常重要）</strong>。</p>
+<p>区间的定义这就决定了二分法的代码应该如何写，<strong>因为定义target在[left, right]区间，所以有如下两点：</strong></p>
+<ul>
+<li>while (left &lt;&#x3D; right) 要使用 &lt;&#x3D; ，因为left &#x3D;&#x3D; right是有意义的，所以使用 &lt;&#x3D;</li>
+<li>if (nums[middle] &gt; target) right 要赋值为 middle - 1，因为当前这个nums[middle]一定不是target，那么接下来要查找的左区间结束下标位置就是 middle - 1</li>
+</ul>
+<p>例如在数组：1,2,3,4,7,9,10中查找元素2，如图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210311153055723.jpg" alt="704.二分查找"></p>
+<p>代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 版本一</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int search(vector&lt;int&gt;&amp; nums, int target) &#123;</span><br><span class="line">        int left = 0;</span><br><span class="line">        int right = nums.size() - 1; // 定义target在左闭右闭的区间里，[left, right]</span><br><span class="line">        while (left &lt;= right) &#123; // 当left==right，区间[left, right]依然有效，所以用 &lt;=</span><br><span class="line">            int middle = left + ((right - left) / 2);// 防止溢出 等同于(left + right)/2</span><br><span class="line">            if (nums[middle] &gt; target) &#123;</span><br><span class="line">                right = middle - 1; // target 在左区间，所以[left, middle - 1]</span><br><span class="line">            &#125; else if (nums[middle] &lt; target) &#123;</span><br><span class="line">                left = middle + 1; // target 在右区间，所以[middle + 1, right]</span><br><span class="line">            &#125; else &#123; // nums[middle] == target</span><br><span class="line">                return middle; // 数组中找到目标值，直接返回下标</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 未找到目标值</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="二分法第二种写法"><a href="#二分法第二种写法" class="headerlink" title="二分法第二种写法"></a>二分法第二种写法</h3><p>如果说定义 target 是在一个在左闭右开的区间里，也就是[left, right) ，那么二分法的边界处理方式则截然不同。</p>
+<p>有如下两点：</p>
+<ul>
+<li>while (left &lt; right)，这里使用 &lt; ,因为left &#x3D;&#x3D; right在区间[left, right)是没有意义的</li>
+<li>if (nums[middle] &gt; target) right 更新为 middle，因为当前nums[middle]不等于target，去左区间继续寻找，而寻找区间是左闭右开区间，所以right更新为middle，即：下一个查询区间不会去比较nums[middle]</li>
+</ul>
+<p>在数组：1,2,3,4,7,9,10中查找元素2，如图所示：（<strong>注意和方法一的区别</strong>）</p>
+<p><img src="https://img-blog.csdnimg.cn/20210311153123632.jpg" alt="704.二分查找1"></p>
+<p>代码如下：（详细注释）</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 版本二</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">search</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right = nums.<span class="built_in">size</span>(); <span class="comment">// 定义target在左闭右开的区间里，即：[left, right)</span></span><br><span class="line">        <span class="keyword">while</span> (left &lt; right) &#123; <span class="comment">// 因为left == right的时候，在[left, right)是无效的空间，所以使用 &lt;</span></span><br><span class="line">            <span class="type">int</span> middle = left + ((right - left) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span> (nums[middle] &gt; target) &#123;</span><br><span class="line">                right = middle; <span class="comment">// target 在左区间，在[left, middle)中</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[middle] &lt; target) &#123;</span><br><span class="line">                left = middle + <span class="number">1</span>; <span class="comment">// target 在右区间，在[middle + 1, right)中</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123; <span class="comment">// nums[middle] == target</span></span><br><span class="line">                <span class="keyword">return</span> middle; <span class="comment">// 数组中找到目标值，直接返回下标</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 未找到目标值</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>二分法是非常重要的基础算法，为什么很多同学对于二分法都是<strong>一看就会，一写就废</strong>？</p>
+<p>其实主要就是对区间的定义没有理解清楚，在循环中没有始终坚持根据查找区间的定义来做边界处理。</p>
+<p>区间的定义就是不变量，那么在循环中坚持根据查找区间的定义来做边界处理，就是循环不变量规则。</p>
+<p>本篇根据两种常见的区间定义，给出了两种二分法的写法，每一个边界为什么这么处理，都根据区间的定义做了详细介绍。</p>
+<p>相信看完本篇应该对二分法有更深刻的理解了。</p>
+<h3 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h3><p>左边第一个目标值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left &lt; right) &#123;</span><br><span class="line">        mid = (left+right)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] &gt;= target) right = mid;</span><br><span class="line">        <span class="keyword">else</span> left = mid+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> left || right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>右边第一个目标值：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">	int left = 0;</span><br><span class="line">	int right = nums.length - 1;</span><br><span class="line">	while(left &lt; right) &#123;</span><br><span class="line">		mid = 1+(left+right)/2;</span><br><span class="line">		if(nums[mid]&lt;=target) left = mid;</span><br><span class="line">		else right = mid-1;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -1141,65 +1237,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数组_代码随想列题</title>
-    <url>/2022/07/14/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8401/</url>
-    <content><![CDATA[<h1 id="数组-代码随想列题"><a href="#数组-代码随想列题" class="headerlink" title="数组_代码随想列题"></a>数组_代码随想列题</h1><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>[题目链接](<a href="https://leetcode.cn/problems/binary-search/">Loading Question… - 力扣（LeetCode）</a>)</p>
-<p>给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
-<p>示例 1:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 9     </span><br><span class="line">输出: 4       </span><br><span class="line">解释: 9 出现在 nums 中并且下标为 4     </span><br></pre></td></tr></table></figure>
-
-<p>示例 2:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 2     </span><br><span class="line">输出: -1        </span><br><span class="line">解释: 2 不存在 nums 中因此返回 -1  </span><br></pre></td></tr></table></figure>
-
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了易于大家理解，我还录制了视频，可以看这里：<a href="https://www.bilibili.com/video/BV1fA4y1o715">手把手带你撕出正确的二分法(opens new window)</a></p>
-<p><strong>这道题目的前提是数组为有序数组</strong>，同时题目还强调<strong>数组中无重复元素</strong>，因为一旦有重复元素，使用二分查找法返回的元素下标可能不是唯一的，这些都是使用二分法的前提条件，当大家看到题目描述满足如上条件的时候，可要想一想是不是可以用二分法了。</p>
-<p>二分查找涉及的很多的边界条件，逻辑比较简单，但就是写不好。例如到底是 <code>while(left &lt; right)</code> 还是 <code>while(left &lt;= right)</code>，到底是<code>right = middle</code>呢，还是要<code>right = middle - 1</code>呢？</p>
-<p>大家写二分法经常写乱，主要是因为<strong>对区间的定义没有想清楚，区间的定义就是不变量</strong>。要在二分查找的过程中，保持不变量，就是在while寻找中每一次边界的处理都要坚持根据区间的定义来操作，这就是<strong>循环不变量</strong>规则。</p>
-<p>写二分法，区间的定义一般为两种，左闭右闭即[left, right]，或者左闭右开即[left, right)。</p>
-<p>下面我用这两种区间的定义分别讲解两种不同的二分写法。</p>
-<h3 id="二分法第一种写法"><a href="#二分法第一种写法" class="headerlink" title="二分法第一种写法"></a>二分法第一种写法</h3><p>第一种写法，我们定义 target 是在一个在左闭右闭的区间里，<strong>也就是[left, right] （这个很重要非常重要）</strong>。</p>
-<p>区间的定义这就决定了二分法的代码应该如何写，<strong>因为定义target在[left, right]区间，所以有如下两点：</strong></p>
-<ul>
-<li>while (left &lt;&#x3D; right) 要使用 &lt;&#x3D; ，因为left &#x3D;&#x3D; right是有意义的，所以使用 &lt;&#x3D;</li>
-<li>if (nums[middle] &gt; target) right 要赋值为 middle - 1，因为当前这个nums[middle]一定不是target，那么接下来要查找的左区间结束下标位置就是 middle - 1</li>
-</ul>
-<p>例如在数组：1,2,3,4,7,9,10中查找元素2，如图所示：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210311153055723.jpg" alt="704.二分查找"></p>
-<p>代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 版本一</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int search(vector&lt;int&gt;&amp; nums, int target) &#123;</span><br><span class="line">        int left = 0;</span><br><span class="line">        int right = nums.size() - 1; // 定义target在左闭右闭的区间里，[left, right]</span><br><span class="line">        while (left &lt;= right) &#123; // 当left==right，区间[left, right]依然有效，所以用 &lt;=</span><br><span class="line">            int middle = left + ((right - left) / 2);// 防止溢出 等同于(left + right)/2</span><br><span class="line">            if (nums[middle] &gt; target) &#123;</span><br><span class="line">                right = middle - 1; // target 在左区间，所以[left, middle - 1]</span><br><span class="line">            &#125; else if (nums[middle] &lt; target) &#123;</span><br><span class="line">                left = middle + 1; // target 在右区间，所以[middle + 1, right]</span><br><span class="line">            &#125; else &#123; // nums[middle] == target</span><br><span class="line">                return middle; // 数组中找到目标值，直接返回下标</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 未找到目标值</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="二分法第二种写法"><a href="#二分法第二种写法" class="headerlink" title="二分法第二种写法"></a>二分法第二种写法</h3><p>如果说定义 target 是在一个在左闭右开的区间里，也就是[left, right) ，那么二分法的边界处理方式则截然不同。</p>
-<p>有如下两点：</p>
-<ul>
-<li>while (left &lt; right)，这里使用 &lt; ,因为left &#x3D;&#x3D; right在区间[left, right)是没有意义的</li>
-<li>if (nums[middle] &gt; target) right 更新为 middle，因为当前nums[middle]不等于target，去左区间继续寻找，而寻找区间是左闭右开区间，所以right更新为middle，即：下一个查询区间不会去比较nums[middle]</li>
-</ul>
-<p>在数组：1,2,3,4,7,9,10中查找元素2，如图所示：（<strong>注意和方法一的区别</strong>）</p>
-<p><img src="https://img-blog.csdnimg.cn/20210311153123632.jpg" alt="704.二分查找1"></p>
-<p>代码如下：（详细注释）</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 版本二</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">search</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right = nums.<span class="built_in">size</span>(); <span class="comment">// 定义target在左闭右开的区间里，即：[left, right)</span></span><br><span class="line">        <span class="keyword">while</span> (left &lt; right) &#123; <span class="comment">// 因为left == right的时候，在[left, right)是无效的空间，所以使用 &lt;</span></span><br><span class="line">            <span class="type">int</span> middle = left + ((right - left) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span> (nums[middle] &gt; target) &#123;</span><br><span class="line">                right = middle; <span class="comment">// target 在左区间，在[left, middle)中</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[middle] &lt; target) &#123;</span><br><span class="line">                left = middle + <span class="number">1</span>; <span class="comment">// target 在右区间，在[middle + 1, right)中</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123; <span class="comment">// nums[middle] == target</span></span><br><span class="line">                <span class="keyword">return</span> middle; <span class="comment">// 数组中找到目标值，直接返回下标</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 未找到目标值</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>二分法是非常重要的基础算法，为什么很多同学对于二分法都是<strong>一看就会，一写就废</strong>？</p>
-<p>其实主要就是对区间的定义没有理解清楚，在循环中没有始终坚持根据查找区间的定义来做边界处理。</p>
-<p>区间的定义就是不变量，那么在循环中坚持根据查找区间的定义来做边界处理，就是循环不变量规则。</p>
-<p>本篇根据两种常见的区间定义，给出了两种二分法的写法，每一个边界为什么这么处理，都根据区间的定义做了详细介绍。</p>
-<p>相信看完本篇应该对二分法有更深刻的理解了。</p>
-<h3 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h3><p>左边第一个目标值</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left &lt; right) &#123;</span><br><span class="line">        mid = (left+right)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] &gt;= target) right = mid;</span><br><span class="line">        <span class="keyword">else</span> left = mid+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> left || right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>右边第一个目标值：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">	int left = 0;</span><br><span class="line">	int right = nums.length - 1;</span><br><span class="line">	while(left &lt; right) &#123;</span><br><span class="line">		mid = 1+(left+right)/2;</span><br><span class="line">		if(nums[mid]&lt;=target) left = mid;</span><br><span class="line">		else right = mid-1;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数组_代码随想列题02</title>
     <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8402/</url>
     <content><![CDATA[<h1 id="代码随想录-数组02"><a href="#代码随想录-数组02" class="headerlink" title="代码随想录_数组02"></a>代码随想录_数组02</h1><h3 id="27-移除元素"><a href="#27-移除元素" class="headerlink" title="27. 移除元素"></a>27. 移除元素</h3><p>[题目链接](<a href="https://leetcode.cn/problems/remove-element/">力扣 (leetcode.cn)</a>)</p>
@@ -1336,43 +1373,6 @@
       </tags>
   </entry>
   <entry>
-    <title>重复的子字符串_字符串07</title>
-    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B207/</url>
-    <content><![CDATA[<h1 id="重复的子字符串"><a href="#重复的子字符串" class="headerlink" title="重复的子字符串"></a>重复的子字符串</h1><p><a href="https://leetcode.cn/problems/repeated-substring-pattern/">力扣题目链接(opens new window)</a></p>
-<p>给定一个非空的字符串，判断它是否可以由它的一个子串重复多次构成。给定的字符串只含有小写英文字母，并且长度不超过10000。</p>
-<p>示例 1:<br>输入: “abab”<br>输出: True<br>解释: 可由子字符串 “ab” 重复两次构成。</p>
-<p>示例 2:<br>输入: “aba”<br>输出: False</p>
-<p>示例 3:<br>输入: “abcabcabcabc”<br>输出: True<br>解释: 可由子字符串 “abc” 重复四次构成。 (或者子字符串 “abcabc” 重复两次构成。)</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这又是一道标准的KMP的题目。</p>
-<p>如果KMP还不够了解，可以看我的B站：</p>
-<ul>
-<li><a href="https://www.bilibili.com/video/BV1PD4y1o7nd/">帮你把KMP算法学个通透！（理论篇）(opens new window)</a></li>
-<li><a href="https://www.bilibili.com/video/BV1M5411j7Xx">帮你把KMP算法学个通透！（求next数组代码篇）(opens new window)</a></li>
-</ul>
-<p>我们在<a href="https://programmercarl.com/0028.%E5%AE%9E%E7%8E%B0strStr.html">字符串：KMP算法精讲 (opens new window)</a>里提到了，在一个串中查找是否出现过另一个串，这是KMP的看家本领。</p>
-<p>那么寻找重复子串怎么也涉及到KMP算法了呢？</p>
-<p>这里就要说一说next数组了，next 数组记录的就是最长相同前后缀( <a href="https://programmercarl.com/0028.%E5%AE%9E%E7%8E%B0strStr.html">字符串：KMP算法精讲 (opens new window)</a>这里介绍了什么是前缀，什么是后缀，什么又是最长相同前后缀)， 如果 next[len - 1] !&#x3D; -1，则说明字符串有最长相同的前后缀（就是字符串里的前缀子串和后缀子串相同的最长长度）。</p>
-<p>最长相等前后缀的长度为：next[len - 1] + 1。(这里的next数组是以统一减一的方式计算的，因此需要+1)</p>
-<p>数组长度为：len。</p>
-<p>如果len % (len - (next[len - 1] + 1)) &#x3D;&#x3D; 0 ，则说明 (数组长度-最长相等前后缀的长度) 正好可以被 数组的长度整除，说明有该字符串有重复的子字符串。</p>
-<p><strong>数组长度减去最长相同前后缀的长度相当于是第一个周期的长度，也就是一个周期的长度，如果这个周期可以被整除，就说明整个数组就是这个周期的循环。</strong></p>
-<p><strong>强烈建议大家把next数组打印出来，看看next数组里的规律，有助于理解KMP算法</strong></p>
-<p>如图：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/459.%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2_1.png" alt="459.重复的子字符串_1"></p>
-<p>next[len - 1] &#x3D; 7，next[len - 1] + 1 &#x3D; 8，8就是此时字符串asdfasdfasdf的最长相同前后缀的长度。</p>
-<p>(len - (next[len - 1] + 1)) 也就是： 12(字符串的长度) - 8(最长公共前后缀的长度) &#x3D; 4， 4正好可以被 12(字符串的长度) 整除，所以说明有重复的子字符串（asdf）。</p>
-<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">repeatedSubstringPattern</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    		<span class="type">int</span>[] next = <span class="keyword">new</span> <span class="title class_">int</span>[s.length()];</span><br><span class="line">    		<span class="comment">// next数组</span></span><br><span class="line">    		getNext(next,s);</span><br><span class="line">    		<span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> s.length() - (next[s.length()-<span class="number">1</span>] + <span class="number">1</span>);</span><br><span class="line">    		<span class="keyword">return</span> s.length()%a == <span class="number">0</span>?<span class="literal">true</span>:<span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">getNext</span><span class="params">(<span class="type">int</span>[] next,String s)</span> &#123;</span><br><span class="line">		<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        next[<span class="number">0</span>] = j;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;s.length();i++) &#123;</span><br><span class="line">            <span class="keyword">while</span>(j&gt;=<span class="number">0</span> &amp;&amp; s.charAt(j+<span class="number">1</span>) != s.charAt(i)) &#123;</span><br><span class="line">                j = next[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(j+<span class="number">1</span>) == s.charAt(i)) &#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            next[i] = j;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>字符串</category>
-      </categories>
-      <tags>
-        <tag>字符串</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>用队列实现栈_栈01</title>
     <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9701/</url>
     <content><![CDATA[<h1 id="用队列实现栈"><a href="#用队列实现栈" class="headerlink" title="用队列实现栈"></a>用队列实现栈</h1><p><a href="https://leetcode.cn/problems/implement-stack-using-queues/">力扣题目链接(opens new window)</a></p>
@@ -1452,6 +1452,66 @@
       </tags>
   </entry>
   <entry>
+    <title>逆波兰表达式求值_栈05</title>
+    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9705/</url>
+    <content><![CDATA[<h2 id="逆波兰表达式求值"><a href="#逆波兰表达式求值" class="headerlink" title="逆波兰表达式求值"></a>逆波兰表达式求值</h2><p><a href="https://leetcode.cn/problems/evaluate-reverse-polish-notation/">力扣题目链接(opens new window)</a></p>
+<p>根据 逆波兰表示法，求表达式的值。</p>
+<p>有效的运算符包括 + , - , * , &#x2F; 。每个运算对象可以是整数，也可以是另一个逆波兰表达式。</p>
+<p>说明：</p>
+<p>整数除法只保留整数部分。 给定逆波兰表达式总是有效的。换句话说，表达式总会得出有效数值且不存在除数为 0 的情况。</p>
+<p>示例 1：</p>
+<ul>
+<li>输入: [“2”, “1”, “+”, “3”, “ * “]</li>
+<li>输出: 9</li>
+<li>解释: 该算式转化为常见的中缀算术表达式为：((2 + 1) * 3) &#x3D; 9</li>
+</ul>
+<p>示例 2：</p>
+<ul>
+<li>输入: [“4”, “13”, “5”, “&#x2F;“, “+”]</li>
+<li>输出: 6</li>
+<li>解释: 该算式转化为常见的中缀算术表达式为：(4 + (13 &#x2F; 5)) &#x3D; 6</li>
+</ul>
+<p>示例 3：</p>
+<ul>
+<li><p>输入: [“10”, “6”, “9”, “3”, “+”, “-11”, “ * “, “&#x2F;“, “ * “, “17”, “+”, “5”, “+”]</p>
+</li>
+<li><p>输出: 22</p>
+</li>
+<li><p>解释:该算式转化为常见的中缀算术表达式为：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">((10 * (6 / ((9 + 3) * -11))) + 17) + 5       </span><br><span class="line">= ((10 * (6 / (12 * -11))) + 17) + 5       </span><br><span class="line">= ((10 * (6 / -132)) + 17) + 5     </span><br><span class="line">= ((10 * 0) + 17) + 5     </span><br><span class="line">= (0 + 17) + 5    </span><br><span class="line">= 17 + 5    </span><br><span class="line">= 22    </span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>逆波兰表达式：是一种后缀表达式，所谓后缀就是指算符写在后面。</p>
+<p>平常使用的算式则是一种中缀表达式，如 ( 1 + 2 ) * ( 3 + 4 ) 。</p>
+<p>该算式的逆波兰表达式写法为 ( ( 1 2 + ) ( 3 4 + ) * ) 。</p>
+<p>逆波兰表达式主要有以下两个优点：</p>
+<ul>
+<li>去掉括号后表达式无歧义，上式即便写成 1 2 + 3 4 + * 也可以依据次序计算出正确结果。</li>
+<li>适合用栈操作运算：遇到数字则入栈；遇到算符则取出栈顶两个数字进行计算，并将结果压入栈中。</li>
+</ul>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>在上一篇文章中<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">1047.删除字符串中的所有相邻重复项 (opens new window)</a>提到了 递归就是用栈来实现的。</p>
+<p>所以<strong>栈与递归之间在某种程度上是可以转换的！</strong> 这一点我们在后续讲解二叉树的时候，会更详细的讲解到。</p>
+<p>那么来看一下本题，<strong>其实逆波兰表达式相当于是二叉树中的后序遍历</strong>。 大家可以把运算符作为中间节点，按照后序遍历的规则画出一个二叉树。</p>
+<p>但我们没有必要从二叉树的角度去解决这个问题，只要知道逆波兰表达式是用后续遍历的方式把二叉树序列化了，就可以了。</p>
+<p>在进一步看，本题中每一个子表达式要得出一个结果，然后拿这个结果再进行运算，那么<strong>这岂不就是一个相邻字符串消除的过程，和<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">1047.删除字符串中的所有相邻重复项 (opens new window)</a>中的对对碰游戏是不是就非常像了。</strong></p>
+<p>如动画所示： <img src="https://code-thinking.cdn.bcebos.com/gifs/150.%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC.gif" alt="150.逆波兰表达式求值"></p>
+<p>相信看完动画大家应该知道，这和<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">1047. 删除字符串中的所有相邻重复项 (opens new window)</a>是差不错的，只不过本题不要相邻元素做消除了，而是做运算！</p>
+<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">evalRPN</span><span class="params">(String[] tokens)</span> &#123;</span><br><span class="line">    	Deque&lt;Integer&gt; deque = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    	<span class="keyword">for</span>(String s:tokens) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(s.equals(<span class="string">&quot;+&quot;</span>)) &#123;</span><br><span class="line">    			deque.add(deque.pop()+deque.pop());</span><br><span class="line">    		&#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.equals(<span class="string">&quot;-&quot;</span>)) &#123;</span><br><span class="line">                deque.add(-(deque.pop()-deque.pop()));</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.equals(<span class="string">&quot;*&quot;</span>)) &#123;</span><br><span class="line">                deque.add(deque.pop()*deque.pop());</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.equals(<span class="string">&quot;/&quot;</span>)) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">A</span> <span class="operator">=</span> deque.pop();</span><br><span class="line">                <span class="type">int</span> <span class="variable">B</span> <span class="operator">=</span> deque.pop();</span><br><span class="line">                deque.add(B/A);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                deque.add(Integer.valueOf(s));</span><br><span class="line">            &#125;</span><br><span class="line">    	&#125;</span><br><span class="line">        <span class="keyword">return</span> deque.peek();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><p>我们习惯看到的表达式都是中缀表达式，因为符合我们的习惯，但是中缀表达式对于计算机来说就不是很友好了。</p>
+<p>例如：4 + 13 &#x2F; 5，这就是中缀表达式，计算机从左到右去扫描的话，扫到13，还要判断13后面是什么运算法，还要比较一下优先级，然后13还和后面的5做运算，做完运算之后，还要向前回退到 4 的位置，继续做加法，你说麻不麻烦！</p>
+<p>那么将中缀表达式，转化为后缀表达式之后：[“4”, “13”, “5”, “&#x2F;“, “+”] ，就不一样了，计算机可以利用栈里顺序处理，不需要考虑优先级了。也不用回退了， <strong>所以后缀表达式对计算机来说是非常友好的。</strong></p>
+<p>可以说本题不仅仅是一道好题，也展现出计算机的思考方式。</p>
+<p>在1970年代和1980年代，惠普在其所有台式和手持式计算器中都使用了RPN（后缀表达式），直到2020年代仍在某些模型中使用了RPN。</p>
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>栈</category>
+      </categories>
+      <tags>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>有效的括号_栈03</title>
     <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9703/</url>
     <content><![CDATA[<h1 id="有效的括号"><a href="#有效的括号" class="headerlink" title="有效的括号"></a>有效的括号</h1><p><a href="https://leetcode.cn/problems/valid-parentheses/">力扣题目链接(opens new window)</a></p>
@@ -1520,66 +1580,6 @@
 <p>但还有一些技巧，在匹配左括号的时候，右括号先入栈，就只需要比较当前元素和栈顶相不相等就可以了，比左括号先入栈代码实现要简单的多了！</p>
 <h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isValid</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    	 Deque&lt;Character&gt; stack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    	 <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;s.length();i++) &#123;</span><br><span class="line">    	 	<span class="keyword">if</span>(s.charAt(i) == <span class="string">&#x27;&#123;&#x27;</span>) &#123;</span><br><span class="line">    	 		stack.add(<span class="string">&#x27;&#125;&#x27;</span>);</span><br><span class="line">    	 	&#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(i) == <span class="string">&#x27;[&#x27;</span>) &#123;</span><br><span class="line">    	 		stack.add(<span class="string">&#x27;]&#x27;</span>);</span><br><span class="line">    	 	&#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(i) == <span class="string">&#x27;(&#x27;</span>) &#123;</span><br><span class="line">    	 		stack.add(<span class="string">&#x27;)&#x27;</span>);</span><br><span class="line">    	 	&#125; <span class="keyword">else</span> <span class="keyword">if</span>(!stack.isEmpty()&amp;&amp;s.charAt(i) != stack.peek()) &#123;</span><br><span class="line">    	 		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            	stack.pop();</span><br><span class="line">            &#125;</span><br><span class="line">    	 &#125;</span><br><span class="line">    	 <span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    	 </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>栈</category>
-      </categories>
-      <tags>
-        <tag>栈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>逆波兰表达式求值_栈05</title>
-    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9705/</url>
-    <content><![CDATA[<h2 id="逆波兰表达式求值"><a href="#逆波兰表达式求值" class="headerlink" title="逆波兰表达式求值"></a>逆波兰表达式求值</h2><p><a href="https://leetcode.cn/problems/evaluate-reverse-polish-notation/">力扣题目链接(opens new window)</a></p>
-<p>根据 逆波兰表示法，求表达式的值。</p>
-<p>有效的运算符包括 + , - , * , &#x2F; 。每个运算对象可以是整数，也可以是另一个逆波兰表达式。</p>
-<p>说明：</p>
-<p>整数除法只保留整数部分。 给定逆波兰表达式总是有效的。换句话说，表达式总会得出有效数值且不存在除数为 0 的情况。</p>
-<p>示例 1：</p>
-<ul>
-<li>输入: [“2”, “1”, “+”, “3”, “ * “]</li>
-<li>输出: 9</li>
-<li>解释: 该算式转化为常见的中缀算术表达式为：((2 + 1) * 3) &#x3D; 9</li>
-</ul>
-<p>示例 2：</p>
-<ul>
-<li>输入: [“4”, “13”, “5”, “&#x2F;“, “+”]</li>
-<li>输出: 6</li>
-<li>解释: 该算式转化为常见的中缀算术表达式为：(4 + (13 &#x2F; 5)) &#x3D; 6</li>
-</ul>
-<p>示例 3：</p>
-<ul>
-<li><p>输入: [“10”, “6”, “9”, “3”, “+”, “-11”, “ * “, “&#x2F;“, “ * “, “17”, “+”, “5”, “+”]</p>
-</li>
-<li><p>输出: 22</p>
-</li>
-<li><p>解释:该算式转化为常见的中缀算术表达式为：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">((10 * (6 / ((9 + 3) * -11))) + 17) + 5       </span><br><span class="line">= ((10 * (6 / (12 * -11))) + 17) + 5       </span><br><span class="line">= ((10 * (6 / -132)) + 17) + 5     </span><br><span class="line">= ((10 * 0) + 17) + 5     </span><br><span class="line">= (0 + 17) + 5    </span><br><span class="line">= 17 + 5    </span><br><span class="line">= 22    </span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>逆波兰表达式：是一种后缀表达式，所谓后缀就是指算符写在后面。</p>
-<p>平常使用的算式则是一种中缀表达式，如 ( 1 + 2 ) * ( 3 + 4 ) 。</p>
-<p>该算式的逆波兰表达式写法为 ( ( 1 2 + ) ( 3 4 + ) * ) 。</p>
-<p>逆波兰表达式主要有以下两个优点：</p>
-<ul>
-<li>去掉括号后表达式无歧义，上式即便写成 1 2 + 3 4 + * 也可以依据次序计算出正确结果。</li>
-<li>适合用栈操作运算：遇到数字则入栈；遇到算符则取出栈顶两个数字进行计算，并将结果压入栈中。</li>
-</ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>在上一篇文章中<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">1047.删除字符串中的所有相邻重复项 (opens new window)</a>提到了 递归就是用栈来实现的。</p>
-<p>所以<strong>栈与递归之间在某种程度上是可以转换的！</strong> 这一点我们在后续讲解二叉树的时候，会更详细的讲解到。</p>
-<p>那么来看一下本题，<strong>其实逆波兰表达式相当于是二叉树中的后序遍历</strong>。 大家可以把运算符作为中间节点，按照后序遍历的规则画出一个二叉树。</p>
-<p>但我们没有必要从二叉树的角度去解决这个问题，只要知道逆波兰表达式是用后续遍历的方式把二叉树序列化了，就可以了。</p>
-<p>在进一步看，本题中每一个子表达式要得出一个结果，然后拿这个结果再进行运算，那么<strong>这岂不就是一个相邻字符串消除的过程，和<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">1047.删除字符串中的所有相邻重复项 (opens new window)</a>中的对对碰游戏是不是就非常像了。</strong></p>
-<p>如动画所示： <img src="https://code-thinking.cdn.bcebos.com/gifs/150.%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC.gif" alt="150.逆波兰表达式求值"></p>
-<p>相信看完动画大家应该知道，这和<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">1047. 删除字符串中的所有相邻重复项 (opens new window)</a>是差不错的，只不过本题不要相邻元素做消除了，而是做运算！</p>
-<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">evalRPN</span><span class="params">(String[] tokens)</span> &#123;</span><br><span class="line">    	Deque&lt;Integer&gt; deque = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    	<span class="keyword">for</span>(String s:tokens) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(s.equals(<span class="string">&quot;+&quot;</span>)) &#123;</span><br><span class="line">    			deque.add(deque.pop()+deque.pop());</span><br><span class="line">    		&#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.equals(<span class="string">&quot;-&quot;</span>)) &#123;</span><br><span class="line">                deque.add(-(deque.pop()-deque.pop()));</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.equals(<span class="string">&quot;*&quot;</span>)) &#123;</span><br><span class="line">                deque.add(deque.pop()*deque.pop());</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.equals(<span class="string">&quot;/&quot;</span>)) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">A</span> <span class="operator">=</span> deque.pop();</span><br><span class="line">                <span class="type">int</span> <span class="variable">B</span> <span class="operator">=</span> deque.pop();</span><br><span class="line">                deque.add(B/A);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                deque.add(Integer.valueOf(s));</span><br><span class="line">            &#125;</span><br><span class="line">    	&#125;</span><br><span class="line">        <span class="keyword">return</span> deque.peek();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><p>我们习惯看到的表达式都是中缀表达式，因为符合我们的习惯，但是中缀表达式对于计算机来说就不是很友好了。</p>
-<p>例如：4 + 13 &#x2F; 5，这就是中缀表达式，计算机从左到右去扫描的话，扫到13，还要判断13后面是什么运算法，还要比较一下优先级，然后13还和后面的5做运算，做完运算之后，还要向前回退到 4 的位置，继续做加法，你说麻不麻烦！</p>
-<p>那么将中缀表达式，转化为后缀表达式之后：[“4”, “13”, “5”, “&#x2F;“, “+”] ，就不一样了，计算机可以利用栈里顺序处理，不需要考虑优先级了。也不用回退了， <strong>所以后缀表达式对计算机来说是非常友好的。</strong></p>
-<p>可以说本题不仅仅是一道好题，也展现出计算机的思考方式。</p>
-<p>在1970年代和1980年代，惠普在其所有台式和手持式计算器中都使用了RPN（后缀表达式），直到2020年代仍在某些模型中使用了RPN。</p>
 ]]></content>
       <categories>
         <category>算法简史</category>
@@ -1896,6 +1896,40 @@
       </tags>
   </entry>
   <entry>
+    <title>链表相交_链表06</title>
+    <url>/2022/07/21/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A806/</url>
+    <content><![CDATA[<h1 id="链表相交-链表06"><a href="#链表相交-链表06" class="headerlink" title="链表相交_链表06"></a>链表相交_链表06</h1><p><a href="https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/">力扣题目链接(opens new window)</a></p>
+<p>给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null 。</p>
+<p>图示两个链表在节点 c1 开始相交：</p>
+<p><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20211219221657.png" alt="img"></p>
+<p>题目数据 保证 整个链式结构中不存在环。</p>
+<p>注意，函数返回结果后，链表必须 保持其原始结构 。</p>
+<p>示例 1：</p>
+<p><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20211219221723.png" alt="img"></p>
+<p>示例 2：</p>
+<p><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20211219221749.png" alt="img"></p>
+<p>示例 3：</p>
+<p><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20211219221812.png" alt="img"><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20211219221812.png" alt="img"></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>简单来说，就是求两个链表交点节点的<strong>指针</strong>。 这里同学们要注意，交点不是数值相等，而是指针相等。</p>
+<p>为了方便举例，假设节点元素数值相等，则节点指针相等。</p>
+<p>看如下两个链表，目前curA指向链表A的头结点，curB指向链表B的头结点：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E9%9D%A2%E8%AF%95%E9%A2%9802.07.%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4_1.png" alt="面试题02.07.链表相交_1"></p>
+<p>我们求出两个链表的长度，并求出两个链表长度的差值，然后让curA移动到，和curB 末尾对齐的位置，如图：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E9%9D%A2%E8%AF%95%E9%A2%9802.07.%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4_2.png" alt="面试题02.07.链表相交_2"></p>
+<p>此时我们就可以比较curA和curB是否相同，如果不相同，同时向后移动curA和curB，如果遇到curA &#x3D;&#x3D; curB，则找到交点。</p>
+<p>否则循环退出返回空指针。</p>
+<h3 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &#123;</span><br><span class="line">    	int lenA = 0;</span><br><span class="line">    	ListNode curA = headA;</span><br><span class="line">    	int lenB = 0;</span><br><span class="line">    	ListNode curB = headB;</span><br><span class="line">    	while(curA != null) &#123;</span><br><span class="line">    		lenA++;</span><br><span class="line">    		curA = curA.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	while(curB != null) &#123;</span><br><span class="line">    		lenB++;</span><br><span class="line">    		curB = curB.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	int gap = Math.abs(lenA-lenB);</span><br><span class="line">    	if(lenA &gt; lenB) &#123;</span><br><span class="line">    		while(gap-- &gt; 0) &#123;</span><br><span class="line">    			headA = headA.next;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125; else &#123;</span><br><span class="line">    		while(gap-- &gt; 0) &#123;</span><br><span class="line">    			headB = headB.next;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	while(headA != null) &#123;</span><br><span class="line">    		if(headA == headB) &#123;</span><br><span class="line">    			return headA;</span><br><span class="line">    		&#125;</span><br><span class="line">    		headA = headA.next;</span><br><span class="line">    		headB = headB.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>链表</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>环形链表_链表07</title>
     <url>/2022/07/21/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A807/</url>
     <content><![CDATA[<h1 id="环形链表-链表07"><a href="#环形链表-链表07" class="headerlink" title="环形链表_链表07"></a>环形链表_链表07</h1><p><a href="https://leetcode.cn/problems/linked-list-cycle-ii/">力扣题目链接(opens new window)</a></p>
@@ -1953,37 +1987,20 @@
       </tags>
   </entry>
   <entry>
-    <title>链表相交_链表06</title>
-    <url>/2022/07/21/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A806/</url>
-    <content><![CDATA[<h1 id="链表相交-链表06"><a href="#链表相交-链表06" class="headerlink" title="链表相交_链表06"></a>链表相交_链表06</h1><p><a href="https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/">力扣题目链接(opens new window)</a></p>
-<p>给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null 。</p>
-<p>图示两个链表在节点 c1 开始相交：</p>
-<p><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20211219221657.png" alt="img"></p>
-<p>题目数据 保证 整个链式结构中不存在环。</p>
-<p>注意，函数返回结果后，链表必须 保持其原始结构 。</p>
-<p>示例 1：</p>
-<p><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20211219221723.png" alt="img"></p>
-<p>示例 2：</p>
-<p><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20211219221749.png" alt="img"></p>
-<p>示例 3：</p>
-<p><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20211219221812.png" alt="img"><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20211219221812.png" alt="img"></p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>简单来说，就是求两个链表交点节点的<strong>指针</strong>。 这里同学们要注意，交点不是数值相等，而是指针相等。</p>
-<p>为了方便举例，假设节点元素数值相等，则节点指针相等。</p>
-<p>看如下两个链表，目前curA指向链表A的头结点，curB指向链表B的头结点：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E9%9D%A2%E8%AF%95%E9%A2%9802.07.%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4_1.png" alt="面试题02.07.链表相交_1"></p>
-<p>我们求出两个链表的长度，并求出两个链表长度的差值，然后让curA移动到，和curB 末尾对齐的位置，如图：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E9%9D%A2%E8%AF%95%E9%A2%9802.07.%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4_2.png" alt="面试题02.07.链表相交_2"></p>
-<p>此时我们就可以比较curA和curB是否相同，如果不相同，同时向后移动curA和curB，如果遇到curA &#x3D;&#x3D; curB，则找到交点。</p>
-<p>否则循环退出返回空指针。</p>
-<h3 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &#123;</span><br><span class="line">    	int lenA = 0;</span><br><span class="line">    	ListNode curA = headA;</span><br><span class="line">    	int lenB = 0;</span><br><span class="line">    	ListNode curB = headB;</span><br><span class="line">    	while(curA != null) &#123;</span><br><span class="line">    		lenA++;</span><br><span class="line">    		curA = curA.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	while(curB != null) &#123;</span><br><span class="line">    		lenB++;</span><br><span class="line">    		curB = curB.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	int gap = Math.abs(lenA-lenB);</span><br><span class="line">    	if(lenA &gt; lenB) &#123;</span><br><span class="line">    		while(gap-- &gt; 0) &#123;</span><br><span class="line">    			headA = headA.next;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125; else &#123;</span><br><span class="line">    		while(gap-- &gt; 0) &#123;</span><br><span class="line">    			headB = headB.next;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	while(headA != null) &#123;</span><br><span class="line">    		if(headA == headB) &#123;</span><br><span class="line">    			return headA;</span><br><span class="line">    		&#125;</span><br><span class="line">    		headA = headA.next;</span><br><span class="line">    		headB = headB.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
+    <title>吉他01</title>
+    <url>/2022/07/21/%E5%90%89%E4%BB%9601/</url>
+    <content><![CDATA[<h1 id="吉他01"><a href="#吉他01" class="headerlink" title="吉他01"></a>吉他01</h1><h3 id="音名："><a href="#音名：" class="headerlink" title="音名："></a>音名：</h3><p>C D E F G A B</p>
+<h3 id="简谱名："><a href="#简谱名：" class="headerlink" title="简谱名："></a>简谱名：</h3><p>1 2 3 4 5 6 7</p>
+<h3 id="唱名："><a href="#唱名：" class="headerlink" title="唱名："></a>唱名：</h3><p>Do Re Mi Fa Sol La Si (Do)</p>
+<h3 id="合并来记"><a href="#合并来记" class="headerlink" title="合并来记"></a>合并来记</h3><p>C D E F G A B</p>
+<p>1 2 3 4 5 6 7</p>
+<p>Do Re Mi Fa Sol La Si (Do)</p>
 ]]></content>
       <categories>
-        <category>算法简史</category>
-        <category>链表</category>
+        <category>吉他</category>
       </categories>
       <tags>
-        <tag>链表</tag>
+        <tag>吉他</tag>
       </tags>
   </entry>
   <entry>
@@ -2052,20 +2069,27 @@
       </tags>
   </entry>
   <entry>
-    <title>吉他01</title>
-    <url>/2022/07/21/%E5%90%89%E4%BB%9601/</url>
-    <content><![CDATA[<h1 id="吉他01"><a href="#吉他01" class="headerlink" title="吉他01"></a>吉他01</h1><h3 id="音名："><a href="#音名：" class="headerlink" title="音名："></a>音名：</h3><p>C D E F G A B</p>
-<h3 id="简谱名："><a href="#简谱名：" class="headerlink" title="简谱名："></a>简谱名：</h3><p>1 2 3 4 5 6 7</p>
-<h3 id="唱名："><a href="#唱名：" class="headerlink" title="唱名："></a>唱名：</h3><p>Do Re Mi Fa Sol La Si (Do)</p>
-<h3 id="合并来记"><a href="#合并来记" class="headerlink" title="合并来记"></a>合并来记</h3><p>C D E F G A B</p>
-<p>1 2 3 4 5 6 7</p>
-<p>Do Re Mi Fa Sol La Si (Do)</p>
+    <title>微信小程序电脑端抓包成功</title>
+    <url>/2022/08/01/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E6%88%90%E5%8A%9F/</url>
+    <content><![CDATA[<h1 id="微信小程序电脑端抓包成功"><a href="#微信小程序电脑端抓包成功" class="headerlink" title="微信小程序电脑端抓包成功"></a>微信小程序电脑端抓包成功</h1><h3 id="1-删除WMPFRuntime下的文件"><a href="#1-删除WMPFRuntime下的文件" class="headerlink" title="1.删除WMPFRuntime下的文件"></a>1.删除WMPFRuntime下的文件</h3><p>通过任务管理器找到该文件，右键打开文件位置，删除文件(记得先关掉vx才能删除)</p>
+<p><img src="https://s2.loli.net/2022/08/01/P8SgjxBsalvfIF9.png" alt="image-20220801221221116.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\hhh\AppData\Roaming\Tencent\WeChat\XPlugin\Plugins\WMPFRuntime</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/08/01/7GxiEdAQc2ODpIb.png" alt="image-20220801221331236.png"></p>
+<h2 id="2-重新打开微信进入小程序"><a href="#2-重新打开微信进入小程序" class="headerlink" title="2.重新打开微信进入小程序"></a>2.重新打开微信进入小程序</h2><p>打开小程序后，fiddle就能抓到包了</p>
+<p><img src="https://s2.loli.net/2022/08/01/W4QkLGF1hDcuqOi.png" alt="image-20220801221626752.png"></p>
+<p>小知识点(大佬教的)：小程序登录的原理是通过微信的wxlogin接口获取一个code，然后把code传到后端，后端调用微信的接口将code解成openid(一小程序中用户唯一标识)</p>
+<h2 id="3-pycharm中测试"><a href="#3-pycharm中测试" class="headerlink" title="3.pycharm中测试"></a>3.pycharm中测试</h2><p>源代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line">url = &#x27;https://api.shuidichou.com/api/charity/love-home/find-love-help-case-v2&#x27;</span><br><span class="line">data = &#123;</span><br><span class="line">    &#x27;Host&#x27;: &#x27;api.shuidichou.com&#x27;,</span><br><span class="line">    &#x27;Connection&#x27;: &#x27;keep-alive&#x27;,</span><br><span class="line">    &#x27;Content-Length&#x27;: &#x27;102&#x27;,</span><br><span class="line">    &#x27;User-Agent&#x27;: &#x27;&#x27;,</span><br><span class="line">    &#x27;content-type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;,</span><br><span class="line">    &#x27;Referer&#x27;: &#x27;https://servicewechat.com/wx6855c0f0e9cbb26e/74/page-frame.html&#x27;,</span><br><span class="line">    &#x27;AuthorizationV2&#x27;:&#x27;&#x27;,</span><br><span class="line">    &#x27;currentPage&#x27;:2,</span><br><span class="line">    &#x27;pageSize&#x27;:10,</span><br><span class="line">    &#x27;thirdType&#x27;:464</span><br><span class="line">&#125;</span><br><span class="line">res = requests.post(url=url,data=data).json()</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+
+<p>效果展示：</p>
+<p><img src="https://s2.loli.net/2022/08/01/ZCX6I5KVsPHyY9u.png" alt="image-20220801225401920.png"></p>
 ]]></content>
       <categories>
-        <category>吉他</category>
+        <category>数据采集</category>
       </categories>
       <tags>
-        <tag>吉他</tag>
+        <tag>数据采集</tag>
       </tags>
   </entry>
   <entry>
@@ -2111,28 +2135,10 @@
       </tags>
   </entry>
   <entry>
-    <title>微信小程序电脑端抓包成功</title>
-    <url>/2022/08/01/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E6%88%90%E5%8A%9F/</url>
-    <content><![CDATA[<h1 id="微信小程序电脑端抓包成功"><a href="#微信小程序电脑端抓包成功" class="headerlink" title="微信小程序电脑端抓包成功"></a>微信小程序电脑端抓包成功</h1><h3 id="1-删除WMPFRuntime下的文件"><a href="#1-删除WMPFRuntime下的文件" class="headerlink" title="1.删除WMPFRuntime下的文件"></a>1.删除WMPFRuntime下的文件</h3><p>通过任务管理器找到该文件，右键打开文件位置，删除文件(记得先关掉vx才能删除)</p>
-<p><img src="https://s2.loli.net/2022/08/01/P8SgjxBsalvfIF9.png" alt="image-20220801221221116.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\hhh\AppData\Roaming\Tencent\WeChat\XPlugin\Plugins\WMPFRuntime</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2022/08/01/7GxiEdAQc2ODpIb.png" alt="image-20220801221331236.png"></p>
-<h2 id="2-重新打开微信进入小程序"><a href="#2-重新打开微信进入小程序" class="headerlink" title="2.重新打开微信进入小程序"></a>2.重新打开微信进入小程序</h2><p>打开小程序后，fiddle就能抓到包了</p>
-<p><img src="https://s2.loli.net/2022/08/01/W4QkLGF1hDcuqOi.png" alt="image-20220801221626752.png"></p>
-<p>小知识点(大佬教的)：小程序登录的原理是通过微信的wxlogin接口获取一个code，然后把code传到后端，后端调用微信的接口将code解成openid(一小程序中用户唯一标识)</p>
-<h2 id="3-pycharm中测试"><a href="#3-pycharm中测试" class="headerlink" title="3.pycharm中测试"></a>3.pycharm中测试</h2><p>源代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line">url = &#x27;https://api.shuidichou.com/api/charity/love-home/find-love-help-case-v2&#x27;</span><br><span class="line">data = &#123;</span><br><span class="line">    &#x27;Host&#x27;: &#x27;api.shuidichou.com&#x27;,</span><br><span class="line">    &#x27;Connection&#x27;: &#x27;keep-alive&#x27;,</span><br><span class="line">    &#x27;Content-Length&#x27;: &#x27;102&#x27;,</span><br><span class="line">    &#x27;User-Agent&#x27;: &#x27;&#x27;,</span><br><span class="line">    &#x27;content-type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;,</span><br><span class="line">    &#x27;Referer&#x27;: &#x27;https://servicewechat.com/wx6855c0f0e9cbb26e/74/page-frame.html&#x27;,</span><br><span class="line">    &#x27;AuthorizationV2&#x27;:&#x27;&#x27;,</span><br><span class="line">    &#x27;currentPage&#x27;:2,</span><br><span class="line">    &#x27;pageSize&#x27;:10,</span><br><span class="line">    &#x27;thirdType&#x27;:464</span><br><span class="line">&#125;</span><br><span class="line">res = requests.post(url=url,data=data).json()</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
-
-<p>效果展示：</p>
-<p><img src="https://s2.loli.net/2022/08/01/ZCX6I5KVsPHyY9u.png" alt="image-20220801225401920.png"></p>
+    <title></title>
+    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p>没有吃饭</p>
 ]]></content>
-      <categories>
-        <category>数据采集</category>
-      </categories>
-      <tags>
-        <tag>数据采集</tag>
-      </tags>
   </entry>
   <entry>
     <title>微信小程序采集失败原因</title>
@@ -2145,12 +2151,6 @@
       <tags>
         <tag>数据采集</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p>没有吃饭</p>
-]]></content>
   </entry>
   <entry>
     <title>数据库操作SQL</title>
@@ -2202,6 +2202,29 @@
       </tags>
   </entry>
   <entry>
+    <title>英语口语02</title>
+    <url>/2022/07/06/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD02/</url>
+    <content><![CDATA[<h1 id="英语口语02"><a href="#英语口语02" class="headerlink" title="英语口语02"></a>英语口语02</h1><h3 id="精算能力"><a href="#精算能力" class="headerlink" title="精算能力"></a>精算能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math can be helpful for balancing your budget,</span><br><span class="line">because...</span><br><span class="line">you will have a good understanding of how to make sure that </span><br><span class="line">your costs are less than the money you have</span><br></pre></td></tr></table></figure>
+
+<p>balancing your budget 平衡收支</p>
+<p>your costs are less than the money you have 收入大于支出</p>
+<h3 id="入不敷出"><a href="#入不敷出" class="headerlink" title="入不敷出"></a>入不敷出</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">People who are terrible at math are likely to go into debt</span><br><span class="line">because...</span><br><span class="line">they don&#x27;t know how much money they have versus how much money they spent.</span><br></pre></td></tr></table></figure>
+
+<p>go into debt 负债</p>
+<h3 id="满足好奇心"><a href="#满足好奇心" class="headerlink" title="满足好奇心"></a>满足好奇心</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Science feeds the natural curiosity,</span><br><span class="line"></span><br><span class="line">for example...</span><br><span class="line"></span><br><span class="line">The curiosity of uncovering why the sun sets in the west,</span><br><span class="line"></span><br><span class="line">why the sky is blue,how fish breathes in water</span><br><span class="line"></span><br><span class="line">and other everyday scenarios</span><br></pre></td></tr></table></figure>
+
+<p>natural curiosity 好奇心</p>
+<p>sun sets in the west 日落西山</p>
+<p>everyday scenarios 日常场景</p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>学习口语</title>
     <url>/2022/07/05/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD01/</url>
     <content><![CDATA[<h1 id="第一天英语口语"><a href="#第一天英语口语" class="headerlink" title="第一天英语口语"></a>第一天英语口语</h1><p>这些内容是非常好的英语口语资产 能帮助大伙快速起飞</p>
@@ -2235,49 +2258,6 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语03</title>
-    <url>/2022/07/12/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD03/</url>
-    <content><![CDATA[<h1 id="英语口语03"><a href="#英语口语03" class="headerlink" title="英语口语03"></a>英语口语03</h1><h3 id="精力充沛"><a href="#精力充沛" class="headerlink" title="精力充沛"></a>精力充沛</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i will try to get into the routine of getting up early in the morning and go to bed</span><br><span class="line">early at night,</span><br><span class="line">so that...</span><br><span class="line">i will have a better sleeping pattern which enables me to be more energetic throughtout the day</span><br></pre></td></tr></table></figure>
-
-<h3 id="三省吾身"><a href="#三省吾身" class="headerlink" title="三省吾身"></a>三省吾身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i think it&#x27;s important to refresh my mind about the current situation,</span><br><span class="line">by vasualizing long,middle,short term goals everyday </span><br><span class="line">because...</span><br><span class="line">sometimes it&#x27;s easy to lose the big picture when we are immersing yourself in detailed executions.</span><br><span class="line">But it&#x27;s also easy to miss out the detailed executions when we are grasping the big picture</span><br></pre></td></tr></table></figure>
-
-<h3 id="熬夜伤身"><a href="#熬夜伤身" class="headerlink" title="熬夜伤身"></a>熬夜伤身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">being a night owl could hurt our health</span><br><span class="line">because...</span><br><span class="line">staying up late will disrupts your sleep-wake cycle...</span><br><span class="line">which can affect your mental functioning and energy levels the next day.</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
-<p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
-<p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语口语02</title>
-    <url>/2022/07/06/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD02/</url>
-    <content><![CDATA[<h1 id="英语口语02"><a href="#英语口语02" class="headerlink" title="英语口语02"></a>英语口语02</h1><h3 id="精算能力"><a href="#精算能力" class="headerlink" title="精算能力"></a>精算能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math can be helpful for balancing your budget,</span><br><span class="line">because...</span><br><span class="line">you will have a good understanding of how to make sure that </span><br><span class="line">your costs are less than the money you have</span><br></pre></td></tr></table></figure>
-
-<p>balancing your budget 平衡收支</p>
-<p>your costs are less than the money you have 收入大于支出</p>
-<h3 id="入不敷出"><a href="#入不敷出" class="headerlink" title="入不敷出"></a>入不敷出</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">People who are terrible at math are likely to go into debt</span><br><span class="line">because...</span><br><span class="line">they don&#x27;t know how much money they have versus how much money they spent.</span><br></pre></td></tr></table></figure>
-
-<p>go into debt 负债</p>
-<h3 id="满足好奇心"><a href="#满足好奇心" class="headerlink" title="满足好奇心"></a>满足好奇心</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Science feeds the natural curiosity,</span><br><span class="line"></span><br><span class="line">for example...</span><br><span class="line"></span><br><span class="line">The curiosity of uncovering why the sun sets in the west,</span><br><span class="line"></span><br><span class="line">why the sky is blue,how fish breathes in water</span><br><span class="line"></span><br><span class="line">and other everyday scenarios</span><br></pre></td></tr></table></figure>
-
-<p>natural curiosity 好奇心</p>
-<p>sun sets in the west 日落西山</p>
-<p>everyday scenarios 日常场景</p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>英语口语04</title>
     <url>/2022/07/13/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD04/</url>
     <content><![CDATA[<h1 id="英语口语04"><a href="#英语口语04" class="headerlink" title="英语口语04"></a>英语口语04</h1><h3 id="心中有蓝图"><a href="#心中有蓝图" class="headerlink" title="心中有蓝图"></a>心中有蓝图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">you should have a version for the future,</span><br><span class="line">something you want to do or accomplish,</span><br><span class="line">because...</span><br><span class="line">when you map out your goals,</span><br><span class="line">you will focus on things that can help you achieve what you want in life.</span><br></pre></td></tr></table></figure>
@@ -2292,6 +2272,26 @@
 <p><strong>练至精熟之境，你不必在意手指，</strong></p>
 <p><strong>手指自动会落在适合的琴键上，并一瞬间打开最精确的力度和准度。</strong></p>
 <p><strong>这种境界，你不去体会，必遗憾终身。</strong></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语口语03</title>
+    <url>/2022/07/12/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD03/</url>
+    <content><![CDATA[<h1 id="英语口语03"><a href="#英语口语03" class="headerlink" title="英语口语03"></a>英语口语03</h1><h3 id="精力充沛"><a href="#精力充沛" class="headerlink" title="精力充沛"></a>精力充沛</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i will try to get into the routine of getting up early in the morning and go to bed</span><br><span class="line">early at night,</span><br><span class="line">so that...</span><br><span class="line">i will have a better sleeping pattern which enables me to be more energetic throughtout the day</span><br></pre></td></tr></table></figure>
+
+<h3 id="三省吾身"><a href="#三省吾身" class="headerlink" title="三省吾身"></a>三省吾身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i think it&#x27;s important to refresh my mind about the current situation,</span><br><span class="line">by vasualizing long,middle,short term goals everyday </span><br><span class="line">because...</span><br><span class="line">sometimes it&#x27;s easy to lose the big picture when we are immersing yourself in detailed executions.</span><br><span class="line">But it&#x27;s also easy to miss out the detailed executions when we are grasping the big picture</span><br></pre></td></tr></table></figure>
+
+<h3 id="熬夜伤身"><a href="#熬夜伤身" class="headerlink" title="熬夜伤身"></a>熬夜伤身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">being a night owl could hurt our health</span><br><span class="line">because...</span><br><span class="line">staying up late will disrupts your sleep-wake cycle...</span><br><span class="line">which can affect your mental functioning and energy levels the next day.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*不要找借口，不要找理由，把这些宝贵资产全部拿下*</strong></em></p>
+<p><em><strong>*足够的时间，足够的方法论支撑，不可能拿不下的。*</strong></em></p>
+<p><em><strong>*今天的辛苦就是明天的幸福，道理就是这么简单。*</strong></em></p>
 ]]></content>
       <categories>
         <category>口语</category>
@@ -2352,40 +2352,6 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语07</title>
-    <url>/2022/07/16/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD07/</url>
-    <content><![CDATA[<h1 id="英语口语07"><a href="#英语口语07" class="headerlink" title="英语口语07"></a>英语口语07</h1><h3 id="固定收入"><a href="#固定收入" class="headerlink" title="固定收入"></a>固定收入</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Most full-time employees have a fixed salaries,</span><br><span class="line">so...</span><br><span class="line">they can properly budget their money based on their expenses,</span><br><span class="line">because...</span><br><span class="line">they have a clear idea about how much to expect in their bank </span><br><span class="line">account every month.</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*fixed salaries*</strong></em> <em><strong>*固定收入*</strong></em></p>
-<p><em><strong>*budget*</strong></em> <em><strong>*their*</strong></em> <em><strong>*money based on*</strong></em> <em><strong>*their*</strong></em> <em><strong>*expenses*</strong></em> <em><strong>*收支平衡*</strong></em></p>
-<p><em><strong>*how much to expect in*</strong></em> <em><strong>*their*</strong></em> <em><strong>*bank account*</strong></em> <em><strong>*收入预期*</strong></em></p>
-<p><em><strong>*注：*</strong></em></p>
-<p><em><strong>*观点+逻辑链，是最有效率的打击方法之一。*</strong></em></p>
-<p><em><strong>*逻辑中的推导（so…）, 因果（because）, 必须在平时内化语流中，刻意留意，才能在实战中屡屡打出暴击效果。*</strong></em></p>
-<h3 id="固定日程"><a href="#固定日程" class="headerlink" title="固定日程"></a>固定日程</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Full-time employees work a fixed schedule,</span><br><span class="line">for a lot of people,it is crucial to have a specific and consistent work time each day,</span><br><span class="line">because...</span><br><span class="line">it allows them to plan around their schedules,</span><br><span class="line">rather than waiting for a rotating schedule from a part-time job.</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*fixed schedule*</strong></em> <em><strong>*固定日程*</strong></em></p>
-<p><em><strong>*a specific and consistent work time each day*</strong></em> <em><strong>*具体且不变的时间安排*</strong></em> </p>
-<p><em><strong>*plan around*</strong></em> <em><strong>*their*</strong></em> <em><strong>*work schedule*</strong></em><em><strong>*s 围绕工作安排来计划各种事务*</strong></em></p>
-<p><em><strong>*a rotating schedule*</strong></em> <em><strong>*多变的日程计划*</strong></em></p>
-<p><em><strong>*注：*</strong></em></p>
-<p><em><strong>*切入点，把人物带进来。*</strong></em></p>
-<p><em><strong>*张三，李四，大部分人，小部分人，*</strong></em></p>
-<p><em><strong>*只要把人物带进来，并站在他们的角度上，就有话可说。*</strong></em></p>
-<p><em><strong>*同学们参考罗翔老师的说话技巧。*</strong></em></p>
-<p><em><strong>*It*</strong></em><em><strong>*’*</strong></em><em><strong>*s crucial…+because it allows…, 是实战价值非常强悍的框架。*</strong></em></p>
-<p><em><strong>*最后rather than+名词或从句，也是出战率非常高的句式。*</strong></em></p>
-<h3 id="懈怠"><a href="#懈怠" class="headerlink" title="懈怠"></a>懈怠</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if we don&#x27;t like we work,</span><br><span class="line">it&#x27;s easy for us to be drawn to the things that we want to do</span><br><span class="line">like...</span><br><span class="line">scrolling TikTok,or reading music blogs,</span><br><span class="line">rather than the things we have to do,</span><br><span class="line">this tension possibly causes fatigue.</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>英语口语08</title>
     <url>/2022/07/18/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD08/</url>
     <content><![CDATA[<h1 id="英语口语08"><a href="#英语口语08" class="headerlink" title="英语口语08"></a>英语口语08</h1><h3 id="处世态度不同"><a href="#处世态度不同" class="headerlink" title="处世态度不同"></a>处世态度不同</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">There has always been a diffrence in attitude betwen the younger and</span><br><span class="line">older generations.</span><br><span class="line">because...</span><br><span class="line">Everyone wants to live and behave in his own way,no one wants to</span><br><span class="line">compromise with his or her values and views,</span><br><span class="line">and over time,</span><br><span class="line">the attitude has agumented the gernerations gap.</span><br><span class="line">and it is wider day-by-day</span><br></pre></td></tr></table></figure>
@@ -2424,45 +2390,30 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语09</title>
-    <url>/2022/07/20/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD09/</url>
-    <content><![CDATA[<h1 id="英语口语09"><a href="#英语口语09" class="headerlink" title="英语口语09"></a>英语口语09</h1><h3 id="钱财安身"><a href="#钱财安身" class="headerlink" title="钱财安身"></a>钱财安身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Money can buy the security and safety for yourself and your loved ones,</span><br><span class="line">because...</span><br><span class="line">Human beings needs money to pay for all the things that make your life</span><br><span class="line">possible.</span><br><span class="line">such as...</span><br><span class="line">shelter,food,healthcare,and a good education</span><br></pre></td></tr></table></figure>
+    <title>英语口语07</title>
+    <url>/2022/07/16/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD07/</url>
+    <content><![CDATA[<h1 id="英语口语07"><a href="#英语口语07" class="headerlink" title="英语口语07"></a>英语口语07</h1><h3 id="固定收入"><a href="#固定收入" class="headerlink" title="固定收入"></a>固定收入</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Most full-time employees have a fixed salaries,</span><br><span class="line">so...</span><br><span class="line">they can properly budget their money based on their expenses,</span><br><span class="line">because...</span><br><span class="line">they have a clear idea about how much to expect in their bank </span><br><span class="line">account every month.</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*security and safety*</strong></em> 安全感</p>
-<p><em><strong>*all the things that make your life possible*</strong></em> <em><strong>*刚需*</strong></em></p>
-<p><em><strong>*shelter, food, healthcare, and a good education*</strong></em> <em><strong>*基本需求*</strong></em></p>
+<p><em><strong>*fixed salaries*</strong></em> <em><strong>*固定收入*</strong></em></p>
+<p><em><strong>*budget*</strong></em> <em><strong>*their*</strong></em> <em><strong>*money based on*</strong></em> <em><strong>*their*</strong></em> <em><strong>*expenses*</strong></em> <em><strong>*收支平衡*</strong></em></p>
+<p><em><strong>*how much to expect in*</strong></em> <em><strong>*their*</strong></em> <em><strong>*bank account*</strong></em> <em><strong>*收入预期*</strong></em></p>
 <p><em><strong>*注：*</strong></em></p>
-<p><em><strong>*例证有两种打法，最简单的一种就是名词摆放，直接将名词列举出来。*</strong></em></p>
-<p><em><strong>*比如别人问你，你为什么喜欢你的工作，*</strong></em></p>
-<p><em><strong>*你可以直接把工作的福利摆出来，*</strong></em></p>
-<p><em><strong>*这是最简单直接的打法，在无话可说的时候，非常实用。*</strong></em></p>
-<p><em><strong>*在这个语流中，如果仔细观察，三个词伙，其实是不断的递进和具象化，将一个概念不断地落地。*</strong></em></p>
-<h3 id="贫穷的陷阱"><a href="#贫穷的陷阱" class="headerlink" title="贫穷的陷阱"></a>贫穷的陷阱</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">most people have a hard time differentiating &#x27;wants&#x27; and &#x27;needs&#x27;,</span><br><span class="line">i mean...</span><br><span class="line">they use a word &#x27;needs&#x27; for almost everything they purchase,</span><br><span class="line">causing them have to actually believe that they &#x27;have to&#x27; spend money.</span><br></pre></td></tr></table></figure>
+<p><em><strong>*观点+逻辑链，是最有效率的打击方法之一。*</strong></em></p>
+<p><em><strong>*逻辑中的推导（so…）, 因果（because）, 必须在平时内化语流中，刻意留意，才能在实战中屡屡打出暴击效果。*</strong></em></p>
+<h3 id="固定日程"><a href="#固定日程" class="headerlink" title="固定日程"></a>固定日程</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Full-time employees work a fixed schedule,</span><br><span class="line">for a lot of people,it is crucial to have a specific and consistent work time each day,</span><br><span class="line">because...</span><br><span class="line">it allows them to plan around their schedules,</span><br><span class="line">rather than waiting for a rotating schedule from a part-time job.</span><br></pre></td></tr></table></figure>
 
-<p><em><strong>*have a hard time differentiating “wants” and “needs”*</strong></em> </p>
-<p><em><strong>*分不清刚需和欲望*</strong></em></p>
-<p><em><strong>*use the word ‘need’ for almost everything they purchase*</strong></em></p>
-<p><em><strong>*购物癖*</strong></em></p>
+<p><em><strong>*fixed schedule*</strong></em> <em><strong>*固定日程*</strong></em></p>
+<p><em><strong>*a specific and consistent work time each day*</strong></em> <em><strong>*具体且不变的时间安排*</strong></em> </p>
+<p><em><strong>*plan around*</strong></em> <em><strong>*their*</strong></em> <em><strong>*work schedule*</strong></em><em><strong>*s 围绕工作安排来计划各种事务*</strong></em></p>
+<p><em><strong>*a rotating schedule*</strong></em> <em><strong>*多变的日程计划*</strong></em></p>
 <p><em><strong>*注：*</strong></em></p>
-<p><em><strong>*三个非常重要的句式，核心词替换都非常方便*</strong></em></p>
-<p><em><strong>*Have hard time doing sth*</strong></em></p>
-<p><em><strong>*Use the word*</strong></em> <em><strong>*“*</strong></em><em><strong>*A*</strong></em> <em><strong>*”*</strong></em> <em><strong>*for sth*</strong></em></p>
-<p><em><strong>*Causing+从句，引导一个原因*</strong></em></p>
-<p><em><strong>*在背诵的时候，可以从这三个句式开始。*</strong></em></p>
-<p><em><strong>*值得注意的是，这个语流中，有文字游戏的意味，这种技法非常高明。*</strong></em></p>
-<h3 id="财务能力"><a href="#财务能力" class="headerlink" title="财务能力"></a>财务能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Poor financial education have a long-lasting impact on individuals and</span><br><span class="line">their families.</span><br><span class="line">the financial education can make a difference.</span><br><span class="line">because...</span><br><span class="line">it can equal you with the knowledge,skills,confidence to </span><br><span class="line">take charge of your life.</span><br><span class="line">and build a more secure future for yourself and your families.</span><br></pre></td></tr></table></figure>
-
-<h3 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">people lose money in stock market because they think the investing is</span><br><span class="line">the ticket to getting rich quickly.</span><br><span class="line">for example...</span><br><span class="line">they see wealthy day traders show off money and fancy cars...</span><br><span class="line">and they think it&#x27;s money.</span><br><span class="line">but the 99% of time they lose money following them,</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*The*</strong></em> <em><strong>*ticket to getting rich quickly*</strong></em> <em><strong>*一夜暴富*</strong></em></p>
-<p><em><strong>*wealthy day traders*</strong></em> <em><strong>*短线炒家*</strong></em></p>
-<p><em><strong>*easy money*</strong></em> <em><strong>*很容易赚的钱*</strong></em></p>
-<p><em><strong>*注：*</strong></em></p>
-<p><em><strong>*贪心，单单整个人性，已经可以解决很多问题。*</strong></em></p>
-<p><em><strong>*只要你了解人性，你就永远有话可说。*</strong></em></p>
-<p><em><strong>*在这个语流中，关于投资的三个很重要的词伙，凝结在了一起。*</strong></em></p>
-<p><em><strong>*当我们在记忆语流时，也就连锁记忆了词伙，一举两得。*</strong></em></p>
-<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">演绎以下一分钟三十秒的语流，训练节奏和气息</span><br><span class="line">在不改变词伙的情况下，自己可以改动一些句子和单词，不必拘泥</span><br><span class="line">重在开口练习，不要纠结，放开其他东西。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Describe the important decision you made recently.</span><br><span class="line"></span><br><span class="line">I used to be a shy person who would feel depressed all the time...</span><br><span class="line">I think the main reason is because </span><br><span class="line">I cared too much about what people think.</span><br><span class="line">so i made the decision couple of years ago</span><br><span class="line">decided that... </span><br><span class="line">i wanna be a guy who has more confidence in his judgments </span><br><span class="line">and feels more alive.</span><br><span class="line">and one of my friends told me that </span><br><span class="line">to achieve that goal, </span><br><span class="line">I need do things that are out of my comfort zone...</span><br><span class="line">So that I will learn to overcome my fears,</span><br><span class="line">for example...</span><br><span class="line">I will likely find that I care less about what people think</span><br><span class="line">and about what could go wrong.</span><br><span class="line">and...</span><br><span class="line">in order to feel to feel alive,</span><br><span class="line">I need to do things that make me feel uncomfortable,</span><br><span class="line">because...</span><br><span class="line">as human beings,</span><br><span class="line">we become who we are through challenges.</span><br><span class="line">for example...</span><br><span class="line">all successful people have taken risks, failed and picked themselves up,</span><br><span class="line">because they believe that those who never venture far </span><br><span class="line">will never know what might have been if they had tired to do things beyond what they had already mastered.</span><br><span class="line"></span><br><span class="line">逆推：</span><br><span class="line">Describe a piece of advice you received ...</span><br><span class="line">describe the important lesson you learned in high school...</span><br></pre></td></tr></table></figure>
+<p><em><strong>*切入点，把人物带进来。*</strong></em></p>
+<p><em><strong>*张三，李四，大部分人，小部分人，*</strong></em></p>
+<p><em><strong>*只要把人物带进来，并站在他们的角度上，就有话可说。*</strong></em></p>
+<p><em><strong>*同学们参考罗翔老师的说话技巧。*</strong></em></p>
+<p><em><strong>*It*</strong></em><em><strong>*’*</strong></em><em><strong>*s crucial…+because it allows…, 是实战价值非常强悍的框架。*</strong></em></p>
+<p><em><strong>*最后rather than+名词或从句，也是出战率非常高的句式。*</strong></em></p>
+<h3 id="懈怠"><a href="#懈怠" class="headerlink" title="懈怠"></a>懈怠</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if we don&#x27;t like we work,</span><br><span class="line">it&#x27;s easy for us to be drawn to the things that we want to do</span><br><span class="line">like...</span><br><span class="line">scrolling TikTok,or reading music blogs,</span><br><span class="line">rather than the things we have to do,</span><br><span class="line">this tension possibly causes fatigue.</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2547,6 +2498,55 @@
 <p><em><strong>*i will try to*</strong></em> <em><strong>*get into the state of flow of deep work early in the day*</strong></em></p>
 <p><em><strong>*while the rest of the world*</strong></em><em><strong>*&#x2F;*</strong></em> </p>
 <p><em><strong>*is asleep*</strong></em><em><strong>*.*</strong></em></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语口语09</title>
+    <url>/2022/07/20/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD09/</url>
+    <content><![CDATA[<h1 id="英语口语09"><a href="#英语口语09" class="headerlink" title="英语口语09"></a>英语口语09</h1><h3 id="钱财安身"><a href="#钱财安身" class="headerlink" title="钱财安身"></a>钱财安身</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Money can buy the security and safety for yourself and your loved ones,</span><br><span class="line">because...</span><br><span class="line">Human beings needs money to pay for all the things that make your life</span><br><span class="line">possible.</span><br><span class="line">such as...</span><br><span class="line">shelter,food,healthcare,and a good education</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*security and safety*</strong></em> 安全感</p>
+<p><em><strong>*all the things that make your life possible*</strong></em> <em><strong>*刚需*</strong></em></p>
+<p><em><strong>*shelter, food, healthcare, and a good education*</strong></em> <em><strong>*基本需求*</strong></em></p>
+<p><em><strong>*注：*</strong></em></p>
+<p><em><strong>*例证有两种打法，最简单的一种就是名词摆放，直接将名词列举出来。*</strong></em></p>
+<p><em><strong>*比如别人问你，你为什么喜欢你的工作，*</strong></em></p>
+<p><em><strong>*你可以直接把工作的福利摆出来，*</strong></em></p>
+<p><em><strong>*这是最简单直接的打法，在无话可说的时候，非常实用。*</strong></em></p>
+<p><em><strong>*在这个语流中，如果仔细观察，三个词伙，其实是不断的递进和具象化，将一个概念不断地落地。*</strong></em></p>
+<h3 id="贫穷的陷阱"><a href="#贫穷的陷阱" class="headerlink" title="贫穷的陷阱"></a>贫穷的陷阱</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">most people have a hard time differentiating &#x27;wants&#x27; and &#x27;needs&#x27;,</span><br><span class="line">i mean...</span><br><span class="line">they use a word &#x27;needs&#x27; for almost everything they purchase,</span><br><span class="line">causing them have to actually believe that they &#x27;have to&#x27; spend money.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*have a hard time differentiating “wants” and “needs”*</strong></em> </p>
+<p><em><strong>*分不清刚需和欲望*</strong></em></p>
+<p><em><strong>*use the word ‘need’ for almost everything they purchase*</strong></em></p>
+<p><em><strong>*购物癖*</strong></em></p>
+<p><em><strong>*注：*</strong></em></p>
+<p><em><strong>*三个非常重要的句式，核心词替换都非常方便*</strong></em></p>
+<p><em><strong>*Have hard time doing sth*</strong></em></p>
+<p><em><strong>*Use the word*</strong></em> <em><strong>*“*</strong></em><em><strong>*A*</strong></em> <em><strong>*”*</strong></em> <em><strong>*for sth*</strong></em></p>
+<p><em><strong>*Causing+从句，引导一个原因*</strong></em></p>
+<p><em><strong>*在背诵的时候，可以从这三个句式开始。*</strong></em></p>
+<p><em><strong>*值得注意的是，这个语流中，有文字游戏的意味，这种技法非常高明。*</strong></em></p>
+<h3 id="财务能力"><a href="#财务能力" class="headerlink" title="财务能力"></a>财务能力</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Poor financial education have a long-lasting impact on individuals and</span><br><span class="line">their families.</span><br><span class="line">the financial education can make a difference.</span><br><span class="line">because...</span><br><span class="line">it can equal you with the knowledge,skills,confidence to </span><br><span class="line">take charge of your life.</span><br><span class="line">and build a more secure future for yourself and your families.</span><br></pre></td></tr></table></figure>
+
+<h3 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">people lose money in stock market because they think the investing is</span><br><span class="line">the ticket to getting rich quickly.</span><br><span class="line">for example...</span><br><span class="line">they see wealthy day traders show off money and fancy cars...</span><br><span class="line">and they think it&#x27;s money.</span><br><span class="line">but the 99% of time they lose money following them,</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*The*</strong></em> <em><strong>*ticket to getting rich quickly*</strong></em> <em><strong>*一夜暴富*</strong></em></p>
+<p><em><strong>*wealthy day traders*</strong></em> <em><strong>*短线炒家*</strong></em></p>
+<p><em><strong>*easy money*</strong></em> <em><strong>*很容易赚的钱*</strong></em></p>
+<p><em><strong>*注：*</strong></em></p>
+<p><em><strong>*贪心，单单整个人性，已经可以解决很多问题。*</strong></em></p>
+<p><em><strong>*只要你了解人性，你就永远有话可说。*</strong></em></p>
+<p><em><strong>*在这个语流中，关于投资的三个很重要的词伙，凝结在了一起。*</strong></em></p>
+<p><em><strong>*当我们在记忆语流时，也就连锁记忆了词伙，一举两得。*</strong></em></p>
+<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">演绎以下一分钟三十秒的语流，训练节奏和气息</span><br><span class="line">在不改变词伙的情况下，自己可以改动一些句子和单词，不必拘泥</span><br><span class="line">重在开口练习，不要纠结，放开其他东西。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Describe the important decision you made recently.</span><br><span class="line"></span><br><span class="line">I used to be a shy person who would feel depressed all the time...</span><br><span class="line">I think the main reason is because </span><br><span class="line">I cared too much about what people think.</span><br><span class="line">so i made the decision couple of years ago</span><br><span class="line">decided that... </span><br><span class="line">i wanna be a guy who has more confidence in his judgments </span><br><span class="line">and feels more alive.</span><br><span class="line">and one of my friends told me that </span><br><span class="line">to achieve that goal, </span><br><span class="line">I need do things that are out of my comfort zone...</span><br><span class="line">So that I will learn to overcome my fears,</span><br><span class="line">for example...</span><br><span class="line">I will likely find that I care less about what people think</span><br><span class="line">and about what could go wrong.</span><br><span class="line">and...</span><br><span class="line">in order to feel to feel alive,</span><br><span class="line">I need to do things that make me feel uncomfortable,</span><br><span class="line">because...</span><br><span class="line">as human beings,</span><br><span class="line">we become who we are through challenges.</span><br><span class="line">for example...</span><br><span class="line">all successful people have taken risks, failed and picked themselves up,</span><br><span class="line">because they believe that those who never venture far </span><br><span class="line">will never know what might have been if they had tired to do things beyond what they had already mastered.</span><br><span class="line"></span><br><span class="line">逆推：</span><br><span class="line">Describe a piece of advice you received ...</span><br><span class="line">describe the important lesson you learned in high school...</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>口语</category>
