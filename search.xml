@@ -20,27 +20,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Docker镜像命令</title>
-    <url>/2022/07/07/Docker%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="Docker常用镜像命令"><a href="#Docker常用镜像命令" class="headerlink" title="Docker常用镜像命令"></a>Docker常用镜像命令</h1><p>这些是最基本的Docker镜像命令，也是最有用的</p>
-<h3 id="镜像名组成"><a href="#镜像名组成" class="headerlink" title="镜像名组成"></a>镜像名组成</h3><p>name:tags tags指版本号 列如：mysql:5.3</p>
-<h3 id="systemctl-start-docker"><a href="#systemctl-start-docker" class="headerlink" title="systemctl start docker"></a>systemctl start docker</h3><p>开启docker 的作用</p>
-<h3 id="systemctl-status-docker"><a href="#systemctl-status-docker" class="headerlink" title="systemctl status docker"></a>systemctl status docker</h3><p>查看docker的状态 是运行还是dead</p>
-<h3 id="systemctl-stop-docker"><a href="#systemctl-stop-docker" class="headerlink" title="systemctl stop docker"></a>systemctl stop docker</h3><p>关闭docker</p>
-<h3 id="docker-pull-镜像名"><a href="#docker-pull-镜像名" class="headerlink" title="docker pull 镜像名"></a>docker pull 镜像名</h3><p>(从Dockerhub官网上面找列如nginx,如果不指定版本 那么就是最新的版本 latest)</p>
-<h3 id="docker-save-o-镜像名-tar"><a href="#docker-save-o-镜像名-tar" class="headerlink" title="docker save -o 镜像名.tar"></a>docker save -o 镜像名.tar</h3><p>将镜像打包成一个压缩包</p>
-<h3 id="docker-load-i-镜像名-tar"><a href="#docker-load-i-镜像名-tar" class="headerlink" title="docker load -i 镜像名.tar"></a>docker load -i 镜像名.tar</h3><p>将压缩包解压为一个镜像</p>
-<h3 id="docker-rmi-镜像名或者镜像ID"><a href="#docker-rmi-镜像名或者镜像ID" class="headerlink" title="docker rmi 镜像名或者镜像ID"></a>docker rmi 镜像名或者镜像ID</h3><p>删除镜像</p>
-<h3 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h3><p>查看镜像</p>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安卓7.0以上添加Fiddler证书到系统根证书</title>
     <url>/2022/07/31/OpenSSL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="安卓7-0以上添加Fiddler证书到系统根证书（模拟器）"><a href="#安卓7-0以上添加Fiddler证书到系统根证书（模拟器）" class="headerlink" title="安卓7.0以上添加Fiddler证书到系统根证书（模拟器）"></a>安卓7.0以上添加Fiddler证书到系统根证书（模拟器）</h1><p><a href="https://null119.lanzoul.com/iewv205n22ad">安装链接</a></p>
@@ -72,6 +51,27 @@
       <tags>
         <tag>安装教程</tag>
         <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker镜像命令</title>
+    <url>/2022/07/07/Docker%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Docker常用镜像命令"><a href="#Docker常用镜像命令" class="headerlink" title="Docker常用镜像命令"></a>Docker常用镜像命令</h1><p>这些是最基本的Docker镜像命令，也是最有用的</p>
+<h3 id="镜像名组成"><a href="#镜像名组成" class="headerlink" title="镜像名组成"></a>镜像名组成</h3><p>name:tags tags指版本号 列如：mysql:5.3</p>
+<h3 id="systemctl-start-docker"><a href="#systemctl-start-docker" class="headerlink" title="systemctl start docker"></a>systemctl start docker</h3><p>开启docker 的作用</p>
+<h3 id="systemctl-status-docker"><a href="#systemctl-status-docker" class="headerlink" title="systemctl status docker"></a>systemctl status docker</h3><p>查看docker的状态 是运行还是dead</p>
+<h3 id="systemctl-stop-docker"><a href="#systemctl-stop-docker" class="headerlink" title="systemctl stop docker"></a>systemctl stop docker</h3><p>关闭docker</p>
+<h3 id="docker-pull-镜像名"><a href="#docker-pull-镜像名" class="headerlink" title="docker pull 镜像名"></a>docker pull 镜像名</h3><p>(从Dockerhub官网上面找列如nginx,如果不指定版本 那么就是最新的版本 latest)</p>
+<h3 id="docker-save-o-镜像名-tar"><a href="#docker-save-o-镜像名-tar" class="headerlink" title="docker save -o 镜像名.tar"></a>docker save -o 镜像名.tar</h3><p>将镜像打包成一个压缩包</p>
+<h3 id="docker-load-i-镜像名-tar"><a href="#docker-load-i-镜像名-tar" class="headerlink" title="docker load -i 镜像名.tar"></a>docker load -i 镜像名.tar</h3><p>将压缩包解压为一个镜像</p>
+<h3 id="docker-rmi-镜像名或者镜像ID"><a href="#docker-rmi-镜像名或者镜像ID" class="headerlink" title="docker rmi 镜像名或者镜像ID"></a>docker rmi 镜像名或者镜像ID</h3><p>删除镜像</p>
+<h3 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h3><p>查看镜像</p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker命令</tag>
       </tags>
   </entry>
   <entry>
@@ -282,25 +282,6 @@
       </tags>
   </entry>
   <entry>
-    <title>python面向对象基础</title>
-    <url>/2022/08/01/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="python面向对象基础"><a href="#python面向对象基础" class="headerlink" title="python面向对象基础"></a>python面向对象基础</h1><h2 id="init-方法"><a href="#init-方法" class="headerlink" title="init_()方法"></a><em>init</em>_()方法</h2><p><em>init</em><em>()方法又被称为“构造函数”，它有以下4个特性。<br>（1）该方法很特殊。init前后均有双下画线“__”，它的<u>第一个参数必须是“self”</u>，其意义同其他方法一样，而其他参数用于设置实例的属性，数量不限。该方法不能使用return语句。<br>（2）__init</em>_()方法可在类中的任何位置被定义。<br>（3）在由类创建一个新的实例时，该方法被自动调用一次。即每创建一个实例，该方法都会被调用一次。<br>（4）常用该方法定义实例的属性，但定义实例的属性不局限于该方法。换言之，在其他方法中同样可以定义实例的属性。</p>
-<h2 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h2><p>实例方法是类中定义的没有加任何装饰符的一般方法，即不加@classmethod和@staticmethod标记的方法。<strong>如果实例方法有n个形式参数，那么在由类调用时，实际参数必须为n个；而在由实例调用时，实际参数则只需要n-1个，因为第一个参数被系统默认为实例本身。由于这个规定，所以，如果实例方法是无参数函数，那么实例无法调用该方法，只有类可以调用它</strong>。因此，实例方法一般至少需要一个参数self，它代表类的对象（实例）</p>
-<h2 id="类方法及其装饰符——-classmethod"><a href="#类方法及其装饰符——-classmethod" class="headerlink" title="类方法及其装饰符——@classmethod"></a>类方法及其装饰符——@classmethod</h2><p>@classmethod是一个函数装饰符，用它装饰的方法不是实例方法，而是类方法。类方法只能被类调用，而不能被实例调用，常被用于方法重载。<br>类方法的第一个参数必须是cls，表示类本身；而实例方法的第一个参数是self，表示该类的一个实例。当类由子类继承时，在调用类方法时，传入的类变量cls的实际参数是子类，而非父类。对于类方法，既可由类调用，也可由类的实例调用。<br>假设类方法有n个形式参数，如果由类调用它，则需要传递的实际参数只能为n-1个，第一个参数默认为类本身；如果由实例调用它，则需要传递的实际参数为n个。</p>
-<h2 id="静态方法及其装饰符——-staticmethod"><a href="#静态方法及其装饰符——-staticmethod" class="headerlink" title="静态方法及其装饰符——@staticmethod"></a>静态方法及其装饰符——@staticmethod</h2><p>@staticmethod也是一个函数装饰符，用它装饰的方法是静态方法。静态方法属于类方法，不是实例方法，可将它理解成全局函数，因此可被类或类的实例调用。在调用时，它不会被隐式地传入任何参数。也就是说，静态方法可以没有任何参数。例如，举例5中的静态方法show_help()，它在程序中的作用是实现一个类的简单帮助功能。<br>由于静态方法无内定的隐性参数，所以，调用静态方法时的实际参数个数必须与形式参数个数严格一致。<br>为什么要引入静态方法？有时候需要将一组逻辑上相关的函数放在一个类里，便于组织代码。例如，可将类中被其他多个方法调用的通用方法定义为静态方法。一般而言，如果一个方法不需要使用self参数，它就适合被定义为静态方法。</p>
-<h2 id="构造函数的继承"><a href="#构造函数的继承" class="headerlink" title="构造函数的继承"></a>构造函数的继承</h2><p>由类的定义可知，如果要向实例传递参数，则必须定义和使用“构造函数”。由此可见构造函数的重要性！<br>那么，构造函数能否被继承、该如何被继承，子类又如何定义自己的属性呢？<br>解决上述问题的办法是，在定义子类的构造函数中显式地调用父类的构造函数，一般来说有两种方式。</p>
-<h3 id="1-继承构造函数的第一种方式"><a href="#1-继承构造函数的第一种方式" class="headerlink" title="1.继承构造函数的第一种方式"></a>1.继承构造函数的第一种方式</h3><p>第一种方式是经典方式，它的形式如下：<br>其中，括号内的第一个参数必须为self ，余下的参数即父类的实例属性。例如，Animal.<strong>init</strong>(self,name,sex,classtype)。<br>要特别提醒的是，当以这种方式调用时，第一个参数self必须被显式传递，它不会被隐式传递，即必须为self，如果被省略，则将报错；其余参数则为父类的实例属性，直接复制父类的实例属性即可。<br>此方式既可被用在单继承场合，也可被用在多继承场合。</p>
-<h3 id="2-继承构造函数的第二种方式"><a href="#2-继承构造函数的第二种方式" class="headerlink" title="2.继承构造函数的第二种方式"></a>2.继承构造函数的第二种方式</h3><p>第二种方式为新式方式，它的形式如下：<br>其中，内置函数super(子类,self)用于表示子类的父类，它有两个参数——子类与self；而__init__(参数1,参数2, )为构造函数，与第一种方式不同的是，它不需要self参数，所有参数均为父类的实例属性。<br>例如，super(Bird,self).<strong>init</strong>(name,sex,classtype)，此处，<strong>super()的第一个参数是子类，也就是正在定义构造函数的类；第二个参数必须为self，它代表子类的对象。很显然，此方式过于烦琐</strong>，所幸的是，Python 3将上述方式改为更简洁的形式，但两者完全等效，如下：<br>换言之，Python 3的第二种方式采用以下形式：<br>以下简单地介绍内置函数super()的语法形式。<br>其中，<br>· type：类，是一个子类。<br>· object-or-type：一般为self。</p>
-<h3 id="3-关于继承的一个重要特性"><a href="#3-关于继承的一个重要特性" class="headerlink" title="3.关于继承的一个重要特性"></a>3.关于继承的一个重要特性</h3><p>如果只是简单地在<strong>子类中定义一个构造函数而不调用父类的构造函数，那么此方式被称为“重构”</strong>。以此方式定义的子类通常无法继承父类的属性和方法。<strong>但是，如果子类不引用父类的任何属性，那么父类的方法可被继承和引用</strong>。<br>举例25：<br>运行上述程序后，得到如下结果：<br>由举例25可知，虽然子类并没有继承父类的构造函数，但由于父类的方法describe()不引用任何属性，因此它可被子类对象b1所调用。<br>综上所述，在定义子类的构造函数时，一般应继承父类的构造函数，这样子类也能拥有父类的所有属性和方法。<br>子类的构造函数继承父类的构造函数的原理（执行过程）如下：<br>实例化对象a → a调用子类__init__() → 子类__init__()继承父类__init__() → 调用父类__init__()。<br>再举一个单继承的例子，以对类的继承问题进行归纳。通过该例，可进一步理解继承的概念及其有关要点。</p>
-]]></content>
-      <categories>
-        <category>python基础</category>
-      </categories>
-      <tags>
-        <tag>python基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>二叉树的递归遍历_二叉树01</title>
     <url>/2022/07/30/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9101/</url>
     <content><![CDATA[<h1 id="二叉树的递归遍历"><a href="#二叉树的递归遍历" class="headerlink" title="二叉树的递归遍历"></a>二叉树的递归遍历</h1><blockquote>
@@ -359,6 +340,25 @@
       </categories>
       <tags>
         <tag>二叉树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python面向对象基础</title>
+    <url>/2022/08/01/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="python面向对象基础"><a href="#python面向对象基础" class="headerlink" title="python面向对象基础"></a>python面向对象基础</h1><h2 id="init-方法"><a href="#init-方法" class="headerlink" title="init_()方法"></a><em>init</em>_()方法</h2><p><em>init</em><em>()方法又被称为“构造函数”，它有以下4个特性。<br>（1）该方法很特殊。init前后均有双下画线“__”，它的<u>第一个参数必须是“self”</u>，其意义同其他方法一样，而其他参数用于设置实例的属性，数量不限。该方法不能使用return语句。<br>（2）__init</em>_()方法可在类中的任何位置被定义。<br>（3）在由类创建一个新的实例时，该方法被自动调用一次。即每创建一个实例，该方法都会被调用一次。<br>（4）常用该方法定义实例的属性，但定义实例的属性不局限于该方法。换言之，在其他方法中同样可以定义实例的属性。</p>
+<h2 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h2><p>实例方法是类中定义的没有加任何装饰符的一般方法，即不加@classmethod和@staticmethod标记的方法。<strong>如果实例方法有n个形式参数，那么在由类调用时，实际参数必须为n个；而在由实例调用时，实际参数则只需要n-1个，因为第一个参数被系统默认为实例本身。由于这个规定，所以，如果实例方法是无参数函数，那么实例无法调用该方法，只有类可以调用它</strong>。因此，实例方法一般至少需要一个参数self，它代表类的对象（实例）</p>
+<h2 id="类方法及其装饰符——-classmethod"><a href="#类方法及其装饰符——-classmethod" class="headerlink" title="类方法及其装饰符——@classmethod"></a>类方法及其装饰符——@classmethod</h2><p>@classmethod是一个函数装饰符，用它装饰的方法不是实例方法，而是类方法。类方法只能被类调用，而不能被实例调用，常被用于方法重载。<br>类方法的第一个参数必须是cls，表示类本身；而实例方法的第一个参数是self，表示该类的一个实例。当类由子类继承时，在调用类方法时，传入的类变量cls的实际参数是子类，而非父类。对于类方法，既可由类调用，也可由类的实例调用。<br>假设类方法有n个形式参数，如果由类调用它，则需要传递的实际参数只能为n-1个，第一个参数默认为类本身；如果由实例调用它，则需要传递的实际参数为n个。</p>
+<h2 id="静态方法及其装饰符——-staticmethod"><a href="#静态方法及其装饰符——-staticmethod" class="headerlink" title="静态方法及其装饰符——@staticmethod"></a>静态方法及其装饰符——@staticmethod</h2><p>@staticmethod也是一个函数装饰符，用它装饰的方法是静态方法。静态方法属于类方法，不是实例方法，可将它理解成全局函数，因此可被类或类的实例调用。在调用时，它不会被隐式地传入任何参数。也就是说，静态方法可以没有任何参数。例如，举例5中的静态方法show_help()，它在程序中的作用是实现一个类的简单帮助功能。<br>由于静态方法无内定的隐性参数，所以，调用静态方法时的实际参数个数必须与形式参数个数严格一致。<br>为什么要引入静态方法？有时候需要将一组逻辑上相关的函数放在一个类里，便于组织代码。例如，可将类中被其他多个方法调用的通用方法定义为静态方法。一般而言，如果一个方法不需要使用self参数，它就适合被定义为静态方法。</p>
+<h2 id="构造函数的继承"><a href="#构造函数的继承" class="headerlink" title="构造函数的继承"></a>构造函数的继承</h2><p>由类的定义可知，如果要向实例传递参数，则必须定义和使用“构造函数”。由此可见构造函数的重要性！<br>那么，构造函数能否被继承、该如何被继承，子类又如何定义自己的属性呢？<br>解决上述问题的办法是，在定义子类的构造函数中显式地调用父类的构造函数，一般来说有两种方式。</p>
+<h3 id="1-继承构造函数的第一种方式"><a href="#1-继承构造函数的第一种方式" class="headerlink" title="1.继承构造函数的第一种方式"></a>1.继承构造函数的第一种方式</h3><p>第一种方式是经典方式，它的形式如下：<br>其中，括号内的第一个参数必须为self ，余下的参数即父类的实例属性。例如，Animal.<strong>init</strong>(self,name,sex,classtype)。<br>要特别提醒的是，当以这种方式调用时，第一个参数self必须被显式传递，它不会被隐式传递，即必须为self，如果被省略，则将报错；其余参数则为父类的实例属性，直接复制父类的实例属性即可。<br>此方式既可被用在单继承场合，也可被用在多继承场合。</p>
+<h3 id="2-继承构造函数的第二种方式"><a href="#2-继承构造函数的第二种方式" class="headerlink" title="2.继承构造函数的第二种方式"></a>2.继承构造函数的第二种方式</h3><p>第二种方式为新式方式，它的形式如下：<br>其中，内置函数super(子类,self)用于表示子类的父类，它有两个参数——子类与self；而__init__(参数1,参数2, )为构造函数，与第一种方式不同的是，它不需要self参数，所有参数均为父类的实例属性。<br>例如，super(Bird,self).<strong>init</strong>(name,sex,classtype)，此处，<strong>super()的第一个参数是子类，也就是正在定义构造函数的类；第二个参数必须为self，它代表子类的对象。很显然，此方式过于烦琐</strong>，所幸的是，Python 3将上述方式改为更简洁的形式，但两者完全等效，如下：<br>换言之，Python 3的第二种方式采用以下形式：<br>以下简单地介绍内置函数super()的语法形式。<br>其中，<br>· type：类，是一个子类。<br>· object-or-type：一般为self。</p>
+<h3 id="3-关于继承的一个重要特性"><a href="#3-关于继承的一个重要特性" class="headerlink" title="3.关于继承的一个重要特性"></a>3.关于继承的一个重要特性</h3><p>如果只是简单地在<strong>子类中定义一个构造函数而不调用父类的构造函数，那么此方式被称为“重构”</strong>。以此方式定义的子类通常无法继承父类的属性和方法。<strong>但是，如果子类不引用父类的任何属性，那么父类的方法可被继承和引用</strong>。<br>举例25：<br>运行上述程序后，得到如下结果：<br>由举例25可知，虽然子类并没有继承父类的构造函数，但由于父类的方法describe()不引用任何属性，因此它可被子类对象b1所调用。<br>综上所述，在定义子类的构造函数时，一般应继承父类的构造函数，这样子类也能拥有父类的所有属性和方法。<br>子类的构造函数继承父类的构造函数的原理（执行过程）如下：<br>实例化对象a → a调用子类__init__() → 子类__init__()继承父类__init__() → 调用父类__init__()。<br>再举一个单继承的例子，以对类的继承问题进行归纳。通过该例，可进一步理解继承的概念及其有关要点。</p>
+]]></content>
+      <categories>
+        <category>python基础</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
       </tags>
   </entry>
   <entry>
@@ -479,6 +479,23 @@
       </tags>
   </entry>
   <entry>
+    <title>数组在哈希表中的应用</title>
+    <url>/2022/07/13/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
+    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
+<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>哈希表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>两个数组的交集</title>
     <url>/2022/07/22/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A801/</url>
     <content><![CDATA[<h1 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349. 两个数组的交集"></a>349. 两个数组的交集</h1><p><a href="https://leetcode.cn/problems/intersection-of-two-arrays/">力扣题目链接(opens new window)</a></p>
@@ -511,23 +528,6 @@
       </categories>
       <tags>
         <tag>哈希表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数组在哈希表中的应用</title>
-    <url>/2022/07/13/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
-    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
-<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>哈希表</tag>
-        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -688,45 +688,6 @@
       </tags>
   </entry>
   <entry>
-    <title>三数之和_哈希表</title>
-    <url>/2022/07/22/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A806/</url>
-    <content><![CDATA[<h1 id="三数之和"><a href="#三数之和" class="headerlink" title="三数之和"></a>三数之和</h1><p><a href="https://leetcode.cn/problems/3sum/">力扣题目链接(opens new window)</a></p>
-<p>给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c &#x3D; 0 ？请你找出所有满足条件且不重复的三元组。</p>
-<p><strong>注意：</strong> 答案中不可以包含重复的三元组。</p>
-<p>示例：</p>
-<p>给定数组 nums &#x3D; [-1, 0, 1, 2, -1, -4]，</p>
-<p>满足要求的三元组集合为： [ [-1, 0, 1], [-1, -1, 2] ]</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><strong>注意[0， 0， 0， 0] 这组数据</strong></p>
-<h3 id="哈希解法"><a href="#哈希解法" class="headerlink" title="哈希解法"></a>哈希解法</h3><p>两层for循环就可以确定 a 和b 的数值了，可以使用哈希法来确定 0-(a+b) 是否在 数组里出现过，其实这个思路是正确的，但是我们有一个非常棘手的问题，就是题目中说的不可以包含重复的三元组。</p>
-<p>把符合条件的三元组放进vector中，然后再去重，这样是非常费时的，很容易超时，也是这道题目通过率如此之低的根源所在。</p>
-<p>去重的过程不好处理，有很多小细节，如果在面试中很难想到位。</p>
-<p>时间复杂度可以做到O(n^2)，但还是比较费时的，因为不好做剪枝操作。</p>
-<p>大家可以尝试使用哈希法写一写，就知道其困难的程度了。</p>
-<p>哈希法C++代码:</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">threeSum</span>(vector&lt;<span class="type">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; result;</span><br><span class="line">        <span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>());</span><br><span class="line">        <span class="comment">// 找出a + b + c = 0</span></span><br><span class="line">        <span class="comment">// a = nums[i], b = nums[j], c = -(a + b)</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="comment">// 排序之后如果第一个元素已经大于零，那么不可能凑成三元组</span></span><br><span class="line">            <span class="keyword">if</span> (nums[i] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) &#123; <span class="comment">//三元组元素a去重</span></span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            unordered_set&lt;<span class="type">int</span>&gt; set;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (j &gt; i + <span class="number">2</span></span><br><span class="line">                        &amp;&amp; nums[j] == nums[j<span class="number">-1</span>]</span><br><span class="line">                        &amp;&amp; nums[j<span class="number">-1</span>] == nums[j<span class="number">-2</span>]) &#123; <span class="comment">// 三元组元素b去重</span></span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">int</span> c = <span class="number">0</span> - (nums[i] + nums[j]);</span><br><span class="line">                <span class="keyword">if</span> (set.<span class="built_in">find</span>(c) != set.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                    result.<span class="built_in">push_back</span>(&#123;nums[i], nums[j], c&#125;);</span><br><span class="line">                    set.<span class="built_in">erase</span>(c);<span class="comment">// 三元组元素c去重</span></span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    set.<span class="built_in">insert</span>(nums[j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4><p><strong>其实这道题目使用哈希法并不十分合适</strong>，因为在去重的操作中有很多细节需要注意，在面试中很难直接写出没有bug的代码。</p>
-<p>而且使用哈希法 在使用两层for循环的时候，能做的剪枝操作很有限，虽然时间复杂度是O(n^2)，也是可以在leetcode上通过，但是程序的执行时间依然比较长 。</p>
-<p>接下来我来介绍另一个解法：双指针法，<strong>这道题目使用双指针法 要比哈希法高效一些</strong>，那么来讲解一下具体实现的思路。</p>
-<p>动画效果如下：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/15.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.gif" alt="15.三数之和"></p>
-<p>拿这个nums数组来举例，首先将数组排序，然后有一层for循环，i从下标0的地方开始，同时定一个下标left 定义在i+1的位置上，定义下标right 在数组结尾的位置上。</p>
-<p>依然还是在数组中找到 abc 使得a + b +c &#x3D;0，我们这里相当于 a &#x3D; nums[i]，b &#x3D; nums[left]，c &#x3D; nums[right]。</p>
-<p>接下来如何移动left 和right呢， 如果nums[i] + nums[left] + nums[right] &gt; 0 就说明 此时三数之和大了，因为数组是排序后了，所以right下标就应该向左移动，这样才能让三数之和小一些。</p>
-<p>如果 nums[i] + nums[left] + nums[right] &lt; 0 说明 此时 三数之和小了，left 就向右移动，才能让三数之和大一些，直到left与right相遇为止。</p>
-<p>时间复杂度：O(n^2)。</p>
-<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">threeSum</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        	List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> <span class="title class_">HashList</span>&lt;&gt;();</span><br><span class="line">        	Arrays.sort(nums);</span><br><span class="line">    		<span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    		<span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    		<span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++) &#123;</span><br><span class="line">    				left = i+<span class="number">1</span>;</span><br><span class="line">    				right = nums.length-<span class="number">1</span>;</span><br><span class="line">    				<span class="keyword">while</span>(left &lt; right) &#123;</span><br><span class="line">                        </span><br><span class="line">                        </span><br><span class="line">    					temp = nums[i] + nums[left] + nums[right];</span><br><span class="line">    					<span class="keyword">if</span>(temp &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                            left++;</span><br><span class="line">                        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(temp &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                            right--;</span><br><span class="line">                        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                            res.add(Arrays.asList(nums[i],nums[left],nums[right]));</span><br><span class="line">                            <span class="keyword">while</span>(left &lt; right &amp;&amp; nums[left] == nums[left+<span class="number">1</span>]) left++;</span><br><span class="line">                            <span class="keyword">while</span>(left &lt; right &amp;&amp; nums[right] == nums[right-<span class="number">1</span>]) right--;</span><br><span class="line">                            left++;</span><br><span class="line">                            right--;</span><br><span class="line">                        &#125;</span><br><span class="line">    				&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">        	<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>哈希表</category>
-      </categories>
-      <tags>
-        <tag>哈希表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>反转字符串_字符串01</title>
     <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B201/</url>
     <content><![CDATA[<h1 id="反转字符串"><a href="#反转字符串" class="headerlink" title="反转字符串"></a>反转字符串</h1><p><a href="https://leetcode.cn/problems/reverse-string/">力扣题目链接(opens new window)</a></p>
@@ -809,6 +770,45 @@
       </categories>
       <tags>
         <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三数之和_哈希表</title>
+    <url>/2022/07/22/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A806/</url>
+    <content><![CDATA[<h1 id="三数之和"><a href="#三数之和" class="headerlink" title="三数之和"></a>三数之和</h1><p><a href="https://leetcode.cn/problems/3sum/">力扣题目链接(opens new window)</a></p>
+<p>给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c &#x3D; 0 ？请你找出所有满足条件且不重复的三元组。</p>
+<p><strong>注意：</strong> 答案中不可以包含重复的三元组。</p>
+<p>示例：</p>
+<p>给定数组 nums &#x3D; [-1, 0, 1, 2, -1, -4]，</p>
+<p>满足要求的三元组集合为： [ [-1, 0, 1], [-1, -1, 2] ]</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><strong>注意[0， 0， 0， 0] 这组数据</strong></p>
+<h3 id="哈希解法"><a href="#哈希解法" class="headerlink" title="哈希解法"></a>哈希解法</h3><p>两层for循环就可以确定 a 和b 的数值了，可以使用哈希法来确定 0-(a+b) 是否在 数组里出现过，其实这个思路是正确的，但是我们有一个非常棘手的问题，就是题目中说的不可以包含重复的三元组。</p>
+<p>把符合条件的三元组放进vector中，然后再去重，这样是非常费时的，很容易超时，也是这道题目通过率如此之低的根源所在。</p>
+<p>去重的过程不好处理，有很多小细节，如果在面试中很难想到位。</p>
+<p>时间复杂度可以做到O(n^2)，但还是比较费时的，因为不好做剪枝操作。</p>
+<p>大家可以尝试使用哈希法写一写，就知道其困难的程度了。</p>
+<p>哈希法C++代码:</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">threeSum</span>(vector&lt;<span class="type">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; result;</span><br><span class="line">        <span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>());</span><br><span class="line">        <span class="comment">// 找出a + b + c = 0</span></span><br><span class="line">        <span class="comment">// a = nums[i], b = nums[j], c = -(a + b)</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="comment">// 排序之后如果第一个元素已经大于零，那么不可能凑成三元组</span></span><br><span class="line">            <span class="keyword">if</span> (nums[i] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) &#123; <span class="comment">//三元组元素a去重</span></span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            unordered_set&lt;<span class="type">int</span>&gt; set;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (j &gt; i + <span class="number">2</span></span><br><span class="line">                        &amp;&amp; nums[j] == nums[j<span class="number">-1</span>]</span><br><span class="line">                        &amp;&amp; nums[j<span class="number">-1</span>] == nums[j<span class="number">-2</span>]) &#123; <span class="comment">// 三元组元素b去重</span></span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">int</span> c = <span class="number">0</span> - (nums[i] + nums[j]);</span><br><span class="line">                <span class="keyword">if</span> (set.<span class="built_in">find</span>(c) != set.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                    result.<span class="built_in">push_back</span>(&#123;nums[i], nums[j], c&#125;);</span><br><span class="line">                    set.<span class="built_in">erase</span>(c);<span class="comment">// 三元组元素c去重</span></span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    set.<span class="built_in">insert</span>(nums[j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4><p><strong>其实这道题目使用哈希法并不十分合适</strong>，因为在去重的操作中有很多细节需要注意，在面试中很难直接写出没有bug的代码。</p>
+<p>而且使用哈希法 在使用两层for循环的时候，能做的剪枝操作很有限，虽然时间复杂度是O(n^2)，也是可以在leetcode上通过，但是程序的执行时间依然比较长 。</p>
+<p>接下来我来介绍另一个解法：双指针法，<strong>这道题目使用双指针法 要比哈希法高效一些</strong>，那么来讲解一下具体实现的思路。</p>
+<p>动画效果如下：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/15.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.gif" alt="15.三数之和"></p>
+<p>拿这个nums数组来举例，首先将数组排序，然后有一层for循环，i从下标0的地方开始，同时定一个下标left 定义在i+1的位置上，定义下标right 在数组结尾的位置上。</p>
+<p>依然还是在数组中找到 abc 使得a + b +c &#x3D;0，我们这里相当于 a &#x3D; nums[i]，b &#x3D; nums[left]，c &#x3D; nums[right]。</p>
+<p>接下来如何移动left 和right呢， 如果nums[i] + nums[left] + nums[right] &gt; 0 就说明 此时三数之和大了，因为数组是排序后了，所以right下标就应该向左移动，这样才能让三数之和小一些。</p>
+<p>如果 nums[i] + nums[left] + nums[right] &lt; 0 说明 此时 三数之和小了，left 就向右移动，才能让三数之和大一些，直到left与right相遇为止。</p>
+<p>时间复杂度：O(n^2)。</p>
+<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">threeSum</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        	List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> <span class="title class_">HashList</span>&lt;&gt;();</span><br><span class="line">        	Arrays.sort(nums);</span><br><span class="line">    		<span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    		<span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    		<span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++) &#123;</span><br><span class="line">    				left = i+<span class="number">1</span>;</span><br><span class="line">    				right = nums.length-<span class="number">1</span>;</span><br><span class="line">    				<span class="keyword">while</span>(left &lt; right) &#123;</span><br><span class="line">                        </span><br><span class="line">                        </span><br><span class="line">    					temp = nums[i] + nums[left] + nums[right];</span><br><span class="line">    					<span class="keyword">if</span>(temp &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                            left++;</span><br><span class="line">                        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(temp &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                            right--;</span><br><span class="line">                        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                            res.add(Arrays.asList(nums[i],nums[left],nums[right]));</span><br><span class="line">                            <span class="keyword">while</span>(left &lt; right &amp;&amp; nums[left] == nums[left+<span class="number">1</span>]) left++;</span><br><span class="line">                            <span class="keyword">while</span>(left &lt; right &amp;&amp; nums[right] == nums[right-<span class="number">1</span>]) right--;</span><br><span class="line">                            left++;</span><br><span class="line">                            right--;</span><br><span class="line">                        &#125;</span><br><span class="line">    				&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">        	<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>哈希表</category>
+      </categories>
+      <tags>
+        <tag>哈希表</tag>
       </tags>
   </entry>
   <entry>
@@ -1413,45 +1413,6 @@
       </tags>
   </entry>
   <entry>
-    <title>用栈实现队列_栈02</title>
-    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9702/</url>
-    <content><![CDATA[<h1 id="用栈实现队列"><a href="#用栈实现队列" class="headerlink" title="用栈实现队列"></a>用栈实现队列</h1><p><a href="https://leetcode.cn/problems/implement-queue-using-stacks/">力扣题目链接(opens new window)</a></p>
-<p>使用栈实现队列的下列操作：</p>
-<p>push(x) – 将一个元素放入队列的尾部。<br>pop() – 从队列首部移除元素。<br>peek() – 返回队列首部的元素。<br>empty() – 返回队列是否为空。</p>
-<p>示例:</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">MyQueue queue = <span class="keyword">new</span> <span class="built_in">MyQueue</span>();</span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">2</span>);</span><br><span class="line">queue.<span class="built_in">peek</span>();  <span class="comment">// 返回 1</span></span><br><span class="line">queue.<span class="built_in">pop</span>();   <span class="comment">// 返回 1</span></span><br><span class="line">queue.<span class="built_in">empty</span>(); <span class="comment">// 返回 false</span></span><br></pre></td></tr></table></figure>
-
-<p>说明:</p>
-<ul>
-<li>你只能使用标准的栈操作 – 也就是只有 push to top, peek&#x2F;pop from top, size, 和 is empty 操作是合法的。</li>
-<li>你所使用的语言也许不支持栈。你可以使用 list 或者 deque（双端队列）来模拟一个栈，只要是标准的栈操作即可。</li>
-<li>假设所有操作都是有效的 （例如，一个空的队列不会调用 pop 或者 peek 操作）。</li>
-</ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这是一道模拟题，不涉及到具体算法，考察的就是对栈和队列的掌握程度。</p>
-<p>使用栈来模式队列的行为，如果仅仅用一个栈，是一定不行的，所以需要两个栈<strong>一个输入栈，一个输出栈</strong>，这里要注意输入栈和输出栈的关系。</p>
-<p>下面动画模拟以下队列的执行过程如下：</p>
-<p>执行语句：<br>queue.push(1);<br>queue.push(2);<br>queue.pop(); <strong>注意此时的输出栈的操作</strong><br>queue.push(3);<br>queue.push(4);<br>queue.pop();<br>queue.pop();<strong>注意此时的输出栈的操作</strong><br>queue.pop();<br>queue.empty();</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97%E7%89%88%E6%9C%AC2.gif" alt="232.用栈实现队列版本2"></p>
-<p>在push数据的时候，只要数据放进输入栈就好，<strong>但在pop的时候，操作就复杂一些，输出栈如果为空，就把进栈数据全部导入进来（注意是全部导入）</strong>，再从出栈弹出数据，如果输出栈不为空，则直接从出栈弹出数据就可以了。</p>
-<p>最后如何判断队列为空呢？<strong>如果进栈和出栈都为空的话，说明模拟的队列为空了。</strong></p>
-<p>在代码实现的时候，会发现pop() 和 peek()两个函数功能类似，代码实现上也是类似的，可以思考一下如何把代码抽象一下。</p>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>可以看出peek()的实现，直接复用了pop()。</p>
-<p>再多说一些代码开发上的习惯问题，在工业级别代码开发中，最忌讳的就是 实现一个类似的函数，直接把代码粘过来改一改就完事了。</p>
-<p>这样的项目代码会越来越乱，<strong>一定要懂得复用，功能相近的函数要抽象出来，不要大量的复制粘贴，很容易出问题！（踩过坑的人自然懂）</strong></p>
-<p>工作中如果发现某一个功能自己要经常用，同事们可能也会用到，自己就花点时间把这个功能抽象成一个好用的函数或者工具类，不仅自己方便，也方面了同事们。</p>
-<p>同事们就会逐渐认可你的工作态度和工作能力，自己的口碑都是这么一点一点积累起来的！在同事圈里口碑起来了之后，你就发现自己走上了一个正循环，以后的升职加薪才少不了你！哈哈哈</p>
-<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyQueue</span> &#123;</span><br><span class="line"></span><br><span class="line">    Stack&lt;Integer&gt; stackIn;</span><br><span class="line">    Stack&lt;Integer&gt; stackOut;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">    	stackIn.push(val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">poll</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(!stackOut.isEmpty()) &#123;</span><br><span class="line">    		stackOut.pop();</span><br><span class="line">    	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    		<span class="keyword">while</span>(!stackIn.isEmpty()) &#123;</span><br><span class="line">    			stackOut.push(stackIn.pop());</span><br><span class="line">    		&#125;</span><br><span class="line">    		stackOut.pop();</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">empty</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">return</span> stackIn.isEmpty() &amp;&amp; stackOut.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">peek</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(!stackOut.isEmpty()) <span class="keyword">return</span> stackOut.peek();</span><br><span class="line">    	<span class="keyword">while</span>(!stackIn.isEmpty()) &#123;</span><br><span class="line">    			stackOut.push(stackIn.pop());</span><br><span class="line">    		&#125;</span><br><span class="line">    	<span class="keyword">return</span> stackOut.peek();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>栈</category>
-      </categories>
-      <tags>
-        <tag>栈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>有效的括号_栈03</title>
     <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9703/</url>
     <content><![CDATA[<h1 id="有效的括号"><a href="#有效的括号" class="headerlink" title="有效的括号"></a>有效的括号</h1><p><a href="https://leetcode.cn/problems/valid-parentheses/">力扣题目链接(opens new window)</a></p>
@@ -1519,6 +1480,45 @@
 <p>分析完之后，代码其实就比较好写了，</p>
 <p>但还有一些技巧，在匹配左括号的时候，右括号先入栈，就只需要比较当前元素和栈顶相不相等就可以了，比左括号先入栈代码实现要简单的多了！</p>
 <h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isValid</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    	 Deque&lt;Character&gt; stack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    	 <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;s.length();i++) &#123;</span><br><span class="line">    	 	<span class="keyword">if</span>(s.charAt(i) == <span class="string">&#x27;&#123;&#x27;</span>) &#123;</span><br><span class="line">    	 		stack.add(<span class="string">&#x27;&#125;&#x27;</span>);</span><br><span class="line">    	 	&#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(i) == <span class="string">&#x27;[&#x27;</span>) &#123;</span><br><span class="line">    	 		stack.add(<span class="string">&#x27;]&#x27;</span>);</span><br><span class="line">    	 	&#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(i) == <span class="string">&#x27;(&#x27;</span>) &#123;</span><br><span class="line">    	 		stack.add(<span class="string">&#x27;)&#x27;</span>);</span><br><span class="line">    	 	&#125; <span class="keyword">else</span> <span class="keyword">if</span>(!stack.isEmpty()&amp;&amp;s.charAt(i) != stack.peek()) &#123;</span><br><span class="line">    	 		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            	stack.pop();</span><br><span class="line">            &#125;</span><br><span class="line">    	 &#125;</span><br><span class="line">    	 <span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    	 </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>栈</category>
+      </categories>
+      <tags>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用栈实现队列_栈02</title>
+    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9702/</url>
+    <content><![CDATA[<h1 id="用栈实现队列"><a href="#用栈实现队列" class="headerlink" title="用栈实现队列"></a>用栈实现队列</h1><p><a href="https://leetcode.cn/problems/implement-queue-using-stacks/">力扣题目链接(opens new window)</a></p>
+<p>使用栈实现队列的下列操作：</p>
+<p>push(x) – 将一个元素放入队列的尾部。<br>pop() – 从队列首部移除元素。<br>peek() – 返回队列首部的元素。<br>empty() – 返回队列是否为空。</p>
+<p>示例:</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">MyQueue queue = <span class="keyword">new</span> <span class="built_in">MyQueue</span>();</span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">2</span>);</span><br><span class="line">queue.<span class="built_in">peek</span>();  <span class="comment">// 返回 1</span></span><br><span class="line">queue.<span class="built_in">pop</span>();   <span class="comment">// 返回 1</span></span><br><span class="line">queue.<span class="built_in">empty</span>(); <span class="comment">// 返回 false</span></span><br></pre></td></tr></table></figure>
+
+<p>说明:</p>
+<ul>
+<li>你只能使用标准的栈操作 – 也就是只有 push to top, peek&#x2F;pop from top, size, 和 is empty 操作是合法的。</li>
+<li>你所使用的语言也许不支持栈。你可以使用 list 或者 deque（双端队列）来模拟一个栈，只要是标准的栈操作即可。</li>
+<li>假设所有操作都是有效的 （例如，一个空的队列不会调用 pop 或者 peek 操作）。</li>
+</ul>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这是一道模拟题，不涉及到具体算法，考察的就是对栈和队列的掌握程度。</p>
+<p>使用栈来模式队列的行为，如果仅仅用一个栈，是一定不行的，所以需要两个栈<strong>一个输入栈，一个输出栈</strong>，这里要注意输入栈和输出栈的关系。</p>
+<p>下面动画模拟以下队列的执行过程如下：</p>
+<p>执行语句：<br>queue.push(1);<br>queue.push(2);<br>queue.pop(); <strong>注意此时的输出栈的操作</strong><br>queue.push(3);<br>queue.push(4);<br>queue.pop();<br>queue.pop();<strong>注意此时的输出栈的操作</strong><br>queue.pop();<br>queue.empty();</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97%E7%89%88%E6%9C%AC2.gif" alt="232.用栈实现队列版本2"></p>
+<p>在push数据的时候，只要数据放进输入栈就好，<strong>但在pop的时候，操作就复杂一些，输出栈如果为空，就把进栈数据全部导入进来（注意是全部导入）</strong>，再从出栈弹出数据，如果输出栈不为空，则直接从出栈弹出数据就可以了。</p>
+<p>最后如何判断队列为空呢？<strong>如果进栈和出栈都为空的话，说明模拟的队列为空了。</strong></p>
+<p>在代码实现的时候，会发现pop() 和 peek()两个函数功能类似，代码实现上也是类似的，可以思考一下如何把代码抽象一下。</p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>可以看出peek()的实现，直接复用了pop()。</p>
+<p>再多说一些代码开发上的习惯问题，在工业级别代码开发中，最忌讳的就是 实现一个类似的函数，直接把代码粘过来改一改就完事了。</p>
+<p>这样的项目代码会越来越乱，<strong>一定要懂得复用，功能相近的函数要抽象出来，不要大量的复制粘贴，很容易出问题！（踩过坑的人自然懂）</strong></p>
+<p>工作中如果发现某一个功能自己要经常用，同事们可能也会用到，自己就花点时间把这个功能抽象成一个好用的函数或者工具类，不仅自己方便，也方面了同事们。</p>
+<p>同事们就会逐渐认可你的工作态度和工作能力，自己的口碑都是这么一点一点积累起来的！在同事圈里口碑起来了之后，你就发现自己走上了一个正循环，以后的升职加薪才少不了你！哈哈哈</p>
+<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyQueue</span> &#123;</span><br><span class="line"></span><br><span class="line">    Stack&lt;Integer&gt; stackIn;</span><br><span class="line">    Stack&lt;Integer&gt; stackOut;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">    	stackIn.push(val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">poll</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(!stackOut.isEmpty()) &#123;</span><br><span class="line">    		stackOut.pop();</span><br><span class="line">    	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    		<span class="keyword">while</span>(!stackIn.isEmpty()) &#123;</span><br><span class="line">    			stackOut.push(stackIn.pop());</span><br><span class="line">    		&#125;</span><br><span class="line">    		stackOut.pop();</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">empty</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">return</span> stackIn.isEmpty() &amp;&amp; stackOut.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">peek</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(!stackOut.isEmpty()) <span class="keyword">return</span> stackOut.peek();</span><br><span class="line">    	<span class="keyword">while</span>(!stackIn.isEmpty()) &#123;</span><br><span class="line">    			stackOut.push(stackIn.pop());</span><br><span class="line">    		&#125;</span><br><span class="line">    	<span class="keyword">return</span> stackOut.peek();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1696,18 +1696,6 @@
       </tags>
   </entry>
   <entry>
-    <title>反转字符串_字符串01</title>
-    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9707/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>栈</category>
-      </categories>
-      <tags>
-        <tag>栈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>删除_链表01</title>
     <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A801/</url>
     <content><![CDATA[<h1 id="删除-链表01"><a href="#删除-链表01" class="headerlink" title="删除_链表01"></a>删除_链表01</h1><h3 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203.移除链表元素"></a>203.移除链表元素</h3><p><a href="https://leetcode.cn/problems/remove-linked-list-elements/">力扣题目链接(opens new window)</a></p>
@@ -1746,6 +1734,47 @@
 <p>最后呢在题目中，return 头结点的时候，别忘了 <code>return dummyNode-&gt;next;</code>， 这才是新的头结点</p>
 <p>java:</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 添加虚节点方式</span></span><br><span class="line"><span class="comment"> * 时间复杂度 O(n)</span></span><br><span class="line"><span class="comment"> * 空间复杂度 O(1)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> val</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">removeElements</span><span class="params">(ListNode head, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>, head);</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> dummy;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>链表</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>反转字符串_字符串01</title>
+    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9707/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>栈</category>
+      </categories>
+      <tags>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两两交换链表中的节点_链表04</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A804/</url>
+    <content><![CDATA[<h1 id="两两交换链表中的节点-链表04"><a href="#两两交换链表中的节点-链表04" class="headerlink" title="两两交换链表中的节点_链表04"></a>两两交换链表中的节点_链表04</h1><h3 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24. 两两交换链表中的节点"></a>24. 两两交换链表中的节点</h3><p><a href="https://leetcode.cn/problems/swap-nodes-in-pairs/">力扣题目链接(opens new window)</a></p>
+<p>给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。</p>
+<p>你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9-%E9%A2%98%E6%84%8F.jpg" alt="24.两两交换链表中的节点-题意"></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这道题目正常模拟就可以了。</p>
+<p>建议使用虚拟头结点，这样会方便很多，要不然每次针对头结点（没有前一个指针指向头结点），还要单独处理。</p>
+<p>对虚拟头结点的操作，还不熟悉的话，可以看这篇<a href="https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html">链表：听说用虚拟头节点会方便很多？ (opens new window)</a>。</p>
+<p>接下来就是交换相邻两个元素了，<strong>此时一定要画图，不画图，操作多个指针很容易乱，而且要操作的先后顺序</strong></p>
+<p>初始时，cur指向虚拟头结点，然后进行如下三步：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B91.png" alt="24.两两交换链表中的节点1"></p>
+<p>操作之后，链表如下：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B92.png" alt="24.两两交换链表中的节点2"></p>
+<p>看这个可能就更直观一些了：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B93.png" alt="24.两两交换链表中的节点3"></p>
+<p>java代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> ListNode <span class="title function_">swapPairs</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">		<span class="type">ListNode</span> <span class="variable">dummpy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">		dummpy.next = head;</span><br><span class="line">		pre.next = head;</span><br><span class="line">		<span class="keyword">while</span>(pre.next!=<span class="literal">null</span> &amp;&amp; pre.next.next!=<span class="literal">null</span>) &#123;</span><br><span class="line">			<span class="type">ListNode</span> <span class="variable">tmp</span> <span class="operator">=</span> head.next.next;</span><br><span class="line">			pre.next = head.next;</span><br><span class="line">			pre.next.next = head;</span><br><span class="line">			head.next = tmp;</span><br><span class="line">			pre = head;</span><br><span class="line">			head = tmp;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> dummpy.next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1822,35 +1851,6 @@
 <p>最后，cur 指针已经指向了null，循环结束，链表也反转完毕了。 此时我们return pre指针就可以了，pre指针就指向了新的头结点。</p>
 <p>代码如下：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 双指针</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">prev</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">temp</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">            temp = cur.next;<span class="comment">// 保存下一个节点</span></span><br><span class="line">            cur.next = prev;</span><br><span class="line">            prev = cur;</span><br><span class="line">            cur = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> prev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>链表</category>
-      </categories>
-      <tags>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>两两交换链表中的节点_链表04</title>
-    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A804/</url>
-    <content><![CDATA[<h1 id="两两交换链表中的节点-链表04"><a href="#两两交换链表中的节点-链表04" class="headerlink" title="两两交换链表中的节点_链表04"></a>两两交换链表中的节点_链表04</h1><h3 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24. 两两交换链表中的节点"></a>24. 两两交换链表中的节点</h3><p><a href="https://leetcode.cn/problems/swap-nodes-in-pairs/">力扣题目链接(opens new window)</a></p>
-<p>给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。</p>
-<p>你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9-%E9%A2%98%E6%84%8F.jpg" alt="24.两两交换链表中的节点-题意"></p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>这道题目正常模拟就可以了。</p>
-<p>建议使用虚拟头结点，这样会方便很多，要不然每次针对头结点（没有前一个指针指向头结点），还要单独处理。</p>
-<p>对虚拟头结点的操作，还不熟悉的话，可以看这篇<a href="https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html">链表：听说用虚拟头节点会方便很多？ (opens new window)</a>。</p>
-<p>接下来就是交换相邻两个元素了，<strong>此时一定要画图，不画图，操作多个指针很容易乱，而且要操作的先后顺序</strong></p>
-<p>初始时，cur指向虚拟头结点，然后进行如下三步：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B91.png" alt="24.两两交换链表中的节点1"></p>
-<p>操作之后，链表如下：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B92.png" alt="24.两两交换链表中的节点2"></p>
-<p>看这个可能就更直观一些了：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/24.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B93.png" alt="24.两两交换链表中的节点3"></p>
-<p>java代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> ListNode <span class="title function_">swapPairs</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">		<span class="type">ListNode</span> <span class="variable">dummpy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">		dummpy.next = head;</span><br><span class="line">		pre.next = head;</span><br><span class="line">		<span class="keyword">while</span>(pre.next!=<span class="literal">null</span> &amp;&amp; pre.next.next!=<span class="literal">null</span>) &#123;</span><br><span class="line">			<span class="type">ListNode</span> <span class="variable">tmp</span> <span class="operator">=</span> head.next.next;</span><br><span class="line">			pre.next = head.next;</span><br><span class="line">			pre.next.next = head;</span><br><span class="line">			head.next = tmp;</span><br><span class="line">			pre = head;</span><br><span class="line">			head = tmp;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> dummpy.next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2135,12 +2135,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p>没有吃饭</p>
-]]></content>
-  </entry>
-  <entry>
     <title>微信小程序采集失败原因</title>
     <url>/2022/07/31/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%87%87%E9%9B%86%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/</url>
     <content><![CDATA[<h1 id="微信小程序采集失败原因"><a href="#微信小程序采集失败原因" class="headerlink" title="微信小程序采集失败原因"></a>微信小程序采集失败原因</h1><p>现在微信都更新到了7..0以上的版本，使用charles抓包工具已经无法再抓到接口的数据。原因如下：安卓系统 7.0 以下版本，不管微信任意版本，都会信任系统提供的证书<br>安卓系统 7.0 以上版本，微信 7.0 以下版本，微信会信任系统提供的证书<br>安卓系统 7.0 以上版本，微信 7.0 以上版本，微信只信任它自己配置的证书列表</p>
@@ -2151,6 +2145,12 @@
       <tags>
         <tag>数据采集</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p>没有吃饭</p>
+]]></content>
   </entry>
   <entry>
     <title>数据库操作SQL</title>
@@ -2187,18 +2187,6 @@
       </categories>
       <tags>
         <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构</title>
-    <url>/2022/06/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>算法简史</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -2255,6 +2243,18 @@
       </categories>
       <tags>
         <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构</title>
+    <url>/2022/06/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>算法简史</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -2473,40 +2473,6 @@
       </tags>
   </entry>
   <entry>
-    <title>英语口语11</title>
-    <url>/2022/07/22/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD11/</url>
-    <content><![CDATA[<h1 id="英语口语11"><a href="#英语口语11" class="headerlink" title="英语口语11"></a>英语口语11</h1><h3 id="一件令你悲伤的事"><a href="#一件令你悲伤的事" class="headerlink" title="一件令你悲伤的事:"></a>一件令你悲伤的事:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i lost my dog after a year of long battle,</span><br><span class="line">a year before i had been told that her liver was died and she had only 6 months,</span><br><span class="line">After my dog died, i didn&#x27;t know what to deal with myself</span><br><span class="line">and i couldn&#x27;t get myself together,</span><br><span class="line">i have this massive a pit of depression inside of me,</span><br><span class="line">...</span><br><span class="line">one day,i woke up,i was sitting there in my bed</span><br><span class="line">and i didn&#x27;t know what i was supposed to do next,</span><br><span class="line">it was like my brain had spilt in half,</span><br><span class="line">anyway, it took me three years to get over it</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*注*</strong></em><em><strong>*：*</strong></em></p>
-<p><em><strong>*两点。*</strong></em></p>
-<p><em><strong>*一，*</strong></em><em><strong>*情绪是很多话题的导火线，熟悉运用各种情绪的叙事，可以很快打开话题。*</strong></em></p>
-<p><em><strong>*比如悲伤的话题，可以衍生至：一件你不愿想起的事，一件你很难忘记的事，说说你的的宠物，*</strong></em></p>
-<p><em><strong>*二，*</strong></em><em><strong>*一件令你成长的事，一件令你感悟的事……*</strong></em></p>
-<p><em><strong>*这个语流我用了中英文对照，但不是翻译，而是意译，让大家体会一下叙述性语流的特点。*</strong></em></p>
-<h3 id="积极主动"><a href="#积极主动" class="headerlink" title="积极主动"></a>积极主动</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">being proactive,</span><br><span class="line">it means you take actions that be intented to cause changes</span><br><span class="line">rather than reacting to changes,</span><br><span class="line">like...</span><br><span class="line">if you want to sellproducts,</span><br><span class="line">instead of focusing on how people these days don&#x27;t appreciate good products,</span><br><span class="line">you focus on how can you improve your product so that your customers can&#x27;t live without it.</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*make actions that are intended to cause changes*</strong></em> <em><strong>*主动改变现状的行动*</strong></em></p>
-<p><em><strong>*rather than just reacting to change*</strong></em> <em><strong>*被动接受变化*</strong></em></p>
-<p><em><strong>*can’t live without it*</strong></em> <em><strong>*割舍不下*</strong></em></p>
-<p><em><strong>*注：场景化的运用，非常重要。*</strong></em></p>
-<p><em><strong>*proactive是一个实战性非常高的概念，而且天然具备极多的可扩展性。*</strong></em></p>
-<h3 id="方法灵活"><a href="#方法灵活" class="headerlink" title="方法灵活"></a>方法灵活</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Strategic thinkers take the time to plan out the best solution to a problem,</span><br><span class="line">so...</span><br><span class="line">rather than relying on a standard problem-solving method,</span><br><span class="line">they will try to take different approach to a problem,</span><br><span class="line">and deal with it in a more creative manner</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>*注：*</strong></em></p>
-<p><em><strong>*这是一个对我人生极其重要的语流。*</strong></em></p>
-<p><em><strong>*对我的影响至深。*</strong></em></p>
-<p><em><strong>*方法总比苦难多，至理名言。*</strong></em></p>
-<p><em><strong>*句式方面，rather than提前，后面接主句，非常地道的语流展现手法。*</strong></em></p>
-<p><em><strong>*后半部分的三个高质量词伙的运用，也非常方便串联式记忆。*</strong></em></p>
-]]></content>
-      <categories>
-        <category>口语</category>
-      </categories>
-      <tags>
-        <tag>英语口语</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>英语口语10</title>
     <url>/2022/07/21/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD10/</url>
     <content><![CDATA[<h1 id="英语口语10"><a href="#英语口语10" class="headerlink" title="英语口语10"></a>英语口语10</h1><h3 id="光阴似箭"><a href="#光阴似箭" class="headerlink" title="光阴似箭"></a>光阴似箭</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">time is the most valuable things on earth,</span><br><span class="line">we can&#x27;t afford to let it go by without maximizing it,</span><br><span class="line">because...</span><br><span class="line">it is one of the few things that can&#x27;t be measured in terms of money</span><br><span class="line">time never come back,when it&#x27;s gone,it&#x27;s gone</span><br></pre></td></tr></table></figure>
@@ -2581,6 +2547,40 @@
 <p><em><strong>*i will try to*</strong></em> <em><strong>*get into the state of flow of deep work early in the day*</strong></em></p>
 <p><em><strong>*while the rest of the world*</strong></em><em><strong>*&#x2F;*</strong></em> </p>
 <p><em><strong>*is asleep*</strong></em><em><strong>*.*</strong></em></p>
+]]></content>
+      <categories>
+        <category>口语</category>
+      </categories>
+      <tags>
+        <tag>英语口语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语口语11</title>
+    <url>/2022/07/22/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD11/</url>
+    <content><![CDATA[<h1 id="英语口语11"><a href="#英语口语11" class="headerlink" title="英语口语11"></a>英语口语11</h1><h3 id="一件令你悲伤的事"><a href="#一件令你悲伤的事" class="headerlink" title="一件令你悲伤的事:"></a>一件令你悲伤的事:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i lost my dog after a year of long battle,</span><br><span class="line">a year before i had been told that her liver was died and she had only 6 months,</span><br><span class="line">After my dog died, i didn&#x27;t know what to deal with myself</span><br><span class="line">and i couldn&#x27;t get myself together,</span><br><span class="line">i have this massive a pit of depression inside of me,</span><br><span class="line">...</span><br><span class="line">one day,i woke up,i was sitting there in my bed</span><br><span class="line">and i didn&#x27;t know what i was supposed to do next,</span><br><span class="line">it was like my brain had spilt in half,</span><br><span class="line">anyway, it took me three years to get over it</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注*</strong></em><em><strong>*：*</strong></em></p>
+<p><em><strong>*两点。*</strong></em></p>
+<p><em><strong>*一，*</strong></em><em><strong>*情绪是很多话题的导火线，熟悉运用各种情绪的叙事，可以很快打开话题。*</strong></em></p>
+<p><em><strong>*比如悲伤的话题，可以衍生至：一件你不愿想起的事，一件你很难忘记的事，说说你的的宠物，*</strong></em></p>
+<p><em><strong>*二，*</strong></em><em><strong>*一件令你成长的事，一件令你感悟的事……*</strong></em></p>
+<p><em><strong>*这个语流我用了中英文对照，但不是翻译，而是意译，让大家体会一下叙述性语流的特点。*</strong></em></p>
+<h3 id="积极主动"><a href="#积极主动" class="headerlink" title="积极主动"></a>积极主动</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">being proactive,</span><br><span class="line">it means you take actions that be intented to cause changes</span><br><span class="line">rather than reacting to changes,</span><br><span class="line">like...</span><br><span class="line">if you want to sellproducts,</span><br><span class="line">instead of focusing on how people these days don&#x27;t appreciate good products,</span><br><span class="line">you focus on how can you improve your product so that your customers can&#x27;t live without it.</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*make actions that are intended to cause changes*</strong></em> <em><strong>*主动改变现状的行动*</strong></em></p>
+<p><em><strong>*rather than just reacting to change*</strong></em> <em><strong>*被动接受变化*</strong></em></p>
+<p><em><strong>*can’t live without it*</strong></em> <em><strong>*割舍不下*</strong></em></p>
+<p><em><strong>*注：场景化的运用，非常重要。*</strong></em></p>
+<p><em><strong>*proactive是一个实战性非常高的概念，而且天然具备极多的可扩展性。*</strong></em></p>
+<h3 id="方法灵活"><a href="#方法灵活" class="headerlink" title="方法灵活"></a>方法灵活</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Strategic thinkers take the time to plan out the best solution to a problem,</span><br><span class="line">so...</span><br><span class="line">rather than relying on a standard problem-solving method,</span><br><span class="line">they will try to take different approach to a problem,</span><br><span class="line">and deal with it in a more creative manner</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>*注：*</strong></em></p>
+<p><em><strong>*这是一个对我人生极其重要的语流。*</strong></em></p>
+<p><em><strong>*对我的影响至深。*</strong></em></p>
+<p><em><strong>*方法总比苦难多，至理名言。*</strong></em></p>
+<p><em><strong>*句式方面，rather than提前，后面接主句，非常地道的语流展现手法。*</strong></em></p>
+<p><em><strong>*后半部分的三个高质量词伙的运用，也非常方便串联式记忆。*</strong></em></p>
 ]]></content>
       <categories>
         <category>口语</category>
