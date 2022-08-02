@@ -41,40 +41,6 @@
       </tags>
   </entry>
   <entry>
-    <title>安卓7.0以上添加Fiddler证书到系统根证书</title>
-    <url>/2022/07/31/OpenSSL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="安卓7-0以上添加Fiddler证书到系统根证书（模拟器）"><a href="#安卓7-0以上添加Fiddler证书到系统根证书（模拟器）" class="headerlink" title="安卓7.0以上添加Fiddler证书到系统根证书（模拟器）"></a>安卓7.0以上添加Fiddler证书到系统根证书（模拟器）</h1><p><a href="https://null119.lanzoul.com/iewv205n22ad">安装链接</a></p>
-<h2 id="1、cer证书转pem"><a href="#1、cer证书转pem" class="headerlink" title="1、cer证书转pem"></a>1、cer证书转pem</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openssl x509 -inform der -in FiddlerRoot.cer的目录 -out 同层目录/Fiddler.pem</span><br></pre></td></tr></table></figure>
-
-<h2 id="2、获取pem证书hash"><a href="#2、获取pem证书hash" class="headerlink" title="2、获取pem证书hash"></a>2、获取pem证书hash</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openssl x509 -subject_hash_old -in Fiddler.pem</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、将pem证书改名为hash-0"><a href="#3、将pem证书改名为hash-0" class="headerlink" title="3、将pem证书改名为hash.0"></a>3、将pem证书改名为hash.0</h3><h3 id="4、将证书上传到手机或模拟器"><a href="#4、将证书上传到手机或模拟器" class="headerlink" title="4、将证书上传到手机或模拟器"></a>4、将证书上传到手机或模拟器</h3><p><img src="https://s2.loli.net/2022/07/31/qwbx3ZUteK4ASr8.png" alt="Snipaste_2022-07-31_15-15-25.png"></p>
-]]></content>
-      <categories>
-        <category>安装教程</category>
-      </categories>
-      <tags>
-        <tag>安装教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Redis安装教程</title>
-    <url>/2022/07/21/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B(windows)/</url>
-    <content><![CDATA[<h1 id="Redis安装教程"><a href="#Redis安装教程" class="headerlink" title="Redis安装教程"></a>Redis安装教程</h1><p>[安装地址链接](<a href="https://github.com/microsoftarchive/redis/releases">Releases · microsoftarchive&#x2F;redis (github.com)</a>)</p>
-<p><img src="https://s2.loli.net/2022/07/21/b5dmoDWpJIgaKs7.png" alt="image-20220721233543796"></p>
-<p>安装好后放在：</p>
-<p><img src="https://s2.loli.net/2022/07/21/pqJP1uMBg5TaRDL.png" alt="image-20220721233710217"></p>
-<p>启动服务：点开redis-serve.exe 打开客户端点开redis-cli.exe</p>
-]]></content>
-      <categories>
-        <category>Redis</category>
-      </categories>
-      <tags>
-        <tag>安装教程</tag>
-        <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Redis命令大全</title>
     <url>/2022/07/04/Redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Redis常用命令"><a href="#Redis常用命令" class="headerlink" title="Redis常用命令"></a>Redis常用命令</h1><p>本文记录常用的Redis命令 方便以后复习使用</p>
@@ -123,21 +89,19 @@
       </tags>
   </entry>
   <entry>
-    <title>SMMS照片下载至压缩包</title>
-    <url>/2022/08/02/SMMS%E7%85%A7%E7%89%87%E4%B8%8B%E8%BD%BD%E8%87%B3%E5%8E%8B%E7%BC%A9%E5%8C%85/</url>
-    <content><![CDATA[<h1 id="SMMS照片下载至压缩包"><a href="#SMMS照片下载至压缩包" class="headerlink" title="SMMS照片下载至压缩包"></a>SMMS照片下载至压缩包</h1><p>进入下面的地址</p>
-<p><img src="https://s2.loli.net/2022/08/02/TgvbkMdXDUpWPqw.png" alt="image-20220802090045671"></p>
-<p>按F12，打开调式器，在控制台输入以下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*</span><br><span class="line"> * @?: *********************************************************************</span><br><span class="line"> * @Author: Weidows</span><br><span class="line"> * @Date: 2021-07-07 20:30:59</span><br><span class="line"> * @LastEditors: Weidows</span><br><span class="line"> * @LastEditTime: 2021-07-09 00:05:15</span><br><span class="line"> * @FilePath: \awesome-image-collector\implements\SM.MS-collector.js</span><br><span class="line"> * @Description:</span><br><span class="line"> * @!: *********************************************************************</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">(async () =&gt; &#123;</span><br><span class="line">  // 引入库函数</span><br><span class="line">  const jsZip = document.createElement(&quot;script&quot;),</span><br><span class="line">    collector = document.createElement(&quot;script&quot;);</span><br><span class="line">  jsZip.src = &quot;https://cdn.bootcdn.net/ajax/libs/jszip/3.5.0/jszip.min.js&quot;;</span><br><span class="line">  collector.src =</span><br><span class="line">    &quot;https://cdn.jsdelivr.net/gh/Weidows-projects/awesome-image-collector@master/dist/collector.min.js&quot;;</span><br><span class="line">  document</span><br><span class="line">    .getElementsByTagName(&quot;head&quot;)[0]</span><br><span class="line">    .appendChild(jsZip)</span><br><span class="line">    .appendChild(collector);</span><br><span class="line"></span><br><span class="line">  await Promise.all([</span><br><span class="line">    new Promise(resolve =&gt; jsZip.onload = () =&gt; window.JSZip &amp;&amp; resolve()),</span><br><span class="line">    new Promise(resolve =&gt; collector.onload = () =&gt; window.start &amp;&amp; resolve()),</span><br><span class="line">  ]);</span><br><span class="line">  smmsCollector();</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">// ======================== 添加样式 ========================</span><br><span class="line">function smmsCollector() &#123;</span><br><span class="line">  // 下载图片按钮 (不主动下载,按按钮时才下载)</span><br><span class="line">  let downloadButton = document.createElement(&quot;button&quot;);</span><br><span class="line">  downloadButton.type = &quot;button&quot;;</span><br><span class="line">  downloadButton.innerText = &quot;下载本页面图片&quot;;</span><br><span class="line">  downloadButton.style.width = &quot;100%&quot;;</span><br><span class="line">  downloadButton.addEventListener(&quot;click&quot;, function () &#123;</span><br><span class="line">    // 调用入口函数</span><br><span class="line">    start(document.getElementsByClassName(&quot;fancybox&quot;));</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // 全选CheckBox按钮</span><br><span class="line">  let deleteButton = document.createElement(&quot;button&quot;);</span><br><span class="line">  deleteButton.type = &quot;button&quot;;</span><br><span class="line">  deleteButton.innerHTML = &quot;全选CheckBox按钮&quot;;</span><br><span class="line">  deleteButton.style.width = &quot;100%&quot;;</span><br><span class="line">  deleteButton.addEventListener(&quot;click&quot;, function () &#123;</span><br><span class="line">    let checkBoxes = document.getElementsByClassName(&quot;filedelete&quot;);</span><br><span class="line">    for (const checkbox of checkBoxes) &#123;</span><br><span class="line">      checkbox.checked = !checkbox.checked;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // 创建标签</span><br><span class="line">  let downloadLi = document.createElement(&quot;li&quot;);</span><br><span class="line">  let deleteLi = document.createElement(&quot;li&quot;);</span><br><span class="line">  downloadLi.id = &quot;downloader&quot;;</span><br><span class="line">  deleteLi.id = &quot;deleter&quot;;</span><br><span class="line">  downloadLi.appendChild(downloadButton);</span><br><span class="line">  deleteLi.appendChild(deleteButton);</span><br><span class="line"></span><br><span class="line">  // 追加标签</span><br><span class="line">  if (document.getElementById(&quot;downloader&quot;) == null) &#123;</span><br><span class="line">    document</span><br><span class="line">      .getElementsByClassName(&quot;sidebar-menu tree&quot;)[0]</span><br><span class="line">      .appendChild(downloadLi);</span><br><span class="line">    document</span><br><span class="line">      .getElementsByClassName(&quot;sidebar-menu tree&quot;)[0]</span><br><span class="line">      .appendChild(deleteLi);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>此时页面显示：</p>
-<p><img src="https://s2.loli.net/2022/08/02/eWQDy4ldmNXxzvb.png" alt="image-20220802090338705"></p>
-<p>就可以了</p>
+    <title>Redis安装教程</title>
+    <url>/2022/07/21/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B(windows)/</url>
+    <content><![CDATA[<h1 id="Redis安装教程"><a href="#Redis安装教程" class="headerlink" title="Redis安装教程"></a>Redis安装教程</h1><p>[安装地址链接](<a href="https://github.com/microsoftarchive/redis/releases">Releases · microsoftarchive&#x2F;redis (github.com)</a>)</p>
+<p><img src="https://s2.loli.net/2022/07/21/b5dmoDWpJIgaKs7.png" alt="image-20220721233543796"></p>
+<p>安装好后放在：</p>
+<p><img src="https://s2.loli.net/2022/07/21/pqJP1uMBg5TaRDL.png" alt="image-20220721233710217"></p>
+<p>启动服务：点开redis-serve.exe 打开客户端点开redis-cli.exe</p>
 ]]></content>
       <categories>
-        <category>安装教程</category>
+        <category>Redis</category>
       </categories>
       <tags>
+        <tag>Redis</tag>
         <tag>安装教程</tag>
       </tags>
   </entry>
@@ -161,80 +125,39 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Python模块</title>
-    <url>/2022/08/01/python%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97/</url>
-    <content><![CDATA[<h1 id="Python模块"><a href="#Python模块" class="headerlink" title="Python模块"></a>Python模块</h1><h2 id="为什么需要模块？"><a href="#为什么需要模块？" class="headerlink" title="为什么需要模块？"></a>为什么需要模块？</h2><p>大多数应用项目往往具有功能要求多、性能要求高的特点，由此导致的结果是使得程序代码复杂而且庞大。当程序代码多达几百行、几千行甚至上万行时，为了加快开发进度、提高开发效率，需要团队协作、分工合作开发程序。如果缺少有效的组织方式，那么不仅使得协同开发难以做到，而且程序的调试将变得异常艰难，后期的维护和升级更加困难重重。这时候就需要模块化。</p>
-<h2 id="模块分类"><a href="#模块分类" class="headerlink" title="模块分类"></a>模块分类</h2><h3 id="1-大模块"><a href="#1-大模块" class="headerlink" title="1.大模块"></a>1.大模块</h3><p>大模块即“包（Package）”。<br>一个相对大型的程序通常包含多个文件，按照功能相近的原则，可将这些文件分组，每组包含若干个文件，每个组常被称为“包”。每个“包”即所谓的“大模块”。</p>
-<h3 id="2-中模块"><a href="#2-中模块" class="headerlink" title="2.中模块"></a>2.中模块</h3><p>中模块即一个文件。<br>为了提高代码的可维护性，可将项目中的所有自定义函数进行归类分组，以文件形式组织同类函数，因此，每个文件的功能相对单一，每个文件包含的代码相对较少。这对项目管理和代码的重复利用十分有利。多数计算机语言均支持类似的组织代码方式，Python也不例外。在Python中，一个.py文件常被称为一个模块（Module）</p>
-<h3 id="3-小模块"><a href="#3-小模块" class="headerlink" title="3.小模块"></a>3.小模块</h3><p>模块即一个函数。<br>函数也是模块化设计的产物，通过函数实现程序功能是模块化设计思想的一种很好的体现。一个模块文件通常是由若干个函数或类组成的。</p>
-<h2 id="关于模块的几个概念"><a href="#关于模块的几个概念" class="headerlink" title="关于模块的几个概念"></a>关于模块的几个概念</h2><p>模块具有层次性，因此模块又可被分为内置函数、内置模块、第三方模块和自定义模块。<br>内置函数是Python的标准函数，可被直接调用。<br>内置模块是Python的标准库，必须通过import语句引用后才可使用。内置模块文件默认安装在Python的“安装路径\Python\PythonXXX\lib”下，即安装在lib文件夹下。<br>第三方模块是指由第三方开发的、实现各种特定功能的模块，又被称为“第三方库”。数量众多的第三方库是Python优越性的重要体现。<br>自定义模块是指由开发者自行设计的模块</p>
-<h2 id="关于模块测试"><a href="#关于模块测试" class="headerlink" title="关于模块测试"></a>关于模块测试</h2><p>由if语句组织相关的测试代码，它的工作原理是：当运行模块文件本身时，Python解释器将特殊变量（内置全局变量）<strong>name__的值置为字符串__main__，因此__name</strong>&#x3D;&#x3D;’<strong>main</strong>‘成立；如果该模块被其他程序所引用，那么__name__的值会被置为引用它的程序文件名（不包括.py），此时，<strong>name</strong>&#x3D;&#x3D;’<strong>main</strong>‘不再成立，所以测试语句块不会被执行。因此，模块中的测试代码只用于测试模块本身的正确性，不会对引用它的模块造成影响。</p>
-<h2 id="引入模块的四种方式"><a href="#引入模块的四种方式" class="headerlink" title="引入模块的四种方式"></a>引入模块的四种方式</h2><h3 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h3><p>引用一个名为fibonacci的模块，该模块的文件名为fibonacci.py。<br>再如：<br>上述语句引用3个名为fibonacci、geometric、arithmetic的模块，3个模块对应的文件名为fibonacci.py、geometric.py和arithmetic.py。<br>由此可见，import可一次性导入多个模块，模块之间必须以“,”隔开。</p>
-<h3 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h3><p>形式如下：<br>由于别名往往比较简洁，因而引用模块中的对象和方法更加便捷。当采用此方式引用模块中的对象或方法时，必须使用别名。</p>
-<h3 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h3><p>引用模块的第三种方式<br>形式如下：<br>从模块中导入指定的函数、变量或类，可对导入的对象或方法（函数）指定别名以简化引用</p>
-<p>在这种方式下，引用模块中的对象或方法（函数）的形式必须是“模块.对象或方法的别名”，例如，geometric.geo1(2,3,6)。</p>
-<h3 id="第四种"><a href="#第四种" class="headerlink" title="第四种"></a>第四种</h3><p>导入模块中的所有对象和方法（函数）。“*”被称为“通配符”，意为全部、所有。<br>虽然方式四可一次性导入模块中的所有对象和方法（函数），但是通常不建议这么做，因为它极有可能引起命名冲突（Name Conflict），即该模块中的对象名或函数名与被导入的其他模块中的对象名或函数名重名，从而导致冲突。</p>
-<h2 id="模块是如何被找到并引用的"><a href="#模块是如何被找到并引用的" class="headerlink" title="模块是如何被找到并引用的"></a>模块是如何被找到并引用的</h2><p>sys.path通常由以下几部分组成：<br>（1）脚本文件所在的路径，即当前路径。<br>（2）PYTHONPATH系统变量设定的路径。<br>（3）默认安装路径。</p>
-<h3 id="动态修改sys-path"><a href="#动态修改sys-path" class="headerlink" title="动态修改sys.path"></a>动态修改sys.path</h3><p>通过sys.path.append(‘路径’)添加所需路径，它属于一种动态修改sys.path的方法。所谓“动态”，是指程序退出后，将删除添加的路径信息，恢复sys.path的内容</p>
-<h3 id="静态修改sys-path"><a href="#静态修改sys-path" class="headerlink" title="静态修改sys.path"></a>静态修改sys.path</h3><p>可通过以下两种方式静态修改sys.path：<br>· 在系统环境变量中新建变量PYTHONPATH，然后添加所需路径，即PYTHONPATH &#x3D;e:\myprj。<br>· 直接在Path系统环境变量中添加所需路径，即Path&#x3D;[各种路径]; e:\myprj，或者Path&#x3D;%PATH%; e:\myprj。前者表示在现有各种路径后添加所需路径，后者表示在Path变量现有值的基础上添加一项新的内容e:\myprj。上述两种方法均以“;”作为分隔符。<br>通过静态修改法添加的路径是静态的，永久有效</p>
-<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="同级目录文件"><a href="#同级目录文件" class="headerlink" title="同级目录文件"></a>同级目录文件</h3><p>目录结构：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">|-- love.py</span><br><span class="line">|-- me.py</span><br></pre></td></tr></table></figure>
+    <title>安卓7.0以上添加Fiddler证书到系统根证书</title>
+    <url>/2022/07/31/OpenSSL%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="安卓7-0以上添加Fiddler证书到系统根证书（模拟器）"><a href="#安卓7-0以上添加Fiddler证书到系统根证书（模拟器）" class="headerlink" title="安卓7.0以上添加Fiddler证书到系统根证书（模拟器）"></a>安卓7.0以上添加Fiddler证书到系统根证书（模拟器）</h1><p><a href="https://null119.lanzoul.com/iewv205n22ad">安装链接</a></p>
+<h2 id="1、cer证书转pem"><a href="#1、cer证书转pem" class="headerlink" title="1、cer证书转pem"></a>1、cer证书转pem</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openssl x509 -inform der -in FiddlerRoot.cer的目录 -out 同层目录/Fiddler.pem</span><br></pre></td></tr></table></figure>
 
-<p>me中引用：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import love</span><br><span class="line">love.min()</span><br></pre></td></tr></table></figure>
+<h2 id="2、获取pem证书hash"><a href="#2、获取pem证书hash" class="headerlink" title="2、获取pem证书hash"></a>2、获取pem证书hash</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openssl x509 -subject_hash_old -in Fiddler.pem</span><br></pre></td></tr></table></figure>
 
-<h3 id="子级目录文件"><a href="#子级目录文件" class="headerlink" title="子级目录文件"></a>子级目录文件</h3><p>目录结构：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">|-- yep</span><br><span class="line">	--fuck</span><br><span class="line">|-- me.py</span><br></pre></td></tr></table></figure>
-
-<p>me中引用：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from yep import fuck</span><br><span class="line">fuck.fuckyou()</span><br></pre></td></tr></table></figure>
-
+<h3 id="3、将pem证书改名为hash-0"><a href="#3、将pem证书改名为hash-0" class="headerlink" title="3、将pem证书改名为hash.0"></a>3、将pem证书改名为hash.0</h3><h3 id="4、将证书上传到手机或模拟器"><a href="#4、将证书上传到手机或模拟器" class="headerlink" title="4、将证书上传到手机或模拟器"></a>4、将证书上传到手机或模拟器</h3><p><img src="https://s2.loli.net/2022/07/31/qwbx3ZUteK4ASr8.png" alt="Snipaste_2022-07-31_15-15-25.png"></p>
 ]]></content>
       <categories>
-        <category>python基础</category>
+        <category>安装教程</category>
       </categories>
       <tags>
-        <tag>python基础</tag>
+        <tag>安装教程</tag>
       </tags>
   </entry>
   <entry>
-    <title>python面向对象基础</title>
-    <url>/2022/08/01/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="python面向对象基础"><a href="#python面向对象基础" class="headerlink" title="python面向对象基础"></a>python面向对象基础</h1><h2 id="init-方法"><a href="#init-方法" class="headerlink" title="init_()方法"></a><em>init</em>_()方法</h2><p><em>init</em><em>()方法又被称为“构造函数”，它有以下4个特性。<br>（1）该方法很特殊。init前后均有双下画线“__”，它的<u>第一个参数必须是“self”</u>，其意义同其他方法一样，而其他参数用于设置实例的属性，数量不限。该方法不能使用return语句。<br>（2）__init</em>_()方法可在类中的任何位置被定义。<br>（3）在由类创建一个新的实例时，该方法被自动调用一次。即每创建一个实例，该方法都会被调用一次。<br>（4）常用该方法定义实例的属性，但定义实例的属性不局限于该方法。换言之，在其他方法中同样可以定义实例的属性。</p>
-<h2 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h2><p>实例方法是类中定义的没有加任何装饰符的一般方法，即不加@classmethod和@staticmethod标记的方法。<strong>如果实例方法有n个形式参数，那么在由类调用时，实际参数必须为n个；而在由实例调用时，实际参数则只需要n-1个，因为第一个参数被系统默认为实例本身。由于这个规定，所以，如果实例方法是无参数函数，那么实例无法调用该方法，只有类可以调用它</strong>。因此，实例方法一般至少需要一个参数self，它代表类的对象（实例）</p>
-<h2 id="类方法及其装饰符——-classmethod"><a href="#类方法及其装饰符——-classmethod" class="headerlink" title="类方法及其装饰符——@classmethod"></a>类方法及其装饰符——@classmethod</h2><p>@classmethod是一个函数装饰符，用它装饰的方法不是实例方法，而是类方法。类方法只能被类调用，而不能被实例调用，常被用于方法重载。<br>类方法的第一个参数必须是cls，表示类本身；而实例方法的第一个参数是self，表示该类的一个实例。当类由子类继承时，在调用类方法时，传入的类变量cls的实际参数是子类，而非父类。对于类方法，既可由类调用，也可由类的实例调用。<br>假设类方法有n个形式参数，如果由类调用它，则需要传递的实际参数只能为n-1个，第一个参数默认为类本身；如果由实例调用它，则需要传递的实际参数为n个。</p>
-<h2 id="静态方法及其装饰符——-staticmethod"><a href="#静态方法及其装饰符——-staticmethod" class="headerlink" title="静态方法及其装饰符——@staticmethod"></a>静态方法及其装饰符——@staticmethod</h2><p>@staticmethod也是一个函数装饰符，用它装饰的方法是静态方法。静态方法属于类方法，不是实例方法，可将它理解成全局函数，因此可被类或类的实例调用。在调用时，它不会被隐式地传入任何参数。也就是说，静态方法可以没有任何参数。例如，举例5中的静态方法show_help()，它在程序中的作用是实现一个类的简单帮助功能。<br>由于静态方法无内定的隐性参数，所以，调用静态方法时的实际参数个数必须与形式参数个数严格一致。<br>为什么要引入静态方法？有时候需要将一组逻辑上相关的函数放在一个类里，便于组织代码。例如，可将类中被其他多个方法调用的通用方法定义为静态方法。一般而言，如果一个方法不需要使用self参数，它就适合被定义为静态方法。</p>
-<h2 id="构造函数的继承"><a href="#构造函数的继承" class="headerlink" title="构造函数的继承"></a>构造函数的继承</h2><p>由类的定义可知，如果要向实例传递参数，则必须定义和使用“构造函数”。由此可见构造函数的重要性！<br>那么，构造函数能否被继承、该如何被继承，子类又如何定义自己的属性呢？<br>解决上述问题的办法是，在定义子类的构造函数中显式地调用父类的构造函数，一般来说有两种方式。</p>
-<h3 id="1-继承构造函数的第一种方式"><a href="#1-继承构造函数的第一种方式" class="headerlink" title="1.继承构造函数的第一种方式"></a>1.继承构造函数的第一种方式</h3><p>第一种方式是经典方式，它的形式如下：<br>其中，括号内的第一个参数必须为self ，余下的参数即父类的实例属性。例如，Animal.<strong>init</strong>(self,name,sex,classtype)。<br>要特别提醒的是，当以这种方式调用时，第一个参数self必须被显式传递，它不会被隐式传递，即必须为self，如果被省略，则将报错；其余参数则为父类的实例属性，直接复制父类的实例属性即可。<br>此方式既可被用在单继承场合，也可被用在多继承场合。</p>
-<h3 id="2-继承构造函数的第二种方式"><a href="#2-继承构造函数的第二种方式" class="headerlink" title="2.继承构造函数的第二种方式"></a>2.继承构造函数的第二种方式</h3><p>第二种方式为新式方式，它的形式如下：<br>其中，内置函数super(子类,self)用于表示子类的父类，它有两个参数——子类与self；而__init__(参数1,参数2, )为构造函数，与第一种方式不同的是，它不需要self参数，所有参数均为父类的实例属性。<br>例如，super(Bird,self).<strong>init</strong>(name,sex,classtype)，此处，<strong>super()的第一个参数是子类，也就是正在定义构造函数的类；第二个参数必须为self，它代表子类的对象。很显然，此方式过于烦琐</strong>，所幸的是，Python 3将上述方式改为更简洁的形式，但两者完全等效，如下：<br>换言之，Python 3的第二种方式采用以下形式：<br>以下简单地介绍内置函数super()的语法形式。<br>其中，<br>· type：类，是一个子类。<br>· object-or-type：一般为self。</p>
-<h3 id="3-关于继承的一个重要特性"><a href="#3-关于继承的一个重要特性" class="headerlink" title="3.关于继承的一个重要特性"></a>3.关于继承的一个重要特性</h3><p>如果只是简单地在<strong>子类中定义一个构造函数而不调用父类的构造函数，那么此方式被称为“重构”</strong>。以此方式定义的子类通常无法继承父类的属性和方法。<strong>但是，如果子类不引用父类的任何属性，那么父类的方法可被继承和引用</strong>。<br>举例25：<br>运行上述程序后，得到如下结果：<br>由举例25可知，虽然子类并没有继承父类的构造函数，但由于父类的方法describe()不引用任何属性，因此它可被子类对象b1所调用。<br>综上所述，在定义子类的构造函数时，一般应继承父类的构造函数，这样子类也能拥有父类的所有属性和方法。<br>子类的构造函数继承父类的构造函数的原理（执行过程）如下：<br>实例化对象a → a调用子类__init__() → 子类__init__()继承父类__init__() → 调用父类__init__()。<br>再举一个单继承的例子，以对类的继承问题进行归纳。通过该例，可进一步理解继承的概念及其有关要点。</p>
+    <title>SMMS照片下载至压缩包</title>
+    <url>/2022/08/02/SMMS%E7%85%A7%E7%89%87%E4%B8%8B%E8%BD%BD%E8%87%B3%E5%8E%8B%E7%BC%A9%E5%8C%85/</url>
+    <content><![CDATA[<h1 id="SMMS照片下载至压缩包"><a href="#SMMS照片下载至压缩包" class="headerlink" title="SMMS照片下载至压缩包"></a>SMMS照片下载至压缩包</h1><p>进入下面的地址</p>
+<p><img src="https://s2.loli.net/2022/08/02/TgvbkMdXDUpWPqw.png" alt="image-20220802090045671"></p>
+<p>按F12，打开调式器，在控制台输入以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*</span><br><span class="line"> * @?: *********************************************************************</span><br><span class="line"> * @Author: Weidows</span><br><span class="line"> * @Date: 2021-07-07 20:30:59</span><br><span class="line"> * @LastEditors: Weidows</span><br><span class="line"> * @LastEditTime: 2021-07-09 00:05:15</span><br><span class="line"> * @FilePath: \awesome-image-collector\implements\SM.MS-collector.js</span><br><span class="line"> * @Description:</span><br><span class="line"> * @!: *********************************************************************</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">(async () =&gt; &#123;</span><br><span class="line">  // 引入库函数</span><br><span class="line">  const jsZip = document.createElement(&quot;script&quot;),</span><br><span class="line">    collector = document.createElement(&quot;script&quot;);</span><br><span class="line">  jsZip.src = &quot;https://cdn.bootcdn.net/ajax/libs/jszip/3.5.0/jszip.min.js&quot;;</span><br><span class="line">  collector.src =</span><br><span class="line">    &quot;https://cdn.jsdelivr.net/gh/Weidows-projects/awesome-image-collector@master/dist/collector.min.js&quot;;</span><br><span class="line">  document</span><br><span class="line">    .getElementsByTagName(&quot;head&quot;)[0]</span><br><span class="line">    .appendChild(jsZip)</span><br><span class="line">    .appendChild(collector);</span><br><span class="line"></span><br><span class="line">  await Promise.all([</span><br><span class="line">    new Promise(resolve =&gt; jsZip.onload = () =&gt; window.JSZip &amp;&amp; resolve()),</span><br><span class="line">    new Promise(resolve =&gt; collector.onload = () =&gt; window.start &amp;&amp; resolve()),</span><br><span class="line">  ]);</span><br><span class="line">  smmsCollector();</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">// ======================== 添加样式 ========================</span><br><span class="line">function smmsCollector() &#123;</span><br><span class="line">  // 下载图片按钮 (不主动下载,按按钮时才下载)</span><br><span class="line">  let downloadButton = document.createElement(&quot;button&quot;);</span><br><span class="line">  downloadButton.type = &quot;button&quot;;</span><br><span class="line">  downloadButton.innerText = &quot;下载本页面图片&quot;;</span><br><span class="line">  downloadButton.style.width = &quot;100%&quot;;</span><br><span class="line">  downloadButton.addEventListener(&quot;click&quot;, function () &#123;</span><br><span class="line">    // 调用入口函数</span><br><span class="line">    start(document.getElementsByClassName(&quot;fancybox&quot;));</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // 全选CheckBox按钮</span><br><span class="line">  let deleteButton = document.createElement(&quot;button&quot;);</span><br><span class="line">  deleteButton.type = &quot;button&quot;;</span><br><span class="line">  deleteButton.innerHTML = &quot;全选CheckBox按钮&quot;;</span><br><span class="line">  deleteButton.style.width = &quot;100%&quot;;</span><br><span class="line">  deleteButton.addEventListener(&quot;click&quot;, function () &#123;</span><br><span class="line">    let checkBoxes = document.getElementsByClassName(&quot;filedelete&quot;);</span><br><span class="line">    for (const checkbox of checkBoxes) &#123;</span><br><span class="line">      checkbox.checked = !checkbox.checked;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // 创建标签</span><br><span class="line">  let downloadLi = document.createElement(&quot;li&quot;);</span><br><span class="line">  let deleteLi = document.createElement(&quot;li&quot;);</span><br><span class="line">  downloadLi.id = &quot;downloader&quot;;</span><br><span class="line">  deleteLi.id = &quot;deleter&quot;;</span><br><span class="line">  downloadLi.appendChild(downloadButton);</span><br><span class="line">  deleteLi.appendChild(deleteButton);</span><br><span class="line"></span><br><span class="line">  // 追加标签</span><br><span class="line">  if (document.getElementById(&quot;downloader&quot;) == null) &#123;</span><br><span class="line">    document</span><br><span class="line">      .getElementsByClassName(&quot;sidebar-menu tree&quot;)[0]</span><br><span class="line">      .appendChild(downloadLi);</span><br><span class="line">    document</span><br><span class="line">      .getElementsByClassName(&quot;sidebar-menu tree&quot;)[0]</span><br><span class="line">      .appendChild(deleteLi);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>此时页面显示：</p>
+<p><img src="https://s2.loli.net/2022/08/02/eWQDy4ldmNXxzvb.png" alt="image-20220802090338705"></p>
+<p>就可以了</p>
 ]]></content>
       <categories>
-        <category>python基础</category>
+        <category>安装教程</category>
       </categories>
       <tags>
-        <tag>python基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python文件基础</title>
-    <url>/2022/08/01/python%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="Python文件基础"><a href="#Python文件基础" class="headerlink" title="Python文件基础"></a>Python文件基础</h1><h2 id="关于文件的几点注意事项"><a href="#关于文件的几点注意事项" class="headerlink" title="关于文件的几点注意事项"></a>关于文件的几点注意事项</h2><h3 id="1-文件对象属性"><a href="#1-文件对象属性" class="headerlink" title="1.文件对象属性"></a>1.文件对象属性</h3><p>打开一个文件后，得到一个文件对象fp，通过它可以获得与该文件相关的各种信息。以下是与文件对象相关的所有属性。<br>· fp.closed：如果文件已被关闭，则返回True；否则返回False。<br>· fp.mode：打开文件的模式。<br>· fp.name：得到已被打开的文件的文件名。</p>
-<h3 id="2-列表中出现字符串“-ufeff”及其解决方案"><a href="#2-列表中出现字符串“-ufeff”及其解决方案" class="headerlink" title="2.列表中出现字符串“\ufeff”及其解决方案"></a>2.列表中出现字符串“\ufeff”及其解决方案</h3><p>举例36：\ufeff问题及其解决办法。<br>上述程序打开一个示例文件，但从结果中发现，在读取的内容中出现了\ufeff，而真正的文件内容是从“你好”开始的。<br>解决办法如下：<br>从上述改进后的程序中可以看出，解决\ufeff问题的关键在于通过utf-8-sig编码格式对字符串进行转码：decode(‘utf-8-sig’)。<br>由此得到启发，如果在打开文件时直接采用utf-8-sig编码格式，那么能不能解决这个乱码问题？答案是令人惊喜的，请看：<br>真的解决了！这是为什么呢？<br>实际上，需要从以下两种编码格式的本质加以阐述。<br>（1）UTF-8编码。它以字节为编码单元，字节顺序在所有系统中都相同，不存在字节序的问题，因此它并不需要字节序标记（Byte Order Mark，BOM）。<br>（2）utf-8-sig编码。<strong>它是一种带BOM的UTF-8编码格式</strong>，存在字节序的问题，必须带BOM以标识字节序，而BOM即字符U+FEFF。<strong>从Unicode 3.2开始，U+FEFF只能出现在字节流的开头</strong>，只能用于标识字节序。由此可知，列表中的字符串“\ufeff”并不是乱码，而是由于编码格式不一致才出现的。</p>
-<h2 id="利用Pygal模块对JSON格式的数据进行可视化"><a href="#利用Pygal模块对JSON格式的数据进行可视化" class="headerlink" title="利用Pygal模块对JSON格式的数据进行可视化"></a>利用Pygal模块对JSON格式的数据进行可视化</h2><p>[参考文档](<a href="https://zhuanlan.zhihu.com/p/341450079">Pygal，可导出矢量图的Python可视化利器 - 知乎 (zhihu.com)</a>)</p>
-<h3 id="安装并导入Pygal"><a href="#安装并导入Pygal" class="headerlink" title="安装并导入Pygal"></a>安装并导入Pygal</h3><p>使用pip或者conda进行安装，在命令行输入：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install pygal</span><br></pre></td></tr></table></figure>
-
-<h3 id="雷达图"><a href="#雷达图" class="headerlink" title="雷达图"></a>雷达图</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">radar_chart = pygal.Radar()</span><br><span class="line">radar_chart.title = <span class="string">&#x27;V8 benchmark results&#x27;</span></span><br><span class="line">radar_chart.x_labels = [<span class="string">&#x27;Richards&#x27;</span>, <span class="string">&#x27;DeltaBlue&#x27;</span>, <span class="string">&#x27;Crypto&#x27;</span>, <span class="string">&#x27;RayTrace&#x27;</span>, <span class="string">&#x27;EarleyBoyer&#x27;</span>, <span class="string">&#x27;RegExp&#x27;</span>, <span class="string">&#x27;Splay&#x27;</span>, <span class="string">&#x27;NavierStokes&#x27;</span>]</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Chrome&#x27;</span>, [<span class="number">6395</span>, <span class="number">8212</span>, <span class="number">7520</span>, <span class="number">7218</span>, <span class="number">12464</span>, <span class="number">1660</span>, <span class="number">2123</span>, <span class="number">8607</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Firefox&#x27;</span>, [<span class="number">7473</span>, <span class="number">8099</span>, <span class="number">11700</span>, <span class="number">2651</span>, <span class="number">6361</span>, <span class="number">1044</span>, <span class="number">3797</span>, <span class="number">9450</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Opera&#x27;</span>, [<span class="number">3472</span>, <span class="number">2933</span>, <span class="number">4203</span>, <span class="number">5229</span>, <span class="number">5810</span>, <span class="number">1828</span>, <span class="number">9013</span>, <span class="number">4669</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;IE&#x27;</span>, [<span class="number">43</span>, <span class="number">41</span>, <span class="number">59</span>, <span class="number">79</span>, <span class="number">144</span>, <span class="number">136</span>, <span class="number">34</span>, <span class="number">102</span>])</span><br><span class="line">radar_chart.render()</span><br></pre></td></tr></table></figure>
-
-<p>效果如下：</p>
-<p><img src="https://s2.loli.net/2022/08/01/zxv9W8fr71P3ew6.png" alt="image-20220801102051712"></p>
-]]></content>
-      <categories>
-        <category>python基础</category>
-      </categories>
-      <tags>
-        <tag>python基础</tag>
+        <tag>安装教程</tag>
       </tags>
   </entry>
   <entry>
@@ -299,6 +222,83 @@
 <p>在 hexo 的根目录创建一个文件，并把主题目录的内容复制到 去。 （ 注意： 复制的是主题的 _config.yml ，而不是 hexo 的 _config.yml_config.butterfly.yml_config.yml_config.butterfly.yml)</p>
 <p>注意： 不要把主题目录的 删掉_config.yml</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Python文件基础</title>
+    <url>/2022/08/01/python%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="Python文件基础"><a href="#Python文件基础" class="headerlink" title="Python文件基础"></a>Python文件基础</h1><h2 id="关于文件的几点注意事项"><a href="#关于文件的几点注意事项" class="headerlink" title="关于文件的几点注意事项"></a>关于文件的几点注意事项</h2><h3 id="1-文件对象属性"><a href="#1-文件对象属性" class="headerlink" title="1.文件对象属性"></a>1.文件对象属性</h3><p>打开一个文件后，得到一个文件对象fp，通过它可以获得与该文件相关的各种信息。以下是与文件对象相关的所有属性。<br>· fp.closed：如果文件已被关闭，则返回True；否则返回False。<br>· fp.mode：打开文件的模式。<br>· fp.name：得到已被打开的文件的文件名。</p>
+<h3 id="2-列表中出现字符串“-ufeff”及其解决方案"><a href="#2-列表中出现字符串“-ufeff”及其解决方案" class="headerlink" title="2.列表中出现字符串“\ufeff”及其解决方案"></a>2.列表中出现字符串“\ufeff”及其解决方案</h3><p>举例36：\ufeff问题及其解决办法。<br>上述程序打开一个示例文件，但从结果中发现，在读取的内容中出现了\ufeff，而真正的文件内容是从“你好”开始的。<br>解决办法如下：<br>从上述改进后的程序中可以看出，解决\ufeff问题的关键在于通过utf-8-sig编码格式对字符串进行转码：decode(‘utf-8-sig’)。<br>由此得到启发，如果在打开文件时直接采用utf-8-sig编码格式，那么能不能解决这个乱码问题？答案是令人惊喜的，请看：<br>真的解决了！这是为什么呢？<br>实际上，需要从以下两种编码格式的本质加以阐述。<br>（1）UTF-8编码。它以字节为编码单元，字节顺序在所有系统中都相同，不存在字节序的问题，因此它并不需要字节序标记（Byte Order Mark，BOM）。<br>（2）utf-8-sig编码。<strong>它是一种带BOM的UTF-8编码格式</strong>，存在字节序的问题，必须带BOM以标识字节序，而BOM即字符U+FEFF。<strong>从Unicode 3.2开始，U+FEFF只能出现在字节流的开头</strong>，只能用于标识字节序。由此可知，列表中的字符串“\ufeff”并不是乱码，而是由于编码格式不一致才出现的。</p>
+<h2 id="利用Pygal模块对JSON格式的数据进行可视化"><a href="#利用Pygal模块对JSON格式的数据进行可视化" class="headerlink" title="利用Pygal模块对JSON格式的数据进行可视化"></a>利用Pygal模块对JSON格式的数据进行可视化</h2><p>[参考文档](<a href="https://zhuanlan.zhihu.com/p/341450079">Pygal，可导出矢量图的Python可视化利器 - 知乎 (zhihu.com)</a>)</p>
+<h3 id="安装并导入Pygal"><a href="#安装并导入Pygal" class="headerlink" title="安装并导入Pygal"></a>安装并导入Pygal</h3><p>使用pip或者conda进行安装，在命令行输入：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install pygal</span><br></pre></td></tr></table></figure>
+
+<h3 id="雷达图"><a href="#雷达图" class="headerlink" title="雷达图"></a>雷达图</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">radar_chart = pygal.Radar()</span><br><span class="line">radar_chart.title = <span class="string">&#x27;V8 benchmark results&#x27;</span></span><br><span class="line">radar_chart.x_labels = [<span class="string">&#x27;Richards&#x27;</span>, <span class="string">&#x27;DeltaBlue&#x27;</span>, <span class="string">&#x27;Crypto&#x27;</span>, <span class="string">&#x27;RayTrace&#x27;</span>, <span class="string">&#x27;EarleyBoyer&#x27;</span>, <span class="string">&#x27;RegExp&#x27;</span>, <span class="string">&#x27;Splay&#x27;</span>, <span class="string">&#x27;NavierStokes&#x27;</span>]</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Chrome&#x27;</span>, [<span class="number">6395</span>, <span class="number">8212</span>, <span class="number">7520</span>, <span class="number">7218</span>, <span class="number">12464</span>, <span class="number">1660</span>, <span class="number">2123</span>, <span class="number">8607</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Firefox&#x27;</span>, [<span class="number">7473</span>, <span class="number">8099</span>, <span class="number">11700</span>, <span class="number">2651</span>, <span class="number">6361</span>, <span class="number">1044</span>, <span class="number">3797</span>, <span class="number">9450</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Opera&#x27;</span>, [<span class="number">3472</span>, <span class="number">2933</span>, <span class="number">4203</span>, <span class="number">5229</span>, <span class="number">5810</span>, <span class="number">1828</span>, <span class="number">9013</span>, <span class="number">4669</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;IE&#x27;</span>, [<span class="number">43</span>, <span class="number">41</span>, <span class="number">59</span>, <span class="number">79</span>, <span class="number">144</span>, <span class="number">136</span>, <span class="number">34</span>, <span class="number">102</span>])</span><br><span class="line">radar_chart.render()</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<p><img src="https://s2.loli.net/2022/08/01/zxv9W8fr71P3ew6.png" alt="image-20220801102051712"></p>
+]]></content>
+      <categories>
+        <category>python基础</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python模块</title>
+    <url>/2022/08/01/python%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97/</url>
+    <content><![CDATA[<h1 id="Python模块"><a href="#Python模块" class="headerlink" title="Python模块"></a>Python模块</h1><h2 id="为什么需要模块？"><a href="#为什么需要模块？" class="headerlink" title="为什么需要模块？"></a>为什么需要模块？</h2><p>大多数应用项目往往具有功能要求多、性能要求高的特点，由此导致的结果是使得程序代码复杂而且庞大。当程序代码多达几百行、几千行甚至上万行时，为了加快开发进度、提高开发效率，需要团队协作、分工合作开发程序。如果缺少有效的组织方式，那么不仅使得协同开发难以做到，而且程序的调试将变得异常艰难，后期的维护和升级更加困难重重。这时候就需要模块化。</p>
+<h2 id="模块分类"><a href="#模块分类" class="headerlink" title="模块分类"></a>模块分类</h2><h3 id="1-大模块"><a href="#1-大模块" class="headerlink" title="1.大模块"></a>1.大模块</h3><p>大模块即“包（Package）”。<br>一个相对大型的程序通常包含多个文件，按照功能相近的原则，可将这些文件分组，每组包含若干个文件，每个组常被称为“包”。每个“包”即所谓的“大模块”。</p>
+<h3 id="2-中模块"><a href="#2-中模块" class="headerlink" title="2.中模块"></a>2.中模块</h3><p>中模块即一个文件。<br>为了提高代码的可维护性，可将项目中的所有自定义函数进行归类分组，以文件形式组织同类函数，因此，每个文件的功能相对单一，每个文件包含的代码相对较少。这对项目管理和代码的重复利用十分有利。多数计算机语言均支持类似的组织代码方式，Python也不例外。在Python中，一个.py文件常被称为一个模块（Module）</p>
+<h3 id="3-小模块"><a href="#3-小模块" class="headerlink" title="3.小模块"></a>3.小模块</h3><p>模块即一个函数。<br>函数也是模块化设计的产物，通过函数实现程序功能是模块化设计思想的一种很好的体现。一个模块文件通常是由若干个函数或类组成的。</p>
+<h2 id="关于模块的几个概念"><a href="#关于模块的几个概念" class="headerlink" title="关于模块的几个概念"></a>关于模块的几个概念</h2><p>模块具有层次性，因此模块又可被分为内置函数、内置模块、第三方模块和自定义模块。<br>内置函数是Python的标准函数，可被直接调用。<br>内置模块是Python的标准库，必须通过import语句引用后才可使用。内置模块文件默认安装在Python的“安装路径\Python\PythonXXX\lib”下，即安装在lib文件夹下。<br>第三方模块是指由第三方开发的、实现各种特定功能的模块，又被称为“第三方库”。数量众多的第三方库是Python优越性的重要体现。<br>自定义模块是指由开发者自行设计的模块</p>
+<h2 id="关于模块测试"><a href="#关于模块测试" class="headerlink" title="关于模块测试"></a>关于模块测试</h2><p>由if语句组织相关的测试代码，它的工作原理是：当运行模块文件本身时，Python解释器将特殊变量（内置全局变量）<strong>name__的值置为字符串__main__，因此__name</strong>&#x3D;&#x3D;’<strong>main</strong>‘成立；如果该模块被其他程序所引用，那么__name__的值会被置为引用它的程序文件名（不包括.py），此时，<strong>name</strong>&#x3D;&#x3D;’<strong>main</strong>‘不再成立，所以测试语句块不会被执行。因此，模块中的测试代码只用于测试模块本身的正确性，不会对引用它的模块造成影响。</p>
+<h2 id="引入模块的四种方式"><a href="#引入模块的四种方式" class="headerlink" title="引入模块的四种方式"></a>引入模块的四种方式</h2><h3 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h3><p>引用一个名为fibonacci的模块，该模块的文件名为fibonacci.py。<br>再如：<br>上述语句引用3个名为fibonacci、geometric、arithmetic的模块，3个模块对应的文件名为fibonacci.py、geometric.py和arithmetic.py。<br>由此可见，import可一次性导入多个模块，模块之间必须以“,”隔开。</p>
+<h3 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h3><p>形式如下：<br>由于别名往往比较简洁，因而引用模块中的对象和方法更加便捷。当采用此方式引用模块中的对象或方法时，必须使用别名。</p>
+<h3 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h3><p>引用模块的第三种方式<br>形式如下：<br>从模块中导入指定的函数、变量或类，可对导入的对象或方法（函数）指定别名以简化引用</p>
+<p>在这种方式下，引用模块中的对象或方法（函数）的形式必须是“模块.对象或方法的别名”，例如，geometric.geo1(2,3,6)。</p>
+<h3 id="第四种"><a href="#第四种" class="headerlink" title="第四种"></a>第四种</h3><p>导入模块中的所有对象和方法（函数）。“*”被称为“通配符”，意为全部、所有。<br>虽然方式四可一次性导入模块中的所有对象和方法（函数），但是通常不建议这么做，因为它极有可能引起命名冲突（Name Conflict），即该模块中的对象名或函数名与被导入的其他模块中的对象名或函数名重名，从而导致冲突。</p>
+<h2 id="模块是如何被找到并引用的"><a href="#模块是如何被找到并引用的" class="headerlink" title="模块是如何被找到并引用的"></a>模块是如何被找到并引用的</h2><p>sys.path通常由以下几部分组成：<br>（1）脚本文件所在的路径，即当前路径。<br>（2）PYTHONPATH系统变量设定的路径。<br>（3）默认安装路径。</p>
+<h3 id="动态修改sys-path"><a href="#动态修改sys-path" class="headerlink" title="动态修改sys.path"></a>动态修改sys.path</h3><p>通过sys.path.append(‘路径’)添加所需路径，它属于一种动态修改sys.path的方法。所谓“动态”，是指程序退出后，将删除添加的路径信息，恢复sys.path的内容</p>
+<h3 id="静态修改sys-path"><a href="#静态修改sys-path" class="headerlink" title="静态修改sys.path"></a>静态修改sys.path</h3><p>可通过以下两种方式静态修改sys.path：<br>· 在系统环境变量中新建变量PYTHONPATH，然后添加所需路径，即PYTHONPATH &#x3D;e:\myprj。<br>· 直接在Path系统环境变量中添加所需路径，即Path&#x3D;[各种路径]; e:\myprj，或者Path&#x3D;%PATH%; e:\myprj。前者表示在现有各种路径后添加所需路径，后者表示在Path变量现有值的基础上添加一项新的内容e:\myprj。上述两种方法均以“;”作为分隔符。<br>通过静态修改法添加的路径是静态的，永久有效</p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="同级目录文件"><a href="#同级目录文件" class="headerlink" title="同级目录文件"></a>同级目录文件</h3><p>目录结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">|-- love.py</span><br><span class="line">|-- me.py</span><br></pre></td></tr></table></figure>
+
+<p>me中引用：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import love</span><br><span class="line">love.min()</span><br></pre></td></tr></table></figure>
+
+<h3 id="子级目录文件"><a href="#子级目录文件" class="headerlink" title="子级目录文件"></a>子级目录文件</h3><p>目录结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">|-- yep</span><br><span class="line">	--fuck</span><br><span class="line">|-- me.py</span><br></pre></td></tr></table></figure>
+
+<p>me中引用：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from yep import fuck</span><br><span class="line">fuck.fuckyou()</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python基础</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python面向对象基础</title>
+    <url>/2022/08/01/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="python面向对象基础"><a href="#python面向对象基础" class="headerlink" title="python面向对象基础"></a>python面向对象基础</h1><h2 id="init-方法"><a href="#init-方法" class="headerlink" title="init_()方法"></a><em>init</em>_()方法</h2><p><em>init</em><em>()方法又被称为“构造函数”，它有以下4个特性。<br>（1）该方法很特殊。init前后均有双下画线“__”，它的<u>第一个参数必须是“self”</u>，其意义同其他方法一样，而其他参数用于设置实例的属性，数量不限。该方法不能使用return语句。<br>（2）__init</em>_()方法可在类中的任何位置被定义。<br>（3）在由类创建一个新的实例时，该方法被自动调用一次。即每创建一个实例，该方法都会被调用一次。<br>（4）常用该方法定义实例的属性，但定义实例的属性不局限于该方法。换言之，在其他方法中同样可以定义实例的属性。</p>
+<h2 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h2><p>实例方法是类中定义的没有加任何装饰符的一般方法，即不加@classmethod和@staticmethod标记的方法。<strong>如果实例方法有n个形式参数，那么在由类调用时，实际参数必须为n个；而在由实例调用时，实际参数则只需要n-1个，因为第一个参数被系统默认为实例本身。由于这个规定，所以，如果实例方法是无参数函数，那么实例无法调用该方法，只有类可以调用它</strong>。因此，实例方法一般至少需要一个参数self，它代表类的对象（实例）</p>
+<h2 id="类方法及其装饰符——-classmethod"><a href="#类方法及其装饰符——-classmethod" class="headerlink" title="类方法及其装饰符——@classmethod"></a>类方法及其装饰符——@classmethod</h2><p>@classmethod是一个函数装饰符，用它装饰的方法不是实例方法，而是类方法。类方法只能被类调用，而不能被实例调用，常被用于方法重载。<br>类方法的第一个参数必须是cls，表示类本身；而实例方法的第一个参数是self，表示该类的一个实例。当类由子类继承时，在调用类方法时，传入的类变量cls的实际参数是子类，而非父类。对于类方法，既可由类调用，也可由类的实例调用。<br>假设类方法有n个形式参数，如果由类调用它，则需要传递的实际参数只能为n-1个，第一个参数默认为类本身；如果由实例调用它，则需要传递的实际参数为n个。</p>
+<h2 id="静态方法及其装饰符——-staticmethod"><a href="#静态方法及其装饰符——-staticmethod" class="headerlink" title="静态方法及其装饰符——@staticmethod"></a>静态方法及其装饰符——@staticmethod</h2><p>@staticmethod也是一个函数装饰符，用它装饰的方法是静态方法。静态方法属于类方法，不是实例方法，可将它理解成全局函数，因此可被类或类的实例调用。在调用时，它不会被隐式地传入任何参数。也就是说，静态方法可以没有任何参数。例如，举例5中的静态方法show_help()，它在程序中的作用是实现一个类的简单帮助功能。<br>由于静态方法无内定的隐性参数，所以，调用静态方法时的实际参数个数必须与形式参数个数严格一致。<br>为什么要引入静态方法？有时候需要将一组逻辑上相关的函数放在一个类里，便于组织代码。例如，可将类中被其他多个方法调用的通用方法定义为静态方法。一般而言，如果一个方法不需要使用self参数，它就适合被定义为静态方法。</p>
+<h2 id="构造函数的继承"><a href="#构造函数的继承" class="headerlink" title="构造函数的继承"></a>构造函数的继承</h2><p>由类的定义可知，如果要向实例传递参数，则必须定义和使用“构造函数”。由此可见构造函数的重要性！<br>那么，构造函数能否被继承、该如何被继承，子类又如何定义自己的属性呢？<br>解决上述问题的办法是，在定义子类的构造函数中显式地调用父类的构造函数，一般来说有两种方式。</p>
+<h3 id="1-继承构造函数的第一种方式"><a href="#1-继承构造函数的第一种方式" class="headerlink" title="1.继承构造函数的第一种方式"></a>1.继承构造函数的第一种方式</h3><p>第一种方式是经典方式，它的形式如下：<br>其中，括号内的第一个参数必须为self ，余下的参数即父类的实例属性。例如，Animal.<strong>init</strong>(self,name,sex,classtype)。<br>要特别提醒的是，当以这种方式调用时，第一个参数self必须被显式传递，它不会被隐式传递，即必须为self，如果被省略，则将报错；其余参数则为父类的实例属性，直接复制父类的实例属性即可。<br>此方式既可被用在单继承场合，也可被用在多继承场合。</p>
+<h3 id="2-继承构造函数的第二种方式"><a href="#2-继承构造函数的第二种方式" class="headerlink" title="2.继承构造函数的第二种方式"></a>2.继承构造函数的第二种方式</h3><p>第二种方式为新式方式，它的形式如下：<br>其中，内置函数super(子类,self)用于表示子类的父类，它有两个参数——子类与self；而__init__(参数1,参数2, )为构造函数，与第一种方式不同的是，它不需要self参数，所有参数均为父类的实例属性。<br>例如，super(Bird,self).<strong>init</strong>(name,sex,classtype)，此处，<strong>super()的第一个参数是子类，也就是正在定义构造函数的类；第二个参数必须为self，它代表子类的对象。很显然，此方式过于烦琐</strong>，所幸的是，Python 3将上述方式改为更简洁的形式，但两者完全等效，如下：<br>换言之，Python 3的第二种方式采用以下形式：<br>以下简单地介绍内置函数super()的语法形式。<br>其中，<br>· type：类，是一个子类。<br>· object-or-type：一般为self。</p>
+<h3 id="3-关于继承的一个重要特性"><a href="#3-关于继承的一个重要特性" class="headerlink" title="3.关于继承的一个重要特性"></a>3.关于继承的一个重要特性</h3><p>如果只是简单地在<strong>子类中定义一个构造函数而不调用父类的构造函数，那么此方式被称为“重构”</strong>。以此方式定义的子类通常无法继承父类的属性和方法。<strong>但是，如果子类不引用父类的任何属性，那么父类的方法可被继承和引用</strong>。<br>举例25：<br>运行上述程序后，得到如下结果：<br>由举例25可知，虽然子类并没有继承父类的构造函数，但由于父类的方法describe()不引用任何属性，因此它可被子类对象b1所调用。<br>综上所述，在定义子类的构造函数时，一般应继承父类的构造函数，这样子类也能拥有父类的所有属性和方法。<br>子类的构造函数继承父类的构造函数的原理（执行过程）如下：<br>实例化对象a → a调用子类__init__() → 子类__init__()继承父类__init__() → 调用父类__init__()。<br>再举一个单继承的例子，以对类的继承问题进行归纳。通过该例，可进一步理解继承的概念及其有关要点。</p>
+]]></content>
+      <categories>
+        <category>python基础</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
+      </tags>
   </entry>
   <entry>
     <title>二叉树的递归遍历_二叉树01</title>
@@ -479,23 +479,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数组在哈希表中的应用</title>
-    <url>/2022/07/13/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
-    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
-<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-        <tag>哈希表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>两个数组的交集</title>
     <url>/2022/07/22/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A801/</url>
     <content><![CDATA[<h1 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349. 两个数组的交集"></a>349. 两个数组的交集</h1><p><a href="https://leetcode.cn/problems/intersection-of-two-arrays/">力扣题目链接(opens new window)</a></p>
@@ -528,6 +511,23 @@
       </categories>
       <tags>
         <tag>哈希表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组在哈希表中的应用</title>
+    <url>/2022/07/13/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
+    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
+<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>哈希表</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -812,39 +812,6 @@
       </tags>
   </entry>
   <entry>
-    <title>替换空格_字符串03</title>
-    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B203/</url>
-    <content><![CDATA[<h1 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h1><p><a href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">力扣题目链接(opens new window)</a></p>
-<p>请实现一个函数，把字符串 s 中的每个空格替换成”%20”。</p>
-<p>示例 1： 输入：s &#x3D; “We are happy.”<br>输出：”We%20are%20happy.”</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果想把这道题目做到极致，就不要只用额外的辅助空间了！</p>
-<p>首先扩充数组到每个空格替换成”%20”之后的大小。</p>
-<p>然后从后向前替换空格，也就是双指针法，过程如下：</p>
-<p>i指向新长度的末尾，j指向旧长度的末尾。</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1go6qmevhgpg20du09m4qp.gif" alt="替换空格"></p>
-<p>有同学问了，为什么要从后向前填充，从前向后填充不行么？</p>
-<p>从前向后填充就是O(n^2)的算法了，因为每次添加元素都要将添加元素之后的所有元素向后移动。</p>
-<p><strong>其实很多数组填充类的问题，都可以先预先给数组扩容带填充后的大小，然后在从后向前进行操作。</strong></p>
-<p>这么做有两个好处：</p>
-<ol>
-<li>不用申请新数组。</li>
-<li>从后向前填充元素，避免了从前先后填充元素要来的 每次添加元素都要将添加元素之后的所有元素向后移动。</li>
-</ol>
-<p>时间复杂度，空间复杂度均超过100%的用户。</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E5%89%91%E6%8C%87Offer05.%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.png" alt="img"></p>
-<p>java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">replaceSpace</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(s == <span class="literal">null</span> || s.length() == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 扩容</span></span><br><span class="line">    <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">    <span class="keyword">while</span>(<span class="type">char</span> c:s.toCharArray()) &#123;</span><br><span class="line">    	<span class="keyword">if</span>(c == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">    		sb.append(<span class="string">&#x27;   &#x27;</span>)</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    s += sb.toString();</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span>[] arr = s.toCharArray();</span><br><span class="line">    <span class="keyword">while</span>(left &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[left] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">            arr[right] = <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            arr[right] = arr[left];</span><br><span class="line">        &#125;</span><br><span class="line">        left--;</span><br><span class="line">        right--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(arr);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>字符串</category>
-      </categories>
-      <tags>
-        <tag>字符串</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>翻转字符串里的单词_字符串04</title>
     <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B204/</url>
     <content><![CDATA[<h1 id="翻转字符串里的单词"><a href="#翻转字符串里的单词" class="headerlink" title="翻转字符串里的单词"></a>翻转字符串里的单词</h1><p><a href="https://leetcode.cn/problems/reverse-words-in-a-string/">力扣题目链接(opens new window)</a></p>
@@ -904,39 +871,28 @@
       </tags>
   </entry>
   <entry>
-    <title>左旋转字符串_字符串05</title>
-    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B205/</url>
-    <content><![CDATA[<h1 id="左旋转字符串"><a href="#左旋转字符串" class="headerlink" title="左旋转字符串"></a>左旋转字符串</h1><p><a href="https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/">力扣题目链接(opens new window)</a></p>
-<p>字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串”abcdefg”和数字2，该函数将返回左旋转两位得到的结果”cdefgab”。</p>
-<p>示例 1：<br>输入: s &#x3D; “abcdefg”, k &#x3D; 2<br>输出: “cdefgab”</p>
-<p>示例 2：<br>输入: s &#x3D; “lrloseumgh”, k &#x3D; 6<br>输出: “umghlrlose”</p>
-<p>限制：<br>1 &lt;&#x3D; k &lt; s.length &lt;&#x3D; 10000</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了让本题更有意义，提升一下本题难度：<strong>不能申请额外空间，只能在本串上操作</strong>。</p>
-<p>不能使用额外空间的话，模拟在本串操作要实现左旋转字符串的功能还是有点困难的。</p>
-<p>那么我们可以想一下上一题目<a href="https://programmercarl.com/0151.%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D.html">字符串：花式反转还不够！ (opens new window)</a>中讲过，使用整体反转+局部反转就可以实现，反转单词顺序的目的。</p>
-<p>这道题目也非常类似，依然可以通过局部反转+整体反转 达到左旋转的目的。</p>
-<p>具体步骤为：</p>
+    <title>替换空格_字符串03</title>
+    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B203/</url>
+    <content><![CDATA[<h1 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h1><p><a href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">力扣题目链接(opens new window)</a></p>
+<p>请实现一个函数，把字符串 s 中的每个空格替换成”%20”。</p>
+<p>示例 1： 输入：s &#x3D; “We are happy.”<br>输出：”We%20are%20happy.”</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果想把这道题目做到极致，就不要只用额外的辅助空间了！</p>
+<p>首先扩充数组到每个空格替换成”%20”之后的大小。</p>
+<p>然后从后向前替换空格，也就是双指针法，过程如下：</p>
+<p>i指向新长度的末尾，j指向旧长度的末尾。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1go6qmevhgpg20du09m4qp.gif" alt="替换空格"></p>
+<p>有同学问了，为什么要从后向前填充，从前向后填充不行么？</p>
+<p>从前向后填充就是O(n^2)的算法了，因为每次添加元素都要将添加元素之后的所有元素向后移动。</p>
+<p><strong>其实很多数组填充类的问题，都可以先预先给数组扩容带填充后的大小，然后在从后向前进行操作。</strong></p>
+<p>这么做有两个好处：</p>
 <ol>
-<li>反转区间为前n的子串</li>
-<li>反转区间为n到末尾的子串</li>
-<li>反转整个字符串</li>
+<li>不用申请新数组。</li>
+<li>从后向前填充元素，避免了从前先后填充元素要来的 每次添加元素都要将添加元素之后的所有元素向后移动。</li>
 </ol>
-<p>最后就可以得到左旋n的目的，而不用定义新的字符串，完全在本串上操作。</p>
-<p>例如 ：示例1中 输入：字符串abcdefg，n&#x3D;2</p>
-<p>如图：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E5%89%91%E6%8C%87Offer58-II.%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.png" alt="img"></p>
-<p>最终得到左旋2个单元的字符串：cdefgab</p>
-<p>思路明确之后，那么代码实现就很简单了</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>此时我们已经反转好多次字符串了，来一起回顾一下吧。</p>
-<p>在这篇文章<a href="https://programmercarl.com/0344.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.html">344.反转字符串 (opens new window)</a>，第一次讲到反转一个字符串应该怎么做，使用了双指针法。</p>
-<p>然后发现<a href="https://programmercarl.com/0541.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II.html">541. 反转字符串II (opens new window)</a>，这里开始给反转加上了一些条件，当需要固定规律一段一段去处理字符串的时候，要想想在在for循环的表达式上做做文章。</p>
-<p>后来在<a href="https://programmercarl.com/0151.%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D.html">151.翻转字符串里的单词 (opens new window)</a>中，要对一句话里的单词顺序进行反转，发现先整体反转再局部反转 是一个很妙的思路。</p>
-<p>最后再讲到本题，本题则是先局部反转再 整体反转，与<a href="https://programmercarl.com/0151.%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D.html">151.翻转字符串里的单词 (opens new window)</a>类似，但是也是一种新的思路。</p>
-<p>好了，反转字符串一共就介绍到这里，相信大家此时对反转字符串的常见操作已经很了解了。</p>
-<h3 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h3><p>一些同学热衷于使用substr，来做这道题。 其实使用substr 和 反转 时间复杂度是一样的 ，都是O(n)，但是使用substr申请了额外空间，所以空间复杂度是O(n)，而反转方法的空间复杂度是O(1)。</p>
-<p><strong>如果想让这套题目有意义，就不要申请额外空间。</strong></p>
+<p>时间复杂度，空间复杂度均超过100%的用户。</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E5%89%91%E6%8C%87Offer05.%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.png" alt="img"></p>
 <p>java代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public String reverseLeftWords(String s, int n) &#123;</span><br><span class="line">    	StringBuilder sb = new StringBuilder(s);</span><br><span class="line">    	// 先局部</span><br><span class="line">    	reverse(sb,0,n-1);</span><br><span class="line">    	reverse(sb,n,sb.length()-1);</span><br><span class="line">    	// 整体</span><br><span class="line">    	reverse(sb,0,sb.length()-1);</span><br><span class="line">    	return new String(sb);</span><br><span class="line">	&#125;</span><br><span class="line">	public void reverse(StringBuilder sb,int start,int end) &#123;</span><br><span class="line">		char temp = &#x27;a&#x27;;</span><br><span class="line">		while(start &lt; end) &#123;</span><br><span class="line">			temp = sb.charAt(temp);</span><br><span class="line">			sb.setChar(start,temp);</span><br><span class="line">			sb.setChar(end,sb.charAt(temp));</span><br><span class="line">			start++;</span><br><span class="line">			end--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">replaceSpace</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(s == <span class="literal">null</span> || s.length() == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 扩容</span></span><br><span class="line">    <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">    <span class="keyword">while</span>(<span class="type">char</span> c:s.toCharArray()) &#123;</span><br><span class="line">    	<span class="keyword">if</span>(c == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">    		sb.append(<span class="string">&#x27;   &#x27;</span>)</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    s += sb.toString();</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span>[] arr = s.toCharArray();</span><br><span class="line">    <span class="keyword">while</span>(left &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[left] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">            arr[right] = <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            arr[right] = arr[left];</span><br><span class="line">        &#125;</span><br><span class="line">        left--;</span><br><span class="line">        right--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(arr);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1141,6 +1097,50 @@
       </tags>
   </entry>
   <entry>
+    <title>左旋转字符串_字符串05</title>
+    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B205/</url>
+    <content><![CDATA[<h1 id="左旋转字符串"><a href="#左旋转字符串" class="headerlink" title="左旋转字符串"></a>左旋转字符串</h1><p><a href="https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/">力扣题目链接(opens new window)</a></p>
+<p>字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串”abcdefg”和数字2，该函数将返回左旋转两位得到的结果”cdefgab”。</p>
+<p>示例 1：<br>输入: s &#x3D; “abcdefg”, k &#x3D; 2<br>输出: “cdefgab”</p>
+<p>示例 2：<br>输入: s &#x3D; “lrloseumgh”, k &#x3D; 6<br>输出: “umghlrlose”</p>
+<p>限制：<br>1 &lt;&#x3D; k &lt; s.length &lt;&#x3D; 10000</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了让本题更有意义，提升一下本题难度：<strong>不能申请额外空间，只能在本串上操作</strong>。</p>
+<p>不能使用额外空间的话，模拟在本串操作要实现左旋转字符串的功能还是有点困难的。</p>
+<p>那么我们可以想一下上一题目<a href="https://programmercarl.com/0151.%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D.html">字符串：花式反转还不够！ (opens new window)</a>中讲过，使用整体反转+局部反转就可以实现，反转单词顺序的目的。</p>
+<p>这道题目也非常类似，依然可以通过局部反转+整体反转 达到左旋转的目的。</p>
+<p>具体步骤为：</p>
+<ol>
+<li>反转区间为前n的子串</li>
+<li>反转区间为n到末尾的子串</li>
+<li>反转整个字符串</li>
+</ol>
+<p>最后就可以得到左旋n的目的，而不用定义新的字符串，完全在本串上操作。</p>
+<p>例如 ：示例1中 输入：字符串abcdefg，n&#x3D;2</p>
+<p>如图：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E5%89%91%E6%8C%87Offer58-II.%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.png" alt="img"></p>
+<p>最终得到左旋2个单元的字符串：cdefgab</p>
+<p>思路明确之后，那么代码实现就很简单了</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>此时我们已经反转好多次字符串了，来一起回顾一下吧。</p>
+<p>在这篇文章<a href="https://programmercarl.com/0344.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.html">344.反转字符串 (opens new window)</a>，第一次讲到反转一个字符串应该怎么做，使用了双指针法。</p>
+<p>然后发现<a href="https://programmercarl.com/0541.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II.html">541. 反转字符串II (opens new window)</a>，这里开始给反转加上了一些条件，当需要固定规律一段一段去处理字符串的时候，要想想在在for循环的表达式上做做文章。</p>
+<p>后来在<a href="https://programmercarl.com/0151.%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D.html">151.翻转字符串里的单词 (opens new window)</a>中，要对一句话里的单词顺序进行反转，发现先整体反转再局部反转 是一个很妙的思路。</p>
+<p>最后再讲到本题，本题则是先局部反转再 整体反转，与<a href="https://programmercarl.com/0151.%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D.html">151.翻转字符串里的单词 (opens new window)</a>类似，但是也是一种新的思路。</p>
+<p>好了，反转字符串一共就介绍到这里，相信大家此时对反转字符串的常见操作已经很了解了。</p>
+<h3 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h3><p>一些同学热衷于使用substr，来做这道题。 其实使用substr 和 反转 时间复杂度是一样的 ，都是O(n)，但是使用substr申请了额外空间，所以空间复杂度是O(n)，而反转方法的空间复杂度是O(1)。</p>
+<p><strong>如果想让这套题目有意义，就不要申请额外空间。</strong></p>
+<p>java代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public String reverseLeftWords(String s, int n) &#123;</span><br><span class="line">    	StringBuilder sb = new StringBuilder(s);</span><br><span class="line">    	// 先局部</span><br><span class="line">    	reverse(sb,0,n-1);</span><br><span class="line">    	reverse(sb,n,sb.length()-1);</span><br><span class="line">    	// 整体</span><br><span class="line">    	reverse(sb,0,sb.length()-1);</span><br><span class="line">    	return new String(sb);</span><br><span class="line">	&#125;</span><br><span class="line">	public void reverse(StringBuilder sb,int start,int end) &#123;</span><br><span class="line">		char temp = &#x27;a&#x27;;</span><br><span class="line">		while(start &lt; end) &#123;</span><br><span class="line">			temp = sb.charAt(temp);</span><br><span class="line">			sb.setChar(start,temp);</span><br><span class="line">			sb.setChar(end,sb.charAt(temp));</span><br><span class="line">			start++;</span><br><span class="line">			end--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>字符串</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>重复的子字符串_字符串07</title>
     <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B207/</url>
     <content><![CDATA[<h1 id="重复的子字符串"><a href="#重复的子字符串" class="headerlink" title="重复的子字符串"></a>重复的子字符串</h1><p><a href="https://leetcode.cn/problems/repeated-substring-pattern/">力扣题目链接(opens new window)</a></p>
@@ -1175,6 +1175,53 @@
       </categories>
       <tags>
         <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组_代码随想列题02</title>
+    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8402/</url>
+    <content><![CDATA[<h1 id="代码随想录-数组02"><a href="#代码随想录-数组02" class="headerlink" title="代码随想录_数组02"></a>代码随想录_数组02</h1><h3 id="27-移除元素"><a href="#27-移除元素" class="headerlink" title="27. 移除元素"></a>27. 移除元素</h3><p>[题目链接](<a href="https://leetcode.cn/problems/remove-element/">力扣 (leetcode.cn)</a>)</p>
+<p>给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。</p>
+<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
+<p>说明:</p>
+<p>为什么返回数值是整数，但输出的答案是数组呢?</p>
+<p>请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
+<p>你可以想象内部操作如下:</p>
+<p>&#x2F;&#x2F; nums 是以“引用”方式传递的。也就是说，不对实参作任何拷贝<br>int len &#x3D; removeElement(nums, val);</p>
+<p>&#x2F;&#x2F; 在函数里修改输入数组对于调用者是可见的。<br>&#x2F;&#x2F; 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。<br>for (int i &#x3D; 0; i &lt; len; i++) {<br>    print(nums[i]);<br>}</p>
+<p>示例 1：</p>
+<p>输入：nums &#x3D; [3,2,2,3], val &#x3D; 3<br>输出：2, nums &#x3D; [2,2]<br>解释：函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。你不需要考虑数组中超出新长度后面的元素。例如，函数返回的新长度为 2 ，而 nums &#x3D; [2,2,3,3] 或 nums &#x3D; [2,2,0,0]，也会被视作正确答案。<br>示例 2：</p>
+<p>输入：nums &#x3D; [0,1,2,2,3,0,4,2], val &#x3D; 2<br>输出：5, nums &#x3D; [0,1,4,0,3]<br>解释：函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><a href="https://www.bilibili.com/video/BV12A4y1Z7LP">本题B站视频讲解(opens new window)</a></p>
+<p>有的同学可能说了，多余的元素，删掉不就得了。</p>
+<p><strong>要知道数组的元素在内存地址中是连续的，不能单独删除数组中的某个元素，只能覆盖。</strong></p>
+<h3 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h3><p>这个题目暴力的解法就是两层for循环，一个for循环遍历数组元素 ，第二个for循环更新数组。</p>
+<p>删除过程如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrc7x9tjg30du09m1ky.gif" alt="27.移除元素-暴力解法"></p>
+<p>很明显暴力解法的时间复杂度是O(n^2)，这道题目暴力解法在leetcode上是可以过的。</p>
+<p>代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 时间复杂度：O(n^2)</span><br><span class="line">// 空间复杂度：O(1)</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int removeElement(vector&lt;int&gt;&amp; nums, int val) &#123;</span><br><span class="line">        int size = nums.size();</span><br><span class="line">        for (int i = 0; i &lt; size; i++) &#123;</span><br><span class="line">            if (nums[i] == val) &#123; // 发现需要移除的元素，就将数组集体向前移动一位</span><br><span class="line">                for (int j = i + 1; j &lt; size; j++) &#123;</span><br><span class="line">                    nums[j - 1] = nums[j];</span><br><span class="line">                &#125;</span><br><span class="line">                i--; // 因为下标i以后的数值都向前移动了一位，所以i也向前移动一位</span><br><span class="line">                size--; // 此时数组的大小-1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return size;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>双指针法（快慢指针法）： <strong>通过一个快指针和慢指针在一个for循环下完成两个for循环的工作。</strong></p>
+<p>定义快慢指针</p>
+<ul>
+<li>快指针：寻找新数组的元素 ，新数组就是不含有目标元素的数组</li>
+<li>慢指针：指向更新 新数组下标的位置</li>
+</ul>
+<p>很多同学这道题目做的很懵，就是不理解 快慢指针究竟都是什么含义，所以一定要明确含义，后面的思路就更容易理解了。</p>
+<p>删除过程如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrds6r59g30du09mnpd.gif" alt="27.移除元素-双指针法"></p>
+<p>很多同学不了解</p>
+<p><strong>双指针法（快慢指针法）在数组和链表的操作中是非常常见的，很多考察数组、链表、字符串等操作的面试题，都使用双指针法。</strong></p>
+<p>后续都会一一介绍到，本题代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> in <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span> [] nums,<span class="type">int</span> val)</span> &#123;</span><br><span class="line">	<span class="comment">//快指针</span></span><br><span class="line">	<span class="type">int</span> <span class="variable">fastIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> <span class="variable">slowIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(fastIndex&lt;nums.length) &#123;</span><br><span class="line">		<span class="keyword">if</span>(nums[fastIndex] != val) &#123;</span><br><span class="line">            nums[slowIndex++] = nums[fastIndex]</span><br><span class="line">        &#125;</span><br><span class="line">		fastIndex++;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> slowIndex;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -1228,53 +1275,6 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">	int left = 0;</span><br><span class="line">	int right = nums.length - 1;</span><br><span class="line">	while(left &lt; right) &#123;</span><br><span class="line">		mid = 1+(left+right)/2;</span><br><span class="line">		if(nums[mid]&lt;=target) left = mid;</span><br><span class="line">		else right = mid-1;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数组_代码随想列题02</title>
-    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8402/</url>
-    <content><![CDATA[<h1 id="代码随想录-数组02"><a href="#代码随想录-数组02" class="headerlink" title="代码随想录_数组02"></a>代码随想录_数组02</h1><h3 id="27-移除元素"><a href="#27-移除元素" class="headerlink" title="27. 移除元素"></a>27. 移除元素</h3><p>[题目链接](<a href="https://leetcode.cn/problems/remove-element/">力扣 (leetcode.cn)</a>)</p>
-<p>给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。</p>
-<p>不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。</p>
-<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
-<p>说明:</p>
-<p>为什么返回数值是整数，但输出的答案是数组呢?</p>
-<p>请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
-<p>你可以想象内部操作如下:</p>
-<p>&#x2F;&#x2F; nums 是以“引用”方式传递的。也就是说，不对实参作任何拷贝<br>int len &#x3D; removeElement(nums, val);</p>
-<p>&#x2F;&#x2F; 在函数里修改输入数组对于调用者是可见的。<br>&#x2F;&#x2F; 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。<br>for (int i &#x3D; 0; i &lt; len; i++) {<br>    print(nums[i]);<br>}</p>
-<p>示例 1：</p>
-<p>输入：nums &#x3D; [3,2,2,3], val &#x3D; 3<br>输出：2, nums &#x3D; [2,2]<br>解释：函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。你不需要考虑数组中超出新长度后面的元素。例如，函数返回的新长度为 2 ，而 nums &#x3D; [2,2,3,3] 或 nums &#x3D; [2,2,0,0]，也会被视作正确答案。<br>示例 2：</p>
-<p>输入：nums &#x3D; [0,1,2,2,3,0,4,2], val &#x3D; 2<br>输出：5, nums &#x3D; [0,1,4,0,3]<br>解释：函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><a href="https://www.bilibili.com/video/BV12A4y1Z7LP">本题B站视频讲解(opens new window)</a></p>
-<p>有的同学可能说了，多余的元素，删掉不就得了。</p>
-<p><strong>要知道数组的元素在内存地址中是连续的，不能单独删除数组中的某个元素，只能覆盖。</strong></p>
-<h3 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h3><p>这个题目暴力的解法就是两层for循环，一个for循环遍历数组元素 ，第二个for循环更新数组。</p>
-<p>删除过程如下：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrc7x9tjg30du09m1ky.gif" alt="27.移除元素-暴力解法"></p>
-<p>很明显暴力解法的时间复杂度是O(n^2)，这道题目暴力解法在leetcode上是可以过的。</p>
-<p>代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 时间复杂度：O(n^2)</span><br><span class="line">// 空间复杂度：O(1)</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int removeElement(vector&lt;int&gt;&amp; nums, int val) &#123;</span><br><span class="line">        int size = nums.size();</span><br><span class="line">        for (int i = 0; i &lt; size; i++) &#123;</span><br><span class="line">            if (nums[i] == val) &#123; // 发现需要移除的元素，就将数组集体向前移动一位</span><br><span class="line">                for (int j = i + 1; j &lt; size; j++) &#123;</span><br><span class="line">                    nums[j - 1] = nums[j];</span><br><span class="line">                &#125;</span><br><span class="line">                i--; // 因为下标i以后的数值都向前移动了一位，所以i也向前移动一位</span><br><span class="line">                size--; // 此时数组的大小-1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return size;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>双指针法（快慢指针法）： <strong>通过一个快指针和慢指针在一个for循环下完成两个for循环的工作。</strong></p>
-<p>定义快慢指针</p>
-<ul>
-<li>快指针：寻找新数组的元素 ，新数组就是不含有目标元素的数组</li>
-<li>慢指针：指向更新 新数组下标的位置</li>
-</ul>
-<p>很多同学这道题目做的很懵，就是不理解 快慢指针究竟都是什么含义，所以一定要明确含义，后面的思路就更容易理解了。</p>
-<p>删除过程如下：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrds6r59g30du09mnpd.gif" alt="27.移除元素-双指针法"></p>
-<p>很多同学不了解</p>
-<p><strong>双指针法（快慢指针法）在数组和链表的操作中是非常常见的，很多考察数组、链表、字符串等操作的面试题，都使用双指针法。</strong></p>
-<p>后续都会一一介绍到，本题代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> in <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span> [] nums,<span class="type">int</span> val)</span> &#123;</span><br><span class="line">	<span class="comment">//快指针</span></span><br><span class="line">	<span class="type">int</span> <span class="variable">fastIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> <span class="variable">slowIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(fastIndex&lt;nums.length) &#123;</span><br><span class="line">		<span class="keyword">if</span>(nums[fastIndex] != val) &#123;</span><br><span class="line">            nums[slowIndex++] = nums[fastIndex]</span><br><span class="line">        &#125;</span><br><span class="line">		fastIndex++;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> slowIndex;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>算法简史</category>
         <category>数组</category>
@@ -1373,6 +1373,45 @@
       </tags>
   </entry>
   <entry>
+    <title>用栈实现队列_栈02</title>
+    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9702/</url>
+    <content><![CDATA[<h1 id="用栈实现队列"><a href="#用栈实现队列" class="headerlink" title="用栈实现队列"></a>用栈实现队列</h1><p><a href="https://leetcode.cn/problems/implement-queue-using-stacks/">力扣题目链接(opens new window)</a></p>
+<p>使用栈实现队列的下列操作：</p>
+<p>push(x) – 将一个元素放入队列的尾部。<br>pop() – 从队列首部移除元素。<br>peek() – 返回队列首部的元素。<br>empty() – 返回队列是否为空。</p>
+<p>示例:</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">MyQueue queue = <span class="keyword">new</span> <span class="built_in">MyQueue</span>();</span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">2</span>);</span><br><span class="line">queue.<span class="built_in">peek</span>();  <span class="comment">// 返回 1</span></span><br><span class="line">queue.<span class="built_in">pop</span>();   <span class="comment">// 返回 1</span></span><br><span class="line">queue.<span class="built_in">empty</span>(); <span class="comment">// 返回 false</span></span><br></pre></td></tr></table></figure>
+
+<p>说明:</p>
+<ul>
+<li>你只能使用标准的栈操作 – 也就是只有 push to top, peek&#x2F;pop from top, size, 和 is empty 操作是合法的。</li>
+<li>你所使用的语言也许不支持栈。你可以使用 list 或者 deque（双端队列）来模拟一个栈，只要是标准的栈操作即可。</li>
+<li>假设所有操作都是有效的 （例如，一个空的队列不会调用 pop 或者 peek 操作）。</li>
+</ul>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这是一道模拟题，不涉及到具体算法，考察的就是对栈和队列的掌握程度。</p>
+<p>使用栈来模式队列的行为，如果仅仅用一个栈，是一定不行的，所以需要两个栈<strong>一个输入栈，一个输出栈</strong>，这里要注意输入栈和输出栈的关系。</p>
+<p>下面动画模拟以下队列的执行过程如下：</p>
+<p>执行语句：<br>queue.push(1);<br>queue.push(2);<br>queue.pop(); <strong>注意此时的输出栈的操作</strong><br>queue.push(3);<br>queue.push(4);<br>queue.pop();<br>queue.pop();<strong>注意此时的输出栈的操作</strong><br>queue.pop();<br>queue.empty();</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97%E7%89%88%E6%9C%AC2.gif" alt="232.用栈实现队列版本2"></p>
+<p>在push数据的时候，只要数据放进输入栈就好，<strong>但在pop的时候，操作就复杂一些，输出栈如果为空，就把进栈数据全部导入进来（注意是全部导入）</strong>，再从出栈弹出数据，如果输出栈不为空，则直接从出栈弹出数据就可以了。</p>
+<p>最后如何判断队列为空呢？<strong>如果进栈和出栈都为空的话，说明模拟的队列为空了。</strong></p>
+<p>在代码实现的时候，会发现pop() 和 peek()两个函数功能类似，代码实现上也是类似的，可以思考一下如何把代码抽象一下。</p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>可以看出peek()的实现，直接复用了pop()。</p>
+<p>再多说一些代码开发上的习惯问题，在工业级别代码开发中，最忌讳的就是 实现一个类似的函数，直接把代码粘过来改一改就完事了。</p>
+<p>这样的项目代码会越来越乱，<strong>一定要懂得复用，功能相近的函数要抽象出来，不要大量的复制粘贴，很容易出问题！（踩过坑的人自然懂）</strong></p>
+<p>工作中如果发现某一个功能自己要经常用，同事们可能也会用到，自己就花点时间把这个功能抽象成一个好用的函数或者工具类，不仅自己方便，也方面了同事们。</p>
+<p>同事们就会逐渐认可你的工作态度和工作能力，自己的口碑都是这么一点一点积累起来的！在同事圈里口碑起来了之后，你就发现自己走上了一个正循环，以后的升职加薪才少不了你！哈哈哈</p>
+<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyQueue</span> &#123;</span><br><span class="line"></span><br><span class="line">    Stack&lt;Integer&gt; stackIn;</span><br><span class="line">    Stack&lt;Integer&gt; stackOut;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">    	stackIn.push(val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">poll</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(!stackOut.isEmpty()) &#123;</span><br><span class="line">    		stackOut.pop();</span><br><span class="line">    	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    		<span class="keyword">while</span>(!stackIn.isEmpty()) &#123;</span><br><span class="line">    			stackOut.push(stackIn.pop());</span><br><span class="line">    		&#125;</span><br><span class="line">    		stackOut.pop();</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">empty</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">return</span> stackIn.isEmpty() &amp;&amp; stackOut.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">peek</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(!stackOut.isEmpty()) <span class="keyword">return</span> stackOut.peek();</span><br><span class="line">    	<span class="keyword">while</span>(!stackIn.isEmpty()) &#123;</span><br><span class="line">    			stackOut.push(stackIn.pop());</span><br><span class="line">    		&#125;</span><br><span class="line">    	<span class="keyword">return</span> stackOut.peek();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>栈</category>
+      </categories>
+      <tags>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用队列实现栈_栈01</title>
     <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9701/</url>
     <content><![CDATA[<h1 id="用队列实现栈"><a href="#用队列实现栈" class="headerlink" title="用队列实现栈"></a>用队列实现栈</h1><p><a href="https://leetcode.cn/problems/implement-stack-using-queues/">力扣题目链接(opens new window)</a></p>
@@ -1402,45 +1441,6 @@
 
 <p><img src="https://code-thinking.cdn.bcebos.com/gifs/225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.gif" alt="225.用队列实现栈"></p>
 <h2 id="Java代码如下："><a href="#Java代码如下：" class="headerlink" title="Java代码如下："></a>Java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyStack</span> &#123;</span><br><span class="line"></span><br><span class="line">    Queue&lt;Integer&gt; queue1; <span class="comment">// 和栈中保持一样元素的队列</span></span><br><span class="line">    Queue&lt;Integer&gt; queue2; <span class="comment">// 辅助队列</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyStack</span><span class="params">()</span> &#123;</span><br><span class="line">        queue1 = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        queue2 = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">    	queue1.push(x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">pop</span><span class="params">()</span> &#123;</span><br><span class="line">       <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(!que1.isEmpty()) &#123;</span><br><span class="line">            temp = que1.poll();</span><br><span class="line">            <span class="keyword">if</span>(!que1.isEmpty()) &#123;</span><br><span class="line">                que2.offer(temp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!que2.isEmpty()) &#123;</span><br><span class="line">            que1.offer(que2.poll());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">top</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(!que1.isEmpty()) &#123;</span><br><span class="line">            temp = que1.peek();</span><br><span class="line">            <span class="keyword">if</span>(!que1.isEmpty()) &#123;</span><br><span class="line">                que2.offer(temp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!que2.isEmpty()) &#123;</span><br><span class="line">            que1.offer(que2.poll());</span><br><span class="line">        &#125;</span><br><span class="line">        que1.offer(temp);</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">empty</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> queue1.isEmpty() &amp;&amp; queue2.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>栈</category>
-      </categories>
-      <tags>
-        <tag>栈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用栈实现队列_栈02</title>
-    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9702/</url>
-    <content><![CDATA[<h1 id="用栈实现队列"><a href="#用栈实现队列" class="headerlink" title="用栈实现队列"></a>用栈实现队列</h1><p><a href="https://leetcode.cn/problems/implement-queue-using-stacks/">力扣题目链接(opens new window)</a></p>
-<p>使用栈实现队列的下列操作：</p>
-<p>push(x) – 将一个元素放入队列的尾部。<br>pop() – 从队列首部移除元素。<br>peek() – 返回队列首部的元素。<br>empty() – 返回队列是否为空。</p>
-<p>示例:</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">MyQueue queue = <span class="keyword">new</span> <span class="built_in">MyQueue</span>();</span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">2</span>);</span><br><span class="line">queue.<span class="built_in">peek</span>();  <span class="comment">// 返回 1</span></span><br><span class="line">queue.<span class="built_in">pop</span>();   <span class="comment">// 返回 1</span></span><br><span class="line">queue.<span class="built_in">empty</span>(); <span class="comment">// 返回 false</span></span><br></pre></td></tr></table></figure>
-
-<p>说明:</p>
-<ul>
-<li>你只能使用标准的栈操作 – 也就是只有 push to top, peek&#x2F;pop from top, size, 和 is empty 操作是合法的。</li>
-<li>你所使用的语言也许不支持栈。你可以使用 list 或者 deque（双端队列）来模拟一个栈，只要是标准的栈操作即可。</li>
-<li>假设所有操作都是有效的 （例如，一个空的队列不会调用 pop 或者 peek 操作）。</li>
-</ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这是一道模拟题，不涉及到具体算法，考察的就是对栈和队列的掌握程度。</p>
-<p>使用栈来模式队列的行为，如果仅仅用一个栈，是一定不行的，所以需要两个栈<strong>一个输入栈，一个输出栈</strong>，这里要注意输入栈和输出栈的关系。</p>
-<p>下面动画模拟以下队列的执行过程如下：</p>
-<p>执行语句：<br>queue.push(1);<br>queue.push(2);<br>queue.pop(); <strong>注意此时的输出栈的操作</strong><br>queue.push(3);<br>queue.push(4);<br>queue.pop();<br>queue.pop();<strong>注意此时的输出栈的操作</strong><br>queue.pop();<br>queue.empty();</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97%E7%89%88%E6%9C%AC2.gif" alt="232.用栈实现队列版本2"></p>
-<p>在push数据的时候，只要数据放进输入栈就好，<strong>但在pop的时候，操作就复杂一些，输出栈如果为空，就把进栈数据全部导入进来（注意是全部导入）</strong>，再从出栈弹出数据，如果输出栈不为空，则直接从出栈弹出数据就可以了。</p>
-<p>最后如何判断队列为空呢？<strong>如果进栈和出栈都为空的话，说明模拟的队列为空了。</strong></p>
-<p>在代码实现的时候，会发现pop() 和 peek()两个函数功能类似，代码实现上也是类似的，可以思考一下如何把代码抽象一下。</p>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>可以看出peek()的实现，直接复用了pop()。</p>
-<p>再多说一些代码开发上的习惯问题，在工业级别代码开发中，最忌讳的就是 实现一个类似的函数，直接把代码粘过来改一改就完事了。</p>
-<p>这样的项目代码会越来越乱，<strong>一定要懂得复用，功能相近的函数要抽象出来，不要大量的复制粘贴，很容易出问题！（踩过坑的人自然懂）</strong></p>
-<p>工作中如果发现某一个功能自己要经常用，同事们可能也会用到，自己就花点时间把这个功能抽象成一个好用的函数或者工具类，不仅自己方便，也方面了同事们。</p>
-<p>同事们就会逐渐认可你的工作态度和工作能力，自己的口碑都是这么一点一点积累起来的！在同事圈里口碑起来了之后，你就发现自己走上了一个正循环，以后的升职加薪才少不了你！哈哈哈</p>
-<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyQueue</span> &#123;</span><br><span class="line"></span><br><span class="line">    Stack&lt;Integer&gt; stackIn;</span><br><span class="line">    Stack&lt;Integer&gt; stackOut;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">    	stackIn.push(val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">poll</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(!stackOut.isEmpty()) &#123;</span><br><span class="line">    		stackOut.pop();</span><br><span class="line">    	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    		<span class="keyword">while</span>(!stackIn.isEmpty()) &#123;</span><br><span class="line">    			stackOut.push(stackIn.pop());</span><br><span class="line">    		&#125;</span><br><span class="line">    		stackOut.pop();</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">empty</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">return</span> stackIn.isEmpty() &amp;&amp; stackOut.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">peek</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(!stackOut.isEmpty()) <span class="keyword">return</span> stackOut.peek();</span><br><span class="line">    	<span class="keyword">while</span>(!stackIn.isEmpty()) &#123;</span><br><span class="line">    			stackOut.push(stackIn.pop());</span><br><span class="line">    		&#125;</span><br><span class="line">    	<span class="keyword">return</span> stackOut.peek();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1573,66 +1573,6 @@
       </tags>
   </entry>
   <entry>
-    <title>逆波兰表达式求值_栈05</title>
-    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9705/</url>
-    <content><![CDATA[<h2 id="逆波兰表达式求值"><a href="#逆波兰表达式求值" class="headerlink" title="逆波兰表达式求值"></a>逆波兰表达式求值</h2><p><a href="https://leetcode.cn/problems/evaluate-reverse-polish-notation/">力扣题目链接(opens new window)</a></p>
-<p>根据 逆波兰表示法，求表达式的值。</p>
-<p>有效的运算符包括 + , - , * , &#x2F; 。每个运算对象可以是整数，也可以是另一个逆波兰表达式。</p>
-<p>说明：</p>
-<p>整数除法只保留整数部分。 给定逆波兰表达式总是有效的。换句话说，表达式总会得出有效数值且不存在除数为 0 的情况。</p>
-<p>示例 1：</p>
-<ul>
-<li>输入: [“2”, “1”, “+”, “3”, “ * “]</li>
-<li>输出: 9</li>
-<li>解释: 该算式转化为常见的中缀算术表达式为：((2 + 1) * 3) &#x3D; 9</li>
-</ul>
-<p>示例 2：</p>
-<ul>
-<li>输入: [“4”, “13”, “5”, “&#x2F;“, “+”]</li>
-<li>输出: 6</li>
-<li>解释: 该算式转化为常见的中缀算术表达式为：(4 + (13 &#x2F; 5)) &#x3D; 6</li>
-</ul>
-<p>示例 3：</p>
-<ul>
-<li><p>输入: [“10”, “6”, “9”, “3”, “+”, “-11”, “ * “, “&#x2F;“, “ * “, “17”, “+”, “5”, “+”]</p>
-</li>
-<li><p>输出: 22</p>
-</li>
-<li><p>解释:该算式转化为常见的中缀算术表达式为：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">((10 * (6 / ((9 + 3) * -11))) + 17) + 5       </span><br><span class="line">= ((10 * (6 / (12 * -11))) + 17) + 5       </span><br><span class="line">= ((10 * (6 / -132)) + 17) + 5     </span><br><span class="line">= ((10 * 0) + 17) + 5     </span><br><span class="line">= (0 + 17) + 5    </span><br><span class="line">= 17 + 5    </span><br><span class="line">= 22    </span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>逆波兰表达式：是一种后缀表达式，所谓后缀就是指算符写在后面。</p>
-<p>平常使用的算式则是一种中缀表达式，如 ( 1 + 2 ) * ( 3 + 4 ) 。</p>
-<p>该算式的逆波兰表达式写法为 ( ( 1 2 + ) ( 3 4 + ) * ) 。</p>
-<p>逆波兰表达式主要有以下两个优点：</p>
-<ul>
-<li>去掉括号后表达式无歧义，上式即便写成 1 2 + 3 4 + * 也可以依据次序计算出正确结果。</li>
-<li>适合用栈操作运算：遇到数字则入栈；遇到算符则取出栈顶两个数字进行计算，并将结果压入栈中。</li>
-</ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>在上一篇文章中<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">1047.删除字符串中的所有相邻重复项 (opens new window)</a>提到了 递归就是用栈来实现的。</p>
-<p>所以<strong>栈与递归之间在某种程度上是可以转换的！</strong> 这一点我们在后续讲解二叉树的时候，会更详细的讲解到。</p>
-<p>那么来看一下本题，<strong>其实逆波兰表达式相当于是二叉树中的后序遍历</strong>。 大家可以把运算符作为中间节点，按照后序遍历的规则画出一个二叉树。</p>
-<p>但我们没有必要从二叉树的角度去解决这个问题，只要知道逆波兰表达式是用后续遍历的方式把二叉树序列化了，就可以了。</p>
-<p>在进一步看，本题中每一个子表达式要得出一个结果，然后拿这个结果再进行运算，那么<strong>这岂不就是一个相邻字符串消除的过程，和<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">1047.删除字符串中的所有相邻重复项 (opens new window)</a>中的对对碰游戏是不是就非常像了。</strong></p>
-<p>如动画所示： <img src="https://code-thinking.cdn.bcebos.com/gifs/150.%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC.gif" alt="150.逆波兰表达式求值"></p>
-<p>相信看完动画大家应该知道，这和<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">1047. 删除字符串中的所有相邻重复项 (opens new window)</a>是差不错的，只不过本题不要相邻元素做消除了，而是做运算！</p>
-<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">evalRPN</span><span class="params">(String[] tokens)</span> &#123;</span><br><span class="line">    	Deque&lt;Integer&gt; deque = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    	<span class="keyword">for</span>(String s:tokens) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(s.equals(<span class="string">&quot;+&quot;</span>)) &#123;</span><br><span class="line">    			deque.add(deque.pop()+deque.pop());</span><br><span class="line">    		&#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.equals(<span class="string">&quot;-&quot;</span>)) &#123;</span><br><span class="line">                deque.add(-(deque.pop()-deque.pop()));</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.equals(<span class="string">&quot;*&quot;</span>)) &#123;</span><br><span class="line">                deque.add(deque.pop()*deque.pop());</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.equals(<span class="string">&quot;/&quot;</span>)) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">A</span> <span class="operator">=</span> deque.pop();</span><br><span class="line">                <span class="type">int</span> <span class="variable">B</span> <span class="operator">=</span> deque.pop();</span><br><span class="line">                deque.add(B/A);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                deque.add(Integer.valueOf(s));</span><br><span class="line">            &#125;</span><br><span class="line">    	&#125;</span><br><span class="line">        <span class="keyword">return</span> deque.peek();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><p>我们习惯看到的表达式都是中缀表达式，因为符合我们的习惯，但是中缀表达式对于计算机来说就不是很友好了。</p>
-<p>例如：4 + 13 &#x2F; 5，这就是中缀表达式，计算机从左到右去扫描的话，扫到13，还要判断13后面是什么运算法，还要比较一下优先级，然后13还和后面的5做运算，做完运算之后，还要向前回退到 4 的位置，继续做加法，你说麻不麻烦！</p>
-<p>那么将中缀表达式，转化为后缀表达式之后：[“4”, “13”, “5”, “&#x2F;“, “+”] ，就不一样了，计算机可以利用栈里顺序处理，不需要考虑优先级了。也不用回退了， <strong>所以后缀表达式对计算机来说是非常友好的。</strong></p>
-<p>可以说本题不仅仅是一道好题，也展现出计算机的思考方式。</p>
-<p>在1970年代和1980年代，惠普在其所有台式和手持式计算器中都使用了RPN（后缀表达式），直到2020年代仍在某些模型中使用了RPN。</p>
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>栈</category>
-      </categories>
-      <tags>
-        <tag>栈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>滑动窗口最大值_队列06</title>
     <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9706/</url>
     <content><![CDATA[<h1 id="滑动窗口最大值"><a href="#滑动窗口最大值" class="headerlink" title="滑动窗口最大值"></a>滑动窗口最大值</h1><p><a href="https://leetcode.cn/problems/sliding-window-maximum/">力扣题目链接(opens new window)</a></p>
@@ -1693,6 +1633,115 @@
       </categories>
       <tags>
         <tag>队列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>逆波兰表达式求值_栈05</title>
+    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9705/</url>
+    <content><![CDATA[<h2 id="逆波兰表达式求值"><a href="#逆波兰表达式求值" class="headerlink" title="逆波兰表达式求值"></a>逆波兰表达式求值</h2><p><a href="https://leetcode.cn/problems/evaluate-reverse-polish-notation/">力扣题目链接(opens new window)</a></p>
+<p>根据 逆波兰表示法，求表达式的值。</p>
+<p>有效的运算符包括 + , - , * , &#x2F; 。每个运算对象可以是整数，也可以是另一个逆波兰表达式。</p>
+<p>说明：</p>
+<p>整数除法只保留整数部分。 给定逆波兰表达式总是有效的。换句话说，表达式总会得出有效数值且不存在除数为 0 的情况。</p>
+<p>示例 1：</p>
+<ul>
+<li>输入: [“2”, “1”, “+”, “3”, “ * “]</li>
+<li>输出: 9</li>
+<li>解释: 该算式转化为常见的中缀算术表达式为：((2 + 1) * 3) &#x3D; 9</li>
+</ul>
+<p>示例 2：</p>
+<ul>
+<li>输入: [“4”, “13”, “5”, “&#x2F;“, “+”]</li>
+<li>输出: 6</li>
+<li>解释: 该算式转化为常见的中缀算术表达式为：(4 + (13 &#x2F; 5)) &#x3D; 6</li>
+</ul>
+<p>示例 3：</p>
+<ul>
+<li><p>输入: [“10”, “6”, “9”, “3”, “+”, “-11”, “ * “, “&#x2F;“, “ * “, “17”, “+”, “5”, “+”]</p>
+</li>
+<li><p>输出: 22</p>
+</li>
+<li><p>解释:该算式转化为常见的中缀算术表达式为：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">((10 * (6 / ((9 + 3) * -11))) + 17) + 5       </span><br><span class="line">= ((10 * (6 / (12 * -11))) + 17) + 5       </span><br><span class="line">= ((10 * (6 / -132)) + 17) + 5     </span><br><span class="line">= ((10 * 0) + 17) + 5     </span><br><span class="line">= (0 + 17) + 5    </span><br><span class="line">= 17 + 5    </span><br><span class="line">= 22    </span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>逆波兰表达式：是一种后缀表达式，所谓后缀就是指算符写在后面。</p>
+<p>平常使用的算式则是一种中缀表达式，如 ( 1 + 2 ) * ( 3 + 4 ) 。</p>
+<p>该算式的逆波兰表达式写法为 ( ( 1 2 + ) ( 3 4 + ) * ) 。</p>
+<p>逆波兰表达式主要有以下两个优点：</p>
+<ul>
+<li>去掉括号后表达式无歧义，上式即便写成 1 2 + 3 4 + * 也可以依据次序计算出正确结果。</li>
+<li>适合用栈操作运算：遇到数字则入栈；遇到算符则取出栈顶两个数字进行计算，并将结果压入栈中。</li>
+</ul>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>在上一篇文章中<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">1047.删除字符串中的所有相邻重复项 (opens new window)</a>提到了 递归就是用栈来实现的。</p>
+<p>所以<strong>栈与递归之间在某种程度上是可以转换的！</strong> 这一点我们在后续讲解二叉树的时候，会更详细的讲解到。</p>
+<p>那么来看一下本题，<strong>其实逆波兰表达式相当于是二叉树中的后序遍历</strong>。 大家可以把运算符作为中间节点，按照后序遍历的规则画出一个二叉树。</p>
+<p>但我们没有必要从二叉树的角度去解决这个问题，只要知道逆波兰表达式是用后续遍历的方式把二叉树序列化了，就可以了。</p>
+<p>在进一步看，本题中每一个子表达式要得出一个结果，然后拿这个结果再进行运算，那么<strong>这岂不就是一个相邻字符串消除的过程，和<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">1047.删除字符串中的所有相邻重复项 (opens new window)</a>中的对对碰游戏是不是就非常像了。</strong></p>
+<p>如动画所示： <img src="https://code-thinking.cdn.bcebos.com/gifs/150.%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC.gif" alt="150.逆波兰表达式求值"></p>
+<p>相信看完动画大家应该知道，这和<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">1047. 删除字符串中的所有相邻重复项 (opens new window)</a>是差不错的，只不过本题不要相邻元素做消除了，而是做运算！</p>
+<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">evalRPN</span><span class="params">(String[] tokens)</span> &#123;</span><br><span class="line">    	Deque&lt;Integer&gt; deque = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    	<span class="keyword">for</span>(String s:tokens) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(s.equals(<span class="string">&quot;+&quot;</span>)) &#123;</span><br><span class="line">    			deque.add(deque.pop()+deque.pop());</span><br><span class="line">    		&#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.equals(<span class="string">&quot;-&quot;</span>)) &#123;</span><br><span class="line">                deque.add(-(deque.pop()-deque.pop()));</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.equals(<span class="string">&quot;*&quot;</span>)) &#123;</span><br><span class="line">                deque.add(deque.pop()*deque.pop());</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(s.equals(<span class="string">&quot;/&quot;</span>)) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">A</span> <span class="operator">=</span> deque.pop();</span><br><span class="line">                <span class="type">int</span> <span class="variable">B</span> <span class="operator">=</span> deque.pop();</span><br><span class="line">                deque.add(B/A);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                deque.add(Integer.valueOf(s));</span><br><span class="line">            &#125;</span><br><span class="line">    	&#125;</span><br><span class="line">        <span class="keyword">return</span> deque.peek();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><p>我们习惯看到的表达式都是中缀表达式，因为符合我们的习惯，但是中缀表达式对于计算机来说就不是很友好了。</p>
+<p>例如：4 + 13 &#x2F; 5，这就是中缀表达式，计算机从左到右去扫描的话，扫到13，还要判断13后面是什么运算法，还要比较一下优先级，然后13还和后面的5做运算，做完运算之后，还要向前回退到 4 的位置，继续做加法，你说麻不麻烦！</p>
+<p>那么将中缀表达式，转化为后缀表达式之后：[“4”, “13”, “5”, “&#x2F;“, “+”] ，就不一样了，计算机可以利用栈里顺序处理，不需要考虑优先级了。也不用回退了， <strong>所以后缀表达式对计算机来说是非常友好的。</strong></p>
+<p>可以说本题不仅仅是一道好题，也展现出计算机的思考方式。</p>
+<p>在1970年代和1980年代，惠普在其所有台式和手持式计算器中都使用了RPN（后缀表达式），直到2020年代仍在某些模型中使用了RPN。</p>
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>栈</category>
+      </categories>
+      <tags>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>删除_链表01</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A801/</url>
+    <content><![CDATA[<h1 id="删除-链表01"><a href="#删除-链表01" class="headerlink" title="删除_链表01"></a>删除_链表01</h1><h3 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203.移除链表元素"></a>203.移除链表元素</h3><p><a href="https://leetcode.cn/problems/remove-linked-list-elements/">力扣题目链接(opens new window)</a></p>
+<p>题意：删除链表中等于给定值 val 的所有节点。</p>
+<p>示例 1：<br>输入：head &#x3D; [1,2,6,3,4,5,6], val &#x3D; 6<br>输出：[1,2,3,4,5]</p>
+<p>示例 2：<br>输入：head &#x3D; [], val &#x3D; 1<br>输出：[]</p>
+<p>示例 3：<br>输入：head &#x3D; [7,7,7,7], val &#x3D; 7<br>输出：[]</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了方便大家理解，我特意录制了视频：<a href="https://www.bilibili.com/video/BV18B4y1s7R9">手把手带你学会操作链表，移除链表元素 (opens new window)</a>，结合视频在看本题解，事半功倍。</p>
+<p>这里以链表 1 4 2 4 来举例，移除元素4。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095351161.png" alt="203_链表删除元素1"></p>
+<p>如果使用C，C++编程语言的话，不要忘了还要从内存中删除这两个移除的节点， 清理节点内存之后如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095418280.png" alt="203_链表删除元素2"></p>
+<p><strong>当然如果使用java ，python的话就不用手动管理内存了。</strong></p>
+<p>还要说明一下，就算使用C++来做leetcode，如果移除一个节点之后，没有手动在内存中删除这个节点，leetcode依然也是可以通过的，只不过，内存使用的空间大一些而已，但建议依然要养成手动清理内存的习惯。</p>
+<p>这种情况下的移除操作，就是让节点next指针直接指向下下一个节点就可以了，</p>
+<p>那么因为单链表的特殊性，只能指向下一个节点，刚刚删除的是链表的中第二个，和第四个节点，那么如果删除的是头结点又该怎么办呢？</p>
+<p>这里就涉及如下链表操作的两种方式：</p>
+<ul>
+<li><strong>直接使用原来的链表来进行删除操作。</strong></li>
+<li><strong>设置一个虚拟头结点在进行删除操作。</strong></li>
+</ul>
+<p>来看第一种操作：直接使用原来的链表来进行移除。</p>
+<p><img src="https://img-blog.csdnimg.cn/2021031609544922.png" alt="203_链表删除元素3"></p>
+<p>移除头结点和移除其他节点的操作是不一样的，因为链表的其他节点都是通过前一个节点来移除当前节点，而头结点没有前一个节点。</p>
+<p>所以头结点如何移除呢，其实只要将头结点向后移动一位就可以，这样就从链表中移除了一个头结点。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095512470.png" alt="203_链表删除元素4"></p>
+<p>依然别忘将原头结点从内存中删掉。 <img src="https://img-blog.csdnimg.cn/20210316095543775.png" alt="203_链表删除元素5"></p>
+<p>这样移除了一个头结点，是不是发现，在单链表中移除头结点 和 移除其他节点的操作方式是不一样，其实在写代码的时候也会发现，需要单独写一段逻辑来处理移除头结点的情况。</p>
+<p>那么可不可以 以一种统一的逻辑来移除 链表的节点呢。</p>
+<p>其实<strong>可以设置一个虚拟头结点</strong>，这样原链表的所有节点就都可以按照统一的方式进行移除了。</p>
+<p>来看看如何设置一个虚拟头。依然还是在这个链表中，移除元素1。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095619221.png" alt="203_链表删除元素6"></p>
+<p>这里来给链表添加一个虚拟头结点为新的头结点，此时要移除这个旧头结点元素1。</p>
+<p>这样是不是就可以使用和移除链表其他节点的方式统一了呢？</p>
+<p>来看一下，如何移除元素1 呢，还是熟悉的方式，然后从内存中删除元素1。</p>
+<p>最后呢在题目中，return 头结点的时候，别忘了 <code>return dummyNode-&gt;next;</code>， 这才是新的头结点</p>
+<p>java:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 添加虚节点方式</span></span><br><span class="line"><span class="comment"> * 时间复杂度 O(n)</span></span><br><span class="line"><span class="comment"> * 空间复杂度 O(1)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> val</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">removeElements</span><span class="params">(ListNode head, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>, head);</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> dummy;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>链表</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
       </tags>
   </entry>
   <entry>
@@ -1836,55 +1885,6 @@
 <p>此时我们就可以比较curA和curB是否相同，如果不相同，同时向后移动curA和curB，如果遇到curA &#x3D;&#x3D; curB，则找到交点。</p>
 <p>否则循环退出返回空指针。</p>
 <h3 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &#123;</span><br><span class="line">    	int lenA = 0;</span><br><span class="line">    	ListNode curA = headA;</span><br><span class="line">    	int lenB = 0;</span><br><span class="line">    	ListNode curB = headB;</span><br><span class="line">    	while(curA != null) &#123;</span><br><span class="line">    		lenA++;</span><br><span class="line">    		curA = curA.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	while(curB != null) &#123;</span><br><span class="line">    		lenB++;</span><br><span class="line">    		curB = curB.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	int gap = Math.abs(lenA-lenB);</span><br><span class="line">    	if(lenA &gt; lenB) &#123;</span><br><span class="line">    		while(gap-- &gt; 0) &#123;</span><br><span class="line">    			headA = headA.next;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125; else &#123;</span><br><span class="line">    		while(gap-- &gt; 0) &#123;</span><br><span class="line">    			headB = headB.next;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	while(headA != null) &#123;</span><br><span class="line">    		if(headA == headB) &#123;</span><br><span class="line">    			return headA;</span><br><span class="line">    		&#125;</span><br><span class="line">    		headA = headA.next;</span><br><span class="line">    		headB = headB.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>链表</category>
-      </categories>
-      <tags>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>删除_链表01</title>
-    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A801/</url>
-    <content><![CDATA[<h1 id="删除-链表01"><a href="#删除-链表01" class="headerlink" title="删除_链表01"></a>删除_链表01</h1><h3 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203.移除链表元素"></a>203.移除链表元素</h3><p><a href="https://leetcode.cn/problems/remove-linked-list-elements/">力扣题目链接(opens new window)</a></p>
-<p>题意：删除链表中等于给定值 val 的所有节点。</p>
-<p>示例 1：<br>输入：head &#x3D; [1,2,6,3,4,5,6], val &#x3D; 6<br>输出：[1,2,3,4,5]</p>
-<p>示例 2：<br>输入：head &#x3D; [], val &#x3D; 1<br>输出：[]</p>
-<p>示例 3：<br>输入：head &#x3D; [7,7,7,7], val &#x3D; 7<br>输出：[]</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了方便大家理解，我特意录制了视频：<a href="https://www.bilibili.com/video/BV18B4y1s7R9">手把手带你学会操作链表，移除链表元素 (opens new window)</a>，结合视频在看本题解，事半功倍。</p>
-<p>这里以链表 1 4 2 4 来举例，移除元素4。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095351161.png" alt="203_链表删除元素1"></p>
-<p>如果使用C，C++编程语言的话，不要忘了还要从内存中删除这两个移除的节点， 清理节点内存之后如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095418280.png" alt="203_链表删除元素2"></p>
-<p><strong>当然如果使用java ，python的话就不用手动管理内存了。</strong></p>
-<p>还要说明一下，就算使用C++来做leetcode，如果移除一个节点之后，没有手动在内存中删除这个节点，leetcode依然也是可以通过的，只不过，内存使用的空间大一些而已，但建议依然要养成手动清理内存的习惯。</p>
-<p>这种情况下的移除操作，就是让节点next指针直接指向下下一个节点就可以了，</p>
-<p>那么因为单链表的特殊性，只能指向下一个节点，刚刚删除的是链表的中第二个，和第四个节点，那么如果删除的是头结点又该怎么办呢？</p>
-<p>这里就涉及如下链表操作的两种方式：</p>
-<ul>
-<li><strong>直接使用原来的链表来进行删除操作。</strong></li>
-<li><strong>设置一个虚拟头结点在进行删除操作。</strong></li>
-</ul>
-<p>来看第一种操作：直接使用原来的链表来进行移除。</p>
-<p><img src="https://img-blog.csdnimg.cn/2021031609544922.png" alt="203_链表删除元素3"></p>
-<p>移除头结点和移除其他节点的操作是不一样的，因为链表的其他节点都是通过前一个节点来移除当前节点，而头结点没有前一个节点。</p>
-<p>所以头结点如何移除呢，其实只要将头结点向后移动一位就可以，这样就从链表中移除了一个头结点。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095512470.png" alt="203_链表删除元素4"></p>
-<p>依然别忘将原头结点从内存中删掉。 <img src="https://img-blog.csdnimg.cn/20210316095543775.png" alt="203_链表删除元素5"></p>
-<p>这样移除了一个头结点，是不是发现，在单链表中移除头结点 和 移除其他节点的操作方式是不一样，其实在写代码的时候也会发现，需要单独写一段逻辑来处理移除头结点的情况。</p>
-<p>那么可不可以 以一种统一的逻辑来移除 链表的节点呢。</p>
-<p>其实<strong>可以设置一个虚拟头结点</strong>，这样原链表的所有节点就都可以按照统一的方式进行移除了。</p>
-<p>来看看如何设置一个虚拟头。依然还是在这个链表中，移除元素1。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095619221.png" alt="203_链表删除元素6"></p>
-<p>这里来给链表添加一个虚拟头结点为新的头结点，此时要移除这个旧头结点元素1。</p>
-<p>这样是不是就可以使用和移除链表其他节点的方式统一了呢？</p>
-<p>来看一下，如何移除元素1 呢，还是熟悉的方式，然后从内存中删除元素1。</p>
-<p>最后呢在题目中，return 头结点的时候，别忘了 <code>return dummyNode-&gt;next;</code>， 这才是新的头结点</p>
-<p>java:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 添加虚节点方式</span></span><br><span class="line"><span class="comment"> * 时间复杂度 O(n)</span></span><br><span class="line"><span class="comment"> * 空间复杂度 O(1)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> val</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">removeElements</span><span class="params">(ListNode head, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>, head);</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> dummy;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2069,30 +2069,6 @@
       </tags>
   </entry>
   <entry>
-    <title>微信小程序电脑端抓包成功</title>
-    <url>/2022/08/01/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E6%88%90%E5%8A%9F/</url>
-    <content><![CDATA[<h1 id="微信小程序电脑端抓包成功"><a href="#微信小程序电脑端抓包成功" class="headerlink" title="微信小程序电脑端抓包成功"></a>微信小程序电脑端抓包成功</h1><h3 id="1-删除WMPFRuntime下的文件"><a href="#1-删除WMPFRuntime下的文件" class="headerlink" title="1.删除WMPFRuntime下的文件"></a>1.删除WMPFRuntime下的文件</h3><p>通过任务管理器找到该文件，右键打开文件位置，删除文件(记得先关掉vx才能删除)</p>
-<p><img src="https://s2.loli.net/2022/08/01/P8SgjxBsalvfIF9.png" alt="image-20220801221221116.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\hhh\AppData\Roaming\Tencent\WeChat\XPlugin\Plugins\WMPFRuntime</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2022/08/01/7GxiEdAQc2ODpIb.png" alt="image-20220801221331236.png"></p>
-<h2 id="2-重新打开微信进入小程序"><a href="#2-重新打开微信进入小程序" class="headerlink" title="2.重新打开微信进入小程序"></a>2.重新打开微信进入小程序</h2><p>打开小程序后，fiddle就能抓到包了</p>
-<p><img src="https://s2.loli.net/2022/08/01/W4QkLGF1hDcuqOi.png" alt="image-20220801221626752.png"></p>
-<p>小知识点(大佬教的)：小程序登录的原理是通过微信的wxlogin接口获取一个code，然后把code传到后端，后端调用微信的接口将code解成openid(一小程序中用户唯一标识)</p>
-<h2 id="3-pycharm中测试"><a href="#3-pycharm中测试" class="headerlink" title="3.pycharm中测试"></a>3.pycharm中测试</h2><p>源代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line">url = &#x27;https://api.shuidichou.com/api/charity/love-home/find-love-help-case-v2&#x27;</span><br><span class="line">data = &#123;</span><br><span class="line">    &#x27;Host&#x27;: &#x27;api.shuidichou.com&#x27;,</span><br><span class="line">    &#x27;Connection&#x27;: &#x27;keep-alive&#x27;,</span><br><span class="line">    &#x27;Content-Length&#x27;: &#x27;102&#x27;,</span><br><span class="line">    &#x27;User-Agent&#x27;: &#x27;&#x27;,</span><br><span class="line">    &#x27;content-type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;,</span><br><span class="line">    &#x27;Referer&#x27;: &#x27;https://servicewechat.com/wx6855c0f0e9cbb26e/74/page-frame.html&#x27;,</span><br><span class="line">    &#x27;AuthorizationV2&#x27;:&#x27;&#x27;,</span><br><span class="line">    &#x27;currentPage&#x27;:2,</span><br><span class="line">    &#x27;pageSize&#x27;:10,</span><br><span class="line">    &#x27;thirdType&#x27;:464</span><br><span class="line">&#125;</span><br><span class="line">res = requests.post(url=url,data=data).json()</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
-
-<p>效果展示：</p>
-<p><img src="https://s2.loli.net/2022/08/01/ZCX6I5KVsPHyY9u.png" alt="image-20220801225401920.png"></p>
-]]></content>
-      <categories>
-        <category>数据采集</category>
-      </categories>
-      <tags>
-        <tag>数据采集</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>天猫闲谈</title>
     <url>/2022/07/19/%E5%A4%A9%E7%8C%AB%E9%97%B2%E8%B0%88/</url>
     <content><![CDATA[<h1 id="天猫闲谈"><a href="#天猫闲谈" class="headerlink" title="天猫闲谈"></a>天猫闲谈</h1><h2 id="遇到的问题和解决方案"><a href="#遇到的问题和解决方案" class="headerlink" title="遇到的问题和解决方案"></a>遇到的问题和解决方案</h2><h3 id="SSL报错01"><a href="#SSL报错01" class="headerlink" title="SSL报错01"></a>SSL报错01</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  File &quot;C:\ProgramData\Anaconda3\lib\site-packages\requests\adapters.py&quot;, line 512, in send</span><br><span class="line">    raise SSLError(e, request=request)</span><br><span class="line">requests.exceptions.SSLError: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:833)</span><br></pre></td></tr></table></figure>
@@ -2135,6 +2111,30 @@
       </tags>
   </entry>
   <entry>
+    <title>微信小程序电脑端抓包成功</title>
+    <url>/2022/08/01/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E6%88%90%E5%8A%9F/</url>
+    <content><![CDATA[<h1 id="微信小程序电脑端抓包成功"><a href="#微信小程序电脑端抓包成功" class="headerlink" title="微信小程序电脑端抓包成功"></a>微信小程序电脑端抓包成功</h1><h3 id="1-删除WMPFRuntime下的文件"><a href="#1-删除WMPFRuntime下的文件" class="headerlink" title="1.删除WMPFRuntime下的文件"></a>1.删除WMPFRuntime下的文件</h3><p>通过任务管理器找到该文件，右键打开文件位置，删除文件(记得先关掉vx才能删除)</p>
+<p><img src="https://s2.loli.net/2022/08/01/P8SgjxBsalvfIF9.png" alt="image-20220801221221116.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\hhh\AppData\Roaming\Tencent\WeChat\XPlugin\Plugins\WMPFRuntime</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/08/01/7GxiEdAQc2ODpIb.png" alt="image-20220801221331236.png"></p>
+<h2 id="2-重新打开微信进入小程序"><a href="#2-重新打开微信进入小程序" class="headerlink" title="2.重新打开微信进入小程序"></a>2.重新打开微信进入小程序</h2><p>打开小程序后，fiddle就能抓到包了</p>
+<p><img src="https://s2.loli.net/2022/08/01/W4QkLGF1hDcuqOi.png" alt="image-20220801221626752.png"></p>
+<p>小知识点(大佬教的)：小程序登录的原理是通过微信的wxlogin接口获取一个code，然后把code传到后端，后端调用微信的接口将code解成openid(一小程序中用户唯一标识)</p>
+<h2 id="3-pycharm中测试"><a href="#3-pycharm中测试" class="headerlink" title="3.pycharm中测试"></a>3.pycharm中测试</h2><p>源代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line">url = &#x27;https://api.shuidichou.com/api/charity/love-home/find-love-help-case-v2&#x27;</span><br><span class="line">data = &#123;</span><br><span class="line">    &#x27;Host&#x27;: &#x27;api.shuidichou.com&#x27;,</span><br><span class="line">    &#x27;Connection&#x27;: &#x27;keep-alive&#x27;,</span><br><span class="line">    &#x27;Content-Length&#x27;: &#x27;102&#x27;,</span><br><span class="line">    &#x27;User-Agent&#x27;: &#x27;&#x27;,</span><br><span class="line">    &#x27;content-type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;,</span><br><span class="line">    &#x27;Referer&#x27;: &#x27;https://servicewechat.com/wx6855c0f0e9cbb26e/74/page-frame.html&#x27;,</span><br><span class="line">    &#x27;AuthorizationV2&#x27;:&#x27;&#x27;,</span><br><span class="line">    &#x27;currentPage&#x27;:2,</span><br><span class="line">    &#x27;pageSize&#x27;:10,</span><br><span class="line">    &#x27;thirdType&#x27;:464</span><br><span class="line">&#125;</span><br><span class="line">res = requests.post(url=url,data=data).json()</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+
+<p>效果展示：</p>
+<p><img src="https://s2.loli.net/2022/08/01/ZCX6I5KVsPHyY9u.png" alt="image-20220801225401920.png"></p>
+]]></content>
+      <categories>
+        <category>数据采集</category>
+      </categories>
+      <tags>
+        <tag>数据采集</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微信小程序采集失败原因</title>
     <url>/2022/07/31/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%87%87%E9%9B%86%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/</url>
     <content><![CDATA[<h1 id="微信小程序采集失败原因"><a href="#微信小程序采集失败原因" class="headerlink" title="微信小程序采集失败原因"></a>微信小程序采集失败原因</h1><p>现在微信都更新到了7..0以上的版本，使用charles抓包工具已经无法再抓到接口的数据。原因如下：安卓系统 7.0 以下版本，不管微信任意版本，都会信任系统提供的证书<br>安卓系统 7.0 以上版本，微信 7.0 以下版本，微信会信任系统提供的证书<br>安卓系统 7.0 以上版本，微信 7.0 以上版本，微信只信任它自己配置的证书列表</p>
@@ -2144,6 +2144,18 @@
       </categories>
       <tags>
         <tag>数据采集</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构</title>
+    <url>/2022/06/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>算法简史</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -2187,18 +2199,6 @@
       </categories>
       <tags>
         <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构</title>
-    <url>/2022/06/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>算法简史</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
