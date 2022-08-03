@@ -41,6 +41,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Redis安装教程</title>
+    <url>/2022/07/21/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B(windows)/</url>
+    <content><![CDATA[<h1 id="Redis安装教程"><a href="#Redis安装教程" class="headerlink" title="Redis安装教程"></a>Redis安装教程</h1><p>[安装地址链接](<a href="https://github.com/microsoftarchive/redis/releases">Releases · microsoftarchive&#x2F;redis (github.com)</a>)</p>
+<p><img src="https://s2.loli.net/2022/07/21/b5dmoDWpJIgaKs7.png" alt="image-20220721233543796"></p>
+<p>安装好后放在：</p>
+<p><img src="https://s2.loli.net/2022/07/21/pqJP1uMBg5TaRDL.png" alt="image-20220721233710217"></p>
+<p>启动服务：点开redis-serve.exe 打开客户端点开redis-cli.exe</p>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+        <tag>安装教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Redis命令大全</title>
     <url>/2022/07/04/Redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="Redis常用命令"><a href="#Redis常用命令" class="headerlink" title="Redis常用命令"></a>Redis常用命令</h1><p>本文记录常用的Redis命令 方便以后复习使用</p>
@@ -87,42 +104,6 @@
       <tags>
         <tag>Redis</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Redis安装教程</title>
-    <url>/2022/07/21/Redis%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B(windows)/</url>
-    <content><![CDATA[<h1 id="Redis安装教程"><a href="#Redis安装教程" class="headerlink" title="Redis安装教程"></a>Redis安装教程</h1><p>[安装地址链接](<a href="https://github.com/microsoftarchive/redis/releases">Releases · microsoftarchive&#x2F;redis (github.com)</a>)</p>
-<p><img src="https://s2.loli.net/2022/07/21/b5dmoDWpJIgaKs7.png" alt="image-20220721233543796"></p>
-<p>安装好后放在：</p>
-<p><img src="https://s2.loli.net/2022/07/21/pqJP1uMBg5TaRDL.png" alt="image-20220721233710217"></p>
-<p>启动服务：点开redis-serve.exe 打开客户端点开redis-cli.exe</p>
-]]></content>
-      <categories>
-        <category>Redis</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
-        <tag>安装教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/06/22/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p>thanks for your listenning</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>安卓7.0以上添加Fiddler证书到系统根证书</title>
@@ -224,25 +205,23 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Python文件基础</title>
-    <url>/2022/08/01/python%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="Python文件基础"><a href="#Python文件基础" class="headerlink" title="Python文件基础"></a>Python文件基础</h1><h2 id="关于文件的几点注意事项"><a href="#关于文件的几点注意事项" class="headerlink" title="关于文件的几点注意事项"></a>关于文件的几点注意事项</h2><h3 id="1-文件对象属性"><a href="#1-文件对象属性" class="headerlink" title="1.文件对象属性"></a>1.文件对象属性</h3><p>打开一个文件后，得到一个文件对象fp，通过它可以获得与该文件相关的各种信息。以下是与文件对象相关的所有属性。<br>· fp.closed：如果文件已被关闭，则返回True；否则返回False。<br>· fp.mode：打开文件的模式。<br>· fp.name：得到已被打开的文件的文件名。</p>
-<h3 id="2-列表中出现字符串“-ufeff”及其解决方案"><a href="#2-列表中出现字符串“-ufeff”及其解决方案" class="headerlink" title="2.列表中出现字符串“\ufeff”及其解决方案"></a>2.列表中出现字符串“\ufeff”及其解决方案</h3><p>举例36：\ufeff问题及其解决办法。<br>上述程序打开一个示例文件，但从结果中发现，在读取的内容中出现了\ufeff，而真正的文件内容是从“你好”开始的。<br>解决办法如下：<br>从上述改进后的程序中可以看出，解决\ufeff问题的关键在于通过utf-8-sig编码格式对字符串进行转码：decode(‘utf-8-sig’)。<br>由此得到启发，如果在打开文件时直接采用utf-8-sig编码格式，那么能不能解决这个乱码问题？答案是令人惊喜的，请看：<br>真的解决了！这是为什么呢？<br>实际上，需要从以下两种编码格式的本质加以阐述。<br>（1）UTF-8编码。它以字节为编码单元，字节顺序在所有系统中都相同，不存在字节序的问题，因此它并不需要字节序标记（Byte Order Mark，BOM）。<br>（2）utf-8-sig编码。<strong>它是一种带BOM的UTF-8编码格式</strong>，存在字节序的问题，必须带BOM以标识字节序，而BOM即字符U+FEFF。<strong>从Unicode 3.2开始，U+FEFF只能出现在字节流的开头</strong>，只能用于标识字节序。由此可知，列表中的字符串“\ufeff”并不是乱码，而是由于编码格式不一致才出现的。</p>
-<h2 id="利用Pygal模块对JSON格式的数据进行可视化"><a href="#利用Pygal模块对JSON格式的数据进行可视化" class="headerlink" title="利用Pygal模块对JSON格式的数据进行可视化"></a>利用Pygal模块对JSON格式的数据进行可视化</h2><p>[参考文档](<a href="https://zhuanlan.zhihu.com/p/341450079">Pygal，可导出矢量图的Python可视化利器 - 知乎 (zhihu.com)</a>)</p>
-<h3 id="安装并导入Pygal"><a href="#安装并导入Pygal" class="headerlink" title="安装并导入Pygal"></a>安装并导入Pygal</h3><p>使用pip或者conda进行安装，在命令行输入：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install pygal</span><br></pre></td></tr></table></figure>
+    <title>Hello World</title>
+    <url>/2022/06/22/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<p>thanks for your listenning</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="雷达图"><a href="#雷达图" class="headerlink" title="雷达图"></a>雷达图</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">radar_chart = pygal.Radar()</span><br><span class="line">radar_chart.title = <span class="string">&#x27;V8 benchmark results&#x27;</span></span><br><span class="line">radar_chart.x_labels = [<span class="string">&#x27;Richards&#x27;</span>, <span class="string">&#x27;DeltaBlue&#x27;</span>, <span class="string">&#x27;Crypto&#x27;</span>, <span class="string">&#x27;RayTrace&#x27;</span>, <span class="string">&#x27;EarleyBoyer&#x27;</span>, <span class="string">&#x27;RegExp&#x27;</span>, <span class="string">&#x27;Splay&#x27;</span>, <span class="string">&#x27;NavierStokes&#x27;</span>]</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Chrome&#x27;</span>, [<span class="number">6395</span>, <span class="number">8212</span>, <span class="number">7520</span>, <span class="number">7218</span>, <span class="number">12464</span>, <span class="number">1660</span>, <span class="number">2123</span>, <span class="number">8607</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Firefox&#x27;</span>, [<span class="number">7473</span>, <span class="number">8099</span>, <span class="number">11700</span>, <span class="number">2651</span>, <span class="number">6361</span>, <span class="number">1044</span>, <span class="number">3797</span>, <span class="number">9450</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Opera&#x27;</span>, [<span class="number">3472</span>, <span class="number">2933</span>, <span class="number">4203</span>, <span class="number">5229</span>, <span class="number">5810</span>, <span class="number">1828</span>, <span class="number">9013</span>, <span class="number">4669</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;IE&#x27;</span>, [<span class="number">43</span>, <span class="number">41</span>, <span class="number">59</span>, <span class="number">79</span>, <span class="number">144</span>, <span class="number">136</span>, <span class="number">34</span>, <span class="number">102</span>])</span><br><span class="line">radar_chart.render()</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>效果如下：</p>
-<p><img src="https://s2.loli.net/2022/08/01/zxv9W8fr71P3ew6.png" alt="image-20220801102051712"></p>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-      <categories>
-        <category>python基础</category>
-      </categories>
-      <tags>
-        <tag>python基础</tag>
-      </tags>
   </entry>
   <entry>
     <title>Python模块</title>
@@ -282,6 +261,27 @@
       </tags>
   </entry>
   <entry>
+    <title>Python文件基础</title>
+    <url>/2022/08/01/python%E6%96%87%E4%BB%B6%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="Python文件基础"><a href="#Python文件基础" class="headerlink" title="Python文件基础"></a>Python文件基础</h1><h2 id="关于文件的几点注意事项"><a href="#关于文件的几点注意事项" class="headerlink" title="关于文件的几点注意事项"></a>关于文件的几点注意事项</h2><h3 id="1-文件对象属性"><a href="#1-文件对象属性" class="headerlink" title="1.文件对象属性"></a>1.文件对象属性</h3><p>打开一个文件后，得到一个文件对象fp，通过它可以获得与该文件相关的各种信息。以下是与文件对象相关的所有属性。<br>· fp.closed：如果文件已被关闭，则返回True；否则返回False。<br>· fp.mode：打开文件的模式。<br>· fp.name：得到已被打开的文件的文件名。</p>
+<h3 id="2-列表中出现字符串“-ufeff”及其解决方案"><a href="#2-列表中出现字符串“-ufeff”及其解决方案" class="headerlink" title="2.列表中出现字符串“\ufeff”及其解决方案"></a>2.列表中出现字符串“\ufeff”及其解决方案</h3><p>举例36：\ufeff问题及其解决办法。<br>上述程序打开一个示例文件，但从结果中发现，在读取的内容中出现了\ufeff，而真正的文件内容是从“你好”开始的。<br>解决办法如下：<br>从上述改进后的程序中可以看出，解决\ufeff问题的关键在于通过utf-8-sig编码格式对字符串进行转码：decode(‘utf-8-sig’)。<br>由此得到启发，如果在打开文件时直接采用utf-8-sig编码格式，那么能不能解决这个乱码问题？答案是令人惊喜的，请看：<br>真的解决了！这是为什么呢？<br>实际上，需要从以下两种编码格式的本质加以阐述。<br>（1）UTF-8编码。它以字节为编码单元，字节顺序在所有系统中都相同，不存在字节序的问题，因此它并不需要字节序标记（Byte Order Mark，BOM）。<br>（2）utf-8-sig编码。<strong>它是一种带BOM的UTF-8编码格式</strong>，存在字节序的问题，必须带BOM以标识字节序，而BOM即字符U+FEFF。<strong>从Unicode 3.2开始，U+FEFF只能出现在字节流的开头</strong>，只能用于标识字节序。由此可知，列表中的字符串“\ufeff”并不是乱码，而是由于编码格式不一致才出现的。</p>
+<h2 id="利用Pygal模块对JSON格式的数据进行可视化"><a href="#利用Pygal模块对JSON格式的数据进行可视化" class="headerlink" title="利用Pygal模块对JSON格式的数据进行可视化"></a>利用Pygal模块对JSON格式的数据进行可视化</h2><p>[参考文档](<a href="https://zhuanlan.zhihu.com/p/341450079">Pygal，可导出矢量图的Python可视化利器 - 知乎 (zhihu.com)</a>)</p>
+<h3 id="安装并导入Pygal"><a href="#安装并导入Pygal" class="headerlink" title="安装并导入Pygal"></a>安装并导入Pygal</h3><p>使用pip或者conda进行安装，在命令行输入：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install pygal</span><br></pre></td></tr></table></figure>
+
+<h3 id="雷达图"><a href="#雷达图" class="headerlink" title="雷达图"></a>雷达图</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">radar_chart = pygal.Radar()</span><br><span class="line">radar_chart.title = <span class="string">&#x27;V8 benchmark results&#x27;</span></span><br><span class="line">radar_chart.x_labels = [<span class="string">&#x27;Richards&#x27;</span>, <span class="string">&#x27;DeltaBlue&#x27;</span>, <span class="string">&#x27;Crypto&#x27;</span>, <span class="string">&#x27;RayTrace&#x27;</span>, <span class="string">&#x27;EarleyBoyer&#x27;</span>, <span class="string">&#x27;RegExp&#x27;</span>, <span class="string">&#x27;Splay&#x27;</span>, <span class="string">&#x27;NavierStokes&#x27;</span>]</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Chrome&#x27;</span>, [<span class="number">6395</span>, <span class="number">8212</span>, <span class="number">7520</span>, <span class="number">7218</span>, <span class="number">12464</span>, <span class="number">1660</span>, <span class="number">2123</span>, <span class="number">8607</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Firefox&#x27;</span>, [<span class="number">7473</span>, <span class="number">8099</span>, <span class="number">11700</span>, <span class="number">2651</span>, <span class="number">6361</span>, <span class="number">1044</span>, <span class="number">3797</span>, <span class="number">9450</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;Opera&#x27;</span>, [<span class="number">3472</span>, <span class="number">2933</span>, <span class="number">4203</span>, <span class="number">5229</span>, <span class="number">5810</span>, <span class="number">1828</span>, <span class="number">9013</span>, <span class="number">4669</span>])</span><br><span class="line">radar_chart.add(<span class="string">&#x27;IE&#x27;</span>, [<span class="number">43</span>, <span class="number">41</span>, <span class="number">59</span>, <span class="number">79</span>, <span class="number">144</span>, <span class="number">136</span>, <span class="number">34</span>, <span class="number">102</span>])</span><br><span class="line">radar_chart.render()</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<p><img src="https://s2.loli.net/2022/08/01/zxv9W8fr71P3ew6.png" alt="image-20220801102051712"></p>
+]]></content>
+      <categories>
+        <category>python基础</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python面向对象基础</title>
     <url>/2022/08/01/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="python面向对象基础"><a href="#python面向对象基础" class="headerlink" title="python面向对象基础"></a>python面向对象基础</h1><h2 id="init-方法"><a href="#init-方法" class="headerlink" title="init_()方法"></a><em>init</em>_()方法</h2><p><em>init</em><em>()方法又被称为“构造函数”，它有以下4个特性。<br>（1）该方法很特殊。init前后均有双下画线“__”，它的<u>第一个参数必须是“self”</u>，其意义同其他方法一样，而其他参数用于设置实例的属性，数量不限。该方法不能使用return语句。<br>（2）__init</em>_()方法可在类中的任何位置被定义。<br>（3）在由类创建一个新的实例时，该方法被自动调用一次。即每创建一个实例，该方法都会被调用一次。<br>（4）常用该方法定义实例的属性，但定义实例的属性不局限于该方法。换言之，在其他方法中同样可以定义实例的属性。</p>
@@ -298,6 +298,64 @@
       </categories>
       <tags>
         <tag>python基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二叉树的迭代遍历_二叉树02</title>
+    <url>/2022/07/30/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9102/</url>
+    <content><![CDATA[<h1 id="二叉树的迭代遍历"><a href="#二叉树的迭代遍历" class="headerlink" title="二叉树的迭代遍历"></a>二叉树的迭代遍历</h1><blockquote>
+<p>听说还可以用非递归的方式</p>
+</blockquote>
+<p>看完本篇大家可以使用迭代法，再重新解决如下三道leetcode上的题目：</p>
+<ul>
+<li><a href="https://leetcode.cn/problems/binary-tree-preorder-traversal/">144.二叉树的前序遍历(opens new window)</a></li>
+<li><a href="https://leetcode.cn/problems/binary-tree-inorder-traversal/">94.二叉树的中序遍历(opens new window)</a></li>
+<li><a href="https://leetcode.cn/problems/binary-tree-postorder-traversal/">145.二叉树的后序遍历(opens new window)</a></li>
+</ul>
+<p>为什么可以用迭代法（非递归的方式）来实现二叉树的前后中序遍历呢？</p>
+<p>我们在<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">栈与队列：匹配问题都是栈的强项 (opens new window)</a>中提到了，<strong>递归的实现就是：每一次递归调用都会把函数的局部变量、参数值和返回地址等压入调用栈中</strong>，然后递归返回的时候，从栈顶弹出上一次递归的各项参数，所以这就是递归为什么可以返回上一层位置的原因。</p>
+<p>此时大家应该知道我们用栈也可以是实现二叉树的前后中序遍历了。</p>
+<h2 id="前序遍历（迭代法）"><a href="#前序遍历（迭代法）" class="headerlink" title="#前序遍历（迭代法）"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86-%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>前序遍历（迭代法）</h2><p>我们先看一下前序遍历。</p>
+<p>前序遍历是中左右，每次先处理的是中间节点，那么先将根节点放入栈中，然后将右孩子加入栈，再加入左孩子。</p>
+<p>为什么要先加入 右孩子，再加入左孩子呢？ 因为这样出栈的时候才是中左右的顺序。</p>
+<p>动画如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbmss7603g30eq0d4b2a.gif" alt="二叉树前序遍历（迭代法）"></p>
+<p>此时会发现貌似使用迭代法写出前序遍历并不难，确实不难。</p>
+<p><strong>此时是不是想改一点前序遍历代码顺序就把中序遍历搞出来了？</strong></p>
+<p>其实还真不行！</p>
+<p>但接下来，<strong>再用迭代法写中序遍历的时候，会发现套路又不一样了，目前的前序遍历的逻辑无法直接应用到中序遍历上。</strong></p>
+<h2 id="中序遍历（迭代法）"><a href="#中序遍历（迭代法）" class="headerlink" title="#中序遍历（迭代法）"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86-%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>中序遍历（迭代法）</h2><p>为了解释清楚，我说明一下 刚刚在迭代的过程中，其实我们有两个操作：</p>
+<ol>
+<li><strong>处理：将元素放进result数组中</strong></li>
+<li><strong>访问：遍历节点</strong></li>
+</ol>
+<p>分析一下为什么刚刚写的前序遍历的代码，不能和中序遍历通用呢，因为前序遍历的顺序是中左右，先访问的元素是中间节点，要处理的元素也是中间节点，所以刚刚才能写出相对简洁的代码，<strong>因为要访问的元素和要处理的元素顺序是一致的，都是中间节点。</strong></p>
+<p>那么再看看中序遍历，中序遍历是左中右，先访问的是二叉树顶部的节点，然后一层一层向下访问，直到到达树左面的最底部，再开始处理节点（也就是在把节点的数值放进result数组中），这就造成了<strong>处理顺序和访问顺序是不一致的。</strong></p>
+<p>那么<strong>在使用迭代法写中序遍历，就需要借用指针的遍历来帮助访问节点，栈则用来处理节点上的元素。</strong></p>
+<p>动画如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbmuj244bg30eq0d4kjm.gif" alt="二叉树中序遍历（迭代法）"></p>
+<p><strong>中序遍历，可以写出如下代码：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">inorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; result;</span><br><span class="line">        stack&lt;TreeNode*&gt; st;</span><br><span class="line">        TreeNode* cur = root;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="literal">NULL</span> || !st.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cur != <span class="literal">NULL</span>) &#123; <span class="comment">// 指针来访问节点，访问到最底层</span></span><br><span class="line">                st.<span class="built_in">push</span>(cur); <span class="comment">// 将访问的节点放进栈</span></span><br><span class="line">                cur = cur-&gt;left;                <span class="comment">// 左</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur = st.<span class="built_in">top</span>(); <span class="comment">// 从栈里弹出的数据，就是要处理的数据（放进result数组里的数据）</span></span><br><span class="line">                st.<span class="built_in">pop</span>();</span><br><span class="line">                result.<span class="built_in">push_back</span>(cur-&gt;val);     <span class="comment">// 中</span></span><br><span class="line">                cur = cur-&gt;right;               <span class="comment">// 右</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="后序遍历（迭代法）"><a href="#后序遍历（迭代法）" class="headerlink" title="#后序遍历（迭代法）"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86-%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>后序遍历（迭代法）</h2><p>再来看后序遍历，先序遍历是中左右，后续遍历是左右中，那么我们只需要调整一下先序遍历的代码顺序，就变成中右左的遍历顺序，然后在反转result数组，输出的结果顺序就是左右中了，如下图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200808200338924.png" alt="前序到后序"></p>
+<p><strong>所以后序遍历只需要前序遍历的代码稍作修改就可以了，代码如下：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        stack&lt;TreeNode*&gt; st;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; result;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> result;</span><br><span class="line">        st.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="keyword">while</span> (!st.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            TreeNode* node = st.<span class="built_in">top</span>();</span><br><span class="line">            st.<span class="built_in">pop</span>();</span><br><span class="line">            result.<span class="built_in">push_back</span>(node-&gt;val);</span><br><span class="line">            <span class="keyword">if</span> (node-&gt;left) st.<span class="built_in">push</span>(node-&gt;left); <span class="comment">// 相对于前序遍历，这更改一下入栈顺序 （空节点不入栈）</span></span><br><span class="line">            <span class="keyword">if</span> (node-&gt;right) st.<span class="built_in">push</span>(node-&gt;right); <span class="comment">// 空节点不入栈</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">reverse</span>(result.<span class="built_in">begin</span>(), result.<span class="built_in">end</span>()); <span class="comment">// 将结果反转之后就是左右中的顺序了</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="#总结"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E6%80%BB%E7%BB%93">#</a>总结</h1><p>此时我们用迭代法写出了二叉树的前后中序遍历，大家可以看出前序和中序是完全两种代码风格，并不像递归写法那样代码稍做调整，就可以实现前后中序。</p>
+<p><strong>这是因为前序遍历中访问节点（遍历节点）和处理节点（将元素放进result数组中）可以同步处理，但是中序就无法做到同步！</strong></p>
+<p>上面这句话，可能一些同学不太理解，建议自己亲手用迭代法，先写出来前序，再试试能不能写出中序，就能理解了。</p>
+<p><strong>那么问题又来了，难道 二叉树前后中序遍历的迭代法实现，就不能风格统一么（即前序遍历 改变代码顺序就可以实现中序 和 后序）？</strong></p>
+<p>当然可以，这种写法，还不是很好理解，我们将在下一篇文章里重点讲解，敬请期待！</p>
+<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// 前序遍历</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> res;</span><br><span class="line">        Deque&lt;TreeNode&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        que.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!que.isEmpty()) &#123;</span><br><span class="line">            <span class="type">TreeNode</span> <span class="variable">temp</span> <span class="operator">=</span> que.pop();</span><br><span class="line">            res.add(temp.val);</span><br><span class="line">            <span class="keyword">if</span>(temp.right != <span class="literal">null</span>) que.push(temp.right);</span><br><span class="line">            <span class="keyword">if</span>(temp.left != <span class="literal">null</span>) que.push(temp.left);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 中序遍历</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> res;</span><br><span class="line">        Deque&lt;Integer&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">cur</span> <span class="operator">=</span> root;</span><br><span class="line">        <span class="comment">// 先把最左边的节点全都压入栈当中 如果没有左孩子节点了的话 栈弹出一个元素 再看弹出元素的右孩子</span></span><br><span class="line">        <span class="keyword">while</span>(cur != <span class="literal">null</span> || !que.isEmpty()) &#123;</span><br><span class="line">                	<span class="keyword">if</span>(cur != <span class="literal">null</span>) &#123;</span><br><span class="line">                         que.push(cur);</span><br><span class="line">                         cur = cur.left;</span><br><span class="line">                    &#125;</span><br><span class="line">                	<span class="keyword">else</span> &#123;</span><br><span class="line">                        cur = que.pop();</span><br><span class="line">                        res.add(cur.val);</span><br><span class="line">                        cur = cur.right;</span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">// 后序遍历</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="comment">// 中左右 -&gt; 中右左 -&gt; Collections.reverse</span></span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        Deque&lt;Integer&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        que.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!que.isEmpty()) &#123;</span><br><span class="line">            <span class="type">TreeNode</span> <span class="variable">node</span> <span class="operator">=</span> que.pop();</span><br><span class="line">            res.add(node.val); </span><br><span class="line">            <span class="keyword">if</span>(node.left != <span class="literal">null</span>) que.push(node.left);</span><br><span class="line">            <span class="keyword">if</span>(node.right != <span class="literal">null</span>) que.push(node.right);</span><br><span class="line">        &#125;</span><br><span class="line">        Collections.reverse(res);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>二叉树</category>
+      </categories>
+      <tags>
+        <tag>二叉树</tag>
       </tags>
   </entry>
   <entry>
@@ -362,64 +420,6 @@
       </tags>
   </entry>
   <entry>
-    <title>二叉树的迭代遍历_二叉树02</title>
-    <url>/2022/07/30/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9102/</url>
-    <content><![CDATA[<h1 id="二叉树的迭代遍历"><a href="#二叉树的迭代遍历" class="headerlink" title="二叉树的迭代遍历"></a>二叉树的迭代遍历</h1><blockquote>
-<p>听说还可以用非递归的方式</p>
-</blockquote>
-<p>看完本篇大家可以使用迭代法，再重新解决如下三道leetcode上的题目：</p>
-<ul>
-<li><a href="https://leetcode.cn/problems/binary-tree-preorder-traversal/">144.二叉树的前序遍历(opens new window)</a></li>
-<li><a href="https://leetcode.cn/problems/binary-tree-inorder-traversal/">94.二叉树的中序遍历(opens new window)</a></li>
-<li><a href="https://leetcode.cn/problems/binary-tree-postorder-traversal/">145.二叉树的后序遍历(opens new window)</a></li>
-</ul>
-<p>为什么可以用迭代法（非递归的方式）来实现二叉树的前后中序遍历呢？</p>
-<p>我们在<a href="https://programmercarl.com/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">栈与队列：匹配问题都是栈的强项 (opens new window)</a>中提到了，<strong>递归的实现就是：每一次递归调用都会把函数的局部变量、参数值和返回地址等压入调用栈中</strong>，然后递归返回的时候，从栈顶弹出上一次递归的各项参数，所以这就是递归为什么可以返回上一层位置的原因。</p>
-<p>此时大家应该知道我们用栈也可以是实现二叉树的前后中序遍历了。</p>
-<h2 id="前序遍历（迭代法）"><a href="#前序遍历（迭代法）" class="headerlink" title="#前序遍历（迭代法）"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86-%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>前序遍历（迭代法）</h2><p>我们先看一下前序遍历。</p>
-<p>前序遍历是中左右，每次先处理的是中间节点，那么先将根节点放入栈中，然后将右孩子加入栈，再加入左孩子。</p>
-<p>为什么要先加入 右孩子，再加入左孩子呢？ 因为这样出栈的时候才是中左右的顺序。</p>
-<p>动画如下：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbmss7603g30eq0d4b2a.gif" alt="二叉树前序遍历（迭代法）"></p>
-<p>此时会发现貌似使用迭代法写出前序遍历并不难，确实不难。</p>
-<p><strong>此时是不是想改一点前序遍历代码顺序就把中序遍历搞出来了？</strong></p>
-<p>其实还真不行！</p>
-<p>但接下来，<strong>再用迭代法写中序遍历的时候，会发现套路又不一样了，目前的前序遍历的逻辑无法直接应用到中序遍历上。</strong></p>
-<h2 id="中序遍历（迭代法）"><a href="#中序遍历（迭代法）" class="headerlink" title="#中序遍历（迭代法）"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86-%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>中序遍历（迭代法）</h2><p>为了解释清楚，我说明一下 刚刚在迭代的过程中，其实我们有两个操作：</p>
-<ol>
-<li><strong>处理：将元素放进result数组中</strong></li>
-<li><strong>访问：遍历节点</strong></li>
-</ol>
-<p>分析一下为什么刚刚写的前序遍历的代码，不能和中序遍历通用呢，因为前序遍历的顺序是中左右，先访问的元素是中间节点，要处理的元素也是中间节点，所以刚刚才能写出相对简洁的代码，<strong>因为要访问的元素和要处理的元素顺序是一致的，都是中间节点。</strong></p>
-<p>那么再看看中序遍历，中序遍历是左中右，先访问的是二叉树顶部的节点，然后一层一层向下访问，直到到达树左面的最底部，再开始处理节点（也就是在把节点的数值放进result数组中），这就造成了<strong>处理顺序和访问顺序是不一致的。</strong></p>
-<p>那么<strong>在使用迭代法写中序遍历，就需要借用指针的遍历来帮助访问节点，栈则用来处理节点上的元素。</strong></p>
-<p>动画如下：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbmuj244bg30eq0d4kjm.gif" alt="二叉树中序遍历（迭代法）"></p>
-<p><strong>中序遍历，可以写出如下代码：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">inorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; result;</span><br><span class="line">        stack&lt;TreeNode*&gt; st;</span><br><span class="line">        TreeNode* cur = root;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="literal">NULL</span> || !st.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cur != <span class="literal">NULL</span>) &#123; <span class="comment">// 指针来访问节点，访问到最底层</span></span><br><span class="line">                st.<span class="built_in">push</span>(cur); <span class="comment">// 将访问的节点放进栈</span></span><br><span class="line">                cur = cur-&gt;left;                <span class="comment">// 左</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur = st.<span class="built_in">top</span>(); <span class="comment">// 从栈里弹出的数据，就是要处理的数据（放进result数组里的数据）</span></span><br><span class="line">                st.<span class="built_in">pop</span>();</span><br><span class="line">                result.<span class="built_in">push_back</span>(cur-&gt;val);     <span class="comment">// 中</span></span><br><span class="line">                cur = cur-&gt;right;               <span class="comment">// 右</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="后序遍历（迭代法）"><a href="#后序遍历（迭代法）" class="headerlink" title="#后序遍历（迭代法）"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86-%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>后序遍历（迭代法）</h2><p>再来看后序遍历，先序遍历是中左右，后续遍历是左右中，那么我们只需要调整一下先序遍历的代码顺序，就变成中右左的遍历顺序，然后在反转result数组，输出的结果顺序就是左右中了，如下图：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200808200338924.png" alt="前序到后序"></p>
-<p><strong>所以后序遍历只需要前序遍历的代码稍作修改就可以了，代码如下：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        stack&lt;TreeNode*&gt; st;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; result;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> result;</span><br><span class="line">        st.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="keyword">while</span> (!st.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            TreeNode* node = st.<span class="built_in">top</span>();</span><br><span class="line">            st.<span class="built_in">pop</span>();</span><br><span class="line">            result.<span class="built_in">push_back</span>(node-&gt;val);</span><br><span class="line">            <span class="keyword">if</span> (node-&gt;left) st.<span class="built_in">push</span>(node-&gt;left); <span class="comment">// 相对于前序遍历，这更改一下入栈顺序 （空节点不入栈）</span></span><br><span class="line">            <span class="keyword">if</span> (node-&gt;right) st.<span class="built_in">push</span>(node-&gt;right); <span class="comment">// 空节点不入栈</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">reverse</span>(result.<span class="built_in">begin</span>(), result.<span class="built_in">end</span>()); <span class="comment">// 将结果反转之后就是左右中的顺序了</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h1 id="总结"><a href="#总结" class="headerlink" title="#总结"></a><a href="https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86.html#%E6%80%BB%E7%BB%93">#</a>总结</h1><p>此时我们用迭代法写出了二叉树的前后中序遍历，大家可以看出前序和中序是完全两种代码风格，并不像递归写法那样代码稍做调整，就可以实现前后中序。</p>
-<p><strong>这是因为前序遍历中访问节点（遍历节点）和处理节点（将元素放进result数组中）可以同步处理，但是中序就无法做到同步！</strong></p>
-<p>上面这句话，可能一些同学不太理解，建议自己亲手用迭代法，先写出来前序，再试试能不能写出中序，就能理解了。</p>
-<p><strong>那么问题又来了，难道 二叉树前后中序遍历的迭代法实现，就不能风格统一么（即前序遍历 改变代码顺序就可以实现中序 和 后序）？</strong></p>
-<p>当然可以，这种写法，还不是很好理解，我们将在下一篇文章里重点讲解，敬请期待！</p>
-<h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// 前序遍历</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> res;</span><br><span class="line">        Deque&lt;TreeNode&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        que.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!que.isEmpty()) &#123;</span><br><span class="line">            <span class="type">TreeNode</span> <span class="variable">temp</span> <span class="operator">=</span> que.pop();</span><br><span class="line">            res.add(temp.val);</span><br><span class="line">            <span class="keyword">if</span>(temp.right != <span class="literal">null</span>) que.push(temp.right);</span><br><span class="line">            <span class="keyword">if</span>(temp.left != <span class="literal">null</span>) que.push(temp.left);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 中序遍历</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> res;</span><br><span class="line">        Deque&lt;Integer&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">cur</span> <span class="operator">=</span> root;</span><br><span class="line">        <span class="comment">// 先把最左边的节点全都压入栈当中 如果没有左孩子节点了的话 栈弹出一个元素 再看弹出元素的右孩子</span></span><br><span class="line">        <span class="keyword">while</span>(cur != <span class="literal">null</span> || !que.isEmpty()) &#123;</span><br><span class="line">                	<span class="keyword">if</span>(cur != <span class="literal">null</span>) &#123;</span><br><span class="line">                         que.push(cur);</span><br><span class="line">                         cur = cur.left;</span><br><span class="line">                    &#125;</span><br><span class="line">                	<span class="keyword">else</span> &#123;</span><br><span class="line">                        cur = que.pop();</span><br><span class="line">                        res.add(cur.val);</span><br><span class="line">                        cur = cur.right;</span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">// 后序遍历</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="comment">// 中左右 -&gt; 中右左 -&gt; Collections.reverse</span></span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        Deque&lt;Integer&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        que.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!que.isEmpty()) &#123;</span><br><span class="line">            <span class="type">TreeNode</span> <span class="variable">node</span> <span class="operator">=</span> que.pop();</span><br><span class="line">            res.add(node.val); </span><br><span class="line">            <span class="keyword">if</span>(node.left != <span class="literal">null</span>) que.push(node.left);</span><br><span class="line">            <span class="keyword">if</span>(node.right != <span class="literal">null</span>) que.push(node.right);</span><br><span class="line">        &#125;</span><br><span class="line">        Collections.reverse(res);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>二叉树</category>
-      </categories>
-      <tags>
-        <tag>二叉树</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>二叉树层序遍历登场_二叉树03</title>
     <url>/2022/07/30/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9103%20/</url>
     <content><![CDATA[<h1 id="二叉树层序遍历登场！"><a href="#二叉树层序遍历登场！" class="headerlink" title="二叉树层序遍历登场！"></a>二叉树层序遍历登场！</h1><p>学会二叉树的层序遍历，可以一口气打完以下十题：</p>
@@ -467,8 +467,218 @@
       </tags>
   </entry>
   <entry>
-    <title>二叉树的递归遍历_二叉树04</title>
+    <title>二叉树的最大深度_二叉树04</title>
     <url>/2022/07/30/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9104/</url>
+    <content><![CDATA[<h1 id="104-二叉树的最大深度"><a href="#104-二叉树的最大深度" class="headerlink" title="104.二叉树的最大深度"></a>104.二叉树的最大深度</h1><p><a href="https://leetcode.cn/problems/maximum-depth-of-binary-tree/">力扣题目链接(opens new window)</a></p>
+<p>给定一个二叉树，找出其最大深度。</p>
+<p>二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。</p>
+<p>说明: 叶子节点是指没有子节点的节点。</p>
+<p>示例： 给定二叉树 [3,9,20,null,null,15,7]，</p>
+<p><img src="https://img-blog.csdnimg.cn/20210203153031914.png" alt="104. 二叉树的最大深度"></p>
+<p>返回它的最大深度 3 。</p>
+<h2 id="递归法"><a href="#递归法" class="headerlink" title="#递归法"></a><a href="https://programmercarl.com/0104.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.html#%E9%80%92%E5%BD%92%E6%B3%95">#</a>递归法</h2><p>本题可以使用前序（中左右），也可以使用后序遍历（左右中），使用前序求的就是深度，使用后序求的是高度。</p>
+<p><strong>而根节点的高度就是二叉树的最大深度</strong>，所以本题中我们通过后序求的根节点高度来求的二叉树最大深度。</p>
+<p>这一点其实是很多同学没有想清楚的，很多题解同样没有讲清楚。</p>
+<p>我先用后序遍历（左右中）来计算树的高度。</p>
+<ol>
+<li>确定递归函数的参数和返回值：参数就是传入树的根节点，返回就返回这棵树的深度，所以返回值为int类型。</li>
+</ol>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">getdepth</span><span class="params">(treenode* node)</span></span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>确定终止条件：如果为空节点的话，就返回0，表示高度为0。</li>
+</ol>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (node == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>确定单层递归的逻辑：先求它的左子树的深度，再求的右子树的深度，最后取左右深度最大的数值 再+1 （加1是因为算上当前中间节点）就是目前节点为根节点的树的深度。</li>
+</ol>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> leftdepth = <span class="built_in">getdepth</span>(node-&gt;left);       <span class="comment">// 左</span></span><br><span class="line"><span class="type">int</span> rightdepth = <span class="built_in">getdepth</span>(node-&gt;right);     <span class="comment">// 右</span></span><br><span class="line"><span class="type">int</span> depth = <span class="number">1</span> + <span class="built_in">max</span>(leftdepth, rightdepth); <span class="comment">// 中</span></span><br><span class="line"><span class="keyword">return</span> depth;</span><br></pre></td></tr></table></figure>
+
+<p>所以整体c++代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getdepth</span><span class="params">(treenode* node)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (node == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> leftdepth = <span class="built_in">getdepth</span>(node-&gt;left);       <span class="comment">// 左</span></span><br><span class="line">        <span class="type">int</span> rightdepth = <span class="built_in">getdepth</span>(node-&gt;right);     <span class="comment">// 右</span></span><br><span class="line">        <span class="type">int</span> depth = <span class="number">1</span> + <span class="built_in">max</span>(leftdepth, rightdepth); <span class="comment">// 中</span></span><br><span class="line">        <span class="keyword">return</span> depth;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxdepth</span><span class="params">(treenode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">getdepth</span>(root);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>代码精简之后c++代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxdepth</span><span class="params">(treenode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == null) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> + <span class="built_in">max</span>(<span class="built_in">maxdepth</span>(root-&gt;left), <span class="built_in">maxdepth</span>(root-&gt;right));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>精简之后的代码根本看不出是哪种遍历方式，也看不出递归三部曲的步骤，所以如果对二叉树的操作还不熟练，尽量不要直接照着精简代码来学。</strong></p>
+<p>本题当然也可以使用前序，代码如下：(<strong>充分表现出求深度回溯的过程</strong>)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> result;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">getdepth</span><span class="params">(treenode* node, <span class="type">int</span> depth)</span> </span>&#123;</span><br><span class="line">        result = depth &gt; result ? depth : result; <span class="comment">// 中</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (node-&gt;left == <span class="literal">NULL</span> &amp;&amp; node-&gt;right == <span class="literal">NULL</span>) <span class="keyword">return</span> ;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (node-&gt;left) &#123; <span class="comment">// 左</span></span><br><span class="line">            depth++;    <span class="comment">// 深度+1</span></span><br><span class="line">            <span class="built_in">getdepth</span>(node-&gt;left, depth);</span><br><span class="line">            depth--;    <span class="comment">// 回溯，深度-1</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;right) &#123; <span class="comment">// 右</span></span><br><span class="line">            depth++;    <span class="comment">// 深度+1</span></span><br><span class="line">            <span class="built_in">getdepth</span>(node-&gt;right, depth);</span><br><span class="line">            depth--;    <span class="comment">// 回溯，深度-1</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxdepth</span><span class="params">(treenode* root)</span> </span>&#123;</span><br><span class="line">        result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> result;</span><br><span class="line">        <span class="built_in">getdepth</span>(root, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>可以看出使用了前序（中左右）的遍历顺序，这才是真正求深度的逻辑！</strong></p>
+<p>注意以上代码是为了把细节体现出来，简化一下代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> result;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">getdepth</span><span class="params">(treenode* node, <span class="type">int</span> depth)</span> </span>&#123;</span><br><span class="line">        result = depth &gt; result ? depth : result; <span class="comment">// 中</span></span><br><span class="line">        <span class="keyword">if</span> (node-&gt;left == <span class="literal">NULL</span> &amp;&amp; node-&gt;right == <span class="literal">NULL</span>) <span class="keyword">return</span> ;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;left) &#123; <span class="comment">// 左</span></span><br><span class="line">            <span class="built_in">getdepth</span>(node-&gt;left, depth + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;right) &#123; <span class="comment">// 右</span></span><br><span class="line">            <span class="built_in">getdepth</span>(node-&gt;right, depth + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxdepth</span><span class="params">(treenode* root)</span> </span>&#123;</span><br><span class="line">        result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="number">0</span>) <span class="keyword">return</span> result;</span><br><span class="line">        <span class="built_in">getdepth</span>(root, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="迭代法"><a href="#迭代法" class="headerlink" title="#迭代法"></a><a href="https://programmercarl.com/0104.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.html#%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>迭代法</h2><p>使用迭代法的话，使用层序遍历是最为合适的，因为最大的深度就是二叉树的层数，和层序遍历的方式极其吻合。</p>
+<p>在二叉树中，一层一层的来遍历二叉树，记录一下遍历的层数就是二叉树的深度，如图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200810193056585.png" alt="层序遍历"></p>
+<p>所以这道题的迭代法就是一道模板题，可以使用二叉树层序遍历的模板来解决的。</p>
+<p>如果对层序遍历还不清楚的话，可以看这篇：<a href="https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html">二叉树：层序遍历登场！(opens new window)</a></p>
+<p>c++代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxdepth</span><span class="params">(treenode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> depth = <span class="number">0</span>;</span><br><span class="line">        queue&lt;treenode*&gt; que;</span><br><span class="line">        que.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="keyword">while</span>(!que.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> size = que.<span class="built_in">size</span>();</span><br><span class="line">            depth++; <span class="comment">// 记录深度</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">                treenode* node = que.<span class="built_in">front</span>();</span><br><span class="line">                que.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="keyword">if</span> (node-&gt;left) que.<span class="built_in">push</span>(node-&gt;left);</span><br><span class="line">                <span class="keyword">if</span> (node-&gt;right) que.<span class="built_in">push</span>(node-&gt;right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> depth;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>rust:</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">impl</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">max_depth</span>(root: <span class="type">Option</span>&lt;Rc&lt;RefCell&lt;TreeNode&gt;&gt;&gt;) <span class="punctuation">-&gt;</span> <span class="type">i32</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> root.<span class="title function_ invoke__">is_none</span>()&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">max_depth</span>: <span class="type">i32</span> = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">stack</span> = <span class="built_in">vec!</span>[root.<span class="title function_ invoke__">unwrap</span>()];</span><br><span class="line">        <span class="keyword">while</span> !stack.<span class="title function_ invoke__">is_empty</span>() &#123;</span><br><span class="line">            <span class="keyword">let</span> <span class="variable">num</span> = stack.<span class="title function_ invoke__">len</span>();</span><br><span class="line">            <span class="keyword">for</span> <span class="variable">_i</span> <span class="keyword">in</span> <span class="number">0</span>..num&#123;</span><br><span class="line">                <span class="keyword">let</span> <span class="variable">top</span> = stack.<span class="title function_ invoke__">remove</span>(<span class="number">0</span>);</span><br><span class="line">                <span class="keyword">if</span> top.<span class="title function_ invoke__">borrow_mut</span>().left.<span class="title function_ invoke__">is_some</span>()&#123;</span><br><span class="line">                    stack.<span class="title function_ invoke__">push</span>(top.<span class="title function_ invoke__">borrow_mut</span>().left.<span class="title function_ invoke__">take</span>().<span class="title function_ invoke__">unwrap</span>());</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> top.<span class="title function_ invoke__">borrow_mut</span>().right.<span class="title function_ invoke__">is_some</span>()&#123;</span><br><span class="line">                    stack.<span class="title function_ invoke__">push</span>(top.<span class="title function_ invoke__">borrow_mut</span>().right.<span class="title function_ invoke__">take</span>().<span class="title function_ invoke__">unwrap</span>());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            max_depth+=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        max_depth</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>那么我们可以顺便解决一下n叉树的最大深度问题</p>
+<h1 id="559-n叉树的最大深度"><a href="#559-n叉树的最大深度" class="headerlink" title="#559.n叉树的最大深度"></a><a href="https://programmercarl.com/0104.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.html#_559-n%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6">#</a>559.n叉树的最大深度</h1><p><a href="https://leetcode.cn/problems/maximum-depth-of-n-ary-tree/">力扣题目链接(opens new window)</a></p>
+<p>给定一个 n 叉树，找到其最大深度。</p>
+<p>最大深度是指从根节点到最远叶子节点的最长路径上的节点总数。</p>
+<p>例如，给定一个 3叉树 :</p>
+<p><img src="https://img-blog.csdnimg.cn/2021020315313214.png" alt="559.n叉树的最大深度"></p>
+<p>我们应返回其最大深度，3。</p>
+<p>思路：</p>
+<p>依然可以提供递归法和迭代法，来解决这个问题，思路是和二叉树思路一样的，直接给出代码如下：</p>
+<h2 id="递归法-1"><a href="#递归法-1" class="headerlink" title="#递归法"></a><a href="https://programmercarl.com/0104.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.html#%E9%80%92%E5%BD%92%E6%B3%95-2">#</a>递归法</h2><p>c++代码：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxdepth</span><span class="params">(node* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> depth = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; root-&gt;children.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            depth = <span class="built_in">max</span> (depth, <span class="built_in">maxdepth</span>(root-&gt;children[i]));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> depth + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="迭代法-1"><a href="#迭代法-1" class="headerlink" title="#迭代法"></a><a href="https://programmercarl.com/0104.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.html#%E8%BF%AD%E4%BB%A3%E6%B3%95-2">#</a>迭代法</h2><p>依然是层序遍历，代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxdepth</span><span class="params">(node* root)</span> </span>&#123;</span><br><span class="line">        queue&lt;node*&gt; que;</span><br><span class="line">        <span class="keyword">if</span> (root != <span class="literal">NULL</span>) que.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="type">int</span> depth = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (!que.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> size = que.<span class="built_in">size</span>();</span><br><span class="line">            depth++; <span class="comment">// 记录深度</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">                node* node = que.<span class="built_in">front</span>();</span><br><span class="line">                que.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; node-&gt;children.<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (node-&gt;children[j]) que.<span class="built_in">push</span>(node-&gt;children[j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> depth;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="其他语言版本"><a href="#其他语言版本" class="headerlink" title="#其他语言版本"></a><a href="https://programmercarl.com/0104.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.html#%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80%E7%89%88%E6%9C%AC">#</a>其他语言版本</h1><h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><p>递归法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxDepth</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> maxDepth(root.left);</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> maxDepth(root.right);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span> + Math.max(left,right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>迭代法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxDepth</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">	<span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">   Queue&lt;Integer&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">   que.offer(root); </span><br><span class="line">   <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">while</span>(!que.isEmpty()) &#123;</span><br><span class="line">       res++;</span><br><span class="line">       <span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> que.size();</span><br><span class="line">       <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;size;i++) &#123;</span><br><span class="line">           <span class="type">TreeNode</span> <span class="variable">node</span> <span class="operator">=</span> que.poll();</span><br><span class="line">           <span class="keyword">if</span>(node.left != <span class="literal">null</span>) que.offer(node.left);</span><br><span class="line">           <span class="keyword">if</span>(node.right != <span class="literal">null</span>) que.offer(node.right);</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="n叉树的最大深度"><a href="#n叉树的最大深度" class="headerlink" title="n叉树的最大深度"></a>n叉树的最大深度</h3>]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>二叉树</category>
+      </categories>
+      <tags>
+        <tag>二叉树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组在哈希表中的应用</title>
+    <url>/2022/07/13/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
+    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
+<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+        <tag>哈希表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>对称二叉树_二叉树05</title>
+    <url>/2022/08/02/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9105/</url>
+    <content><![CDATA[<h1 id="101-对称二叉树"><a href="#101-对称二叉树" class="headerlink" title="101. 对称二叉树"></a>101. 对称二叉树</h1><p><a href="https://leetcode.cn/problems/symmetric-tree/">力扣题目链接(opens new window)</a></p>
+<p>给定一个二叉树，检查它是否是镜像对称的。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210203144607387.png" alt="101. 对称二叉树"></p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="#思路"></a><a href="https://programmercarl.com/0101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.html#%E6%80%9D%E8%B7%AF">#</a>思路</h1><p><strong>首先想清楚，判断对称二叉树要比较的是哪两个节点，要比较的可不是左右节点！</strong></p>
+<p>对于二叉树是否对称，要比较的是根节点的左子树与右子树是不是相互翻转的，理解这一点就知道了<strong>其实我们要比较的是两个树（这两个树是根节点的左右子树）</strong>，所以在递归遍历的过程中，也是要同时遍历两棵树。</p>
+<p>那么如果比较呢？</p>
+<p>比较的是两个子树的里侧和外侧的元素是否相等。如图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210203144624414.png" alt="101. 对称二叉树1"></p>
+<p>那么遍历的顺序应该是什么样的呢？</p>
+<p>本题遍历只能是“后序遍历”，因为我们要通过递归函数的返回值来判断两个子树的内侧节点和外侧节点是否相等。</p>
+<p><strong>正是因为要遍历两棵树而且要比较内侧和外侧节点，所以准确的来说是一个树的遍历顺序是左右中，一个树的遍历顺序是右左中。</strong></p>
+<p>但都可以理解算是后序遍历，尽管已经不是严格上在一个树上进行遍历的后序遍历了。</p>
+<p>其实后序也可以理解为是一种回溯，当然这是题外话，讲回溯的时候会重点讲的。</p>
+<p>说到这大家可能感觉我有点啰嗦，哪有这么多道理，上来就干就完事了。别急，我说的这些在下面的代码讲解中都有身影。</p>
+<p>那么我们先来看看递归法的代码应该怎么写。</p>
+<h2 id="递归法"><a href="#递归法" class="headerlink" title="#递归法"></a><a href="https://programmercarl.com/0101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.html#%E9%80%92%E5%BD%92%E6%B3%95">#</a>递归法</h2><p>递归三部曲</p>
+<ol>
+<li>确定递归函数的参数和返回值</li>
+</ol>
+<p>因为我们要比较的是根节点的两个子树是否是相互翻转的，进而判断这个树是不是对称树，所以要比较的是两个树，参数自然也是左子树节点和右子树节点。</p>
+<p>返回值自然是bool类型。</p>
+<p>代码如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">bool compare(TreeNode* left, TreeNode* right)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>确定终止条件</li>
+</ol>
+<p>要比较两个节点数值相不相同，首先要把两个节点为空的情况弄清楚！否则后面比较数值的时候就会操作空指针了。</p>
+<p>节点为空的情况有：（<strong>注意我们比较的其实不是左孩子和右孩子，所以如下我称之为左节点右节点</strong>）</p>
+<ul>
+<li>左节点为空，右节点不为空，不对称，return false</li>
+<li>左不为空，右为空，不对称 return false</li>
+<li>左右都为空，对称，返回true</li>
+</ul>
+<p>此时已经排除掉了节点为空的情况，那么剩下的就是左右节点不为空：</p>
+<ul>
+<li>左右都不为空，比较节点数值，不相同就return false</li>
+</ul>
+<p>此时左右节点不为空，且数值也不相同的情况我们也处理了。</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (left == <span class="literal">NULL</span> &amp;&amp; right != <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (left != <span class="literal">NULL</span> &amp;&amp; right == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (left == <span class="literal">NULL</span> &amp;&amp; right == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (left-&gt;val != right-&gt;val) <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">// 注意这里我没有使用else</span></span><br></pre></td></tr></table></figure>
+
+<p>注意上面最后一种情况，我没有使用else，而是elseif， 因为我们把以上情况都排除之后，剩下的就是 左右节点都不为空，且数值相同的情况。</p>
+<ol>
+<li>确定单层递归的逻辑</li>
+</ol>
+<p>此时才进入单层递归的逻辑，单层递归的逻辑就是处理 左右节点都不为空，且数值相同的情况。</p>
+<ul>
+<li>比较二叉树外侧是否对称：传入的是左节点的左孩子，右节点的右孩子。</li>
+<li>比较内测是否对称，传入左节点的右孩子，右节点的左孩子。</li>
+<li>如果左右都对称就返回true ，有一侧不对称就返回false 。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">bool</span> outside = <span class="built_in">compare</span>(left-&gt;left, right-&gt;right);   <span class="comment">// 左子树：左、 右子树：右</span></span><br><span class="line"><span class="type">bool</span> inside = <span class="built_in">compare</span>(left-&gt;right, right-&gt;left);    <span class="comment">// 左子树：右、 右子树：左</span></span><br><span class="line"><span class="type">bool</span> isSame = outside &amp;&amp; inside;                    <span class="comment">// 左子树：中、 右子树：中（逻辑处理）</span></span><br><span class="line"><span class="keyword">return</span> isSame;</span><br></pre></td></tr></table></figure>
+
+<p>如上代码中，我们可以看出使用的遍历方式，左子树左右中，右子树右左中，所以我把这个遍历顺序也称之为“后序遍历”（尽管不是严格的后序遍历）。</p>
+<p>最后递归的C++整体代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">compare</span><span class="params">(TreeNode* left, TreeNode* right)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 首先排除空节点的情况</span></span><br><span class="line">        <span class="keyword">if</span> (left == <span class="literal">NULL</span> &amp;&amp; right != <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (left != <span class="literal">NULL</span> &amp;&amp; right == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (left == <span class="literal">NULL</span> &amp;&amp; right == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">// 排除了空节点，再排除数值不相同的情况</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (left-&gt;val != right-&gt;val) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 此时就是：左右节点都不为空，且数值相同的情况</span></span><br><span class="line">        <span class="comment">// 此时才做递归，做下一层的判断</span></span><br><span class="line">        <span class="type">bool</span> outside = <span class="built_in">compare</span>(left-&gt;left, right-&gt;right);   <span class="comment">// 左子树：左、 右子树：右</span></span><br><span class="line">        <span class="type">bool</span> inside = <span class="built_in">compare</span>(left-&gt;right, right-&gt;left);    <span class="comment">// 左子树：右、 右子树：左</span></span><br><span class="line">        <span class="type">bool</span> isSame = outside &amp;&amp; inside;                    <span class="comment">// 左子树：中、 右子树：中 （逻辑处理）</span></span><br><span class="line">        <span class="keyword">return</span> isSame;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isSymmetric</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">compare</span>(root-&gt;left, root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>我给出的代码并不简洁，但是把每一步判断的逻辑都清楚的描绘出来了。</strong></p>
+<p>如果上来就看网上各种简洁的代码，看起来真的很简单，但是很多逻辑都掩盖掉了，而题解可能也没有把掩盖掉的逻辑说清楚。</p>
+<p><strong>盲目的照着抄，结果就是：发现这是一道“简单题”，稀里糊涂的就过了，但是真正的每一步判断逻辑未必想到清楚。</strong></p>
+<p>当然我可以把如上代码整理如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">compare</span><span class="params">(TreeNode* left, TreeNode* right)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (left == <span class="literal">NULL</span> &amp;&amp; right != <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (left != <span class="literal">NULL</span> &amp;&amp; right == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (left == <span class="literal">NULL</span> &amp;&amp; right == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (left-&gt;val != right-&gt;val) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="built_in">compare</span>(left-&gt;left, right-&gt;right) &amp;&amp; <span class="built_in">compare</span>(left-&gt;right, right-&gt;left);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isSymmetric</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">compare</span>(root-&gt;left, root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>这个代码就很简洁了，但隐藏了很多逻辑，条理不清晰，而且递归三部曲，在这里完全体现不出来。</strong></p>
+<p><strong>所以建议大家做题的时候，一定要想清楚逻辑，每一步做什么。把道题目所有情况想到位，相应的代码写出来之后，再去追求简洁代码的效果。</strong></p>
+<h2 id="迭代法"><a href="#迭代法" class="headerlink" title="#迭代法"></a><a href="https://programmercarl.com/0101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.html#%E8%BF%AD%E4%BB%A3%E6%B3%95">#</a>迭代法</h2><p>这道题目我们也可以使用迭代法，但要注意，这里的迭代法可不是前中后序的迭代写法，因为本题的本质是判断两个树是否是相互翻转的，其实已经不是所谓二叉树遍历的前中后序的关系了。</p>
+<p>这里我们可以使用队列来比较两个树（根节点的左右子树）是否相互翻转，（<strong>注意这不是层序遍历</strong>）</p>
+<h3 id="使用队列"><a href="#使用队列" class="headerlink" title="#使用队列"></a><a href="https://programmercarl.com/0101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.html#%E4%BD%BF%E7%94%A8%E9%98%9F%E5%88%97">#</a>使用队列</h3><p>通过队列来判断根节点的左子树和右子树的内侧和外侧是否相等，如动画所示：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnwcimlj8lg30hm0bqnpd.gif" alt="101.对称二叉树"></p>
+<p>如下的条件判断和递归的逻辑是一样的。</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isSymmetric</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        queue&lt;TreeNode*&gt; que;</span><br><span class="line">        que.<span class="built_in">push</span>(root-&gt;left);   <span class="comment">// 将左子树头结点加入队列</span></span><br><span class="line">        que.<span class="built_in">push</span>(root-&gt;right);  <span class="comment">// 将右子树头结点加入队列</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (!que.<span class="built_in">empty</span>()) &#123;  <span class="comment">// 接下来就要判断这两个树是否相互翻转</span></span><br><span class="line">            TreeNode* leftNode = que.<span class="built_in">front</span>(); que.<span class="built_in">pop</span>();</span><br><span class="line">            TreeNode* rightNode = que.<span class="built_in">front</span>(); que.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">if</span> (!leftNode &amp;&amp; !rightNode) &#123;  <span class="comment">// 左节点为空、右节点为空，此时说明是对称的</span></span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 左右一个节点不为空，或者都不为空但数值不相同，返回false</span></span><br><span class="line">            <span class="keyword">if</span> ((!leftNode || !rightNode || (leftNode-&gt;val != rightNode-&gt;val))) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            que.<span class="built_in">push</span>(leftNode-&gt;left);   <span class="comment">// 加入左节点左孩子</span></span><br><span class="line">            que.<span class="built_in">push</span>(rightNode-&gt;right); <span class="comment">// 加入右节点右孩子</span></span><br><span class="line">            que.<span class="built_in">push</span>(leftNode-&gt;right);  <span class="comment">// 加入左节点右孩子</span></span><br><span class="line">            que.<span class="built_in">push</span>(rightNode-&gt;left);  <span class="comment">// 加入右节点左孩子</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用栈"><a href="#使用栈" class="headerlink" title="#使用栈"></a><a href="https://programmercarl.com/0101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.html#%E4%BD%BF%E7%94%A8%E6%A0%88">#</a>使用栈</h3><p>细心的话，其实可以发现，这个迭代法，其实是把左右两个子树要比较的元素顺序放进一个容器，然后成对成对的取出来进行比较，那么其实使用栈也是可以的。</p>
+<p>只要把队列原封不动的改成栈就可以了，我下面也给出了代码。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isSymmetric</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        stack&lt;TreeNode*&gt; st; <span class="comment">// 这里改成了栈</span></span><br><span class="line">        st.<span class="built_in">push</span>(root-&gt;left);</span><br><span class="line">        st.<span class="built_in">push</span>(root-&gt;right);</span><br><span class="line">        <span class="keyword">while</span> (!st.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            TreeNode* leftNode = st.<span class="built_in">top</span>(); st.<span class="built_in">pop</span>();</span><br><span class="line">            TreeNode* rightNode = st.<span class="built_in">top</span>(); st.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">if</span> (!leftNode &amp;&amp; !rightNode) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> ((!leftNode || !rightNode || (leftNode-&gt;val != rightNode-&gt;val))) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            st.<span class="built_in">push</span>(leftNode-&gt;left);</span><br><span class="line">            st.<span class="built_in">push</span>(rightNode-&gt;right);</span><br><span class="line">            st.<span class="built_in">push</span>(leftNode-&gt;right);</span><br><span class="line">            st.<span class="built_in">push</span>(rightNode-&gt;left);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="#总结"></a><a href="https://programmercarl.com/0101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.html#%E6%80%BB%E7%BB%93">#</a>总结</h2><p>这次我们又深度剖析了一道二叉树的“简单题”，大家会发现，真正的把题目搞清楚其实并不简单，leetcode上accept了和真正掌握了还是有距离的。</p>
+<p>我们介绍了递归法和迭代法，递归依然通过递归三部曲来解决了这道题目，如果只看精简的代码根本看不出来递归三部曲是如果解题的。</p>
+<p>在迭代法中我们使用了队列，需要注意的是这不是层序遍历，而且仅仅通过一个容器来成对的存放我们要比较的元素，知道这一本质之后就发现，用队列，用栈，甚至用数组，都是可以的。</p>
+<p>如果已经做过这道题目的同学，读完文章可以再去看看这道题目，思考一下，会有不一样的发现！</p>
+<h2 id="相关题目推荐"><a href="#相关题目推荐" class="headerlink" title="#相关题目推荐"></a><a href="https://programmercarl.com/0101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.html#%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE%E6%8E%A8%E8%8D%90">#</a>相关题目推荐</h2><p>这两道题目基本和本题是一样的，只要稍加修改就可以AC。</p>
+<ul>
+<li>100.相同的树</li>
+<li>572.另一个树的子树</li>
+</ul>
+<h1 id="Java代码如下："><a href="#Java代码如下：" class="headerlink" title="Java代码如下："></a>Java代码如下：</h1><p>递归法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isSymmetric1</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> compare(root.left, root.right);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">compare</span><span class="params">(TreeNode left,TreeNode right)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(left == <span class="literal">null</span> &amp;&amp; right == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(left == <span class="literal">null</span> &amp;&amp; right != <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(left != <span class="literal">null</span> &amp;&amp; right == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(left.val != right.val) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">// 此时可以知道目前的左右节点相等</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 比较左节点的左节点和右节点的右节点</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">A</span> <span class="operator">=</span> compare(left.left,right.right);</span><br><span class="line">        <span class="comment">// 比较右节点的左节点和左节点的右节点</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">B</span> <span class="operator">=</span> compare(left.right,right.left);</span><br><span class="line">        <span class="keyword">return</span> A &amp;&amp; B;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>迭代法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isSymmetric2</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">	Queue&lt;TreeNode&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">	que.offer(root.left);</span><br><span class="line">	que.offer(root.right);</span><br><span class="line">    <span class="type">TreeNode</span> <span class="variable">left</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="type">TreeNode</span> <span class="variable">right</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">	<span class="keyword">while</span>(!que.isEmpty()) &#123;</span><br><span class="line">		left = que.poll();</span><br><span class="line">		right = que.poll();</span><br><span class="line">		<span class="keyword">if</span>(left == <span class="literal">null</span> &amp;&amp; right == <span class="literal">null</span>) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>(left != <span class="literal">null</span> &amp;&amp; right == <span class="literal">null</span> || left == <span class="literal">null</span> &amp;&amp; right != <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(left.val != right.val) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        que.offer(left.left);</span><br><span class="line">        que.offer(right.right);</span><br><span class="line">        que.offer(left.right);</span><br><span class="line">        que.offer(right.left);</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>二叉树</category>
+      </categories>
+      <tags>
+        <tag>二叉树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二叉树的递归遍历_二叉树04</title>
+    <url>/2022/08/02/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9106/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>算法简史</category>
@@ -511,23 +721,6 @@
       </categories>
       <tags>
         <tag>哈希表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数组在哈希表中的应用</title>
-    <url>/2022/07/13/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
-    <content><![CDATA[<h1 id="数组在哈希表中的应用"><a href="#数组在哈希表中的应用" class="headerlink" title="数组在哈希表中的应用"></a>数组在哈希表中的应用</h1><p><a href="https://leetcode.cn/problems/valid-anagram/">题目链接</a></p>
-<h3 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h3><p>伪代码</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">方法名：String t,string s</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">hash</span>[<span class="number">26</span>] <span class="number">0</span>~<span class="number">25</span> -&gt; a~z</span><br><span class="line"><span class="keyword">for</span> i in <span class="title function_">range</span><span class="params">(t)</span>:</span><br><span class="line">	hash[t[i] - <span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> j in <span class="title function_">range</span><span class="params">(s)</span>:</span><br><span class="line">	hash[s[i] - <span class="string">&#x27;a&#x27;</span>] -= <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:hash)&#123;</span><br><span class="line">	<span class="keyword">if</span> i!=<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>哈希表</tag>
-        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -812,6 +1005,39 @@
       </tags>
   </entry>
   <entry>
+    <title>替换空格_字符串03</title>
+    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B203/</url>
+    <content><![CDATA[<h1 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h1><p><a href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">力扣题目链接(opens new window)</a></p>
+<p>请实现一个函数，把字符串 s 中的每个空格替换成”%20”。</p>
+<p>示例 1： 输入：s &#x3D; “We are happy.”<br>输出：”We%20are%20happy.”</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果想把这道题目做到极致，就不要只用额外的辅助空间了！</p>
+<p>首先扩充数组到每个空格替换成”%20”之后的大小。</p>
+<p>然后从后向前替换空格，也就是双指针法，过程如下：</p>
+<p>i指向新长度的末尾，j指向旧长度的末尾。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1go6qmevhgpg20du09m4qp.gif" alt="替换空格"></p>
+<p>有同学问了，为什么要从后向前填充，从前向后填充不行么？</p>
+<p>从前向后填充就是O(n^2)的算法了，因为每次添加元素都要将添加元素之后的所有元素向后移动。</p>
+<p><strong>其实很多数组填充类的问题，都可以先预先给数组扩容带填充后的大小，然后在从后向前进行操作。</strong></p>
+<p>这么做有两个好处：</p>
+<ol>
+<li>不用申请新数组。</li>
+<li>从后向前填充元素，避免了从前先后填充元素要来的 每次添加元素都要将添加元素之后的所有元素向后移动。</li>
+</ol>
+<p>时间复杂度，空间复杂度均超过100%的用户。</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E5%89%91%E6%8C%87Offer05.%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.png" alt="img"></p>
+<p>java代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">replaceSpace</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(s == <span class="literal">null</span> || s.length() == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 扩容</span></span><br><span class="line">    <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">    <span class="keyword">while</span>(<span class="type">char</span> c:s.toCharArray()) &#123;</span><br><span class="line">    	<span class="keyword">if</span>(c == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">    		sb.append(<span class="string">&#x27;   &#x27;</span>)</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    s += sb.toString();</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span>[] arr = s.toCharArray();</span><br><span class="line">    <span class="keyword">while</span>(left &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[left] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">            arr[right] = <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            arr[right] = arr[left];</span><br><span class="line">        &#125;</span><br><span class="line">        left--;</span><br><span class="line">        right--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(arr);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>字符串</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>翻转字符串里的单词_字符串04</title>
     <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B204/</url>
     <content><![CDATA[<h1 id="翻转字符串里的单词"><a href="#翻转字符串里的单词" class="headerlink" title="翻转字符串里的单词"></a>翻转字符串里的单词</h1><p><a href="https://leetcode.cn/problems/reverse-words-in-a-string/">力扣题目链接(opens new window)</a></p>
@@ -860,39 +1086,6 @@
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">// 反转字符串s中左闭又闭的区间[start, end]</span><br><span class="line">void reverse(string&amp; s, int start, int end) &#123;</span><br><span class="line">    for (int i = start, j = end; i &lt; j; i++, j--) &#123;</span><br><span class="line">        swap(s[i], s[j]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> String <span class="title function_">reverseWords</span><span class="params">(String s)</span> &#123;</span><br><span class="line">		<span class="comment">// 取出空余 </span></span><br><span class="line">		<span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> removeEmpty(s);</span><br><span class="line">		<span class="comment">// 先整体 再局部翻转</span></span><br><span class="line">		<span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="type">int</span> <span class="variable">end</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">		reverse(sb,start,end);</span><br><span class="line">        <span class="comment">// 局部翻转 单词</span></span><br><span class="line">        reverseWord(sb);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> StringBuilder <span class="title function_">reverse</span><span class="params">(StringBuilder sb,<span class="type">int</span> start,<span class="type">int</span> end)</span> &#123;</span><br><span class="line">		<span class="keyword">while</span>(start&lt;end) &#123;</span><br><span class="line">			<span class="type">char</span> <span class="variable">temp</span> <span class="operator">=</span> sb.charAt(end);</span><br><span class="line">			sb.setChar(start,temp);</span><br><span class="line">			sb.setChar(end,temp);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">removeEmpty</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">		start = <span class="number">0</span>;</span><br><span class="line">		end = s.length()-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(s.charAt(start)==<span class="string">&#x27; &#x27;</span>)start++;</span><br><span class="line">        <span class="keyword">while</span>(s.charAt(end)==<span class="string">&#x27; &#x27;</span>)end--;</span><br><span class="line">        <span class="keyword">while</span>(start &lt; end) &#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">tmp</span> <span class="operator">=</span> s.charAt(start);</span><br><span class="line">            <span class="keyword">if</span>(tmp != <span class="string">&#x27; &#x27;</span> || sb.charAt(sb.length()-<span class="number">1</span>) != <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">                sb.append(tmp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">reverseWord</span><span class="params">(StringBuilder sb)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">end</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> sb.length();</span><br><span class="line">        <span class="keyword">while</span>(start &lt; n) &#123;</span><br><span class="line">            <span class="keyword">while</span>(end &lt; n &amp;&amp; sb.charAt(end) != <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">                end++;</span><br><span class="line">            &#125;</span><br><span class="line">            reverseString(sb,start,end-<span class="number">1</span>);</span><br><span class="line">            start = end + <span class="number">1</span>;</span><br><span class="line">            end = start + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>字符串</category>
-      </categories>
-      <tags>
-        <tag>字符串</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>替换空格_字符串03</title>
-    <url>/2022/07/25/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%AD%97%E7%AC%A6%E4%B8%B203/</url>
-    <content><![CDATA[<h1 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h1><p><a href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">力扣题目链接(opens new window)</a></p>
-<p>请实现一个函数，把字符串 s 中的每个空格替换成”%20”。</p>
-<p>示例 1： 输入：s &#x3D; “We are happy.”<br>输出：”We%20are%20happy.”</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>如果想把这道题目做到极致，就不要只用额外的辅助空间了！</p>
-<p>首先扩充数组到每个空格替换成”%20”之后的大小。</p>
-<p>然后从后向前替换空格，也就是双指针法，过程如下：</p>
-<p>i指向新长度的末尾，j指向旧长度的末尾。</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1go6qmevhgpg20du09m4qp.gif" alt="替换空格"></p>
-<p>有同学问了，为什么要从后向前填充，从前向后填充不行么？</p>
-<p>从前向后填充就是O(n^2)的算法了，因为每次添加元素都要将添加元素之后的所有元素向后移动。</p>
-<p><strong>其实很多数组填充类的问题，都可以先预先给数组扩容带填充后的大小，然后在从后向前进行操作。</strong></p>
-<p>这么做有两个好处：</p>
-<ol>
-<li>不用申请新数组。</li>
-<li>从后向前填充元素，避免了从前先后填充元素要来的 每次添加元素都要将添加元素之后的所有元素向后移动。</li>
-</ol>
-<p>时间复杂度，空间复杂度均超过100%的用户。</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/%E5%89%91%E6%8C%87Offer05.%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.png" alt="img"></p>
-<p>java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">replaceSpace</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(s == <span class="literal">null</span> || s.length() == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 扩容</span></span><br><span class="line">    <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">    <span class="keyword">while</span>(<span class="type">char</span> c:s.toCharArray()) &#123;</span><br><span class="line">    	<span class="keyword">if</span>(c == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">    		sb.append(<span class="string">&#x27;   &#x27;</span>)</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    s += sb.toString();</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> s.length()-<span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span>[] arr = s.toCharArray();</span><br><span class="line">    <span class="keyword">while</span>(left &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[left] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            arr[right--] = <span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">            arr[right] = <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            arr[right] = arr[left];</span><br><span class="line">        &#125;</span><br><span class="line">        left--;</span><br><span class="line">        right--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(arr);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1178,53 +1371,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数组_代码随想列题02</title>
-    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8402/</url>
-    <content><![CDATA[<h1 id="代码随想录-数组02"><a href="#代码随想录-数组02" class="headerlink" title="代码随想录_数组02"></a>代码随想录_数组02</h1><h3 id="27-移除元素"><a href="#27-移除元素" class="headerlink" title="27. 移除元素"></a>27. 移除元素</h3><p>[题目链接](<a href="https://leetcode.cn/problems/remove-element/">力扣 (leetcode.cn)</a>)</p>
-<p>给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。</p>
-<p>不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。</p>
-<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
-<p>说明:</p>
-<p>为什么返回数值是整数，但输出的答案是数组呢?</p>
-<p>请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
-<p>你可以想象内部操作如下:</p>
-<p>&#x2F;&#x2F; nums 是以“引用”方式传递的。也就是说，不对实参作任何拷贝<br>int len &#x3D; removeElement(nums, val);</p>
-<p>&#x2F;&#x2F; 在函数里修改输入数组对于调用者是可见的。<br>&#x2F;&#x2F; 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。<br>for (int i &#x3D; 0; i &lt; len; i++) {<br>    print(nums[i]);<br>}</p>
-<p>示例 1：</p>
-<p>输入：nums &#x3D; [3,2,2,3], val &#x3D; 3<br>输出：2, nums &#x3D; [2,2]<br>解释：函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。你不需要考虑数组中超出新长度后面的元素。例如，函数返回的新长度为 2 ，而 nums &#x3D; [2,2,3,3] 或 nums &#x3D; [2,2,0,0]，也会被视作正确答案。<br>示例 2：</p>
-<p>输入：nums &#x3D; [0,1,2,2,3,0,4,2], val &#x3D; 2<br>输出：5, nums &#x3D; [0,1,4,0,3]<br>解释：函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><a href="https://www.bilibili.com/video/BV12A4y1Z7LP">本题B站视频讲解(opens new window)</a></p>
-<p>有的同学可能说了，多余的元素，删掉不就得了。</p>
-<p><strong>要知道数组的元素在内存地址中是连续的，不能单独删除数组中的某个元素，只能覆盖。</strong></p>
-<h3 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h3><p>这个题目暴力的解法就是两层for循环，一个for循环遍历数组元素 ，第二个for循环更新数组。</p>
-<p>删除过程如下：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrc7x9tjg30du09m1ky.gif" alt="27.移除元素-暴力解法"></p>
-<p>很明显暴力解法的时间复杂度是O(n^2)，这道题目暴力解法在leetcode上是可以过的。</p>
-<p>代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 时间复杂度：O(n^2)</span><br><span class="line">// 空间复杂度：O(1)</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int removeElement(vector&lt;int&gt;&amp; nums, int val) &#123;</span><br><span class="line">        int size = nums.size();</span><br><span class="line">        for (int i = 0; i &lt; size; i++) &#123;</span><br><span class="line">            if (nums[i] == val) &#123; // 发现需要移除的元素，就将数组集体向前移动一位</span><br><span class="line">                for (int j = i + 1; j &lt; size; j++) &#123;</span><br><span class="line">                    nums[j - 1] = nums[j];</span><br><span class="line">                &#125;</span><br><span class="line">                i--; // 因为下标i以后的数值都向前移动了一位，所以i也向前移动一位</span><br><span class="line">                size--; // 此时数组的大小-1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return size;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>双指针法（快慢指针法）： <strong>通过一个快指针和慢指针在一个for循环下完成两个for循环的工作。</strong></p>
-<p>定义快慢指针</p>
-<ul>
-<li>快指针：寻找新数组的元素 ，新数组就是不含有目标元素的数组</li>
-<li>慢指针：指向更新 新数组下标的位置</li>
-</ul>
-<p>很多同学这道题目做的很懵，就是不理解 快慢指针究竟都是什么含义，所以一定要明确含义，后面的思路就更容易理解了。</p>
-<p>删除过程如下：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrds6r59g30du09mnpd.gif" alt="27.移除元素-双指针法"></p>
-<p>很多同学不了解</p>
-<p><strong>双指针法（快慢指针法）在数组和链表的操作中是非常常见的，很多考察数组、链表、字符串等操作的面试题，都使用双指针法。</strong></p>
-<p>后续都会一一介绍到，本题代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> in <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span> [] nums,<span class="type">int</span> val)</span> &#123;</span><br><span class="line">	<span class="comment">//快指针</span></span><br><span class="line">	<span class="type">int</span> <span class="variable">fastIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> <span class="variable">slowIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(fastIndex&lt;nums.length) &#123;</span><br><span class="line">		<span class="keyword">if</span>(nums[fastIndex] != val) &#123;</span><br><span class="line">            nums[slowIndex++] = nums[fastIndex]</span><br><span class="line">        &#125;</span><br><span class="line">		fastIndex++;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> slowIndex;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数组_代码随想列题</title>
     <url>/2022/07/14/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8401/</url>
     <content><![CDATA[<h1 id="数组-代码随想列题"><a href="#数组-代码随想列题" class="headerlink" title="数组_代码随想列题"></a>数组_代码随想列题</h1><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>[题目链接](<a href="https://leetcode.cn/problems/binary-search/">Loading Question… - 力扣（LeetCode）</a>)</p>
@@ -1275,6 +1421,53 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">方法名 (nums数组,目标值)&#123;</span><br><span class="line">	int left = 0;</span><br><span class="line">	int right = nums.length - 1;</span><br><span class="line">	while(left &lt; right) &#123;</span><br><span class="line">		mid = 1+(left+right)/2;</span><br><span class="line">		if(nums[mid]&lt;=target) left = mid;</span><br><span class="line">		else right = mid-1;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组_代码随想列题02</title>
+    <url>/2022/07/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%8402/</url>
+    <content><![CDATA[<h1 id="代码随想录-数组02"><a href="#代码随想录-数组02" class="headerlink" title="代码随想录_数组02"></a>代码随想录_数组02</h1><h3 id="27-移除元素"><a href="#27-移除元素" class="headerlink" title="27. 移除元素"></a>27. 移除元素</h3><p>[题目链接](<a href="https://leetcode.cn/problems/remove-element/">力扣 (leetcode.cn)</a>)</p>
+<p>给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。</p>
+<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
+<p>说明:</p>
+<p>为什么返回数值是整数，但输出的答案是数组呢?</p>
+<p>请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
+<p>你可以想象内部操作如下:</p>
+<p>&#x2F;&#x2F; nums 是以“引用”方式传递的。也就是说，不对实参作任何拷贝<br>int len &#x3D; removeElement(nums, val);</p>
+<p>&#x2F;&#x2F; 在函数里修改输入数组对于调用者是可见的。<br>&#x2F;&#x2F; 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。<br>for (int i &#x3D; 0; i &lt; len; i++) {<br>    print(nums[i]);<br>}</p>
+<p>示例 1：</p>
+<p>输入：nums &#x3D; [3,2,2,3], val &#x3D; 3<br>输出：2, nums &#x3D; [2,2]<br>解释：函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。你不需要考虑数组中超出新长度后面的元素。例如，函数返回的新长度为 2 ，而 nums &#x3D; [2,2,3,3] 或 nums &#x3D; [2,2,0,0]，也会被视作正确答案。<br>示例 2：</p>
+<p>输入：nums &#x3D; [0,1,2,2,3,0,4,2], val &#x3D; 2<br>输出：5, nums &#x3D; [0,1,4,0,3]<br>解释：函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p><a href="https://www.bilibili.com/video/BV12A4y1Z7LP">本题B站视频讲解(opens new window)</a></p>
+<p>有的同学可能说了，多余的元素，删掉不就得了。</p>
+<p><strong>要知道数组的元素在内存地址中是连续的，不能单独删除数组中的某个元素，只能覆盖。</strong></p>
+<h3 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h3><p>这个题目暴力的解法就是两层for循环，一个for循环遍历数组元素 ，第二个for循环更新数组。</p>
+<p>删除过程如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrc7x9tjg30du09m1ky.gif" alt="27.移除元素-暴力解法"></p>
+<p>很明显暴力解法的时间复杂度是O(n^2)，这道题目暴力解法在leetcode上是可以过的。</p>
+<p>代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 时间复杂度：O(n^2)</span><br><span class="line">// 空间复杂度：O(1)</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int removeElement(vector&lt;int&gt;&amp; nums, int val) &#123;</span><br><span class="line">        int size = nums.size();</span><br><span class="line">        for (int i = 0; i &lt; size; i++) &#123;</span><br><span class="line">            if (nums[i] == val) &#123; // 发现需要移除的元素，就将数组集体向前移动一位</span><br><span class="line">                for (int j = i + 1; j &lt; size; j++) &#123;</span><br><span class="line">                    nums[j - 1] = nums[j];</span><br><span class="line">                &#125;</span><br><span class="line">                i--; // 因为下标i以后的数值都向前移动了一位，所以i也向前移动一位</span><br><span class="line">                size--; // 此时数组的大小-1</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return size;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="双指针法"><a href="#双指针法" class="headerlink" title="双指针法"></a>双指针法</h3><p>双指针法（快慢指针法）： <strong>通过一个快指针和慢指针在一个for循环下完成两个for循环的工作。</strong></p>
+<p>定义快慢指针</p>
+<ul>
+<li>快指针：寻找新数组的元素 ，新数组就是不含有目标元素的数组</li>
+<li>慢指针：指向更新 新数组下标的位置</li>
+</ul>
+<p>很多同学这道题目做的很懵，就是不理解 快慢指针究竟都是什么含义，所以一定要明确含义，后面的思路就更容易理解了。</p>
+<p>删除过程如下：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gntrds6r59g30du09mnpd.gif" alt="27.移除元素-双指针法"></p>
+<p>很多同学不了解</p>
+<p><strong>双指针法（快慢指针法）在数组和链表的操作中是非常常见的，很多考察数组、链表、字符串等操作的面试题，都使用双指针法。</strong></p>
+<p>后续都会一一介绍到，本题代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> in <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span> [] nums,<span class="type">int</span> val)</span> &#123;</span><br><span class="line">	<span class="comment">//快指针</span></span><br><span class="line">	<span class="type">int</span> <span class="variable">fastIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> <span class="variable">slowIndex</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(fastIndex&lt;nums.length) &#123;</span><br><span class="line">		<span class="keyword">if</span>(nums[fastIndex] != val) &#123;</span><br><span class="line">            nums[slowIndex++] = nums[fastIndex]</span><br><span class="line">        &#125;</span><br><span class="line">		fastIndex++;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> slowIndex;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>算法简史</category>
         <category>数组</category>
@@ -1373,45 +1566,6 @@
       </tags>
   </entry>
   <entry>
-    <title>用栈实现队列_栈02</title>
-    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9702/</url>
-    <content><![CDATA[<h1 id="用栈实现队列"><a href="#用栈实现队列" class="headerlink" title="用栈实现队列"></a>用栈实现队列</h1><p><a href="https://leetcode.cn/problems/implement-queue-using-stacks/">力扣题目链接(opens new window)</a></p>
-<p>使用栈实现队列的下列操作：</p>
-<p>push(x) – 将一个元素放入队列的尾部。<br>pop() – 从队列首部移除元素。<br>peek() – 返回队列首部的元素。<br>empty() – 返回队列是否为空。</p>
-<p>示例:</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">MyQueue queue = <span class="keyword">new</span> <span class="built_in">MyQueue</span>();</span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">2</span>);</span><br><span class="line">queue.<span class="built_in">peek</span>();  <span class="comment">// 返回 1</span></span><br><span class="line">queue.<span class="built_in">pop</span>();   <span class="comment">// 返回 1</span></span><br><span class="line">queue.<span class="built_in">empty</span>(); <span class="comment">// 返回 false</span></span><br></pre></td></tr></table></figure>
-
-<p>说明:</p>
-<ul>
-<li>你只能使用标准的栈操作 – 也就是只有 push to top, peek&#x2F;pop from top, size, 和 is empty 操作是合法的。</li>
-<li>你所使用的语言也许不支持栈。你可以使用 list 或者 deque（双端队列）来模拟一个栈，只要是标准的栈操作即可。</li>
-<li>假设所有操作都是有效的 （例如，一个空的队列不会调用 pop 或者 peek 操作）。</li>
-</ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这是一道模拟题，不涉及到具体算法，考察的就是对栈和队列的掌握程度。</p>
-<p>使用栈来模式队列的行为，如果仅仅用一个栈，是一定不行的，所以需要两个栈<strong>一个输入栈，一个输出栈</strong>，这里要注意输入栈和输出栈的关系。</p>
-<p>下面动画模拟以下队列的执行过程如下：</p>
-<p>执行语句：<br>queue.push(1);<br>queue.push(2);<br>queue.pop(); <strong>注意此时的输出栈的操作</strong><br>queue.push(3);<br>queue.push(4);<br>queue.pop();<br>queue.pop();<strong>注意此时的输出栈的操作</strong><br>queue.pop();<br>queue.empty();</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97%E7%89%88%E6%9C%AC2.gif" alt="232.用栈实现队列版本2"></p>
-<p>在push数据的时候，只要数据放进输入栈就好，<strong>但在pop的时候，操作就复杂一些，输出栈如果为空，就把进栈数据全部导入进来（注意是全部导入）</strong>，再从出栈弹出数据，如果输出栈不为空，则直接从出栈弹出数据就可以了。</p>
-<p>最后如何判断队列为空呢？<strong>如果进栈和出栈都为空的话，说明模拟的队列为空了。</strong></p>
-<p>在代码实现的时候，会发现pop() 和 peek()两个函数功能类似，代码实现上也是类似的，可以思考一下如何把代码抽象一下。</p>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>可以看出peek()的实现，直接复用了pop()。</p>
-<p>再多说一些代码开发上的习惯问题，在工业级别代码开发中，最忌讳的就是 实现一个类似的函数，直接把代码粘过来改一改就完事了。</p>
-<p>这样的项目代码会越来越乱，<strong>一定要懂得复用，功能相近的函数要抽象出来，不要大量的复制粘贴，很容易出问题！（踩过坑的人自然懂）</strong></p>
-<p>工作中如果发现某一个功能自己要经常用，同事们可能也会用到，自己就花点时间把这个功能抽象成一个好用的函数或者工具类，不仅自己方便，也方面了同事们。</p>
-<p>同事们就会逐渐认可你的工作态度和工作能力，自己的口碑都是这么一点一点积累起来的！在同事圈里口碑起来了之后，你就发现自己走上了一个正循环，以后的升职加薪才少不了你！哈哈哈</p>
-<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyQueue</span> &#123;</span><br><span class="line"></span><br><span class="line">    Stack&lt;Integer&gt; stackIn;</span><br><span class="line">    Stack&lt;Integer&gt; stackOut;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">    	stackIn.push(val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">poll</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(!stackOut.isEmpty()) &#123;</span><br><span class="line">    		stackOut.pop();</span><br><span class="line">    	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    		<span class="keyword">while</span>(!stackIn.isEmpty()) &#123;</span><br><span class="line">    			stackOut.push(stackIn.pop());</span><br><span class="line">    		&#125;</span><br><span class="line">    		stackOut.pop();</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">empty</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">return</span> stackIn.isEmpty() &amp;&amp; stackOut.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">peek</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(!stackOut.isEmpty()) <span class="keyword">return</span> stackOut.peek();</span><br><span class="line">    	<span class="keyword">while</span>(!stackIn.isEmpty()) &#123;</span><br><span class="line">    			stackOut.push(stackIn.pop());</span><br><span class="line">    		&#125;</span><br><span class="line">    	<span class="keyword">return</span> stackOut.peek();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>栈</category>
-      </categories>
-      <tags>
-        <tag>栈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>用队列实现栈_栈01</title>
     <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9701/</url>
     <content><![CDATA[<h1 id="用队列实现栈"><a href="#用队列实现栈" class="headerlink" title="用队列实现栈"></a>用队列实现栈</h1><p><a href="https://leetcode.cn/problems/implement-stack-using-queues/">力扣题目链接(opens new window)</a></p>
@@ -1441,6 +1595,45 @@
 
 <p><img src="https://code-thinking.cdn.bcebos.com/gifs/225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.gif" alt="225.用队列实现栈"></p>
 <h2 id="Java代码如下："><a href="#Java代码如下：" class="headerlink" title="Java代码如下："></a>Java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyStack</span> &#123;</span><br><span class="line"></span><br><span class="line">    Queue&lt;Integer&gt; queue1; <span class="comment">// 和栈中保持一样元素的队列</span></span><br><span class="line">    Queue&lt;Integer&gt; queue2; <span class="comment">// 辅助队列</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyStack</span><span class="params">()</span> &#123;</span><br><span class="line">        queue1 = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        queue2 = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">    	queue1.push(x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">pop</span><span class="params">()</span> &#123;</span><br><span class="line">       <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(!que1.isEmpty()) &#123;</span><br><span class="line">            temp = que1.poll();</span><br><span class="line">            <span class="keyword">if</span>(!que1.isEmpty()) &#123;</span><br><span class="line">                que2.offer(temp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!que2.isEmpty()) &#123;</span><br><span class="line">            que1.offer(que2.poll());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">top</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(!que1.isEmpty()) &#123;</span><br><span class="line">            temp = que1.peek();</span><br><span class="line">            <span class="keyword">if</span>(!que1.isEmpty()) &#123;</span><br><span class="line">                que2.offer(temp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!que2.isEmpty()) &#123;</span><br><span class="line">            que1.offer(que2.poll());</span><br><span class="line">        &#125;</span><br><span class="line">        que1.offer(temp);</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">empty</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> queue1.isEmpty() &amp;&amp; queue2.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>栈</category>
+      </categories>
+      <tags>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用栈实现队列_栈02</title>
+    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9702/</url>
+    <content><![CDATA[<h1 id="用栈实现队列"><a href="#用栈实现队列" class="headerlink" title="用栈实现队列"></a>用栈实现队列</h1><p><a href="https://leetcode.cn/problems/implement-queue-using-stacks/">力扣题目链接(opens new window)</a></p>
+<p>使用栈实现队列的下列操作：</p>
+<p>push(x) – 将一个元素放入队列的尾部。<br>pop() – 从队列首部移除元素。<br>peek() – 返回队列首部的元素。<br>empty() – 返回队列是否为空。</p>
+<p>示例:</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">MyQueue queue = <span class="keyword">new</span> <span class="built_in">MyQueue</span>();</span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">queue.<span class="built_in">push</span>(<span class="number">2</span>);</span><br><span class="line">queue.<span class="built_in">peek</span>();  <span class="comment">// 返回 1</span></span><br><span class="line">queue.<span class="built_in">pop</span>();   <span class="comment">// 返回 1</span></span><br><span class="line">queue.<span class="built_in">empty</span>(); <span class="comment">// 返回 false</span></span><br></pre></td></tr></table></figure>
+
+<p>说明:</p>
+<ul>
+<li>你只能使用标准的栈操作 – 也就是只有 push to top, peek&#x2F;pop from top, size, 和 is empty 操作是合法的。</li>
+<li>你所使用的语言也许不支持栈。你可以使用 list 或者 deque（双端队列）来模拟一个栈，只要是标准的栈操作即可。</li>
+<li>假设所有操作都是有效的 （例如，一个空的队列不会调用 pop 或者 peek 操作）。</li>
+</ul>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这是一道模拟题，不涉及到具体算法，考察的就是对栈和队列的掌握程度。</p>
+<p>使用栈来模式队列的行为，如果仅仅用一个栈，是一定不行的，所以需要两个栈<strong>一个输入栈，一个输出栈</strong>，这里要注意输入栈和输出栈的关系。</p>
+<p>下面动画模拟以下队列的执行过程如下：</p>
+<p>执行语句：<br>queue.push(1);<br>queue.push(2);<br>queue.pop(); <strong>注意此时的输出栈的操作</strong><br>queue.push(3);<br>queue.push(4);<br>queue.pop();<br>queue.pop();<strong>注意此时的输出栈的操作</strong><br>queue.pop();<br>queue.empty();</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97%E7%89%88%E6%9C%AC2.gif" alt="232.用栈实现队列版本2"></p>
+<p>在push数据的时候，只要数据放进输入栈就好，<strong>但在pop的时候，操作就复杂一些，输出栈如果为空，就把进栈数据全部导入进来（注意是全部导入）</strong>，再从出栈弹出数据，如果输出栈不为空，则直接从出栈弹出数据就可以了。</p>
+<p>最后如何判断队列为空呢？<strong>如果进栈和出栈都为空的话，说明模拟的队列为空了。</strong></p>
+<p>在代码实现的时候，会发现pop() 和 peek()两个函数功能类似，代码实现上也是类似的，可以思考一下如何把代码抽象一下。</p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>可以看出peek()的实现，直接复用了pop()。</p>
+<p>再多说一些代码开发上的习惯问题，在工业级别代码开发中，最忌讳的就是 实现一个类似的函数，直接把代码粘过来改一改就完事了。</p>
+<p>这样的项目代码会越来越乱，<strong>一定要懂得复用，功能相近的函数要抽象出来，不要大量的复制粘贴，很容易出问题！（踩过坑的人自然懂）</strong></p>
+<p>工作中如果发现某一个功能自己要经常用，同事们可能也会用到，自己就花点时间把这个功能抽象成一个好用的函数或者工具类，不仅自己方便，也方面了同事们。</p>
+<p>同事们就会逐渐认可你的工作态度和工作能力，自己的口碑都是这么一点一点积累起来的！在同事圈里口碑起来了之后，你就发现自己走上了一个正循环，以后的升职加薪才少不了你！哈哈哈</p>
+<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyQueue</span> &#123;</span><br><span class="line"></span><br><span class="line">    Stack&lt;Integer&gt; stackIn;</span><br><span class="line">    Stack&lt;Integer&gt; stackOut;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">    	stackIn.push(val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">poll</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(!stackOut.isEmpty()) &#123;</span><br><span class="line">    		stackOut.pop();</span><br><span class="line">    	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    		<span class="keyword">while</span>(!stackIn.isEmpty()) &#123;</span><br><span class="line">    			stackOut.push(stackIn.pop());</span><br><span class="line">    		&#125;</span><br><span class="line">    		stackOut.pop();</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">empty</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">return</span> stackIn.isEmpty() &amp;&amp; stackOut.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">peek</span><span class="params">()</span> &#123;</span><br><span class="line">    	<span class="keyword">if</span>(!stackOut.isEmpty()) <span class="keyword">return</span> stackOut.peek();</span><br><span class="line">    	<span class="keyword">while</span>(!stackIn.isEmpty()) &#123;</span><br><span class="line">    			stackOut.push(stackIn.pop());</span><br><span class="line">    		&#125;</span><br><span class="line">    	<span class="keyword">return</span> stackOut.peek();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1573,69 +1766,6 @@
       </tags>
   </entry>
   <entry>
-    <title>滑动窗口最大值_队列06</title>
-    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9706/</url>
-    <content><![CDATA[<h1 id="滑动窗口最大值"><a href="#滑动窗口最大值" class="headerlink" title="滑动窗口最大值"></a>滑动窗口最大值</h1><p><a href="https://leetcode.cn/problems/sliding-window-maximum/">力扣题目链接(opens new window)</a></p>
-<p>给定一个数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。</p>
-<p>返回滑动窗口中的最大值。</p>
-<p>进阶：</p>
-<p>你能在线性时间复杂度内解决此题吗？</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/pics/239.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC.png" alt="img"></p>
-<p>提示：</p>
-<ul>
-<li>1 &lt;&#x3D; nums.length &lt;&#x3D; 10^5</li>
-<li>-10^4 &lt;&#x3D; nums[i] &lt;&#x3D; 10^4</li>
-<li>1 &lt;&#x3D; k &lt;&#x3D; nums.length</li>
-</ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这是使用单调队列的经典题目。</p>
-<p>难点是如何求一个区间里的最大值呢？ （这好像是废话），暴力一下不就得了。</p>
-<p>暴力方法，遍历一遍的过程中每次从窗口中在找到最大的数值，这样很明显是$O(n × k)$的算法。</p>
-<p>有的同学可能会想用一个大顶堆（优先级队列）来存放这个窗口里的k个数字，这样就可以知道最大的最大值是多少了， <strong>但是问题是这个窗口是移动的，而大顶堆每次只能弹出最大值，我们无法移除其他数值，这样就造成大顶堆维护的不是滑动窗口里面的数值了。所以不能用大顶堆。</strong></p>
-<p>此时我们需要一个队列，这个队列呢，放进去窗口里的元素，然后随着窗口的移动，队列也一进一出，每次移动之后，队列告诉我们里面的最大值是什么。</p>
-<p>这个队列应该长这个样子：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyQueue</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pop</span><span class="params">(<span class="type">int</span> value)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">(<span class="type">int</span> value)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">front</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> que.<span class="built_in">front</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>每次窗口移动的时候，调用que.pop(滑动窗口中移除元素的数值)，que.push(滑动窗口添加元素的数值)，然后que.front()就返回我们要的最大值。</p>
-<p>这么个队列香不香，要是有现成的这种数据结构是不是更香了！</p>
-<p><strong>可惜了，没有！ 我们需要自己实现这么个队列。</strong></p>
-<p>然后在分析一下，队列里的元素一定是要排序的，而且要最大值放在出队口，要不然怎么知道最大值呢。</p>
-<p>但如果把窗口里的元素都放进队列里，窗口移动的时候，队列需要弹出元素。</p>
-<p>那么问题来了，已经排序之后的队列 怎么能把窗口要移除的元素（这个元素可不一定是最大值）弹出呢。</p>
-<p>大家此时应该陷入深思…..</p>
-<p><strong>其实队列没有必要维护窗口里的所有元素，只需要维护有可能成为窗口里最大值的元素就可以了，同时保证队里里的元素数值是由大到小的。</strong></p>
-<p>那么这个维护元素单调递减的队列就叫做<strong>单调队列，即单调递减或单调递增的队列。C++中没有直接支持单调队列，需要我们自己来一个单调队列</strong></p>
-<p><strong>不要以为实现的单调队列就是 对窗口里面的数进行排序，如果排序的话，那和优先级队列又有什么区别了呢。</strong></p>
-<p>来看一下单调队列如何维护队列里的元素。</p>
-<p>动画如下：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/239.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC.gif" alt="239.滑动窗口最大值"></p>
-<p>对于窗口里的元素{2, 3, 5, 1 ,4}，单调队列里只维护{5, 4} 就够了，保持单调队列里单调递减，此时队列出口元素就是窗口里最大元素。</p>
-<p>此时大家应该怀疑单调队列里维护着{5, 4} 怎么配合窗口经行滑动呢？</p>
-<p>设计单调队列的时候，pop，和push操作要保持如下规则：</p>
-<ol>
-<li>pop(value)：如果窗口移除的元素value等于单调队列的出口元素，那么队列弹出元素，否则不用任何操作</li>
-<li>push(value)：如果push的元素value大于入口元素的数值，那么就将队列入口的元素弹出，直到push元素的数值小于等于队列入口元素的数值为止</li>
-</ol>
-<p>保持如上规则，每次窗口移动的时候，只要问que.front()就可以返回当前窗口的最大值。</p>
-<p>为了更直观的感受到单调队列的工作过程，以题目示例为例，输入: nums &#x3D; [1,3,-1,-3,5,3,6,7], 和 k &#x3D; 3，动画如下：</p>
-<p><img src="https://code-thinking.cdn.bcebos.com/gifs/239.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC-2.gif" alt="239.滑动窗口最大值-2"></p>
-<p>那么我们用什么数据结构来实现这个单调队列呢？</p>
-<p>使用deque最为合适，在文章<a href="https://programmercarl.com/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html">栈与队列：来看看栈和队列不为人知的一面 (opens new window)</a>中，我们就提到了常用的queue在没有指定容器的情况下，deque就是默认底层容器。</p>
-<p>基于刚刚说过的单调队列pop和push的规则，代码不难实现，如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyQueue</span> &#123; <span class="comment">//单调队列（从大到小）</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    deque&lt;<span class="type">int</span>&gt; que; <span class="comment">// 使用deque来实现单调队列</span></span><br><span class="line">    <span class="comment">// 每次弹出的时候，比较当前要弹出的数值是否等于队列出口元素的数值，如果相等则弹出。</span></span><br><span class="line">    <span class="comment">// 同时pop之前判断队列当前是否为空。</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pop</span><span class="params">(<span class="type">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!que.<span class="built_in">empty</span>() &amp;&amp; value == que.<span class="built_in">front</span>()) &#123;</span><br><span class="line">            que.<span class="built_in">pop_front</span>();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 如果push的数值大于入口元素的数值，那么就将队列后端的数值弹出，直到push的数值小于等于队列入口元素的数值为止。</span></span><br><span class="line">    <span class="comment">// 这样就保持了队列里的数值是单调从大到小的了。</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">(<span class="type">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (!que.<span class="built_in">empty</span>() &amp;&amp; value &gt; que.<span class="built_in">back</span>()) &#123;</span><br><span class="line">            que.<span class="built_in">pop_back</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        que.<span class="built_in">push_back</span>(value);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 查询当前队列里的最大值 直接返回队列前端也就是front就可以了。</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">front</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> que.<span class="built_in">front</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>这样我们就用deque实现了一个单调队列，接下来解决滑动窗口最大值的问题就很简单了，直接看代码吧。</p>
-<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Class MyQueue &#123;</span><br><span class="line">	Deque&lt;Integer&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">poll</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(!que.isEmpty() &amp;&amp; val == que.peek()) &#123;</span><br><span class="line">            que.poll();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="keyword">while</span>(!que.isEmpty() &amp;&amp; val &gt; que.getLast()) &#123;</span><br><span class="line">            que.removeLast();</span><br><span class="line">        &#125;</span><br><span class="line">        que.add(val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">peek</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> que.peek();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] maxSlidingWindow(<span class="type">int</span>[] nums, <span class="type">int</span> k) &#123;</span><br><span class="line">        <span class="comment">// 初始化队列</span></span><br><span class="line">        <span class="type">Myqueue</span> <span class="variable">myque</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Myqueue</span>();</span><br><span class="line">        <span class="type">int</span>[] res = <span class="keyword">new</span> <span class="title class_">int</span>[nums.length-k+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;k;i++) &#123;</span><br><span class="line">            myque.add(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        res[count++] = myque.peek();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=k;i&lt;nums.length;i++) &#123;</span><br><span class="line">            myque.poll(nums[i-k]);</span><br><span class="line">            myque.add(nums[i]);</span><br><span class="line">            res[count++] = myque.peek();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>队列</category>
-      </categories>
-      <tags>
-        <tag>队列</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>逆波兰表达式求值_栈05</title>
     <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9705/</url>
     <content><![CDATA[<h2 id="逆波兰表达式求值"><a href="#逆波兰表达式求值" class="headerlink" title="逆波兰表达式求值"></a>逆波兰表达式求值</h2><p><a href="https://leetcode.cn/problems/evaluate-reverse-polish-notation/">力扣题目链接(opens new window)</a></p>
@@ -1696,52 +1826,66 @@
       </tags>
   </entry>
   <entry>
-    <title>删除_链表01</title>
-    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A801/</url>
-    <content><![CDATA[<h1 id="删除-链表01"><a href="#删除-链表01" class="headerlink" title="删除_链表01"></a>删除_链表01</h1><h3 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203.移除链表元素"></a>203.移除链表元素</h3><p><a href="https://leetcode.cn/problems/remove-linked-list-elements/">力扣题目链接(opens new window)</a></p>
-<p>题意：删除链表中等于给定值 val 的所有节点。</p>
-<p>示例 1：<br>输入：head &#x3D; [1,2,6,3,4,5,6], val &#x3D; 6<br>输出：[1,2,3,4,5]</p>
-<p>示例 2：<br>输入：head &#x3D; [], val &#x3D; 1<br>输出：[]</p>
-<p>示例 3：<br>输入：head &#x3D; [7,7,7,7], val &#x3D; 7<br>输出：[]</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了方便大家理解，我特意录制了视频：<a href="https://www.bilibili.com/video/BV18B4y1s7R9">手把手带你学会操作链表，移除链表元素 (opens new window)</a>，结合视频在看本题解，事半功倍。</p>
-<p>这里以链表 1 4 2 4 来举例，移除元素4。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095351161.png" alt="203_链表删除元素1"></p>
-<p>如果使用C，C++编程语言的话，不要忘了还要从内存中删除这两个移除的节点， 清理节点内存之后如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095418280.png" alt="203_链表删除元素2"></p>
-<p><strong>当然如果使用java ，python的话就不用手动管理内存了。</strong></p>
-<p>还要说明一下，就算使用C++来做leetcode，如果移除一个节点之后，没有手动在内存中删除这个节点，leetcode依然也是可以通过的，只不过，内存使用的空间大一些而已，但建议依然要养成手动清理内存的习惯。</p>
-<p>这种情况下的移除操作，就是让节点next指针直接指向下下一个节点就可以了，</p>
-<p>那么因为单链表的特殊性，只能指向下一个节点，刚刚删除的是链表的中第二个，和第四个节点，那么如果删除的是头结点又该怎么办呢？</p>
-<p>这里就涉及如下链表操作的两种方式：</p>
+    <title>滑动窗口最大值_队列06</title>
+    <url>/2022/07/27/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%9706/</url>
+    <content><![CDATA[<h1 id="滑动窗口最大值"><a href="#滑动窗口最大值" class="headerlink" title="滑动窗口最大值"></a>滑动窗口最大值</h1><p><a href="https://leetcode.cn/problems/sliding-window-maximum/">力扣题目链接(opens new window)</a></p>
+<p>给定一个数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。</p>
+<p>返回滑动窗口中的最大值。</p>
+<p>进阶：</p>
+<p>你能在线性时间复杂度内解决此题吗？</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/pics/239.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC.png" alt="img"></p>
+<p>提示：</p>
 <ul>
-<li><strong>直接使用原来的链表来进行删除操作。</strong></li>
-<li><strong>设置一个虚拟头结点在进行删除操作。</strong></li>
+<li>1 &lt;&#x3D; nums.length &lt;&#x3D; 10^5</li>
+<li>-10^4 &lt;&#x3D; nums[i] &lt;&#x3D; 10^4</li>
+<li>1 &lt;&#x3D; k &lt;&#x3D; nums.length</li>
 </ul>
-<p>来看第一种操作：直接使用原来的链表来进行移除。</p>
-<p><img src="https://img-blog.csdnimg.cn/2021031609544922.png" alt="203_链表删除元素3"></p>
-<p>移除头结点和移除其他节点的操作是不一样的，因为链表的其他节点都是通过前一个节点来移除当前节点，而头结点没有前一个节点。</p>
-<p>所以头结点如何移除呢，其实只要将头结点向后移动一位就可以，这样就从链表中移除了一个头结点。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095512470.png" alt="203_链表删除元素4"></p>
-<p>依然别忘将原头结点从内存中删掉。 <img src="https://img-blog.csdnimg.cn/20210316095543775.png" alt="203_链表删除元素5"></p>
-<p>这样移除了一个头结点，是不是发现，在单链表中移除头结点 和 移除其他节点的操作方式是不一样，其实在写代码的时候也会发现，需要单独写一段逻辑来处理移除头结点的情况。</p>
-<p>那么可不可以 以一种统一的逻辑来移除 链表的节点呢。</p>
-<p>其实<strong>可以设置一个虚拟头结点</strong>，这样原链表的所有节点就都可以按照统一的方式进行移除了。</p>
-<p>来看看如何设置一个虚拟头。依然还是在这个链表中，移除元素1。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210316095619221.png" alt="203_链表删除元素6"></p>
-<p>这里来给链表添加一个虚拟头结点为新的头结点，此时要移除这个旧头结点元素1。</p>
-<p>这样是不是就可以使用和移除链表其他节点的方式统一了呢？</p>
-<p>来看一下，如何移除元素1 呢，还是熟悉的方式，然后从内存中删除元素1。</p>
-<p>最后呢在题目中，return 头结点的时候，别忘了 <code>return dummyNode-&gt;next;</code>， 这才是新的头结点</p>
-<p>java:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 添加虚节点方式</span></span><br><span class="line"><span class="comment"> * 时间复杂度 O(n)</span></span><br><span class="line"><span class="comment"> * 空间复杂度 O(1)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> val</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">removeElements</span><span class="params">(ListNode head, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>, head);</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> dummy;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这是使用单调队列的经典题目。</p>
+<p>难点是如何求一个区间里的最大值呢？ （这好像是废话），暴力一下不就得了。</p>
+<p>暴力方法，遍历一遍的过程中每次从窗口中在找到最大的数值，这样很明显是$O(n × k)$的算法。</p>
+<p>有的同学可能会想用一个大顶堆（优先级队列）来存放这个窗口里的k个数字，这样就可以知道最大的最大值是多少了， <strong>但是问题是这个窗口是移动的，而大顶堆每次只能弹出最大值，我们无法移除其他数值，这样就造成大顶堆维护的不是滑动窗口里面的数值了。所以不能用大顶堆。</strong></p>
+<p>此时我们需要一个队列，这个队列呢，放进去窗口里的元素，然后随着窗口的移动，队列也一进一出，每次移动之后，队列告诉我们里面的最大值是什么。</p>
+<p>这个队列应该长这个样子：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyQueue</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pop</span><span class="params">(<span class="type">int</span> value)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">(<span class="type">int</span> value)</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">front</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> que.<span class="built_in">front</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>每次窗口移动的时候，调用que.pop(滑动窗口中移除元素的数值)，que.push(滑动窗口添加元素的数值)，然后que.front()就返回我们要的最大值。</p>
+<p>这么个队列香不香，要是有现成的这种数据结构是不是更香了！</p>
+<p><strong>可惜了，没有！ 我们需要自己实现这么个队列。</strong></p>
+<p>然后在分析一下，队列里的元素一定是要排序的，而且要最大值放在出队口，要不然怎么知道最大值呢。</p>
+<p>但如果把窗口里的元素都放进队列里，窗口移动的时候，队列需要弹出元素。</p>
+<p>那么问题来了，已经排序之后的队列 怎么能把窗口要移除的元素（这个元素可不一定是最大值）弹出呢。</p>
+<p>大家此时应该陷入深思…..</p>
+<p><strong>其实队列没有必要维护窗口里的所有元素，只需要维护有可能成为窗口里最大值的元素就可以了，同时保证队里里的元素数值是由大到小的。</strong></p>
+<p>那么这个维护元素单调递减的队列就叫做<strong>单调队列，即单调递减或单调递增的队列。C++中没有直接支持单调队列，需要我们自己来一个单调队列</strong></p>
+<p><strong>不要以为实现的单调队列就是 对窗口里面的数进行排序，如果排序的话，那和优先级队列又有什么区别了呢。</strong></p>
+<p>来看一下单调队列如何维护队列里的元素。</p>
+<p>动画如下：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/239.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC.gif" alt="239.滑动窗口最大值"></p>
+<p>对于窗口里的元素{2, 3, 5, 1 ,4}，单调队列里只维护{5, 4} 就够了，保持单调队列里单调递减，此时队列出口元素就是窗口里最大元素。</p>
+<p>此时大家应该怀疑单调队列里维护着{5, 4} 怎么配合窗口经行滑动呢？</p>
+<p>设计单调队列的时候，pop，和push操作要保持如下规则：</p>
+<ol>
+<li>pop(value)：如果窗口移除的元素value等于单调队列的出口元素，那么队列弹出元素，否则不用任何操作</li>
+<li>push(value)：如果push的元素value大于入口元素的数值，那么就将队列入口的元素弹出，直到push元素的数值小于等于队列入口元素的数值为止</li>
+</ol>
+<p>保持如上规则，每次窗口移动的时候，只要问que.front()就可以返回当前窗口的最大值。</p>
+<p>为了更直观的感受到单调队列的工作过程，以题目示例为例，输入: nums &#x3D; [1,3,-1,-3,5,3,6,7], 和 k &#x3D; 3，动画如下：</p>
+<p><img src="https://code-thinking.cdn.bcebos.com/gifs/239.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC-2.gif" alt="239.滑动窗口最大值-2"></p>
+<p>那么我们用什么数据结构来实现这个单调队列呢？</p>
+<p>使用deque最为合适，在文章<a href="https://programmercarl.com/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html">栈与队列：来看看栈和队列不为人知的一面 (opens new window)</a>中，我们就提到了常用的queue在没有指定容器的情况下，deque就是默认底层容器。</p>
+<p>基于刚刚说过的单调队列pop和push的规则，代码不难实现，如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyQueue</span> &#123; <span class="comment">//单调队列（从大到小）</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    deque&lt;<span class="type">int</span>&gt; que; <span class="comment">// 使用deque来实现单调队列</span></span><br><span class="line">    <span class="comment">// 每次弹出的时候，比较当前要弹出的数值是否等于队列出口元素的数值，如果相等则弹出。</span></span><br><span class="line">    <span class="comment">// 同时pop之前判断队列当前是否为空。</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">pop</span><span class="params">(<span class="type">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!que.<span class="built_in">empty</span>() &amp;&amp; value == que.<span class="built_in">front</span>()) &#123;</span><br><span class="line">            que.<span class="built_in">pop_front</span>();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 如果push的数值大于入口元素的数值，那么就将队列后端的数值弹出，直到push的数值小于等于队列入口元素的数值为止。</span></span><br><span class="line">    <span class="comment">// 这样就保持了队列里的数值是单调从大到小的了。</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">(<span class="type">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (!que.<span class="built_in">empty</span>() &amp;&amp; value &gt; que.<span class="built_in">back</span>()) &#123;</span><br><span class="line">            que.<span class="built_in">pop_back</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        que.<span class="built_in">push_back</span>(value);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 查询当前队列里的最大值 直接返回队列前端也就是front就可以了。</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">front</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> que.<span class="built_in">front</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这样我们就用deque实现了一个单调队列，接下来解决滑动窗口最大值的问题就很简单了，直接看代码吧。</p>
+<h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Class MyQueue &#123;</span><br><span class="line">	Deque&lt;Integer&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">poll</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(!que.isEmpty() &amp;&amp; val == que.peek()) &#123;</span><br><span class="line">            que.poll();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="keyword">while</span>(!que.isEmpty() &amp;&amp; val &gt; que.getLast()) &#123;</span><br><span class="line">            que.removeLast();</span><br><span class="line">        &#125;</span><br><span class="line">        que.add(val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">peek</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> que.peek();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] maxSlidingWindow(<span class="type">int</span>[] nums, <span class="type">int</span> k) &#123;</span><br><span class="line">        <span class="comment">// 初始化队列</span></span><br><span class="line">        <span class="type">Myqueue</span> <span class="variable">myque</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Myqueue</span>();</span><br><span class="line">        <span class="type">int</span>[] res = <span class="keyword">new</span> <span class="title class_">int</span>[nums.length-k+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;k;i++) &#123;</span><br><span class="line">            myque.add(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        res[count++] = myque.peek();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=k;i&lt;nums.length;i++) &#123;</span><br><span class="line">            myque.poll(nums[i-k]);</span><br><span class="line">            myque.add(nums[i]);</span><br><span class="line">            res[count++] = myque.peek();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
         <category>算法简史</category>
-        <category>链表</category>
+        <category>队列</category>
       </categories>
       <tags>
-        <tag>链表</tag>
+        <tag>队列</tag>
       </tags>
   </entry>
   <entry>
@@ -1833,6 +1977,55 @@
       </tags>
   </entry>
   <entry>
+    <title>删除_链表01</title>
+    <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A801/</url>
+    <content><![CDATA[<h1 id="删除-链表01"><a href="#删除-链表01" class="headerlink" title="删除_链表01"></a>删除_链表01</h1><h3 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203.移除链表元素"></a>203.移除链表元素</h3><p><a href="https://leetcode.cn/problems/remove-linked-list-elements/">力扣题目链接(opens new window)</a></p>
+<p>题意：删除链表中等于给定值 val 的所有节点。</p>
+<p>示例 1：<br>输入：head &#x3D; [1,2,6,3,4,5,6], val &#x3D; 6<br>输出：[1,2,3,4,5]</p>
+<p>示例 2：<br>输入：head &#x3D; [], val &#x3D; 1<br>输出：[]</p>
+<p>示例 3：<br>输入：head &#x3D; [7,7,7,7], val &#x3D; 7<br>输出：[]</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>为了方便大家理解，我特意录制了视频：<a href="https://www.bilibili.com/video/BV18B4y1s7R9">手把手带你学会操作链表，移除链表元素 (opens new window)</a>，结合视频在看本题解，事半功倍。</p>
+<p>这里以链表 1 4 2 4 来举例，移除元素4。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095351161.png" alt="203_链表删除元素1"></p>
+<p>如果使用C，C++编程语言的话，不要忘了还要从内存中删除这两个移除的节点， 清理节点内存之后如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095418280.png" alt="203_链表删除元素2"></p>
+<p><strong>当然如果使用java ，python的话就不用手动管理内存了。</strong></p>
+<p>还要说明一下，就算使用C++来做leetcode，如果移除一个节点之后，没有手动在内存中删除这个节点，leetcode依然也是可以通过的，只不过，内存使用的空间大一些而已，但建议依然要养成手动清理内存的习惯。</p>
+<p>这种情况下的移除操作，就是让节点next指针直接指向下下一个节点就可以了，</p>
+<p>那么因为单链表的特殊性，只能指向下一个节点，刚刚删除的是链表的中第二个，和第四个节点，那么如果删除的是头结点又该怎么办呢？</p>
+<p>这里就涉及如下链表操作的两种方式：</p>
+<ul>
+<li><strong>直接使用原来的链表来进行删除操作。</strong></li>
+<li><strong>设置一个虚拟头结点在进行删除操作。</strong></li>
+</ul>
+<p>来看第一种操作：直接使用原来的链表来进行移除。</p>
+<p><img src="https://img-blog.csdnimg.cn/2021031609544922.png" alt="203_链表删除元素3"></p>
+<p>移除头结点和移除其他节点的操作是不一样的，因为链表的其他节点都是通过前一个节点来移除当前节点，而头结点没有前一个节点。</p>
+<p>所以头结点如何移除呢，其实只要将头结点向后移动一位就可以，这样就从链表中移除了一个头结点。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095512470.png" alt="203_链表删除元素4"></p>
+<p>依然别忘将原头结点从内存中删掉。 <img src="https://img-blog.csdnimg.cn/20210316095543775.png" alt="203_链表删除元素5"></p>
+<p>这样移除了一个头结点，是不是发现，在单链表中移除头结点 和 移除其他节点的操作方式是不一样，其实在写代码的时候也会发现，需要单独写一段逻辑来处理移除头结点的情况。</p>
+<p>那么可不可以 以一种统一的逻辑来移除 链表的节点呢。</p>
+<p>其实<strong>可以设置一个虚拟头结点</strong>，这样原链表的所有节点就都可以按照统一的方式进行移除了。</p>
+<p>来看看如何设置一个虚拟头。依然还是在这个链表中，移除元素1。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210316095619221.png" alt="203_链表删除元素6"></p>
+<p>这里来给链表添加一个虚拟头结点为新的头结点，此时要移除这个旧头结点元素1。</p>
+<p>这样是不是就可以使用和移除链表其他节点的方式统一了呢？</p>
+<p>来看一下，如何移除元素1 呢，还是熟悉的方式，然后从内存中删除元素1。</p>
+<p>最后呢在题目中，return 头结点的时候，别忘了 <code>return dummyNode-&gt;next;</code>， 这才是新的头结点</p>
+<p>java:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 添加虚节点方式</span></span><br><span class="line"><span class="comment"> * 时间复杂度 O(n)</span></span><br><span class="line"><span class="comment"> * 空间复杂度 O(1)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> val</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">removeElements</span><span class="params">(ListNode head, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>, head);</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> dummy;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur.val == val) &#123;</span><br><span class="line">            pre.next = cur.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            pre = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>链表</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>两两交换链表中的节点_链表04</title>
     <url>/2022/07/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A804/</url>
     <content><![CDATA[<h1 id="两两交换链表中的节点-链表04"><a href="#两两交换链表中的节点-链表04" class="headerlink" title="两两交换链表中的节点_链表04"></a>两两交换链表中的节点_链表04</h1><h3 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24. 两两交换链表中的节点"></a>24. 两两交换链表中的节点</h3><p><a href="https://leetcode.cn/problems/swap-nodes-in-pairs/">力扣题目链接(opens new window)</a></p>
@@ -1853,6 +2046,40 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> ListNode <span class="title function_">swapPairs</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">		<span class="type">ListNode</span> <span class="variable">dummpy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>);</span><br><span class="line">		dummpy.next = head;</span><br><span class="line">		pre.next = head;</span><br><span class="line">		<span class="keyword">while</span>(pre.next!=<span class="literal">null</span> &amp;&amp; pre.next.next!=<span class="literal">null</span>) &#123;</span><br><span class="line">			<span class="type">ListNode</span> <span class="variable">tmp</span> <span class="operator">=</span> head.next.next;</span><br><span class="line">			pre.next = head.next;</span><br><span class="line">			pre.next.next = head;</span><br><span class="line">			head.next = tmp;</span><br><span class="line">			pre = head;</span><br><span class="line">			head = tmp;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> dummpy.next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>链表</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>删除链表的倒数第N个节点_链表05</title>
+    <url>/2022/07/21/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A805/</url>
+    <content><![CDATA[<h1 id="代码随想录-链表05"><a href="#代码随想录-链表05" class="headerlink" title="代码随想录_链表05"></a>代码随想录_链表05</h1><h3 id="19-删除链表的倒数第N个节点"><a href="#19-删除链表的倒数第N个节点" class="headerlink" title="19.删除链表的倒数第N个节点"></a>19.删除链表的倒数第N个节点</h3><p><a href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/">力扣题目链接(opens new window)</a></p>
+<p>给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。</p>
+<p>进阶：你能尝试使用一趟扫描实现吗？</p>
+<p>示例 1：</p>
+<p><img src="https://s2.loli.net/2022/07/21/hLWKP3FJsnirElH.png" alt="19.删除链表的倒数第N个节点"></p>
+<p>输入：head &#x3D; [1,2,3,4,5], n &#x3D; 2 输出：[1,2,3,5] 示例 2：</p>
+<p>输入：head &#x3D; [1], n &#x3D; 1 输出：[] 示例 3：</p>
+<p>输入：head &#x3D; [1,2], n &#x3D; 1 输出：[1]</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>双指针的经典应用，如果要删除倒数第n个节点，让fast移动n步，然后让fast和slow同时移动，直到fast指向链表末尾。删掉slow所指向的节点就可以了。</p>
+<p>思路是这样的，但要注意一些细节。</p>
+<p>分为如下几步：</p>
+<ul>
+<li>首先这里我推荐大家使用虚拟头结点，这样方便处理删除实际头结点的逻辑，如果虚拟头结点不清楚，可以看这篇： <a href="https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html">链表：听说用虚拟头节点会方便很多？(opens new window)</a></li>
+<li>定义fast指针和slow指针，初始值为虚拟头结点，如图：</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/07/21/yDqCI5BFOieLGjM.png" alt="img"></p>
+<ul>
+<li>fast首先走n + 1步 ，为什么是n+1呢，因为只有这样同时移动的时候slow才能指向删除节点的上一个节点（方便做删除操作），如图： <img src="https://s2.loli.net/2022/07/21/wvWEyq9OSzJNFks.png" alt="img"></li>
+<li>fast和slow同时移动，直到fast指向末尾，如题： <img src="https://s2.loli.net/2022/07/21/gCJIHN9oaDP8WOX.png" alt="img"></li>
+<li>删除slow指向的下一个节点，如图： <img src="https://s2.loli.net/2022/07/21/mZF7AtdsHQPrcgK.png" alt="img"></li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">removeNthFromEnd</span><span class="params">(ListNode head, <span class="type">int</span> n)</span> &#123;</span><br><span class="line">    		<span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>,head);</span><br><span class="line">    		<span class="type">ListNode</span> <span class="variable">fastIndex</span> <span class="operator">=</span> dummy;</span><br><span class="line">        	<span class="type">ListNode</span> <span class="variable">slowIndex</span> <span class="operator">=</span> dummy;</span><br><span class="line">        	<span class="keyword">while</span>(n-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                fastIndex = fastIndex.next;</span><br><span class="line">            &#125;</span><br><span class="line">        	<span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        	<span class="keyword">while</span>(fastIndex !=<span class="literal">null</span>) &#123;</span><br><span class="line">                pre = slowIndex;</span><br><span class="line">                fastIndex = fastIndex.next;</span><br><span class="line">                slowIndex = slowIndex.next;</span><br><span class="line">            &#125;</span><br><span class="line">        	pre.next = slow.next;</span><br><span class="line">        	<span class="keyword">return</span> dummy.next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>算法简史</category>
         <category>链表</category>
@@ -1944,40 +2171,6 @@
 <h3 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public ListNode detectCycle(ListNode head) &#123;</span><br><span class="line">    	ListNode fastIndex = head;</span><br><span class="line">    	ListNode slowIndex = head;</span><br><span class="line">    	while(fastIndex != null &amp;&amp; fastIndex != null) &#123;</span><br><span class="line">    		fastIndex = fastindex.next.next;</span><br><span class="line">    		slowIndex = slowIndex.next;</span><br><span class="line">    		if(fastIndex == slowIndex) &#123;</span><br><span class="line">    			index1 = fastIndex;</span><br><span class="line">    			index2 = head;</span><br><span class="line">    			while(index1 != index2) &#123;</span><br><span class="line">    				index1 = index1.next;</span><br><span class="line">    				index2 = index2.next;</span><br><span class="line">    			&#125;</span><br><span class="line">    			return index1;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	return null;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
-      <categories>
-        <category>算法简史</category>
-        <category>链表</category>
-      </categories>
-      <tags>
-        <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>删除链表的倒数第N个节点_链表05</title>
-    <url>/2022/07/21/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E9%93%BE%E8%A1%A805/</url>
-    <content><![CDATA[<h1 id="代码随想录-链表05"><a href="#代码随想录-链表05" class="headerlink" title="代码随想录_链表05"></a>代码随想录_链表05</h1><h3 id="19-删除链表的倒数第N个节点"><a href="#19-删除链表的倒数第N个节点" class="headerlink" title="19.删除链表的倒数第N个节点"></a>19.删除链表的倒数第N个节点</h3><p><a href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/">力扣题目链接(opens new window)</a></p>
-<p>给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。</p>
-<p>进阶：你能尝试使用一趟扫描实现吗？</p>
-<p>示例 1：</p>
-<p><img src="https://s2.loli.net/2022/07/21/hLWKP3FJsnirElH.png" alt="19.删除链表的倒数第N个节点"></p>
-<p>输入：head &#x3D; [1,2,3,4,5], n &#x3D; 2 输出：[1,2,3,5] 示例 2：</p>
-<p>输入：head &#x3D; [1], n &#x3D; 1 输出：[] 示例 3：</p>
-<p>输入：head &#x3D; [1,2], n &#x3D; 1 输出：[1]</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>双指针的经典应用，如果要删除倒数第n个节点，让fast移动n步，然后让fast和slow同时移动，直到fast指向链表末尾。删掉slow所指向的节点就可以了。</p>
-<p>思路是这样的，但要注意一些细节。</p>
-<p>分为如下几步：</p>
-<ul>
-<li>首先这里我推荐大家使用虚拟头结点，这样方便处理删除实际头结点的逻辑，如果虚拟头结点不清楚，可以看这篇： <a href="https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html">链表：听说用虚拟头节点会方便很多？(opens new window)</a></li>
-<li>定义fast指针和slow指针，初始值为虚拟头结点，如图：</li>
-</ul>
-<p><img src="https://s2.loli.net/2022/07/21/yDqCI5BFOieLGjM.png" alt="img"></p>
-<ul>
-<li>fast首先走n + 1步 ，为什么是n+1呢，因为只有这样同时移动的时候slow才能指向删除节点的上一个节点（方便做删除操作），如图： <img src="https://s2.loli.net/2022/07/21/wvWEyq9OSzJNFks.png" alt="img"></li>
-<li>fast和slow同时移动，直到fast指向末尾，如题： <img src="https://s2.loli.net/2022/07/21/gCJIHN9oaDP8WOX.png" alt="img"></li>
-<li>删除slow指向的下一个节点，如图： <img src="https://s2.loli.net/2022/07/21/mZF7AtdsHQPrcgK.png" alt="img"></li>
-</ul>
-<p>代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">removeNthFromEnd</span><span class="params">(ListNode head, <span class="type">int</span> n)</span> &#123;</span><br><span class="line">    		<span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>,head);</span><br><span class="line">    		<span class="type">ListNode</span> <span class="variable">fastIndex</span> <span class="operator">=</span> dummy;</span><br><span class="line">        	<span class="type">ListNode</span> <span class="variable">slowIndex</span> <span class="operator">=</span> dummy;</span><br><span class="line">        	<span class="keyword">while</span>(n-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                fastIndex = fastIndex.next;</span><br><span class="line">            &#125;</span><br><span class="line">        	<span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        	<span class="keyword">while</span>(fastIndex !=<span class="literal">null</span>) &#123;</span><br><span class="line">                pre = slowIndex;</span><br><span class="line">                fastIndex = fastIndex.next;</span><br><span class="line">                slowIndex = slowIndex.next;</span><br><span class="line">            &#125;</span><br><span class="line">        	pre.next = slow.next;</span><br><span class="line">        	<span class="keyword">return</span> dummy.next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>算法简史</category>
         <category>链表</category>
@@ -2135,6 +2328,12 @@
       </tags>
   </entry>
   <entry>
+    <title></title>
+    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p>没有吃饭</p>
+]]></content>
+  </entry>
+  <entry>
     <title>微信小程序采集失败原因</title>
     <url>/2022/07/31/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%87%87%E9%9B%86%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/</url>
     <content><![CDATA[<h1 id="微信小程序采集失败原因"><a href="#微信小程序采集失败原因" class="headerlink" title="微信小程序采集失败原因"></a>微信小程序采集失败原因</h1><p>现在微信都更新到了7..0以上的版本，使用charles抓包工具已经无法再抓到接口的数据。原因如下：安卓系统 7.0 以下版本，不管微信任意版本，都会信任系统提供的证书<br>安卓系统 7.0 以上版本，微信 7.0 以下版本，微信会信任系统提供的证书<br>安卓系统 7.0 以上版本，微信 7.0 以上版本，微信只信任它自己配置的证书列表</p>
@@ -2145,24 +2344,6 @@
       <tags>
         <tag>数据采集</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>数据结构</title>
-    <url>/2022/06/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>算法简史</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/06/28/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p>没有吃饭</p>
-]]></content>
   </entry>
   <entry>
     <title>数据库操作SQL</title>
@@ -2199,6 +2380,18 @@
       </categories>
       <tags>
         <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构</title>
+    <url>/2022/06/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>算法简史</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
