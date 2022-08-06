@@ -2966,9 +2966,52 @@
       </tags>
   </entry>
   <entry>
-    <title>完全二叉树_二叉树06</title>
+    <title>左叶子之和_二叉树08</title>
     <url>/2022/08/05/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9108/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="404-左叶子之和"><a href="#404-左叶子之和" class="headerlink" title="404.左叶子之和"></a>404.左叶子之和</h1><p><a href="https://leetcode.cn/problems/sum-of-left-leaves/">力扣题目链接(opens new window)</a></p>
+<p>计算给定二叉树的所有左叶子之和。</p>
+<p>示例：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210204151927654.png" alt="404.左叶子之和1"></p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p><strong>首先要注意是判断左叶子，不是二叉树左侧节点，所以不要上来想着层序遍历。</strong></p>
+<p>因为题目中其实没有说清楚左叶子究竟是什么节点，那么我来给出左叶子的明确定义：<strong>如果左节点不为空，且左节点没有左右孩子，那么这个节点的左节点就是左叶子</strong></p>
+<p>大家思考一下如下图中二叉树，左叶子之和究竟是多少？</p>
+<p><img src="https://img-blog.csdnimg.cn/20210204151949672.png" alt="404.左叶子之和"></p>
+<p><strong>其实是0，因为这棵树根本没有左叶子！</strong></p>
+<p>那么<strong>判断当前节点是不是左叶子是无法判断的，必须要通过节点的父节点来判断其左孩子是不是左叶子。</strong></p>
+<p>如果该节点的左节点不为空，该节点的左节点的左节点为空，该节点的左节点的右节点为空，则找到了一个左叶子，判断代码如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">if (node-&gt;left != NULL &amp;&amp; node-&gt;left-&gt;left == NULL &amp;&amp; node-&gt;left-&gt;right == NULL) &#123;</span><br><span class="line">    左叶子节点处理逻辑</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="递归法"><a href="#递归法" class="headerlink" title="递归法"></a>递归法</h2><p>递归的遍历顺序为后序遍历（左右中），是因为要通过递归函数的返回值来累加求取左叶子数值之和。。</p>
+<p>递归三部曲：</p>
+<ol>
+<li>确定递归函数的参数和返回值</li>
+</ol>
+<p>判断一个树的左叶子节点之和，那么一定要传入树的根节点，递归函数的返回值为数值之和，所以为int</p>
+<p>使用题目中给出的函数就可以了。</p>
+<ol>
+<li>确定终止条件</li>
+</ol>
+<p>依然是</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">if (root == NULL) return 0;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>确定单层递归的逻辑</li>
+</ol>
+<p>当遇到左叶子节点的时候，记录数值，然后通过递归求取左子树左叶子之和，和 右子树左叶子之和，相加便是整个树的左叶子之和。</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> leftValue = <span class="built_in">sumOfLeftLeaves</span>(root-&gt;left);    <span class="comment">// 左</span></span><br><span class="line"><span class="type">int</span> rightValue = <span class="built_in">sumOfLeftLeaves</span>(root-&gt;right);  <span class="comment">// 右</span></span><br><span class="line">                                                <span class="comment">// 中</span></span><br><span class="line"><span class="type">int</span> midValue = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">if</span> (root-&gt;left &amp;&amp; !root-&gt;left-&gt;left &amp;&amp; !root-&gt;left-&gt;right) &#123;</span><br><span class="line">    midValue = root-&gt;left-&gt;val;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> sum = midValue + leftValue + rightValue;</span><br><span class="line"><span class="keyword">return</span> sum;</span><br></pre></td></tr></table></figure>
+
+<p>整体递归代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumOfLeftLeaves</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> leftValue = <span class="built_in">sumOfLeftLeaves</span>(root-&gt;left);    <span class="comment">// 左</span></span><br><span class="line">        <span class="type">int</span> rightValue = <span class="built_in">sumOfLeftLeaves</span>(root-&gt;right);  <span class="comment">// 右</span></span><br><span class="line">                                                        <span class="comment">// 中</span></span><br><span class="line">        <span class="type">int</span> midValue = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (root-&gt;left &amp;&amp; !root-&gt;left-&gt;left &amp;&amp; !root-&gt;left-&gt;right) &#123; <span class="comment">// 中</span></span><br><span class="line">            midValue = root-&gt;left-&gt;val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> sum = midValue + leftValue + rightValue;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>以上代码精简之后如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumOfLeftLeaves</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> midValue = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (root-&gt;left != <span class="literal">NULL</span> &amp;&amp; root-&gt;left-&gt;left == <span class="literal">NULL</span> &amp;&amp; root-&gt;left-&gt;right == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            midValue = root-&gt;left-&gt;val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> midValue + <span class="built_in">sumOfLeftLeaves</span>(root-&gt;left) + <span class="built_in">sumOfLeftLeaves</span>(root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Java代码如下："><a href="#Java代码如下：" class="headerlink" title="Java代码如下："></a>Java代码如下：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span> <span class="title function_">sumOfLeftLeaves</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> sumOfLeftLeaves(root.left);</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> sumOfLeftLeaves(root.right);</span><br><span class="line">        <span class="type">int</span> <span class="variable">value</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(root.left != <span class="literal">null</span> &amp;&amp; root.left.left == <span class="literal">null</span> &amp;&amp; root.left.right == <span class="literal">null</span>) &#123;</span><br><span class="line">            value = root.left.val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> left + right + value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="迭代法："><a href="#迭代法：" class="headerlink" title="迭代法："></a>迭代法：</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span> <span class="title function_">sumOfLeftLeaves</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">		<span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		Deque&lt;TreeNode&gt; que = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">		que.offer(root);</span><br><span class="line">		<span class="keyword">while</span>(!que.isEmpty()) &#123;</span><br><span class="line">			<span class="type">TreeNode</span> <span class="variable">node</span> <span class="operator">=</span> que.poll();</span><br><span class="line">			<span class="keyword">if</span>(node.left != <span class="literal">null</span> &amp;&amp; node.left.left == <span class="literal">null</span> &amp;&amp; node.left.right == <span class="literal">null</span>) res += node.left.val;</span><br><span class="line">            <span class="keyword">if</span>(node.left != <span class="literal">null</span>) que.offer(node.left);</span><br><span class="line">            <span class="keyword">if</span>(node.right != <span class="literal">null</span>) que.offer(node.right);</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
       <categories>
         <category>算法简史</category>
         <category>二叉树</category>
