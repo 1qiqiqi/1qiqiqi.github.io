@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>从中序与后序遍历序列构造二叉树_二叉树11</title>
+      <link href="/2022/08/07/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9111/"/>
+      <url>/2022/08/07/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9111/</url>
+      
+        <content type="html"><![CDATA[<h1 id="106-从中序与后序遍历序列构造二叉树"><a href="#106-从中序与后序遍历序列构造二叉树" class="headerlink" title="106.从中序与后序遍历序列构造二叉树"></a>106.从中序与后序遍历序列构造二叉树</h1><p><a href="https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/">力扣题目链接(opens new window)</a></p><p>根据一棵树的中序遍历与后序遍历构造二叉树。</p><p>注意: 你可以假设树中没有重复的元素。</p><p>例如，给出</p><p>中序遍历 inorder &#x3D; [9,3,15,20,7] 后序遍历 postorder &#x3D; [9,15,7,20,3] 返回如下的二叉树：</p><p><img src="https://img-blog.csdnimg.cn/20210203154316774.png" alt="106. 从中序与后序遍历序列构造二叉树1"></p><h2 id="思路"><a href="#思路" class="headerlink" title="#思路"></a><a href="https://programmercarl.com/0106.%E4%BB%8E%E4%B8%AD%E5%BA%8F%E4%B8%8E%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91.html#%E6%80%9D%E8%B7%AF">#</a>思路</h2><p>首先回忆一下如何根据两个顺序构造一个唯一的二叉树，相信理论知识大家应该都清楚，就是以 后序数组的最后一个元素为切割点，先切中序数组，根据中序数组，反过来在切后序数组。一层一层切下去，每次后序数组最后一个元素就是节点元素。</p><p>如果让我们肉眼看两个序列，画一棵二叉树的话，应该分分钟都可以画出来。</p><p>流程如图：</p><p><img src="https://img-blog.csdnimg.cn/20210203154249860.png" alt="106.从中序与后序遍历序列构造二叉树"></p><p>那么代码应该怎么写呢？</p><p>说到一层一层切割，就应该想到了递归。</p><p>来看一下一共分几步：</p><ul><li>第一步：如果数组大小为零的话，说明是空节点了。</li><li>第二步：如果不为空，那么取后序数组最后一个元素作为节点元素。</li><li>第三步：找到后序数组最后一个元素在中序数组的位置，作为切割点</li><li>第四步：切割中序数组，切成中序左数组和中序右数组 （顺序别搞反了，一定是先切中序数组）</li><li>第五步：切割后序数组，切成后序左数组和后序右数组</li><li>第六步：递归处理左区间和右区间</li></ul><h2 id="java代码如下："><a href="#java代码如下：" class="headerlink" title="java代码如下："></a>java代码如下：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map;  <span class="comment">// 方便根据数值查找位置</span></span><br><span class="line">    <span class="keyword">public</span> TreeNode <span class="title function_">buildTree</span><span class="params">(<span class="type">int</span>[] inorder, <span class="type">int</span>[] postorder)</span> &#123;</span><br><span class="line">        map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 先把中序遍历的所有元素位置存入map</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;inorder.length;i++) &#123;</span><br><span class="line">            map.put(inorder[i],i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 直接返回调用函数</span></span><br><span class="line">        <span class="keyword">return</span> findNode(inorder,<span class="number">0</span>,inorder.length,postorder,<span class="number">0</span>,postorder.length);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> TreeNode <span class="title function_">findNode</span><span class="params">(<span class="type">int</span>[] inorder,<span class="type">int</span> begin01,<span class="type">int</span> end01,<span class="type">int</span>[] postorder,<span class="type">int</span> begin02,<span class="type">int</span> end02)</span> &#123;</span><br><span class="line">        <span class="comment">// 遵循左闭右开的原则</span></span><br><span class="line">        <span class="keyword">if</span>(begin01 &gt;= end01 || begin02 &gt;= end02) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="comment">// 找到在中序的数组中的元素 进行或许的切割</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">target</span> <span class="operator">=</span> map.get(postorder[postorder.length-<span class="number">1</span>]);</span><br><span class="line">        <span class="type">int</span> <span class="variable">LenOfleft</span> <span class="operator">=</span> target - begin01; <span class="comment">// 左边数组的长度</span></span><br><span class="line">        <span class="comment">// 切割左数组</span></span><br><span class="line">        root.left = findNode(inorder,begin01,target,postorder,begin02,begin02+LenOfleft);</span><br><span class="line">        root.right = fintNode(inorder,target+<span class="number">1</span>,end01,postorder,begin02+LenOfleft,end02-<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">相关题</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法简史 </category>
+          
+          <category> 二叉树 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 二叉树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>路径总和_二叉树10</title>
       <link href="/2022/08/06/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9110/"/>
       <url>/2022/08/06/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9110/</url>
