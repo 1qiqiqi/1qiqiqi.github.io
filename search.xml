@@ -3466,4 +3466,70 @@
         <tag>英语口语</tag>
       </tags>
   </entry>
+  <entry>
+    <title>删除二叉搜索树中的节点_二叉树16</title>
+    <url>/2022/08/09/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9116/</url>
+    <content><![CDATA[<h1 id="450-删除二叉搜索树中的节点"><a href="#450-删除二叉搜索树中的节点" class="headerlink" title="450.删除二叉搜索树中的节点"></a>450.删除二叉搜索树中的节点</h1><p><a href="https://leetcode.cn/problems/delete-node-in-a-bst/">力扣题目链接(opens new window)</a></p>
+<p>给定一个二叉搜索树的根节点 root 和一个值 key，删除二叉搜索树中的 key 对应的节点，并保证二叉搜索树的性质不变。返回二叉搜索树（有可能被更新）的根节点的引用。</p>
+<p>一般来说，删除节点可分为两个步骤：</p>
+<p>首先找到需要删除的节点； 如果找到了，删除它。 说明： 要求算法时间复杂度为 $O(h)$，h 为树的高度。</p>
+<p>示例:</p>
+<p><img src="https://img-blog.csdnimg.cn/20201020171048265.png" alt="450.删除二叉搜索树中的节点"></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>搜索树的节点删除要比节点增加复杂的多，有很多情况需要考虑，做好心里准备。</p>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>递归三部曲：</p>
+<ul>
+<li>确定递归函数参数以及返回值</li>
+</ul>
+<p>说道递归函数的返回值，在<a href="https://programmercarl.com/0701.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C.html">二叉树：搜索树中的插入操作 (opens new window)</a>中通过递归返回值来加入新节点， 这里也可以通过递归返回值删除节点。</p>
+<p>代码如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">TreeNode* deleteNode(TreeNode* root, int key)</span><br></pre></td></tr></table></figure>
+
+<p>1</p>
+<ul>
+<li>确定终止条件</li>
+</ul>
+<p>遇到空返回，其实这也说明没找到删除的节点，遍历到空节点直接返回了</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">if (root == nullptr) return root;</span><br></pre></td></tr></table></figure>
+
+<p>1</p>
+<ul>
+<li>确定单层递归的逻辑</li>
+</ul>
+<p>这里就把二叉搜索树中删除节点遇到的情况都搞清楚。</p>
+<p>有以下五种情况：</p>
+<ul>
+<li>第一种情况：没找到删除的节点，遍历到空节点直接返回了</li>
+<li>找到删除的节点<ul>
+<li>第二种情况：左右孩子都为空（叶子节点），直接删除节点， 返回NULL为根节点</li>
+<li>第三种情况：删除节点的左孩子为空，右孩子不为空，删除节点，右孩子补位，返回右孩子为根节点</li>
+<li>第四种情况：删除节点的右孩子为空，左孩子不为空，删除节点，左孩子补位，返回左孩子为根节点</li>
+<li>第五种情况：左右孩子节点都不为空，则将删除节点的左子树头结点（左孩子）放到删除节点的右子树的最左面节点的左孩子上，返回删除节点右孩子为新的根节点。</li>
+</ul>
+</li>
+</ul>
+<p>第五种情况有点难以理解，看下面动画：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbj3k596mg30dq0aigyz.gif" alt="450.删除二叉搜索树中的节点"></p>
+<p>动画中棵二叉搜索树中，删除元素7， 那么删除节点（元素7）的左孩子就是5，删除节点（元素7）的右子树的最左面节点是元素8。</p>
+<p>将删除节点（元素7）的左孩子放到删除节点（元素7）的右子树的最左面节点（元素8）的左孩子上，就是把5为根节点的子树移到了8的左孩子的位置。</p>
+<p>要删除的节点（元素7）的右孩子（元素9）为新的根节点。.</p>
+<p>这样就完成删除元素7的逻辑，最好动手画一个图，尝试删除一个节点试试。</p>
+<h2 id="Java代码如下："><a href="#Java代码如下：" class="headerlink" title="Java代码如下："></a>Java代码如下：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> TreeNode <span class="title function_">deleteNode</span><span class="params">(TreeNode root, <span class="type">int</span> key)</span> &#123;</span><br><span class="line">	<span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">	<span class="keyword">return</span> delete(root,key);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> TreeNode <span class="title function_">delete</span><span class="params">(TreeNode root,<span class="type">int</span> key)</span> &#123;</span><br><span class="line"><span class="keyword">if</span>(root == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">if</span>(root.val &gt; key) root.left = delete(root.left,key);</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(root.val &lt; key) <span class="type">root</span> <span class="variable">right</span> <span class="operator">=</span> delete(root.right,key);</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">	<span class="keyword">if</span>(root.left == <span class="literal">null</span> &amp;&amp; root.right == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(root.left != <span class="literal">null</span> &amp;&amp; root.right == <span class="literal">null</span>) <span class="keyword">return</span> root.left;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(root.left == <span class="literal">null</span> &amp;&amp; root.right != <span class="literal">null</span>) <span class="keyword">return</span> root.right;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="type">TreeNode</span> <span class="variable">tmp</span> <span class="operator">=</span> root.right;</span><br><span class="line">		<span class="keyword">while</span>(tmp.left != <span class="literal">null</span>) &#123;</span><br><span class="line">			tmp = tmp.left;</span><br><span class="line">		&#125;</span><br><span class="line">		tmp.left = root.left;</span><br><span class="line">		<span class="keyword">return</span> root.right;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>读完本篇，大家会发现二叉搜索树删除节点比增加节点复杂的多。</p>
+<p><strong>因为二叉搜索树添加节点只需要在叶子上添加就可以的，不涉及到结构的调整，而删除节点操作涉及到结构的调整</strong>。</p>
+<p>这里我们依然使用递归函数的返回值来完成把节点从二叉树中移除的操作。</p>
+<p><strong>这里最关键的逻辑就是第五种情况（删除一个左右孩子都不为空的节点），这种情况一定要想清楚</strong>。</p>
+<p>而且就算想清楚了，对应的代码也未必可以写出来，所以<strong>这道题目即考察思维逻辑，也考察代码能力</strong>。</p>
+<p>递归中我给出了两种写法，推荐大家学会第一种（利用搜索树的特性）就可以了，第二种递归写法其实是比较绕的。</p>
+<p>最后我也给出了相应的迭代法，就是模拟递归法中的逻辑来删除节点，但需要一个pre记录cur的父节点，方便做删除操作。</p>
+<p>迭代法其实不太容易写出来，所以如果是初学者的话，彻底掌握第一种递归写法就够了</p>
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>二叉树</category>
+      </categories>
+      <tags>
+        <tag>二叉树</tag>
+      </tags>
+  </entry>
 </search>
