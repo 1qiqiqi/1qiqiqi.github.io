@@ -3532,4 +3532,25 @@
         <tag>二叉树</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Linux目录结构</title>
+    <url>/2022/08/10/Liunx%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<h1 id="Linux目录结构"><a href="#Linux目录结构" class="headerlink" title="Linux目录结构"></a>Linux目录结构</h1><p>登录到Linux系统之后，我们需要先来熟悉一下Linux的目录结构。在Linux系统中，也是存在目录的</p>
+<p>概念的，但是Linux的目录结构和Windows的目录结构是存在比较多的差异的 在Windows目录下，是</p>
+<p>一个一个的盘符(C盘、D盘、E盘)，目录是归属于某一个盘符的。Linux系统中的目录有以下特点：</p>
+<p><strong>A. &#x2F;</strong> <strong>是所有目录的顶点</strong></p>
+<p><strong>B.</strong> <strong>目录结构像一颗倒挂的树</strong></p>
+<p><strong>Linux</strong> <strong>和</strong> <strong>Windows**<strong>的目录结构对比</strong></strong>:**</p>
+<p><img src="https://s2.loli.net/2022/08/10/TABI8jumZ2NLQyU.png" alt="Snipaste_2022-08-10_16-32-19.png"></p>
+<p>linux目录如下：</p>
+<p><img src="https://s2.loli.net/2022/08/10/ndclbBogFMRDLAS.png" alt="image-20220810164434267"></p>
+<p><img src="https://s2.loli.net/2022/08/10/z7uIxCRnGjrE86L.png" alt="image-20220810164702276"></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
 </search>
