@@ -4028,4 +4028,72 @@
         <tag>回溯</tag>
       </tags>
   </entry>
+  <entry>
+    <title>电话号码的字母组合_回溯04</title>
+    <url>/2022/08/13/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%9B%9E%E6%BA%AF03/</url>
+    <content><![CDATA[<h1 id="17-电话号码的字母组合"><a href="#17-电话号码的字母组合" class="headerlink" title="17.电话号码的字母组合"></a>17.电话号码的字母组合</h1><p><a href="https://leetcode.cn/problems/letter-combinations-of-a-phone-number/">力扣题目链接(opens new window)</a></p>
+<p>给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。</p>
+<p>给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。</p>
+<p><img src="https://img-blog.csdnimg.cn/2020102916424043.png" alt="17.电话号码的字母组合"></p>
+<p>示例: 输入：”23” 输出：[“ad”, “ae”, “af”, “bd”, “be”, “bf”, “cd”, “ce”, “cf”].</p>
+<p>说明：尽管上面的答案是按字典序排列的，但是你可以任意选择答案输出的顺序。</p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="#思路"></a><a href="https://programmercarl.com/0017.%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88.html#%E6%80%9D%E8%B7%AF">#</a>思路</h1><p>从示例上来说，输入”23”，最直接的想法就是两层for循环遍历了吧，正好把组合的情况都输出了。</p>
+<p>如果输入”233”呢，那么就三层for循环，如果”2333”呢，就四层for循环…….</p>
+<p>大家应该感觉出和<a href="https://programmercarl.com/0077.%E7%BB%84%E5%90%88.html">77.组合 (opens new window)</a>遇到的一样的问题，就是这for循环的层数如何写出来，此时又是回溯法登场的时候了。</p>
+<p>理解本题后，要解决如下三个问题：</p>
+<ol>
+<li>数字和字母如何映射</li>
+<li>两个字母就两个for循环，三个字符我就三个for循环，以此类推，然后发现代码根本写不出来</li>
+<li>输入1 * #按键等等异常情况</li>
+</ol>
+<h2 id="数字和字母如何映射"><a href="#数字和字母如何映射" class="headerlink" title="#数字和字母如何映射"></a><a href="https://programmercarl.com/0017.%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88.html#%E6%95%B0%E5%AD%97%E5%92%8C%E5%AD%97%E6%AF%8D%E5%A6%82%E4%BD%95%E6%98%A0%E5%B0%84">#</a>数字和字母如何映射</h2><p>可以使用map或者定义一个二维数组，例如：string letterMap[10]，来做映射，我这里定义一个二维数组，代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> string letterMap[<span class="number">10</span>] = &#123;</span><br><span class="line">    <span class="string">&quot;&quot;</span>, <span class="comment">// 0</span></span><br><span class="line">    <span class="string">&quot;&quot;</span>, <span class="comment">// 1</span></span><br><span class="line">    <span class="string">&quot;abc&quot;</span>, <span class="comment">// 2</span></span><br><span class="line">    <span class="string">&quot;def&quot;</span>, <span class="comment">// 3</span></span><br><span class="line">    <span class="string">&quot;ghi&quot;</span>, <span class="comment">// 4</span></span><br><span class="line">    <span class="string">&quot;jkl&quot;</span>, <span class="comment">// 5</span></span><br><span class="line">    <span class="string">&quot;mno&quot;</span>, <span class="comment">// 6</span></span><br><span class="line">    <span class="string">&quot;pqrs&quot;</span>, <span class="comment">// 7</span></span><br><span class="line">    <span class="string">&quot;tuv&quot;</span>, <span class="comment">// 8</span></span><br><span class="line">    <span class="string">&quot;wxyz&quot;</span>, <span class="comment">// 9</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="回溯法来解决n个for循环的问题"><a href="#回溯法来解决n个for循环的问题" class="headerlink" title="#回溯法来解决n个for循环的问题"></a><a href="https://programmercarl.com/0017.%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88.html#%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%9D%A5%E8%A7%A3%E5%86%B3n%E4%B8%AAfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E9%97%AE%E9%A2%98">#</a>回溯法来解决n个for循环的问题</h2><p>对于回溯法还不了解的同学看这篇：<a href="https://programmercarl.com/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html">关于回溯算法，你该了解这些！(opens new window)</a></p>
+<p>例如：输入：”23”，抽象为树形结构，如图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201123200304469.png" alt="17. 电话号码的字母组合"></p>
+<p>图中可以看出遍历的深度，就是输入”23”的长度，而叶子节点就是我们要收集的结果，输出[“ad”, “ae”, “af”, “bd”, “be”, “bf”, “cd”, “ce”, “cf”]。</p>
+<p>回溯三部曲：</p>
+<ul>
+<li>确定回溯函数参数</li>
+</ul>
+<p>首先需要一个字符串s来收集叶子节点的结果，然后用一个字符串数组result保存起来，这两个变量我依然定义为全局。</p>
+<p>再来看参数，参数指定是有题目中给的string digits，然后还要有一个参数就是int型的index。</p>
+<p>注意这个index可不是 <a href="https://programmercarl.com/0077.%E7%BB%84%E5%90%88.html">77.组合 (opens new window)</a>和<a href="https://programmercarl.com/0216.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CIII.html">216.组合总和III (opens new window)</a>中的startIndex了。</p>
+<p>这个index是记录遍历第几个数字了，就是用来遍历digits的（题目中给出数字字符串），同时index也表示树的深度。</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;string&gt; result;</span><br><span class="line">string s;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">backtracking</span><span class="params">(<span class="type">const</span> string&amp; digits, <span class="type">int</span> index)</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>确定终止条件</li>
+</ul>
+<p>例如输入用例”23”，两个数字，那么根节点往下递归两层就可以了，叶子节点就是要收集的结果集。</p>
+<p>那么终止条件就是如果index 等于 输入的数字个数（digits.size）了（本来index就是用来遍历digits的）。</p>
+<p>然后收集结果，结束本层递归。</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (index == digits.<span class="built_in">size</span>()) &#123;</span><br><span class="line">    result.<span class="built_in">push_back</span>(s);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>确定单层遍历逻辑</li>
+</ul>
+<p>首先要取index指向的数字，并找到对应的字符集（手机键盘的字符集）。</p>
+<p>然后for循环来处理这个字符集，代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> digit = digits[index] - <span class="string">&#x27;0&#x27;</span>;        <span class="comment">// 将index指向的数字转为int</span></span><br><span class="line">string letters = letterMap[digit];      <span class="comment">// 取数字对应的字符集</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; letters.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">    s.<span class="built_in">push_back</span>(letters[i]);            <span class="comment">// 处理</span></span><br><span class="line">    <span class="built_in">backtracking</span>(digits, index + <span class="number">1</span>);    <span class="comment">// 递归，注意index+1，一下层要处理下一个数字了</span></span><br><span class="line">    s.<span class="built_in">pop_back</span>();                       / 回溯</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意这里for循环，可不像是在<a href="https://programmercarl.com/0077.%E7%BB%84%E5%90%88.html">回溯算法：求组合问题！ (opens new window)</a>和<a href="https://programmercarl.com/0216.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CIII.html">回溯算法：求组合总和！ (opens new window)</a>中从startIndex开始遍历的</strong>。</p>
+<p><strong>因为本题每一个数字代表的是不同集合，也就是求不同集合之间的组合，而<a href="https://programmercarl.com/0077.%E7%BB%84%E5%90%88.html">77. 组合 (opens new window)</a>和<a href="https://programmercarl.com/0216.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CIII.html">216.组合总和III (opens new window)</a>都是是求同一个集合中的组合！</strong></p>
+<p>注意：输入1 * #按键等等异常情况</p>
+<p>代码中最好考虑这些异常情况，但题目的测试数据中应该没有异常情况的数据，所以我就没有加了。</p>
+<p><strong>但是要知道会有这些异常，如果是现场面试中，一定要考虑到！</strong></p>
+<h1 id="Java代码如下："><a href="#Java代码如下：" class="headerlink" title="Java代码如下："></a>Java代码如下：</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line"><span class="keyword">public</span> List&lt;String&gt; <span class="title function_">letterCombinations</span><span class="params">(String digits)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(digits.length() == <span class="number">0</span>) <span class="keyword">return</span> res;</span><br><span class="line">        String [] Stringnums = &#123;<span class="string">&quot;&quot;</span>, <span class="string">&quot;&quot;</span>, <span class="string">&quot;abc&quot;</span>, <span class="string">&quot;def&quot;</span>, <span class="string">&quot;ghi&quot;</span>, <span class="string">&quot;jkl&quot;</span>, <span class="string">&quot;mno&quot;</span>, <span class="string">&quot;pqrs&quot;</span>, <span class="string">&quot;tuv&quot;</span>, <span class="string">&quot;wxyz&quot;</span>&#125;;</span><br><span class="line">        backtracking(Stringnums,digits,<span class="number">1</span>); <span class="comment">// index记录深度</span></span><br><span class="line">    	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">backtracking</span><span class="params">(String[] Stringnums,String digits,<span class="type">int</span> index)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(index == digits.size()) &#123;</span><br><span class="line">        res.add(sb);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">String</span> <span class="variable">tmp</span> <span class="operator">=</span> Stringnums[digits.charAt(index) - <span class="string">&#x27;0&#x27;</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;tmp.length();i++) &#123;</span><br><span class="line">        sb.append(tmp.charAt(i));</span><br><span class="line">       	backtracking(stringnums,digits,index+<span class="number">1</span>); <span class="comment">// 回溯细节</span></span><br><span class="line">        sb.deleteCharAt(sb.length() - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>回溯</category>
+      </categories>
+      <tags>
+        <tag>回溯</tag>
+      </tags>
+  </entry>
 </search>
