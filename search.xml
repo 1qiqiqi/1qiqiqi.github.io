@@ -4096,4 +4096,75 @@
         <tag>回溯</tag>
       </tags>
   </entry>
+  <entry>
+    <title>组合总和_回溯05</title>
+    <url>/2022/08/14/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%9B%9E%E6%BA%AF04/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="39-组合总和"><a href="#39-组合总和" class="headerlink" title="39. 组合总和"></a>39. 组合总和</h1><p><a href="https://leetcode.cn/problems/combination-sum/">力扣题目链接(opens new window)</a></p>
+<p>给定一个无重复元素的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。</p>
+<p>candidates 中的数字可以无限制重复被选取。</p>
+<p>说明：</p>
+<ul>
+<li>所有数字（包括 target）都是正整数。</li>
+<li>解集不能包含重复的组合。</li>
+</ul>
+<p>示例 1： 输入：candidates = [2,3,6,7], target = 7, 所求解集为： [ [7], [2,2,3] ]</p>
+<p>示例 2： 输入：candidates = [2,3,5], target = 8, 所求解集为： [  [2,2,2,2],  [2,3,3],  [3,5] ]</p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p><a href="https://www.bilibili.com/video/BV1KT4y1M7HJ">B站视频讲解-组合总和(opens new window)</a></p>
+<p>题目中的<strong>无限制重复被选取，吓得我赶紧想想 出现0 可咋办</strong>，然后看到下面提示：1 &lt;= candidates[i] &lt;= 200，我就放心了。</p>
+<p>本题和<a href="https://programmercarl.com/0077.%E7%BB%84%E5%90%88.html">77.组合 (opens new window)</a>，<a href="https://programmercarl.com/0216.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CIII.html">216.组合总和III (opens new window)</a>和区别是：本题没有数量要求，可以无限重复，但是有总和的限制，所以间接的也是有个数的限制。</p>
+<p>本题搜索的过程抽象成树形结构如下：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201223170730367.png" alt="39.组合总和"> 注意图中叶子节点的返回条件，因为本题没有组合数量要求，仅仅是总和的限制，所以递归没有层数的限制，只要选取的元素总和超过target，就返回！</p>
+<p>而在<a href="https://programmercarl.com/0077.%E7%BB%84%E5%90%88.html">77.组合 (opens new window)</a>和<a href="https://programmercarl.com/0216.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CIII.html">216.组合总和III (opens new window)</a>中都可以知道要递归K层，因为要取k个元素的组合。</p>
+<h2 id="回溯三部曲"><a href="#回溯三部曲" class="headerlink" title="回溯三部曲"></a>回溯三部曲</h2><ul>
+<li>递归函数参数</li>
+</ul>
+<p>这里依然是定义两个全局变量，二维数组result存放结果集，数组path存放符合条件的结果。（这两个变量可以作为函数参数传入）</p>
+<p>首先是题目中给出的参数，集合candidates, 和目标值target。</p>
+<p>此外我还定义了int型的sum变量来统计单一结果path里的总和，其实这个sum也可以不用，用target做相应的减法就可以了，最后如何target==0就说明找到符合的结果了，但为了代码逻辑清晰，我依然用了sum。</p>
+<p><strong>本题还需要startIndex来控制for循环的起始位置，对于组合问题，什么时候需要startIndex呢？</strong></p>
+<p>我举过例子，如果是一个集合来求组合的话，就需要startIndex，例如：<a href="https://programmercarl.com/0077.%E7%BB%84%E5%90%88.html">77.组合 (opens new window)</a>，<a href="https://programmercarl.com/0216.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CIII.html">216.组合总和III (opens new window)</a>。</p>
+<p>如果是多个集合取组合，各个集合之间相互不影响，那么就不用startIndex，例如：<a href="https://programmercarl.com/0017.%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88.html">17.电话号码的字母组合(opens new window)</a></p>
+<p><strong>注意以上我只是说求组合的情况，如果是排列问题，又是另一套分析的套路，后面我再讲解排列的时候就重点介绍</strong>。</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; result;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; path;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">backtracking</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; candidates, <span class="type">int</span> target, <span class="type">int</span> sum, <span class="type">int</span> startIndex)</span></span></span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>递归终止条件</li>
+</ul>
+<p>在如下树形结构中：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201223170730367.png" alt="39.组合总和"></p>
+<p>从叶子节点可以清晰看到，终止只有两种情况，sum大于target和sum等于target。</p>
+<p>sum等于target的时候，需要收集结果，代码如下：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (sum &gt; target) {</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">if</span> (sum == target) {</span><br><span class="line">    result.<span class="built_in">push_back</span>(path);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>单层搜索的逻辑</li>
+</ul>
+<p>单层for循环依然是从startIndex开始，搜索candidates集合。</p>
+<p><strong>注意本题和<a href="https://programmercarl.com/0077.%E7%BB%84%E5%90%88.html">77.组合 (opens new window)</a>、<a href="https://programmercarl.com/0216.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CIII.html">216.组合总和III (opens new window)</a>的一个区别是：本题元素为可重复选取的</strong>。</p>
+<p>如何重复选取呢，看代码，注释部分：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = startIndex; i &lt; candidates.<span class="built_in">size</span>(); i++) {</span><br><span class="line">    sum += candidates[i];</span><br><span class="line">    path.<span class="built_in">push_back</span>(candidates[i]);</span><br><span class="line">    <span class="built_in">backtracking</span>(candidates, target, sum, i); <span class="comment">// 关键点:不用i+1了，表示可以重复读取当前的数</span></span><br><span class="line">    sum -= candidates[i];   <span class="comment">// 回溯</span></span><br><span class="line">    path.<span class="built_in">pop_back</span>();        <span class="comment">// 回溯</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="剪枝优化"><a href="#剪枝优化" class="headerlink" title="剪枝优化"></a>剪枝优化</h2><p>在这个树形结构中：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201223170730367.png" alt="39.组合总和"></p>
+<p>以及上面的版本一的代码大家可以看到，对于sum已经大于target的情况，其实是依然进入了下一层递归，只是下一层递归结束判断的时候，会判断sum &gt; target的话就返回。</p>
+<p>其实如果已经知道下一层的sum会大于target，就没有必要进入下一层递归了。</p>
+<p>那么可以在for循环的搜索范围上做做文章了。</p>
+<p><strong>对总集合排序之后，如果下一层的sum（就是本层的 sum + candidates[i]）已经大于target，就可以结束本轮for循环的遍历</strong>。</p>
+<p>如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201223170809182.png" alt="39.组合总和1"></p>
+<p>for循环剪枝代码如下：</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">for (int i = startIndex; i &lt; candidates.size() &amp;&amp; sum + candidates[i] &lt;= target; i++)</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="JAVA关键代码如下："><a href="#JAVA关键代码如下：" class="headerlink" title="JAVA关键代码如下："></a>JAVA关键代码如下：</h1><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">List&lt;Integer&gt; path = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">combinationSum</span><span class="params">(<span class="type">int</span>[] candidates, <span class="type">int</span> target)</span> {</span><br><span class="line">    Arrays.sort(candidates); <span class="comment">// 不排序也可以</span></span><br><span class="line">	backtracking(candidates,target,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">backtracking</span><span class="params">(<span class="type">int</span>[] candidates,<span class="type">int</span> sum,<span class="type">int</span> startIndex)</span> {</span><br><span class="line">    <span class="keyword">if</span>(sum &lt; <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span>(sum == <span class="number">0</span>) {</span><br><span class="line">        res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>(path));</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=startIndex;i&lt;candidates.length &amp;&amp; sum - candidates[i] &gt;= <span class="number">0</span>;i++) { <span class="comment">// 剪枝</span></span><br><span class="line">        sum -= candidates[i];</span><br><span class="line">        path.add(candidates[i]);</span><br><span class="line">        backtracking(candidates,sum,i);</span><br><span class="line">        sum += candidates[i];</span><br><span class="line">        path.remove(candidates.size() -<span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+</body></html>]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>回溯</category>
+      </categories>
+      <tags>
+        <tag>回溯</tag>
+      </tags>
+  </entry>
 </search>
