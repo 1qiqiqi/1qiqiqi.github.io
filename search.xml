@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>子集问题（二）_回溯08</title>
+      <link href="/2022/08/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%9B%9E%E6%BA%AF07/"/>
+      <url>/2022/08/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%9B%9E%E6%BA%AF07/</url>
+      
+        <content type="html"><![CDATA[<html><head></head><body><h1 id="子集问题（二）"><a href="#子集问题（二）" class="headerlink" title="子集问题（二）"></a>子集问题（二）</h1><h2 id="90-子集II"><a href="#90-子集II" class="headerlink" title="#90.子集II"></a><a href="https://programmercarl.com/0090.%E5%AD%90%E9%9B%86II.html#_90-%E5%AD%90%E9%9B%86ii">#</a>90.子集II</h2><p><a href="https://leetcode.cn/problems/subsets-ii/">力扣题目链接(opens new window)</a></p><p>给定一个可能包含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。</p><p>说明：解集不能包含重复的子集。</p><p>示例:</p><ul><li>输入: [1,2,2]</li><li>输出: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]</li></ul><h2 id="思路"><a href="#思路" class="headerlink" title="#思路"></a><a href="https://programmercarl.com/0090.%E5%AD%90%E9%9B%86II.html#%E6%80%9D%E8%B7%AF">#</a>思路</h2><p>做本题之前一定要先做<a href="https://programmercarl.com/0078.%E5%AD%90%E9%9B%86.html">78.子集 (opens new window)</a>。</p><p>这道题目和<a href="https://programmercarl.com/0078.%E5%AD%90%E9%9B%86.html">78.子集 (opens new window)</a>区别就是集合里有重复元素了，而且求取的子集要去重。</p><p>那么关于回溯算法中的去重问题，<strong>在<a href="https://programmercarl.com/0040.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CII.html">40.组合总和II (opens new window)</a>中已经详细讲解过了，和本题是一个套路</strong>。</p><p><strong>剧透一下，后期要讲解的排列问题里去重也是这个套路，所以理解“树层去重”和“树枝去重”非常重要</strong>。</p><p>用示例中的[1, 2, 2] 来举例，如图所示： （<strong>注意去重需要先对集合排序</strong>）</p><p><img src="https://img-blog.csdnimg.cn/20201124195411977.png" alt="90.子集II"></p><p>从图中可以看出，同一树层上重复取2 就要过滤掉，同一树枝上就可以重复取2，因为同一树枝上元素的集合才是唯一子集！</p><p>本题就是其实就是<a href="https://programmercarl.com/0078.%E5%AD%90%E9%9B%86.html">回溯算法：求子集问题！ (opens new window)</a>的基础上加上了去重，去重我们在<a href="https://programmercarl.com/0040.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CII.html">回溯算法：求组合总和（三） (opens new window)</a>也讲过了</p><h1 id="关键点"><a href="#关键点" class="headerlink" title="关键点"></a>关键点</h1><p>本题也可以不使用used数组来去重，因为递归的时候下一个startIndex是i+1而不是0。</p><p>如果要是全排列的话，每次要从0开始遍历，为了跳过已入栈的元素，需要使用used。</p><h1 id="Java代码如下"><a href="#Java代码如下" class="headerlink" title="Java代码如下"></a>Java代码如下</h1><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">List&lt;Integer&gt; path = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">subsetsWithDup</span><span class="params">( <span class="type">int</span>[] nums )</span> {</span><br><span class="line">Arrays.sort(nums);</span><br><span class="line">    backtracking( nums, <span class="number">0</span> );</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">backtracking</span><span class="params">( <span class="type">int</span>[] nums, <span class="type">int</span> startIndex )</span> {</span><br><span class="line">res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(path));</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=startIndex;i&lt;nums.length;i++) {</span><br><span class="line"><span class="keyword">if</span>(i &gt; startIndex &amp;&amp; nums[i] == nums[i-<span class="number">1</span>]) <span class="keyword">continue</span>;</span><br><span class="line">path.add(nums[i]);</span><br><span class="line">backtracking(nums,i+<span class="number">1</span>);</span><br><span class="line">path.remove(path.size() -<span class="number">1</span>);</span><br><span class="line">}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法简史 </category>
+          
+          <category> 回溯 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 回溯 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>复原IP地址_回溯07</title>
       <link href="/2022/08/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%9B%9E%E6%BA%AF06/"/>
       <url>/2022/08/15/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%9B%9E%E6%BA%AF06/</url>
