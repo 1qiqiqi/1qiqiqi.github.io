@@ -5107,38 +5107,50 @@
       </tags>
   </entry>
   <entry>
-    <title>跳跃游戏_贪心04</title>
-    <url>/2022/08/18/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E8%B4%AA%E5%BF%8304%20-%20%E5%89%AF%E6%9C%AC/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="55-跳跃游戏"><a href="#55-跳跃游戏" class="headerlink" title="55. 跳跃游戏"></a>55. 跳跃游戏</h1><p><a href="https://leetcode.cn/problems/jump-game/">力扣题目链接(opens new window)</a></p>
+    <title>跳跃游戏||_贪心05</title>
+    <url>/2022/08/18/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E8%B4%AA%E5%BF%8305/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="45-跳跃游戏II"><a href="#45-跳跃游戏II" class="headerlink" title="45.跳跃游戏II"></a>45.跳跃游戏II</h1><p><a href="https://leetcode.cn/problems/jump-game-ii/">力扣题目链接(opens new window)</a></p>
 <p>给定一个非负整数数组，你最初位于数组的第一个位置。</p>
 <p>数组中的每个元素代表你在该位置可以跳跃的最大长度。</p>
-<p>判断你是否能够到达最后一个位置。</p>
-<p>示例 1:</p>
+<p>你的目标是使用最少的跳跃次数到达数组的最后一个位置。</p>
+<p>示例:</p>
 <ul>
 <li>输入: [2,3,1,1,4]</li>
-<li>输出: true</li>
-<li>解释: 我们可以先跳 1 步，从位置 0 到达 位置 1, 然后再从位置 1 跳 3 步到达最后一个位置。</li>
+<li>输出: 2</li>
+<li>解释: 跳到最后一个位置的最小跳跃数是 2。从下标为 0 跳到下标为 1 的位置，跳 1 步，然后跳 3 步到达数组的最后一个位置。</li>
 </ul>
-<p>示例 2:</p>
-<ul>
-<li>输入: [3,2,1,0,4]</li>
-<li>输出: false</li>
-<li>解释: 无论怎样，你总会到达索引为 3 的位置。但该位置的最大跳跃长度是 0 ， 所以你永远不可能到达最后一个位置。</li>
-</ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="#思路"></a><a href="https://programmercarl.com/0055.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F.html#%E6%80%9D%E8%B7%AF">#</a>思路</h2><p>刚看到本题一开始可能想：当前位置元素如果是3，我究竟是跳一步呢，还是两步呢，还是三步呢，究竟跳几步才是最优呢？</p>
-<p>其实跳几步无所谓，关键在于可跳的覆盖范围！</p>
-<p>不一定非要明确一次究竟跳几步，每次取最大的跳跃步数，这个就是可以跳跃的覆盖范围。</p>
-<p>这个范围内，别管是怎么跳的，反正一定可以跳过来。</p>
-<p><strong>那么这个问题就转化为跳跃覆盖范围究竟可不可以覆盖到终点！</strong></p>
-<p>每次移动取最大跳跃步数（得到最大的覆盖范围），每移动一个单位，就更新最大覆盖范围。</p>
-<p><strong>贪心算法局部最优解：每次取最大跳跃步数（取最大覆盖范围），整体最优解：最后得到整体最大覆盖范围，看是否能到终点</strong>。</p>
-<p>局部最优推出全局最优，找不出反例，试试贪心！</p>
+<p>说明: 假设你总是可以到达数组的最后一个位置。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="#思路"></a><a href="https://programmercarl.com/0045.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8FII.html#%E6%80%9D%E8%B7%AF">#</a>思路</h2><p>本题相对于<a href="https://programmercarl.com/0055.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F.html">55.跳跃游戏 (opens new window)</a>还是难了不少。</p>
+<p>但思路是相似的，还是要看最大覆盖范围。</p>
+<p>本题要计算最小步数，那么就要想清楚什么时候步数才一定要加一呢？</p>
+<p>贪心的思路，局部最优：当前可移动距离尽可能多走，如果还没到终点，步数再加一。整体最优：一步尽可能多走，从而达到最小步数。</p>
+<p>思路虽然是这样，但在写代码的时候还不能真的就能跳多远跳远，那样就不知道下一步最远能跳到哪里了。</p>
+<p><strong>所以真正解题的时候，要从覆盖范围出发，不管怎么跳，覆盖范围内一定是可以跳到的，以最小的步数增加覆盖范围，覆盖范围一旦覆盖了终点，得到的就是最小步数！</strong></p>
+<p><strong>这里需要统计两个覆盖范围，当前这一步的最大覆盖和下一步最大覆盖</strong>。</p>
+<p>如果移动下标达到了当前这一步的最大覆盖最远距离了，还没有到终点的话，那么就必须再走一步来增加覆盖范围，直到覆盖范围覆盖了终点。</p>
 <p>如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/20201124154758229.png" alt="55.跳跃游戏"></p>
-<p>i每次移动只能在cover的范围内移动，每移动一个元素，cover得到该元素数值（新的覆盖范围）的补充，让i继续移动下去。</p>
-<p>而cover每次只取 max(该元素数值补充后的范围, cover本身范围)。</p>
-<p>如果cover大于等于了终点下标，直接return true就可以了。</p>
-<h1 id="Java代码如下"><a href="#Java代码如下" class="headerlink" title="Java代码如下:"></a>Java代码如下:</h1><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canJump</span><span class="params">(<span class="type">int</span>[] nums)</span> {</span><br><span class="line">	<span class="type">int</span> <span class="variable">cover</span> <span class="operator">=</span> <span class="number">0</span> ;</span><br><span class="line">    <span class="keyword">if</span> (nums.length == <span class="number">1</span>) {</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span> ;i&lt;nums.length;i++) {</span><br><span class="line">        <span class="keyword">if</span>(nums[i] + i &gt; cover) cover = nums[i] + i;</span><br><span class="line">        <span class="keyword">if</span>(cover &gt;= nums.length -<span class="number">1</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20201201232309103.png" alt="45.跳跃游戏II"></p>
+<p><strong>图中覆盖范围的意义在于，只要红色的区域，最多两步一定可以到！（不用管具体怎么跳，反正一定可以跳到）</strong></p>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="#方法一"></a><a href="https://programmercarl.com/0045.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8FII.html#%E6%96%B9%E6%B3%95%E4%B8%80">#</a>方法一</h2><p>从图中可以看出来，就是移动下标达到了当前覆盖的最远距离下标时，步数就要加一，来增加覆盖距离。最后的步数就是最少步数。</p>
+<p>这里还是有个特殊情况需要考虑，当移动下标达到了当前覆盖的最远距离下标时</p>
+<ul>
+<li>如果当前覆盖最远距离下标不是是集合终点，步数就加一，还需要继续走。</li>
+<li>如果当前覆盖最远距离下标就是是集合终点，步数不用加一，因为不能再往后走了。</li>
+</ul>
+<h1 id="Java01代码如下："><a href="#Java01代码如下：" class="headerlink" title="Java01代码如下："></a>Java01代码如下：</h1><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">jump</span><span class="params">(<span class="type">int</span>[] nums)</span> {</span><br><span class="line">    <span class="type">int</span> <span class="variable">curCover</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">NextCover</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;nums.length;i++) {</span><br><span class="line">        NextCover = Math.max(nums[i]+i,NextCover);</span><br><span class="line">        <span class="keyword">if</span>(NextCover &gt;= nums.length - <span class="number">1</span>) {</span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(curCover == i) {</span><br><span class="line">            <span class="keyword">if</span>(curCover != nums.length -<span class="number">1</span>) {</span><br><span class="line">                count++;</span><br><span class="line">                curCover = NextCover;</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>依然是贪心，思路和方法一差不多，代码可以简洁一些。</p>
+<p><strong>针对于方法一的特殊情况，可以统一处理</strong>，即：移动下标只要遇到当前覆盖最远距离的下标，直接步数加一，不考虑是不是终点的情况。</p>
+<p>想要达到这样的效果，只要让移动下标，最大只能移动到nums.size - 2的地方就可以了。</p>
+<p>因为当移动下标指向nums.size - 2时：</p>
+<ul>
+<li>如果移动下标等于当前覆盖最大距离下标， 需要再走一步（即ans++），因为最后一步一定是可以到的终点。（题目假设总是可以到达数组的最后一个位置），如图： <img src="https://img-blog.csdnimg.cn/20201201232445286.png" alt="45.跳跃游戏II2"></li>
+<li>如果移动下标不等于当前覆盖最大距离下标，说明当前覆盖最远距离就可以直接达到终点了，不需要再走一步。如图：</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201201232338693.png" alt="45.跳跃游戏II1"></p>
+<h1 id="Java02代码如下："><a href="#Java02代码如下：" class="headerlink" title="Java02代码如下："></a>Java02代码如下：</h1><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">jump</span><span class="params">(<span class="type">int</span>[] nums)</span> {</span><br><span class="line">    <span class="type">int</span> <span class="variable">curCover</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">NextCover</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i &lt; nums.length - <span class="number">1</span>;i++) {</span><br><span class="line">        NextCover = Math.max(NextCover,nums[i] + i);</span><br><span class="line">        <span class="keyword">if</span>(curCover == i) {</span><br><span class="line">            count++;</span><br><span class="line">            curCover = NextCover;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 </body></html>]]></content>
       <categories>
