@@ -5161,4 +5161,134 @@
         <tag>贪心</tag>
       </tags>
   </entry>
+  <entry>
+    <title>加油站_贪心06</title>
+    <url>/2022/08/19/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E8%B4%AA%E5%BF%8306/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="134-加油站"><a href="#134-加油站" class="headerlink" title="134. 加油站"></a>134. 加油站</h1><p><a href="https://leetcode.cn/problems/gas-station/">力扣题目链接(opens new window)</a></p>
+<p>在一条环路上有 N 个加油站，其中第 i 个加油站有汽油 gas[i] 升。</p>
+<p>你有一辆油箱容量无限的的汽车，从第 i 个加油站开往第 i+1 个加油站需要消耗汽油 cost[i] 升。你从其中的一个加油站出发，开始时油箱为空。</p>
+<p>如果你可以绕环路行驶一周，则返回出发时加油站的编号，否则返回 -1。</p>
+<p>说明:</p>
+<ul>
+<li>如果题目有解，该答案即为唯一答案。</li>
+<li>输入数组均为非空数组，且长度相同。</li>
+<li>输入数组中的元素均为非负数。</li>
+</ul>
+<p>示例 1: 输入:</p>
+<ul>
+<li>gas = [1,2,3,4,5]</li>
+<li>cost = [3,4,5,1,2]</li>
+</ul>
+<p>输出: 3 解释:</p>
+<ul>
+<li>从 3 号加油站(索引为 3 处)出发，可获得 4 升汽油。此时油箱有 = 0 + 4 = 4 升汽油</li>
+<li>开往 4 号加油站，此时油箱有 4 - 1 + 5 = 8 升汽油</li>
+<li>开往 0 号加油站，此时油箱有 8 - 2 + 1 = 7 升汽油</li>
+<li>开往 1 号加油站，此时油箱有 7 - 3 + 2 = 6 升汽油</li>
+<li>开往 2 号加油站，此时油箱有 6 - 4 + 3 = 5 升汽油</li>
+<li>开往 3 号加油站，你需要消耗 5 升汽油，正好足够你返回到 3 号加油站。</li>
+<li>因此，3 可为起始索引。</li>
+</ul>
+<p>示例 2: 输入:</p>
+<ul>
+<li>gas = [2,3,4]</li>
+<li>cost = [3,4,3]</li>
+<li>输出: -1</li>
+<li>解释: 你不能从 0 号或 1 号加油站出发，因为没有足够的汽油可以让你行驶到下一个加油站。我们从 2 号加油站出发，可以获得 4 升汽油。 此时油箱有 = 0 + 4 = 4 升汽油。开往 0 号加油站，此时油箱有 4 - 3 + 2 = 3 升汽油。开往 1 号加油站，此时油箱有 3 - 3 + 3 = 3 升汽油。你无法返回 2 号加油站，因为返程需要消耗 4 升汽油，但是你的油箱只有 3 升汽油。因此，无论怎样，你都不可能绕环路行驶一周。</li>
+</ul>
+<h2 id="暴力方法"><a href="#暴力方法" class="headerlink" title="#暴力方法"></a><a href="https://programmercarl.com/0134.%E5%8A%A0%E6%B2%B9%E7%AB%99.html#%E6%9A%B4%E5%8A%9B%E6%96%B9%E6%B3%95">#</a>暴力方法</h2><p>暴力的方法很明显就是$O(n^2)$的，遍历每一个加油站为起点的情况，模拟一圈。</p>
+<p>如果跑了一圈，中途没有断油，而且最后油量大于等于0，说明这个起点是ok的。</p>
+<p>暴力的方法思路比较简单，但代码写起来也不是很容易，关键是要模拟跑一圈的过程。</p>
+<p><strong>for循环适合模拟从头到尾的遍历，而while循环适合模拟环形遍历，要善于使用while！</strong></p>
+<p>C++代码如下：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> {</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">canCompleteCircuit</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; gas, vector&lt;<span class="type">int</span>&gt;&amp; cost)</span> </span>{</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cost.<span class="built_in">size</span>(); i++) {</span><br><span class="line">            <span class="type">int</span> rest = gas[i] - cost[i]; <span class="comment">// 记录剩余油量</span></span><br><span class="line">            <span class="type">int</span> index = (i + <span class="number">1</span>) % cost.<span class="built_in">size</span>();</span><br><span class="line">            <span class="keyword">while</span> (rest &gt; <span class="number">0</span> &amp;&amp; index != i) { <span class="comment">// 模拟以i为起点行驶一圈</span></span><br><span class="line">                rest += gas[index] - cost[index];</span><br><span class="line">                index = (index + <span class="number">1</span>) % cost.<span class="built_in">size</span>();</span><br><span class="line">            }</span><br><span class="line">            <span class="comment">// 如果以i为起点跑一圈，剩余油量&gt;=0，返回该起始位置</span></span><br><span class="line">            <span class="keyword">if</span> (rest &gt;= <span class="number">0</span> &amp;&amp; index == i) <span class="keyword">return</span> i;</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    }</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>时间复杂度：O(n^2)</li>
+<li>空间复杂度：O(1</li>
+</ul>
+<h2 id="贪心算法（方法二）"><a href="#贪心算法（方法二）" class="headerlink" title="贪心算法（方法二）"></a>贪心算法（方法二）</h2><p>可以换一个思路，首先如果总油量减去总消耗大于等于零那么一定可以跑完一圈，说明 各个站点的加油站 剩油量rest[i]相加一定是大于等于零的。</p>
+<p>每个加油站的剩余量rest[i]为gas[i] - cost[i]。</p>
+<p>i从0开始累加rest[i]，和记为curSum，一旦curSum小于零，说明[0, i]区间都不能作为起始位置，起始位置从i+1算起，再从0计算curSum。</p>
+<p>如图： <img src="https://img-blog.csdnimg.cn/20201213162821958.png" alt="134.加油站"></p>
+<p>那么为什么一旦[i，j] 区间和为负数，起始位置就可以是j+1呢，j+1后面就不会出现更大的负数？</p>
+<p>如果出现更大的负数，就是更新j，那么起始位置又变成新的j+1了。</p>
+<p>而且j之前出现了多少负数，j后面就会出现多少正数，因为耗油总和是大于零的（前提我们已经确定了一定可以跑完全程）。</p>
+<p><strong>那么局部最优：当前累加rest[j]的和curSum一旦小于0，起始位置至少要是j+1，因为从j开始一定不行。全局最优：找到可以跑一圈的起始位置</strong>。</p>
+<p>局部最优可以推出全局最优，找不出反例，试试贪心！</p>
+<h1 id="Java代码如下："><a href="#Java代码如下：" class="headerlink" title="Java代码如下："></a>Java代码如下：</h1><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">canCompleteCircuit</span><span class="params">(<span class="type">int</span>[] gas, <span class="type">int</span>[] cost)</span> {</span><br><span class="line">	<span class="type">int</span> <span class="variable">curSum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> <span class="variable">TotalSum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;gas.length;i++) {</span><br><span class="line">		curSum += gas[i] - cost[i];</span><br><span class="line">		TotalSum += gas[i] - cost[i];</span><br><span class="line">		<span class="keyword">if</span>(curSum &lt; <span class="number">0</span>) {</span><br><span class="line">			curSum = <span class="number">0</span>;</span><br><span class="line">			start = (i + <span class="number">1</span>)%gas.length;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">if</span>(TotalSum &lt; <span class="number">0</span>) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> start;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+</body></html>]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>贪心</category>
+      </categories>
+      <tags>
+        <tag>贪心</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分发糖果_贪心07</title>
+    <url>/2022/08/19/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E8%B4%AA%E5%BF%8307/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="135-分发糖果"><a href="#135-分发糖果" class="headerlink" title="135. 分发糖果"></a>135. 分发糖果</h1><p><a href="https://leetcode.cn/problems/candy/">力扣题目链接(opens new window)</a></p>
+<p>老师想给孩子们分发糖果，有 N 个孩子站成了一条直线，老师会根据每个孩子的表现，预先给他们评分。</p>
+<p>你需要按照以下要求，帮助老师给这些孩子分发糖果：</p>
+<ul>
+<li>每个孩子至少分配到 1 个糖果。</li>
+<li>相邻的孩子中，评分高的孩子必须获得更多的糖果。</li>
+</ul>
+<p>那么这样下来，老师至少需要准备多少颗糖果呢？</p>
+<p>示例 1:</p>
+<ul>
+<li>输入: [1,0,2]</li>
+<li>输出: 5</li>
+<li>解释: 你可以分别给这三个孩子分发 2、1、2 颗糖果。</li>
+</ul>
+<p>示例 2:</p>
+<ul>
+<li>输入: [1,2,2]</li>
+<li>输出: 4</li>
+<li>解释: 你可以分别给这三个孩子分发 1、2、1 颗糖果。第三个孩子只得到 1 颗糖果，这已满足上述两个条件。</li>
+</ul>
+<h2 id="思路"><a href="#思路" class="headerlink" title="#思路"></a><a href="https://programmercarl.com/0135.%E5%88%86%E5%8F%91%E7%B3%96%E6%9E%9C.html#%E6%80%9D%E8%B7%AF">#</a>思路</h2><p>这道题目一定是要确定一边之后，再确定另一边，例如比较每一个孩子的左边，然后再比较右边，<strong>如果两边一起考虑一定会顾此失彼</strong>。</p>
+<p>先确定右边评分大于左边的情况（也就是从前向后遍历）</p>
+<p>此时局部最优：只要右边评分比左边大，右边的孩子就多一个糖果，全局最优：相邻的孩子中，评分高的右孩子获得比左边孩子更多的糖果</p>
+<p>局部最优可以推出全局最优。</p>
+<p>如果ratings[i] &gt; ratings[i - 1] 那么[i]的糖 一定要比[i - 1]的糖多一个，所以贪心：candyVec[i] = candyVec[i - 1] + 1</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 从前向后</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; ratings.<span class="built_in">size</span>(); i++) {</span><br><span class="line">    <span class="keyword">if</span> (ratings[i] &gt; ratings[i - <span class="number">1</span>]) candyVec[i] = candyVec[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201117114916878.png" alt="135.分发糖果"></p>
+<p>再确定左孩子大于右孩子的情况（从后向前遍历）</p>
+<p>遍历顺序这里有同学可能会有疑问，为什么不能从前向后遍历呢？</p>
+<p>因为如果从前向后遍历，根据 ratings[i + 1] 来确定 ratings[i] 对应的糖果，那么每次都不能利用上前一次的比较结果了。</p>
+<p><strong>所以确定左孩子大于右孩子的情况一定要从后向前遍历！</strong></p>
+<p>如果 ratings[i] &gt; ratings[i + 1]，此时candyVec[i]（第i个小孩的糖果数量）就有两个选择了，一个是candyVec[i + 1] + 1（从右边这个加1得到的糖果数量），一个是candyVec[i]（之前比较右孩子大于左孩子得到的糖果数量）。</p>
+<p>那么又要贪心了，局部最优：取candyVec[i + 1] + 1 和 candyVec[i] 最大的糖果数量，保证第i个小孩的糖果数量即大于左边的也大于右边的。全局最优：相邻的孩子中，评分高的孩子获得更多的糖果。</p>
+<p>局部最优可以推出全局最优。</p>
+<p>所以就取candyVec[i + 1] + 1 和 candyVec[i] 最大的糖果数量，<strong>candyVec[i]只有取最大的才能既保持对左边candyVec[i - 1]的糖果多，也比右边candyVec[i + 1]的糖果多</strong>。</p>
+<p>如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201117115658791.png" alt="135.分发糖果1"></p>
+<p>所以该过程代码如下：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 从后向前</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = ratings.<span class="built_in">size</span>() - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) {</span><br><span class="line">    <span class="keyword">if</span> (ratings[i] &gt; ratings[i + <span class="number">1</span>] ) {</span><br><span class="line">        candyVec[i] = <span class="built_in">max</span>(candyVec[i], candyVec[i + <span class="number">1</span>] + <span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这在leetcode上是一道困难的题目，其难点就在于贪心的策略，如果在考虑局部的时候想两边兼顾，就会顾此失彼。</p>
+<p>那么本题我采用了两次贪心的策略：</p>
+<ul>
+<li>一次是从左到右遍历，只比较右边孩子评分比左边大的情况。</li>
+<li>一次是从右到左遍历，只比较左边孩子评分比右边大的情况。</li>
+</ul>
+<p>这样从局部最优推出了全局最优，即：相邻的孩子中，评分高的孩子获得更多的糖果。</p>
+<h2 id="Java代码如下："><a href="#Java代码如下：" class="headerlink" title="Java代码如下："></a>Java代码如下：</h2><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">candy</span><span class="params">(<span class="type">int</span>[] ratings)</span> {</span><br><span class="line">    <span class="type">int</span>[] res = <span class="keyword">new</span> <span class="title class_">int</span>[ratings.length];</span><br><span class="line">    Arrays.fill(res,<span class="number">1</span>);</span><br><span class="line">    <span class="comment">// 先从左往右边遍历 右边比左边大 就有改动</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>;i&lt;ratings.length;i++) {</span><br><span class="line">        <span class="keyword">if</span>(ratings[i] &gt; ratings[i-<span class="number">1</span>]) {</span><br><span class="line">            res[i] = res[i] + <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">// 从右向左遍历 如果左边大于右边</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> ratings.length - <span class="number">1</span>;j&gt;<span class="number">0</span>;j--) {</span><br><span class="line">        <span class="keyword">if</span>(ratings[j-<span class="number">1</span>] &gt; ratings[j]) {</span><br><span class="line">            <span class="keyword">if</span>(res[j-<span class="number">1</span>] &gt; res[j] + <span class="number">1</span>) {</span><br><span class="line">                </span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                res[j-<span class="number">1</span>] = res[j] + <span class="number">1</span>;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> Arrays.stream(res).sum();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+</body></html>]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>贪心</category>
+      </categories>
+      <tags>
+        <tag>贪心</tag>
+      </tags>
+  </entry>
 </search>
