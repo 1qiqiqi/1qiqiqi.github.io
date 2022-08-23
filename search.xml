@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>C盘清理教程</title>
+      <link href="/2022/08/23/C%E7%9B%98%E6%B8%85%E7%90%86%E6%95%99%E7%A8%8B/"/>
+      <url>/2022/08/23/C%E7%9B%98%E6%B8%85%E7%90%86%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<html><head></head><body><h1 id="C盘清理教程"><a href="#C盘清理教程" class="headerlink" title="C盘清理教程"></a>C盘清理教程</h1><h2 id="通过输入-temp-清理临时文件"><a href="#通过输入-temp-清理临时文件" class="headerlink" title="通过输入%temp% 清理临时文件"></a>通过输入%temp% 清理临时文件</h2><p><img src="https://s2.loli.net/2022/08/23/SC9HfRDXnINiGPs.png" alt="image-20220823103021415"></p><h2 id="通过打开C盘属性，点击磁盘清理"><a href="#通过打开C盘属性，点击磁盘清理" class="headerlink" title="通过打开C盘属性，点击磁盘清理"></a>通过打开C盘属性，点击磁盘清理</h2><p>这个能清理系统更新文件</p><p><img src="https://s2.loli.net/2022/08/23/CE6ZxNS4vLta3Jk.png" alt="image-20220823102011061"></p><h2 id="通过更改桌面路径"><a href="#通过更改桌面路径" class="headerlink" title="通过更改桌面路径"></a>通过更改桌面路径</h2><p>通过点开桌面的属性找到位置的字段然后更改到其他盘(默认为C盘)</p><p><img src="https://s2.loli.net/2022/08/23/zBUtGZXplIy3QmY.png" alt="image-20220823102851200"></p><p>此时我已经移动到D盘</p><h2 id="更改QQ微信的文件下载和文件缓存地址"><a href="#更改QQ微信的文件下载和文件缓存地址" class="headerlink" title="更改QQ微信的文件下载和文件缓存地址"></a>更改QQ微信的文件下载和文件缓存地址</h2><p><img src="https://s2.loli.net/2022/08/23/JOiwfjKzQIpuP6D.png" alt="image-20220823103449903"></p><p>此时上面有三处可以更改到D盘</p><p><img src="https://s2.loli.net/2022/08/23/yN9gO3GXAULcE8w.png" alt="image-20220823103710246"></p><h2 id="下载SpaceSniffer软件看个盘的空间分布"><a href="#下载SpaceSniffer软件看个盘的空间分布" class="headerlink" title="下载SpaceSniffer软件看个盘的空间分布"></a>下载SpaceSniffer软件看个盘的空间分布</h2><p><img src="https://s2.loli.net/2022/08/23/U3vTFes2HxRc81b.png" alt="image-20220823105056024"></p><h2 id="下载Dism-软件清理C盘内存"><a href="#下载Dism-软件清理C盘内存" class="headerlink" title="下载Dism++软件清理C盘内存"></a>下载Dism++软件清理C盘内存</h2><p><img src="https://s2.loli.net/2022/08/23/hOqjfmRCNTVoxdP.png" alt="image-20220823105431699"></p><h2 id="软件下载地址"><a href="#软件下载地址" class="headerlink" title="软件下载地址"></a>软件下载地址</h2><p>链接：<a href="https://pan.baidu.com/s/1qnLvIX24bHY6hqWoxXPJBw?pwd=6666">https://pan.baidu.com/s/1qnLvIX24bHY6hqWoxXPJBw?pwd=6666</a><br>提取码：6666<br>–来自百度网盘超级会员V2的分享</p></body></html>]]></content>
+      
+      
+      <categories>
+          
+          <category> 安装教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 安装教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python_大众闲谈</title>
       <link href="/2022/08/22/python-%20%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84/"/>
       <url>/2022/08/22/python-%20%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84/</url>
