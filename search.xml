@@ -6244,7 +6244,18 @@
   </entry>
   <entry>
     <title>位运算和进制转换，原码，反码</title>
-    <url>/2022/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_%E5%86%85%E5%8A%9F/</url>
+    <url>/2022/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_%E5%86%85%E5%8A%9F%20-%20%E5%89%AF%E6%9C%AC/</url>
+    <content><![CDATA[<html><head></head><body></body></html>]]></content>
+      <categories>
+        <category>内功</category>
+      </categories>
+      <tags>
+        <tag>内功</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>位运算和进制转换，原码，反码</title>
+    <url>/2022/08/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80_%E8%A1%A5%E7%A0%81%E5%8F%8D%E7%A0%81%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
     <content><![CDATA[<html><head></head><body><h1 id="位运算和进制转换，原码，反码"><a href="#位运算和进制转换，原码，反码" class="headerlink" title="位运算和进制转换，原码，反码"></a>位运算和进制转换，原码，反码</h1><h3 id="左移-lt-lt"><a href="#左移-lt-lt" class="headerlink" title="左移 <<"></a>左移 &lt;&lt;</h3><p>举个栗子，5 &lt;&lt; 2 将5左移2 结果为20 为啥？注意是对二进制进行的操作，来看：</p>
 <p>首先会将5转为二进制表示形式(Java中，整数默认就是int类型,也就是32位):</p>
 <p><img src="https://img-blog.csdnimg.cn/20200112012237518.png#id=NbSo8&amp;originHeight=131&amp;originWidth=804&amp;originalType=binary&amp;ratio=1&amp;status=done&amp;style=none" alt="null"><br>怎么去理解，首先在Java中，整数默认就是int类型，也就是占4个字节32位，你就可以想成这样</p>
