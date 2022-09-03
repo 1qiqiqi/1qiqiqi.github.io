@@ -7078,8 +7078,102 @@
       </tags>
   </entry>
   <entry>
-    <title>不同的二叉搜索树_动态规划08</title>
+    <title>分割等和子集_动态规划11</title>
     <url>/2022/09/03/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%9211/</url>
+    <content><![CDATA[<html><head></head><body><h2 id="分割等和子集"><a href="#分割等和子集" class="headerlink" title="分割等和子集"></a>分割等和子集</h2><p><a href="https://leetcode.cn/problems/partition-equal-subset-sum/">力扣题目链接(opens new window)</a></p>
+<p>题目难易：中等</p>
+<p>给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。</p>
+<p>注意: 每个数组中的元素不会超过 100 数组的大小不会超过 200</p>
+<p>示例 1: 输入: [1, 5, 11, 5] 输出: true 解释: 数组可以分割成 [1, 5, 5] 和 [11].</p>
+<p>示例 2: 输入: [1, 2, 3, 5] 输出: false 解释: 数组不能分割成两个元素和相等的子集.</p>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= nums.length &lt;= 200</li>
+<li>1 &lt;= nums[i] &lt;= 100</li>
+</ul>
+<h2 id="思路"><a href="#思路" class="headerlink" title="#思路"></a><a href="https://programmercarl.com/0416.%E5%88%86%E5%89%B2%E7%AD%89%E5%92%8C%E5%AD%90%E9%9B%86.html#%E6%80%9D%E8%B7%AF">#</a>思路</h2><p>这道题目初步看，是如下两题几乎是一样的，大家可以用回溯法，解决如下两题</p>
+<ul>
+<li>698.划分为k个相等的子集</li>
+<li>473.火柴拼正方形</li>
+</ul>
+<p>这道题目是要找是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。</p>
+<p>那么只要找到集合里能够出现 sum / 2 的子集总和，就算是可以分割成两个相同元素和子集了。</p>
+<p>本题是可以用回溯暴力搜索出所有答案的，但最后超时了，也不想再优化了，放弃回溯，直接上01背包吧。</p>
+<p>如果对01背包不够了解，建议仔细看完如下两篇：</p>
+<ul>
+<li><a href="https://programmercarl.com/%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001%E8%83%8C%E5%8C%85-1.html">动态规划：关于01背包问题，你该了解这些！(opens new window)</a></li>
+<li><a href="https://programmercarl.com/%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001%E8%83%8C%E5%8C%85-2.html">动态规划：关于01背包问题，你该了解这些！（滚动数组）(opens new window)</a></li>
+</ul>
+<h2 id="01背包问题"><a href="#01背包问题" class="headerlink" title="#01背包问题"></a><a href="https://programmercarl.com/0416.%E5%88%86%E5%89%B2%E7%AD%89%E5%92%8C%E5%AD%90%E9%9B%86.html#_01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98">#</a>01背包问题</h2><p>背包问题，大家都知道，有N件物品和一个最多能背重量为W 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。每件物品只能用一次，求解将哪些物品装入背包里物品价值总和最大。</p>
+<p><strong>背包问题有多种背包方式，常见的有：01背包、完全背包、多重背包、分组背包和混合背包等等。</strong></p>
+<p>要注意题目描述中商品是不是可以重复放入。</p>
+<p><strong>即一个商品如果可以重复多次放入是完全背包，而只能放入一次是01背包，写法还是不一样的。</strong></p>
+<p><strong>要明确本题中我们要使用的是01背包，因为元素我们只能用一次。</strong></p>
+<p>回归主题：首先，本题要求集合里能否出现总和为 sum / 2 的子集。</p>
+<p>那么来一一对应一下本题，看看背包问题如果来解决。</p>
+<p><strong>只有确定了如下四点，才能把01背包问题套到本题上来。</strong></p>
+<ul>
+<li>背包的体积为sum / 2</li>
+<li>背包要放入的商品（集合里的元素）重量为 元素的数值，价值也为元素的数值</li>
+<li>背包如果正好装满，说明找到了总和为 sum / 2 的子集。</li>
+<li>背包中每一个元素是不可重复放入。</li>
+</ul>
+<p>以上分析完，我们就可以套用01背包，来解决这个问题了。</p>
+<p>动规五部曲分析如下：</p>
+<ol>
+<li>确定dp数组以及下标的含义</li>
+</ol>
+<p>01背包中，dp[j] 表示： 容量为j的背包，所背的物品价值可以最大为dp[j]。</p>
+<p>**套到本题，dp[j]表示 背包总容量是j，最大可以凑成j的子集总和为dp[j]**。</p>
+<ol>
+<li>确定递推公式</li>
+</ol>
+<p>01背包的递推公式为：dp[j] = max(dp[j], dp[j - weight[i]] + value[i]);</p>
+<p>本题，相当于背包里放入数值，那么物品i的重量是nums[i]，其价值也是nums[i]。</p>
+<p>所以递推公式：dp[j] = max(dp[j], dp[j - nums[i]] + nums[i]);</p>
+<ol>
+<li>dp数组如何初始化</li>
+</ol>
+<p>在01背包，一维dp如何初始化，已经讲过，</p>
+<p>从dp[j]的定义来看，首先dp[0]一定是0。</p>
+<p>如果如果题目给的价值都是正整数那么非0下标都初始化为0就可以了，如果题目给的价值有负数，那么非0下标就要初始化为负无穷。</p>
+<p><strong>这样才能让dp数组在递归公式的过程中取的最大的价值，而不是被初始值覆盖了</strong>。</p>
+<p>本题题目中 只包含正整数的非空数组，所以非0下标的元素初始化为0就可以了。</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 题目中说：每个数组中的元素不会超过 100，数组的大小不会超过 200</span></span><br><span class="line"><span class="comment">// 总和不会大于20000，背包最大只需要其中一半，所以10001大小就可以了</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">dp</span><span class="params">(<span class="number">10001</span>, <span class="number">0</span>)</span></span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<ol>
+<li>确定遍历顺序</li>
+</ol>
+<p>在<a href="https://programmercarl.com/%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001%E8%83%8C%E5%8C%85-2.html">动态规划：关于01背包问题，你该了解这些！（滚动数组） (opens new window)</a>中就已经说明：如果使用一维dp数组，物品遍历的for循环放在外层，遍历背包的for循环放在内层，且内层for循环倒序遍历！</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 开始 01背包</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++) {</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j = target; j &gt;= nums[i]; j--) { <span class="comment">// 每一个元素一定是不可重复放入，所以从大到小遍历</span></span><br><span class="line">        dp[j] = <span class="built_in">max</span>(dp[j], dp[j - nums[i]] + nums[i]);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<ol>
+<li>举例推导dp数组</li>
+</ol>
+<p>dp[j]的数值一定是小于等于j的。</p>
+<p><strong>如果dp[j] == j 说明，集合中的子集总和正好可以凑成总和j，理解这一点很重要。</strong></p>
+<p>用例1，输入[1,5,11,5] 为例，如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210110104240545.png" alt="416.分割等和子集2"></p>
+<p>最后dp[11] == 11，说明可以将这个数组分割成两个子集，使得两个子集的元素和相等。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这道题目就是一道01背包应用类的题目，需要我们拆解题目，然后套入01背包的场景。</p>
+<p>01背包相对于本题，主要要理解，题目中物品是nums[i]，重量是nums[i]，价值也是nums[i]，背包体积是sum/2。</p>
+<p>看代码的话，就可以发现，基本就是按照01背包的写法来的。</p>
+<h3 id="Java："><a href="#Java：" class="headerlink" title="Java："></a>Java：</h3><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canPartition</span><span class="params">(<span class="type">int</span>[] nums)</span> {</span><br><span class="line">    <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> Arrays.stream(nums).sum();</span><br><span class="line">    <span class="keyword">if</span>(sum % <span class="number">2</span> == <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">target</span> <span class="operator">=</span> sum / <span class="number">2</span>;</span><br><span class="line">    <span class="type">int</span>[] dp = <span class="keyword">new</span> <span class="title class_">int</span>[target+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i &lt; nums.length;i++) {</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> target;j &gt;= nums[i];j--) {</span><br><span class="line">            dp[j] = Math.max(dp[j],dp[j-nums[i]] + nums[i]);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> dp[target] == target;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+</body></html>]]></content>
+      <categories>
+        <category>算法简史</category>
+        <category>动态规划</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不同的二叉搜索树_动态规划08</title>
+    <url>/2022/09/03/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%9212/</url>
     <content><![CDATA[<html><head></head><body></body></html>]]></content>
       <categories>
         <category>算法简史</category>
