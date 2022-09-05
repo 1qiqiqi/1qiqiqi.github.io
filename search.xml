@@ -7183,4 +7183,44 @@
         <tag>动态规划</tag>
       </tags>
   </entry>
+  <entry>
+    <title>caj文件转pdf安装教程</title>
+    <url>/2022/09/05/caj%E6%96%87%E4%BB%B6%E8%BD%ACpdf%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="caj文件转pdf安装教程"><a href="#caj文件转pdf安装教程" class="headerlink" title="caj文件转pdf安装教程"></a>caj文件转pdf安装教程</h1><h2 id="动机"><a href="#动机" class="headerlink" title="动机:"></a>动机:</h2><p>最近需要看论文，在知网下载的时候是caj类型的文件，windows里面的软件都打不开，用notepad++打开会是乱码的现象，所以需要一个工具来进行转换</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法:"></a>方法:</h2><p><a href="https://github.com/sainnhe/caj2pdf-qt/releases/download/v0.1.4/caj2pdf-qt-windows-x86_64-0.1.4.zip">下载地址</a></p>
+<p>安装好zip文件后直接解压就行</p>
+<p>点开caj2pdf.exe就行</p>
+<p><img src="https://s2.loli.net/2022/09/05/yPozEOXfbeLAYUI.png" alt="image-20220905092352989.png"></p>
+</body></html>]]></content>
+      <categories>
+        <category>安装教程</category>
+      </categories>
+      <tags>
+        <tag>安装教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习银行破产预测</title>
+    <url>/2022/09/03/%E8%AE%BA%E6%96%87_%E6%9D%A5/</url>
+    <content><![CDATA[<html><head></head><body></body></html>]]></content>
+      <categories>
+        <category>论文</category>
+      </categories>
+      <tags>
+        <tag>论文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文_文章常规打法</title>
+    <url>/2022/09/03/%E8%AE%BA%E6%96%87_%E6%96%87%E7%AB%A0%E7%9A%84%E5%A5%97%E8%B7%AF/</url>
+    <content><![CDATA[<html><head></head><body><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>写关于能够影响主题(现实中能够解决的问题)的参数，基于参数建立模型，并且比较模型，模型预测的准确性</p>
+<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><p>手段，主题</p>
+<h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2></body></html>]]></content>
+      <categories>
+        <category>论文</category>
+      </categories>
+      <tags>
+        <tag>论文</tag>
+      </tags>
+  </entry>
 </search>
