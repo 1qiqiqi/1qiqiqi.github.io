@@ -7223,4 +7223,48 @@
         <tag>论文</tag>
       </tags>
   </entry>
+  <entry>
+    <title>云计算_基本概念</title>
+    <url>/2022/09/07/%E4%BA%91%E8%AE%A1%E7%AE%97_%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="云计算-基本概念"><a href="#云计算-基本概念" class="headerlink" title="云计算_基本概念"></a>云计算_基本概念</h1><h2 id="大数据概念"><a href="#大数据概念" class="headerlink" title="大数据概念:"></a>大数据概念:</h2><p><strong>一是海量数据，指其量大，或</strong>者称为全数据；二是指分析方法，指的是对所有数据进行分析</p>
+<p>特点：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">大 量</span><br><span class="line"></span><br><span class="line">高 速</span><br><span class="line"></span><br><span class="line">多样</span><br><span class="line"></span><br><span class="line">价值</span><br><span class="line"></span><br><span class="line">真实性</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="大数据关键技术"><a href="#大数据关键技术" class="headerlink" title="大数据关键技术:"></a>大数据关键技术:</h2><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">大数据采集技术-&gt; 获得的各种类型的结构化、半结构化（或称之为弱结构化）及非结构化的海</span><br><span class="line">量数据，是大数据知识服务模型的根本。</span><br><span class="line"></span><br><span class="line">大数据预处理技术-&gt;</span><br><span class="line">主要完成对已接收数据的辨析、抽取、清洗等操作。</span><br><span class="line"></span><br><span class="line">大数据存储及管理技术-&gt;</span><br><span class="line">大数据存储与管理要用存储器把采集到的数据存储起来，</span><br><span class="line">建立相应的数据库，并进行管理和调用。重点解决复杂</span><br><span class="line">结构化、半结构化和非结构化大数据管理与处理技术。</span><br><span class="line"></span><br><span class="line">大数据分析与挖掘技术-&gt;</span><br><span class="line">从大量的、不完全的、有噪声的、模糊的、随机的实际</span><br><span class="line">应用数据中，ᨀ取隐含在其中的、人们事先不知道的、</span><br><span class="line">但又是潜在有用的信息和知识的过程。</span><br><span class="line"></span><br><span class="line">大数据展现与应用技术-&gt;</span><br><span class="line">重点应用于以下三大领域：商业</span><br><span class="line">智能、政府决策、公共服务。</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="云计算概述"><a href="#云计算概述" class="headerlink" title="云计算概述"></a>云计算概述</h2><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">数据在云端</span><br><span class="line">软件在云端</span><br><span class="line">无所不在的计算</span><br></pre></td></tr></tbody></table></figure>
+
+<p>云计算是一种商业计算模型。它将计算任务分布</p>
+<p>在大量计算机构成的资源池上，使各种应用系统能够</p>
+<p>根据需要获取计算力、存储空间和各种软件服务</p>
+<h2 id="云计算的三种服务模式"><a href="#云计算的三种服务模式" class="headerlink" title="云计算的三种服务模式"></a>云计算的三种服务模式</h2><h3 id="软件即服务-SaaS"><a href="#软件即服务-SaaS" class="headerlink" title="软件即服务(SaaS)"></a>软件即服务(SaaS)</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">是最常见的云计算服务，位于云计算3层服务的顶端。用户通过标准的Web浏览器来使用Internet上的软件。服务供应商负责维护和管理软硬件设施，并以免费（供商可以从网络广告之类的项目中生成收入）或按需租用方式向最终用户供服务。</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="平台即服务-PaaS"><a href="#平台即服务-PaaS" class="headerlink" title="平台即服务(PaaS)"></a>平台即服务(PaaS)</h2><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">位于云计算3层服务的最中间。通常也称为"云计算操作系统"。它ᨀ供给终端用户基于互联网的应用开发环境，</span><br><span class="line">包括应用编程接口和运行平台等，并且支持应用从创建到运行整个生命周期所需的各种软硬件资源和工具。</span><br></pre></td></tr></tbody></table></figure>
+
+<p>举例:你力扣上面刷题正是这样子的</p>
+<h2 id="基础设施即服务-IaaS"><a href="#基础设施即服务-IaaS" class="headerlink" title="基础设施即服务(IaaS)"></a>基础设施即服务(IaaS)</h2><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">位于云计算3层服务的最底端。也是云计算狭义定义所覆盖的范围，就是把IT基础设施像水、电一样以服务的形式供给用户，以服务形式ᨀ供基于服务器和存储等硬件资源的可高度扩展和按需变化的IT能力。通常按照所消耗资源的成本进行收费。</span><br></pre></td></tr></tbody></table></figure>
+
+<p>举例:就像你需要把SpringBoot项目部署到网上，需要一台服务器</p>
+<h2 id="云计算的4种部署形式"><a href="#云计算的4种部署形式" class="headerlink" title="云计算的4种部署形式"></a>云计算的4种部署形式</h2><h2 id="公有云"><a href="#公有云" class="headerlink" title="公有云"></a>公有云</h2><p><strong>公有云是云基础设施由一个ᨀ供云计算服务的运营商</strong></p>
+<p><strong>或称云供应商所拥有，该运营商再将云计算服务销售给一</strong></p>
+<p><strong>般大众或广大的中小企业群体所共有，是现在最主流的，</strong></p>
+<p><strong>也是最受欢迎的一种云计算部署模式。</strong></p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点:"></a>特点:</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">规模大</span><br><span class="line">价格低廉</span><br><span class="line">灵活(容量)</span><br><span class="line">功能全面</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="私有云"><a href="#私有云" class="headerlink" title="私有云"></a>私有云</h2><p><strong>私有云主要是为企业内部ᨀ供云服务，不对公众开放，</strong></p>
+<p><strong>大多在企业的防火墙内工作，并且企业IT人员能对其数据、</strong></p>
+<p><strong>安全性和服务质量进行有效的控制。</strong></p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点:"></a>优点:</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">数据安全</span><br><span class="line"></span><br><span class="line">服务质量(因为私有云一般在企业内部，而不是在某个遥远的数据中心，所以当公司员工访问那些基于私有云的应用时，它的服务质量应该会非常稳定，这样就不会受到远程网络偶然发生异常的影响。)</span><br><span class="line"></span><br><span class="line">充分利用现有硬件资源</span><br><span class="line"></span><br><span class="line">支持定制和遗留应用</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点:"></a>缺点:</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">成本开支高</span><br><span class="line"></span><br><span class="line">持续运营成本偏高</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="混合云"><a href="#混合云" class="headerlink" title="混合云"></a>混合云</h2><p><strong>混合云是云基础设施由两种或以上的云（私有云、公有云或行业云）组成，每种云仍然保持独立实体，但用标准的或专有的技术将它们组合起来，具有数据和应用程序的可移植性可通过负载均衡技术来应对处理突发负载(Cloudburst)等</strong></p>
+</body></html>]]></content>
+      <categories>
+        <category>云计算</category>
+      </categories>
+      <tags>
+        <tag>云计算</tag>
+      </tags>
+  </entry>
 </search>
