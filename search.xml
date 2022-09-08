@@ -584,25 +584,6 @@
       </tags>
   </entry>
   <entry>
-    <title>python面向对象基础</title>
-    <url>/2022/08/01/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="python面向对象基础"><a href="#python面向对象基础" class="headerlink" title="python面向对象基础"></a>python面向对象基础</h1><h2 id="init-方法"><a href="#init-方法" class="headerlink" title="init_()方法"></a><em>init</em>_()方法</h2><p><em>init</em><em>()方法又被称为“构造函数”，它有以下4个特性。<br>（1）该方法很特殊。init前后均有双下画线“__”，它的<u>第一个参数必须是“self”</u>，其意义同其他方法一样，而其他参数用于设置实例的属性，数量不限。该方法不能使用return语句。<br>（2）__init</em>_()方法可在类中的任何位置被定义。<br>（3）在由类创建一个新的实例时，该方法被自动调用一次。即每创建一个实例，该方法都会被调用一次。<br>（4）常用该方法定义实例的属性，但定义实例的属性不局限于该方法。换言之，在其他方法中同样可以定义实例的属性。</p>
-<h2 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h2><p>实例方法是类中定义的没有加任何装饰符的一般方法，即不加@classmethod和@staticmethod标记的方法。<strong>如果实例方法有n个形式参数，那么在由类调用时，实际参数必须为n个；而在由实例调用时，实际参数则只需要n-1个，因为第一个参数被系统默认为实例本身。由于这个规定，所以，如果实例方法是无参数函数，那么实例无法调用该方法，只有类可以调用它</strong>。因此，实例方法一般至少需要一个参数self，它代表类的对象（实例）</p>
-<h2 id="类方法及其装饰符——-classmethod"><a href="#类方法及其装饰符——-classmethod" class="headerlink" title="类方法及其装饰符——@classmethod"></a>类方法及其装饰符——@classmethod</h2><p>@classmethod是一个函数装饰符，用它装饰的方法不是实例方法，而是类方法。类方法只能被类调用，而不能被实例调用，常被用于方法重载。<br>类方法的第一个参数必须是cls，表示类本身；而实例方法的第一个参数是self，表示该类的一个实例。当类由子类继承时，在调用类方法时，传入的类变量cls的实际参数是子类，而非父类。对于类方法，既可由类调用，也可由类的实例调用。<br>假设类方法有n个形式参数，如果由类调用它，则需要传递的实际参数只能为n-1个，第一个参数默认为类本身；如果由实例调用它，则需要传递的实际参数为n个。</p>
-<h2 id="静态方法及其装饰符——-staticmethod"><a href="#静态方法及其装饰符——-staticmethod" class="headerlink" title="静态方法及其装饰符——@staticmethod"></a>静态方法及其装饰符——@staticmethod</h2><p>@staticmethod也是一个函数装饰符，用它装饰的方法是静态方法。静态方法属于类方法，不是实例方法，可将它理解成全局函数，因此可被类或类的实例调用。在调用时，它不会被隐式地传入任何参数。也就是说，静态方法可以没有任何参数。例如，举例5中的静态方法show_help()，它在程序中的作用是实现一个类的简单帮助功能。<br>由于静态方法无内定的隐性参数，所以，调用静态方法时的实际参数个数必须与形式参数个数严格一致。<br>为什么要引入静态方法？有时候需要将一组逻辑上相关的函数放在一个类里，便于组织代码。例如，可将类中被其他多个方法调用的通用方法定义为静态方法。一般而言，如果一个方法不需要使用self参数，它就适合被定义为静态方法。</p>
-<h2 id="构造函数的继承"><a href="#构造函数的继承" class="headerlink" title="构造函数的继承"></a>构造函数的继承</h2><p>由类的定义可知，如果要向实例传递参数，则必须定义和使用“构造函数”。由此可见构造函数的重要性！<br>那么，构造函数能否被继承、该如何被继承，子类又如何定义自己的属性呢？<br>解决上述问题的办法是，在定义子类的构造函数中显式地调用父类的构造函数，一般来说有两种方式。</p>
-<h3 id="1-继承构造函数的第一种方式"><a href="#1-继承构造函数的第一种方式" class="headerlink" title="1.继承构造函数的第一种方式"></a>1.继承构造函数的第一种方式</h3><p>第一种方式是经典方式，它的形式如下：<br>其中，括号内的第一个参数必须为self ，余下的参数即父类的实例属性。例如，Animal.<strong>init</strong>(self,name,sex,classtype)。<br>要特别提醒的是，当以这种方式调用时，第一个参数self必须被显式传递，它不会被隐式传递，即必须为self，如果被省略，则将报错；其余参数则为父类的实例属性，直接复制父类的实例属性即可。<br>此方式既可被用在单继承场合，也可被用在多继承场合。</p>
-<h3 id="2-继承构造函数的第二种方式"><a href="#2-继承构造函数的第二种方式" class="headerlink" title="2.继承构造函数的第二种方式"></a>2.继承构造函数的第二种方式</h3><p>第二种方式为新式方式，它的形式如下：<br>其中，内置函数super(子类,self)用于表示子类的父类，它有两个参数——子类与self；而__init__(参数1,参数2, )为构造函数，与第一种方式不同的是，它不需要self参数，所有参数均为父类的实例属性。<br>例如，super(Bird,self).<strong>init</strong>(name,sex,classtype)，此处，<strong>super()的第一个参数是子类，也就是正在定义构造函数的类；第二个参数必须为self，它代表子类的对象。很显然，此方式过于烦琐</strong>，所幸的是，Python 3将上述方式改为更简洁的形式，但两者完全等效，如下：<br>换言之，Python 3的第二种方式采用以下形式：<br>以下简单地介绍内置函数super()的语法形式。<br>其中，<br>· type：类，是一个子类。<br>· object-or-type：一般为self。</p>
-<h3 id="3-关于继承的一个重要特性"><a href="#3-关于继承的一个重要特性" class="headerlink" title="3.关于继承的一个重要特性"></a>3.关于继承的一个重要特性</h3><p>如果只是简单地在<strong>子类中定义一个构造函数而不调用父类的构造函数，那么此方式被称为“重构”</strong>。以此方式定义的子类通常无法继承父类的属性和方法。<strong>但是，如果子类不引用父类的任何属性，那么父类的方法可被继承和引用</strong>。<br>举例25：<br>运行上述程序后，得到如下结果：<br>由举例25可知，虽然子类并没有继承父类的构造函数，但由于父类的方法describe()不引用任何属性，因此它可被子类对象b1所调用。<br>综上所述，在定义子类的构造函数时，一般应继承父类的构造函数，这样子类也能拥有父类的所有属性和方法。<br>子类的构造函数继承父类的构造函数的原理（执行过程）如下：<br>实例化对象a → a调用子类__init__() → 子类__init__()继承父类__init__() → 调用父类__init__()。<br>再举一个单继承的例子，以对类的继承问题进行归纳。通过该例，可进一步理解继承的概念及其有关要点。</p>
-]]></content>
-      <categories>
-        <category>python基础</category>
-      </categories>
-      <tags>
-        <tag>python基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>二叉树的递归遍历_二叉树01</title>
     <url>/2022/07/30/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E4%BA%8C%E5%8F%89%E6%A0%9101/</url>
     <content><![CDATA[<h1 id="二叉树的递归遍历"><a href="#二叉树的递归遍历" class="headerlink" title="二叉树的递归遍历"></a>二叉树的递归遍历</h1><blockquote>
@@ -7295,6 +7276,160 @@
       </categories>
       <tags>
         <tag>论文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python爬虫基础</title>
+    <url>/2022/08/01/python%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="python爬虫基础"><a href="#python爬虫基础" class="headerlink" title="python爬虫基础"></a>python爬虫基础</h1><h3 id="1、-HTTPS和HTTP的区别："><a href="#1、-HTTPS和HTTP的区别：" class="headerlink" title="1、 HTTPS和HTTP的区别："></a>1、 HTTPS和HTTP的区别：</h3><ul>
+<li>https协议要申请证书到ca，需要一定经济成本</li>
+<li>http是明文传输，https是加密的安全传输</li>
+<li>连接的端口不一样，http是80，https是443</li>
+<li>http连接很简单，没有状态；https是ssl加密的传输，身份认证的网络协议，相对http传输比较安全。</li>
+</ul>
+<p>还有很多，自己去整理一下吧</p>
+<h3 id="2、-如何解决验证码的问题，用什么模块，听过哪些人工打码平台？"><a href="#2、-如何解决验证码的问题，用什么模块，听过哪些人工打码平台？" class="headerlink" title="2、 如何解决验证码的问题，用什么模块，听过哪些人工打码平台？"></a>2、 如何解决验证码的问题，用什么模块，听过哪些人工打码平台？</h3><p>PIL、pytesser、tesseract模块</p>
+<p>平台的话有：（打码平台特殊，不保证时效性）</p>
+<ul>
+<li>云打码</li>
+<li>挣码</li>
+<li>斐斐打码</li>
+<li>若快打码</li>
+<li>超级鹰</li>
+</ul>
+<h3 id="3、-ip-被封了怎么解决，自己做过-ip-池么？"><a href="#3、-ip-被封了怎么解决，自己做过-ip-池么？" class="headerlink" title="3、 ip 被封了怎么解决，自己做过 ip 池么？"></a>3、 ip 被封了怎么解决，自己做过 ip 池么？</h3><p>关于 ip 可以通过 ip 代理池来解决问题 ip 代理池相关的可以在 github 上搜索 ip proxy 自己选一个 去说 <a href="https://github.com/awolfly9/IPProxyTool">github.com/awolfly9/IP…</a> 提供大体思路：</p>
+<ol>
+<li>获取器 通过 requests 的爬虫爬取免费的 IP 代理网址获取 IP。</li>
+<li>过滤器通过获取器获取的代理请求网页数据有数据返回的保存进 Redis。</li>
+<li>定时检测器定时拿出一部分 Proxy 重新的用过滤器进行检测剔除不能用的代理。</li>
+<li>利用 Flask web 服务器提供 API 方便提取 IP</li>
+</ol>
+<h3 id="4、Python如何爬取-HTTPS-网站？"><a href="#4、Python如何爬取-HTTPS-网站？" class="headerlink" title="4、Python如何爬取 HTTPS 网站？"></a>4、Python如何爬取 HTTPS 网站？</h3><p>这类问题属于简单类问题</p>
+<ul>
+<li>在使用 requests 前加入：requests.packages.urllib3.disable_warnings()。</li>
+<li>为 requests 添加 verify=False 参数</li>
+<li>导入ssl模块</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">import ssl</span><br><span class="line">ssl._create_default_https_context = ssl._create_unverified_context</span><br><span class="line">复制代码</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="5、python-爬虫有哪些常用框架？"><a href="#5、python-爬虫有哪些常用框架？" class="headerlink" title="5、python 爬虫有哪些常用框架？"></a>5、python 爬虫有哪些常用框架？</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>框架名称</th>
+<th>描述</th>
+<th>官网</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Scrapy</td>
+<td>Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。 可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。用这个框架可以轻松爬下来如亚马逊商品信息之类的数据。</td>
+<td><a href="https://scrapy.org/">scrapy.org/</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>PySpider</td>
+<td>pyspider 是一个用python实现的功能强大的网络爬虫系统，能在浏览器界面上进行脚本的编写，功能的调度和爬取结果的实时查看，后端使用常用的数据库进行爬取结果的存储，还能定时设置任务与任务优先级等。</td>
+<td><a href="https://github.com/binux/pyspider">github.com/binux/pyspi…</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Crawley</td>
+<td>Crawley可以高速爬取对应网站的内容，支持关系和非关系数据库，数据可以导出为JSON、XML等。</td>
+<td><a href="http://project.crawley-cloud.com/">project.crawley-cloud.com/</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Portia</td>
+<td>Portia是一个开源可视化爬虫工具，可让您在不需要任何编程知识的情况下爬取网站！简单地注释您感兴趣的页面，Portia将创建一个蜘蛛来从类似的页面提取数据。</td>
+<td><a href="https://github.com/scrapinghub/portia">github.com/scrapinghub…</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Newspaper</td>
+<td>Newspaper可以用来提取新闻、文章和内容分析。使用多线程，支持10多种语言等。</td>
+<td><a href="https://github.com/codelucas/newspaper">github.com/codelucas/n…</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Beautiful Soup</td>
+<td>Beautiful Soup 是一个可以从HTML或XML文件中提取数据的Python库.它能够通过你喜欢的转换器实现惯用的文档导航,查找,修改文档的方式.Beautiful Soup会帮你节省数小时甚至数天的工作时间</td>
+<td><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">www.crummy.com/software/Be…</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Grab</td>
+<td>Grab是一个用于构建Web刮板的Python框架。借助Grab，您可以构建各种复杂的网页抓取工具，从简单的5行脚本到处理数百万个网页的复杂异步网站抓取工具。Grab提供一个API用于执行网络请求和处理接收到的内容，例如与HTML文档的DOM树进行交互。</td>
+<td><a href="http://docs.grablib.org/en/latest/#grab-spider-user-manual">docs.grablib.org/en/latest/#…</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Cola</td>
+<td>Cola是一个分布式的爬虫框架，对于用户来说，只需编写几个特定的函数，而无需关注分布式运行的细节。任务会自动分配到多台机器上，整个过程对用户是透明的。</td>
+<td>没找着~</td>
+</tr>
+<tr>
+<td>9</td>
+<td>很多</td>
+<td>看自己积累</td>
+<td>多百度</td>
+</tr>
+</tbody></table>
+<h3 id="6、-Scrapy-的优缺点"><a href="#6、-Scrapy-的优缺点" class="headerlink" title="6、 Scrapy 的优缺点?"></a>6、 Scrapy 的优缺点?</h3><h5 id="优点：scrapy-是异步的"><a href="#优点：scrapy-是异步的" class="headerlink" title="优点：scrapy 是异步的"></a>优点：scrapy 是异步的</h5><p>采取可读性更强的 xpath 代替正则强大的统计和 log 系统，同时在不同的 url 上爬行支持 shell 方式，方便独立调试写 middleware,方便写一些统一的过滤器，通过管道的方式存入数据库。</p>
+<h5 id="缺点：基于-python-的爬虫框架，扩展性比较差"><a href="#缺点：基于-python-的爬虫框架，扩展性比较差" class="headerlink" title="缺点：基于 python 的爬虫框架，扩展性比较差"></a>缺点：基于 python 的爬虫框架，扩展性比较差</h5><p>基于 twisted 框架，运行中的 exception 是不会干掉 reactor，并且异步框架出错后是不会停掉其他任务的，数据出错后难以察觉。</p>
+<h3 id="7、-scrapy-和-request"><a href="#7、-scrapy-和-request" class="headerlink" title="7、 scrapy 和 request?"></a>7、 scrapy 和 request?</h3><ul>
+<li>scrapy 是封装起来的框架，他包含了下载器，解析器，日志及异常处理，基于多线程， twisted 的方式处理，对于固定单个网站的爬取开发，有优势，但是对于多网站爬取，并发及分布式处理方面，不够灵活，不便调整与括展。</li>
+<li>request 是一个 HTTP 库， 它只是用来，进行请求，对于 HTTP 请求，他是一个强大的库，下载，解析全部自己处理，灵活性更高，高并发与分布式部署也非常灵活，对于功能可以更好实现。</li>
+</ul>
+<h3 id="8、描述下-scrapy-框架运行的机制？"><a href="#8、描述下-scrapy-框架运行的机制？" class="headerlink" title="8、描述下 scrapy 框架运行的机制？"></a>8、描述下 scrapy 框架运行的机制？</h3><ol>
+<li>从 start_urls 里获取第一批 url 并发送请求，请求由引擎交给调度器入请求队列，获取完毕后，调度器将请求队列里的请求交给下载器去获取请求对应的响应资源，并将响应交给自己编写的解析方法做提取处理，如果提取出需要的数据，则交给管道文件处理；</li>
+<li>如果提取出 url，则继续执行之前的步骤（发送 url 请求，并由引擎将请求交给调度器入队列…)，直到请求队列里没有请求，程序结束。</li>
+</ol>
+<h3 id="9、-实现模拟登录的方式有哪些？"><a href="#9、-实现模拟登录的方式有哪些？" class="headerlink" title="9、 实现模拟登录的方式有哪些？"></a>9、 实现模拟登录的方式有哪些？</h3><ul>
+<li>使用一个具有登录状态的 cookie，结合请求报头一起发送，可以直接发送 get 请求，访问登录后才能访问的页面。</li>
+<li>先发送登录界面的 get 请求，在登录页面 HTML 里获取登录需要的数据（如果需要的话），然后结合账户密码，再发送 post 请求，即可登录成功。然后根据获取的 cookie信息，继续访问之后的页面。</li>
+</ul>
+<h3 id="10、-你遇到过的反爬虫的策略？怎么解决？"><a href="#10、-你遇到过的反爬虫的策略？怎么解决？" class="headerlink" title="10、 你遇到过的反爬虫的策略？怎么解决？"></a>10、 你遇到过的反爬虫的策略？怎么解决？</h3><ol>
+<li>BAN IP</li>
+<li>BAN USERAGENT</li>
+<li>BAN COOKIES</li>
+<li>验证码验证</li>
+<li>javascript渲染</li>
+<li>ajax异步传输</li>
+<li>等…….</li>
+</ol>
+<ul>
+<li>通过headers反爬虫：解决策略，伪造headers</li>
+<li>基于用户行为反爬虫：动态变化去爬取数据，模拟普通用户的行为</li>
+<li>通过动态更改代理ip来反爬虫</li>
+<li>基于动态页面的反爬虫：跟踪服务器发送的ajax请求，模拟ajax请求,selnium 和phtamjs</li>
+</ul>
+</body></html>]]></content>
+      <categories>
+        <category>python基础</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python面向对象基础</title>
+    <url>/2022/09/08/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80%20-%20%E5%89%AF%E6%9C%AC/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="python面向对象基础"><a href="#python面向对象基础" class="headerlink" title="python面向对象基础"></a>python面向对象基础</h1><h2 id="init-方法"><a href="#init-方法" class="headerlink" title="init_()方法"></a><em>init</em>_()方法</h2><p><em>init</em><em>()方法又被称为“构造函数”，它有以下4个特性。<br>（1）该方法很特殊。init前后均有双下画线“__”，它的<u>第一个参数必须是“self”</u>，其意义同其他方法一样，而其他参数用于设置实例的属性，数量不限。该方法不能使用return语句。<br>（2）__init</em>_()方法可在类中的任何位置被定义。<br>（3）在由类创建一个新的实例时，该方法被自动调用一次。即每创建一个实例，该方法都会被调用一次。<br>（4）常用该方法定义实例的属性，但定义实例的属性不局限于该方法。换言之，在其他方法中同样可以定义实例的属性。</p>
+<h2 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h2><p>实例方法是类中定义的没有加任何装饰符的一般方法，即不加@classmethod和@staticmethod标记的方法。<strong>如果实例方法有n个形式参数，那么在由类调用时，实际参数必须为n个；而在由实例调用时，实际参数则只需要n-1个，因为第一个参数被系统默认为实例本身。由于这个规定，所以，如果实例方法是无参数函数，那么实例无法调用该方法，只有类可以调用它</strong>。因此，实例方法一般至少需要一个参数self，它代表类的对象（实例）</p>
+<h2 id="类方法及其装饰符——-classmethod"><a href="#类方法及其装饰符——-classmethod" class="headerlink" title="类方法及其装饰符——@classmethod"></a>类方法及其装饰符——@classmethod</h2><p>@classmethod是一个函数装饰符，用它装饰的方法不是实例方法，而是类方法。类方法只能被类调用，而不能被实例调用，常被用于方法重载。<br>类方法的第一个参数必须是cls，表示类本身；而实例方法的第一个参数是self，表示该类的一个实例。当类由子类继承时，在调用类方法时，传入的类变量cls的实际参数是子类，而非父类。对于类方法，既可由类调用，也可由类的实例调用。<br>假设类方法有n个形式参数，如果由类调用它，则需要传递的实际参数只能为n-1个，第一个参数默认为类本身；如果由实例调用它，则需要传递的实际参数为n个。</p>
+<h2 id="静态方法及其装饰符——-staticmethod"><a href="#静态方法及其装饰符——-staticmethod" class="headerlink" title="静态方法及其装饰符——@staticmethod"></a>静态方法及其装饰符——@staticmethod</h2><p>@staticmethod也是一个函数装饰符，用它装饰的方法是静态方法。静态方法属于类方法，不是实例方法，可将它理解成全局函数，因此可被类或类的实例调用。在调用时，它不会被隐式地传入任何参数。也就是说，静态方法可以没有任何参数。例如，举例5中的静态方法show_help()，它在程序中的作用是实现一个类的简单帮助功能。<br>由于静态方法无内定的隐性参数，所以，调用静态方法时的实际参数个数必须与形式参数个数严格一致。<br>为什么要引入静态方法？有时候需要将一组逻辑上相关的函数放在一个类里，便于组织代码。例如，可将类中被其他多个方法调用的通用方法定义为静态方法。一般而言，如果一个方法不需要使用self参数，它就适合被定义为静态方法。</p>
+<h2 id="构造函数的继承"><a href="#构造函数的继承" class="headerlink" title="构造函数的继承"></a>构造函数的继承</h2><p>由类的定义可知，如果要向实例传递参数，则必须定义和使用“构造函数”。由此可见构造函数的重要性！<br>那么，构造函数能否被继承、该如何被继承，子类又如何定义自己的属性呢？<br>解决上述问题的办法是，在定义子类的构造函数中显式地调用父类的构造函数，一般来说有两种方式。</p>
+<h3 id="1-继承构造函数的第一种方式"><a href="#1-继承构造函数的第一种方式" class="headerlink" title="1.继承构造函数的第一种方式"></a>1.继承构造函数的第一种方式</h3><p>第一种方式是经典方式，它的形式如下：<br>其中，括号内的第一个参数必须为self ，余下的参数即父类的实例属性。例如，Animal.<strong>init</strong>(self,name,sex,classtype)。<br>要特别提醒的是，当以这种方式调用时，第一个参数self必须被显式传递，它不会被隐式传递，即必须为self，如果被省略，则将报错；其余参数则为父类的实例属性，直接复制父类的实例属性即可。<br>此方式既可被用在单继承场合，也可被用在多继承场合。</p>
+<h3 id="2-继承构造函数的第二种方式"><a href="#2-继承构造函数的第二种方式" class="headerlink" title="2.继承构造函数的第二种方式"></a>2.继承构造函数的第二种方式</h3><p>第二种方式为新式方式，它的形式如下：<br>其中，内置函数super(子类,self)用于表示子类的父类，它有两个参数——子类与self；而__init__(参数1,参数2, )为构造函数，与第一种方式不同的是，它不需要self参数，所有参数均为父类的实例属性。<br>例如，super(Bird,self).<strong>init</strong>(name,sex,classtype)，此处，<strong>super()的第一个参数是子类，也就是正在定义构造函数的类；第二个参数必须为self，它代表子类的对象。很显然，此方式过于烦琐</strong>，所幸的是，Python 3将上述方式改为更简洁的形式，但两者完全等效，如下：<br>换言之，Python 3的第二种方式采用以下形式：<br>以下简单地介绍内置函数super()的语法形式。<br>其中，<br>· type：类，是一个子类。<br>· object-or-type：一般为self。</p>
+<h3 id="3-关于继承的一个重要特性"><a href="#3-关于继承的一个重要特性" class="headerlink" title="3.关于继承的一个重要特性"></a>3.关于继承的一个重要特性</h3><p>如果只是简单地在<strong>子类中定义一个构造函数而不调用父类的构造函数，那么此方式被称为“重构”</strong>。以此方式定义的子类通常无法继承父类的属性和方法。<strong>但是，如果子类不引用父类的任何属性，那么父类的方法可被继承和引用</strong>。<br>举例25：<br>运行上述程序后，得到如下结果：<br>由举例25可知，虽然子类并没有继承父类的构造函数，但由于父类的方法describe()不引用任何属性，因此它可被子类对象b1所调用。<br>综上所述，在定义子类的构造函数时，一般应继承父类的构造函数，这样子类也能拥有父类的所有属性和方法。<br>子类的构造函数继承父类的构造函数的原理（执行过程）如下：<br>实例化对象a → a调用子类__init__() → 子类__init__()继承父类__init__() → 调用父类__init__()。<br>再举一个单继承的例子，以对类的继承问题进行归纳。通过该例，可进一步理解继承的概念及其有关要点。</p>
+</body></html>]]></content>
+      <categories>
+        <category>python基础</category>
+      </categories>
+      <tags>
+        <tag>python基础</tag>
       </tags>
   </entry>
 </search>
