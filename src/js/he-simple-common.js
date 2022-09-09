@@ -1,4 +1,4 @@
-(function (d) {
+<html><head></head><body>(function (d) {
   var c = d.createElement('link')
   c.rel = 'stylesheet'
   // c.href = 'https://widget.heweather.net/simple/static/css/he-simple.css?v=1.4.0'
@@ -9,3 +9,4 @@
   sn.parentNode.insertBefore(c, sn)
   sn.parentNode.insertBefore(s, sn)
 })(document)
+</body></html>
