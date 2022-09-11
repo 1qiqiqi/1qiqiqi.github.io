@@ -7853,4 +7853,73 @@
         <tag>数据采集</tag>
       </tags>
   </entry>
+  <entry>
+    <title>python逆向基础_翼龙货</title>
+    <url>/2022/09/11/python%E9%80%86%E5%90%91%E5%9F%BA%E7%A1%80_%E7%BF%BC%E9%BE%99%E8%B4%A7/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="python逆向基础-翼龙货"><a href="#python逆向基础-翼龙货" class="headerlink" title="python逆向基础_翼龙货"></a>python逆向基础_翼龙货</h1><p><a href="https://cj.eloancn.com/user/login?service=https://cj.eloancn.com/pcgway/app001/v1/02?ret=aHR0cHM6Ly9jai5lbG9hbmNuLmNvbQ==&amp;v=1662874448066">受害对象</a></p>
+<p>常用调试流程:</p>
+<p>以下是可以参考的调试流程**(面向新手)**:</p>
+<ol>
+<li><p>如果网页有跳转，必须勾选 preservelog 防止丢包</p>
+</li>
+<li><p>看一下有没有框架 右键查看框架源代码(弹出式登陆界面)</p>
+</li>
+<li><p>登陆尽量使用错误密码 防止跳转</p>
+</li>
+<li><p>查看关键登陆包 分析哪些参数是加密的</p>
+</li>
+<li><p>使用别的浏览器分析哪些参数是固定的值</p>
+</li>
+<li><p>初步猜测加密方法</p>
+</li>
+<li><p>搜索</p>
+</li>
+<li><ul>
+<li>直接搜索参数</li>
+<li>pwd=</li>
+<li>pwd =</li>
+<li>pwd:</li>
+<li>pwd :</li>
+<li>密码框地方右键 检查 查看 id name type</li>
+</ul>
+</li>
+<li><p>找到加密的地方**(重点)**</p>
+</li>
+<li><p>调试</p>
+</li>
+<li><p>找出所有的加密代码</p>
+</li>
+<li><ul>
+<li>从最后一步开始写起，缺啥找啥</li>
+<li>如果找的是函数的话 search 要带上 function xxx</li>
+<li>如果看到加密的地方有个类，并且之后是用 prototype 把方法加在原生对象上的话，要把<br>所有加在原生对象上的方法都找出来</li>
+<li>函数找多了没关系，只要不报错不会影响结果，但是不能找少了</li>
+</ul>
+</li>
+</ol>
+<h2 id="发现加密参数"><a href="#发现加密参数" class="headerlink" title="发现加密参数"></a>发现加密参数</h2><p><img src="D:%5C%E6%A1%8C%E9%9D%A2%5Cimg%5Cimage-20220911144554874.png" alt="image-20220911144554874"></p>
+<h2 id="寻找password"><a href="#寻找password" class="headerlink" title="寻找password"></a>寻找password</h2><p><img src="D:%5C%E6%A1%8C%E9%9D%A2%5Cimg%5Cimage-20220911144631513.png" alt="image-20220911144631513"></p>
+<h2 id="打上断点"><a href="#打上断点" class="headerlink" title="打上断点"></a>打上断点</h2><p><img src="C:%5CUsers%5C13772%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220911144808475.png" alt="image-20220911144808475"></p>
+<h2 id="扣出一级代码"><a href="#扣出一级代码" class="headerlink" title="扣出一级代码:"></a>扣出一级代码:</h2><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">password: r.PUBLIC.encryptByDES(this.checkPwd.password.trim(), r.PUBLIC.DESkey)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>this.checkPwd.password.trim(), r.PUBLIC.DESkey 这两个参数都是固定的，前面的为密码，后面为一个固定值</p>
+<h2 id="进入到函数"><a href="#进入到函数" class="headerlink" title="进入到函数"></a>进入到函数</h2><figure class="highlight javascript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">encryptByDES</span>: <span class="keyword">function</span>(<span class="params">t, e</span>) {</span><br><span class="line">            <span class="keyword">var</span> a = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(e);</span><br><span class="line">            <span class="keyword">try</span> {</span><br><span class="line">                <span class="keyword">var</span> s = <span class="title class_">CryptoJS</span>.<span class="property">DES</span>.<span class="title function_">encrypt</span>(<span class="title class_">String</span>(t), a, {</span><br><span class="line">                    <span class="attr">mode</span>: <span class="title class_">CryptoJS</span>.<span class="property">mode</span>.<span class="property">ECB</span>,</span><br><span class="line">                    <span class="attr">padding</span>: <span class="title class_">CryptoJS</span>.<span class="property">pad</span>.<span class="property">Pkcs7</span></span><br><span class="line">                })</span><br><span class="line">            } <span class="keyword">catch</span> (t) {</span><br><span class="line">                <span class="variable language_">console</span>.<span class="title function_">log</span>(t)</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">return</span> s.<span class="title function_">toString</span>()</span><br><span class="line">        }</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="CryptoJS"><a href="#CryptoJS" class="headerlink" title="CryptoJS"></a>CryptoJS</h2><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">把鼠标放到CryptoJS.DES.encrypt这个上面跳转到一个页面，把里面的js全部拷贝出来</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="CryptoJS-mode-ECB"><a href="#CryptoJS-mode-ECB" class="headerlink" title="CryptoJS.mode.ECB"></a>CryptoJS.mode.ECB</h2><figure class="highlight javascript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="title class_">CryptoJS</span>.<span class="property">mode</span>.<span class="property">ECB</span> = <span class="keyword">function</span>(<span class="params"></span>) {</span><br><span class="line">    <span class="keyword">var</span> a = <span class="title class_">CryptoJS</span>.<span class="property">lib</span>.<span class="property">BlockCipherMode</span>.<span class="title function_">extend</span>();</span><br><span class="line">    a.<span class="property">Encryptor</span> = a.<span class="title function_">extend</span>({</span><br><span class="line">        <span class="attr">processBlock</span>: <span class="keyword">function</span>(<span class="params">a, b</span>) {</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">_cipher</span>.<span class="title function_">encryptBlock</span>(a, b)</span><br><span class="line">        }</span><br><span class="line">    });</span><br><span class="line">    a.<span class="property">Decryptor</span> = a.<span class="title function_">extend</span>({</span><br><span class="line">        <span class="attr">processBlock</span>: <span class="keyword">function</span>(<span class="params">a, b</span>) {</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">_cipher</span>.<span class="title function_">decryptBlock</span>(a, b)</span><br><span class="line">        }</span><br><span class="line">    });</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line">}();</span><br></pre></td></tr></tbody></table></figure>
+
+<p>整体代码：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">这就不写了 太多</span><br></pre></td></tr></tbody></table></figure>
+
+</body></html>]]></content>
+      <categories>
+        <category>逆向</category>
+      </categories>
+      <tags>
+        <tag>逆向</tag>
+      </tags>
+  </entry>
 </search>
