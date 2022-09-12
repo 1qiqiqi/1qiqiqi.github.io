@@ -7964,4 +7964,27 @@
         <tag>逆向</tag>
       </tags>
   </entry>
+  <entry>
+    <title>python逆向_某宝旺旺</title>
+    <url>/2022/09/12/python%E9%80%86%E5%90%91_%E6%B7%98%E5%AE%9D%E6%97%BA%E6%97%BA/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="某宝旺旺网密码加密分析"><a href="#某宝旺旺网密码加密分析" class="headerlink" title="某宝旺旺网密码加密分析"></a>某宝旺旺网密码加密分析</h1><p><a href="https://taodaxiang.com/credit2">受害对象</a></p>
+<p>本来有个无限debugger 不过我是没有看到，所以就有点离谱到家了。</p>
+<h2 id="加密参数"><a href="#加密参数" class="headerlink" title="加密参数"></a>加密参数</h2><p>sign:</p>
+<p><img src="https://img1.imgtp.com/2022/09/12/8stLaUj0.png" alt="image-20220912165337336.png"></p>
+<h2 id="搜索sign"><a href="#搜索sign" class="headerlink" title="搜索sign"></a>搜索sign</h2><p>很快就搜到了包含sign的js</p>
+<p><img src="https://img1.imgtp.com/2022/09/12/PeEFFaAN.png" alt="image-20220912165602234.png"></p>
+<p><img src="https://img1.imgtp.com/2022/09/12/U18T4j34.png" alt="image-20220912165630154.png"></p>
+<p>没错非常简单就是个普通的md5加密</p>
+<h2 id="js发条调试工具的错误方法："><a href="#js发条调试工具的错误方法：" class="headerlink" title="js发条调试工具的错误方法："></a>js发条调试工具的错误方法：</h2><p>这个获得的是对象</p>
+<p><img src="https://img1.imgtp.com/2022/09/12/m1H3WicK.png" alt="image-20220912165822332.png"></p>
+<p>这个获得的是你想要的值</p>
+<p><img src="https://img1.imgtp.com/2022/09/12/rCvZoiIM.png" alt="image-20220912165949165.png"></p>
+</body></html>]]></content>
+      <categories>
+        <category>逆向</category>
+      </categories>
+      <tags>
+        <tag>逆向</tag>
+      </tags>
+  </entry>
 </search>
