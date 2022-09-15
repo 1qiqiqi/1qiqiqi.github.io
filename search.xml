@@ -8060,7 +8060,8 @@
     <url>/2022/09/14/Auto.js_%E6%8A%96%E9%9F%B3%E8%87%AA%E5%8A%A8%E5%88%B7%E8%A7%86%E9%A2%91/</url>
     <content><![CDATA[<html><head></head><body><h1 id="Auto-js-下载安装配置"><a href="#Auto-js-下载安装配置" class="headerlink" title="Auto.js_下载安装配置"></a>Auto.js_下载安装配置</h1><h2 id="到VScode下载插件"><a href="#到VScode下载插件" class="headerlink" title="到VScode下载插件"></a>到VScode下载插件</h2><p><img src="https://img1.imgtp.com/2022/09/14/N157qNj2.png" alt="image-20220914194215317.png"></p>
 <h2 id="下载Qtscrcpy手机投屏软件"><a href="#下载Qtscrcpy手机投屏软件" class="headerlink" title="下载Qtscrcpy手机投屏软件"></a>下载Qtscrcpy手机投屏软件</h2><p>百度上面搜一下，一大把</p>
-<h2 id="手机端安装auto-js"><a href="#手机端安装auto-js" class="headerlink" title="手机端安装auto.js"></a>手机端安装auto.js</h2><p>首先你的手机得是安卓的(我是鸿蒙的，傻乎乎的搞半天连接不上电脑主机)，7.0以上版本，</p>
+<h2 id="手机端安装auto-js"><a href="#手机端安装auto-js" class="headerlink" title="手机端安装auto.js"></a>手机端安装auto.js</h2><p>开始连接不上以为是:首先你的手机得是安卓的(我是鸿蒙的，傻乎乎的搞半天连接不上电脑主机)，后来发现：需要关闭防火墙。。。。</p>
+<p>7.0以上版本，</p>
 <p>手机端打开悬浮窗，和无障碍模式以及连接电脑</p>
 <h2 id="在vscode启动auto-js"><a href="#在vscode启动auto-js" class="headerlink" title="在vscode启动auto.js"></a>在vscode启动auto.js</h2><p>首先得Start Server启动服务，编写好js代码后随后运行(run)服务</p>
 <p><img src="https://img1.imgtp.com/2022/09/14/4oWjyQUF.png" alt="image-20220914194717544.png"></p>
