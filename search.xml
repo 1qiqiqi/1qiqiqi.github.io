@@ -8218,4 +8218,26 @@
         <tag>计算机网络</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机网络_性能指标</title>
+    <url>/2022/09/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="计算机网络-性能指标"><a href="#计算机网络-性能指标" class="headerlink" title="计算机网络_性能指标"></a>计算机网络_性能指标</h1><h2 id="速率"><a href="#速率" class="headerlink" title="速率:"></a>速率:</h2><p><img src="https://img1.imgtp.com/2022/09/21/iWydwub7.png" alt="image-20220921222527840.png"></p>
+<h2 id="带宽："><a href="#带宽：" class="headerlink" title="带宽："></a>带宽：</h2><p><img src="https://img1.imgtp.com/2022/09/21/C9ljOhFm.png" alt="image-20220921222655853.png"></p>
+<h2 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量:"></a>吞吐量:</h2><p><img src="https://img1.imgtp.com/2022/09/21/KFxACbz0.png" alt="image-20220921222734824.png"></p>
+<h2 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h2><p>时延包括四大类</p>
+<p><img src="https://img1.imgtp.com/2022/09/21/4LCWXEsS.png" alt="image-20220921233046926.png"></p>
+<h2 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h2><p>公式：时延带宽积=传播时延x带宽<br>意思是链路上有多少比特的数据</p>
+<h2 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h2><p>发送端发送数据开始，到发送端收到来自接收端的确认（接收端收到数据后便立即发送确认），总共经历的时延<br>RTT=传播时延x2+处理时间(有时可能直接忽略)</p>
+<h2 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h2><h3 id="信道利用率"><a href="#信道利用率" class="headerlink" title="信道利用率"></a>信道利用率</h3><p>信道利用率=有数据通过时间/有+无数据通过时间</p>
+<h3 id="网络利用率"><a href="#网络利用率" class="headerlink" title="网络利用率"></a>网络利用率</h3><p>网络利用率=所有信道利用率加权求平均值</p>
+<h2 id="时延和利用率的关系图"><a href="#时延和利用率的关系图" class="headerlink" title="时延和利用率的关系图"></a>时延和利用率的关系图</h2><p>利用率越高，延迟越大</p>
+<p><img src="https://img1.imgtp.com/2022/09/21/AawFAjze.png" alt="image-20220921232946443.png"></p>
+</body></html>]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
 </search>
