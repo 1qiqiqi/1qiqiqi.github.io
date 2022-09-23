@@ -30,8 +30,8 @@
     
     <entry>
       <title>计算机网络_基础概念</title>
-      <link href="/2022/09/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_%E6%A6%82%E5%BF%B5%20/"/>
-      <url>/2022/09/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_%E6%A6%82%E5%BF%B5%20/</url>
+      <link href="/2022/09/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%20/"/>
+      <url>/2022/09/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%20/</url>
       
         <content type="html"><![CDATA[<html><head></head><body><h1 id="计算机网络-基础概念"><a href="#计算机网络-基础概念" class="headerlink" title="计算机网络_基础概念"></a>计算机网络_基础概念</h1><h2 id="计算机网络概念"><a href="#计算机网络概念" class="headerlink" title="计算机网络概念:"></a>计算机网络概念:</h2><ol><li>网络包括计算机网络，与电话网，铁路网有相交部分。<img src="https://img1.imgtp.com/2022/09/21/hXe6zR8v.png" alt="image-20220921201415641.png"></li><li>是一个将分散的，具有独立功能的计算机系统，通过通信设备余线路连接起来，有功能完善的软件实现资源共享和信息传递的系统。<img src="https://img1.imgtp.com/2022/09/21/HsjYobWN.png" alt="image-20220921201634672.png"></li></ol><h2 id="计算机网络的功能"><a href="#计算机网络的功能" class="headerlink" title="计算机网络的功能:"></a>计算机网络的功能:</h2><ol><li>数据通信</li><li>资源共享</li><li>分布式处理</li><li>提高可靠性</li><li>负载均衡</li></ol><h2 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成:"></a>计算机网络的组成:</h2><p><img src="https://img1.imgtp.com/2022/09/21/8fYP8lSU.png" alt="image-20220921202432664.png"></p><h2 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类:"></a>计算机网络的分类:</h2><p><img src="https://img1.imgtp.com/2022/09/21/fZ0PaV6q.png" alt="image-20220921202943358.png"></p><ol><li>广域网WAN是跨国的</li><li>城域网是一个城市</li><li>局域网比如家里的wfil</li><li>个人区域网比如自己的蓝牙或者运动所携带的测试器</li></ol></body></html>]]></content>
       
