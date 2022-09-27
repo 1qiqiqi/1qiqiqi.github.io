@@ -8350,4 +8350,37 @@
         <tag>计算机网络</tag>
       </tags>
   </entry>
+  <entry>
+    <title>VSCode使用npm</title>
+    <url>/2022/09/27/VsCode%E4%B8%ADnpm%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="VSCode使用npm的详细步骤"><a href="#VSCode使用npm的详细步骤" class="headerlink" title="VSCode使用npm的详细步骤"></a>VSCode使用npm的详细步骤</h1><h2 id="打开cmd-输入指令-npm-v-查看npm是否安装，需要先安装node-js"><a href="#打开cmd-输入指令-npm-v-查看npm是否安装，需要先安装node-js" class="headerlink" title="打开cmd 输入指令 npm -v 查看npm是否安装，需要先安装node.js"></a>打开cmd 输入指令 npm -v 查看npm是否安装，需要先安装node.js</h2><p>node.js安装：<a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
+<p>安装包下载后，一直点击next ，安装完成，打开cmd 输入 <code>node -v</code> 查看安装是否成功</p>
+<h2 id="打开vscode-在工作区创建一个项目，右键打开-“在集成终端中打开”"><a href="#打开vscode-在工作区创建一个项目，右键打开-“在集成终端中打开”" class="headerlink" title="打开vscode 在工作区创建一个项目，右键打开 “在集成终端中打开”"></a>打开vscode 在工作区创建一个项目，右键打开 “在集成终端中打开”</h2><p><img src="https://img1.imgtp.com/2022/09/27/qeo6i2UA.png" alt="image-20220927231207007.png"></p>
+<h2 id="终端中输入-npm-init-y，为项目创建npm环境，创建成功生成package-json文件"><a href="#终端中输入-npm-init-y，为项目创建npm环境，创建成功生成package-json文件" class="headerlink" title="终端中输入 npm init -y，为项目创建npm环境，创建成功生成package.json文件"></a>终端中输入 npm init -y，为项目创建npm环境，创建成功生成package.json文件</h2><p><img src="https://img1.imgtp.com/2022/09/27/aGv1MtXa.png" alt="image-20220927231337156.png"></p>
+<h2 id="利用npm导入jquery，导入成功生成两个文件"><a href="#利用npm导入jquery，导入成功生成两个文件" class="headerlink" title="利用npm导入jquery，导入成功生成两个文件"></a>利用npm导入jquery，导入成功生成两个文件</h2><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm install jquery</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="更多命令操作"><a href="#更多命令操作" class="headerlink" title="更多命令操作"></a>更多命令操作</h2><blockquote>
+<p>1.如果安装时想指定特定的版本 npm install <a href="mailto:jquery@2.1.x">jquery@2.1.x</a></p>
+</blockquote>
+<blockquote>
+<p>2.使用 -D参数将依赖添加到devDependencies节点<br>npm install –save-dev eslint<br>#或简写 npm i -D eslint</p>
+</blockquote>
+<blockquote>
+<p>Node.js全局安装的npm包和工具的位置<br>2.一些命令行工具常使用全局安装的方式 npm install –g webpack</p>
+</blockquote>
+<blockquote>
+<p>#npm管理的项目在备份和传输的时候一般不携带node_modules文件夹<br>#安装会自动在项目目录下添加 package-lock.json文件，这个文件帮助锁定安装包的版本<br>#根据package.json中的配置下载依赖，初始化项目<br>npm install</p>
+</blockquote>
+<blockquote>
+<p>#更新包（更新到最新版本）<br>npm update 包名<br>#全局更新<br>npm update -g 包名<br>#卸载包<br>npm uninstall 包名<br>#全局卸载<br>npm uninstall -g 包名</p>
+</blockquote>
+<h2 id="遇到的bug"><a href="#遇到的bug" class="headerlink" title="遇到的bug"></a>遇到的bug</h2><p>require这个已经不能在node -v 14用了，也就是说过时了</p>
+</body></html>]]></content>
+      <categories>
+        <category>安装教程</category>
+      </categories>
+      <tags>
+        <tag>安装教程</tag>
+      </tags>
+  </entry>
 </search>
