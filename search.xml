@@ -65,6 +65,13 @@
     <title>Docker镜像命令</title>
     <url>/2022/07/07/Docker%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<html><head></head><body><h1 id="Docker常用镜像命令"><a href="#Docker常用镜像命令" class="headerlink" title="Docker常用镜像命令"></a>Docker常用镜像命令</h1><p>这些是最基本的Docker镜像命令，也是最有用的</p>
+<h3 id="什么是镜像"><a href="#什么是镜像" class="headerlink" title="什么是镜像?"></a>什么是镜像?</h3><ol>
+<li>一个分层存储的文件，不是一个单一的文件</li>
+<li>一个软件的环境</li>
+<li>一个镜像可以创建多个容器</li>
+<li>一种标准化的交付</li>
+<li>一个不包含Liunx内核而又精简的liunx操作系统</li>
+</ol>
 <h3 id="镜像名组成"><a href="#镜像名组成" class="headerlink" title="镜像名组成"></a>镜像名组成</h3><p>name:tags tags指版本号 列如：mysql:5.3</p>
 <h3 id="systemctl-start-docker"><a href="#systemctl-start-docker" class="headerlink" title="systemctl start docker"></a>systemctl start docker</h3><p>开启docker 的作用</p>
 <h3 id="systemctl-status-docker"><a href="#systemctl-status-docker" class="headerlink" title="systemctl status docker"></a>systemctl status docker</h3><p>查看docker的状态 是运行还是dead</p>
@@ -76,6 +83,8 @@
 <h3 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h3><p>查看镜像</p>
 <h3 id="docker-info"><a href="#docker-info" class="headerlink" title="docker info"></a>docker info</h3><p>查看docker是否安装好，已经docker的信息</p>
 <h3 id="docker-history"><a href="#docker-history" class="headerlink" title="docker history"></a>docker history</h3><p>查看docker的历史镜像</p>
+<h3 id="docker-run-d-p-8080-80-nginx"><a href="#docker-run-d-p-8080-80-nginx" class="headerlink" title="docker run -d -p 8080:80 nginx"></a>docker run -d -p 8080:80 nginx</h3><p>运行nginx 打开8080端口 宿主机的浏览器能够访问到</p>
+<h3 id="docker-ps-l"><a href="#docker-ps-l" class="headerlink" title="docker ps -l"></a>docker ps -l</h3><p>查看通过docker正在运行的镜像</p>
 </body></html>]]></content>
       <categories>
         <category>Docker</category>
@@ -8578,6 +8587,53 @@
       <tags>
         <tag>安装教程</tag>
         <tag>Docker命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>云计算_分布式概念</title>
+    <url>/2022/10/07/%E4%BA%91%E8%AE%A1%E7%AE%97_%E5%88%86%E5%B8%83%E5%BC%8F%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="云计算-分布式概念"><a href="#云计算-分布式概念" class="headerlink" title="云计算_分布式概念"></a>云计算_分布式概念</h1><h2 id="什么是分布式"><a href="#什么是分布式" class="headerlink" title="什么是分布式?"></a>什么是分布式?</h2><p>分布式的意思就是多台机器，不同组件分布在一个机器</p>
+<h2 id="和集群的区别"><a href="#和集群的区别" class="headerlink" title="和集群的区别"></a>和集群的区别</h2><p>集群和分布式的相同点都是多台机器，不同点就是相同组件分布在一组机器上面</p>
+<h2 id="大数据分析的过程"><a href="#大数据分析的过程" class="headerlink" title="大数据分析的过程"></a>大数据分析的过程</h2><ol>
+<li>收集数据<ol>
+<li>从无到有的数据，也就是说从0到1的数据，比如人们所说的传感器，测量天气数据</li>
+<li>传输的数据，这个数据分为四大类，分别为日志数据，爬虫数据，数据库数据，还有一种忘了哈</li>
+</ol>
+</li>
+<li>处理数据<ol>
+<li>处理缺失值</li>
+<li>处理异常值</li>
+</ol>
+</li>
+<li>数据分析<ol>
+<li>这个过程有数据挖掘什么的啦，数据挖掘听起来好牛逼的样子，其实也就是那么回事，总归还是属于一种数据分析，换句话说就是从大量的数据中搞出有用的信息，前提是不知道这个数据有没有用，就是这么个意思。</li>
+</ol>
+</li>
+<li>可视化数据<ol>
+<li>这个其实没什么好讲的，就是数据可视化展示，就是对上面的说明和总结</li>
+</ol>
+</li>
+<li>写总结报告<ol>
+<li>这个呢其实就是给群众们看的，今天上面看到一个新闻标题非常的有意思，哈哈哈，就是有那么一点猎奇的心理，标题是这么写的，阿里云数据显示：胸大的女人容易败家。听到这我也不知道为什么哈，就是有点想笑</li>
+</ol>
+</li>
+</ol>
+<h2 id="分布式技术"><a href="#分布式技术" class="headerlink" title="分布式技术"></a>分布式技术</h2><h3 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h3><p>这个就像是好兄弟，有难一起抗一样，举个实际的例子，比如你用浏览器访问百度的时候，北京和上海的用户，使用的其实是不同的服务器，但是页面一定是一摸一样，其实两个用户都让浏览器干相同的活，这个其实就是集群啦</p>
+<h3 id="故障转移"><a href="#故障转移" class="headerlink" title="故障转移"></a>故障转移</h3><p>这个我感觉还是听起来有点别扭，其实这个意思就是，当一台服务器挂了，备份的一台服务器顶上，当然如果有条件，备份的越多越好，就好像是打征地战一样，挂了一个再顶一个，维持火力的稳定。</p>
+<h3 id="伸缩性"><a href="#伸缩性" class="headerlink" title="伸缩性"></a>伸缩性</h3><p>这个举个例子就是，当你在双十一的时候是不是喜欢买买买，是不是这样的老实说，这个时候我们其实就需要多台服务器啦，当遇上冷淡的季节的时候，这个时候我们其实就不需要那么多服务器，是不是扔掉就可以了，这样是不是会造成浪费，哈哈哈不会，现在都不用自己买服务器放到你身边了，现在可以租用云服务器，要的话就拿着用，不要就扔掉哈哈哈。</p>
+<h2 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a>Hadoop</h2><h3 id="Hadoop历史架构"><a href="#Hadoop历史架构" class="headerlink" title="Hadoop历史架构"></a>Hadoop历史架构</h3><p>历史版本大概就分为三步走，1.0就是HDFS负责存储，Mapreduce负责计算和资源管理调度，2.0就是HDFS还是负责存储，唯一的变化就是资源管理和调度由YARN来做了,Mapreduce主要负责的就是计算，这样分工明确其实挺好的，3.0就是对各个部分的一些优化.</p>
+<h3 id="Hadoop的意义"><a href="#Hadoop的意义" class="headerlink" title="Hadoop的意义"></a>Hadoop的意义</h3><p>侠义来说，Hadoop只是一个服务类软件，广义来说Hadoop其实就是一个生态圈。</p>
+<h3 id="Hadoop的优点"><a href="#Hadoop的优点" class="headerlink" title="Hadoop的优点"></a>Hadoop的优点</h3><p>Hadoop其实非常好的一点就是能够为各大厂商服务，服务几乎任意对象，不管你运行的是上面程序，java,python，都能够运行，也就是它的一个通用性，受到广泛的青睐。</p>
+<h3 id="Hadoop的部署模式"><a href="#Hadoop的部署模式" class="headerlink" title="Hadoop的部署模式"></a>Hadoop的部署模式</h3><h4 id="单机模式"><a href="#单机模式" class="headerlink" title="单机模式"></a>单机模式</h4><p>一台机器一个进程，一个java进程，所有的角色都在上面运行，其实这样看起来挺烦的啦，都跟着抢一个进程来用</p>
+<h4 id="伪分模式"><a href="#伪分模式" class="headerlink" title="伪分模式"></a>伪分模式</h4><p>无非就是还是同样一台机器上面，运行多个进程，然后不同角色会被分配到不同进程。</p>
+<h4 id="集群模式"><a href="#集群模式" class="headerlink" title="集群模式"></a>集群模式</h4><p>这个就是多台机器了，不同角色分布到不同的机器上面</p>
+<h4 id="HA高可用"><a href="#HA高可用" class="headerlink" title="HA高可用"></a>HA高可用</h4><p>这个就是可维护性了，意思也就是说，能够处理单点故障的问题，要是坏了，直接换一个顶替呗，重点是要保持数据的同步性哦。</p>
+</body></html>]]></content>
+      <categories>
+        <category>云计算</category>
+      </categories>
+      <tags>
+        <tag>云计算</tag>
       </tags>
   </entry>
 </search>
