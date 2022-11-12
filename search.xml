@@ -8738,4 +8738,55 @@
         <tag>逆向</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Vue报错汇总</title>
+    <url>/2022/10/22/vue_%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="Vue报错汇总"><a href="#Vue报错汇总" class="headerlink" title="Vue报错汇总"></a>Vue报错汇总</h1><h3 id="Target-version-not-match-you-can-specify-the-target-version-in-vueCompilerOptions-target-in-tsconfi"><a href="#Target-version-not-match-you-can-specify-the-target-version-in-vueCompilerOptions-target-in-tsconfi" class="headerlink" title="Target version not match, you can specify the target version in vueCompilerOptions.target in tsconfi"></a>Target version not match, you can specify the target version in vueCompilerOptions.target in tsconfi</h3><p>在jsconfig.json中加入</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="line"><span class="string">"vueCompilerOptions"</span>: {</span><br><span class="line">   <span class="string">"target"</span>: <span class="number">2.7</span></span><br><span class="line"> }</span><br></pre></td></tr></tbody></table></figure>
+
+<p>整体如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">{</span><br><span class="line">  "compilerOptions": {</span><br><span class="line">    "target": "es5",</span><br><span class="line">    "module": "esnext",</span><br><span class="line">    "baseUrl": "./",</span><br><span class="line">    "moduleResolution": "node",</span><br><span class="line">    "paths": {</span><br><span class="line">      "@/*": [</span><br><span class="line">        "src/*"</span><br><span class="line">      ]</span><br><span class="line">    },</span><br><span class="line">    "lib": [</span><br><span class="line">      "esnext",</span><br><span class="line">      "dom",</span><br><span class="line">      "dom.iterable",</span><br><span class="line">      "scripthost"</span><br><span class="line">    ]</span><br><span class="line">  },</span><br><span class="line">  "vueCompilerOptions": {</span><br><span class="line">    "target": 2.7</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="eslint报错-error-Component-name-“xxx”-should-always-be-multi-word-vue-x2F-multi-word-component-names"><a href="#eslint报错-error-Component-name-“xxx”-should-always-be-multi-word-vue-x2F-multi-word-component-names" class="headerlink" title="eslint报错 error Component name “xxx” should always be multi-word vue/multi-word-component-names"></a>eslint报错 error Component name “xxx” should always be multi-word vue/multi-word-component-names</h3><p>原因是规定了驼峰命名法</p>
+<ol>
+<li>如果项目根目录没有eslintrc.js,创一个，填入下面内容</li>
+</ol>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">// .eslintrc.js</span><br><span class="line">module.exports = {</span><br><span class="line">    root: true,</span><br><span class="line">    env: {</span><br><span class="line">      node: true,</span><br><span class="line">    },</span><br><span class="line">    extends: [</span><br><span class="line">      "plugin:vue/vue3-essential",</span><br><span class="line">      "eslint:recommended",</span><br><span class="line">      "@vue/typescript/recommended",</span><br><span class="line">      "plugin:prettier/recommended",</span><br><span class="line">    ],</span><br><span class="line">    parserOptions: {</span><br><span class="line">      ecmaVersion: 2020,</span><br><span class="line">    },</span><br><span class="line">    rules: {</span><br><span class="line">      "vue/multi-word-component-names": [</span><br><span class="line">        "error",</span><br><span class="line">        {</span><br><span class="line">          ignores: ["index"], //需要忽略的组件名</span><br><span class="line">        },</span><br><span class="line">      ],</span><br><span class="line">      "vue/multi-word-component-names": "off"</span><br><span class="line">    },</span><br><span class="line">  };</span><br></pre></td></tr></tbody></table></figure>
+
+<ol>
+<li><p>在vue.config.js中加入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">module.exports = {</span><br><span class="line">  lintOnSave: false, // 当保存时不进行eslint的检查</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure></li>
+</ol>
+<h3 id="Uncaught-TypeError-VueRouter-is-not-a-constructor"><a href="#Uncaught-TypeError-VueRouter-is-not-a-constructor" class="headerlink" title="Uncaught TypeError: VueRouter is not a constructor"></a>Uncaught TypeError: VueRouter is not a constructor</h3><p>这个报错就是版本问题了，你需要的就是下载一个低版本的vue-router</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">npm&nbsp;i&nbsp;vue-router@3.5.2 -legacy-peer-deps</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Module-build-failed-vue-router-esm-js-in-Vue-js"><a href="#Module-build-failed-vue-router-esm-js-in-Vue-js" class="headerlink" title="Module build failed , vue-router.esm.js in Vue js"></a>Module build failed , vue-router.esm.js in Vue js</h3><p>这个报错重新启动一下程序就可以了，npm run serve</p>
+<h3 id="请求成功，但axios写的还是localhost-8087-x2F-Login-写api还是不行"><a href="#请求成功，但axios写的还是localhost-8087-x2F-Login-写api还是不行" class="headerlink" title="请求成功，但axios写的还是localhost:8087/Login ,写api还是不行()"></a>请求成功，但axios写的还是localhost:8087/Login ,写api还是不行()</h3><p>跨域问题还是没有解决</p>
+<p><img src="C:%5CUsers%5C13772%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221028120850756.png" alt="image-20221028120850756"></p>
+<p><img src="C:%5CUsers%5C13772%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221028121026652.png" alt="image-20221028121026652"></p>
+<p><img src="C:%5CUsers%5C13772%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221028124300582.png" alt="image-20221028124300582"></p>
+<h3 id="逆天啊，跨域问题居然是后面没有加-x2F"><a href="#逆天啊，跨域问题居然是后面没有加-x2F" class="headerlink" title="逆天啊，跨域问题居然是后面没有加/"></a>逆天啊，跨域问题居然是后面没有加/</h3><p><img src="C:%5CUsers%5C13772%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221028195209753.png" alt="image-20221028195209753"></p>
+<h1 id="babel-plugin-component-If-you-are-using-bothon-demand-and-importing-all-make-sure-to-invoke-the-i"><a href="#babel-plugin-component-If-you-are-using-bothon-demand-and-importing-all-make-sure-to-invoke-the-i" class="headerlink" title="[babel-plugin-component] If you are using bothon-demand and importing all, make sure to invoke the i"></a>[babel-plugin-component] If you are using bothon-demand and importing all, make sure to invoke the i</h1><p>这个项目重启一下就好了，可能是一次引入Element-ui太大的原因</p>
+</body></html>]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图标修复</title>
+    <url>/2022/11/12/%E5%9B%BE%E6%A0%87%E5%88%B7%E6%96%B0/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="图标修复"><a href="#图标修复" class="headerlink" title="图标修复"></a>图标修复</h1><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">taskkill /f /im explorer.exe</span><br><span class="line">CD /d %userprofile%\AppData\Local</span><br><span class="line">DEL IconCache.db /a</span><br><span class="line">start explorer.exe</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段代码直接放到一个.bat文件当中 保存后双击就行</p>
+</body></html>]]></content>
+      <categories>
+        <category>脚本</category>
+      </categories>
+      <tags>
+        <tag>脚本</tag>
+      </tags>
+  </entry>
 </search>
