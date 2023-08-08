@@ -867,7 +867,56 @@
 
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">目前进度: 项目的大体框架有了；</span><br><span class="line">todolist: 1. ES需要测试环境 2. 查询到的数据进行数据值的转化(数据库ID -&gt; 数据库Name) 3. 将生成的CSV文件发送到FTP服务器上面 4. CK查询数据的处理(如何传递给消费者)</span><br></pre></td></tr></tbody></table></figure>
 
-</body></html>]]></content>
+<script> 
+  $(function(){
+    // 切换TOC目录展开收缩的相关操作.
+  const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        let $itemHasChild = $(".toc-list-item:has(> .toc-list)");
+        $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i><span>&nbsp;</span>");
+        let $iconToFold = $(".toc-list-item > .fa-caret-down");
+        let $iconToExpand = $(".toc-list-item > .fa-caret-right");
+        $iconToFold.addClass("hide");
+
+        const targetNodes = document.getElementsByClassName("toc-list-item");
+        const config = { attributes: true, childList: false, subtree: false };
+        const callback = function(mutationsList, observer) {
+          for(let mutation of mutationsList) {
+            if (mutation.type === "attributes") {
+              let target = $(mutation.target)
+              if (target.hasClass("is-active-li")) {
+                let $toFold = $(".toc-list-item > .fa-caret-down");
+                let $toExpand = $(".toc-list-item > .fa-caret-right");
+                $toFold.addClass("hide");
+                $toExpand.removeClass("hide");
+                target.children(".fa-caret-right").first().addClass("hide")
+                target.children(".fa-caret-down").first().removeClass("hide")
+                let parents = target.parents(".toc-list-item")
+                for (p of parents) {
+                  $(p).children(".fa-caret-right").first().addClass("hide")
+                  $(p).children(".fa-caret-down").first().removeClass("hide")
+                }
+              }
+            }
+          }
+        };
+        const observer = new MutationObserver(callback);
+        for (node of targetNodes) {
+          observer.observe(node, config)
+        }
+  });  
+</script></body></html>]]></content>
       <categories>
         <category>Java面试准备</category>
       </categories>
