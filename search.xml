@@ -9521,7 +9521,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Java求职准备之旅</title>
+    <title>轻松阅读</title>
     <url>/2023/09/21/%E8%BD%BB%E6%9D%BE%E9%98%85%E8%AF%BB-SpringCloud/</url>
     <content><![CDATA[<html><head></head><body><h1 align="center"> 轻松阅读 - API - 2.0 </h1>
 
@@ -9757,10 +9757,10 @@
 <p>:star: 我们知道，jwt认证的过程主要是加密​，然后结果和Token匹配，而加密运算会耗费CPU资源，如果请求量比较大，可以将Token存储缓存，缓存失败再进行实时认证，可以大幅度的提升网关服务器的CPU性能。</p>
 </body></html>]]></content>
       <categories>
-        <category>Java面试准备</category>
+        <category>SpringCloud</category>
       </categories>
       <tags>
-        <tag>Java面试准备</tag>
+        <tag>SpringCloud</tag>
       </tags>
   </entry>
 </search>
