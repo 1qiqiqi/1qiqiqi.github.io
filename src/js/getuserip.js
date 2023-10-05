@@ -1,4 +1,5 @@
-<html><head></head><body>//TODO
+
+    //TODO
     console.log("获取访客信息")
     var userinfodom = document.getElementById("userip")
     // var updatetemp = temp.getElementsByClassName("item-content")[0].innerHTML
@@ -29,4 +30,4 @@
          console.log("请求错误");
          console.log(e)
         }
-    });</body></html>
+    });

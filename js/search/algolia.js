@@ -81,7 +81,8 @@ window.addEventListener('load', () => {
   const searchBox = instantsearch.widgets.searchBox({
     container: '#algolia-search-input',
     showReset: false,
-    showSubmit: false,
+    showSubmit: true, // 设为true 可以通过按钮搜索
+    searchAsYouType: false, // 新增 可以实现回车或点击按钮搜索，不会每次输入都搜索
     placeholder: GLOBAL_CONFIG.algolia.languages.input_placeholder,
     showLoadingIndicator: true
   })
@@ -91,11 +92,19 @@ window.addEventListener('load', () => {
     templates: {
       item(data) {
         const link = data.permalink ? data.permalink : (GLOBAL_CONFIG.root + data.path)
+        const result = data._highlightResult
+        const content = result.contentStripTruncate
+                        ? cutContent(result.contentStripTruncate.value)
+                        : result.contentStrip
+                        ? cutContent(result.contentStrip.value)
+                        : result.content
+                        ? cutContent(result.content.value)
+                        : ''
         return `
           <a href="${link}" class="algolia-hit-item-link">
-          ${data._highlightResult.title.value || 'no-title'}
+          ${result.title.value || 'no-title'}
           </a>
-          <p class="algolia-hit-item-content">${cutContent(data._highlightResult.contentStripTruncate.value)}</p>`
+          <p class="algolia-hit-item-content">${content}</p>`
       },
       empty: function (data) {
         return (

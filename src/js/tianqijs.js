@@ -1,4 +1,4 @@
-<html><head></head><body>WIDGET = {
+WIDGET = {
     "CONFIG": {
       "modules": "01234",
       "background": "5",
@@ -21,4 +21,4 @@
       "top": "50",
       "key": "5d2ec38baa814e939b88e8654dbab73a"
     }
-  }</body></html>
+  }
