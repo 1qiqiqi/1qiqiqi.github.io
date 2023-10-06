@@ -1,1 +1,420 @@
-<html><head></head><body><script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>轻松阅读 | 藏心阁</title><meta name="keywords" content="SpringCloud"><meta name="author" content="xiaoqi"><meta name="copyright" content="xiaoqi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="轻松阅读SpringCloud项目是我最近抽时间来学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="轻松阅读">
+<meta property="og:url" content="https://1qiqiqi.github.io/2023/09/21/%E8%BD%BB%E6%9D%BE%E9%98%85%E8%AF%BB-SpringCloud/index.html">
+<meta property="og:site_name" content="藏心阁">
+<meta property="og:description" content="轻松阅读SpringCloud项目是我最近抽时间来学习">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/08/12/SKhOgCG6PuEA4rt.png">
+<meta property="article:published_time" content="2023-09-21T05:59:42.084Z">
+<meta property="article:modified_time" content="2023-09-27T13:54:41.302Z">
+<meta property="article:author" content="xiaoqi">
+<meta property="article:tag" content="SpringCloud">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/08/12/SKhOgCG6PuEA4rt.png"><link rel="shortcut icon" href="https://s2.loli.net/2022/08/12/JwHXL6vuaMDscpz.jpg"><link rel="canonical" href="https://1qiqiqi.github.io/2023/09/21/%E8%BD%BB%E6%9D%BE%E9%98%85%E8%AF%BB-SpringCloud/"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//busuanzi.ibruce.info"><meta><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/pluginsSrc/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: '/pluginsSrc/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: '/pluginsSrc/flickr-justified-gallery/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '轻松阅读',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2023-09-27 21:54:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mouse.css"><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"></head><body><sun_moon class="pugsvg" aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewbox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewbox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></sun_moon><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="https://s2.loli.net/2022/08/12/SKhOgCG6PuEA4rt.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">170</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">33</div></a></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">藏心阁</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">轻松阅读</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-21T05:59:42.084Z" title="发表于 2023-09-21 13:59:42">2023-09-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-27T13:54:41.302Z" title="更新于 2023-09-27 21:54:41">2023-09-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/SpringCloud/">SpringCloud</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>16分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="轻松阅读"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 align="center"> 轻松阅读 - API - 2.0 </h1>
+
+<p align="center">
+  <a target="_blank" rel="noopener" href="https://github.com/spring-cloud">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="https://img.shields.io/badge/spring--cloud-2.1.5-blue" alt="spring-cloud">
+  </a>
+  <a target="_blank" rel="noopener" href="https://github.com/Netflix/Hystrix">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="https://img.shields.io/badge/hystrix-1.5.18-blue" alt="hystrix">
+  </a>
+  <a target="_blank" rel="noopener" href="https://github.com/jwtk/jjwt">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="https://img.shields.io/badge/jwt-0.9.1-blue" alt="jwt">
+  </a>
+  <a target="_blank" rel="noopener" href="https://github.com/Zealon159/light-reading-cloud/blob/master/LICENSE">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="https://img.shields.io/badge/License-MIT-yellow" alt="license">
+  </a>
+</p>
+## 序
+
+<p><strong>给各位推荐一下一位大佬写的这个项目给我的感觉短小精悍，无论是从这个系统应用的架构还是从代码层面都特别的清晰好理解，也算是对SpringCloud入门级项目，有兴趣的小伙伴可以多看看哈哈哈</strong></p>
+<h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p>light reading cloud（轻松阅读）是一款图书阅读类APP，基于 SpringCloud 生态开发的微服务实践项目，涉及 SpringCloud-Gateway、Nacos、Hystrix、OpenFeign、Jwt、ElasticSearch 等技术栈的应用。</p>
+<p>项目的侧重点主要是基于实际业务场景使用微服务架构落地的思路，会采用图文的方式介绍每个服务或接口的原理以及为什么使用这种方式实现，希望会对想入门微服务的同学有所帮助。</p>
+<p>客户端采用 Vue.js 、Vuetify  开发：<a target="_blank" rel="noopener" href="https://github.com/Zealon159/light-reading-cloud-client">项目开发者，真大佬</a></p>
+<h3 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h3><p> <code>2.0</code> 版本，主要更新了 SpringCloud Alibaba 的 Nacos 组件，替代了 SpringCloud Config 以及 Eureka </p>
+<p> <code>1.0</code> 版本，采用 SpringCloud Config、Eureka 为配置中心、注册中心。获取此版本，请查看 <code>reading-1.0</code> 分支的说明，并 <code>Checkout</code> 此分支 </p>
+<h3 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h3><p>数据库地址：<code>47.104.241.41</code> ，端口 <code>3306</code></p>
+<p>数据库账户：<code>hello_developer</code> ，密码：<code>Bestyou2020.com</code></p>
+<p>Nacos地址：<code>http://reading-cloud.zealon.cn:8848/nacos/</code>，账户密码同上</p>
+<p>由于云服务器单机部署，可能内存不足导致Nacos宕机而看不见配置文件，这里专门把配置文件放置在 <code>bootstrap-config</code> 目录下，使用静态配置文件方式启动项目（手动更换各个项目对应的配置文件）。</p>
+<p>或者切换到 <code>reading-1.0</code> 分支，该分支使用了eureka 实现的注册中心。</p>
+<p>部分截图：</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/index_1.jpg"></p>
+<h3 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a>架构图</h3><p>客户端访问接口由统一流量入口 SpringCloud-Gateway 接收请求、响应结果，网关与微服务基于异步IO Netty通信，微服务获取配置文件启动后通过 Nacos 完成服务注册与发现，微服务之间的相互调用基于http协议的 FeignClient客户端。</p>
+<p>核心架构图如下：</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/framework.png"></p>
+<h3 id="系统模块"><a href="#系统模块" class="headerlink" title="系统模块"></a>系统模块</h3><p>微服务拆分策略：</p>
+<ul>
+<li>业务先行，理清楚业务边界和依赖</li>
+<li>先有独立的模块，后有分布式服务</li>
+<li>模块之间的依赖关系要清晰、参数简单、耦合要少</li>
+<li>最重要的是需求，根据需求判断具体价值，再按价值建立设计原则，最后按照设计原则来选择落地的技术方案，而不是根据技术来套业务需求</li>
+</ul>
+<blockquote>
+<p>阅读APP，如果你有阅读的习惯，相信对此类产品并不陌生，其核心功能是阅读，当然在阅读之前需要发现想要读的图书，这就需要精品(榜单)页、排行、分类、搜索等功能的支撑，而用户数据主要分为账户、会员、书架、积分、评论等功能。</p>
+<p>所以根据业务场景可进行最基础的拆分服务：图书服务、精品页服务、排行榜服务、搜索服务、账户服务、会员服务、消息服务、积分服务、活动服务、评论服务、支付服务等等（实际上会有比这更多的功能哈）</p>
+</blockquote>
+<p>本项目进行以下拆分：</p>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>工程模块</th>
+<th>说明</th>
+<th>依赖</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>reading-cloud-common</td>
+<td>公共模块，存放通用的POJO、工具类等文件。</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>reading-cloud-gateway</td>
+<td>服务网关，流量入口、权限验证等</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>reading-cloud-book</td>
+<td>图书中心，提供图书基础数据接口</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>reading-cloud-account</td>
+<td>账户中心，提供账户授权、用户服务等接口</td>
+<td>1、3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>reading-cloud-homepage</td>
+<td>精品页中心，提供App精品页接口</td>
+<td>1、3、4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>reading-cloud-feign-client</td>
+<td>Feign客户端，提供微服务的公用客户端</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>这样拆分的粒度比较适中，其中每个服务相对都比较独立。由于个人精力有限，只实现了最核心的业务：图书、精品页、账户、书架等服务。</p>
+<p>从依赖中可以看出，除了common之外，图书中心被依赖的次数最多，由此可见图书中心是最基础的服务，为此需要对这类底层的服务分配更多的容器，具体的还需要根据 <code>DAU</code>、<code>QPS</code> 等综合衡量，决策更合适的数值，是否要进一步拆分微服务等等。</p>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="step1-创建数据库"><a href="#step1-创建数据库" class="headerlink" title="step1 - 创建数据库"></a>step1 - 创建数据库</h3><p>导入数据库脚本，分别创建数据库 <code>reading_cloud_resource</code>、<code>reading_cloud_account</code>，然后导入建表脚本。</p>
+<p>需要示例数据的话，可以到阿里云数据库导出数据哈，在上面有数据库连接信息。</p>
+<h3 id="step2-配置文件"><a href="#step2-配置文件" class="headerlink" title="step2 - 配置文件"></a>step2 - 配置文件</h3><p>由于我的服务器内存不够用了，就没搭建配置中心，可以直接修改每个工程的 <code>bootstrap.yml</code> 文件，更新数据库信息、redis配置信息等。</p>
+<h3 id="step3-启动程序"><a href="#step3-启动程序" class="headerlink" title="step3 - 启动程序"></a>step3 - 启动程序</h3><p>首先启动注册中心，然后依次启动图书中心、账户中心、精品页中心、服务网关，可以在配置文件中自行修改端口哈。</p>
+<h2 id="指南"><a href="#指南" class="headerlink" title="指南"></a>指南</h2><p>工程模块主要划分为2个类型：<strong>基础服务</strong> 和 <strong>业务服务</strong>。</p>
+<p>其中配置中心、注册中心、服务网关为基础服务，图书中心、账户中心、精品页中心为业务服务，这里会侧重说明业务部分。</p>
+<h3 id="公共模块-reading-cloud-common"><a href="#公共模块-reading-cloud-common" class="headerlink" title="公共模块 - reading-cloud-common"></a>公共模块 - reading-cloud-common</h3><p>主要存放Pojo、Constant、工具类等公共资源，作为独立的Jar包供其他工程依赖使用。</p>
+<p>相当于单体项目里的 common 包独立出来，实现同等的价值，这样不需要每个微服务项目冗余公共代码资源，需要注意只存放公共代码，从而得到更好的抽离和复用。</p>
+<h3 id="配置中心-x2F-注册中心-Alibaba-Nacos"><a href="#配置中心-x2F-注册中心-Alibaba-Nacos" class="headerlink" title="配置中心/注册中心 - Alibaba-Nacos"></a>配置中心/注册中心 - Alibaba-Nacos</h3><h4 id="配置中心"><a href="#配置中心" class="headerlink" title="配置中心"></a>配置中心</h4><p>从上面的架构图中我们可以得知，几乎所有的工程都要从配置中心获取配置信息。其目的是用来统一管理配置，配置中心可以在微服务等场景下极大地减轻配置管理的工作量，增强配置管理的服务能力。</p>
+<blockquote>
+<p>单体项目的时候，我们把配置信息放到 <code>.yml</code> 或 <code>.properties</code> 文件中，随着项目走的，一个项目可能有几个配置文件。当请求量随着增大，项目可能要部署多个节点了，这时候维护起来会越来越麻烦，也容易出错。发布的工作降低了整体的工作效率，为了能够提升工作效率，配置中心应运而生了，我们可以将配置统一存放在配置中心来进行管理。</p>
+</blockquote>
+<p>目前主流的配置中心有 Apollo、SpringCloud-Config、Nacos 等开源产品，每款配置中心都能满足统一管理配置的需求，本项目的1.0版本中使用 SpringCloud-Config 作为配置中心、Eureka为注册中心，2.0使用了 Nacos，因为它除了可以做配置中心，还可以做服务注册发现，替代了 Eureka 和 SpringCloud-Config 两个产品。</p>
+<h4 id="注册中心"><a href="#注册中心" class="headerlink" title="注册中心"></a>注册中心</h4><p>注册中心，是一个独立的服务组件，核心功能是服务治理，集中存储、监控、我们的服务信息。</p>
+<p>工作过程简单来说，首先服务提供者启动时，向注册中心提供自己的服务信息，然后消费者服务要请求某个接口时，不是直接去请求具体的服务地址，而是在注册中心拉取得到要请求的服务地址，最后再通过这个地址、端口信息远程调用服务。大体过程如下图：</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/register.jpg"></p>
+<p>当然服务注册与服务发现的过程并不仅仅只有注册和拉取这两个动作，还有一些其他相关的动作。如注册中心存储数据的缓存更新、提供者服务故障处理、消费者心跳检测等等。</p>
+<h3 id="服务网关-reading-cloud-gateway"><a href="#服务网关-reading-cloud-gateway" class="headerlink" title="服务网关 - reading-cloud-gateway"></a>服务网关 - reading-cloud-gateway</h3><p>API 网关是对外提供服务的一个入口，并且隐藏了内部架构的实现，是微服务架构中必不可少的一个组件。API 网关可以为我们管理大量的 API 接口，负责对接协议适配、安全认证、路由转发、流量限制、日志监控、防止爬虫、等功能。</p>
+<p>主流的开源网关有比较早的 Zuul 以及 SpringCloud 自己研发了一个全新的网关 Spring Cloud Gateway。由于 Zuul1 基于 Servlet 构建，使用的是阻塞的 IO，性能并不是很理想。Spring Cloud Gateway 则基于 Spring 5、Spring boot 2 和 Reactor 构建，使用 Netty 作为运行时环境，比较完美的支持异步非阻塞编程。</p>
+<center>没使用网关的情况</center>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/gateway-01.jpg"></p>
+<center>使用网关后</center>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/gateway-02.jpg"></p>
+<p>我想，没有网关和使用网关的区别，看见客户端的表情你就明白了其中的奥义了吧（无论服务端多么复杂…）。</p>
+<p>项目采用 SpringCloud Gateway 作为网关实现，主要实现了统一认证、动态路由。</p>
+<p>SpringCloud Gateway 两大核心，一个是Predicate，路由匹配，一个是Filter，过滤器。</p>
+<p>路由匹配的配置方式有 Fluent API 和 yml 两种方式，这里采用 yml 方式。具体见 reading-cloud-gateway 工程里的配置文件。</p>
+<p>SpringCloud Gateway 有全局过滤器和局部过滤器之分，对应的接口为 GatewayFilter 和 GlobalFilter。我们统一认证的实现方式是自定义实现全局过滤器，在过滤器里面可以处理白名单放行、认证校验、动态处理请求参数等。位置：<code>cn.zealon.readingcloud.gateway.filter.AuthFilter</code></p>
+<p>认证校验过程参考 <code>账户中心 - reading-cloud-account</code> 的说明文档，在最下边。</p>
+<p>其白名单配置在Nacos中，可通过动态配置进行更新。</p>
+<h3 id="图书中心-reading-cloud-book"><a href="#图书中心-reading-cloud-book" class="headerlink" title="图书中心 - reading-cloud-book"></a>图书中心 - reading-cloud-book</h3><p>图书中心作为基础数据提供图书信息服务，另外就是提供图书详情接口、章节目录、章节阅读等接口了。</p>
+<h4 id="数据表结构"><a href="#数据表结构" class="headerlink" title="数据表结构"></a>数据表结构</h4><p>PS：只列举了关键表和关键字段</p>
+<ol>
+<li><p>图书表（book）</p>
+</li>
+<li><p>章节表（book_chapter）一对多关系。</p>
+</li>
+</ol>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/book-center-table.png"></p>
+<h4 id="接口服务"><a href="#接口服务" class="headerlink" title="接口服务"></a>接口服务</h4><p>可以看到如下的几个接口，接口描述使用 swagger 实现。</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/book-center.jpg"></p>
+<p>其中图书查询接口比较简单，看代码很轻易的就能明白，这里重点说明一下章节阅读接口 <code>book/chapter/readChapter</code>。</p>
+<p>首先分析一下阅读操作的特征：</p>
+<ul>
+<li>首次阅读从第一章开始，只有下一章，没有上一章操作</li>
+<li>普通章节，可操作上一章、下一章</li>
+<li>末尾章节，只有上一章，没有下一章</li>
+</ul>
+<p>分析得出，阅读章节的数据结构几乎就是一个双向链表，所以接口可以采用这种模式来存储一本书的阅读数据。</p>
+<blockquote>
+<p>Q：为什么非要使用链表存储呢？阅读当前章节的时候同时查询上一章和下一章不是也可以吗？</p>
+<p>A：没错啊，利用当前章节计算上一章和下一章是可行的，但是这种方式每访问一章都需要进行上下章查询与计算，而通过链表这种方式，只需要第一次生成一次链表，后面每次在链表中读取即可，相比每次计算和一次计算，当然要选择后者啦，而且随着章节越多耗费的性能差距也就越大。</p>
+</blockquote>
+<p>按着这个思路，接下来就是要设计具体数据了。我们看一下下边的数据结构，key 代表当前章节ID，value代表上下章关系数据，都有一个 pre 和 next 指向前驱章节和后继章节，这样当请求任意章节时，通过传入的章节ID就直接获得了前后章节信息了。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    {</span><br><span class="line">        "key":"519",</span><br><span class="line">        "value":{</span><br><span class="line">            "id":529,</span><br><span class="line">            "name":"第一章 装B的乞丐",</span><br><span class="line">            "pre":null,</span><br><span class="line">            "next":[</span><br><span class="line">                {</span><br><span class="line">                    "id":530,</span><br><span class="line">                    "name":"第二章 资格"</span><br><span class="line">                }</span><br><span class="line">            ]</span><br><span class="line">        }</span><br><span class="line">    },</span><br><span class="line">    {</span><br><span class="line">        "key":"530",</span><br><span class="line">        "value":{</span><br><span class="line">            "id":530,</span><br><span class="line">            "name":"第二章 资格",</span><br><span class="line">            "pre":[</span><br><span class="line">                {</span><br><span class="line">                    "id":529,</span><br><span class="line">                    "name":"第一章 装B的乞丐"</span><br><span class="line">                }</span><br><span class="line">            ],</span><br><span class="line">            "next":[</span><br><span class="line">                {</span><br><span class="line">                    "id":531,</span><br><span class="line">                    "name":"第三章 开始修炼清心诀"</span><br><span class="line">                }</span><br><span class="line">            ]</span><br><span class="line">        }</span><br><span class="line">    },</span><br><span class="line">    {</span><br><span class="line">        "key":"530",</span><br><span class="line">        "value":{</span><br><span class="line">            "id":531,</span><br><span class="line">            "name":"第三章 开始修炼清心诀",</span><br><span class="line">            "pre":[</span><br><span class="line">                {</span><br><span class="line">                    "id":530,</span><br><span class="line">                    "name":"第二章 资格"</span><br><span class="line">                }</span><br><span class="line">            ],</span><br><span class="line">            "next":[</span><br><span class="line">                {</span><br><span class="line">                    "id":532,</span><br><span class="line">                    "name":"第四章 暴打恶霸"</span><br><span class="line">                }</span><br><span class="line">            ]</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">]</span><br></pre></td></tr></tbody></table></figure>
+
+<p>设计好了数据结构，想想Redis哪些类型能存储我们的章节数据呢，String自然是不行的了，Hash 貌似可行哎，可以通过 K / V 的形式存储，key即我们的章节ID，value即我们的链表内容，获取的时候只需要提供 key 即可，时间复杂度 O(1)，不错的赶脚吧。好了，那就实现它吧~</p>
+<p>数据结构类是 <code>BookPreviousAndNextChapterNode</code> ，实现函数是 <code>BookChapterServiceImpl.getChapterNodeData</code>，那么有了章节基础数据了，剩下的就是完成整个接口的设计了。接口响应的结果数据除了前后章信息之外，就是当前章节内容了，而前后章的内容万万不能返回的，浪费资源啊。</p>
+<p>大致流程图（蓝色环节只在没有缓存时执行一次）：</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/process-chapter-read.jpg"></p>
+<p>其中，没有缓存时，会查询一次数据库，计算整个链表存到缓存，后面再请求时，直接redis的hash返回，不需要再计算前后章节了。</p>
+<h3 id="精品页中心-reading-cloud-homepage"><a href="#精品页中心-reading-cloud-homepage" class="headerlink" title="精品页中心 - reading-cloud-homepage"></a>精品页中心 - reading-cloud-homepage</h3><p>精品页主要提供app首页数据接口，换一换、图书列表接口。所以依赖于图书中心和账户中心。</p>
+<h4 id="数据表设计"><a href="#数据表设计" class="headerlink" title="数据表设计"></a>数据表设计</h4><ol>
+<li><p>精品页配置表(index_page_config)</p>
+<p>这个表为精品页推荐、男生、女生的配置总表，根据page_type存储对应的banner或booklist</p>
+<p>page_type=1 即书单，page_type=2 则Banner</p>
+</li>
+<li><p>Banner轮播表(index_banner)</p>
+</li>
+<li><p>Banner轮播明细表(index_banner_item)</p>
+</li>
+<li><p>书单配置表(index_booklist)</p>
+</li>
+<li><p>书单配置明细表(index_booklist_item)</p>
+</li>
+</ol>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/homepage-db.jpg"></p>
+<p>表详细说明可见数据库SQL建表后的注释。</p>
+<h4 id="接口服务-1"><a href="#接口服务-1" class="headerlink" title="接口服务"></a>接口服务</h4><p>主页的接口主要是读为主，就那么3个，是不是感觉挺简单的哈。</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/homepage.jpg"></p>
+<p>这里主要说明下精品页接口，首先看下精品页的需求：</p>
+<ul>
+<li>按配置有序加载对应的栏目(也就是Banner或书单)</li>
+<li>书单可按类型加载不同的样式</li>
+<li>书单可按更多配置项呈现换一换或更多或无</li>
+</ul>
+<p>所以分析的大致接口逻辑图如下</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/index-process.jpg"></p>
+<p>有了这个结构图，开发功能就清晰多了。</p>
+<p>其中获取图书部分内部还有一些细节，随机获取时，每次随机得到的book不能重复，本次随机结果不能与客户端内的图书重复，如果配置数量不够随机的话还不能进行随机等等。想了解细节见代码：<code>cn.zealon.readingcloud.homepage.service.impl.IndexPageConfigServiceImpl.java</code> 中 <code>getIndexPageByType</code> 函数。</p>
+<p>关于获取图书信息，是通过Feign客户端实现的，也就是我们说的微服务之间远程调用，下面是请求链调用的过程</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/index-seq.jpg"></p>
+<p>其中精品页服务内部逻辑也就是我们的流程图部分，而调用链的过程使用时序图更为清晰。</p>
+<p>:star: 看蓝色文字调用，这两处即我们的微服务之间的调用了，使用的是FeignClient，注意这里的调用返回结果，如果不是要求100%的实时性，一定要加上缓存，不用每次都去远程调用而减少服务提供者的压力。</p>
+<p>:star: 是否注意到了，流程图更适合用于业务逻辑；而时序图适合用于调用链，通常每个节点代表了一个端点（即独立的服务或组件）​ </p>
+<h4 id="———————-2020-06-01-增加搜索接口-———————"><a href="#———————-2020-06-01-增加搜索接口-———————" class="headerlink" title="———————- 2020-06-01 增加搜索接口 ———————-"></a>———————- 2020-06-01 增加搜索接口 ———————-</h4><p>搜索服务基于ElasticSearch搜索引擎实现，采用版本6.3.1，搜索客户端使用Jest，实际上搜索功能需要独立出来一个微服务工程，必定用户找书是一个很独立的、常用的功能，搜索的背后还要处理很多用户埋点数据，因此接口请求量会比较多。</p>
+<p>这里放到了精品页工程中，主要是服务器没有更多内存空间来启动独立的Java进程了 ，ε=(´ο｀*)))唉。。。</p>
+<p>搜索功能的实现，主要根据搜索需求，然后利用合适的ESAPI来实现，这里就不多说了。搜索数据的同步，目前我是手动执行存储到ES索引库里的，一般情况下，有两种同步手段：</p>
+<ol>
+<li>定时任务同步更新</li>
+<li>基于MQ准实时更新</li>
+</ol>
+<p><strong>第一种定时任务同步</strong></p>
+<p>这种方式相对来说更传统一些，可以写一个增量同步的脚本，然后使用CRON表达式指定执行间隔，来处理数据同步到ES索引库。缺点一是数据更新不及时，而是定时任务执行中，若无数据则会每次运行会浪费CPU资源。</p>
+<p>所以如果要实时性比较高的话，最好采用第二种方式利用MQ处理。</p>
+<p><strong>第二种基于MQ更新</strong></p>
+<p>MQ（MessageQueue）即消息队列，多用于解耦、削峰、异步处理等场景。主流的开源项目有ActiveMQ、RabbitMQ、RocketMQ、Kafka等等，这里例举采用RabbitMQ来实现。</p>
+<p>首先看一下基于MQ的同步过程：</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/MQ.jpg"></p>
+<p>基于MQ的点对点通信，完成整个同步过程，即运营同学对图书进行了写操作，这时候将数据发送至指定的队列（RabbitMQ实际上是绑定交换器，交换器在绑定队列），然后消费者服务监听这个队列，若有数据及时消费处理了（也就是将数据同步到ES索引库中哈），这样就实现了准时更新了。</p>
+<h3 id="账户中心-reading-cloud-account"><a href="#账户中心-reading-cloud-account" class="headerlink" title="账户中心 - reading-cloud-account"></a>账户中心 - reading-cloud-account</h3><p>账户中心提供用户注册、登录验证、用户书架、喜欢看等服务。其中授权验证使用了jwt。</p>
+<h4 id="数据表结构-1"><a href="#数据表结构-1" class="headerlink" title="数据表结构"></a>数据表结构</h4><ol>
+<li>用户表(user)</li>
+<li>用户书架表(user_bookshelf)</li>
+<li>用户喜欢看表(user_like_see)</li>
+</ol>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/account-center-table.jpg"></p>
+<h4 id="接口服务-2"><a href="#接口服务-2" class="headerlink" title="接口服务"></a>接口服务</h4><p>其中用户服务接口复制登录认证与注册，用户书架、喜欢看都是用户行为的接口</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/account-center.jpg"></p>
+<p><strong>安全认证</strong></p>
+<p>常用的认证方式主要有三种：Session、HTTP Basic Authentication 和 Token。</p>
+<ul>
+<li>session 是认证中最常用的一种方式，也是最简单的。用户登录后将信息存储在后端，客户端则通过 Cookie 中的 SessionId 来标识对应的用户。</li>
+<li>HTTP Basic Authentication 也就是 HTTP 基本认证，它是 HTTP 1.0 提出的一种认证机制。HTTP 基本认证的原理是客户端在请求时会在请求头中增加 Authorization，Authorization 是用户名和密码用 Base64 加密后的内容。服务端获取 Authorization Header 中的用户名与密码进行验证。</li>
+<li>Token 中会存储用户的信息，然后通过加密算法进行加密，只有服务端才能解密，服务端拿到 Token 后进行解密获取用户信息。</li>
+</ul>
+<p>相比之下，Token更适用于微服务的安全认证。所以采用了基于Token实现的 JWT作为本项目的安全认证规范。</p>
+<p>JWT（JSON Web Token）是一个非常轻巧的规范。这个规范允许我们使用JWT在用户和服务器之间传递安全可靠的信息。在HTTP通信过程中，进行身份认证。</p>
+<p>比如在用户登录时，基本思路就是用户提供用户名和密码给认证服务器，服务器验证用户提交信息的合法性；如果验证成功，会产生并返回一个 Token，客户端将Token保存起来。</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/jwt-1.jpg"></p>
+<p>再次请求服务端时，一般会将 Token 放入请求头中进行传递。当请求到达网关后，会在网关中对 Token 进行校验，如果校验成功，则将该请求转发到后端的服务中，在转发时会将 Token 解析出的用户信息也一并带过去，这样在后端的服务中就不用再解析一遍 Token 获取的用户信息，这个操作统一在网关进行的。如果校验失败，那么就直接返回对应的结果给客户端，不会将请求进行转发。</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="http://reading.zealon.cn/jwt-2.jpg"></p>
+<p>:star: ​我们知道，网关是唯一入口，所有一般情况下，微服务之间的请求，就不需要再进行认证了。</p>
+<p>:star: 有一些服务是不需要认证的，这时候，我们可以在网关中加白名单进行处理。</p>
+<p>:star: 我们知道，jwt认证的过程主要是加密​，然后结果和Token匹配，而加密运算会耗费CPU资源，如果请求量比较大，可以将Token存储缓存，缓存失败再进行实时认证，可以大幅度的提升网关服务器的CPU性能。</p>
+<!-- hexo injector body_end start --><script data-pjax="">
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://npm.elemecdn.com/akilar-candyassets/image/cover1.webp);"> <a class="categoryBar-list-link" href="categories/安装教程/">安装教程</a><span class="categoryBar-list-count">8</span><span class="categoryBar-list-descr">Ubuntu指南</span></li><li class="categoryBar-list-item" style="background:url(https://npm.elemecdn.com/akilar-candyassets/image/cover2.webp);"> <a class="categoryBar-list-link" href="categories/脚本/">脚本</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr">玩转Win10</span></li><li class="categoryBar-list-item" style="background:url(https://npm.elemecdn.com/akilar-candyassets/image/cover3.webp);"> <a class="categoryBar-list-link" href="categories/Docker/">Docker</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr">长篇小说连载</span></li><li class="categoryBar-list-item" style="background:url(https://npm.elemecdn.com/akilar-candyassets/image/cover4.webp);"> <a class="categoryBar-list-link" href="categories/Java基础/">Java基础</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">个人日记</span></li><li class="categoryBar-list-item" style="background:url(https://npm.elemecdn.com/akilar-candyassets/image/cover5.webp);"> <a class="categoryBar-list-link" href="categories/Linux/">Linux</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr">诗词歌赋</span></li><li class="categoryBar-list-item" style="background:url(https://npm.elemecdn.com/akilar-candyassets/image/cover6.webp);"> <a class="categoryBar-list-link" href="categories/Java面试准备/">Java面试准备</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">杂谈教程</span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/Redis/">Redis</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/项目/">项目</a><span class="categoryBar-list-count">5</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/数据采集/">数据采集</a><span class="categoryBar-list-count">5</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/Hexo/">Hexo</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/python基础/">python基础</a><span class="categoryBar-list-count">11</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/可视化/">可视化</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/逆向/">逆向</a><span class="categoryBar-list-count">8</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/vue/">vue</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/数据库/">数据库</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/云计算/">云计算</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/算法简史/">算法简史</a><span class="categoryBar-list-count">84</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/算法简史/回溯/">回溯</a><span class="categoryBar-list-count">12</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/算法简史/二叉树/">二叉树</a><span class="categoryBar-list-count">16</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/算法简史/字符串/">字符串</a><span class="categoryBar-list-count">7</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/算法简史/数组/">数组</a><span class="categoryBar-list-count">5</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/算法简史/栈/">栈</a><span class="categoryBar-list-count">6</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/算法简史/队列/">队列</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/算法简史/贪心/">贪心</a><span class="categoryBar-list-count">12</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/算法简史/动态规划/">动态规划</a><span class="categoryBar-list-count">12</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/算法简史/链表/">链表</a><span class="categoryBar-list-count">8</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/吉他/">吉他</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/口语/">口语</a><span class="categoryBar-list-count">11</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/算法简史/哈希表/">哈希表</a><span class="categoryBar-list-count">5</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/内功/">内功</a><span class="categoryBar-list-count">6</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/计网/">计网</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/论文/">论文</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/SpringCloud/">SpringCloud</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><script data-pjax="">
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2023/10/04/sql练习/" alt=""><img width="48" height="48" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-10-04</span><a class="blog-slider__title" href="2023/10/04/sql练习/" alt="">SQL练习复盘</a><div class="blog-slider__text">SQL练习复盘</div><a class="blog-slider__button" href="2023/10/04/sql练习/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/10/22/vue_报错/" alt=""><img width="48" height="48" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-22</span><a class="blog-slider__title" href="2022/10/22/vue_报错/" alt="">Vue报错汇总</a><div class="blog-slider__text">Vue报错汇总</div><a class="blog-slider__button" href="2022/10/22/vue_报错/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/08/15/瑞吉外卖_day01/" alt=""><img width="48" height="48" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-08-15</span><a class="blog-slider__title" href="2022/08/15/瑞吉外卖_day01/" alt="">瑞吉外卖-Day01</a><div class="blog-slider__text">复习一下两个月之前做过的项目</div><a class="blog-slider__button" href="2022/08/15/瑞吉外卖_day01/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/07/07/Docker容器命令/" alt=""><img width="48" height="48" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-07-07</span><a class="blog-slider__title" href="2022/07/07/Docker容器命令/" alt="">Docker容器命令</a><div class="blog-slider__text">学习常用的Docker容器命令</div><a class="blog-slider__button" href="2022/07/07/Docker容器命令/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/07/07/Docker镜像命令/" alt=""><img width="48" height="48" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-07-07</span><a class="blog-slider__title" href="2022/07/07/Docker镜像命令/" alt="">Docker镜像命令</a><div class="blog-slider__text">学习常用的Docker镜像命令</div><a class="blog-slider__button" href="2022/07/07/Docker镜像命令/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/07/05/英语口语01/" alt=""><img width="48" height="48" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-07-05</span><a class="blog-slider__title" href="2022/07/05/英语口语01/" alt="">学习口语</a><div class="blog-slider__text">一些口语武器库</div><a class="blog-slider__button" href="2022/07/05/英语口语01/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/07/04/Redis常用命令/" alt=""><img width="48" height="48" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-07-04</span><a class="blog-slider__title" href="2022/07/04/Redis常用命令/" alt="">Redis命令大全</a><div class="blog-slider__text">学习Redis使用</div><a class="blog-slider__button" href="2022/07/04/Redis常用命令/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer="" src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer="" data-pjax="" src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://1qiqiqi.github.io">xiaoqi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://1qiqiqi.github.io/2023/09/21/%E8%BD%BB%E6%9D%BE%E9%98%85%E8%AF%BB-SpringCloud/">https://1qiqiqi.github.io/2023/09/21/%E8%BD%BB%E6%9D%BE%E9%98%85%E8%AF%BB-SpringCloud/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://1qiqiqi.github.io" target="_blank">藏心阁</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/SpringCloud/">SpringCloud</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/08/12/SKhOgCG6PuEA4rt.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer=""></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="/img/wechat.png" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="/img/alipay.png" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/10/04/sql%E7%BB%83%E4%B9%A0/"><img class="prev-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">SQL练习复盘</div></div></a></div><div class="next-post pull-right"><a href="/2023/06/06/Java%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/loading.gif" data-original="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Java求职准备之旅</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text"> 轻松阅读 - API - 2.0 </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="toc-text">项目介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC"><span class="toc-text">版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%94%E7%A4%BA"><span class="toc-text">演示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%B6%E6%9E%84%E5%9B%BE"><span class="toc-text">架构图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97"><span class="toc-text">系统模块</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="toc-text">快速开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#step1-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">step1 - 创建数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#step2-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">step2 - 配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#step3-%E5%90%AF%E5%8A%A8%E7%A8%8B%E5%BA%8F"><span class="toc-text">step3 - 启动程序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E5%8D%97"><span class="toc-text">指南</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E5%85%B1%E6%A8%A1%E5%9D%97-reading-cloud-common"><span class="toc-text">公共模块 - reading-cloud-common</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83-x2F-%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83-Alibaba-Nacos"><span class="toc-text">配置中心/注册中心 - Alibaba-Nacos</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83"><span class="toc-text">配置中心</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83"><span class="toc-text">注册中心</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3-reading-cloud-gateway"><span class="toc-text">服务网关 - reading-cloud-gateway</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E4%B9%A6%E4%B8%AD%E5%BF%83-reading-cloud-book"><span class="toc-text">图书中心 - reading-cloud-book</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%BB%93%E6%9E%84"><span class="toc-text">数据表结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1"><span class="toc-text">接口服务</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B2%BE%E5%93%81%E9%A1%B5%E4%B8%AD%E5%BF%83-reading-cloud-homepage"><span class="toc-text">精品页中心 - reading-cloud-homepage</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E8%AE%BE%E8%AE%A1"><span class="toc-text">数据表设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1-1"><span class="toc-text">接口服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94-2020-06-01-%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E6%8E%A5%E5%8F%A3-%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94"><span class="toc-text">———————- 2020-06-01 增加搜索接口 ———————-</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A6%E6%88%B7%E4%B8%AD%E5%BF%83-reading-cloud-account"><span class="toc-text">账户中心 - reading-cloud-account</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%BB%93%E6%9E%84-1"><span class="toc-text">数据表结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1-2"><span class="toc-text">接口服务</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">©2020 - 2023 By xiaoqi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi,welcome to my <a target="_blank" rel="noopener" href="https://github.com/1qiqiqi">blog</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/pluginsSrc/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><div id="he-plugin-simple"></div><script type="text/javascript" src="/src/js/tianqijs.js"></script><script src="/src/js/he-simple-common.js?v=2.0"></script><script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js"></script><script async="" src="/js/diytitle.js"></script><script src="/js/sun_moon.js" async=""></script><link rel="stylesheet" href="/src/css/he-simple.css"><script src="/pluginsSrc/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="/pluginsSrc/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="Fighting,Beauty,Postive Thought,Strong Muscle" data-fontsize="15px" data-random="false" async="async"></script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
