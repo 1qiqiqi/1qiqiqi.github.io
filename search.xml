@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>毕设</title>
+      <link href="/2023/12/08/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
+      <url>/2023/12/08/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</url>
+      
+        <content type="html"><![CDATA[<html><head></head><body><h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 首先确定从0到1的产出具体步骤是怎么样的，也就是他的生命周期是怎么样的，时间安排是怎么样的</span><br><span class="line">2. 明白毕设项目的背景是什么，提供了哪些帮助解决了现实当中的什么问题?</span><br><span class="line">3. 感觉可以结合科大讯飞的AIMind知识图谱来做</span><br></pre></td></tr></tbody></table></figure><h3 id="ToDo"><a href="#ToDo" class="headerlink" title="ToDo"></a>ToDo</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 收集研究生入学考试历年试题数据</span><br><span class="line">2. </span><br></pre></td></tr></tbody></table></figure><h3 id="提纲"><a href="#提纲" class="headerlink" title="提纲"></a>提纲</h3><h4 id="面向研究生入学考试英语试题数据分析的可视系统设计与实现"><a href="#面向研究生入学考试英语试题数据分析的可视系统设计与实现" class="headerlink" title="面向研究生入学考试英语试题数据分析的可视系统设计与实现"></a>面向研究生入学考试英语试题数据分析的可视系统设计与实现</h4><p>随着研究生入学考试的日益竞争激烈，对英语试题的数据分析成为了提高教学质量和帮助考生备考的关键。本课题旨在设计并实现一个面向研究生入学考试英语试题数据分析的可视系统，<br>通过数据可视化手段帮助教育机构和考生深入了解考试趋势、知识点覆盖情况等信息。课题的设计目标包括：<br>（1）数据收集与整理： 开发数据收集模块，从研究生入学英语考试的历年试题中抽取相关数据，并进行整理和标准化。<br>（2）知识点分析： 进行试题中涉及的各个知识点的分析，包括知识点的覆盖频率、考察难度等信息。<br>（3）趋势分析： 通过时间序列分析，揭示考试题型和难度的变化趋势，帮助教育机构更好地调整教学方向。<br>（4）个体表现： 提供考生个体成绩分析，支持对每个考生在不同知识点上的表现进行深入挖掘。<br>（5）可视化报告：设计直观的可视化报告，以图表和图形的形式呈现分析结果，使用户能够迅速理解和利用数据</p><h3 id="数据收集与整理"><a href="#数据收集与整理" class="headerlink" title="数据收集与整理"></a>数据收集与整理</h3><ol><li>首先，确定数据来源，例如研究生入学英语考试的历年真题。</li><li>利用网络爬虫技术或手动方式收集历年真题，并将其存储在数据库中。</li><li>对收集到的数据进行清洗、去重和标准化，以便后续分析。</li></ol><h3 id="知识点分析"><a href="#知识点分析" class="headerlink" title="知识点分析"></a>知识点分析</h3><ol><li>定义知识点分类体系，如词汇、语法、阅读理解、写作等。</li><li>分析每道试题所属的知识点，并统计各个知识点的覆盖频率和考察难度。</li><li>可以使用Excel或Python等工具进行数据处理和分析。</li></ol><h3 id="趋势分析"><a href="#趋势分析" class="headerlink" title="趋势分析"></a>趋势分析</h3><ol><li>按照时间顺序整理试题数据，形成时间序列。</li><li>利用时间序列分析方法（如ARIMA模型）预测考试题型和难度的变化趋势。</li><li>结合可视化工具（如Matplotlib、Seaborn等）绘制趋势图，展示分析结果。</li></ol><h3 id="个体表现"><a href="#个体表现" class="headerlink" title="个体表现"></a>个体表现</h3><ol><li>针对每个考生，统计其在不同知识点上的正确率、得分等指标。</li><li>利用聚类、分类等机器学习算法对考生进行分组，分析不同组别在知识点上的表现。</li><li>可使用Python的scikit-learn库进行算法实现。</li></ol><h3 id="可视化报告"><a href="#可视化报告" class="headerlink" title="可视化报告"></a>可视化报告</h3><p>设计简洁明了的报表模板，包括以下部分：</p><ol><li>概述：简要介绍分析目的、数据来源和分析方法。</li><li>知识点覆盖情况：列出各知识点的覆盖频率和考察难度。</li><li>趋势分析：展示时间序列分析和预测结果。</li><li>考生个体表现：展示不同考生在知识点上的表现差异。</li><li>使用Python的echarts等库生成可视化报告。</li></ol></body></html>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 论文 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SQL练习复盘</title>
       <link href="/2023/10/05/sql%E7%BB%83%E4%B9%A0/"/>
       <url>/2023/10/05/sql%E7%BB%83%E4%B9%A0/</url>
