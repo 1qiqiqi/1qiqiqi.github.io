@@ -11137,4 +11137,36 @@
         <tag>论文</tag>
       </tags>
   </entry>
+  <entry>
+    <title>并发编程之美</title>
+    <url>/2023/12/16/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><h2 id="怎么获取共享变量的监视器锁？"><a href="#怎么获取共享变量的监视器锁？" class="headerlink" title="怎么获取共享变量的监视器锁？"></a>怎么获取共享变量的监视器锁？</h2><h3 id="方法一：通过sychronized（共享变量）"><a href="#方法一：通过sychronized（共享变量）" class="headerlink" title="方法一：通过sychronized（共享变量）"></a>方法一：通过sychronized（共享变量）</h3><p>怎么验证当前线程有没有获取到锁?</p>
+<p>可以通过调用wait()方法来验证，如果没有获取到那么会报IllegalMonitorStateException类型错误</p>
+<p>例子：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">public class getThreadExample {</span><br><span class="line">    public static volatile String a = "1";</span><br><span class="line">    public static void main(String[] args) throws InterruptedException {</span><br><span class="line">          a.wait();</span><br><span class="line">          } </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">com.rose.xiaoqi.createThread.getThreadExample</span><br><span class="line">Exception in thread "main" java.lang.IllegalMonitorStateException</span><br><span class="line">	at java.lang.Object.wait(Native Method)</span><br><span class="line">	at java.lang.Object.wait(Object.java:502)</span><br><span class="line">	at com.rose.xiaoqi.createThread.getThreadExample.main(getThreadExample.java:6)</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="尝试wait-和-notify-方法的玩耍"><a href="#尝试wait-和-notify-方法的玩耍" class="headerlink" title="尝试wait() 和 notify()方法的玩耍"></a>尝试wait() 和 notify()方法的玩耍</h4><p>情况一:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">public class getThreadExample {</span><br><span class="line">    public static String a = "1";</span><br><span class="line">    public static void main(String[] args) throws InterruptedException {</span><br><span class="line">        RunnableTask runnableTask = new RunnableTask();</span><br><span class="line">        RunnableTask1 runnableTask1 = new RunnableTask1();</span><br><span class="line">        new Thread(runnableTask).start();</span><br><span class="line">//        Thread.sleep(1000);</span><br><span class="line">        new Thread(runnableTask1).start();</span><br><span class="line">    }</span><br><span class="line">    static class RunnableTask implements Runnable {</span><br><span class="line">        @Override</span><br><span class="line">        public void run() {</span><br><span class="line">            synchronized (a) {</span><br><span class="line">                try {</span><br><span class="line">                    System.out.println("线程悬挂");</span><br><span class="line">//                    a += "1";</span><br><span class="line">                    a.wait();</span><br><span class="line">                } catch (InterruptedException e) {</span><br><span class="line">                    throw new RuntimeException(e);</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    static class RunnableTask1 implements Runnable {</span><br><span class="line">        @Override</span><br><span class="line">        public void run() {</span><br><span class="line">            synchronized (a) {</span><br><span class="line">                System.out.println("线程唤醒");</span><br><span class="line">//                a += "2";</span><br><span class="line">                a.notify();</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上面代码会发生死锁现象</p>
+<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20231216001227871.png" alt="image-20231216001227871"></p>
+<p>为什么会这样，因为如果你主线程不加个睡眠时间的话，很有可能后面的线程先抢的锁先调用了notify(),导致后面线程拿到锁之后调用wait()方法一直阻塞</p>
+<p>情况二:</p>
+<p>把以上注解全部解开，会发现</p>
+<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20231216004633919.png" alt="image-20231216004633919"></p>
+<p>为什么会这样?</p>
+<p>因为对共享变量改了之后不是同一个对象了，所以也就没有新的对象的监视器锁</p>
+<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20231216004702870.png" alt="image-20231216004702870"></p>
+<p>方法二:   通过sychronized  void method(int a) </p>
+</body></html>]]></content>
+      <categories>
+        <category>并发编程</category>
+      </categories>
+      <tags>
+        <tag>并发编程</tag>
+      </tags>
+  </entry>
 </search>
