@@ -511,7 +511,7 @@
 <h5 id="如果在插入某个数据的时候当前这一页数据满了怎么办"><a href="#如果在插入某个数据的时候当前这一页数据满了怎么办" class="headerlink" title="如果在插入某个数据的时候当前这一页数据满了怎么办?"></a>如果在插入某个数据的时候当前这一页数据满了怎么办?</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">新创建一页,并且要判断这条数据的索引值在当前页中是否满足插入条件，并且把最后的一条满足条件的数据给放到新的一页当中,相邻页用指针相连接，其实这样还是非常的难受的，这也是为什么我建议使用自增的索引</span><br></pre></td></tr></tbody></table></figure>
 
 <p>请看下图</p>
-<p><img src="C:%5CUsers%5C13772%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20230424155002346.png" alt="image-20230424155002346"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142225643-814518693.png" alt="image-20230424155002346"></p>
 <p>再建立一级索引，二级索引，主要就是通过范围查找来减少IO。</p>
 <h5 id="什么情况会是全表扫描"><a href="#什么情况会是全表扫描" class="headerlink" title="什么情况会是全表扫描?"></a>什么情况会是全表扫描?</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">select * from table_name where b = 2,这个b不是索引，那么就需要全表扫描</span><br></pre></td></tr></tbody></table></figure>
 
@@ -528,17 +528,17 @@
 <h6 id="能用sql语句展示吗"><a href="#能用sql语句展示吗" class="headerlink" title="能用sql语句展示吗?"></a>能用sql语句展示吗?</h6><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">select b,c,d,a from table_name where b &gt; 1,此时此刻就能使用联合索引，因为要查询的字段联合索引里面都有。</span><br><span class="line">select * from table_name where b &gt; 1这样的话就全表扫描比索引强多了，因为这样还要回表。</span><br></pre></td></tr></tbody></table></figure>
 
 <p>请看下图</p>
-<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230424175008539.png" alt="image-20230424175008539"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142249404-1560951154.png" alt="image-20230424175008539"></p>
 <h5 id="什么情况下会导致索引失效"><a href="#什么情况下会导致索引失效" class="headerlink" title="什么情况下会导致索引失效?"></a>什么情况下会导致索引失效?</h5><p>只要对字段的值有所改变那么索引就会失效</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">select e from table_name where e = 1,e是varchar类型(255),SQL除了数字之外，其他的英文什么的都转化位0，而数字任然是数字，这段索引为什么会失效原因就是,e字段是varchar类型，如果要和1比较，那么自生就得先转化为数字，这样消耗的成本实在太大，那就只能走全表扫描了。</span><br></pre></td></tr></tbody></table></figure>
 
 <p>请看下图</p>
-<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230424203138333.png" alt="image-20230424203138333"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142253033-466563840.png" alt="image-20230424203138333"></p>
 <p>也有可能破坏一个完整的B+树：本来1是小于b的，结果转化为Number类型之后b变成了0。</p>
-<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230424225135663.png" alt="image-20230424225135663"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142255992-1883662600.png" alt="image-20230424225135663"></p>
 <h5 id="Innodb是如何实现事务的"><a href="#Innodb是如何实现事务的" class="headerlink" title="Innodb是如何实现事务的?"></a>Innodb是如何实现事务的?</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">四种元素:Buffer Pool,LogBuffer,Redo Log,Undo Log。在一次修改数据的事务当中，Innodb收到update请求之后，将根据要修改的数据查找到某一页并使用Buffer Pool存储这一页的数据，再对数据进行修改生成Redo Log对象存储再LogBuffer当中，如果你突然不想修改了那么你就执行Undo Log。</span><br></pre></td></tr></tbody></table></figure>
 
-<h5 id="主键索引的图可以优化成什么样"><a href="#主键索引的图可以优化成什么样" class="headerlink" title="主键索引的图可以优化成什么样?"></a>主键索引的图可以优化成什么样?</h5><p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230426114041672.png" alt="image-20230426114041672"></p>
+<h5 id="主键索引的图可以优化成什么样"><a href="#主键索引的图可以优化成什么样" class="headerlink" title="主键索引的图可以优化成什么样?"></a>主键索引的图可以优化成什么样?</h5><p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142258697-1181820895.png" alt="image-20230426114041672"></p>
 <h3 id="为什么Mysql单表最大两千万"><a href="#为什么Mysql单表最大两千万" class="headerlink" title="为什么Mysql单表最大两千万?"></a>为什么Mysql单表最大两千万?</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">在索引页中,假设主键a大小为8个bit，页号大小为4个bit,那么每页15k那么就能存储15k/12 = 1280,在叶子节点(也就是数据页当中)每一条1k,那么15k/1k = 15,根据数据量计算公式1280^（z-1）* 15,其中z为B+数的层数。</span><br></pre></td></tr></tbody></table></figure>
 
 <h5 id="为什么是15k而不是16k"><a href="#为什么是15k而不是16k" class="headerlink" title="为什么是15k而不是16k?"></a>为什么是15k而不是16k?</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">一页当中包含页目录以及页头，去掉之后就剩下15k</span><br></pre></td></tr></tbody></table></figure>
@@ -547,7 +547,7 @@
 
 <h3 id="MVCC是什么"><a href="#MVCC是什么" class="headerlink" title="MVCC是什么?"></a>MVCC是什么?</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">MVCC是MYSQL中的innodb引擎在RC,RR事务且快照读当中实现的多版本并发控制，这个版本下面有隐藏字段，arx_id 和 rollPointer分表代表着某个版本的记录id和指向当前版本的前一个版本，Undo版本链代表着多个版本形成的链表，ReadView代表着你在多个版本下面选出一个版本出来，选哪个版本的时候会伴随着某个选择版本的算法</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230517113457231.png" alt="image-20230517113457231"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142301782-519649665.png" alt="image-20230517113457231"></p>
 <h5 id="MVCC在RC、RR场景的区别"><a href="#MVCC在RC、RR场景的区别" class="headerlink" title="MVCC在RC、RR场景的区别?"></a>MVCC在RC、RR场景的区别?</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">如果读取某条记录两次，那么在RC场景下面，每次返回的是不同的版本，而在RR下面返回的是同一个版本，这也天然的方式解释了什么是不可重复读和可重复读</span><br></pre></td></tr></tbody></table></figure>
 
 <h5 id="MVCC有什么用"><a href="#MVCC有什么用" class="headerlink" title="MVCC有什么用?"></a>MVCC有什么用?</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">避免了被阻塞，虽然可能读取的数据不是最新的数据</span><br></pre></td></tr></tbody></table></figure>
@@ -564,8 +564,8 @@
 
 <h4 id="侧重点"><a href="#侧重点" class="headerlink" title="侧重点"></a>侧重点</h4><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">脏读和不可重复读侧重于读-读的不同</span><br><span class="line">幻读侧重于读-读-写，通过写来验证读的幻觉</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h3><p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230727171413977.png" alt="image-20230727171413977"></p>
-<h5 id="快照读和当前读"><a href="#快照读和当前读" class="headerlink" title="快照读和当前读"></a>快照读和当前读</h5><p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230727172112084.png" alt="image-20230727172112084"></p>
+<h3 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h3><p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142305861-450824346.png" alt="image-20230727171413977"></p>
+<h5 id="快照读和当前读"><a href="#快照读和当前读" class="headerlink" title="快照读和当前读"></a>快照读和当前读</h5><p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142309553-75476242.png" alt="image-20230727172112084"></p>
 <h5 id="表锁和意向锁的缘分"><a href="#表锁和意向锁的缘分" class="headerlink" title="表锁和意向锁的缘分"></a>表锁和意向锁的缘分</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">表锁是否加成功得看意向锁的脸色，意向锁相当于整个表的一个标识，当执行DML的时候会加意向锁，那么表锁来加锁的时候得看意向锁，意向锁标识当前表是否有数据行有加锁，这样就不用在加表锁的时候一行一行的查看是否要加锁了</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="事务是怎么实现的"><a href="#事务是怎么实现的" class="headerlink" title="事务是怎么实现的?"></a>事务是怎么实现的?</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">首先事务主要是有四个特性，ACID，A就是Atomic原子性，原子性其实是基于这个undolog日志来实现的，就是说在执行DML语句的时候，执行的数据会先存储在undolog版本链里面,不是真正的数据库文件里，如果事务执行失败就可以撤销操作，如果事务成功，commit提交之后它可以把数据真正的放到数据库文件里面，C就是Consistency一致性，这个一致性其实是基于其他三个属性实现的，I就是Isolation,就是隔离性，这个隔离性有四个级别，都是基于这个MVCC和锁来实现的，MVCC层面比如说快照读就是在RR和Serilaze实现，读取的是之前读取的undolog版本，就是在每次读取的时候会服用之前的ReadView,但是在RC级别下，当前读是读取的最新的一个undolog版本日志，也就是每次查询都是新建的一个readview,从锁的层面来讲的话，就是RC级别下就是行锁，RR级别是在行锁的粒度基础上面加了间隙锁，就是会锁住某个范围的数据，当某个事务读取数据时，其他不允许插入数据，锁的性质来讲的话就是，在RR级别下，A事务读取数据时，其他事务可以得到了共享锁和排它锁，B事务写入数据时，其他事务不能得到共享锁和排它锁。</span><br></pre></td></tr></tbody></table></figure>
@@ -576,7 +576,7 @@
 
 <h5 id="反射优缺点有哪些"><a href="#反射优缺点有哪些" class="headerlink" title="反射优缺点有哪些?"></a>反射优缺点有哪些?</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">优点: 能够动态的获取类的实例，提高灵活性</span><br><span class="line">缺点: 会降低性能，解决办法: 1. 如果多次创建某个对象的实例，使用缓存 2. 通过SetAccessible关闭JDK的安全检查来提高提升反射速度。</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h3><p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230707135655807.png" alt="image-20230707135655807"></p>
+<h3 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h3><p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142314099-2046399630.png" alt="image-20230707135655807"></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">这个本类指的是自己创建的这个类里面的范围，而不包括本类下面的一个默认修饰符修饰的类</span><br></pre></td></tr></tbody></table></figure>
 
 <h5 id="修饰符使用范围"><a href="#修饰符使用范围" class="headerlink" title="修饰符使用范围?"></a>修饰符使用范围?</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">四种修饰符可以用在属性和方法</span><br><span class="line">类和接口只能用public 和 默认</span><br></pre></td></tr></tbody></table></figure>
@@ -587,10 +587,10 @@
 
 <h3 id="类相关"><a href="#类相关" class="headerlink" title="类相关"></a>类相关</h3><h5 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">super关键字是指调用父类的当中的一些特征，super()方法必然会执行，通常来构造方法的第一行,所以在初始化子类的实例对象的时候先调用父类的初始化特征，注意： new 照样还是子类的对象，super只是给子类扩充属性</span><br><span class="line">super关键字通常能够省略，有些情况不能省略：1.需要调用父类的属性,但是子类和父类有相同的属性名和方法名，如果子类想要调用父类的属性或者方法那么必须使用super来访问</span><br><span class="line">super可以看作是对new 对象的属性的一个扩充，这也是为什么每个对象都有一个wait()和notify()方法</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230622102057654.png" alt="image-20230622102057654"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142320149-93515285.png" alt="image-20230622102057654"></p>
 <h5 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">public class StringTest02 {</span><br><span class="line">    public static void main(String[] args) {</span><br><span class="line">        String s1 = "hello";</span><br><span class="line">        // "hello"是存储在方法区的字符串常量池当中</span><br><span class="line">        // 所以这个"hello"不会新建。（因为这个对象已经存在了！）</span><br><span class="line">        String s2 = "hello";</span><br><span class="line">        </span><br><span class="line">        // == 双等号比较的是变量中保存的内存地址</span><br><span class="line">        System.out.println(s1 == s2); // true</span><br><span class="line"></span><br><span class="line">        String x = new String("xyz");</span><br><span class="line">        String y = new String("xyz");</span><br><span class="line">        </span><br><span class="line">        // == 双等号比较的是变量中保存的内存地址</span><br><span class="line">        System.out.println(x == y); //false</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230622104128081.png" alt="image-20230622104128081"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142323408-865373850.png" alt="image-20230622104128081"></p>
 <h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>Java当中的数组有一维、二维、三维(三维几乎用不到)，数组的优点就是检索的过程会非常快，就比如说让你查100个大小数组和查10000个大小数组，你觉得哪个更快? 其实是一样快的，数组的存储位置的元素都是连续存储的，并且每个元素都有下标，而且每个元素的存储大小都是一样的，这样就知道了偏移量，所以只需要算一遍就能计算出最终结果。二维数组就是每个元素都是一个一维数组。</p>
 <h5 id="数组需要注意的点"><a href="#数组需要注意的点" class="headerlink" title="数组需要注意的点:"></a>数组需要注意的点:</h5><ol>
 <li>数组要求元素的类型一样</li>
@@ -648,20 +648,20 @@
 
 <h3 id="同步异步阻塞非阻塞"><a href="#同步异步阻塞非阻塞" class="headerlink" title="同步异步阻塞非阻塞"></a>同步异步阻塞非阻塞</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">客户 -&gt; 服务员 -&gt; 后厨</span><br><span class="line">首先声明: 我们把服务员看作是请求线程，后厨看作是处理线程</span><br><span class="line">1. 同步加阻塞: 客户把点的菜给服务员，服务员把菜单给后厨，同时客户在店里面等着，服务员也是一样,且不能服务于其他客户</span><br><span class="line">2. 同步加非阻塞: 客户把点的菜给服务员，服务员把菜单给后厨，给完之后服务员再去接待其他客户，但是得过一会就得再去问问后厨做好了没有，但是客户还是在店里面等着</span><br><span class="line">3. 异步就是非阻塞的，不存在说什么异步阻塞的，当服务员把菜单给后厨的时候，后厨的台面上面会有一个要做的菜单列表，就相当于一个消息队列一样，你完全没有必要等待后厨，服务员也不用去问后厨做好了没有，做好了后厨会告诉服务员的。</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230706154730273.png" alt="image-20230706154730273"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142335452-155418604.png" alt="image-20230706154730273"></p>
 <h3 id="CAS"><a href="#CAS" class="headerlink" title="CAS"></a>CAS</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">CompareAndSwap(offset,变量值，期望值，要改变的成的值)</span><br><span class="line">这个就是自旋锁，具体实现就是自旋锁while(CAS),AtomicInteger(i++的时候，JVM有用到)</span><br></pre></td></tr></tbody></table></figure>
 
 <h5 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">这个不需要加锁，也就减少了消耗，也避免了死锁问题，提高了性能</span><br></pre></td></tr></tbody></table></figure>
 
 <h5 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">一直自旋： 当多个线程访问相同的资源，那么就会出现一直自旋的情况</span><br><span class="line">ABA问题: 这个问题其实就是其他线程改了当前变量，从A改成B又改成A，这样其实你去看的时候，感觉没有变化其实是变化的，我们通过加时间轴的方式解决</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="对象头"><a href="#对象头" class="headerlink" title="对象头"></a>对象头</h3><p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230706175315485.png" alt="image-20230706175315485"></p>
+<h3 id="对象头"><a href="#对象头" class="headerlink" title="对象头"></a>对象头</h3><p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142336609-2019183852.png" alt="image-20230706175315485"></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">这个classpoint指向的是类加载的时候的元数据(包括类的一些方法和属性之类的)</span><br><span class="line">sychronized之前一直都是重量级锁，Java6之后，通过锁升级的方式变成重量级锁</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="锁升级"><a href="#锁升级" class="headerlink" title="锁升级"></a>锁升级</h3><p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230706180137377.png" alt="image-20230706180137377"></p>
+<h3 id="锁升级"><a href="#锁升级" class="headerlink" title="锁升级"></a>锁升级</h3><p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142339901-1579244220.png" alt="image-20230706180137377"></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">从无锁到锁偏向，偏向锁其实就是只给同一个线程去访问，如果有其他线程访问，就升级为轻量级锁，如果超过20次访问，那么就重新变成偏向锁，轻量级锁它也是通过CAS的方式来实现锁重入，也就是同一个线程多次访问同一个对象，对象的state上面就加1，如果遇到了其他的线程访问该对象，那么就会出现锁膨胀，升级为重量级锁，如果线程访问不到重量级锁，那么就通过自旋10次(自旋锁)的方式看看能不能获取到，如果获取不到那么线程就进入阻塞状态。当然也有自适应自旋这个较为智能。</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="Moniteor对象"><a href="#Moniteor对象" class="headerlink" title="Moniteor对象"></a>Moniteor对象</h3><p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230706180436872.png" alt="image-20230706180436872"></p>
+<h3 id="Moniteor对象"><a href="#Moniteor对象" class="headerlink" title="Moniteor对象"></a>Moniteor对象</h3><p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142340894-1118642182.png" alt="image-20230706180436872"></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">这个就是重量级锁，sychronized的MarkWord对应着monitor对象，monitor对象有三个属性，waitset,owner,EntryList,waitset就是实现notify和wait的，体现了同步，然后EntryList就是获取该对象的一些阻塞线程队列</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="对象的强软引用"><a href="#对象的强软引用" class="headerlink" title="对象的强软引用"></a>对象的强软引用</h3><h5 id="强引用"><a href="#强引用" class="headerlink" title="强引用"></a>强引用</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">强引用是对象的引用如果没更换引用对象，那么引用的对象就不能被GC给清楚掉，这样可能会导致内存泄漏</span><br></pre></td></tr></tbody></table></figure>
@@ -711,7 +711,7 @@
 
 <h3 id="加密方式有哪些"><a href="#加密方式有哪些" class="headerlink" title="加密方式有哪些?"></a>加密方式有哪些?</h3><h5 id="维吉尼亚加密"><a href="#维吉尼亚加密" class="headerlink" title="维吉尼亚加密"></a>维吉尼亚加密</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">这会有一张矩形表，一个密钥，密钥的长度必须和明文一样长，如果不一样长的话，密钥就得自我复制，注意这种加密只对字母有效无论大小字母</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230522095623282.png" alt="image-20230522095623282"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142346172-991279162.png" alt="image-20230522095623282"></p>
 <h6 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h6><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">明文：I've got it.</span><br><span class="line"></span><br><span class="line">密钥：ok</span><br><span class="line"></span><br><span class="line">密文：W'fs qcd wd.</span><br></pre></td></tr></tbody></table></figure>
 
 <h5 id="凯撒密码"><a href="#凯撒密码" class="headerlink" title="凯撒密码"></a>凯撒密码</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">这没什么好讲的，主打的就是一个偏移量，ABCDEFGHIJKLMNOPQRSTUVWXYZ，DEFGHIJKLMNOPQRSTUVWXYZABC，偏移量为3</span><br></pre></td></tr></tbody></table></figure>
@@ -720,7 +720,7 @@
 
 <h5 id="摩斯密码"><a href="#摩斯密码" class="headerlink" title="摩斯密码"></a>摩斯密码</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">这种密码其实就是一一对应的映射表</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230522100242906.png" alt="image-20230522100242906"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142353622-1923671155.png" alt="image-20230522100242906"></p>
 <h3 id="逆向"><a href="#逆向" class="headerlink" title="逆向"></a>逆向</h3><h5 id="猎聘"><a href="#猎聘" class="headerlink" title="猎聘"></a><a href="https://www.liepin.com/">猎聘</a></h5><h5 id="思路-44"><a href="#思路-44" class="headerlink" title="思路:"></a>思路:</h5><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">首先我遇到的问题就是用JS发条去调试代码的时候发现报错， o = new Uint8Array(16);就是这个代码，因为Js发条工具没有这个创建数组的环境所以得通过在pycharm创建并打开js文件，使用本地的Node.js环境，还有一个问题就是这个随机加密函数getRandomValues，其实这种Native method，我是没有在浏览器开发者工具有看到，但是做这种的告诉我得从外面去找这种东西。还有就是可以把代码边的简洁，有些地方是明显不需要的就直接扔掉，哈哈哈，总结出来的新方法，比如说if(c[n]) new Error 知道里面肯定为false就不要了</span><br></pre></td></tr></tbody></table></figure>
 
 <p>代码:</p>
@@ -743,7 +743,7 @@
 
 <h3 id="秋招投递"><a href="#秋招投递" class="headerlink" title="秋招投递"></a>秋招投递</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">理想汽车</span><br><span class="line">腾讯校招</span><br><span class="line">特斯拉</span><br><span class="line">快手   --简历挂</span><br><span class="line">美团   --简历过 目前笔试阶段</span><br><span class="line">掌趣</span><br><span class="line">多益网络 - 不知道什么挂</span><br><span class="line">米哈游</span><br></pre></td></tr></tbody></table></figure>
 
-<h1 id="Base"><a href="#Base" class="headerlink" title="Base"></a>Base</h1><h3 id="BeiJing"><a href="#BeiJing" class="headerlink" title="BeiJing"></a>BeiJing</h3><p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230807115445674.png" alt="image-20230807115445674"><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230807115504150.png" alt="image-20230807115504150"><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230807115516889.png" alt="image-20230807115516889"></p>
+<h1 id="Base"><a href="#Base" class="headerlink" title="Base"></a>Base</h1><h3 id="BeiJing"><a href="#BeiJing" class="headerlink" title="BeiJing"></a>BeiJing</h3><p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142410742-436474084.png" alt="image-20230807115445674"><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142433552-1974644815.png" alt="image-20230807115504150"><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142421013-901836625.png" alt="image-20230807115516889"></p>
 <h1 id="每天记录"><a href="#每天记录" class="headerlink" title="每天记录"></a>每天记录</h1><h3 id="2023-7-04"><a href="#2023-7-04" class="headerlink" title="2023-7-04"></a>2023-7-04</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">这天主要是早上刷了一上午的算法，下午看了Java线程(快乐的野指针)，然后看了SpringCloud的东西(Eurake,Feign,熔断与降级,zuul,Config，Bus全局消息),看了王汉远讲的SpringCloud视频内容。SpringCloud服务之间的调用失败了，看的庆哥的，说实话有点low,服务注册我确实是弄好了，就是不能调用</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="2023-7-05"><a href="#2023-7-05" class="headerlink" title="2023-7-05"></a>2023-7-05</h3><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">今天上午主要是把Java线程全部给看完了，下午主要是去了解这个RabbitMQ和RocketMQ以及kafka等消息中间件，最后学了一点oo的如何学习一门新的技术的理论。最后刷了一下四数之和这个哈希表的题目。</span><br></pre></td></tr></tbody></table></figure>
@@ -810,7 +810,7 @@
 
 
 
-<p><img src="C:\Users\13772\AppData\Roaming\Typora\typora-user-images\image-20230721115820750.png" alt="image-20230721115820750"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202312/3353853-20231216142454713-649333855.png" alt="image-20230721115820750"></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">SELECT sqlText,riskLevel,storageTime,policyId,clientIp,alarmId,tenantId,databaseId,sqlPredicate,responseCode FROM dbaudit.audit_log where auditId in (select auditId from audit_log where  1=1 AND toDateTime(storageTime) &gt;= '2023-07-21 00:00:00' AND toDateTime(storageTime) &lt;= '2023-07-21 23:59:59' AND 1=1 AND ((databaseId IN (50001,50000) ) AND (policyId IN (107,207) ) AND (tenantId IN (2) )) order by storageTime desc limit ?,?) order by storageTime desc</span><br></pre></td></tr></tbody></table></figure>
 
 
