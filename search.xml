@@ -11140,7 +11140,7 @@
   <entry>
     <title>并发编程之美</title>
     <url>/2023/12/16/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><h2 id="怎么获取共享变量的监视器锁？"><a href="#怎么获取共享变量的监视器锁？" class="headerlink" title="怎么获取共享变量的监视器锁？"></a>怎么获取共享变量的监视器锁？</h2><h3 id="方法一：通过sychronized（共享变量）"><a href="#方法一：通过sychronized（共享变量）" class="headerlink" title="方法一：通过sychronized（共享变量）"></a>方法一：通过sychronized（共享变量）</h3><p>怎么验证当前线程有没有获取到锁?</p>
+    <content><![CDATA[<html><head></head><body><h2 id="怎么获取共享变量的监视器锁？"><a href="#怎么获取共享变量的监视器锁？" class="headerlink" title="怎么获取共享变量的监视器锁？"></a>怎么获取共享变量的监视器锁？</h2><h3 id="方法一：通过sychronized（共享变量）"><a href="#方法一：通过sychronized（共享变量）" class="headerlink" title="方法一：通过sychronized（共享变量）"></a>方法一：通过sychronized（共享变量）</h3><p>怎么验证当前线程有没有获取到锁?</p>
 <p>可以通过调用wait()方法来验证，如果没有获取到那么会报IllegalMonitorStateException类型错误</p>
 <p>例子：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">public class getThreadExample {</span><br><span class="line">    public static volatile String a = "1";</span><br><span class="line">    public static void main(String[] args) throws InterruptedException {</span><br><span class="line">          a.wait();</span><br><span class="line">          } </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
