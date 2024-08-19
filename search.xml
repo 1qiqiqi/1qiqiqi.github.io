@@ -11522,4 +11522,171 @@
         <tag>设计模式</tag>
       </tags>
   </entry>
+  <entry>
+    <title>毕设</title>
+    <url>/2024/08/20/%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="第一行代码"><a href="#第一行代码" class="headerlink" title="第一行代码"></a>第一行代码</h1><h3 id="如何学习四大组件"><a href="#如何学习四大组件" class="headerlink" title="如何学习四大组件"></a>如何学习四大组件</h3><h5 id="理解四大组件"><a href="#理解四大组件" class="headerlink" title="理解四大组件"></a>理解四大组件</h5><ol>
+<li><strong>Activity</strong>: 了解Activity的生命周期，学习如何在不同的状态下处理用户交互。</li>
+<li><strong>Service</strong>: 学习Service的使用场景，了解如何在后台执行长时间运行的操作。</li>
+<li><strong>BroadcastReceiver</strong>: 理解如何接收和处理系统或应用程序发送的广播消息。</li>
+<li><strong>ContentProvider</strong>: 学习如何使用ContentProvider来共享应用的数据。</li>
+</ol>
+<h5 id="常见问题及解决方案"><a href="#常见问题及解决方案" class="headerlink" title="常见问题及解决方案"></a>常见问题及解决方案</h5><ol>
+<li><strong>理解生命周期</strong>: 初学者常常对Activity和Service的生命周期感到困惑。可以通过绘制生命周期图表来帮助记忆，并在代码中添加日志输出，观察状态变化。</li>
+<li><strong>数据传递问题</strong>: 在使用Intent传递数据时，可能会遇到数据丢失或类型不匹配的问题。确保在Intent中使用正确的键值对，并在接收端进行类型检查。</li>
+<li><strong>调试困难</strong>: 初学者在调试时可能不知从何入手。学会使用Android Studio的调试工具，设置断点，逐步跟踪代码执行，帮助定位问题。</li>
+<li><strong>权限管理</strong>: 使用BroadcastReceiver和ContentProvider时，可能会遇到权限问题。确保在AndroidManifest.xml中正确声明权限，并在运行时请求必要的权限。</li>
+</ol>
+<h3 id="如何管理四大组件的生命周期"><a href="#如何管理四大组件的生命周期" class="headerlink" title="如何管理四大组件的生命周期"></a>如何管理四大组件的生命周期</h3><h5 id="1-Activity"><a href="#1-Activity" class="headerlink" title="1. Activity"></a>1. Activity</h5><p><strong>生命周期方法</strong>:</p>
+<ul>
+<li><strong>onCreate()</strong>: 创建Activity时调用，通常在此方法中初始化UI组件和数据。</li>
+<li><strong>onStart()</strong>: Activity即将对用户可见时调用。</li>
+<li><strong>onResume()</strong>: Activity对用户可见并可以交互时调用。</li>
+<li><strong>onPause()</strong>: 当前Activity被其他Activity覆盖时调用，通常在此方法中保存数据或停止动画。</li>
+<li><strong>onStop()</strong>: Activity不再对用户可见时调用。</li>
+<li><strong>onDestroy()</strong>: Activity被销毁时调用，清理资源。</li>
+</ul>
+<p><strong>管理建议</strong>:</p>
+<ul>
+<li>在<code>onCreate()</code>中加载布局和初始化资源，避免在<code>onResume()</code>中执行耗时操作。</li>
+<li>在<code>onPause()</code>中保存用户数据，确保在Activity被覆盖时不会丢失数据。</li>
+<li>使用<code>onStop()</code>释放不再需要的资源，防止内存泄漏。</li>
+</ul>
+<h5 id="2-Service"><a href="#2-Service" class="headerlink" title="2. Service"></a>2. Service</h5><p><strong>生命周期方法</strong>:</p>
+<ul>
+<li><strong>onCreate()</strong>: 创建Service时调用，通常用于初始化。</li>
+<li><strong>onStartCommand()</strong>: Service被启动时调用，处理启动请求。</li>
+<li><strong>onBind()</strong>: 当其他组件绑定到Service时调用。</li>
+<li><strong>onUnbind()</strong>: 当所有客户端都解除绑定时调用。</li>
+<li><strong>onDestroy()</strong>: Service被销毁时调用，清理资源。</li>
+</ul>
+<p><strong>管理建议</strong>:</p>
+<ul>
+<li>在<code>onStartCommand()</code>中处理后台任务，确保Service在后台运行时不阻塞主线程。</li>
+<li>在<code>onDestroy()</code>中停止任何正在运行的任务，释放资源，避免内存泄漏。</li>
+</ul>
+<h5 id="3-BroadcastReceiver"><a href="#3-BroadcastReceiver" class="headerlink" title="3. BroadcastReceiver"></a>3. BroadcastReceiver</h5><p><strong>生命周期方法</strong>:</p>
+<ul>
+<li><strong>onReceive()</strong>: 当接收到广播时调用。</li>
+</ul>
+<p><strong>管理建议</strong>:</p>
+<ul>
+<li>BroadcastReceiver的生命周期较短，通常在<code>onReceive()</code>中执行轻量级任务。</li>
+<li>在<code>onReceive()</code>中避免执行耗时操作，建议使用Service或AsyncTask来处理复杂任务。</li>
+</ul>
+<h5 id="4-ContentProvider"><a href="#4-ContentProvider" class="headerlink" title="4. ContentProvider"></a>4. ContentProvider</h5><p><strong>生命周期方法</strong>:</p>
+<ul>
+<li><strong>onCreate()</strong>: 创建ContentProvider时调用，通常用于初始化数据库或其他资源。</li>
+</ul>
+<p><strong>管理建议</strong>:</p>
+<ul>
+<li>在<code>onCreate()</code>中初始化数据库连接，确保在访问数据时能够快速响应。</li>
+<li>确保在ContentProvider中处理数据的安全性和隐私，避免未授权访问。</li>
+</ul>
+<h1 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h1><h3 id="Activity的生命周期及其各个状态。"><a href="#Activity的生命周期及其各个状态。" class="headerlink" title="Activity的生命周期及其各个状态。"></a>Activity的生命周期及其各个状态。</h3><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> {</span><br><span class="line">    <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">    Log.d(<span class="string">"ActivityLifecycle"</span>, <span class="string">"onCreate called"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onStart</span><span class="params">()</span> {</span><br><span class="line">    <span class="built_in">super</span>.onStart();</span><br><span class="line">    Log.d(<span class="string">"ActivityLifecycle"</span>, <span class="string">"onStart called"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onResume</span><span class="params">()</span> {</span><br><span class="line">    <span class="built_in">super</span>.onResume();</span><br><span class="line">    Log.d(<span class="string">"ActivityLifecycle"</span>, <span class="string">"onResume called"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onPause</span><span class="params">()</span> {</span><br><span class="line">    <span class="built_in">super</span>.onPause();</span><br><span class="line">    Log.d(<span class="string">"ActivityLifecycle"</span>, <span class="string">"onPause called"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onStop</span><span class="params">()</span> {</span><br><span class="line">    <span class="built_in">super</span>.onStop();</span><br><span class="line">    Log.d(<span class="string">"ActivityLifecycle"</span>, <span class="string">"onStop called"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onDestroy</span><span class="params">()</span> {</span><br><span class="line">    <span class="built_in">super</span>.onDestroy();</span><br><span class="line">    Log.d(<span class="string">"ActivityLifecycle"</span>, <span class="string">"onDestroy called"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202408/3353853-20240820004638554-1401270233.png" alt="image-20240820004609938"></p>
+<h3 id="Intent的使用"><a href="#Intent的使用" class="headerlink" title="Intent的使用"></a>Intent的使用</h3><p>学会使用Intent在Activity之间传递数据。</p>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 从当前Activity启动另一个Activity</span></span><br><span class="line"><span class="type">Intent</span> <span class="variable">intent</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Intent</span>(<span class="built_in">this</span>, SecondActivity.class);</span><br><span class="line">intent.putExtra(<span class="string">"key"</span>, <span class="string">"value"</span>); <span class="comment">// 传递数据</span></span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
+
+
+
+<h3 id="数据保存与恢复"><a href="#数据保存与恢复" class="headerlink" title="数据保存与恢复"></a>数据保存与恢复</h3><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onSaveInstanceState</span><span class="params">(Bundle outState)</span> {</span><br><span class="line">    <span class="built_in">super</span>.onSaveInstanceState(outState);</span><br><span class="line">    outState.putString(<span class="string">"savedData"</span>, <span class="string">"Some data to save"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> {</span><br><span class="line">    <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    <span class="keyword">if</span> (savedInstanceState != <span class="literal">null</span>) {</span><br><span class="line">        <span class="type">String</span> <span class="variable">savedData</span> <span class="operator">=</span> savedInstanceState.getString(<span class="string">"savedData"</span>);</span><br><span class="line">        Log.d(<span class="string">"ActivityLifecycle"</span>, <span class="string">"Restored data: "</span> + savedData);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Activity启动模式"><a href="#Activity启动模式" class="headerlink" title="Activity启动模式"></a>Activity启动模式</h3><h5 id="1-Standard模式（默认）"><a href="#1-Standard模式（默认）" class="headerlink" title="1. Standard模式（默认）"></a>1. Standard模式（默认）</h5><ul>
+<li><p>每次启动Activity时,都会创建一个新的实例,并将其压入启动它的Activity所在的任务栈中。</p>
+</li>
+<li><p>一个任务栈中可以有多个相同的Activity实例。</p>
+</li>
+<li><p>不同的任务栈中也可以有相同的Activity实例。</p>
+</li>
+<li><p><strong>应用场景</strong>: 大多数Activity都使用这种模式,每次启动都会创建新实例,适用于没有特殊需求的普通Activity。</p>
+</li>
+<li><p><strong>示例</strong>: 电子邮件应用中的收件箱和邮件详情页面。</p>
+</li>
+</ul>
+<h5 id="2-SingleTop模式"><a href="#2-SingleTop模式" class="headerlink" title="2. SingleTop模式"></a>2. SingleTop模式</h5><ul>
+<li><p>如果新Activity已经位于任务栈的栈顶,就不再创建新实例,而是复用栈顶的实例。</p>
+</li>
+<li><p>如果不在栈顶,则创建新实例并压入栈中。</p>
+</li>
+<li><p><strong>应用场景</strong>: 当Activity已经位于任务栈栈顶时,不需要重复创建,可以复用栈顶实例。适用于不需要在任务栈中存在多个实例的Activity。</p>
+</li>
+<li><p><strong>示例</strong>: 浏览器应用中的新标签页,如果已经存在就不需要重复创建。</p>
+</li>
+</ul>
+<h5 id="3-SingleTask模式"><a href="#3-SingleTask模式" class="headerlink" title="3. SingleTask模式"></a>3. SingleTask模式</h5><ul>
+<li><p>系统会先查看任务栈中是否已经存在该Activity的实例。</p>
+</li>
+<li><p>如果存在,就将该实例之上的所有Activity出栈,并调用该实例的onNewIntent()方法。</p>
+</li>
+<li><p>如果不存在,则创建新实例并压入栈中。</p>
+</li>
+<li><p><strong>应用场景</strong>: 应用中的主要入口Activity,每次启动都会将目标Activity之上的所有Activity出栈,确保任务栈中只有一个该Activity实例。适用于作为应用入口的Activity。</p>
+</li>
+<li><p><strong>示例</strong>: 地图应用的主界面Activity,每次打开地图都会回到这个Activity。</p>
+</li>
+</ul>
+<h5 id="4-SingleInstance模式"><a href="#4-SingleInstance模式" class="headerlink" title="4. SingleInstance模式"></a>4. SingleInstance模式</h5><ul>
+<li><p>每次启动该Activity时,系统都会为其创建一个新的任务栈。</p>
+</li>
+<li><p>以后任何应用程序启动该Activity,都会在这个独立的任务栈中运行。</p>
+</li>
+<li><p>这个任务栈只有这一个Activity实例。</p>
+</li>
+<li><p><strong>应用场景</strong>: 需要独立于应用单独存在的Activity,会启动一个新的任务栈。适用于需要独立运行的Activity。</p>
+</li>
+<li><p><strong>示例</strong>: 电话应用的拨号盘Activity,需要独立于应用单独存在。</p>
+</li>
+</ul>
+<h5 id="任务栈"><a href="#任务栈" class="headerlink" title="任务栈"></a>任务栈</h5><p>任务栈(Task)是一组存放Activity实例的容器,它采用后进先出的栈结构。</p>
+<ul>
+<li>当启动一个应用时,系统会为其创建一个默认的任务栈。</li>
+<li>每次启动一个新的Activity,都会将其压入当前任务栈的栈顶。</li>
+<li>按返回键时,会将栈顶的Activity出栈,显示下一个Activity。</li>
+<li>当任务栈中所有Activity都出栈后,任务栈也就被销毁了。</li>
+</ul>
+<h5 id="Intent-Flag"><a href="#Intent-Flag" class="headerlink" title="Intent Flag"></a>Intent Flag</h5><p>Intent中还有一些Flag可以用来控制Activity的启动行为:</p>
+<ul>
+<li>FLAG_ACTIVITY_NEW_TASK: 相当于singleTask模式,会创建新任务栈。</li>
+<li>FLAG_ACTIVITY_CLEAR_TOP: 会将目标Activity之上的Activity全部出栈。</li>
+<li>FLAG_ACTIVITY_SINGLE_TOP: 相当于singleTop模式,如果目标Activity在栈顶,就不创建新实例。</li>
+</ul>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:name</span>=<span class="string">".SecondActivity"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:launchMode</span>=<span class="string">"singleTop"</span> /&gt;</span> <span class="comment">&lt;!-- 在Manifest中设置启动模式 --&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h3><p>在Activity中请求和管理权限。</p>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (ContextCompat.checkSelfPermission(<span class="built_in">this</span>, Manifest.permission.READ_EXTERNAL_STORAGE)</span><br><span class="line">        != PackageManager.PERMISSION_GRANTED) {</span><br><span class="line">    ActivityCompat.requestPermissions(<span class="built_in">this</span>,</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">String</span>[]{Manifest.permission.READ_EXTERNAL_STORAGE}, <span class="number">1</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
+
+
+
+<h3 id="学习过程中的问题及解决"><a href="#学习过程中的问题及解决" class="headerlink" title="学习过程中的问题及解决"></a>学习过程中的问题及解决</h3><h5 id="理解不透彻-代码无法运行"><a href="#理解不透彻-代码无法运行" class="headerlink" title="理解不透彻,代码无法运行"></a>理解不透彻,代码无法运行</h5><ol>
+<li><p>仔细对比书中代码,检查是否有遗漏或错误</p>
+</li>
+<li><p>查看报错信息,根据提示定位问题所在，可以Debug断点看看数据流转</p>
+</li>
+<li><p>网上搜索相关问题,看看有没有类似的解决方案</p>
+</li>
+<li><p>利用AI给出解决问题的方法</p>
+</li>
+</ol>
+<h5 id="学习进度缓慢-动力不足"><a href="#学习进度缓慢-动力不足" class="headerlink" title="学习进度缓慢,动力不足"></a>学习进度缓慢,动力不足</h5><p>制定一个合理的学习计划, 每天坚持一点点</p>
+<p>给自己设置一些小目标,完成后给自己一些奖励</p>
+<p>和同事或朋友交流,互相鼓励</p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202408/3353853-20240819225714374-1906801997.png" alt="image-20240819225712542"></p>
+</body></html>]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
 </search>
