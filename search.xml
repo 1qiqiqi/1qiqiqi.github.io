@@ -10392,10 +10392,6 @@
 
 
 
-
-
-
-
 <h3 id="数据保存与恢复"><a href="#数据保存与恢复" class="headerlink" title="数据保存与恢复"></a>数据保存与恢复</h3><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onSaveInstanceState</span><span class="params">(Bundle outState)</span> {</span><br><span class="line">    <span class="built_in">super</span>.onSaveInstanceState(outState);</span><br><span class="line">    outState.putString(<span class="string">"savedData"</span>, <span class="string">"Some data to save"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> {</span><br><span class="line">    <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    <span class="keyword">if</span> (savedInstanceState != <span class="literal">null</span>) {</span><br><span class="line">        <span class="type">String</span> <span class="variable">savedData</span> <span class="operator">=</span> savedInstanceState.getString(<span class="string">"savedData"</span>);</span><br><span class="line">        Log.d(<span class="string">"ActivityLifecycle"</span>, <span class="string">"Restored data: "</span> + savedData);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="Activity启动模式"><a href="#Activity启动模式" class="headerlink" title="Activity启动模式"></a>Activity启动模式</h3><h5 id="1-Standard模式（默认）"><a href="#1-Standard模式（默认）" class="headerlink" title="1. Standard模式（默认）"></a>1. Standard模式（默认）</h5><ul>
@@ -10464,11 +10460,92 @@
 
 
 
+<h1 id="如何分析ANR问题"><a href="#如何分析ANR问题" class="headerlink" title="如何分析ANR问题"></a>如何分析ANR问题</h1><p>分析 ANR（应用无响应）相关的堆栈轨迹是解决应用性能问题的重要步骤。以下是分析 ANR 堆栈轨迹的具体方法和步骤：</p>
+<h3 id="1-理解-ANR-的基本概念"><a href="#1-理解-ANR-的基本概念" class="headerlink" title="1. 理解 ANR 的基本概念"></a>1. 理解 ANR 的基本概念</h3><p>ANR 发生在应用的主线程被阻塞超过一定时间（通常是 5 秒），系统会弹出对话框提示用户。ANR 的类型包括输入事件超时、广播超时、服务超时等。</p>
+<h3 id="2-收集-ANR-日志"><a href="#2-收集-ANR-日志" class="headerlink" title="2. 收集 ANR 日志"></a>2. 收集 ANR 日志</h3><p>在 ANR 发生时，系统会生成相关的日志信息，包括 <code>traces.txt</code> 文件和 <code>logcat</code> 日志。使用 <code>adb bugreport</code> 命令可以获取完整的错误报告，其中包含 ANR 的详细信息。</p>
+<h3 id="3-分析-traces-txt"><a href="#3-分析-traces-txt" class="headerlink" title="3. 分析 traces.txt"></a>3. 分析 <code>traces.txt</code></h3><h5 id="获取-traces-txt"><a href="#获取-traces-txt" class="headerlink" title="获取 traces.txt"></a>获取 traces.txt</h5><p>ANR 发生时，系统会在 <code>/data/anr/</code> 目录下生成 <code>traces.txt</code> 文件。可以通过以下命令获取：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">adb pull /data/anr/traces.tx</span><br></pre></td></tr></tbody></table></figure>
 
 
 
+<p><code>traces.txt</code> 文件记录了发生 ANR 时各线程的状态。分析步骤如下：</p>
+<ul>
+<li><strong>查找时间戳和 PID</strong>：确保查看的堆栈轨迹与 ANR 发生时的时间戳和进程 ID 匹配。</li>
+<li><strong>检查主线程堆栈</strong>：主线程的堆栈可以告诉你在 ANR 发生时它正在执行什么操作。注意，主线程的堆栈可能并不总是导致 ANR 的真正原因，其他线程的状态也可能影响主线程的执行。</li>
+<li><strong>识别死锁</strong>：如果多个线程相互等待，可能导致死锁，从而引发 ANR。检查堆栈中是否有线程 A 等待线程 B 的资源，同时线程 B 也在等待线程 A 的资源。</li>
+</ul>
+<h3 id="4-使用关键字过滤"><a href="#4-使用关键字过滤" class="headerlink" title="4. 使用关键字过滤"></a>4. 使用关键字过滤</h3><p>在 <code>logcat</code> 日志中，搜索关键字如 <code>ANR in</code>、<code>Input event dispatching timed out</code> 等，以快速定位 ANR 的类型和原因。</p>
+<p>在分析 ANR 日志时，以下关键字尤为重要：</p>
+<ul>
+<li><strong>ANR in</strong>：指示哪个应用发生了 ANR。</li>
+<li><strong>Input dispatching timed out</strong>：表明输入事件未能及时处理。</li>
+<li><strong>Broadcast</strong>：与广播相关的 ANR。</li>
+<li><strong>Service</strong>：与服务相关的 ANR。</li>
+<li>**<code>Timeout executing service</code>**：表示某个操作超时导致的 ANR。</li>
+</ul>
+<p>通过搜索这些关键字，可以快速定位 ANR 发生的原因和上下文</p>
+<h3 id="5-检查-CPU-和内存使用情况"><a href="#5-检查-CPU-和内存使用情况" class="headerlink" title="5. 检查 CPU 和内存使用情况"></a>5. 检查 CPU 和内存使用情况</h3><p>使用以下命令获取系统和应用的 CPU 使用情况：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">adb shell top</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="学习过程中的问题及解决"><a href="#学习过程中的问题及解决" class="headerlink" title="学习过程中的问题及解决"></a>学习过程中的问题及解决</h3><h5 id="理解不透彻-代码无法运行"><a href="#理解不透彻-代码无法运行" class="headerlink" title="理解不透彻,代码无法运行"></a>理解不透彻,代码无法运行</h5><ol>
+<p>通过观察 CPU 使用情况，可以判断 ANR 的原因是否与 CPU 资源紧张有关。关注以下几点：</p>
+<ul>
+<li><strong>CPU 使用率</strong>：查看应用的 CPU 使用率是否异常高。</li>
+<li><strong>IO Wait</strong>：如果 IO 等待时间过长，可能导致 ANR。</li>
+<li><strong>进程 CPU 分布</strong>：分析各个进程的 CPU 占比，找出占用资源过高的进程。</li>
+</ul>
+<p>通过这些信息，可以进一步分析是应用本身的问题，还是由于系统资源不足导致的 ANR</p>
+<h3 id="6-还原场景"><a href="#6-还原场景" class="headerlink" title="6. 还原场景"></a>6. 还原场景</h3><p>通过分析日志和堆栈轨迹，尽量还原 ANR 发生时的场景，考虑用户操作、网络请求、数据库访问等因素，帮助找到问题的根源。</p>
+<h3 id="7-代码审查"><a href="#7-代码审查" class="headerlink" title="7. 代码审查"></a>7. 代码审查</h3><p>根据堆栈信息，查看相关代码，找出可能导致 ANR 的逻辑问题，如长时间的 IO 操作、未释放的锁等。</p>
+<h3 id="8-使用工具"><a href="#8-使用工具" class="headerlink" title="8. 使用工具"></a>8. 使用工具</h3><p>可以使用一些分析工具（如 Android Profiler、StrictMode）来监控应用的性能，帮助识别潜在的 ANR 问题。</p>
+<h3 id="9-使用-Logcat-分析-ANR-问题"><a href="#9-使用-Logcat-分析-ANR-问题" class="headerlink" title="9.使用 Logcat 分析 ANR 问题"></a>9.使用 Logcat 分析 ANR 问题</h3><h5 id="获取-Logcat-日志"><a href="#获取-Logcat-日志" class="headerlink" title="获取 Logcat 日志"></a>获取 Logcat 日志</h5><p>使用以下命令获取 Logcat 日志：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">adb logcat -b all -v time &gt; anr_test.log</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><code>-b all</code>：抓取所有类型的日志。</li>
+<li><code>-v time</code>：在日志中加入每条日志的时间戳。</li>
+</ul>
+<p>在应用发生 ANR 后，使用 <code>Ctrl+C</code> 停止日志抓取。这条命令会抓取所有类型的日志，并将其输出到 <code>anr_test.log</code> 文件中。</p>
+<h5 id="过滤-ANR-相关日志"><a href="#过滤-ANR-相关日志" class="headerlink" title="过滤 ANR 相关日志"></a>过滤 ANR 相关日志</h5><h6 id="关键字过滤"><a href="#关键字过滤" class="headerlink" title="关键字过滤"></a>关键字过滤</h6><p>在 <code>anr_test.log</code> 文件中，使用文本编辑器或命令行工具（如 <code>grep</code>）搜索以下关键字：</p>
+<ul>
+<li><p><strong>am_anr</strong>：用于查找 ANR 事件的日志条目。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">am_anr</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p><strong>ANR in</strong>：指示具体哪个应用发生了 ANR，后面通常会跟着应用包名和原因。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">ANR in</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p><strong>Input dispatching timed out</strong>：表示输入事件处理超时。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Input dispatching timed out</span><br></pre></td></tr></tbody></table></figure>
+
+
+</li>
+<li><p><strong>Broadcast</strong>：与广播相关的 ANR。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Broadcast</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p><strong>Service</strong>：与服务相关的 ANR。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Service</span><br></pre></td></tr></tbody></table></figure></li>
+</ul>
+<p>通过这些关键字，可以快速定位 ANR 发生的具体时间、包名和原因。</p>
+<h5 id="分析-ANR-日志"><a href="#分析-ANR-日志" class="headerlink" title="分析 ANR 日志"></a>分析 ANR 日志</h5><h5 id="解析-am-anr-日志"><a href="#解析-am-anr-日志" class="headerlink" title="解析 am_anr 日志"></a>解析 am_anr 日志</h5><p>找到的 <code>am_anr</code> 日志条目通常包含以下信息：</p>
+<ul>
+<li><strong>时间戳</strong>：ANR 发生的具体时间。</li>
+<li><strong>进程 ID</strong>：发生 ANR 的进程 ID。</li>
+<li><strong>包名</strong>：发生 ANR 的应用包名。</li>
+<li><strong>原因</strong>：ANR 的具体原因描述。</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">11-02 11:32:16.915 I/am_anr ( 1753): [0,23694,com.example.app,820559686,Input dispatching timed out...]</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="解析-ANR-原因"><a href="#解析-ANR-原因" class="headerlink" title="解析 ANR 原因"></a>解析 ANR 原因</h5><p>根据 ANR 原因的描述，可以进一步分析是由于主线程被阻塞、长时间的 IO 操作、死锁等引起的。</p>
+<h5 id="使用工具辅助分析"><a href="#使用工具辅助分析" class="headerlink" title="使用工具辅助分析"></a>使用工具辅助分析</h5><p>可以使用文本处理工具（如 <code>grep</code>、<code>awk</code> 等）来快速筛选和分析日志。例如，使用 <code>grep</code> 命令：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">bash</span><br><span class="line">grep "ANR in" anr_test.log</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这将返回所有包含 “ANR in” 的日志条目，便于快速定位问题。通过以上步骤，可以有效地在 Logcat 中过滤和分析 ANR 相关日志，从而帮助开发者快速定位和解决应用无响应的问题。</p>
+<h1 id="学习过程中的问题及解决"><a href="#学习过程中的问题及解决" class="headerlink" title="学习过程中的问题及解决"></a>学习过程中的问题及解决</h1><h3 id="理解不透彻-代码无法运行"><a href="#理解不透彻-代码无法运行" class="headerlink" title="理解不透彻,代码无法运行"></a>理解不透彻,代码无法运行</h3><ol>
 <li><p>仔细对比书中代码,检查是否有遗漏或错误</p>
 </li>
 <li><p>查看报错信息,根据提示定位问题所在，可以Debug断点看看数据流转</p>
@@ -10478,7 +10555,7 @@
 <li><p>利用AI给出解决问题的方法</p>
 </li>
 </ol>
-<h5 id="学习进度缓慢-动力不足"><a href="#学习进度缓慢-动力不足" class="headerlink" title="学习进度缓慢,动力不足"></a>学习进度缓慢,动力不足</h5><p>制定一个合理的学习计划, 每天坚持一点点</p>
+<h3 id="学习进度缓慢-动力不足"><a href="#学习进度缓慢-动力不足" class="headerlink" title="学习进度缓慢,动力不足"></a>学习进度缓慢,动力不足</h3><p>制定一个合理的学习计划, 每天坚持一点点</p>
 <p>给自己设置一些小目标,完成后给自己一些奖励</p>
 <p>和同事或朋友交流,互相鼓励</p>
 <p><img src="https://img2023.cnblogs.com/blog/3353853/202408/3353853-20240819225714374-1906801997.png" alt="image-20240819225712542"></p>
