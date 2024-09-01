@@ -10372,6 +10372,51 @@
 
 
 
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>显式 Intent</th>
+<th>隐式 Intent</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>定义</td>
+<td>明确指定目标组件的 Intent</td>
+<td>不明确指定目标组件的 Intent</td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>一般用于应用内部组件之间的通信</td>
+<td>用于跨应用程序的组件交互</td>
+</tr>
+<tr>
+<td>组件指定方式</td>
+<td>通过组件名或类名直接指定</td>
+<td>通过 Action、Data 和 Category 来匹配</td>
+</tr>
+<tr>
+<td>示例代码</td>
+<td><code>Intent intent = new Intent(this, SecondActivity.class);</code></td>
+<td><code>Intent intent = new Intent(Intent.ACTION_VIEW);</code></td>
+</tr>
+<tr>
+<td>适用性</td>
+<td>适用于已知目标组件的情况</td>
+<td>适用于不确定目标组件的情况</td>
+</tr>
+<tr>
+<td>过滤器</td>
+<td>不需要 Intent 过滤器</td>
+<td>需要 Intent 过滤器来匹配组件</td>
+</tr>
+</tbody></table>
+<p>显式 Intent 直接指定了要启动的组件，适合于应用内部的操作，而隐式 Intent 则依赖于系统根据 Intent 的内容查找合适的组件，适合于跨应用的功能调用</p>
+<p>例子: 比如说你的应用程序中需要展示一个网页，这时你没有必要自己去实现一个浏览器（事实上也不太可能），而是只需要调用系统的浏览器来打开这个网页就行了。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">button1.setOnClickListener(new View.OnClickListener() {</span><br><span class="line">           @Override</span><br><span class="line">           public void onClick(View view) {</span><br><span class="line">               //Toast.makeText(FirstActivity.this,"You clicked Button 1",Toast.LENGTH_SHORT).show();</span><br><span class="line">               //Intent intent=new Intent(FirstActivity.this,SecondActivity.class);</span><br><span class="line">               //Intent intent=new Intent("com.zhouzhou.activitytest.ACTION_START");</span><br><span class="line">               //intent.addCategory("com.zhouzhou.activitytest.MY_CATEGORY");</span><br><span class="line">               Intent intent=new Intent(Intent.ACTION_VIEW);</span><br><span class="line">               intent.setData(Uri.parse("http://www.baidu.com"));</span><br><span class="line">               startActivity(intent);</span><br><span class="line">           }</span><br><span class="line">       });</span><br></pre></td></tr></tbody></table></figure>
+
+
+
 <h3 id="数据保存与恢复"><a href="#数据保存与恢复" class="headerlink" title="数据保存与恢复"></a>数据保存与恢复</h3><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onSaveInstanceState</span><span class="params">(Bundle outState)</span> {</span><br><span class="line">    <span class="built_in">super</span>.onSaveInstanceState(outState);</span><br><span class="line">    outState.putString(<span class="string">"savedData"</span>, <span class="string">"Some data to save"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> {</span><br><span class="line">    <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    <span class="keyword">if</span> (savedInstanceState != <span class="literal">null</span>) {</span><br><span class="line">        <span class="type">String</span> <span class="variable">savedData</span> <span class="operator">=</span> savedInstanceState.getString(<span class="string">"savedData"</span>);</span><br><span class="line">        Log.d(<span class="string">"ActivityLifecycle"</span>, <span class="string">"Restored data: "</span> + savedData);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="Activity启动模式"><a href="#Activity启动模式" class="headerlink" title="Activity启动模式"></a>Activity启动模式</h3><h5 id="1-Standard模式（默认）"><a href="#1-Standard模式（默认）" class="headerlink" title="1. Standard模式（默认）"></a>1. Standard模式（默认）</h5><ul>
@@ -10470,6 +10515,62 @@
 <li><strong>如何保护Service不被外部访问？</strong>在Manifest中使用<code>android:permission</code>属性限制访问权限。</li>
 <li><strong>如何在Service中使用权限？</strong>在Service中检查和请求必要的权限，以确保安全性。</li>
 </ol>
+<h3 id="Service的使用场景有哪些"><a href="#Service的使用场景有哪些" class="headerlink" title="Service的使用场景有哪些?"></a>Service的使用场景有哪些?</h3><h5 id="后台音乐播放"><a href="#后台音乐播放" class="headerlink" title="后台音乐播放"></a>后台音乐播放</h5><p>Service可以用于音乐播放器应用，当用户切换到其他应用或锁屏时，音乐仍然可以继续播放。</p>
+<h5 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h5><p>在进行网络请求时，可以将请求逻辑放在Service中执行，以避免阻塞主线程，确保用户界面的流畅性。</p>
+<h5 id="后台定位服务"><a href="#后台定位服务" class="headerlink" title="后台定位服务"></a>后台定位服务</h5><p>应用需要持续获取用户位置信息时，可以使用Service来实现定位功能，即使应用在后台运行或被关闭。</p>
+<h5 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h5><p>Service可以用来在后台下载文件，即使用户退出应用或锁屏，下载任务仍然可以继续进行。</p>
+<h5 id="数据同步"><a href="#数据同步" class="headerlink" title="数据同步"></a>数据同步</h5><p>应用需要定期从服务器获取数据或上传数据时，可以通过Service实现数据的同步。</p>
+<h5 id="推送服务"><a href="#推送服务" class="headerlink" title="推送服务"></a>推送服务</h5><p>Service可以处理推送消息，接收并处理来自服务器的通知或消息。</p>
+<h5 id="后台数据更新"><a href="#后台数据更新" class="headerlink" title="后台数据更新"></a>后台数据更新</h5><p>应用如新闻、天气等需要在后台更新数据时，可以使用Service进行数据的定期更新。</p>
+<h5 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h5><p>Service可以用于执行定时任务，例如定期检查更新或执行某些后台操作。</p>
+<h5 id="长时间运行的计算任务"><a href="#长时间运行的计算任务" class="headerlink" title="长时间运行的计算任务"></a>长时间运行的计算任务</h5><p>在需要执行复杂计算或处理大量数据时，可以使用Service来进行这些耗时操作，而不会影响用户界面。</p>
+<h5 id="其他后台任务"><a href="#其他后台任务" class="headerlink" title="其他后台任务"></a>其他后台任务</h5><p>任何需要在后台执行的长时间任务，如数据处理、文件处理等，都可以通过Service来实现。</p>
+<p>使用Service时，开发者需要注意避免在主线程中执行耗时操作，以防止应用出现无响应（ANR）问题。可以通过使用子线程或其他异步处理方式来优化性能</p>
+<h3 id="Service的生命周期如何管理"><a href="#Service的生命周期如何管理" class="headerlink" title="Service的生命周期如何管理?"></a>Service的生命周期如何管理?</h3><h5 id="了解Service的生命周期方法"><a href="#了解Service的生命周期方法" class="headerlink" title="了解Service的生命周期方法"></a>了解Service的生命周期方法</h5><ul>
+<li><code>onCreate()</code>：Service被创建时调用，在这里进行初始化操作。</li>
+<li><code>onStartCommand()</code>：通过<code>startService()</code>启动Service时调用。</li>
+<li><code>onBind()</code>：通过<code>bindService()</code>绑定Service时调用。</li>
+<li><code>onUnbind()</code>：所有绑定都被取消时调用。</li>
+<li><code>onDestroy()</code>：Service被销毁时调用。</li>
+</ul>
+<h5 id="合理启动和停止Service"><a href="#合理启动和停止Service" class="headerlink" title="合理启动和停止Service"></a>合理启动和停止Service</h5><ul>
+<li>使用<code>startService()</code>启动长时间运行的任务。</li>
+<li>在不需要时及时停止Service，避免资源泄露。可以在<code>onStartCommand()</code>中返回<code>START_NOT_STICKY</code>或调用<code>stopSelf()</code>。</li>
+</ul>
+<h5 id="处理绑定Service的生命周期"><a href="#处理绑定Service的生命周期" class="headerlink" title="处理绑定Service的生命周期"></a>处理绑定Service的生命周期</h5><ul>
+<li>在<code>onBind()</code>返回一个<code>Binder</code>对象，允许客户端与Service交互。</li>
+<li>在<code>onUnbind()</code>中执行清理工作。</li>
+<li>当所有绑定都取消时，Service可能会被销毁。</li>
+</ul>
+<h5 id="避免在主线程执行耗时操作"><a href="#避免在主线程执行耗时操作" class="headerlink" title="避免在主线程执行耗时操作"></a>避免在主线程执行耗时操作</h5><ul>
+<li>在Service中使用子线程执行耗时操作，如使用<code>HandlerThread</code>或<code>AsyncTask</code>。</li>
+<li>在子线程中执行完任务后，可以通过<code>NotificationManager</code>发送通知。</li>
+</ul>
+<h5 id="合理管理Service的优先级"><a href="#合理管理Service的优先级" class="headerlink" title="合理管理Service的优先级"></a>合理管理Service的优先级</h5><ul>
+<li>使用前台Service可以提高优先级，避免被系统杀死。</li>
+<li>在<code>onStartCommand()</code>中返回<code>START_STICKY</code>可以让Service在被杀死后自动重启。</li>
+</ul>
+<h5 id="在Application中管理全局状态"><a href="#在Application中管理全局状态" class="headerlink" title="在Application中管理全局状态"></a>在Application中管理全局状态</h5><ul>
+<li>将应用的全局状态保存在<code>Application</code>对象中，便于各组件访问。</li>
+<li>在<code>Application</code>的生命周期方法中进行初始化和清理工作。</li>
+</ul>
+<h5 id="使用JobScheduler管理任务"><a href="#使用JobScheduler管理任务" class="headerlink" title="使用JobScheduler管理任务"></a>使用JobScheduler管理任务</h5><ul>
+<li><code>JobScheduler</code>可以调度任务，并在合适的时机启动Service执行任务。</li>
+<li>使用<code>JobScheduler</code>可以更好地控制任务的执行时机和条件。</li>
+</ul>
+<h3 id="Service和Activtiy的通信方法又哪些？"><a href="#Service和Activtiy的通信方法又哪些？" class="headerlink" title="Service和Activtiy的通信方法又哪些？"></a>Service和Activtiy的通信方法又哪些？</h3><h5 id="Intent传递数据"><a href="#Intent传递数据" class="headerlink" title="Intent传递数据"></a>Intent传递数据</h5><p>使用<code>startService(Intent intent)</code>或<code>bindService(Intent intent, ServiceConnection conn, int flags)</code>时，可以通过Intent传递数据。可以使用<code>putExtra()</code>方法将数据放入Intent中，Service可以通过<code>getIntent().getExtras()</code>获取这些数据。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">java// 在Activity中</span><br><span class="line">Intent intent = new Intent(this, MyService.class);</span><br><span class="line">intent.putExtra("key", "value");</span><br><span class="line">startService(intent);</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="Messenger"><a href="#Messenger" class="headerlink" title="Messenger"></a>Messenger</h5><p>使用Messenger进行双向通信。Activity可以通过Messenger发送Message对象到Service，Service可以通过Handler处理这些消息并回复。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">java// 在Activity中</span><br><span class="line">Messenger mServiceMessenger = new Messenger(serviceBinder);</span><br><span class="line">Message msg = Message.obtain(null, MSG_FROM_ACTIVITY);</span><br><span class="line">mServiceMessenger.send(msg);</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="BroadcastReceiver"><a href="#BroadcastReceiver" class="headerlink" title="BroadcastReceiver"></a>BroadcastReceiver</h5><p>Activity可以注册一个BroadcastReceiver来接收Service发送的广播。Service通过<code>sendBroadcast(Intent intent)</code>发送广播，Activity通过<code>onReceive()</code>方法接收。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">java// 在Service中</span><br><span class="line">Intent intent = new Intent("com.example.ACTION");</span><br><span class="line">intent.putExtra("data", "value");</span><br><span class="line">sendBroadcast(intent);</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="Bound-Service"><a href="#Bound-Service" class="headerlink" title="Bound Service"></a>Bound Service</h5><p>使用绑定Service时，Activity可以直接调用Service中的公共方法。通过<code>onServiceConnected()</code>方法获取Service的Binder，Activity可以通过Binder调用Service的方法。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">java// 在Service中</span><br><span class="line">public class MyService extends Service {</span><br><span class="line">    public class LocalBinder extends Binder {</span><br><span class="line">        MyService getService() {</span><br><span class="line">            return MyService.this;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    @Override</span><br><span class="line">    public IBinder onBind(Intent intent) {</span><br><span class="line">        return new LocalBinder();</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="EventBus"><a href="#EventBus" class="headerlink" title="EventBus"></a>EventBus</h5><p>使用第三方库如EventBus，可以简化Activity与Service之间的通信。通过发布和订阅事件来实现数据传递。</p>
 <h1 id="如何分析ANR问题"><a href="#如何分析ANR问题" class="headerlink" title="如何分析ANR问题"></a>如何分析ANR问题</h1><p>分析 ANR（应用无响应）相关的堆栈轨迹是解决应用性能问题的重要步骤。以下是分析 ANR 堆栈轨迹的具体方法和步骤：</p>
 <h3 id="1-理解-ANR-的基本概念"><a href="#1-理解-ANR-的基本概念" class="headerlink" title="1. 理解 ANR 的基本概念"></a>1. 理解 ANR 的基本概念</h3><p>ANR 发生在应用的主线程被阻塞超过一定时间（通常是 5 秒），系统会弹出对话框提示用户。ANR 的类型包括输入事件超时、广播超时、服务超时等。</p>
 <h3 id="2-收集-ANR-日志"><a href="#2-收集-ANR-日志" class="headerlink" title="2. 收集 ANR 日志"></a>2. 收集 ANR 日志</h3><p>在 ANR 发生时，系统会生成相关的日志信息，包括 <code>traces.txt</code> 文件和 <code>logcat</code> 日志。使用 <code>adb bugreport</code> 命令可以获取完整的错误报告，其中包含 ANR 的详细信息。</p>
@@ -10596,7 +10697,24 @@
 <li><strong>Bugreport</strong>包含的信息比Logcat更加全面和详细,包括了电池使用情况、进程信息、网络统计等。但Logcat提供了更实时的日志流,便于开发者在问题发生时快速定位。</li>
 </ol>
 <p>综上所述,Logcat和bugreport是Android调试中密切相关的两个工具。Logcat提供了实时的日志流,而bugreport则在特定时间点捕获了设备的全面诊断信息,两者相辅相成,共同帮助开发者分析和解决问题。</p>
-<h1 id="学习过程中的问题及解决"><a href="#学习过程中的问题及解决" class="headerlink" title="学习过程中的问题及解决"></a>学习过程中的问题及解决</h1><h3 id="理解不透彻-代码无法运行"><a href="#理解不透彻-代码无法运行" class="headerlink" title="理解不透彻,代码无法运行"></a>理解不透彻,代码无法运行</h3><ol>
+<h1 id="学习过程中的问题及解决"><a href="#学习过程中的问题及解决" class="headerlink" title="学习过程中的问题及解决"></a>学习过程中的问题及解决</h1><h3 id="方法论"><a href="#方法论" class="headerlink" title="方法论"></a>方法论</h3><ol>
+<li><p>主动学习:  靠内驱力不是总是会有的，有的时候需要push一下自己</p>
+</li>
+<li><p>心态:  不畏惧困难</p>
+</li>
+<li><p>询问同事：自己可以先思考一下，然后去询问同事</p>
+</li>
+<li><p>Google：搜索技巧（Jpg pdf）</p>
+</li>
+<li><p>AI（Kimi, XiaoMi插件，Perplextiy.ai）：给出解决问题的思路和方案，节省时间，开拓新思路</p>
+</li>
+<li><p>如何解bug, 查看报错日志：</p>
+</li>
+<li><p>主动寻找资源，学会站在巨人的肩膀上，平总写的ANR问题就非常的好</p>
+</li>
+</ol>
+<h3 id="为什么要解决问题"><a href="#为什么要解决问题" class="headerlink" title="为什么要解决问题?"></a>为什么要解决问题?</h3><p>创造个人价值最直接的方式</p>
+<h3 id="理解不透彻-代码无法运行"><a href="#理解不透彻-代码无法运行" class="headerlink" title="理解不透彻,代码无法运行"></a>理解不透彻,代码无法运行</h3><ol>
 <li><p>仔细对比书中代码,检查是否有遗漏或错误</p>
 </li>
 <li><p>查看报错信息,根据提示定位问题所在，可以Debug断点看看数据流转</p>
@@ -10607,32 +10725,160 @@
 </li>
 </ol>
 <h3 id="学习进度缓慢-动力不足"><a href="#学习进度缓慢-动力不足" class="headerlink" title="学习进度缓慢,动力不足"></a>学习进度缓慢,动力不足</h3><p>制定一个合理的学习计划, 每天坚持一点点</p>
-<p>给自己设置一些小目标,完成后给自己一些奖励</p>
+<p>给自己设置一些小目标,完成后给自己一些奖励(比如要开分享会了，明白了具体要做的是哪些事情，此时就有了行动力)</p>
 <p>和同事或朋友交流,互相鼓励</p>
 <p><img src="https://img2023.cnblogs.com/blog/3353853/202408/3353853-20240819225714374-1906801997.png" alt="image-20240819225712542"></p>
 <h1 id="Android开发中哪些技术是必须掌握的"><a href="#Android开发中哪些技术是必须掌握的" class="headerlink" title="Android开发中哪些技术是必须掌握的"></a>Android开发中哪些技术是必须掌握的</h1><p>在Android开发中，有一些核心技术是每个开发者必须掌握的。以下是这些技术的概述：</p>
 <ol>
-<li><strong>Java/Kotlin</strong>Android应用主要使用Java和Kotlin语言进行开发，掌握这两种语言的基本语法、面向对象编程思想和常用库是基础。</li>
-<li><strong>Android SDK</strong>Android软件开发工具包（SDK）是开发Android应用所必需的工具集，包含了开发、调试和测试应用的工具。</li>
-<li><strong>Android Studio</strong>作为官方推荐的开发环境，熟悉Android Studio的使用，包括项目管理、调试和构建工具，是开发高效应用的关键。</li>
-<li><strong>XML</strong>XML用于定义应用的用户界面（UI）和布局，开发者需要掌握XML的基本语法和结构。</li>
-<li><strong>Android组件</strong>理解Android的四大组件：Activity、Service、BroadcastReceiver和ContentProvider，以及它们的生命周期和交互方式。</li>
-<li><strong>布局管理</strong>掌握不同的布局方式（如LinearLayout、RelativeLayout、ConstraintLayout等），以适应不同屏幕尺寸和分辨率。</li>
-<li><strong>SQLite数据库</strong>Android内置SQLite数据库，开发者需要了解如何使用SQL进行数据存储和管理。</li>
-<li><strong>多线程和异步处理</strong>理解如何使用Handler、AsyncTask、Executor等处理多线程和异步任务，以提高应用的响应性。</li>
-<li><strong>网络请求</strong>掌握如何使用Retrofit、OkHttp等库进行网络请求和数据解析。</li>
-<li><strong>依赖注入</strong>学习使用Dagger或Hilt等依赖注入框架，以提高代码的可维护性和可测试性。</li>
-<li><strong>UI设计和自定义View</strong>理解Material Design原则，能够创建美观且用户友好的界面，掌握自定义View的实现。</li>
-<li><strong>性能优化</strong>学习如何优化应用性能，包括内存管理、布局优化和线程管理，以提升用户体验。</li>
-<li><strong>测试</strong>掌握单元测试和UI测试的基本知识，使用JUnit和Espresso等工具进行测试。</li>
-<li><strong>版本控制</strong>熟悉Git等版本控制工具，以便于团队协作和代码管理。</li>
-<li><strong>Gradle构建系统</strong>理解Gradle的构建流程和配置，以便于管理项目依赖和构建过程。</li>
-<li><strong>安全性</strong>学习Android应用的安全性最佳实践，包括数据加密和安全存储。</li>
-<li><strong>应用发布</strong>理解如何将应用打包并发布到Google Play商店，包括签名和版本管理。</li>
-<li><strong>跨平台开发</strong>了解Flutter或React Native等跨平台开发框架，以扩展开发技能。</li>
-<li><strong>开源库的使用</strong>熟悉常用的开源库，如Glide、Picasso（图片加载）、RxJava（响应式编程）等，以提高开发效率。</li>
-<li><strong>持续集成/持续部署（CI/CD）</strong>学习如何使用Jenkins、GitHub Actions等工具实现自动化构建和部署流程。</li>
+<li><strong>Java/Kotlin</strong>: Android应用主要使用Java和Kotlin语言进行开发，掌握这两种语言的基本语法、面向对象编程思想和常用库是基础。</li>
+<li><strong>Android SDK</strong>: Android软件开发工具包（SDK）是开发Android应用所必需的工具集，包含了开发、调试和测试应用的工具。</li>
+<li><strong>Android Studio</strong>: 作为官方推荐的开发环境，熟悉Android Studio的使用，包括项目管理、调试和构建工具，是开发高效应用的关键。</li>
+<li><strong>XML</strong>: XML用于定义应用的用户界面（UI）和布局，开发者需要掌握XML的基本语法和结构。</li>
+<li><strong>Android组件</strong>: 理解Android的四大组件：Activity、Service、BroadcastReceiver和ContentProvider，以及它们的生命周期和交互方式。</li>
+<li><strong>布局管理</strong>: 掌握不同的布局方式（如LinearLayout、RelativeLayout、ConstraintLayout等），以适应不同屏幕尺寸和分辨率。</li>
+<li><strong>SQLite数据库</strong>: Android内置SQLite数据库，开发者需要了解如何使用SQL进行数据存储和管理。</li>
+<li><strong>多线程和异步处理</strong>: 理解如何使用Handler、AsyncTask、Executor等处理多线程和异步任务，以提高应用的响应性。</li>
+<li><strong>网络请求</strong>: 掌握如何使用Retrofit、OkHttp等库进行网络请求和数据解析。</li>
+<li><strong>依赖注入</strong>: 学习使用Dagger或Hilt等依赖注入框架，以提高代码的可维护性和可测试性。</li>
+<li><strong>UI设计和自定义View</strong>: 理解Material Design原则，能够创建美观且用户友好的界面，掌握自定义View的实现。</li>
+<li><strong>性能优化</strong>: 学习如何优化应用性能，包括内存管理、布局优化和线程管理，以提升用户体验。</li>
+<li><strong>测试</strong>: 掌握单元测试和UI测试的基本知识，使用JUnit和Espresso等工具进行测试。</li>
+<li><strong>版本控制</strong>: 熟悉Git等版本控制工具，以便于团队协作和代码管理。</li>
+<li><strong>Gradle构建系统</strong>: 理解Gradle的构建流程和配置，以便于管理项目依赖和构建过程。</li>
+<li><strong>安全性</strong>: 学习Android应用的安全性最佳实践，包括数据加密和安全存储。</li>
+<li><strong>应用发布</strong>: 理解如何将应用打包并发布到Google Play商店，包括签名和版本管理。</li>
+<li><strong>跨平台开发</strong>: 了解Flutter或React Native等跨平台开发框架，以扩展开发技能。</li>
+<li><strong>开源库的使用</strong>: 熟悉常用的开源库，如Glide、Picasso（图片加载）、RxJava（响应式编程）等，以提高开发效率。</li>
+<li><strong>持续集成/持续部署（CI/CD）</strong>: 学习如何使用Jenkins、GitHub Actions等工具实现自动化构建和部署流程。</li>
 </ol>
+<h1 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h1><h3 id="Activity的四种启动模式对比"><a href="#Activity的四种启动模式对比" class="headerlink" title="Activity的四种启动模式对比"></a>Activity的四种启动模式对比</h3><table>
+<thead>
+<tr>
+<th>启动模式</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>standard</td>
+<td>每次启动都会创建新的实例</td>
+<td>独立的、无状态的Activity</td>
+</tr>
+<tr>
+<td>singleTop</td>
+<td>如果任务栈栈顶已经是该Activity,不会创建新实例</td>
+<td>需要频繁启动的Activity</td>
+</tr>
+<tr>
+<td>singleTask</td>
+<td>如果任务栈已经存在该Activity实例,会把它上面的全部出栈</td>
+<td>独立的、可重用的根Activity</td>
+</tr>
+<tr>
+<td>singleInstance</td>
+<td>会单独启动一个新的任务栈,且只有该Activity实例</td>
+<td>需要与其他应用共享的Activity</td>
+</tr>
+</tbody></table>
+<h3 id="Service的启动方式对比"><a href="#Service的启动方式对比" class="headerlink" title="Service的启动方式对比"></a>Service的启动方式对比</h3><table>
+<thead>
+<tr>
+<th>启动方式</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>startService</strong></td>
+<td>通过组件名启动Service，Service的生命周期独立于启动它的组件。即使启动的Activity被销毁，Service仍然在后台运行。</td>
+<td>适用于需要长时间运行的任务，例如下载或上传文件。</td>
+</tr>
+<tr>
+<td><strong>bindService</strong></td>
+<td>通过接口绑定Service，Service的生命周期依赖于绑定它的组件。当所有绑定的组件都解除绑定时，Service会被销毁。</td>
+<td>适用于需要与Service交互的组件，例如音乐播放控制。</td>
+</tr>
+</tbody></table>
+<h3 id="ContentProvider的数据访问方式对比"><a href="#ContentProvider的数据访问方式对比" class="headerlink" title="ContentProvider的数据访问方式对比"></a>ContentProvider的数据访问方式对比</h3><table>
+<thead>
+<tr>
+<th>访问方式</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>query</strong></td>
+<td>查询数据，返回Cursor对象，可以遍历结果集。适用于需要读取数据的组件。</td>
+<td>适用于获取联系人、媒体文件等数据。</td>
+</tr>
+<tr>
+<td><strong>insert</strong></td>
+<td>插入数据，返回新插入行的URI。适用于需要写入数据的组件。</td>
+<td>适用于添加新联系人或记录。</td>
+</tr>
+<tr>
+<td><strong>update</strong></td>
+<td>更新数据，返回受影响的行数。适用于需要修改数据的组件。</td>
+<td>适用于更新现有记录的信息。</td>
+</tr>
+<tr>
+<td><strong>delete</strong></td>
+<td>删除数据，返回受影响的行数。适用于需要删除数据的组件。</td>
+<td>适用于删除不再需要的记录。</td>
+</tr>
+</tbody></table>
+<h3 id="BroadcastReceiver的注册方式对比"><a href="#BroadcastReceiver的注册方式对比" class="headerlink" title="BroadcastReceiver的注册方式对比"></a>BroadcastReceiver的注册方式对比</h3><table>
+<thead>
+<tr>
+<th>注册方式</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>静态注册</strong></td>
+<td>在Manifest文件中声明，系统会在合适的时机调用BroadcastReceiver。适用于系统级广播。</td>
+<td>适用于需要接收系统级广播的组件，例如网络状态变化。</td>
+</tr>
+<tr>
+<td><strong>动态注册</strong></td>
+<td>在代码中注册，通常在Activity或Service的生命周期内有效，适用于应用内广播。</td>
+<td>适用于需要接收应用内广播的组件，例如自定义事件通知。</td>
+</tr>
+</tbody></table>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题:"></a>问题:</h1><ol>
+<li>《第三行代码》Kotlin</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>解决方法</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Kotlin 语言的可读性不足</td>
+<td>切换回《第一行代码》第二版，使用 Java 语言学习</td>
+<td>Java 的语法更适合团队合作和项目需求</td>
+</tr>
+<tr>
+<td>学习成本高，时间不足</td>
+<td>选择更熟悉的 Java 语言进行学习</td>
+<td>熟悉的语言可以提高学习效率</td>
+</tr>
+<tr>
+<td>Kotlin 代码简洁导致理解困难</td>
+<td>通过 Java 的详细语法增强理解</td>
+<td>适当的代码冗长有助于代码的可读性</td>
+</tr>
+<tr>
+<td>团队使用 Java，个人学习 Kotlin</td>
+<td>适应团队的技术栈，回归 Java 学习</td>
+<td>团队一致性有助于项目的顺利进行</td>
+</tr>
+</tbody></table>
 </body></html>]]></content>
       <categories>
         <category>Android</category>
