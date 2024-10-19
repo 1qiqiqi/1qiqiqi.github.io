@@ -12341,4 +12341,109 @@
         <tag>设计模式</tag>
       </tags>
   </entry>
+  <entry>
+    <title></title>
+    <url>/2024/10/19/Binder%E6%9C%BA%E5%88%B6/</url>
+    <content><![CDATA[<html><head></head><body><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">date: 2024-10-19 15:10</span><br><span class="line">title: Binder机制</span><br><span class="line">description: Binder进程间通信机制</span><br><span class="line">tags: [Android]</span><br><span class="line">categories: Android</span><br><span class="line">comments: true</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="Binder机制"><a href="#Binder机制" class="headerlink" title="Binder机制"></a>Binder机制</h1><h1 id="Binder概述"><a href="#Binder概述" class="headerlink" title="Binder概述"></a>Binder概述</h1><p>Binder是Android专有的一种IPC机制,它基于开源的OpenBinder实现。相比Linux已有的IPC方式(如管道、消息队列、共享内存等),Binder具有以下优势:</p>
+<ul>
+<li>性能高效:只需一次数据拷贝</li>
+<li>安全性好:为每个App分配UID,进行有效性检测</li>
+<li>使用简单:采用面向对象的思想,调用方式类似调用本地对象</li>
+</ul>
+<h1 id="Binder架构"><a href="#Binder架构" class="headerlink" title="Binder架构"></a>Binder架构</h1><p>Binder采用C/S架构,主要由以下几部分组成:</p>
+<ul>
+<li>Client:使用服务的客户端</li>
+<li>Server:提供服务的服务端</li>
+<li>ServiceManager:管理服务的注册和查询</li>
+<li>Binder驱动:运行在内核空间,负责进程间Binder通信的建立</li>
+</ul>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202410/3353853-20241019231203186-1917214271.png" alt="image-20241019231201444"></p>
+<h1 id="Binder通信原理"><a href="#Binder通信原理" class="headerlink" title="Binder通信原理"></a>Binder通信原理</h1><p>Binder的通信过程大致如下:</p>
+<ol>
+<li>Server向ServiceManager注册服务</li>
+<li>Client向ServiceManager查询服务</li>
+<li>ServiceManager返回服务的Binder代理给Client</li>
+<li>Client通过Binder代理发起远程调用</li>
+<li>Binder驱动将数据从Client进程拷贝到Server进程</li>
+<li>Server处理请求,并将结果返回</li>
+</ol>
+<p>整个过程中,Binder驱动起着至关重要的作用,它利用内存映射(mmap)来实现零拷贝,大大提高了效率。</p>
+<ul>
+<li><p>内存映射的建立:</p>
+<ul>
+<li>当一个进程首次使用Binder时,会通过mmap系统调用向Binder驱动申请一块内存<a href="https://blog.csdn.net/zhuhai0613/article/details/134784950">1</a><a href="https://cloud.tencent.com/developer/article/1095486">2</a>。Binder驱动会在内核空间分配一块物理内存,然后将其映射到用户空间和内核空间的虚拟地址</li>
+</ul>
+</li>
+<li><p>零拷贝的实现:</p>
+<ul>
+<li>发送数据时,发送进程将数据写入映射的用户空间内存</li>
+<li>由于该内存同时映射到内核空间,Binder驱动可以直接访问这些数据,无需额外拷贝</li>
+<li>接收进程的用户空间也映射了同一块物理内存,因此可以直接读取数据,再次避免了拷贝</li>
+</ul>
+</li>
+</ul>
+<p>这种机制将传统IPC的两次拷贝(用户空间到内核空间,再到另一个用户空间)减少为一次,大大提高了数据传输效率</p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202410/3353853-20241019140006070-1400176453.png" alt="image-20241019140002597"></p>
+<h1 id="Binder在Android中的应用"><a href="#Binder在Android中的应用" class="headerlink" title="Binder在Android中的应用"></a>Binder在Android中的应用</h1><p>Binder机制在Android系统中应用广泛,主要体现在:</p>
+<ul>
+<li>系统服务:如AMS、WMS等都基于Binder实现</li>
+<li>四大组件:组件间的通信都依赖Binder</li>
+<li>AIDL:跨进程接口定义语言,底层就是Binder</li>
+<li>ContentProvider:底层通过Binder实现数据共享</li>
+</ul>
+<h1 id="Binder相比其他IPC机制的优势"><a href="#Binder相比其他IPC机制的优势" class="headerlink" title="Binder相比其他IPC机制的优势"></a>Binder相比其他IPC机制的优势</h1><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Binder</strong></th>
+<th><strong>共享内存</strong></th>
+<th><strong>Socket</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>性能</td>
+<td>需要拷贝一次</td>
+<td>无需拷贝</td>
+<td>需要拷贝两次</td>
+</tr>
+<tr>
+<td>特点</td>
+<td>基于C/S架构，易用性高</td>
+<td>控制复杂，易用性差</td>
+<td>基于C/S 架构 作为一款通用接口，其传输 效率低，开销大</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>为每个APP分配UID，同时支持实名和匿名</td>
+<td>依赖上层协议，访问接入点是开放的，不安全</td>
+<td>依赖上层协议，访问接入点是开放的，不安全</td>
+</tr>
+</tbody></table>
+<h3 id="Binder-如何做到一次拷贝？"><a href="#Binder-如何做到一次拷贝？" class="headerlink" title="Binder 如何做到一次拷贝？"></a>Binder 如何做到一次拷贝？</h3><p>内核空间通过系统调用将A进程用户空间的数据复制一份到内核空间(copy from user)；</p>
+<p>内核空间的虚拟内存 最终都必须要关联到同一个物理内存「所有app的内核空间都映射同一个物理空间」（利用 MMU，将虚拟内存转换成物理内存）；</p>
+<p>内核空间将数据放到内核空间的虚拟内存，内核空间的这个虚拟内存映射的物理内存地址和接收方 B 进程的用户空间中虚拟内存映射的物理内存地址是同一个（如何映射：通过 mmap(零拷贝技术) 来完成映射）；</p>
+<p>内核往里面放，就相当于放到了 B 进程用户空间的虚拟内存中，B 进程可直接访问；</p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202410/3353853-20241019142713494-1445028993.png" alt="image-20241019142710571"></p>
+<p><strong>还不明白看下文</strong></p>
+<p>而在Binder中，整体通信机制和传统IPC一样，那么为何能实现一次copy，这是因为在物理内存的指向上做了改动。</p>
+<p>在Binder中，内核空间和进程2中分别另外开辟了一块虚拟内存，这两块虚拟内存指向物理内存中的同一块内存空间。然后传递数据的时候，将数据从进程1的物理内存1中复制到内核空间和进程2共同指向的物理内存块中，也就是下图物理内存中的紫色部分。这样进程2中就获取到了数据。这样就实现了一次copy。</p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202410/3353853-20241019230408741-658918267.png" alt="image-20241019230406912"></p>
+<h3 id="MMAP原理"><a href="#MMAP原理" class="headerlink" title="MMAP原理"></a>MMAP原理</h3><p>Linux通过将一个虚拟内存区域与一个磁盘上的对象关联起来，以初始化这个虚拟内存区域的内容，这个过程称为内存映射(memory mapping)。</p>
+<p>对文件进行mmap，会在进程的虚拟内存分配地址空间，创建映射关系。实现这样的映射关系后，就可以采用指针的方式读写操作这一段内存，而系统会自动回写到对应的文件磁盘上。</p>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202410/3353853-20241019210010814-2072717503.png" alt="image-20241019210009838"></p>
+<p>写文件流程:</p>
+<pre><code>1. 调用write，告诉内核需要写入数据的开始地址与长度 。
+ 2. 内核将数据拷贝到内核缓存 。
+ 3. 由操作系统调用，将数据拷贝到磁盘，完成写入
+</code></pre>
+<p><img src="https://img2023.cnblogs.com/blog/3353853/202410/3353853-20241019211333253-766295047.png" alt="image-20241019211331834"></p>
+<p>参考文档: </p>
+<ol>
+<li><a href="https://yangjie2.github.io/2021/11/14/mmap%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/">https://yangjie2.github.io/2021/11/14/mmap%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/</a></li>
+<li><a href="https://juejin.cn/post/7110925904322232327#heading-6">https://juejin.cn/post/7110925904322232327#heading-6</a></li>
+</ol>
+</body></html>]]></content>
+  </entry>
 </search>
