@@ -12342,11 +12342,9 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>Binder机制</title>
     <url>/2024/10/19/Binder%E6%9C%BA%E5%88%B6/</url>
-    <content><![CDATA[<html><head></head><body><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">date: 2024-10-19 15:10</span><br><span class="line">title: Binder机制</span><br><span class="line">description: Binder进程间通信机制</span><br><span class="line">tags: [Android]</span><br><span class="line">categories: Android</span><br><span class="line">comments: true</span><br></pre></td></tr></tbody></table></figure>
-
-<h1 id="Binder机制"><a href="#Binder机制" class="headerlink" title="Binder机制"></a>Binder机制</h1><h1 id="Binder概述"><a href="#Binder概述" class="headerlink" title="Binder概述"></a>Binder概述</h1><p>Binder是Android专有的一种IPC机制,它基于开源的OpenBinder实现。相比Linux已有的IPC方式(如管道、消息队列、共享内存等),Binder具有以下优势:</p>
+    <content><![CDATA[<html><head></head><body><h1 id="Binder机制"><a href="#Binder机制" class="headerlink" title="Binder机制"></a>Binder机制</h1><h1 id="Binder概述"><a href="#Binder概述" class="headerlink" title="Binder概述"></a>Binder概述</h1><p>Binder是Android专有的一种IPC机制,它基于开源的OpenBinder实现。相比Linux已有的IPC方式(如管道、消息队列、共享内存等),Binder具有以下优势:</p>
 <ul>
 <li>性能高效:只需一次数据拷贝</li>
 <li>安全性好:为每个App分配UID,进行有效性检测</li>
@@ -12435,8 +12433,8 @@
 <p><img src="https://img2023.cnblogs.com/blog/3353853/202410/3353853-20241019210010814-2072717503.png" alt="image-20241019210009838"></p>
 <p>写文件流程:</p>
 <pre><code>1. 调用write，告诉内核需要写入数据的开始地址与长度 。
- 2. 内核将数据拷贝到内核缓存 。
- 3. 由操作系统调用，将数据拷贝到磁盘，完成写入
+2. 内核将数据拷贝到内核缓存 。
+3. 由操作系统调用，将数据拷贝到磁盘，完成写入
 </code></pre>
 <p><img src="https://img2023.cnblogs.com/blog/3353853/202410/3353853-20241019211333253-766295047.png" alt="image-20241019211331834"></p>
 <p>参考文档: </p>
@@ -12445,5 +12443,11 @@
 <li><a href="https://juejin.cn/post/7110925904322232327#heading-6">https://juejin.cn/post/7110925904322232327#heading-6</a></li>
 </ol>
 </body></html>]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
   </entry>
 </search>
