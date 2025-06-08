@@ -1,0 +1,1 @@
+<html><head></head><body>(e=&gt;{var t=e.createElement("link"),s=(t.rel="stylesheet",t.href="/src/css/wether/he-simple.css",e.createElement("script"));s.src="https://widget.heweather.net/simple/static/js/he-simple.js?v=1.4.0",(e=e.getElementsByTagName("script")[0]).parentNode.insertBefore(t,e),e.parentNode.insertBefore(s,e)})(document);</body></html>
